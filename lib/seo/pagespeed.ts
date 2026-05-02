@@ -79,9 +79,26 @@ export type PageSpeedResult = {
 }
 
 const PSI_ENDPOINT = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed"
-const CACHE_TTL_SECONDS = 60 * 60 // 1 h
+// PSI scores don't change minute-to-minute — 24 h cache lets a daily batch
+// keep the dashboard fresh without burning the per-day quota every hour.
+const CACHE_TTL_SECONDS = 24 * 60 * 60
 const CACHE_KEY = (strategy: PsiStrategy, url: string) =>
   `seo:pagespeed:${strategy}:${url}`
+
+/**
+ * Marker class so callers can distinguish PSI's "you're rate-limited" /
+ * "you're out of daily quota" from generic network or parse failures and
+ * abort an in-flight batch instead of hammering doomed requests.
+ */
+export class PageSpeedQuotaError extends Error {
+  constructor(
+    public readonly status: number,
+    message: string,
+  ) {
+    super(message)
+    this.name = "PageSpeedQuotaError"
+  }
+}
 
 let _redis: Redis | null = null
 function redis(): Redis | null {
@@ -318,6 +335,12 @@ export async function runPageSpeed(
 
   if (!res.ok) {
     const text = await res.text().catch(() => "")
+    if (res.status === 429 || res.status === 403) {
+      throw new PageSpeedQuotaError(
+        res.status,
+        `PageSpeed Insights quota exceeded (HTTP ${res.status}). Wait for the daily reset or raise the project's quota in Google Cloud Console.`,
+      )
+    }
     throw new Error(
       `PageSpeed Insights returned ${res.status}: ${text.slice(0, 200)}`,
     )

@@ -3,6 +3,7 @@ import { getSession } from "@/lib/seo/auth"
 import {
   getCachedPageSpeed,
   isAuditableUrl,
+  PageSpeedQuotaError,
   runPageSpeed,
   type PsiStrategy,
 } from "@/lib/seo/pagespeed"
@@ -75,6 +76,12 @@ export async function POST(req: Request) {
     const result = await runPageSpeed(target, strategyRaw)
     return NextResponse.json({ ok: true, result })
   } catch (err) {
+    if (err instanceof PageSpeedQuotaError) {
+      return NextResponse.json(
+        { error: "psi_quota", message: err.message },
+        { status: 429 },
+      )
+    }
     const msg = err instanceof Error ? err.message : "unknown_error"
     return NextResponse.json({ error: "psi_failed", message: msg }, { status: 502 })
   }

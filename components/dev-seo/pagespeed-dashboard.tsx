@@ -45,7 +45,7 @@ type PathRow = {
 
 const MAX_CONCURRENT = 2
 /** Stale threshold: results older than this should be re-audited. */
-const STALE_MS = 60 * 60 * 1000 // 1 h — matches server cache TTL
+const STALE_MS = 24 * 60 * 60 * 1000 // 24 h — matches server cache TTL
 
 function scoreColorClasses(score: number | null): string {
   if (score === null) return "text-muted-foreground"
@@ -207,7 +207,9 @@ export function PageSpeedDashboard({
   const [filter, setFilter] = useState<"all" | "audited" | "missing" | "poor">("all")
   const [expanded, setExpanded] = useState<string | null>(null)
   const [batchProgress, setBatchProgress] = useState<{ done: number; total: number } | null>(null)
+  const [quotaError, setQuotaError] = useState<string | null>(null)
   const cancelBatchRef = useRef(false)
+  const quotaHitRef = useRef(false)
 
   // Build the path list once. defaultUrl is included so the homepage is
   // always present even if it isn't in the explicit registry list.
@@ -302,6 +304,22 @@ export function PageSpeedDashboard({
         body: JSON.stringify({ url, strategy }),
       })
       const data = await res.json()
+      // Quota errors are batch-fatal: signal the runner to stop firing more.
+      if (res.status === 429 || data?.error === "psi_quota") {
+        quotaHitRef.current = true
+        setQuotaError(
+          data?.message ||
+            "Google PageSpeed Insights daily quota exceeded. Wait for the daily reset (midnight Pacific) or raise the project's quota in Cloud Console.",
+        )
+        setRows((prev) =>
+          prev.map((r) =>
+            r.url === url
+              ? { ...r, running: false, error: "Quota exceeded" }
+              : r,
+          ),
+        )
+        return
+      }
       if (data.ok) {
         setRows((prev) =>
           prev.map((r) =>
@@ -330,6 +348,8 @@ export function PageSpeedDashboard({
   // sees results stream in.
   async function runStale() {
     cancelBatchRef.current = false
+    quotaHitRef.current = false
+    setQuotaError(null)
     const now = Date.now()
     const queue: string[] = []
     for (const r of rows) {
@@ -346,7 +366,9 @@ export function PageSpeedDashboard({
     let inFlight = 0
     await new Promise<void>((resolve) => {
       const tick = () => {
-        if (cancelBatchRef.current) {
+        // Quota errors are batch-fatal — drain in-flight then stop.
+        if (cancelBatchRef.current || quotaHitRef.current) {
+          queue.length = 0
           if (inFlight === 0) resolve()
           return
         }
@@ -378,6 +400,37 @@ export function PageSpeedDashboard({
 
   return (
     <div className="space-y-5">
+      {quotaError ? (
+        <div className="flex items-start gap-3 rounded-xl border border-amber-500/40 bg-amber-500/5 p-4 text-sm text-amber-900 dark:text-amber-200">
+          <AlertTriangle
+            className="mt-0.5 h-5 w-5 shrink-0 text-amber-600 dark:text-amber-400"
+            aria-hidden="true"
+          />
+          <div className="min-w-0 flex-1">
+            <div className="font-semibold">PageSpeed quota exceeded</div>
+            <p className="mt-1 text-xs leading-relaxed">{quotaError}</p>
+            <p className="mt-1 text-xs">
+              {`Already-cached rows still display. Check `}
+              <a
+                href="https://console.cloud.google.com/iam-admin/quotas?service=pagespeedonline.googleapis.com"
+                target="_blank"
+                rel="noreferrer"
+                className="underline"
+              >
+                Cloud Console quotas
+              </a>
+              {` to see your current limit and request an increase.`}
+            </p>
+          </div>
+          <button
+            type="button"
+            onClick={() => setQuotaError(null)}
+            className="text-xs text-amber-700 hover:text-amber-900 dark:text-amber-300"
+          >
+            Dismiss
+          </button>
+        </div>
+      ) : null}
       <div className="rounded-xl border border-border bg-card p-5">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
@@ -387,7 +440,8 @@ export function PageSpeedDashboard({
             </div>
             <p className="mt-1 text-sm text-muted-foreground">
               Live Lighthouse scores via Google PageSpeed Insights. Results
-              cache for 1 hour. Batched audits run 2 at a time.
+              cache for 24 hours. Batched audits run 2 at a time and stop
+              automatically when quota runs out.
             </p>
           </div>
           <div className="inline-flex rounded-md border border-border bg-background p-1">
@@ -423,7 +477,7 @@ export function PageSpeedDashboard({
         <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
           <StatCard label="Pages" value={stats.total} />
           <StatCard label="Audited" value={stats.audited} tone="emerald" />
-          <StatCard label="Stale (>1h)" value={stats.stale} tone="amber" />
+          <StatCard label="Stale (>24h)" value={stats.stale} tone="amber" />
           <StatCard label="Perf < 50" value={stats.poor} tone="red" />
         </div>
 
