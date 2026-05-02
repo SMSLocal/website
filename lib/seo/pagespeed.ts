@@ -245,6 +245,29 @@ export async function getCachedPageSpeed(
   return { ...hit, cached: true, cachedAt: hit.fetchedAt }
 }
 
+/**
+ * Pipeline-read cached PSI results for many URLs at once. Returns a map keyed
+ * by URL — entries missing from cache are simply absent. Used by the bulk
+ * dashboard to populate the table on first paint without one round-trip per
+ * page.
+ */
+export async function getCachedManyPageSpeed(
+  urls: string[],
+  strategy: PsiStrategy,
+): Promise<Map<string, PageSpeedResult>> {
+  const out = new Map<string, PageSpeedResult>()
+  const r = redis()
+  if (!r || urls.length === 0) return out
+  const pipe = r.pipeline()
+  for (const u of urls) pipe.get<PageSpeedResult>(CACHE_KEY(strategy, u))
+  const values = await pipe.exec<Array<PageSpeedResult | null>>()
+  urls.forEach((u, i) => {
+    const v = values[i]
+    if (v) out.set(u, { ...v, cached: true, cachedAt: v.fetchedAt })
+  })
+  return out
+}
+
 async function setCachedPageSpeed(result: PageSpeedResult): Promise<void> {
   const r = redis()
   if (!r) return
