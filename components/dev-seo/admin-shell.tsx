@@ -7,6 +7,7 @@ import {
   ArrowRight,
   EyeOff,
   FileText,
+  Gauge,
   Globe,
   LogOut,
   Map,
@@ -16,6 +17,7 @@ import {
 import { Button } from "@/components/ui/button"
 import { OverviewPanel } from "./overview-panel"
 import { PagesTable } from "./pages-table"
+import { PageSpeedDashboard } from "./pagespeed-dashboard"
 import { SettingsPanel } from "./settings-panel"
 import { SitemapManager } from "./sitemap-manager"
 import { TechnicalDashboard } from "./technical-dashboard"
@@ -23,7 +25,13 @@ import type { EffectiveEntry } from "@/lib/seo/overrides"
 import type { SeoSettings } from "@/lib/seo/store"
 import type { TechnicalAudit } from "@/lib/seo/technical-audit"
 
-type TabKey = "overview" | "pages" | "sitemap" | "settings" | "technical"
+type TabKey =
+  | "overview"
+  | "pages"
+  | "sitemap"
+  | "settings"
+  | "technical"
+  | "pagespeed"
 
 const TABS: { key: TabKey; label: string; icon: typeof Activity }[] = [
   { key: "overview", label: "Overview", icon: Activity },
@@ -31,6 +39,7 @@ const TABS: { key: TabKey; label: string; icon: typeof Activity }[] = [
   { key: "sitemap", label: "Sitemap", icon: Map },
   { key: "settings", label: "Settings", icon: Settings2 },
   { key: "technical", label: "Technical audit", icon: ShieldCheck },
+  { key: "pagespeed", label: "PageSpeed", icon: Gauge },
 ]
 
 export function AdminShell({
@@ -39,12 +48,14 @@ export function AdminShell({
   entries,
   settings,
   technical,
+  pageSpeedDefaults,
 }: {
   username: string
   storeReady: boolean
   entries: EffectiveEntry[]
   settings: SeoSettings
   technical: TechnicalAudit
+  pageSpeedDefaults: { url: string; paths: string[] }
 }) {
   const router = useRouter()
   const [active, setActive] = useState<TabKey>("overview")
@@ -203,6 +214,12 @@ export function AdminShell({
         ) : null}
         {active === "technical" ? (
           <TechnicalDashboard result={technical} />
+        ) : null}
+        {active === "pagespeed" ? (
+          <PageSpeedDashboard
+            defaultUrl={pageSpeedDefaults.url}
+            paths={pageSpeedDefaults.paths}
+          />
         ) : null}
       </main>
     </div>

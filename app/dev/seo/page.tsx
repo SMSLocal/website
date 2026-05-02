@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { AdminShell } from "@/components/dev-seo/admin-shell"
 import { requireSession } from "@/lib/seo/auth"
+import { absoluteUrl } from "@/lib/seo/config"
 import { getEffectiveEntries } from "@/lib/seo/overrides"
 import { getSettings, isStoreConfigured } from "@/lib/seo/store"
 import { runTechnicalAudit } from "@/lib/seo/technical-audit"
@@ -35,6 +36,14 @@ export default async function DevSeoPage() {
     runTechnicalAudit(process.cwd()),
   ])
 
+  const pageSpeedDefaults = {
+    url: absoluteUrl("/"),
+    paths: entries
+      .filter((e) => !e.noindex)
+      .map((e) => absoluteUrl(e.path))
+      .slice(0, 200),
+  }
+
   return (
     <AdminShell
       username={session.sub}
@@ -42,6 +51,7 @@ export default async function DevSeoPage() {
       entries={entries}
       settings={settings}
       technical={technical}
+      pageSpeedDefaults={pageSpeedDefaults}
     />
   )
 }
