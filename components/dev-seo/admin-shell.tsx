@@ -42,20 +42,27 @@ const TABS: { key: TabKey; label: string; icon: typeof Activity }[] = [
   { key: "pagespeed", label: "PageSpeed", icon: Gauge },
 ]
 
+export type PageSpeedPage = {
+  path: string
+  url: string
+  label: string
+  kind: string
+}
+
 export function AdminShell({
   username,
   storeReady,
   entries,
   settings,
   technical,
-  pageSpeedDefaults,
+  pageSpeedPages,
 }: {
   username: string
   storeReady: boolean
   entries: EffectiveEntry[]
   settings: SeoSettings
   technical: TechnicalAudit
-  pageSpeedDefaults: { url: string; paths: string[] }
+  pageSpeedPages: PageSpeedPage[]
 }) {
   const router = useRouter()
   const [active, setActive] = useState<TabKey>("overview")
@@ -216,10 +223,7 @@ export function AdminShell({
           <TechnicalDashboard result={technical} />
         ) : null}
         {active === "pagespeed" ? (
-          <PageSpeedDashboard
-            defaultUrl={pageSpeedDefaults.url}
-            paths={pageSpeedDefaults.paths}
-          />
+          <PageSpeedDashboard pages={pageSpeedPages} />
         ) : null}
       </main>
     </div>
