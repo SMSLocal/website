@@ -11,6 +11,7 @@ import {
   Globe,
   LogOut,
   Map,
+  Radar,
   Settings2,
   ShieldCheck,
 } from "lucide-react"
@@ -19,6 +20,7 @@ import { OverviewPanel } from "./overview-panel"
 import { PagesTable } from "./pages-table"
 import { PageSpeedDashboard } from "./pagespeed-dashboard"
 import { SettingsPanel } from "./settings-panel"
+import { SiteAuditDashboard } from "./site-audit-dashboard"
 import { SitemapManager } from "./sitemap-manager"
 import { TechnicalDashboard } from "./technical-dashboard"
 import type { EffectiveEntry } from "@/lib/seo/overrides"
@@ -32,6 +34,7 @@ type TabKey =
   | "settings"
   | "technical"
   | "pagespeed"
+  | "site-audit"
 
 const TABS: { key: TabKey; label: string; icon: typeof Activity }[] = [
   { key: "overview", label: "Overview", icon: Activity },
@@ -40,6 +43,7 @@ const TABS: { key: TabKey; label: string; icon: typeof Activity }[] = [
   { key: "settings", label: "Settings", icon: Settings2 },
   { key: "technical", label: "Technical audit", icon: ShieldCheck },
   { key: "pagespeed", label: "PageSpeed", icon: Gauge },
+  { key: "site-audit", label: "Site audit", icon: Radar },
 ]
 
 export type PageSpeedPage = {
@@ -56,6 +60,7 @@ export function AdminShell({
   settings,
   technical,
   pageSpeedPages,
+  siteAuditPages,
 }: {
   username: string
   storeReady: boolean
@@ -63,6 +68,7 @@ export function AdminShell({
   settings: SeoSettings
   technical: TechnicalAudit
   pageSpeedPages: PageSpeedPage[]
+  siteAuditPages: PageSpeedPage[]
 }) {
   const router = useRouter()
   const [active, setActive] = useState<TabKey>("overview")
@@ -224,6 +230,9 @@ export function AdminShell({
         ) : null}
         {active === "pagespeed" ? (
           <PageSpeedDashboard pages={pageSpeedPages} />
+        ) : null}
+        {active === "site-audit" ? (
+          <SiteAuditDashboard pages={siteAuditPages} />
         ) : null}
       </main>
     </div>

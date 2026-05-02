@@ -99,6 +99,15 @@ export default async function DevSeoPage() {
       kind: e.kindLabel,
     }),
   )
+  // Site audit covers every indexable page — HTTP fetches are cheap.
+  const siteAuditPages = entries
+    .filter((e) => !e.noindex)
+    .map((e) => ({
+      path: e.path,
+      url: absoluteUrl(e.path),
+      label: e.title,
+      kind: e.kindLabel,
+    }))
 
   return (
     <AdminShell
@@ -108,6 +117,7 @@ export default async function DevSeoPage() {
       settings={settings}
       technical={technical}
       pageSpeedPages={pageSpeedPages}
+      siteAuditPages={siteAuditPages}
     />
   )
 }
