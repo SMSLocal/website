@@ -1,5 +1,5 @@
 import { ArrowUpRight, Check, Star } from "lucide-react"
-import { HeroFeatures } from "./hero-features"
+import { HeroStack } from "./hero-stack"
 
 const FEATURE_CHECKS = [
   "DLT-compliant",
@@ -103,9 +103,9 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Auto-playing feature showcase — on the right at lg */}
+        {/* Free-floating feature composition — on the right at lg */}
         <div>
-          <HeroFeatures />
+          <HeroStack />
         </div>
       </div>
     </section>
