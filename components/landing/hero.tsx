@@ -1,5 +1,28 @@
-import { ArrowUpRight, Check, Star } from "lucide-react"
+import { ArrowUpRight, Bot, Check, CheckCheck, ShieldCheck, Sparkles, Star, Zap } from "lucide-react"
 import { HeroDemo } from "./hero-demo"
+
+function FloatingPill({
+  className,
+  icon: Icon,
+  label,
+  delay,
+}: {
+  className: string
+  icon: React.ComponentType<{ className?: string }>
+  label: string
+  delay?: string
+}) {
+  return (
+    <div
+      aria-hidden
+      style={delay ? { animationDelay: delay } : undefined}
+      className={`pointer-events-none absolute z-20 hidden items-center gap-1.5 rounded-full border border-border bg-card px-3 py-1.5 text-[12px] font-semibold text-foreground shadow-lg shadow-foreground/10 backdrop-blur-sm lg:inline-flex ${className}`}
+    >
+      <Icon className="h-3.5 w-3.5 text-primary" />
+      {label}
+    </div>
+  )
+}
 
 const FEATURE_CHECKS = [
   "DLT-compliant",
@@ -104,8 +127,29 @@ export function Hero() {
         </div>
 
         {/* Interactive product demo — visually on the left at lg */}
-        <div className="lg:order-1">
-          <HeroDemo />
+        <div className="group relative lg:order-1">
+          {/* Handwritten-style accent */}
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -top-3 left-8 z-20 hidden -rotate-3 lg:block"
+          >
+            <span
+              className="inline-flex items-center gap-1 text-[15px] font-medium italic text-primary"
+              style={{ fontFamily: "var(--font-mono)" }}
+            >
+              <Sparkles className="h-4 w-4" /> answers in 0.8s
+            </span>
+          </div>
+
+          {/* Floating status pills */}
+          <FloatingPill className="animate-float-slow -left-3 top-20" icon={CheckCheck} label="Delivered · 0.4s" />
+          <FloatingPill className="animate-float-slower -right-3 top-32" icon={Bot} label="AI · 8 languages" delay="0.6s" />
+          <FloatingPill className="animate-float-slower -left-3 bottom-28" icon={ShieldCheck} label="DLT approved" delay="1.2s" />
+          <FloatingPill className="animate-float-slow -right-2 bottom-12" icon={Zap} label="₹0.12 / SMS" delay="0.3s" />
+
+          <div className="transition duration-300 group-hover:-translate-y-1">
+            <HeroDemo />
+          </div>
         </div>
       </div>
     </section>
