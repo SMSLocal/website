@@ -1,5 +1,5 @@
 import { ArrowUpRight, Check, Star } from "lucide-react"
-import { HeroPhone } from "./hero-phone"
+import { HeroLive } from "./hero-live"
 
 const FEATURE_CHECKS = [
   "DLT-compliant",
@@ -42,8 +42,8 @@ export function Hero() {
       />
 
       <div className="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:gap-10 lg:py-24">
-        {/* Copy — DOM-first for SEO/a11y, visually on the right at lg */}
-        <div className="flex flex-col items-center text-center lg:order-2 lg:items-start lg:text-left">
+        {/* Copy — on the left at lg */}
+        <div className="flex flex-col items-center text-center lg:items-start lg:text-left">
           <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3.5 py-1.5 text-[12.5px] font-medium text-primary backdrop-blur-sm">
             <span className="relative flex h-1.5 w-1.5">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
@@ -103,9 +103,9 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Live product mockup — visually on the left at lg */}
-        <div className="lg:order-1">
-          <HeroPhone />
+        {/* Live activity animation — on the right at lg */}
+        <div>
+          <HeroLive />
         </div>
       </div>
     </section>
