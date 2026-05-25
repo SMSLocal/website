@@ -2,8 +2,6 @@ import type { Metadata } from "next"
 import { getPageMetadata } from "@/lib/seo"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { ChannelsShowcase } from "@/components/landing/channels-showcase"
-import { DashboardShowcase } from "@/components/landing/dashboard-showcase"
-import { HeroShowcase } from "@/components/landing/hero-showcase"
 import { ComplianceStrip } from "@/components/landing/compliance-strip"
 import { DeveloperStrip } from "@/components/landing/developer-strip"
 import { Differentiators } from "@/components/landing/differentiators"
@@ -71,9 +69,7 @@ export default function HomePage() {
       <AnnouncementStrip />
       <SiteHeader />
       <Hero />
-      <HeroShowcase />
       <ChannelsShowcase />
-      <DashboardShowcase />
       <LogoRow />
       <ProductTiles />
       <StatsStrip />
