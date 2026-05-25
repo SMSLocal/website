@@ -1,112 +1,146 @@
-import { ArrowRight, CheckCircle2, Clock, ShieldCheck, Zap } from "lucide-react"
-import { HeroAnimation } from "./hero-animation"
+import { ArrowUpRight, Check, MessageSquareText, Send, Star, Zap } from "lucide-react"
+
+const FEATURE_CHECKS = [
+  "DLT-compliant",
+  "Free ₹60 credit",
+  "8 Indian languages",
+  "98% delivery in <1s",
+]
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[oklch(0.14_0.02_230)] text-white">
-      {/* Ambient glows */}
+    <section className="relative overflow-hidden bg-background">
+      {/* Soft tinted backdrop */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full opacity-60 blur-3xl"
+        className="pointer-events-none absolute inset-0"
         style={{
           background:
-            "radial-gradient(circle at center, color-mix(in oklch, var(--primary) 40%, transparent), transparent 70%)",
+            "radial-gradient(ellipse 80% 60% at 50% -10%, color-mix(in oklch, var(--primary) 14%, transparent), transparent 60%)",
         }}
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-40 -bottom-40 h-[520px] w-[520px] rounded-full opacity-40 blur-3xl"
+        className="pointer-events-none absolute -left-32 top-40 h-[460px] w-[460px] rounded-full opacity-50 blur-3xl"
         style={{
           background:
-            "radial-gradient(circle at center, color-mix(in oklch, var(--accent) 50%, transparent), transparent 70%)",
+            "radial-gradient(circle at center, color-mix(in oklch, var(--primary) 22%, transparent), transparent 70%)",
         }}
       />
       <div
         aria-hidden
-        className="bg-grid-ink absolute inset-0 opacity-40 [mask-image:linear-gradient(to_bottom,black_10%,transparent_90%)]"
+        className="pointer-events-none absolute -right-32 top-24 h-[420px] w-[420px] rounded-full opacity-40 blur-3xl"
+        style={{
+          background:
+            "radial-gradient(circle at center, color-mix(in oklch, var(--accent) 35%, transparent), transparent 70%)",
+        }}
+      />
+      <div
+        aria-hidden
+        className="bg-grid-light absolute inset-0 opacity-60 [mask-image:radial-gradient(ellipse_at_center,black_30%,transparent_75%)]"
       />
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:gap-14 lg:py-24">
-        {/* Copy */}
-        <div className="flex flex-col justify-center">
-          {/* Eyebrow */}
-          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-medium text-white/80 backdrop-blur-md">
-            <span className="relative flex h-1.5 w-1.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
-              <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
+      <div className="relative mx-auto max-w-5xl px-4 pb-16 pt-20 text-center sm:px-6 lg:pb-24 lg:pt-28">
+        {/* Eyebrow pill */}
+        <div className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-primary/5 px-3.5 py-1.5 text-[12.5px] font-medium text-primary backdrop-blur-sm">
+          <span className="relative flex h-1.5 w-1.5">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
+          </span>
+          DLT-ready in a day · Free ₹60 credit · No credit card
+        </div>
+
+        {/* Headline */}
+        <h1 className="mx-auto mt-6 max-w-3xl text-balance text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[58px]">
+          India&apos;s{" "}
+          <span className="bg-gradient-to-r from-primary via-[oklch(0.66_0.14_178)] to-accent bg-clip-text text-transparent">
+            SMS, WhatsApp &amp; AI
+          </span>{" "}
+          messaging platform
+          <Send className="ml-2 inline-block h-8 w-8 -rotate-12 text-primary sm:h-9 sm:w-9" />
+        </h1>
+
+        {/* Subhead */}
+        <p className="mx-auto mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-muted-foreground">
+          Send DLT-compliant bulk SMS, launch AI WhatsApp agents that reply in 8 Indian
+          languages, and fire OTPs — all from one dashboard, one API, one wallet.
+        </p>
+
+        {/* Feature checks */}
+        <ul className="mx-auto mt-7 flex max-w-3xl flex-wrap items-center justify-center gap-x-6 gap-y-2.5 text-sm font-medium text-foreground/80">
+          {FEATURE_CHECKS.map((item) => (
+            <li key={item} className="inline-flex items-center gap-1.5">
+              <Check className="h-4 w-4 text-primary" />
+              {item}
+            </li>
+          ))}
+          <li className="inline-flex items-center gap-1.5">
+            <Star className="h-4 w-4 fill-accent text-accent" />
+            Trusted since 2019
+          </li>
+        </ul>
+
+        {/* CTAs */}
+        <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
+          <a
+            href="/signup"
+            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
+          >
+            <span className="relative z-10">Start Free — ₹60 Credit</span>
+            <ArrowUpRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <span
+              aria-hidden
+              className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/25 to-transparent transition-transform duration-700 group-hover:translate-x-full"
+            />
+          </a>
+          <a
+            href="/company/contact"
+            className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-sm font-semibold text-foreground shadow-sm transition hover:bg-secondary"
+          >
+            Book a Demo
+          </a>
+        </div>
+
+        <p className="mt-4 text-[12.5px] text-muted-foreground">
+          No credit card required · 2-minute signup · DLT registration support included.
+        </p>
+
+        {/* Floating accent cards */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute left-4 top-44 hidden xl:block"
+        >
+          <div className="flex items-center gap-3 rounded-2xl border border-border bg-card/90 px-4 py-3 shadow-xl shadow-foreground/5 backdrop-blur-sm">
+            <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/12 text-primary">
+              <Zap className="h-5 w-5" />
             </span>
-            Made in India · Direct carrier routes · Since 2019
-          </div>
-
-          {/* H1 */}
-          <h1 className="mt-5 text-pretty text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-[56px]">
-            India&apos;s Complete{" "}
-            <span className="relative inline-block">
-              <span className="bg-gradient-to-r from-primary via-[oklch(0.78_0.14_180)] to-accent bg-clip-text text-transparent">
-                SMS, WhatsApp
-              </span>
-            </span>
-            <br className="hidden sm:block" /> and AI Messaging Platform
-          </h1>
-
-          {/* Sub */}
-          <p className="mt-5 max-w-xl text-base leading-relaxed text-white/70 sm:text-lg">
-            Send DLT-compliant bulk SMS, launch AI WhatsApp agents that reply in{" "}
-            <span className="text-white">8 Indian languages</span>, and fire OTPs from the same
-            dashboard.{" "}
-            <span className="font-medium text-white">98% delivery in under one second.</span>
-          </p>
-
-          {/* CTAs */}
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <a
-              href="/signup"
-              className="group relative inline-flex items-center gap-2 overflow-hidden rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
-            >
-              <span className="relative z-10">Start Free — ₹60 Credit</span>
-              <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-              <span
-                aria-hidden
-                className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full"
-              />
-            </a>
-            <a
-              href="/pricing"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
-            >
-              See Pricing
-            </a>
-          </div>
-
-          <p className="mt-3 text-[12.5px] text-white/55">
-            No credit card required. 2-minute signup. DLT registration support included.
-          </p>
-
-          {/* Trust bar */}
-          <div className="mt-10 grid grid-cols-2 gap-3 border-t border-white/10 pt-6 sm:grid-cols-4">
-            <TrustItem icon={<ShieldCheck className="h-4 w-4" />} label="DLT-compliant & TRAI-approved" />
-            <TrustItem icon={<Zap className="h-4 w-4" />} label="Direct operator connectivity" />
-            <TrustItem icon={<CheckCircle2 className="h-4 w-4" />} label="Enterprise-grade SLA" />
-            <TrustItem icon={<Clock className="h-4 w-4" />} label="Serving India since 2019" />
+            <div className="text-left">
+              <div className="text-lg font-bold leading-none text-foreground">98%</div>
+              <div className="mt-1 text-[11px] font-medium text-muted-foreground">
+                delivered in &lt;1 second
+              </div>
+            </div>
           </div>
         </div>
 
-        {/* Animation */}
-        <div className="flex items-center justify-center lg:justify-end">
-          <HeroAnimation />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute right-4 top-56 hidden max-w-[230px] xl:block"
+        >
+          <div className="rounded-2xl border border-border bg-card/90 p-4 text-left shadow-xl shadow-foreground/5 backdrop-blur-sm">
+            <div className="flex items-center gap-2.5">
+              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-xs font-bold text-white">
+                AS
+              </span>
+              <div className="text-[13px] font-semibold text-foreground">Aarav S.</div>
+            </div>
+            <p className="mt-2 text-[12.5px] leading-snug text-muted-foreground">
+              <MessageSquareText className="mr-1 inline h-3.5 w-3.5 text-primary" />
+              DLT setup done in a day — and the WhatsApp AI just works. 🚀
+            </p>
+          </div>
         </div>
       </div>
     </section>
-  )
-}
-
-function TrustItem({ icon, label }: { icon: React.ReactNode; label: string }) {
-  return (
-    <div className="flex items-start gap-2">
-      <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-primary/15 text-primary">
-        {icon}
-      </span>
-      <span className="text-[12.5px] leading-snug text-white/75">{label}</span>
-    </div>
   )
 }
