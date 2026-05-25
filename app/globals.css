@@ -196,6 +196,11 @@
 .animate-message-in   { animation: message-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both; }
 .animate-sheen        { animation: sheen 3.2s ease-in-out infinite; }
 
+@keyframes hero-progress { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+.animate-hero-progress { transform-origin: left; animation: hero-progress 4.6s linear both; }
+
+@keyframes pop-in { 0% { opacity: 0; transform: scale(0.4); } 100% { opacity: 1; transform: scale(1); } }
+
 /* Grid pattern used in hero / sections */
 .bg-grid-ink {
   background-image:
