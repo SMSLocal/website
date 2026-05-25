@@ -1,5 +1,5 @@
 import { ArrowUpRight, Check, Star } from "lucide-react"
-import { HeroRotator } from "./hero-rotator"
+import { HeroDashboard } from "./hero-dashboard"
 
 const FEATURE_CHECKS = [
   "DLT-compliant",
@@ -103,9 +103,9 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Cycling one-feature-at-a-time stage — on the right at lg */}
+        {/* Full product dashboard — on the right at lg */}
         <div>
-          <HeroRotator />
+          <HeroDashboard />
         </div>
       </div>
     </section>
