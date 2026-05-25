@@ -108,7 +108,7 @@ export function Hero() {
         {/* Floating accent cards */}
         <div
           aria-hidden
-          className="pointer-events-none absolute bottom-12 left-4 hidden xl:block 2xl:left-12"
+          className="animate-float-slow pointer-events-none absolute bottom-12 left-4 hidden xl:block 2xl:left-12"
         >
           <div className="flex items-center gap-3 rounded-2xl border border-border bg-card/90 px-4 py-3 shadow-xl shadow-foreground/5 backdrop-blur-sm">
             <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/12 text-primary">
@@ -125,7 +125,7 @@ export function Hero() {
 
         <div
           aria-hidden
-          className="pointer-events-none absolute bottom-8 right-4 hidden max-w-[230px] xl:block 2xl:right-12"
+          className="animate-float-slower pointer-events-none absolute bottom-8 right-4 hidden max-w-[230px] xl:block 2xl:right-12"
         >
           <div className="rounded-2xl border border-border bg-card/90 p-4 text-left shadow-xl shadow-foreground/5 backdrop-blur-sm">
             <div className="flex items-center gap-2.5">
