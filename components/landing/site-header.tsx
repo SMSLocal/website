@@ -173,7 +173,7 @@ export function SiteHeader() {
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-0.5 lg:flex">
-          {NAV.map((item) => {
+          {NAV.map((item, i) => {
             if ("href" in item) {
               return (
                 <Link
@@ -186,6 +186,7 @@ export function SiteHeader() {
               )
             }
             const Featured = item.featured?.icon
+            const alignRight = i >= 3
             return (
               <div key={item.label} className="group relative">
                 <button
@@ -196,12 +197,12 @@ export function SiteHeader() {
                   <ChevronDown className="h-3.5 w-3.5 opacity-60 transition-transform group-hover:rotate-180" />
                 </button>
                 {/* Dropdown */}
-                <div className="pointer-events-none invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100">
+                <div className={`pointer-events-none invisible absolute top-full z-50 pt-3 opacity-0 transition-all duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100 ${alignRight ? "right-0" : "left-0"}`}>
                   <div className="overflow-hidden rounded-2xl border border-border bg-popover shadow-2xl shadow-foreground/10">
                     <div className="flex">
                     <div className="flex gap-1 p-4">
                       {item.columns.map((col) => (
-                        <div key={col.heading} className="w-[238px] p-1">
+                        <div key={col.heading} className="w-[250px] p-1">
                           <p className="mb-1.5 flex items-center gap-1.5 px-2.5 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                             <span className="h-1 w-1 rounded-full bg-primary" />
                             {col.heading}
