@@ -345,12 +345,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Compare ──────────────────────────────────────────────────────────────
   "/compare": {
-    title: "Compare SMSLocal to Other Messaging Platforms",
+    title: "SMS Service Comparison — Trusted, 8 Platforms",
     description:
-      "Detailed feature and pricing comparisons of SMSLocal vs MSG91, Fast2SMS, WATI, AiSensy, Interakt, Gupshup, Twilio, and Textlocal.",
-    focusKeyword: "SMS service comparison India",
+      "SMS service comparison for India — SMSLocal vs MSG91, Fast2SMS, WATI, AiSensy, Interakt, Gupshup, Twilio, and Textlocal on features and pricing. ₹60 free.",
+    focusKeyword: "SMS service comparison",
     keywords: [
-      "SMS service comparison India",
+      "SMS service comparison",
       "best SMS gateway India",
       "SMS provider comparison",
       "WhatsApp API comparison",
@@ -360,13 +360,13 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/compare/smslocal-vs-aisensy": {
-    title: "SMSLocal vs AiSensy — A Fair 2026 Comparison",
+    title: "SMSLocal vs AiSensy — A Trusted 2026 Comparison",
     description:
-      "Honest side-by-side of SMSLocal and AiSensy. WhatsApp BSP pricing, chatbot builder, analytics, AI agents, and who should pick which.",
-    focusKeyword: "AiSensy alternative",
+      "SMSLocal vs AiSensy — an honest 2026 comparison of WhatsApp BSP pricing, chatbot builder, analytics, and AI agents, plus who should pick which. ₹60 free.",
+    focusKeyword: "SMSLocal vs AiSensy",
     keywords: [
-      "AiSensy alternative",
       "SMSLocal vs AiSensy",
+      "AiSensy alternative",
       "AiSensy pricing",
       "AiSensy review",
       "AiSensy vs WATI",
@@ -375,13 +375,13 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/compare/smslocal-vs-fast2sms": {
-    title: "SMSLocal vs Fast2SMS — A Fair 2026 Comparison",
+    title: "SMSLocal vs Fast2SMS — A Trusted 2026 Comparison",
     description:
-      "Honest side-by-side of SMSLocal and Fast2SMS. Route quality, DLT handling, WhatsApp coverage, API maturity, and who should pick which.",
-    focusKeyword: "Fast2SMS alternative",
+      "SMSLocal vs Fast2SMS — an honest 2026 comparison of route quality, DLT handling, WhatsApp coverage, and API maturity, plus who should pick which. ₹60 free.",
+    focusKeyword: "SMSLocal vs Fast2SMS",
     keywords: [
-      "Fast2SMS alternative",
       "SMSLocal vs Fast2SMS",
+      "Fast2SMS alternative",
       "Fast2SMS pricing",
       "Fast2SMS review",
       "Fast2SMS vs MSG91",
