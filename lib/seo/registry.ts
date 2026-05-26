@@ -390,13 +390,13 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/compare/smslocal-vs-gupshup": {
-    title: "SMSLocal vs Gupshup — A Fair 2026 Comparison",
+    title: "SMSLocal vs Gupshup — A Trusted 2026 Comparison",
     description:
-      "Honest side-by-side of SMSLocal and Gupshup. Enterprise WhatsApp, AI agents, onboarding speed, pricing, and who should pick which.",
-    focusKeyword: "Gupshup alternative",
+      "SMSLocal vs Gupshup — an honest 2026 comparison of enterprise WhatsApp, AI agents, onboarding speed, and pricing, plus who should pick which. ₹60 free.",
+    focusKeyword: "SMSLocal vs Gupshup",
     keywords: [
-      "Gupshup alternative",
       "SMSLocal vs Gupshup",
+      "Gupshup alternative",
       "Gupshup pricing",
       "Gupshup WhatsApp pricing",
       "Gupshup review",
@@ -405,13 +405,13 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/compare/smslocal-vs-interakt": {
-    title: "SMSLocal vs Interakt — A Fair 2026 Comparison",
+    title: "SMSLocal vs Interakt — A Trusted 2026 Comparison",
     description:
-      "Honest side-by-side of SMSLocal and Interakt. D2C commerce integrations, WhatsApp catalogues, journeys, and who should pick which.",
-    focusKeyword: "Interakt alternative",
+      "SMSLocal vs Interakt — an honest 2026 comparison of D2C commerce integrations, WhatsApp catalogues, customer journeys, and who should pick which. ₹60 free.",
+    focusKeyword: "SMSLocal vs Interakt",
     keywords: [
-      "Interakt alternative",
       "SMSLocal vs Interakt",
+      "Interakt alternative",
       "Interakt pricing",
       "Interakt review",
       "Interakt vs WATI",
@@ -482,12 +482,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Developers ───────────────────────────────────────────────────────────
   "/developers": {
-    title: "Developer Hub — SMS, WhatsApp, OTP APIs",
+    title: "SMS & WhatsApp API — Free SDKs in 6 Languages, Trusted",
     description:
-      "REST APIs, SDKs for PHP, Java, Python, Node.js, C#, JavaScript, webhooks, and sandbox mode. Full developer docs for SMS, WhatsApp, and OTP.",
-    focusKeyword: "SMS API India",
+      "SMS & WhatsApp API for developers — REST endpoints, SDKs for PHP, Java, Python, Node.js, C# and JavaScript, signed webhooks, and a free sandbox. ₹60 free.",
+    focusKeyword: "SMS & WhatsApp API",
     keywords: [
-      "SMS API India",
+      "SMS & WhatsApp API",
       "SMS gateway API India",
       "WhatsApp API India",
       "OTP API India",
