@@ -134,24 +134,24 @@ export function SiteHeader() {
   const [openMobileIndex, setOpenMobileIndex] = useState<number | null>(null)
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-border/60 bg-[oklch(0.14_0.02_230)]/90 backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur-xl">
       {/* Utility bar */}
-      <div className="hidden border-b border-white/5 text-[11px] text-white/60 md:block">
+      <div className="hidden border-b border-border text-[11px] text-muted-foreground md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-end gap-5 px-6 py-1.5">
-          <Link href="/resources/help" className="inline-flex items-center gap-1.5 hover:text-white">
+          <Link href="/resources/help" className="inline-flex items-center gap-1.5 hover:text-foreground">
             <HeadphonesIcon className="h-3 w-3" />
             Support
           </Link>
-          <span className="h-3 w-px bg-white/15" />
-          <Link href="/company/contact" className="inline-flex items-center gap-1.5 hover:text-white">
+          <span className="h-3 w-px bg-border" />
+          <Link href="/company/contact" className="inline-flex items-center gap-1.5 hover:text-foreground">
             <PhoneCall className="h-3 w-3" />
             Talk to sales
           </Link>
-          <span className="h-3 w-px bg-white/15" />
-          <Link href="/signin" className="hover:text-white">
+          <span className="h-3 w-px bg-border" />
+          <Link href="/signin" className="hover:text-foreground">
             Sign in
           </Link>
-          <span className="h-3 w-px bg-white/15" />
+          <span className="h-3 w-px bg-border" />
           <span>India · ₹ INR</span>
         </div>
       </div>
@@ -159,7 +159,7 @@ export function SiteHeader() {
       {/* Main nav */}
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3.5 sm:px-6">
         {/* Logo */}
-        <BrandLogo />
+        <BrandLogo tone="dark" />
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-0.5 lg:flex">
@@ -169,7 +169,7 @@ export function SiteHeader() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="rounded-md px-3 py-1.5 text-[13.5px] font-medium text-white/75 transition hover:bg-white/5 hover:text-white"
+                  className="rounded-md px-3 py-1.5 text-[13.5px] font-medium text-foreground/70 transition hover:bg-secondary hover:text-foreground"
                 >
                   {item.label}
                 </Link>
@@ -179,18 +179,18 @@ export function SiteHeader() {
               <div key={item.label} className="group relative">
                 <button
                   type="button"
-                  className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-[13.5px] font-medium text-white/75 transition hover:bg-white/5 hover:text-white group-hover:bg-white/5 group-hover:text-white"
+                  className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-[13.5px] font-medium text-foreground/70 transition hover:bg-secondary hover:text-foreground group-hover:bg-secondary group-hover:text-foreground"
                 >
                   {item.label}
                   <ChevronDown className="h-3.5 w-3.5 opacity-60 transition-transform group-hover:rotate-180" />
                 </button>
                 {/* Dropdown */}
                 <div className="pointer-events-none invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100">
-                  <div className="w-[640px] overflow-hidden rounded-2xl border border-white/10 bg-[oklch(0.16_0.02_230)]/95 shadow-2xl shadow-black/40 backdrop-blur-xl">
+                  <div className="w-[640px] overflow-hidden rounded-2xl border border-border bg-popover/95 shadow-2xl shadow-foreground/10 backdrop-blur-xl">
                     <div className="grid grid-cols-2 gap-1 p-3">
                       {item.columns.map((col) => (
                         <div key={col.heading} className="p-2">
-                          <p className="px-3 pb-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/45">
+                          <p className="px-3 pb-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
                             {col.heading}
                           </p>
                           <ul className="flex flex-col gap-0.5">
@@ -200,7 +200,7 @@ export function SiteHeader() {
                                 <li key={leaf.label}>
                                   <Link
                                     href={leaf.href}
-                                    className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition hover:bg-white/5"
+                                    className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition hover:bg-secondary"
                                   >
                                     {Icon ? (
                                       <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-primary/15 text-primary">
@@ -208,9 +208,9 @@ export function SiteHeader() {
                                       </span>
                                     ) : null}
                                     <span className="flex flex-col">
-                                      <span className="text-[13px] font-medium text-white">{leaf.label}</span>
+                                      <span className="text-[13px] font-medium text-foreground">{leaf.label}</span>
                                       {leaf.description ? (
-                                        <span className="text-[11.5px] text-white/55">{leaf.description}</span>
+                                        <span className="text-[11.5px] text-muted-foreground">{leaf.description}</span>
                                       ) : null}
                                     </span>
                                   </Link>
@@ -224,7 +224,7 @@ export function SiteHeader() {
                     {item.footer ? (
                       <Link
                         href={item.footer.href}
-                        className="flex items-center justify-between border-t border-white/10 bg-white/[0.02] px-5 py-3 text-[12.5px] font-medium text-primary hover:bg-white/[0.04]"
+                        className="flex items-center justify-between border-t border-border bg-secondary/40 px-5 py-3 text-[12.5px] font-medium text-primary hover:bg-secondary"
                       >
                         {item.footer.label}
                         <span aria-hidden>→</span>
@@ -241,7 +241,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-2">
           <Link
             href="/signin"
-            className="hidden rounded-md px-3 py-1.5 text-[13.5px] font-medium text-white/80 hover:text-white md:inline-flex"
+            className="hidden rounded-md px-3 py-1.5 text-[13.5px] font-medium text-foreground/80 hover:text-foreground md:inline-flex"
           >
             Sign in
           </Link>
@@ -257,7 +257,7 @@ export function SiteHeader() {
           </Link>
           <button
             type="button"
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md text-white/80 hover:bg-white/5 lg:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-md text-foreground/80 hover:bg-secondary lg:hidden"
             onClick={() => setMobileOpen((v) => !v)}
             aria-label="Toggle menu"
           >
@@ -268,7 +268,7 @@ export function SiteHeader() {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <div className="border-t border-white/10 lg:hidden">
+        <div className="border-t border-border lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3">
             {NAV.map((item, i) => {
               if ("href" in item) {
@@ -276,7 +276,7 @@ export function SiteHeader() {
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="rounded-md px-3 py-2 text-sm text-white/85 hover:bg-white/5"
+                    className="rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-secondary"
                     onClick={() => setMobileOpen(false)}
                   >
                     {item.label}
@@ -289,7 +289,7 @@ export function SiteHeader() {
                   <button
                     type="button"
                     onClick={() => setOpenMobileIndex(isOpen ? null : i)}
-                    className="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm text-white/85 hover:bg-white/5"
+                    className="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-secondary"
                   >
                     {item.label}
                     <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} />
@@ -298,7 +298,7 @@ export function SiteHeader() {
                     <div className="px-3 pb-2">
                       {item.columns.map((col) => (
                         <div key={col.heading} className="mt-2">
-                          <p className="px-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-white/45">
+                          <p className="px-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
                             {col.heading}
                           </p>
                           <ul className="mt-1 flex flex-col">
@@ -307,7 +307,7 @@ export function SiteHeader() {
                                 <Link
                                   href={leaf.href}
                                   onClick={() => setMobileOpen(false)}
-                                  className="block rounded-md px-3 py-1.5 text-[13px] text-white/75 hover:bg-white/5 hover:text-white"
+                                  className="block rounded-md px-3 py-1.5 text-[13px] text-foreground/70 hover:bg-secondary hover:text-foreground"
                                 >
                                   {leaf.label}
                                 </Link>
@@ -332,7 +332,7 @@ export function SiteHeader() {
             })}
             <Link
               href="/signin"
-              className="rounded-md px-3 py-2 text-sm text-white/85 hover:bg-white/5"
+              className="rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-secondary"
               onClick={() => setMobileOpen(false)}
             >
               Sign in
