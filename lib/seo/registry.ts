@@ -263,9 +263,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/solutions/education": {
-    title: "SMS & WhatsApp for Schools & EdTech India",
+    title: "SMS for Schools & EdTech — Trusted, 8 Languages",
     description:
-      "Fee reminders, exam schedules, result announcements, and parent communication — DLT-compliant SMS and WhatsApp in regional languages. ₹60 free credit.",
+      "SMS for schools and EdTech in India — DLT-compliant fee reminders, exam schedules, result alerts, and parent updates over SMS and WhatsApp. ₹60 free credit.",
     focusKeyword: "SMS for schools",
     keywords: [
       "SMS for schools",
@@ -279,12 +279,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/solutions/healthcare": {
-    title: "SMS & WhatsApp for Healthcare India",
+    title: "SMS for Healthcare — Trusted, Sub-1s in 8 Languages",
     description:
-      "Appointment reminders, prescription refills, lab results, and patient follow-up — via DLT-compliant SMS and WhatsApp in 8 Indian languages. ₹60 free credit.",
-    focusKeyword: "SMS for hospitals",
+      "SMS for healthcare in India — DLT-compliant appointment reminders, prescription refills, lab results, and patient follow-up over SMS and WhatsApp. ₹60 free.",
+    focusKeyword: "SMS for healthcare",
     keywords: [
-      "SMS for hospitals",
+      "SMS for healthcare",
       "healthcare SMS API",
       "hospital SMS service India",
       "appointment reminder SMS",
@@ -295,9 +295,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/solutions/logistics": {
-    title: "SMS & WhatsApp for Logistics India",
+    title: "SMS for Logistics — Trusted, 24/7 Delivery OTPs",
     description:
-      "Dispatch alerts, delivery OTPs, live tracking links, and driver check-ins — DLT-compliant SMS and WhatsApp for Indian logistics. ₹60 free credit.",
+      "SMS for logistics in India — DLT-compliant dispatch alerts, delivery OTPs, live tracking links, and driver check-ins over SMS and WhatsApp. ₹60 free credit.",
     focusKeyword: "SMS for logistics",
     keywords: [
       "SMS for logistics",
