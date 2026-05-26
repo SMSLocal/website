@@ -9,7 +9,6 @@ import { FinalCta } from "@/components/landing/final-cta"
 import { Hero } from "@/components/landing/hero"
 import { HowItWorks } from "@/components/landing/how-it-works"
 import { Industries } from "@/components/landing/industries"
-import { LogoRow } from "@/components/landing/logo-row"
 import { OperatorsStrip } from "@/components/landing/operators-strip"
 import { PricingTeaser } from "@/components/landing/pricing-teaser"
 import { SiteFooter } from "@/components/landing/site-footer"
@@ -71,7 +70,6 @@ export default function HomePage() {
       <Hero />
       <OperatorsStrip />
       <ChannelsShowcase />
-      <LogoRow />
       <StatsStrip />
       <HowItWorks />
       <Differentiators />
