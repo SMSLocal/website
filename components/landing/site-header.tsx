@@ -197,8 +197,9 @@ export function SiteHeader() {
                   <ChevronDown className="h-3.5 w-3.5 opacity-60 transition-transform group-hover:rotate-180" />
                 </button>
                 {/* Dropdown */}
-                <div className={`pointer-events-none invisible absolute top-full z-50 pt-3 opacity-0 transition-all duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100 ${alignRight ? "right-0" : "left-0"}`}>
+                <div className={`pointer-events-none invisible absolute top-full z-50 translate-y-1 pt-3 opacity-0 transition-all duration-200 ease-out group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ${alignRight ? "right-0" : "left-0"}`}>
                   <div className="overflow-hidden rounded-2xl border border-border bg-popover shadow-2xl shadow-foreground/10">
+                    <div aria-hidden className="h-[3px] w-full bg-gradient-to-r from-primary via-[oklch(0.66_0.14_178)] to-accent" />
                     <div className="flex">
                     <div className="flex gap-1 p-4">
                       {item.columns.map((col) => (
