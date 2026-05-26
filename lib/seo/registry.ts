@@ -465,13 +465,13 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/compare/smslocal-vs-wati": {
-    title: "SMSLocal vs WATI — A Fair 2026 Comparison",
+    title: "SMSLocal vs WATI — A Trusted 2026 Comparison",
     description:
-      "Honest side-by-side of SMSLocal and WATI. Pay-as-you-go vs flat-fee pricing, team inbox depth, AI agents, and who should pick which.",
-    focusKeyword: "WATI alternative",
+      "SMSLocal vs WATI — an honest 2026 comparison of pay-as-you-go vs flat-fee pricing, team inbox depth, and AI agents, plus who should pick which. ₹60 free.",
+    focusKeyword: "SMSLocal vs WATI",
     keywords: [
-      "WATI alternative",
       "SMSLocal vs WATI",
+      "WATI alternative",
       "WATI pricing",
       "WATI review",
       "WATI WhatsApp",
@@ -498,9 +498,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/developers/api-docs": {
-    title: "API Reference — Send SMS, Check Delivery, Manage Credits",
+    title: "SMS API Documentation — Trusted REST Reference, 3 SDKs",
     description:
-      "Full HTTP API reference for SMSLocal. Send DLT-compliant SMS, fetch delivery reports, and check credits with cURL, Node, and Python examples.",
+      "SMS API documentation for SMSLocal — send DLT-compliant SMS, fetch delivery reports, and check credits with cURL, Node, and Python examples. ₹60 free credit.",
     focusKeyword: "SMS API documentation",
     keywords: [
       "SMS API documentation",
@@ -514,13 +514,13 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/developers/quickstart": {
-    title: "Quickstart — Send your first SMS in 5 minutes",
+    title: "SMS API Quickstart — Trusted, First SMS in 5 Minutes",
     description:
-      "Go from zero to your first delivered SMS in five minutes. Covers signup, DLT setup, API key generation, and the exact cURL, Node, and Python snippets you need.",
-    focusKeyword: "send SMS API tutorial",
+      "SMS API quickstart — go from zero to your first delivered SMS in five minutes: signup, DLT setup, API keys, and ready-to-paste cURL, Node, and Python snippets.",
+    focusKeyword: "SMS API quickstart",
     keywords: [
-      "send SMS API tutorial",
       "SMS API quickstart",
+      "send SMS API tutorial",
       "send SMS Node.js",
       "send SMS Python",
       "SMS API integration",
@@ -530,12 +530,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/developers/sms-api": {
-    title: "SMS API for Business Messaging — Developer-Friendly REST API",
+    title: "SMS API for Business — Trusted, 98% Delivery REST API",
     description:
-      "Automate business messaging with the SMSLocal SMS API. DLT-compliant, 98%+ delivery, and integrations for REST, SMTP, SDKs, Excel, and every major CRM.",
-    focusKeyword: "SMS API for business",
+      "SMS API for business messaging — DLT-compliant, 98%+ delivery, with integrations for REST, SMTP, SDKs, Excel, and every major CRM. ₹60 free credit to start.",
+    focusKeyword: "SMS API",
     keywords: [
-      "SMS API for business",
+      "SMS API",
       "business SMS API India",
       "transactional SMS API",
       "promotional SMS API",
@@ -564,12 +564,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Blog (index only; individual posts read from lib/blog.ts) ────────────
   "/blog": {
-    title: "Blog — Messaging, compliance, and developer guides",
+    title: "SMS Marketing Blog — Trusted Guides & 2026 Tips",
     description:
-      "Practical guides on SMS, WhatsApp, and AI messaging for Indian businesses — compliance, delivery, developer recipes, and honest product notes.",
-    focusKeyword: "SMS marketing blog India",
+      "SMS marketing blog for India — practical guides on SMS, WhatsApp, and AI messaging: compliance, delivery, developer recipes, and honest product notes here.",
+    focusKeyword: "SMS marketing blog",
     keywords: [
-      "SMS marketing blog India",
+      "SMS marketing blog",
       "SMS messaging blog",
       "WhatsApp marketing blog",
       "DLT compliance guides",
