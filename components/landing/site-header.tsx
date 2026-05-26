@@ -41,7 +41,12 @@ type NavLeaf = {
 
 type NavItem =
   | { label: string; href: string }
-  | { label: string; columns: { heading: string; items: NavLeaf[] }[]; footer?: { label: string; href: string } }
+  | {
+      label: string
+      columns: { heading: string; items: NavLeaf[] }[]
+      footer?: { label: string; href: string }
+      featured?: { icon: React.ComponentType<{ className?: string }>; title: string; body: string; cta: string; href: string }
+    }
 
 const NAV: NavItem[] = [
   {
@@ -66,6 +71,7 @@ const NAV: NavItem[] = [
       },
     ],
     footer: { label: "View all products", href: "/products" },
+    featured: { icon: Sparkles, title: "AI WhatsApp Agents", body: "Auto-reply & deflect tickets in 8 Indian languages, 24/7.", cta: "Explore AI Agents", href: "/products/ai-agents" },
   },
   {
     label: "Solutions",
@@ -90,6 +96,7 @@ const NAV: NavItem[] = [
       },
     ],
     footer: { label: "View all industries", href: "/solutions" },
+    featured: { icon: PhoneCall, title: "Talk to our team", body: "Not sure which fits? We'll map SMSLocal to your use case.", cta: "Talk to sales", href: "/company/contact" },
   },
   { label: "Pricing", href: "/pricing" },
   {
@@ -105,6 +112,7 @@ const NAV: NavItem[] = [
       },
     ],
     footer: { label: "Open developer hub", href: "/developers" },
+    featured: { icon: Zap, title: "Send in 5 minutes", body: "Live API keys on signup — start with the Quickstart.", cta: "Open Quickstart", href: "/developers/quickstart" },
   },
   {
     label: "Resources",
@@ -127,6 +135,7 @@ const NAV: NavItem[] = [
         ],
       },
     ],
+    featured: { icon: BookOpen, title: "DLT registration guide", body: "Everything you need to get DLT-approved in India.", cta: "Read the guide", href: "/resources/dlt-guide" },
   },
 ]
 
@@ -176,6 +185,7 @@ export function SiteHeader() {
                 </Link>
               )
             }
+            const Featured = item.featured?.icon
             return (
               <div key={item.label} className="group relative">
                 <button
@@ -187,10 +197,11 @@ export function SiteHeader() {
                 </button>
                 {/* Dropdown */}
                 <div className="pointer-events-none invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100">
-                  <div className="w-[680px] overflow-hidden rounded-2xl border border-border bg-popover shadow-2xl shadow-foreground/10">
-                    <div className="grid grid-cols-2 gap-2 p-4">
+                  <div className="overflow-hidden rounded-2xl border border-border bg-popover shadow-2xl shadow-foreground/10">
+                    <div className="flex">
+                    <div className="flex gap-1 p-4">
                       {item.columns.map((col) => (
-                        <div key={col.heading} className="p-1">
+                        <div key={col.heading} className="w-[238px] p-1">
                           <p className="mb-1.5 flex items-center gap-1.5 px-2.5 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
                             <span className="h-1 w-1 rounded-full bg-primary" />
                             {col.heading}
@@ -223,6 +234,21 @@ export function SiteHeader() {
                           </ul>
                         </div>
                       ))}
+                    </div>
+                    {item.featured && Featured ? (
+                      <div className="flex w-[230px] shrink-0 flex-col justify-between gap-3 border-l border-border bg-gradient-to-br from-primary/10 to-accent/10 p-5">
+                        <div>
+                          <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-white">
+                            <Featured className="h-5 w-5" />
+                          </span>
+                          <h4 className="mt-3 text-[14px] font-bold text-foreground">{item.featured.title}</h4>
+                          <p className="mt-1.5 text-[12px] leading-relaxed text-muted-foreground">{item.featured.body}</p>
+                        </div>
+                        <Link href={item.featured.href} className="inline-flex items-center gap-1 text-[12.5px] font-semibold text-primary transition hover:gap-1.5">
+                          {item.featured.cta} <ArrowUpRight className="h-4 w-4" />
+                        </Link>
+                      </div>
+                    ) : null}
                     </div>
                     {item.footer ? (
                       <Link
