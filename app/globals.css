@@ -204,6 +204,11 @@
 @keyframes fill-loop { 0%, 12% { width: 0; } 68%, 100% { width: 98%; } }
 .animate-fill-loop { animation: fill-loop 3.2s ease-in-out infinite; }
 
+@keyframes marquee-l { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes marquee-r { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+.animate-marquee-l { animation: marquee-l 36s linear infinite; }
+.animate-marquee-r { animation: marquee-r 36s linear infinite; }
+
 /* Grid pattern used in hero / sections */
 .bg-grid-ink {
   background-image:

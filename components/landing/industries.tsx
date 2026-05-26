@@ -1,31 +1,55 @@
-"use client"
-
-import { useEffect, useState } from "react"
-import { ArrowRight, ArrowUpRight, Banknote, GraduationCap, HeartPulse, Home, ShoppingBag, Truck } from "lucide-react"
+import { ArrowUpRight, Banknote, GraduationCap, HeartPulse, Home, ShoppingBag, Truck } from "lucide-react"
 import { Reveal } from "./reveal"
 
-const INDUSTRIES = [
-  { icon: ShoppingBag, name: "E-commerce", href: "/solutions/ecommerce", hook: "Order confirmations, cart recovery, and festive offers — with delivery tracking built in.", channel: "SMS", sender: "SHOPLY", msg: "Your order #4821 is out for delivery 🛵 Track live: smsl.in/t/4821" },
-  { icon: Banknote, name: "Banking & Fintech", href: "/solutions/banking-fintech", hook: "Secure OTPs, transaction alerts, and DPDPA-aware customer messaging.", channel: "SMS", sender: "HDFCBK", msg: "₹25,000 credited to a/c XX4567 on 25-May. Avl bal ₹1,02,300." },
-  { icon: HeartPulse, name: "Healthcare", href: "/solutions/healthcare", hook: "Appointment reminders, prescription refills, and lab-result notifications.", channel: "WhatsApp", sender: "CityCare", msg: "Reminder: Dr. Mehta tomorrow at 11:00 AM. Reply C to confirm." },
-  { icon: GraduationCap, name: "Education", href: "/solutions/education", hook: "Fee reminders, result announcements, and exam schedules for schools & colleges.", channel: "SMS", sender: "GRNWUD", msg: "Fee due ₹12,000 by 30 May. Pay securely: smsl.in/fee -Greenwood" },
-  { icon: Truck, name: "Logistics", href: "/solutions/logistics", hook: "Dispatch alerts, delivery OTPs, and route updates across multilingual India.", channel: "SMS", sender: "SHIPIT", msg: "Your parcel arrives today. Delivery OTP: 4821 — share with the rider." },
-  { icon: Home, name: "Real Estate", href: "/solutions/real-estate", hook: "New-listing alerts, open-house invites, and lead follow-up in the buyer's language.", channel: "WhatsApp", sender: "Acre", msg: "New 2BHK in Whitefield, ₹85L. Open house Sat 11 AM. Reply Y for details." },
+type Industry = {
+  icon: React.ComponentType<{ className?: string }>
+  name: string
+  href: string
+  channel: string
+  sender: string
+  msg: string
+}
+
+const INDUSTRIES: Industry[] = [
+  { icon: ShoppingBag, name: "E-commerce", href: "/solutions/ecommerce", channel: "SMS", sender: "SHOPLY", msg: "Your order #4821 is out for delivery 🛵 Track live: smsl.in/t/4821" },
+  { icon: Banknote, name: "Banking & Fintech", href: "/solutions/banking-fintech", channel: "SMS", sender: "HDFCBK", msg: "₹25,000 credited to a/c XX4567 on 25-May. Avl bal ₹1,02,300." },
+  { icon: HeartPulse, name: "Healthcare", href: "/solutions/healthcare", channel: "WhatsApp", sender: "CityCare", msg: "Reminder: Dr. Mehta tomorrow at 11:00 AM. Reply C to confirm." },
+  { icon: GraduationCap, name: "Education", href: "/solutions/education", channel: "SMS", sender: "GRNWUD", msg: "Fee due ₹12,000 by 30 May. Pay securely: smsl.in/fee -Greenwood" },
+  { icon: Truck, name: "Logistics", href: "/solutions/logistics", channel: "SMS", sender: "SHIPIT", msg: "Your parcel arrives today. Delivery OTP: 4821 — share with the rider." },
+  { icon: Home, name: "Real Estate", href: "/solutions/real-estate", channel: "WhatsApp", sender: "Acre", msg: "New 2BHK in Whitefield, ₹85L. Open house Sat 11 AM. Reply Y for details." },
 ]
 
-export function Industries() {
-  const [active, setActive] = useState(0)
-
-  useEffect(() => {
-    const t = setTimeout(() => setActive((a) => (a + 1) % INDUSTRIES.length), 4000)
-    return () => clearTimeout(t)
-  }, [active])
-
-  const ind = INDUSTRIES[active]
-  const Icon = ind.icon
-
+function Bubble({ it }: { it: Industry }) {
+  const Icon = it.icon
   return (
-    <section className="bg-background py-20 sm:py-24">
+    <a href={it.href} className="group/b w-[290px] shrink-0">
+      <div className="mb-1.5 flex items-center gap-1.5 px-1 text-[11px] font-medium text-muted-foreground">
+        <Icon className="h-3.5 w-3.5 text-primary" /> {it.name}
+        <span className="rounded bg-secondary px-1.5 py-0.5 text-[9px] uppercase tracking-wide">{it.channel}</span>
+      </div>
+      <div className="rounded-2xl rounded-tl-sm bg-card px-3.5 py-2.5 text-[12.5px] leading-snug text-foreground shadow-md transition group-hover/b:-translate-y-0.5 group-hover/b:shadow-lg">
+        {it.msg}
+        <div className="mt-1 text-[10px] text-muted-foreground">{it.sender} · delivered ✓✓</div>
+      </div>
+    </a>
+  )
+}
+
+function Row({ dir, items }: { dir: "l" | "r"; items: Industry[] }) {
+  return (
+    <div className="group relative overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_7%,black_93%,transparent)]">
+      <div className={`flex w-max gap-4 ${dir === "l" ? "animate-marquee-l" : "animate-marquee-r"} group-hover:[animation-play-state:paused]`}>
+        {[...items, ...items].map((it, i) => (
+          <Bubble key={`${it.name}-${i}`} it={it} />
+        ))}
+      </div>
+    </div>
+  )
+}
+
+export function Industries() {
+  return (
+    <section className="overflow-hidden bg-background py-20 sm:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[12px] font-semibold uppercase tracking-wider text-primary">
@@ -36,68 +60,21 @@ export function Industries() {
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">growing industries</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Pick an industry to see the kind of message it sends every day.
+            The messages Indian businesses send every day — across every industry.
           </p>
         </Reveal>
+      </div>
 
-        <Reveal delay={80} className="mt-12 grid grid-cols-1 gap-4 lg:grid-cols-[2fr_3fr]">
-          {/* Selector list */}
-          <div className="flex flex-col gap-2">
-            {INDUSTRIES.map((it, i) => {
-              const ItIcon = it.icon
-              const on = i === active
-              return (
-                <button
-                  key={it.name}
-                  type="button"
-                  onClick={() => setActive(i)}
-                  aria-pressed={on}
-                  className={`flex w-full items-center gap-3 rounded-xl border p-3.5 text-left transition ${on ? "border-primary/40 bg-primary/5 shadow-sm" : "border-border bg-card hover:border-primary/30"}`}
-                >
-                  <span className={`inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg transition ${on ? "bg-primary text-primary-foreground" : "bg-primary/10 text-primary"}`}>
-                    <ItIcon className="h-5 w-5" />
-                  </span>
-                  <div className="min-w-0 flex-1">
-                    <div className="text-[14px] font-semibold text-foreground">{it.name}</div>
-                    <div className="truncate text-[12px] text-muted-foreground">{it.hook}</div>
-                  </div>
-                  <ArrowRight className={`ml-auto h-4 w-4 shrink-0 transition ${on ? "translate-x-0 text-primary" : "text-muted-foreground/40"}`} />
-                </button>
-              )
-            })}
-          </div>
+      {/* Full-bleed moving message wall */}
+      <div className="mt-12 space-y-4">
+        <Row dir="l" items={INDUSTRIES} />
+        <Row dir="r" items={[...INDUSTRIES].reverse()} />
+      </div>
 
-          {/* Detail panel */}
-          <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-card to-secondary/40 p-6 lg:p-8">
-            <div key={active} style={{ animation: "message-in 0.4s cubic-bezier(0.2,0.8,0.2,1) both" }} className="flex h-full flex-col">
-              <div className="flex items-center gap-3">
-                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-white"><Icon className="h-6 w-6" /></span>
-                <div>
-                  <h3 className="text-xl font-bold text-foreground">{ind.name}</h3>
-                  <p className="text-[12.5px] text-muted-foreground">on {ind.channel} · SMSLocal</p>
-                </div>
-              </div>
-
-              <p className="mt-4 text-[14px] leading-relaxed text-muted-foreground">{ind.hook}</p>
-
-              {/* Example message */}
-              <div className="mt-5 rounded-xl border border-border bg-background p-4">
-                <div className="mb-2 text-[10.5px] font-semibold uppercase tracking-wide text-muted-foreground">Example {ind.channel} message</div>
-                <div className="flex items-end gap-2">
-                  <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-primary to-accent text-[10px] font-bold text-white">{ind.sender[0]}</span>
-                  <div className="max-w-[88%] rounded-2xl rounded-bl-sm bg-secondary px-3.5 py-2.5 text-[13px] leading-snug text-foreground">
-                    {ind.msg}
-                    <div className="mt-1 flex items-center gap-1 text-[10px] text-muted-foreground">{ind.sender} · delivered</div>
-                  </div>
-                </div>
-              </div>
-
-              <a href={ind.href} className="mt-auto inline-flex w-fit items-center gap-1 pt-5 text-[14px] font-semibold text-primary hover:underline">
-                See {ind.name} solutions <ArrowUpRight className="h-4 w-4" />
-              </a>
-            </div>
-          </div>
-        </Reveal>
+      <div className="mx-auto mt-10 max-w-6xl px-4 text-center sm:px-6">
+        <a href="/solutions" className="inline-flex items-center gap-1 text-sm font-semibold text-primary hover:underline">
+          Explore all industry solutions <ArrowUpRight className="h-4 w-4" />
+        </a>
       </div>
     </section>
   )
