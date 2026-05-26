@@ -66,12 +66,12 @@ export type SeoEntry = {
 export const SEO_REGISTRY: Record<string, SeoEntry> = {
   // ─── Homepage ─────────────────────────────────────────────────────────────
   "/": {
-    titleAbsolute: "SMSLocal — SMS, WhatsApp & AI Messaging for India",
+    titleAbsolute: "SMS, WhatsApp & AI Messaging — Trusted Since 2019 | SMSLocal",
     description:
-      "DLT-compliant bulk SMS, WhatsApp Business API, OTP APIs, and AI agents in eight Indian languages — on one platform. Start with ₹60 free credit, no card needed.",
-    focusKeyword: "SMS WhatsApp platform India",
+      "SMS, WhatsApp & AI messaging for India — DLT-compliant bulk SMS, WhatsApp Business API, OTP, and AI agents in 8 Indian languages. Start free with ₹60 credit.",
+    focusKeyword: "SMS, WhatsApp & AI messaging",
     keywords: [
-      "SMS WhatsApp platform India",
+      "SMS, WhatsApp & AI messaging",
       "bulk SMS India",
       "WhatsApp Business API India",
       "OTP SMS India",
@@ -84,12 +84,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Pricing ──────────────────────────────────────────────────────────────
   "/pricing": {
-    title: "Pricing — SMS, WhatsApp & AI Agent Rates",
+    title: "SMS Pricing in India — Plans from ₹0.09, Trusted",
     description:
-      "SMSLocal volume-tier pricing for SMS, pay-as-you-go WhatsApp Business API, AI WhatsApp Agents, and OTP. 24-month validity. ₹60 free credit — no card.",
-    focusKeyword: "SMS pricing India",
+      "SMS pricing in India with volume-tier discounts — pay-as-you-go WhatsApp Business API, OTP, and AI WhatsApp Agents, 24-month validity, and ₹60 free credit.",
+    focusKeyword: "SMS pricing in India",
     keywords: [
-      "SMS pricing India",
+      "SMS pricing in India",
       "bulk SMS price India",
       "WhatsApp Business API pricing",
       "OTP SMS rates India",
@@ -102,12 +102,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Products ─────────────────────────────────────────────────────────────
   "/products": {
-    title: "Products — Messaging infrastructure for India",
+    title: "Business Messaging Products for India — Trusted, 1 API",
     description:
-      "Bulk SMS, OTP SMS, Quick SMS, WhatsApp Business API, and AI Agents. One compliant platform for every way your business talks to customers in India.",
-    focusKeyword: "business messaging products India",
+      "Business messaging products for India — bulk SMS, OTP, Quick SMS, WhatsApp Business API, and AI agents on one compliant platform, one API, and one wallet.",
+    focusKeyword: "business messaging products",
     keywords: [
-      "business messaging products India",
+      "business messaging products",
       "SMS WhatsApp products",
       "CPaaS India",
       "messaging platform India",
@@ -118,12 +118,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/bulk-sms": {
-    title: "Bulk SMS India — DLT-Compliant & AI-Routed",
+    title: "Bulk SMS India — 98% Delivery, Fast & Trusted",
     description:
-      "Send millions of DLT-compliant SMS with AI-powered routing, wrong-number detection, and failed-campaign resend. ₹60 free credit — no card. 99.99% uptime.",
-    focusKeyword: "bulk SMS India",
+      "Bulk SMS in India, DLT-compliant and AI-routed — send millions with wrong-number detection, failed-campaign resend, and 99.99% uptime. ₹60 free credit.",
+    focusKeyword: "bulk SMS",
     keywords: [
-      "bulk SMS India",
+      "bulk SMS",
       "bulk SMS service India",
       "send bulk SMS",
       "bulk SMS gateway",
@@ -134,12 +134,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/otp-sms": {
-    title: "OTP SMS API — Authentication & Verification",
+    title: "OTP SMS API India — Sub-1s, Trusted Delivery",
     description:
-      "Send OTPs and verification codes over SMS with priority routing, sub-second delivery on Indian operators, and DLT-compliant templates for every flow.",
-    focusKeyword: "OTP SMS API",
+      "OTP SMS in India with priority routing and sub-second delivery on every Indian operator — DLT-compliant templates, signed webhooks, and ₹60 free credit.",
+    focusKeyword: "OTP SMS",
     keywords: [
-      "OTP SMS API",
+      "OTP SMS",
       "OTP API India",
       "SMS OTP service",
       "two factor authentication SMS",
@@ -198,12 +198,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/ai-agents": {
-    title: "AI WhatsApp Agents — Auto-reply in 8 Indian languages",
+    title: "AI Agents for WhatsApp — Trusted, 8 Indian Languages",
     description:
-      "Let an AI agent answer every WhatsApp message instantly, in 8 Indian languages — trained on your docs with clean handoff to humans when it matters.",
-    focusKeyword: "WhatsApp AI agent",
+      "AI agents for WhatsApp that reply in 8 Indian languages, 24/7 — deflect repeat queries, escalate to a human when needed, and cut first-response time fast.",
+    focusKeyword: "AI agents",
     keywords: [
-      "WhatsApp AI agent",
+      "AI agents",
       "AI chatbot WhatsApp",
       "WhatsApp AI bot India",
       "multilingual WhatsApp chatbot",
