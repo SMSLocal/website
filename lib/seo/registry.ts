@@ -150,12 +150,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/quick-sms": {
-    title: "Quick SMS — Send SMS without code in minutes",
+    title: "Quick SMS — Trusted, No-Code Sending in 5 Minutes",
     description:
-      "The fastest way to send DLT-compliant SMS campaigns from your browser. Upload a list, pick a template, preview, and send — no developer required.",
-    focusKeyword: "send bulk SMS online",
+      "Quick SMS lets you send DLT-compliant campaigns from your browser in minutes — upload a list, pick a template, preview and send. No code, ₹60 free credit.",
+    focusKeyword: "Quick SMS",
     keywords: [
-      "send bulk SMS online",
+      "Quick SMS",
       "bulk SMS panel India",
       "send SMS without coding",
       "web SMS sender",
@@ -166,12 +166,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/rcs": {
-    title: "RCS Business Messaging India — Branded, Verified, with SMS Fallback",
+    title: "RCS Business Messaging — Verified, Trusted, 3 Carriers",
     description:
-      "Send branded RCS messages with verified sender, rich cards, and suggested replies on Jio, Airtel, and Vi — with automatic DLT-compliant SMS fallback on the same wallet and API.",
-    focusKeyword: "RCS business messaging India",
+      "RCS business messaging in India — verified, branded rich cards and suggested replies on Jio, Airtel, and Vi, with automatic DLT SMS fallback on one API.",
+    focusKeyword: "RCS business messaging",
     keywords: [
-      "RCS business messaging India",
+      "RCS business messaging",
       "RCS messaging API",
       "Google RCS India",
       "RBM India",
@@ -182,12 +182,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/whatsapp-business-api": {
-    title: "WhatsApp Business API + AI Agents, India",
+    title: "WhatsApp Business API — Free, Trusted, 8 Languages",
     description:
-      "Native WhatsApp Business API with AI agents that reply in 8 Indian languages. Broadcasts, chatbot builder, team inbox. Zero setup, no monthly plan. ₹60 free.",
-    focusKeyword: "WhatsApp Business API India",
+      "WhatsApp Business API for India with AI agents that reply in 8 Indian languages — broadcasts, chatbot builder, team inbox, no monthly plan, and ₹60 free credit.",
+    focusKeyword: "WhatsApp Business API",
     keywords: [
-      "WhatsApp Business API India",
+      "WhatsApp Business API",
       "WhatsApp API provider India",
       "WhatsApp BSP India",
       "WhatsApp Cloud API",
