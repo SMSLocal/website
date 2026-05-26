@@ -1,12 +1,71 @@
-import { ArrowUpRight, Bot, CheckCheck, KeyRound, Layers, MessageSquareText, Radio } from "lucide-react"
+import { ArrowUpRight, Bot, KeyRound, MessageCircle, MessageSquareText, Radio, Zap } from "lucide-react"
 import { Reveal } from "./reveal"
+
+type Channel = {
+  short: string
+  title: string
+  desc: string
+  icon: React.ComponentType<{ className?: string }>
+  href: string
+  grad: string
+}
+
+const CHANNELS: Channel[] = [
+  {
+    short: "Bulk SMS",
+    title: "Bulk SMS",
+    desc: "DLT-compliant transactional & promotional SMS on direct-operator routes. From ₹0.09.",
+    icon: MessageSquareText,
+    href: "/products/bulk-sms",
+    grad: "linear-gradient(155deg, oklch(0.46 0.12 170), oklch(0.17 0.03 220))",
+  },
+  {
+    short: "WhatsApp API",
+    title: "WhatsApp Business API",
+    desc: "Green-tick BSP — broadcasts, templates, and a shared team inbox.",
+    icon: MessageCircle,
+    href: "/products/whatsapp-business-api",
+    grad: "linear-gradient(155deg, oklch(0.44 0.13 162), oklch(0.16 0.03 228))",
+  },
+  {
+    short: "AI Agents",
+    title: "AI WhatsApp Agents",
+    desc: "Auto-reply and deflect tickets in 8 Indian languages, around the clock.",
+    icon: Bot,
+    href: "/products/ai-agents",
+    grad: "linear-gradient(155deg, oklch(0.48 0.13 178), oklch(0.18 0.03 215))",
+  },
+  {
+    short: "OTP",
+    title: "OTP & Verification",
+    desc: "Priority-routed OTP SMS with automatic carrier failover. From ₹0.15.",
+    icon: KeyRound,
+    href: "/products/otp-sms",
+    grad: "linear-gradient(155deg, oklch(0.43 0.12 158), oklch(0.16 0.03 232))",
+  },
+  {
+    short: "RCS",
+    title: "RCS Business Messaging",
+    desc: "Branded, verified messaging that falls back to SMS automatically.",
+    icon: Radio,
+    href: "/products/rcs",
+    grad: "linear-gradient(155deg, oklch(0.47 0.12 184), oklch(0.17 0.03 222))",
+  },
+  {
+    short: "Quick SMS",
+    title: "Quick SMS",
+    desc: "Launch campaigns without code — straight from your dashboard.",
+    icon: Zap,
+    href: "/products/quick-sms",
+    grad: "linear-gradient(155deg, oklch(0.45 0.13 166), oklch(0.16 0.03 226))",
+  },
+]
 
 export function ChannelsShowcase() {
   return (
     <section className="relative overflow-hidden border-b border-border bg-background py-20 lg:py-28">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
-        {/* Header */}
         <Reveal className="mx-auto max-w-2xl text-center">
           <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[12px] font-semibold uppercase tracking-wider text-primary">
             One platform, every channel
@@ -16,88 +75,45 @@ export function ChannelsShowcase() {
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">one dashboard</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            SMS, WhatsApp, RCS, OTP and AI agents — one API, one wallet. Hover any tile to see it.
+            SMS, WhatsApp, RCS, OTP and AI agents — one API, one wallet. Hover a panel to explore.
           </p>
         </Reveal>
 
-        {/* Bento grid */}
-        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {/* Featured — WhatsApp AI */}
-          <Reveal delay={0} className="sm:col-span-2">
-            <a href="/products/ai-agents" className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-6 transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
-              <div aria-hidden className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 blur-2xl transition-opacity duration-300 group-hover:opacity-100 opacity-60" />
-              <div className="relative flex items-center gap-3">
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-white"><Bot className="h-5 w-5" /></span>
-                <div>
-                  <h3 className="flex items-center gap-1.5 text-lg font-semibold text-foreground">
-                    AI WhatsApp Agents
-                    <ArrowUpRight className="h-4 w-4 text-primary opacity-0 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
-                  </h3>
-                  <p className="text-[13px] text-muted-foreground">Auto-reply in 8 Indian languages, 24/7.</p>
-                </div>
-              </div>
-              {/* Mini chat */}
-              <div className="relative mt-5 space-y-2 rounded-xl border border-border bg-[oklch(0.97_0.01_150)] p-3">
-                <div className="max-w-[75%] rounded-2xl rounded-bl-sm bg-card px-3 py-1.5 text-[12px] text-foreground shadow-sm">Has my order shipped?</div>
-                <div className="ml-auto max-w-[80%] rounded-2xl rounded-br-sm bg-primary px-3 py-1.5 text-[12px] text-primary-foreground shadow-sm transition-transform duration-300 group-hover:-translate-y-0.5">
-                  ஆம்! இன்று மாலை வந்துவிடும் 🛵
-                  <span className="ml-1.5 text-[9px] text-primary-foreground/70">AI · 0.8s</span>
+        {/* Hover-expand accordion */}
+        <Reveal delay={80} className="mt-12 flex flex-col gap-3 lg:h-[420px] lg:flex-row">
+          {CHANNELS.map((c, i) => (
+            <a
+              key={c.title}
+              href={c.href}
+              className="group relative flex min-h-[150px] flex-col justify-end overflow-hidden rounded-2xl p-5 text-white shadow-lg transition-all duration-500 ease-out lg:min-h-0 lg:flex-1 lg:hover:flex-[2.6]"
+              style={{ background: c.grad }}
+            >
+              {/* texture + sheen */}
+              <div aria-hidden className="bg-grid-ink pointer-events-none absolute inset-0 opacity-30 [mask-image:linear-gradient(to_top,black,transparent)]" />
+              {/* number */}
+              <span className="absolute right-4 top-4 font-mono text-[11px] text-white/55">0{i + 1} / 06</span>
+              {/* icon */}
+              <span className="absolute left-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-white backdrop-blur-sm">
+                <c.icon className="h-5 w-5" />
+              </span>
+
+              <div className="relative">
+                <h3 className="text-lg font-bold leading-tight">
+                  <span className="lg:hidden">{c.title}</span>
+                  <span className="hidden lg:inline lg:group-hover:hidden">{c.short}</span>
+                  <span className="hidden lg:group-hover:inline">{c.title}</span>
+                </h3>
+                {/* reveal */}
+                <div className="overflow-hidden opacity-100 transition-all duration-500 lg:max-h-0 lg:opacity-0 lg:group-hover:mt-2 lg:group-hover:max-h-40 lg:group-hover:opacity-100">
+                  <p className="mt-2 max-w-sm text-[13px] leading-relaxed text-white/80 lg:mt-0">{c.desc}</p>
+                  <span className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-white">
+                    Learn more <ArrowUpRight className="h-4 w-4" />
+                  </span>
                 </div>
               </div>
             </a>
-          </Reveal>
-
-          {/* Bulk SMS */}
-          <Reveal delay={80}>
-            <ChannelCard href="/products/bulk-sms" icon={MessageSquareText} title="Bulk SMS" desc="DLT-compliant, on direct-operator routes.">
-              <div className="mt-4">
-                <div className="flex items-center gap-2 text-[11px] text-muted-foreground">
-                  <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-secondary">
-                    <div className="h-full w-[98%] rounded-full bg-gradient-to-r from-primary to-accent" />
-                  </div>
-                  <span className="font-semibold text-primary">98%</span>
-                </div>
-                <div className="mt-1.5 flex items-center gap-1 text-[11px] font-medium text-muted-foreground"><CheckCheck className="h-3.5 w-3.5 text-primary" /> delivered in &lt;1s</div>
-              </div>
-            </ChannelCard>
-          </Reveal>
-
-          {/* OTP */}
-          <Reveal delay={160}>
-            <ChannelCard href="/products/otp-sms" icon={KeyRound} title="OTP & Verification" desc="Priority-routed, auto failover.">
-              <div className="mt-4 flex items-center gap-1">
-                {"482913".split("").map((d, i) => (
-                  <span key={i} className="flex h-7 w-5 items-center justify-center rounded bg-primary/10 text-[13px] font-bold text-primary">{d}</span>
-                ))}
-                <span className="ml-auto text-[11px] font-semibold text-primary">0.3s</span>
-              </div>
-            </ChannelCard>
-          </Reveal>
-
-          {/* RCS */}
-          <Reveal delay={80}>
-            <ChannelCard href="/products/rcs" icon={Radio} title="RCS Business Messaging" desc="Branded, verified — with SMS fallback.">
-              <div className="mt-4 flex flex-wrap gap-1.5">
-                {["Branded", "Verified ✓", "SMS fallback"].map((t) => (
-                  <span key={t} className="rounded-full bg-secondary px-2 py-0.5 text-[10.5px] font-medium text-muted-foreground">{t}</span>
-                ))}
-              </div>
-            </ChannelCard>
-          </Reveal>
-
-          {/* Cascade */}
-          <Reveal delay={160} className="sm:col-span-2 lg:col-span-1">
-            <ChannelCard href="/products" icon={Layers} title="Cascade failover" desc="Cheapest channel first, automatic fallback.">
-              <div className="mt-4 flex items-center gap-1.5 text-[11px] font-medium">
-                <span className="rounded-md bg-secondary px-2 py-1 text-muted-foreground">RCS</span>
-                <span className="text-muted-foreground">→</span>
-                <span className="rounded-md bg-secondary px-2 py-1 text-muted-foreground">WA</span>
-                <span className="text-muted-foreground">→</span>
-                <span className="rounded-md bg-primary px-2 py-1 text-primary-foreground">SMS ✓</span>
-              </div>
-            </ChannelCard>
-          </Reveal>
-        </div>
+          ))}
+        </Reveal>
 
         <Reveal className="mt-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm">
           <span className="text-muted-foreground">Not sure where to start?</span>
@@ -107,31 +123,5 @@ export function ChannelsShowcase() {
         </Reveal>
       </div>
     </section>
-  )
-}
-
-function ChannelCard({
-  href,
-  icon: Icon,
-  title,
-  desc,
-  children,
-}: {
-  href: string
-  icon: React.ComponentType<{ className?: string }>
-  title: string
-  desc: string
-  children: React.ReactNode
-}) {
-  return (
-    <a href={href} className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-border bg-card p-5 transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5">
-      <div className="flex items-center justify-between">
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary transition group-hover:bg-primary/15"><Icon className="h-5 w-5" /></span>
-        <ArrowUpRight className="h-4 w-4 text-primary opacity-0 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
-      </div>
-      <h3 className="mt-4 text-[15px] font-semibold text-foreground">{title}</h3>
-      <p className="mt-1 text-[13px] leading-relaxed text-muted-foreground">{desc}</p>
-      <div className="mt-auto">{children}</div>
-    </a>
   )
 }
