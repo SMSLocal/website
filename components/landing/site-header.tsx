@@ -4,6 +4,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { BrandLogo } from "@/components/brand/brand-logo"
 import {
+  ArrowUpRight,
   BookOpen,
   Building2,
   ChevronDown,
@@ -159,7 +160,7 @@ export function SiteHeader() {
       {/* Main nav */}
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-3.5 sm:px-6">
         {/* Logo */}
-        <BrandLogo tone="dark" />
+        <BrandLogo tone="dark" size="lg" />
 
         {/* Desktop nav */}
         <nav className="hidden items-center gap-0.5 lg:flex">
@@ -186,11 +187,12 @@ export function SiteHeader() {
                 </button>
                 {/* Dropdown */}
                 <div className="pointer-events-none invisible absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 opacity-0 transition-all duration-150 group-hover:pointer-events-auto group-hover:visible group-hover:opacity-100">
-                  <div className="w-[640px] overflow-hidden rounded-2xl border border-border bg-popover/95 shadow-2xl shadow-foreground/10 backdrop-blur-xl">
-                    <div className="grid grid-cols-2 gap-1 p-3">
+                  <div className="w-[680px] overflow-hidden rounded-2xl border border-border bg-popover shadow-2xl shadow-foreground/10">
+                    <div className="grid grid-cols-2 gap-2 p-4">
                       {item.columns.map((col) => (
-                        <div key={col.heading} className="p-2">
-                          <p className="px-3 pb-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+                        <div key={col.heading} className="p-1">
+                          <p className="mb-1.5 flex items-center gap-1.5 px-2.5 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+                            <span className="h-1 w-1 rounded-full bg-primary" />
                             {col.heading}
                           </p>
                           <ul className="flex flex-col gap-0.5">
@@ -200,19 +202,20 @@ export function SiteHeader() {
                                 <li key={leaf.label}>
                                   <Link
                                     href={leaf.href}
-                                    className="flex items-start gap-2.5 rounded-lg px-3 py-2 transition hover:bg-secondary"
+                                    className="group/i flex items-center gap-3 rounded-xl px-2.5 py-2 transition hover:bg-secondary"
                                   >
                                     {Icon ? (
-                                      <span className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-primary/15 text-primary">
-                                        <Icon className="h-3.5 w-3.5" />
+                                      <span className="inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition group-hover/i:bg-primary group-hover/i:text-primary-foreground">
+                                        <Icon className="h-4 w-4" />
                                       </span>
                                     ) : null}
-                                    <span className="flex flex-col">
-                                      <span className="text-[13px] font-medium text-foreground">{leaf.label}</span>
+                                    <span className="min-w-0 flex-1">
+                                      <span className="block text-[13px] font-semibold text-foreground">{leaf.label}</span>
                                       {leaf.description ? (
-                                        <span className="text-[11.5px] text-muted-foreground">{leaf.description}</span>
+                                        <span className="block truncate text-[11.5px] text-muted-foreground">{leaf.description}</span>
                                       ) : null}
                                     </span>
+                                    <ArrowUpRight className="h-4 w-4 shrink-0 text-primary opacity-0 transition-all group-hover/i:translate-x-0.5 group-hover/i:opacity-100" />
                                   </Link>
                                 </li>
                               )
@@ -224,10 +227,10 @@ export function SiteHeader() {
                     {item.footer ? (
                       <Link
                         href={item.footer.href}
-                        className="flex items-center justify-between border-t border-border bg-secondary/40 px-5 py-3 text-[12.5px] font-medium text-primary hover:bg-secondary"
+                        className="flex items-center justify-between gap-2 border-t border-border bg-secondary/50 px-5 py-3.5 text-[12.5px] font-semibold text-primary transition hover:bg-secondary"
                       >
                         {item.footer.label}
-                        <span aria-hidden>→</span>
+                        <ArrowUpRight className="h-4 w-4" />
                       </Link>
                     ) : null}
                   </div>
