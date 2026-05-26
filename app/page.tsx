@@ -15,7 +15,7 @@ import { PricingTeaser } from "@/components/landing/pricing-teaser"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { SiteHeader } from "@/components/landing/site-header"
 import { StatsStrip } from "@/components/landing/stats-strip"
-import { Testimonials } from "@/components/landing/testimonials"
+import { FaqSection } from "@/components/landing/faq-section"
 import { FaqJsonLd } from "@/components/seo/json-ld"
 
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
@@ -79,7 +79,7 @@ export default function HomePage() {
       <PricingTeaser />
       <ComplianceStrip />
       <DeveloperStrip />
-      <Testimonials />
+      <FaqSection items={HOMEPAGE_FAQS} />
       <FinalCta />
       <SiteFooter />
     </main>

@@ -1,4 +1,5 @@
 import { ArrowRight, Calendar, Check } from "lucide-react"
+import { Reveal } from "./reveal"
 
 export function FinalCta() {
   return (
@@ -23,12 +24,13 @@ export function FinalCta() {
           />
           <div aria-hidden className="bg-grid-ink absolute inset-0 opacity-50 mask-radial-fade" />
 
-          <div className="relative max-w-2xl">
+          <Reveal className="relative max-w-2xl">
             <span className="inline-flex rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-medium uppercase tracking-wider text-white/80 backdrop-blur-md">
               Ready when you are
             </span>
-            <h2 className="mt-4 text-pretty text-3xl font-semibold tracking-tight sm:text-5xl">
-              Your first campaign is on us.
+            <h2 className="mt-4 text-pretty text-3xl font-bold tracking-tight sm:text-5xl">
+              Your first campaign is{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">on us</span>.
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/70 sm:text-base">
               ₹60 free credit. Full DLT compliance. Two-minute signup. No card.
@@ -37,14 +39,15 @@ export function FinalCta() {
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="/signup"
-                className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
+                className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
               >
-                Start Free — ₹60 Credit
-                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                <span className="relative z-10">Start Free — ₹60 Credit</span>
+                <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                <span aria-hidden className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               </a>
               <a
                 href="/company/contact"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
               >
                 <Calendar className="h-4 w-4" />
                 Book a 15-min Demo
@@ -68,7 +71,7 @@ export function FinalCta() {
                 </li>
               ))}
             </ul>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
