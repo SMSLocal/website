@@ -1,5 +1,5 @@
 import { ArrowUpRight, Check, Star } from "lucide-react"
-import { HeroDashboard } from "./hero-dashboard"
+import { HeroLiveDemo } from "./hero-livedemo"
 
 const FEATURE_CHECKS = [
   "DLT-compliant",
@@ -103,9 +103,9 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Full product dashboard — on the right at lg */}
+        {/* Live demo console — on the right at lg */}
         <div>
-          <HeroDashboard />
+          <HeroLiveDemo />
         </div>
       </div>
     </section>
