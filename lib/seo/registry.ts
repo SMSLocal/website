@@ -216,12 +216,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Solutions ���───────────────────────────────────────────────────────────
   "/solutions": {
-    title: "Solutions by Industry — SMSLocal Messaging",
+    title: "Business Messaging Solutions — Trusted, 7 Industries",
     description:
-      "DLT-compliant SMS, WhatsApp API, and AI agents tailored for Indian e-commerce, banking, healthcare, education, logistics, real estate, and retail.",
-    focusKeyword: "business messaging solutions India",
+      "Business messaging solutions for India — DLT-compliant SMS, WhatsApp API, and AI agents tailored for e-commerce, banking, healthcare, logistics and more.",
+    focusKeyword: "business messaging solutions",
     keywords: [
-      "business messaging solutions India",
+      "business messaging solutions",
       "SMS solutions by industry",
       "WhatsApp API use cases",
       "industry SMS solutions",
@@ -231,12 +231,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/solutions/banking-fintech": {
-    title: "SMS & WhatsApp for Banking & Fintech India",
+    title: "SMS for Banking & Fintech — Trusted, Sub-1s OTPs",
     description:
-      "Secure OTPs in under 1 sec, transaction alerts, and KYC flows — DLT-compliant, DPDPA-aware. Built for Indian banks and fintechs. ₹60 free credit.",
-    focusKeyword: "SMS for banking",
+      "SMS for banking & fintech in India — secure OTPs in under 1 second, transaction alerts, and KYC flows. DLT-compliant, DPDPA-aware, with ₹60 free credit.",
+    focusKeyword: "SMS for banking & fintech",
     keywords: [
-      "SMS for banking",
+      "SMS for banking & fintech",
       "banking SMS India",
       "fintech SMS API",
       "banking OTP SMS",
@@ -247,12 +247,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/solutions/ecommerce": {
-    title: "SMS & WhatsApp for E-commerce — Order & Cart Alerts",
+    title: "SMS for E-commerce — Trusted, 24/7 Cart Recovery",
     description:
-      "Drive repeat sales with DLT-compliant order SMS, WhatsApp broadcasts, and AI cart-recovery agents. Zero setup for WhatsApp. ₹60 free credit.",
-    focusKeyword: "SMS for ecommerce",
+      "SMS for e-commerce in India — DLT-compliant order and shipping alerts, WhatsApp broadcasts, and AI cart-recovery agents that lift repeat sales. ₹60 free.",
+    focusKeyword: "SMS for e-commerce",
     keywords: [
-      "SMS for ecommerce",
+      "SMS for e-commerce",
       "ecommerce SMS India",
       "cart recovery WhatsApp",
       "order confirmation SMS",
