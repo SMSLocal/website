@@ -17,8 +17,10 @@ const OPERATORS: Mark[] = [
 
 export function OperatorsStrip() {
   return (
-    <section className="border-b border-border bg-background py-14 sm:py-16">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section className="relative bg-background py-14 sm:py-16">
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <h2
             className="text-center text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-[40px]"
