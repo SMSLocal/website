@@ -1,5 +1,6 @@
 import { ArrowUpRight, Check, Star } from "lucide-react"
-import { HeroLiveDemo } from "./hero-livedemo"
+import { HeroAgent } from "./hero-agent"
+import { RotatingWord } from "./rotating-word"
 
 const FEATURE_CHECKS = [
   "DLT-compliant",
@@ -52,11 +53,9 @@ export function Hero() {
             DLT-ready in a day · Free ₹60 credit
           </div>
 
-          <h1 className="mt-6 max-w-xl text-balance text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-[52px]">
-            India&apos;s{" "}
-            <span className="bg-gradient-to-r from-primary via-[oklch(0.66_0.14_178)] to-accent bg-clip-text text-transparent">
-              SMS, WhatsApp &amp; AI
-            </span>{" "}
+          <h1 className="mt-6 max-w-xl text-balance text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-[52px]">
+            India&apos;s <RotatingWord />
+            <br />
             messaging platform
           </h1>
 
@@ -103,9 +102,9 @@ export function Hero() {
           </p>
         </div>
 
-        {/* Live demo console — on the right at lg */}
+        {/* Free-floating agent composition (no box) — on the right at lg */}
         <div>
-          <HeroLiveDemo />
+          <HeroAgent />
         </div>
       </div>
     </section>
