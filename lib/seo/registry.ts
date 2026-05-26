@@ -311,9 +311,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/solutions/real-estate": {
-    title: "SMS & WhatsApp for Real Estate India",
+    title: "SMS for Real Estate — Trusted, 24/7 Lead Alerts",
     description:
-      "Property alerts, open-house invites, lead nurture, and client follow-up — via DLT-compliant SMS and WhatsApp in regional languages. ₹60 free credit.",
+      "SMS for real estate in India — DLT-compliant property alerts, open-house invites, lead nurture, and client follow-up over SMS and WhatsApp. ₹60 free credit.",
     focusKeyword: "SMS for real estate",
     keywords: [
       "SMS for real estate",
@@ -327,9 +327,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/solutions/retail": {
-    title: "SMS & WhatsApp for Retail & Hospitality India",
+    title: "SMS for Retail & Hospitality — Trusted, 24/7",
     description:
-      "Loyalty programmes, reservation confirmations, flash sales, and guest messaging — DLT-compliant SMS and WhatsApp. ₹60 free credit.",
+      "SMS for retail & hospitality in India — DLT-compliant loyalty offers, reservation confirmations, flash sales, and guest messaging over SMS & WhatsApp. ₹60 free.",
     focusKeyword: "SMS for retail",
     keywords: [
       "SMS for retail",
@@ -684,17 +684,17 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Long SMS explainer (article) ─────────────────────────────────────────
   "/long-sms-messages": {
-    title: "Long SMS Messages — Concatenation & Character Limits",
+    title: "Long SMS Messages — The Complete, Trusted 2026 Guide",
     description:
-      "A full guide to long SMS in India: how concatenation works, GSM-7 vs UCS-2 limits, segment counts, pricing, and DLT template rules.",
+      "Long SMS messages explained for India — how concatenation works, GSM-7 vs UCS-2 limits, segment counts, pricing, and DLT template rules. ₹60 free to try.",
     type: "article",
     publishedTime: "2026-02-10T00:00:00.000Z",
     modifiedTime: "2026-04-22T00:00:00.000Z",
     authors: ["SMSLocal Team"],
-    focusKeyword: "SMS character limit",
+    focusKeyword: "long SMS messages",
     keywords: [
-      "SMS character limit",
       "long SMS messages",
+      "SMS character limit",
       "concatenated SMS",
       "160 character SMS",
       "GSM-7 vs UCS-2",
