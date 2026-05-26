@@ -10,6 +10,7 @@ import { Hero } from "@/components/landing/hero"
 import { HowItWorks } from "@/components/landing/how-it-works"
 import { Industries } from "@/components/landing/industries"
 import { LogoRow } from "@/components/landing/logo-row"
+import { OperatorsStrip } from "@/components/landing/operators-strip"
 import { PricingTeaser } from "@/components/landing/pricing-teaser"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { SiteHeader } from "@/components/landing/site-header"
@@ -68,6 +69,7 @@ export default function HomePage() {
       <AnnouncementStrip />
       <SiteHeader />
       <Hero />
+      <OperatorsStrip />
       <ChannelsShowcase />
       <LogoRow />
       <StatsStrip />
