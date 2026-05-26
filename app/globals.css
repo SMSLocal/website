@@ -201,6 +201,9 @@
 
 @keyframes pop-in { 0% { opacity: 0; transform: scale(0.4); } 100% { opacity: 1; transform: scale(1); } }
 
+@keyframes fill-loop { 0%, 12% { width: 0; } 68%, 100% { width: 98%; } }
+.animate-fill-loop { animation: fill-loop 3.2s ease-in-out infinite; }
+
 /* Grid pattern used in hero / sections */
 .bg-grid-ink {
   background-image:
