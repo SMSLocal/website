@@ -420,13 +420,13 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/compare/smslocal-vs-msg91": {
-    title: "SMSLocal vs MSG91 — A Fair 2026 Comparison",
+    title: "SMSLocal vs MSG91 — A Trusted 2026 Comparison",
     description:
-      "Honest feature and pricing breakdown of SMSLocal vs MSG91. Where each platform wins, who should pick which, and how pricing compares in INR.",
-    focusKeyword: "MSG91 alternative",
+      "SMSLocal vs MSG91 — an honest 2026 breakdown of features and INR pricing, where each platform wins, and who should pick which for messaging in India.",
+    focusKeyword: "SMSLocal vs MSG91",
     keywords: [
-      "MSG91 alternative",
       "SMSLocal vs MSG91",
+      "MSG91 alternative",
       "MSG91 pricing",
       "MSG91 review",
       "MSG91 vs Twilio",
@@ -435,13 +435,13 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/compare/smslocal-vs-textlocal": {
-    title: "SMSLocal vs Textlocal — A Fair 2026 Comparison",
+    title: "SMSLocal vs Textlocal — A Trusted 2026 Comparison",
     description:
-      "Honest side-by-side of SMSLocal and Textlocal. API depth, WhatsApp readiness, modern DX, AI agents, and who should pick which.",
-    focusKeyword: "Textlocal alternative",
+      "SMSLocal vs Textlocal — an honest 2026 comparison of API depth, WhatsApp readiness, modern developer experience, and AI agents, plus who should pick which.",
+    focusKeyword: "SMSLocal vs Textlocal",
     keywords: [
-      "Textlocal alternative",
       "SMSLocal vs Textlocal",
+      "Textlocal alternative",
       "Textlocal pricing",
       "Textlocal review",
       "Textlocal India",
@@ -450,13 +450,13 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/compare/smslocal-vs-twilio": {
-    title: "SMSLocal vs Twilio — A Fair 2026 Comparison",
+    title: "SMSLocal vs Twilio — A Trusted 2026 Comparison",
     description:
-      "Honest side-by-side of SMSLocal and Twilio for Indian buyers. INR pricing, India routes, DLT-native workflows, WhatsApp depth, and who should pick which.",
-    focusKeyword: "Twilio alternative India",
+      "SMSLocal vs Twilio for Indian buyers — an honest 2026 look at INR pricing, India routes, DLT-native workflows, and WhatsApp depth, plus who should pick which.",
+    focusKeyword: "SMSLocal vs Twilio",
     keywords: [
-      "Twilio alternative India",
       "SMSLocal vs Twilio",
+      "Twilio alternative India",
       "Twilio India pricing",
       "Twilio SMS India",
       "Twilio DLT compliance",
