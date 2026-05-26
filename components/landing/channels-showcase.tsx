@@ -4,6 +4,7 @@ import { Reveal } from "./reveal"
 type Channel = {
   short: string
   title: string
+  tag: string
   desc: string
   icon: React.ComponentType<{ className?: string }>
   href: string
@@ -14,54 +15,96 @@ const CHANNELS: Channel[] = [
   {
     short: "Bulk SMS",
     title: "Bulk SMS",
-    desc: "DLT-compliant transactional & promotional SMS on direct-operator routes. From ₹0.09.",
+    tag: "From ₹0.09 / SMS",
+    desc: "DLT-compliant transactional & promotional SMS on direct-operator routes.",
     icon: MessageSquareText,
     href: "/products/bulk-sms",
-    grad: "linear-gradient(155deg, oklch(0.46 0.12 170), oklch(0.17 0.03 220))",
+    grad: "linear-gradient(155deg, oklch(0.50 0.13 170), oklch(0.18 0.03 220))",
   },
   {
     short: "WhatsApp API",
     title: "WhatsApp Business API",
-    desc: "Green-tick BSP — broadcasts, templates, and a shared team inbox.",
+    tag: "Green-tick BSP",
+    desc: "Broadcasts, templates, and a shared team inbox on the official API.",
     icon: MessageCircle,
     href: "/products/whatsapp-business-api",
-    grad: "linear-gradient(155deg, oklch(0.44 0.13 162), oklch(0.16 0.03 228))",
+    grad: "linear-gradient(155deg, oklch(0.48 0.14 160), oklch(0.17 0.03 228))",
   },
   {
     short: "AI Agents",
     title: "AI WhatsApp Agents",
-    desc: "Auto-reply and deflect tickets in 8 Indian languages, around the clock.",
+    tag: "8 Indian languages",
+    desc: "Auto-reply and deflect tickets in eight Indian languages, around the clock.",
     icon: Bot,
     href: "/products/ai-agents",
-    grad: "linear-gradient(155deg, oklch(0.48 0.13 178), oklch(0.18 0.03 215))",
+    grad: "linear-gradient(155deg, oklch(0.52 0.13 180), oklch(0.19 0.03 214))",
   },
   {
     short: "OTP",
     title: "OTP & Verification",
-    desc: "Priority-routed OTP SMS with automatic carrier failover. From ₹0.15.",
+    tag: "From ₹0.15 · 0.3s",
+    desc: "Priority-routed OTP SMS with automatic carrier failover.",
     icon: KeyRound,
     href: "/products/otp-sms",
-    grad: "linear-gradient(155deg, oklch(0.43 0.12 158), oklch(0.16 0.03 232))",
+    grad: "linear-gradient(155deg, oklch(0.47 0.12 156), oklch(0.16 0.03 232))",
   },
   {
     short: "RCS",
     title: "RCS Business Messaging",
-    desc: "Branded, verified messaging that falls back to SMS automatically.",
+    tag: "Branded + SMS fallback",
+    desc: "Verified, branded rich cards that fall back to SMS automatically.",
     icon: Radio,
     href: "/products/rcs",
-    grad: "linear-gradient(155deg, oklch(0.47 0.12 184), oklch(0.17 0.03 222))",
+    grad: "linear-gradient(155deg, oklch(0.50 0.12 186), oklch(0.18 0.03 222))",
   },
   {
     short: "Quick SMS",
     title: "Quick SMS",
+    tag: "No code",
     desc: "Launch campaigns without code — straight from your dashboard.",
     icon: Zap,
     href: "/products/quick-sms",
-    grad: "linear-gradient(155deg, oklch(0.45 0.13 166), oklch(0.16 0.03 226))",
+    grad: "linear-gradient(155deg, oklch(0.49 0.13 166), oklch(0.17 0.03 226))",
   },
 ]
 
+function Panel({ c, n }: { c: Channel; n: number }) {
+  return (
+    <a
+      href={c.href}
+      className="group relative flex min-h-[180px] flex-col justify-between overflow-hidden rounded-2xl p-5 text-white shadow-lg transition-all duration-500 ease-out lg:min-h-0 lg:flex-1 lg:hover:flex-[2.4]"
+      style={{ background: c.grad }}
+    >
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-2/3" style={{ background: "radial-gradient(120% 80% at 50% 0%, rgba(255,255,255,0.12), transparent 70%)" }} />
+      <c.icon aria-hidden className="pointer-events-none absolute -bottom-4 -right-3 h-32 w-32 text-white/[0.08]" />
+
+      <div className="relative flex items-start justify-between">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-white backdrop-blur-sm">
+          <c.icon className="h-5 w-5" />
+        </span>
+        <span className="font-mono text-[11px] text-white/55">0{n} / 06</span>
+      </div>
+
+      <div className="relative">
+        <div className="text-[11px] font-semibold uppercase tracking-wider text-white/65">{c.tag}</div>
+        <h3 className="mt-1 text-lg font-bold leading-tight">
+          <span className="lg:hidden">{c.title}</span>
+          <span className="hidden lg:inline lg:group-hover:hidden">{c.short}</span>
+          <span className="hidden lg:group-hover:inline">{c.title}</span>
+        </h3>
+        <div className="overflow-hidden opacity-100 transition-all duration-500 lg:max-h-0 lg:opacity-0 lg:group-hover:mt-2 lg:group-hover:max-h-40 lg:group-hover:opacity-100">
+          <p className="mt-2 max-w-sm text-[13px] leading-relaxed text-white/80 lg:mt-0">{c.desc}</p>
+          <span className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-white">
+            Learn more <ArrowUpRight className="h-4 w-4" />
+          </span>
+        </div>
+      </div>
+    </a>
+  )
+}
+
 export function ChannelsShowcase() {
+  const rows = [CHANNELS.slice(0, 3), CHANNELS.slice(3, 6)]
   return (
     <section className="relative overflow-hidden border-b border-border bg-background py-20 lg:py-28">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
@@ -79,41 +122,16 @@ export function ChannelsShowcase() {
           </p>
         </Reveal>
 
-        {/* Hover-expand accordion */}
-        <Reveal delay={80} className="mt-12 flex flex-col gap-3 lg:h-[420px] lg:flex-row">
-          {CHANNELS.map((c, i) => (
-            <a
-              key={c.title}
-              href={c.href}
-              className="group relative flex min-h-[150px] flex-col justify-end overflow-hidden rounded-2xl p-5 text-white shadow-lg transition-all duration-500 ease-out lg:min-h-0 lg:flex-1 lg:hover:flex-[2.6]"
-              style={{ background: c.grad }}
-            >
-              {/* texture + sheen */}
-              <div aria-hidden className="bg-grid-ink pointer-events-none absolute inset-0 opacity-30 [mask-image:linear-gradient(to_top,black,transparent)]" />
-              {/* number */}
-              <span className="absolute right-4 top-4 font-mono text-[11px] text-white/55">0{i + 1} / 06</span>
-              {/* icon */}
-              <span className="absolute left-4 top-4 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-white backdrop-blur-sm">
-                <c.icon className="h-5 w-5" />
-              </span>
-
-              <div className="relative">
-                <h3 className="text-lg font-bold leading-tight">
-                  <span className="lg:hidden">{c.title}</span>
-                  <span className="hidden lg:inline lg:group-hover:hidden">{c.short}</span>
-                  <span className="hidden lg:group-hover:inline">{c.title}</span>
-                </h3>
-                {/* reveal */}
-                <div className="overflow-hidden opacity-100 transition-all duration-500 lg:max-h-0 lg:opacity-0 lg:group-hover:mt-2 lg:group-hover:max-h-40 lg:group-hover:opacity-100">
-                  <p className="mt-2 max-w-sm text-[13px] leading-relaxed text-white/80 lg:mt-0">{c.desc}</p>
-                  <span className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-white">
-                    Learn more <ArrowUpRight className="h-4 w-4" />
-                  </span>
-                </div>
-              </div>
-            </a>
+        {/* Two rows of three — each a hover-expand accordion */}
+        <div className="mt-12 space-y-3">
+          {rows.map((row, ri) => (
+            <Reveal key={ri} delay={ri * 120} className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:flex lg:h-[280px]">
+              {row.map((c, j) => (
+                <Panel key={c.title} c={c} n={ri * 3 + j + 1} />
+              ))}
+            </Reveal>
           ))}
-        </Reveal>
+        </div>
 
         <Reveal className="mt-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm">
           <span className="text-muted-foreground">Not sure where to start?</span>
