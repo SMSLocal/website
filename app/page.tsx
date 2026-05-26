@@ -11,7 +11,6 @@ import { HowItWorks } from "@/components/landing/how-it-works"
 import { Industries } from "@/components/landing/industries"
 import { LogoRow } from "@/components/landing/logo-row"
 import { PricingTeaser } from "@/components/landing/pricing-teaser"
-import { ProductTiles } from "@/components/landing/product-tiles"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { SiteHeader } from "@/components/landing/site-header"
 import { StatsStrip } from "@/components/landing/stats-strip"
@@ -71,7 +70,6 @@ export default function HomePage() {
       <Hero />
       <ChannelsShowcase />
       <LogoRow />
-      <ProductTiles />
       <StatsStrip />
       <HowItWorks />
       <Differentiators />
