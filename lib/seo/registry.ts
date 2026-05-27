@@ -546,12 +546,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/developers/xml-api": {
-    title: "XML API Reference — Send SMS via XML",
+    title: "XML API for SMS — Trusted, DLT-Ready in 5 Steps",
     description:
-      "XML API reference for SMSLocal. Send DLT-compliant SMS, fetch delivery reports, and check credits using XML requests — ideal for legacy and XML-centric stacks.",
-    focusKeyword: "XML SMS API",
+      "XML API for SMS at SMSLocal — send DLT-compliant SMS, fetch delivery reports, and check credits via XML requests, ideal for legacy and XML-centric stacks.",
+    focusKeyword: "XML API",
     keywords: [
-      "XML SMS API",
+      "XML API",
       "SMS XML integration",
       "XML SMS gateway",
       "XML send SMS",
@@ -662,9 +662,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/resources/tools/sms-bomber": {
-    title: "SMS Bomber in India — Illegal, and What to Use Instead",
+    title: "SMS Bomber — Illegal in India: a Trusted 2026 Guide",
     description:
-      "SMS bombing is illegal in India under the IT Act, TCCCPR 2018, and DPDPA. What it is, the consequences for senders, and the legal high-volume alternative.",
+      "SMS bomber tools are illegal in India under the IT Act, TCCCPR 2018, and DPDPA — what they are, the consequences for senders, and the legal alternative.",
     type: "article",
     publishedTime: "2026-01-15T00:00:00.000Z",
     modifiedTime: "2026-04-22T00:00:00.000Z",
@@ -706,9 +706,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Company ──────────────────────────────────────────────────────────────
   "/company/about": {
-    title: "About — India's messaging platform since 2019",
+    title: "About SMSLocal — Trusted in India Since 2019",
     description:
-      "SMSLocal is India's complete SMS, WhatsApp, and AI messaging platform. Built for Indian businesses since 2019. DLT-compliant, scalable, developer-ready.",
+      "About SMSLocal — India's complete SMS, WhatsApp, and AI messaging platform, built for Indian businesses since 2019. DLT-compliant, scalable, developer-ready.",
     focusKeyword: "about SMSLocal",
     keywords: [
       "about SMSLocal",
@@ -722,9 +722,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/company/careers": {
-    title: "Careers — Build messaging infrastructure for India",
+    title: "SMSLocal Careers — Trusted Team, Remote-First in 2026",
     description:
-      "Join a small, opinionated team building India's messaging platform. Engineering, operations, carrier relations, and GTM — remote-first, Bengaluru-optional.",
+      "SMSLocal careers — join a small, opinionated team building India's messaging platform. Engineering, operations, carrier relations, and GTM, remote-first.",
     focusKeyword: "SMSLocal careers",
     keywords: [
       "SMSLocal careers",
@@ -738,9 +738,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/company/contact": {
-    title: "Contact — Talk to sales or support",
+    title: "Contact SMSLocal — Trusted Sales & Support, 1-Day Reply",
     description:
-      "Reach the SMSLocal team for enterprise sales, DLT onboarding, integration help, partnerships, or press. We respond within one business day.",
+      "Contact SMSLocal for enterprise sales, DLT onboarding, integration help, partnerships, or press — our team responds within one business day. ₹60 free to try.",
     focusKeyword: "contact SMSLocal",
     keywords: [
       "contact SMSLocal",
