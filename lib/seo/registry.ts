@@ -582,12 +582,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Resources ────────────────────────────────────────────────────────────
   "/resources/customer-stories": {
-    title: "Customer Stories — Indian businesses shipping with SMSLocal",
+    title: "SMS Case Studies — Trusted Results from 3 Sectors",
     description:
-      "How fintech, D2C, and EdTech teams ship with SMSLocal — case studies with hard benchmarks, named leaders, and before/after metrics.",
-    focusKeyword: "SMS case studies India",
+      "SMS case studies from India — how fintech, D2C, and EdTech teams ship with SMSLocal, with hard benchmarks, named leaders, and before/after metrics here.",
+    focusKeyword: "SMS case studies",
     keywords: [
-      "SMS case studies India",
+      "SMS case studies",
       "WhatsApp Business case study",
       "SMS marketing case study",
       "SMSLocal customer stories",
@@ -598,12 +598,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/resources/glossary": {
-    title: "Messaging Glossary — SMS, WhatsApp & DLT Terms",
+    title: "SMS Glossary — Trusted DLT & WhatsApp Terms, 2026",
     description:
-      "Plain-English definitions for every term that matters in Indian messaging — DLT, PE, BSP, template, DLR, MAU, scrubbing and more. India-specific.",
-    focusKeyword: "SMS glossary India",
+      "SMS glossary for India — plain-English definitions for DLT, PE, BSP, template, DLR, MAU, scrubbing, and every term that matters in Indian messaging today.",
+    focusKeyword: "SMS glossary",
     keywords: [
-      "SMS glossary India",
+      "SMS glossary",
       "DLT glossary",
       "SMS terminology",
       "WhatsApp API terms",
@@ -614,9 +614,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/resources/help": {
-    title: "Help Centre — Documentation & Guides",
+    title: "DLT Registration Guide — Trusted Help, 2026 Setup",
     description:
-      "Step-by-step guides for SMS, WhatsApp, OTP, DLT registration, and platform features. Search thousands of answers from SMSLocal support.",
+      "DLT registration guide and help centre — step-by-step setup for SMS, WhatsApp, OTP, Sender IDs, and templates, plus thousands of answers from our support.",
     focusKeyword: "DLT registration guide",
     keywords: [
       "DLT registration guide",
@@ -630,9 +630,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/resources/tools": {
-    title: "SMS Tools — Free utilities for Indian messaging",
+    title: "Free SMS Tools — Trusted Utilities, ₹60 to Try",
     description:
-      "Free SMS utilities for Indian businesses: send SMS with ₹60 credit, learn the legal alternatives to SMS bombing, and compose messages the right way.",
+      "Free SMS tools for Indian businesses — send SMS with ₹60 credit, learn the legal alternatives to SMS bombing, and compose DLT-ready messages the right way.",
     focusKeyword: "free SMS tools",
     keywords: [
       "free SMS tools",
@@ -646,9 +646,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/resources/tools/free-sms-without-registration": {
-    title: "Free SMS (No Credit Card) — ₹60 Credit on Signup",
+    title: "Free SMS Without Registration — Trusted, ₹60 Credit",
     description:
-      "Send free SMS to Indian numbers with ₹60 signup credits, pay-as-you-go from ₹0.1050 / SMS, and no credit card. DLT-compliant and live in minutes.",
+      "Free SMS without registration — send to Indian numbers with ₹60 signup credit, pay-as-you-go from ₹0.1050, and no credit card. DLT-compliant, live in minutes.",
     focusKeyword: "free SMS without registration",
     keywords: [
       "free SMS without registration",
