@@ -768,12 +768,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Legal ────────────────────────────────────────────────────────────────
   "/legal/acceptable-use": {
-    title: "Acceptable Use Policy — What you can send on SMSLocal",
+    title: "Acceptable Use Policy — Trusted Rules, 2026",
     description:
-      "The categories of content and behaviour that are not allowed on the SMSLocal platform, and the enforcement actions we take.",
-    focusKeyword: "SMS acceptable use policy",
+      "Acceptable use policy for SMSLocal — the content and behaviour not allowed on the platform, the prohibited categories, and the enforcement actions we take.",
+    focusKeyword: "acceptable use policy",
     keywords: [
-      "SMS acceptable use policy",
+      "acceptable use policy",
       "SMSLocal AUP",
       "SMS AUP India",
       "prohibited SMS content",
@@ -782,12 +782,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/legal/cookie-policy": {
-    title: "Cookie Policy — How SMSLocal uses cookies",
+    title: "Cookie Policy — Trusted, SMSLocal Cookies in 2026",
     description:
-      "How SMSLocal uses cookies and similar technologies on smslocal.in. Covers strictly-necessary, preference, analytics, and advertising cookies.",
-    focusKeyword: "SMSLocal cookie policy",
+      "Cookie policy for SMSLocal — how we use cookies and similar technologies on smslocal.in, covering strictly-necessary, preference, analytics, and ad cookies.",
+    focusKeyword: "cookie policy",
     keywords: [
-      "SMSLocal cookie policy",
+      "cookie policy",
       "cookie policy India",
       "website cookies policy",
       "DPDPA cookie consent",
@@ -796,12 +796,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/legal/dpa": {
-    title: "Data Processing Addendum — SMSLocal DPA",
+    title: "Data Processing Addendum — Trusted DPA, DPDPA 2023",
     description:
-      "The SMSLocal Data Processing Addendum (DPA) covers how we process personal data on your behalf under the DPDP Act, 2023 and international frameworks.",
-    focusKeyword: "data processing addendum India",
+      "Data processing addendum (DPA) for SMSLocal — how we process personal data on your behalf under India's DPDP Act, 2023 and international frameworks.",
+    focusKeyword: "data processing addendum",
     keywords: [
-      "data processing addendum India",
+      "data processing addendum",
       "DPA agreement SaaS",
       "SMSLocal DPA",
       "GDPR DPA SMS",
@@ -810,9 +810,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/legal/dpdpa": {
-    title: "DPDPA Notice — Your rights as a Data Principal",
+    title: "DPDPA Notice — Trusted Data Principal Rights, 2023",
     description:
-      "Plain-language notice under India's Digital Personal Data Protection Act, 2023 on how SMSLocal handles your data and your rights as a Data Principal.",
+      "DPDPA notice from SMSLocal — a plain-language explanation under India's Digital Personal Data Protection Act, 2023 of how we handle your data and your rights.",
     focusKeyword: "DPDPA notice",
     keywords: [
       "DPDPA notice",
@@ -825,12 +825,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/legal/privacy": {
-    title: "Privacy Policy — How SMSLocal protects your data",
+    title: "Privacy Policy — Trusted Data Protection, DPDPA 2023",
     description:
-      "How SMSLocal collects, uses, and safeguards personal data in line with India's DPDP Act, 2023, TRAI regulations, and international best practices.",
-    focusKeyword: "SMSLocal privacy policy",
+      "Privacy policy for SMSLocal — how we collect, use, and safeguard personal data in line with India's DPDP Act, 2023, TRAI rules, and global best practices.",
+    focusKeyword: "privacy policy",
     keywords: [
-      "SMSLocal privacy policy",
+      "privacy policy",
       "privacy policy SMS",
       "DPDP Act 2023 compliance",
       "data privacy India",
@@ -840,12 +840,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/legal/refund-policy": {
-    title: "Refund and Cancellation Policy",
+    title: "Refund Policy — Trusted, Cancellations in 7 Days",
     description:
-      "When SMSLocal wallet balance is refundable, how we handle disputes, and the timelines for processing refunds to Indian and international customers.",
-    focusKeyword: "SMSLocal refund policy",
+      "Refund policy for SMSLocal — when wallet balance is refundable, how we handle disputes, and the timelines for processing refunds to Indian and global customers.",
+    focusKeyword: "refund policy",
     keywords: [
-      "SMSLocal refund policy",
+      "refund policy",
       "SMS refund policy",
       "SMS wallet refund",
       "prepaid SMS refund",
@@ -854,12 +854,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/legal/terms": {
-    title: "Terms of Service — SMSLocal Messaging Platform",
+    title: "Terms of Service — Trusted SMSLocal Agreement, 2026",
     description:
-      "The agreement that governs your use of SMSLocal, including account responsibilities, acceptable use, fees, and liability limits.",
-    focusKeyword: "SMSLocal terms of service",
+      "Terms of service for SMSLocal — the agreement that governs your use of the platform: account responsibilities, acceptable use, fees, and liability limits.",
+    focusKeyword: "terms of service",
     keywords: [
-      "SMSLocal terms of service",
+      "terms of service",
       "SMS terms of service",
       "messaging platform terms",
       "SMS service agreement",
