@@ -55,10 +55,13 @@ function mergeOne(entry: DashboardEntry, ov: SeoOverride | undefined | null): Ef
   }
 }
 
-/** Load everything the dashboard renders — defaults + live overrides. */
+/** Load everything the dashboard renders — defaults + live overrides.
+ *  If the override store is unreachable (e.g. Redis env vars missing on a
+ *  preview deploy), fall back to the static registry baseline so the
+ *  dashboard never goes blank. */
 export async function getEffectiveEntries(): Promise<EffectiveEntry[]> {
   const base = getAllDashboardEntries()
-  const overrides = await getAllOverrides()
+  const overrides = await getAllOverrides().catch(() => new Map<string, SeoOverride>())
   return base.map((e) => mergeOne(e, overrides.get(e.path)))
 }
 
