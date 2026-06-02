@@ -6,7 +6,6 @@ import { ComplianceStrip } from "@/components/landing/compliance-strip"
 import { DeveloperStrip } from "@/components/landing/developer-strip"
 import { Differentiators } from "@/components/landing/differentiators"
 import { FinalCta } from "@/components/landing/final-cta"
-import { Hero } from "@/components/landing/hero"
 import { HowItWorks } from "@/components/landing/how-it-works"
 import { Industries } from "@/components/landing/industries"
 import { OperatorsStrip } from "@/components/landing/operators-strip"
@@ -16,10 +15,11 @@ import { SiteHeader } from "@/components/landing/site-header"
 import { StatsStrip } from "@/components/landing/stats-strip"
 import { FaqSection } from "@/components/landing/faq-section"
 import { FaqJsonLd } from "@/components/seo/json-ld"
+import { TestHero } from "@/components/test-home/test-hero"
+import { AiShowcase } from "@/components/test-home/ai-showcase"
 
-// Duplicate of the homepage for testing at /test-home. Flagged noindex so
-// search engines do not index it, and intentionally NOT added to the SEO
-// registry so it stays out of the sitemap.
+// Test homepage at /test-home. Flagged noindex and intentionally NOT added to
+// the SEO registry, so it stays out of the sitemap.
 export const metadata: Metadata = buildMetadata({ path: "/test-home", noindex: true })
 
 const HOMEPAGE_FAQS = [
@@ -63,7 +63,8 @@ export default function TestHomePage() {
       <FaqJsonLd items={HOMEPAGE_FAQS} path="/test-home" />
       <AnnouncementStrip />
       <SiteHeader />
-      <Hero />
+      <TestHero />
+      <AiShowcase />
       <OperatorsStrip />
       <ChannelsShowcase />
       <StatsStrip />
