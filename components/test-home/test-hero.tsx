@@ -52,7 +52,6 @@ function Typewriter() {
 export function TestHero() {
   const ref = useRef<HTMLElement>(null)
   const [tilt, setTilt] = useState({ x: 0, y: 0 })
-  const [spot, setSpot] = useState({ x: 50, y: 32, on: false })
 
   useEffect(() => {
     const el = ref.current
@@ -64,15 +63,11 @@ export function TestHero() {
       raf = requestAnimationFrame(() => {
         const r = el.getBoundingClientRect()
         setTilt({ x: (e.clientX - r.left) / r.width - 0.5, y: (e.clientY - r.top) / r.height - 0.5 })
-        setSpot({ x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100, on: true })
       })
     }
-    const onLeave = () => setSpot((s) => ({ ...s, on: false }))
     el.addEventListener("mousemove", onMove)
-    el.addEventListener("mouseleave", onLeave)
     return () => {
       el.removeEventListener("mousemove", onMove)
-      el.removeEventListener("mouseleave", onLeave)
       cancelAnimationFrame(raf)
     }
   }, [])
@@ -93,26 +88,23 @@ export function TestHero() {
         style={{ background: "radial-gradient(ellipse at center, color-mix(in oklch, var(--accent) 22%, transparent), transparent 70%)" }}
       />
 
-      {/* Interactive dot-grid revealed around the cursor */}
+      {/* Static dotted grid for depth */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 transition-opacity duration-300"
+        className="pointer-events-none absolute inset-0 mask-radial-fade opacity-70"
         style={{
-          opacity: spot.on ? 1 : 0,
-          backgroundImage: "radial-gradient(color-mix(in oklch, var(--primary) 45%, transparent) 1.2px, transparent 1.2px)",
-          backgroundSize: "26px 26px",
-          WebkitMaskImage: `radial-gradient(220px circle at ${spot.x}% ${spot.y}%, #000 0%, transparent 70%)`,
-          maskImage: `radial-gradient(220px circle at ${spot.x}% ${spot.y}%, #000 0%, transparent 70%)`,
+          backgroundImage: "radial-gradient(color-mix(in oklch, var(--foreground) 8%, transparent) 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
         }}
       />
-      {/* Soft brand spotlight that follows the cursor */}
+      {/* Soft floating brand orbs */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 transition-opacity duration-300"
-        style={{
-          opacity: spot.on ? 1 : 0,
-          background: `radial-gradient(500px circle at ${spot.x}% ${spot.y}%, color-mix(in oklch, var(--primary) 13%, transparent), transparent 60%)`,
-        }}
+        className="animate-float-slow pointer-events-none absolute left-[8%] top-[22%] h-40 w-40 rounded-full bg-primary/10 blur-3xl"
+      />
+      <div
+        aria-hidden
+        className="animate-float-slower pointer-events-none absolute right-[10%] bottom-[14%] h-48 w-48 rounded-full bg-accent/15 blur-3xl"
       />
 
       <div className="relative mx-auto max-w-5xl px-4 py-20 text-center sm:px-6 lg:py-28">
