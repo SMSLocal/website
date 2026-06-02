@@ -11,7 +11,7 @@ import { ArrowUpRight, Check, Send, Star } from "lucide-react"
 
 const FEATURES = ["DLT-compliant", "99.7% delivery", "AI in 8 languages", "₹2,100 free credit"]
 
-const TYPED_WORDS = ["India", "Bulk SMS", "WhatsApp", "RCS", "AI replies"]
+const TYPED_WORDS = ["Bulk SMS", "WhatsApp", "RCS", "AI replies"]
 
 /** Typewriter that types + deletes through TYPED_WORDS on a loop. */
 function Typewriter() {
@@ -52,6 +52,7 @@ function Typewriter() {
 export function TestHero() {
   const ref = useRef<HTMLElement>(null)
   const [tilt, setTilt] = useState({ x: 0, y: 0 })
+  const [spot, setSpot] = useState({ x: 50, y: 32, on: false })
 
   useEffect(() => {
     const el = ref.current
@@ -63,11 +64,15 @@ export function TestHero() {
       raf = requestAnimationFrame(() => {
         const r = el.getBoundingClientRect()
         setTilt({ x: (e.clientX - r.left) / r.width - 0.5, y: (e.clientY - r.top) / r.height - 0.5 })
+        setSpot({ x: ((e.clientX - r.left) / r.width) * 100, y: ((e.clientY - r.top) / r.height) * 100, on: true })
       })
     }
+    const onLeave = () => setSpot((s) => ({ ...s, on: false }))
     el.addEventListener("mousemove", onMove)
+    el.addEventListener("mouseleave", onLeave)
     return () => {
       el.removeEventListener("mousemove", onMove)
+      el.removeEventListener("mouseleave", onLeave)
       cancelAnimationFrame(raf)
     }
   }, [])
@@ -86,6 +91,28 @@ export function TestHero() {
         aria-hidden
         className="pointer-events-none absolute left-1/2 top-0 h-[420px] w-[820px] -translate-x-1/2 rounded-full opacity-40 blur-3xl"
         style={{ background: "radial-gradient(ellipse at center, color-mix(in oklch, var(--accent) 22%, transparent), transparent 70%)" }}
+      />
+
+      {/* Interactive dot-grid revealed around the cursor */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 transition-opacity duration-300"
+        style={{
+          opacity: spot.on ? 1 : 0,
+          backgroundImage: "radial-gradient(color-mix(in oklch, var(--primary) 45%, transparent) 1.2px, transparent 1.2px)",
+          backgroundSize: "26px 26px",
+          WebkitMaskImage: `radial-gradient(220px circle at ${spot.x}% ${spot.y}%, #000 0%, transparent 70%)`,
+          maskImage: `radial-gradient(220px circle at ${spot.x}% ${spot.y}%, #000 0%, transparent 70%)`,
+        }}
+      />
+      {/* Soft brand spotlight that follows the cursor */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 transition-opacity duration-300"
+        style={{
+          opacity: spot.on ? 1 : 0,
+          background: `radial-gradient(500px circle at ${spot.x}% ${spot.y}%, color-mix(in oklch, var(--primary) 13%, transparent), transparent 60%)`,
+        }}
       />
 
       <div className="relative mx-auto max-w-5xl px-4 py-20 text-center sm:px-6 lg:py-28">
@@ -128,7 +155,7 @@ export function TestHero() {
 
         {/* Headline — centered, with typewriter */}
         <h1 className="mx-auto mt-7 max-w-4xl text-balance text-5xl font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-          The messaging platform built for
+          India&rsquo;s messaging platform for
           <span className="mt-3 flex min-h-[1.15em] flex-wrap items-center justify-center gap-3">
             <Typewriter />
             <Send className="h-8 w-8 -rotate-12 text-primary sm:h-10 sm:w-10" />

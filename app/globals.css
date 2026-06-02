@@ -209,6 +209,9 @@
 .animate-marquee-l { animation: marquee-l 36s linear infinite; }
 .animate-marquee-r { animation: marquee-r 36s linear infinite; }
 
+/* Traveling dot used for connector flow animations */
+@keyframes flow-x { 0% { left: 0; opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
+
 /* Grid pattern used in hero / sections */
 .bg-grid-ink {
   background-image:
