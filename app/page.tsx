@@ -6,7 +6,6 @@ import { ComplianceStrip } from "@/components/landing/compliance-strip"
 import { DeveloperStrip } from "@/components/landing/developer-strip"
 import { Differentiators } from "@/components/landing/differentiators"
 import { FinalCta } from "@/components/landing/final-cta"
-import { Hero } from "@/components/landing/hero"
 import { HowItWorks } from "@/components/landing/how-it-works"
 import { Industries } from "@/components/landing/industries"
 import { OperatorsStrip } from "@/components/landing/operators-strip"
@@ -16,6 +15,8 @@ import { SiteHeader } from "@/components/landing/site-header"
 import { StatsStrip } from "@/components/landing/stats-strip"
 import { FaqSection } from "@/components/landing/faq-section"
 import { FaqJsonLd } from "@/components/seo/json-ld"
+import { TestHero } from "@/components/test-home/test-hero"
+import { AiShowcase } from "@/components/test-home/ai-showcase"
 
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
 export const metadata: Metadata = getPageMetadata("/")
@@ -67,7 +68,8 @@ export default function HomePage() {
       <FaqJsonLd items={HOMEPAGE_FAQS} path="/" />
       <AnnouncementStrip />
       <SiteHeader />
-      <Hero />
+      <TestHero />
+      <AiShowcase />
       <OperatorsStrip />
       <ChannelsShowcase />
       <StatsStrip />

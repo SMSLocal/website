@@ -70,7 +70,6 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "Acceptable use", href: "/legal/acceptable-use" },
       { label: "Data Processing Addendum", href: "/legal/dpa" },
       { label: "DPDPA notice", href: "/legal/dpdpa" },
-      { label: "Refund policy", href: "/legal/refund-policy" },
       { label: "Cookie policy", href: "/legal/cookie-policy" },
     ],
   },

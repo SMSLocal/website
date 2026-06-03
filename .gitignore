@@ -15,3 +15,6 @@ node_modules
 
 # Vercel
 .vercel
+
+# Local-only logo backup (kept on disk, not committed)
+_old-logo-backup/

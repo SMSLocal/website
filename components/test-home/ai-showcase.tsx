@@ -149,11 +149,9 @@ export function AiShowcase() {
           <div className="flex flex-col lg:flex-row">
             {/* Sidebar */}
             <aside className="hidden w-[200px] shrink-0 flex-col border-r border-border bg-secondary/30 p-3 lg:flex">
-              <div className="flex items-center gap-2 px-2 py-1.5">
-                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-emerald-500 text-sm font-black text-primary-foreground">
-                  S
-                </span>
-                <span className="text-[14px] font-bold tracking-tight text-foreground">SMSLocal</span>
+              <div className="flex items-center px-2 py-1.5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/smslocal-logo.svg" alt="SMSLocal" style={{ height: 22, width: "auto" }} className="block w-auto select-none" draggable={false} />
               </div>
               <nav className="mt-4 space-y-0.5">
                 {NAV.map((n) => (
@@ -396,30 +394,71 @@ function Robot() {
   }, [])
 
   return (
-    <div ref={ref} className="relative" style={{ animation: "float-slow 5s ease-in-out infinite" }}>
-      <div aria-hidden className="absolute -inset-7 -z-10 rounded-full bg-primary/20 blur-2xl" />
-      {/* antenna */}
-      <span className="absolute -top-4 left-1/2 h-4 w-1 -translate-x-1/2 rounded bg-slate-400" />
-      <span className="absolute -top-[22px] left-1/2 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-primary shadow-[0_0_10px_var(--primary)]" />
-      {/* head */}
-      <div className="relative h-[88px] w-[108px] rounded-[1.5rem] bg-gradient-to-b from-white to-slate-200 shadow-xl ring-1 ring-white/40">
-        <span className="absolute -left-2.5 top-7 h-7 w-2.5 rounded-full bg-slate-300" />
-        <span className="absolute -right-2.5 top-7 h-7 w-2.5 rounded-full bg-slate-300" />
-        {/* face screen */}
-        <div className="absolute inset-x-3 top-3.5 flex h-12 items-center justify-center gap-3 overflow-hidden rounded-2xl bg-[#0a1422] ring-1 ring-primary/30">
-          {[0, 1].map((i) => (
-            <span key={i} className="relative flex h-5 w-5 items-center justify-center rounded-full bg-[#13243b]">
-              <span
-                className="h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_8px_var(--primary)] transition-transform duration-75"
+    <div ref={ref} className="relative flex flex-col items-center">
+      <div aria-hidden className="absolute -inset-8 -z-10 rounded-full bg-primary/25 blur-2xl" />
+
+      <div className="animate-robot-bob relative flex flex-col items-center">
+        {/* HEAD */}
+        <div className="relative z-10">
+          {/* side ears */}
+          <span className="absolute -left-2.5 top-1/2 h-9 w-4 -translate-y-1/2 rounded-2xl bg-gradient-to-b from-slate-700 to-slate-900 shadow-md ring-1 ring-black/20" />
+          <span className="absolute -right-2.5 top-1/2 h-9 w-4 -translate-y-1/2 rounded-2xl bg-gradient-to-b from-slate-700 to-slate-900 shadow-md ring-1 ring-black/20" />
+
+          {/* head shell */}
+          <div className="relative h-[94px] w-[118px] rounded-[1.9rem] bg-gradient-to-b from-white to-slate-200 shadow-xl ring-1 ring-white/70">
+            {/* glossy highlight */}
+            <span className="absolute inset-x-4 top-2 h-3.5 rounded-full bg-white/80 blur-[3px]" />
+
+            {/* face screen */}
+            <div className="absolute inset-x-2.5 bottom-3 top-3 overflow-hidden rounded-[1.35rem] bg-gradient-to-b from-[#0d1a2c] to-[#05080f] shadow-inner ring-1 ring-black/50">
+              {/* screen reflection */}
+              <span aria-hidden className="absolute inset-0 bg-gradient-to-br from-white/12 via-transparent to-transparent" />
+
+              {/* chevron eyes — track the cursor + blink */}
+              <div
+                className="absolute inset-0 flex items-center justify-center transition-transform duration-100"
                 style={{ transform: `translate(${eye.x}px, ${eye.y}px)` }}
+              >
+                <div className="animate-robot-blink flex items-center gap-2.5">
+                  {[0, 1].map((i) => (
+                    <svg
+                      key={i}
+                      width="26"
+                      height="18"
+                      viewBox="0 0 26 18"
+                      fill="none"
+                      className="drop-shadow-[0_0_7px_var(--primary)]"
+                    >
+                      <path
+                        d="M3 13 L13 4 L23 13"
+                        stroke="var(--primary)"
+                        strokeWidth="4.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+
+              {/* scan line */}
+              <span
+                aria-hidden
+                className="absolute inset-x-0 top-0 h-px bg-primary/50"
+                style={{ animation: "hero-progress 2.8s ease-in-out infinite", transformOrigin: "left" }}
               />
-            </span>
-          ))}
-          <span
-            aria-hidden
-            className="absolute inset-x-0 top-0 h-px bg-primary/50"
-            style={{ animation: "hero-progress 2.6s ease-in-out infinite", transformOrigin: "left" }}
-          />
+            </div>
+          </div>
+        </div>
+
+        {/* BODY with slim hanging arms */}
+        <div className="relative -mt-2 h-12 w-[76px] rounded-b-[2rem] rounded-t-lg bg-gradient-to-b from-slate-100 to-slate-300 shadow-md ring-1 ring-white/50">
+          {/* chest light */}
+          <span className="absolute left-1/2 top-3 h-2 w-2 -translate-x-1/2 rounded-full bg-primary shadow-[0_0_8px_var(--primary)]" />
+          {/* left arm */}
+          <span className="absolute -left-[11px] -top-1 h-11 w-3 rotate-[7deg] rounded-full bg-gradient-to-b from-slate-200 to-slate-300 shadow-sm ring-1 ring-white/50" />
+          {/* right arm */}
+          <span className="absolute -right-[11px] -top-1 h-11 w-3 -rotate-[7deg] rounded-full bg-gradient-to-b from-slate-200 to-slate-300 shadow-sm ring-1 ring-white/50" />
         </div>
       </div>
     </div>

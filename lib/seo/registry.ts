@@ -839,20 +839,6 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "GDPR privacy SaaS",
     ],
   },
-  "/legal/refund-policy": {
-    title: "Refund Policy — Trusted, Cancellations in 7 Days",
-    description:
-      "Refund policy for SMSLocal — when wallet balance is refundable, how we handle disputes, and the timelines for processing refunds to Indian and global customers.",
-    focusKeyword: "refund policy",
-    keywords: [
-      "refund policy",
-      "SMS refund policy",
-      "SMS wallet refund",
-      "prepaid SMS refund",
-      "cancellation policy SaaS",
-      "messaging credit refund",
-    ],
-  },
   "/legal/terms": {
     title: "Terms of Service — Trusted SMSLocal Agreement, 2026",
     description:

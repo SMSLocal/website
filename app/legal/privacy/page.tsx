@@ -22,7 +22,7 @@ export default function PrivacyPolicyPage() {
       <LegalDoc
         category="Privacy"
         title="Privacy Policy"
-        summary="This policy explains what personal data SMSLocal processes when you use our platform, why we process it, who we share it with, and the rights you have under India's Digital Personal Data Protection Act, 2023."
+        summary="This policy explains what personal information SMSLocal processes when you use our WhatsApp Business API, bulk SMS, chatbot, and related services, why we process it, who we share it with, and the rights you have under India's Digital Personal Data Protection Act, 2023."
         lastUpdated={LAST_UPDATED}
         effectiveDate={EFFECTIVE_DATE}
         relatedLinks={[
@@ -31,300 +31,411 @@ export default function PrivacyPolicyPage() {
           { label: "Cookie policy", href: "/legal/cookie-policy" },
           { label: "Data Processing Addendum", href: "/legal/dpa" },
           { label: "Acceptable use", href: "/legal/acceptable-use" },
-          { label: "Refund policy", href: "/legal/refund-policy" },
         ]}
         sections={[
           {
-            id: "who-we-are",
-            title: "1. Who we are",
+            id: "introduction",
+            title: "1. Introduction",
             body: (
               <>
                 <P>
-                  SMSLocal is a messaging platform operated by <Strong>SMSLocal Technologies Private Limited</Strong>,
-                  a company incorporated in India. Our registered office address is listed in the{" "}
-                  <a href="/company/contact" className="font-medium text-primary hover:underline">
-                    contact page
+                  SMSLocal.in (&quot;SMSLocal&quot;, &quot;we&quot;, &quot;us&quot;, &quot;our&quot;) is operated by{" "}
+                  <Strong>Swadesh Mobile</Strong>. We provide WhatsApp Business API services, bulk SMS
+                  broadcasting, chatbot automation, two-way messaging, and planned RCS Business Messaging
+                  services to businesses across India and abroad.
+                </P>
+                <P>
+                  This Privacy Policy applies whenever you visit{" "}
+                  <a href="https://www.smslocal.in" className="font-medium text-primary hover:underline">
+                    smslocal.in
                   </a>
-                  . For the purposes of the Digital Personal Data Protection Act, 2023 (&quot;DPDP Act&quot;), we
-                  act as a <Strong>Data Fiduciary</Strong> for account-holder data and as a{" "}
-                  <Strong>Data Processor</Strong> for end-customer data that our customers route through the
-                  platform.
+                  , register for an account, purchase or use our Services, integrate with our APIs, or contact
+                  our support, sales, billing, or grievance teams.
                 </P>
               </>
             ),
           },
           {
-            id: "scope",
-            title: "2. Scope of this policy",
+            id: "definitions",
+            title: "2. Definitions",
             body: (
               <>
-                <P>
-                  This policy applies to information we collect when you visit{" "}
-                  <Strong>smslocal.in</Strong>, sign up for a workspace, use the dashboard or APIs, attend our
-                  events, or contact our sales, support, or legal teams. It does not cover third-party websites
-                  you reach through links on our platform.
-                </P>
-              </>
-            ),
-          },
-          {
-            id: "what-we-collect",
-            title: "3. What we collect",
-            body: (
-              <>
-                <P>
-                  <Strong>Account data</Strong> — name, work email, mobile number, company name, GSTIN, billing
-                  address, and password hashes for workspace administrators and team members.
-                </P>
-                <P>
-                  <Strong>Compliance data</Strong> — DLT principal-entity IDs, template IDs, sender IDs, KYC
-                  documents required by telecom regulations, and signed declarations of consent source.
-                </P>
-                <P>
-                  <Strong>Usage data</Strong> — API requests, campaign metadata, message counts, delivery
-                  reports, IP addresses, browser/device identifiers, and dashboard event logs used for
-                  auditing and debugging.
-                </P>
-                <P>
-                  <Strong>Message content routed via the platform</Strong> — SMS bodies, WhatsApp template
-                  renders, and webhook payloads. This content belongs to our customers; we process it strictly
-                  to deliver the service.
-                </P>
-                <P>
-                  <Strong>Support and communications</Strong> — transcripts of chats, emails, call notes, and
-                  screen-share recordings shared during onboarding or troubleshooting.
-                </P>
-                <Callout>
-                  We do not ask for, and you should not send us, sensitive personal data such as passwords for
-                  third-party systems, financial account PINs, health records, Aadhaar numbers in full, or
-                  biometric identifiers unless an integration explicitly requires it and we have a signed data
-                  processing agreement (DPA) covering that use.
-                </Callout>
-              </>
-            ),
-          },
-          {
-            id: "purposes",
-            title: "4. Why we process your data",
-            body: (
-              <>
-                <P>We use personal data only for the purposes below:</P>
                 <Ul>
-                  <Li>Provide, maintain, and secure the SMSLocal platform and APIs.</Li>
-                  <Li>Authenticate users, prevent abuse, and investigate fraudulent activity.</Li>
                   <Li>
-                    Submit, reconcile, and report DLT-registered traffic to Indian telecom operators and TRAI.
+                    <Strong>Personal Information</Strong> — data relating to an identified or identifiable
+                    natural person, as understood under the Digital Personal Data Protection Act, 2023 and the
+                    Information Technology Act, 2000.
                   </Li>
-                  <Li>Generate invoices, reconcile wallet balances, and comply with Indian tax laws.</Li>
-                  <Li>Respond to support requests, send service notifications, and share policy updates.</Li>
                   <Li>
-                    With your consent, send product updates and marketing communications. You can opt out of
-                    marketing at any time from your workspace settings or by replying{" "}
-                    <Strong>STOP</Strong> to any promotional message.
+                    <Strong>Customer Data</Strong> — information you upload or transmit through the platform,
+                    including contact lists, message content, media, and chatbot conversations.
                   </Li>
-                  <Li>Meet legal, regulatory, and lawful enforcement obligations in India.</Li>
+                  <Li>
+                    <Strong>End-Recipient</Strong> — an individual who receives a WhatsApp, SMS, or RCS message
+                    sent via SMSLocal.
+                  </Li>
+                  <Li>
+                    <Strong>Services</Strong> — all SMSLocal products, including the WhatsApp Business API, bulk
+                    messaging, chatbot builder, analytics, and integrations.
+                  </Li>
                 </Ul>
               </>
             ),
           },
           {
-            id: "legal-bases",
-            title: "5. Legal bases for processing",
+            id: "information-we-collect",
+            title: "3. Information we collect",
             body: (
               <>
                 <P>
-                  Under the DPDP Act, we rely on <Strong>consent</Strong> or a recognised{" "}
-                  <Strong>legitimate use</Strong> for every processing activity. For contractually necessary
-                  processing (operating your workspace, honouring invoices, delivering messages), we rely on
-                  the performance-of-contract legitimate use. For fraud prevention, auditing, and safety
-                  operations, we rely on the corresponding legitimate uses. For marketing we rely on explicit,
-                  revocable consent.
+                  <Strong>Information you provide</Strong> — account registration details (name, business name,
+                  email, mobile number, password, GSTIN, PAN, billing address), KYC and onboarding documents,
+                  payment information (processed through PCI-DSS compliant gateways; we do not store full card
+                  numbers), and your communications with our sales, support, billing, and grievance teams.
+                </P>
+                <P>
+                  <Strong>Customer Data you upload</Strong> — end-recipient contact lists, message content,
+                  templates, chatbot flows, and two-way conversation transcripts.
+                </P>
+                <P>
+                  <Strong>Information collected automatically</Strong> — device and connection data (IP address,
+                  browser type, device identifiers, operating system, timezone, language), usage data (pages
+                  visited, features used, API calls, campaign statistics), delivery, read, and engagement
+                  metadata from Meta, telecom operators, and Google, and information collected via cookies and
+                  similar technologies.
+                </P>
+                <P>
+                  <Strong>Information from third parties</Strong> — identity verification and anti-fraud
+                  signals, profile data from authentication providers (Google, Microsoft), and information from
+                  Meta, telecom operators, payment processors, and integration partners.
+                </P>
+              </>
+            ),
+          },
+          {
+            id: "how-we-use",
+            title: "4. How we use your information",
+            body: (
+              <>
+                <P>We use the information we collect to:</P>
+                <Ul>
+                  <Li>Create accounts and carry out identity verification, KYC, DLT, and WhatsApp onboarding.</Li>
+                  <Li>Deliver the Services and dispatch messages on your behalf.</Li>
+                  <Li>Process payments, generate invoices, and manage your wallet.</Li>
+                  <Li>Provide customer support and resolve grievances.</Li>
+                  <Li>Improve the platform and develop new features.</Li>
+                  <Li>Send service notifications, security alerts, and billing reminders.</Li>
+                  <Li>Send marketing communications, from which you may opt out at any time.</Li>
+                  <Li>Detect and prevent fraud, abuse, and spam.</Li>
+                  <Li>Comply with legal and regulatory obligations.</Li>
+                </Ul>
+              </>
+            ),
+          },
+          {
+            id: "whatsapp-meta",
+            title: "5. WhatsApp Business API & Meta compliance",
+            body: (
+              <>
+                <P>
+                  As an authorised WhatsApp Business Solution Provider, SMSLocal follows Meta&apos;s terms and
+                  policies. Customer Data is processed on Meta-hosted infrastructure and on SMSLocal servers.
+                  You must obtain valid opt-in consent from your end-recipients. SMSLocal does not use
+                  end-recipient numbers or message content for any unrelated purpose.
+                </P>
+                <Callout>
+                  Meta may apply quality ratings, throughput limits, and template restrictions to your account at
+                  its sole discretion. SMSLocal passes on these decisions but is not responsible for them.
+                </Callout>
+              </>
+            ),
+          },
+          {
+            id: "sms-dlt-trai",
+            title: "6. SMS, DLT & TRAI compliance",
+            body: (
+              <>
+                <P>
+                  All SMS services comply with TRAI&apos;s Telecom Commercial Communications Customer Preference
+                  Regulations, 2018 (TCCCPR) and the DLT framework. Before sending SMS, customers must complete
+                  Entity Registration, Sender ID (Header) Registration, and Template Registration on the DLT
+                  platforms (Jio, Airtel, Vi, BSNL). Consent records and DLT identifiers are retained as mandated
+                  by TRAI, and promotional SMS is honoured only outside Do-Not-Disturb hours.
+                </P>
+              </>
+            ),
+          },
+          {
+            id: "rcs",
+            title: "7. RCS Business Messaging (planned service)",
+            body: (
+              <>
+                <P>
+                  We are preparing to launch RCS Business Messaging. For this service we will collect mobile
+                  numbers, opt-in timestamps, IP addresses, message delivery status, interaction events, and
+                  opt-out preferences.
+                </P>
+                <P>
+                  <Strong>How we use it</Strong> — to deliver messages, honour STOP / UNSUBSCRIBE keywords,
+                  respond to HELP / INFO replies, and generate delivery and engagement reports.
+                </P>
+                <P>
+                  <Strong>Legal basis</Strong> — explicit consent obtained via a pre-unticked checkbox during
+                  registration.
+                </P>
+                <P>
+                  <Strong>Your rights</Strong> — you may opt out using the STOP, UNSUBSCRIBE, CANCEL, END, or
+                  QUIT keywords or a settings toggle, email{" "}
+                  <a href="mailto:support@smslocal.in" className="font-medium text-primary hover:underline">
+                    support@smslocal.in
+                  </a>{" "}
+                  (24-hour response), and access or delete your personal data on request. Opted-out numbers are
+                  added to a suppression list.
+                </P>
+                <P>
+                  <Strong>Third parties</Strong> — Infobip (carrier aggregator) and Google RBM handle routing.{" "}
+                  <Strong>Retention</Strong> — opt-in/opt-out timestamps and audit logs are retained for 24
+                  months after account closure; message bodies for 90 days.
                 </P>
               </>
             ),
           },
           {
             id: "sharing",
-            title: "6. Who we share data with",
+            title: "8. Data sharing and disclosure",
             body: (
               <>
-                <P>We share data strictly on a need-to-know basis with:</P>
+                <P>
+                  SMSLocal does not sell, rent, or trade your Personal Information or Customer Data. We share
+                  data only with:
+                </P>
                 <Ul>
-                  <Li>
-                    <Strong>Indian telecom operators and WhatsApp / Meta</Strong> to actually deliver messages,
-                    under the traffic-routing obligations agreed with each carrier.
-                  </Li>
-                  <Li>
-                    <Strong>DLT platforms</Strong> (Jio, Vi, Airtel, BSNL, VIL) for template registration,
-                    reporting, and scrubbing as required under TRAI&apos;s TCCCPR regulations.
-                  </Li>
-                  <Li>
-                    <Strong>Payment providers</Strong> (such as Razorpay) for wallet recharges, GST invoicing,
-                    and dispute management.
-                  </Li>
-                  <Li>
-                    <Strong>Cloud infrastructure providers</Strong> that host the platform, under contractual
-                    data-protection terms.
-                  </Li>
-                  <Li>
-                    <Strong>Professional advisers</Strong> (auditors, lawyers, tax consultants) when required
-                    and under confidentiality.
-                  </Li>
-                  <Li>
-                    <Strong>Authorities</Strong> when mandated by a valid legal request served in India.
-                  </Li>
+                  <Li>Meta (WhatsApp) and Google (RCS).</Li>
+                  <Li>Indian telecom operators and DLT registrars.</Li>
+                  <Li>Payment processors, banks, and tax authorities.</Li>
+                  <Li>Sub-processors and infrastructure providers under confidentiality obligations.</Li>
+                  <Li>Channel partners and resellers, as needed.</Li>
+                  <Li>Professional advisers under confidentiality.</Li>
+                  <Li>Law enforcement and regulators when legally compelled.</Li>
+                  <Li>A successor entity in a merger or acquisition, with notice to you.</Li>
                 </Ul>
-                <P>
-                  We do not sell personal data, and we do not share it with advertising networks for profiling
-                  or retargeting.
-                </P>
-              </>
-            ),
-          },
-          {
-            id: "cross-border",
-            title: "7. Cross-border transfers",
-            body: (
-              <>
-                <P>
-                  Message content and operational logs are processed in India wherever technically possible.
-                  When we use a sub-processor outside India (for example, a global email-delivery service for
-                  our transactional notifications), we transfer data only to jurisdictions not restricted by
-                  the Central Government under Section 16 of the DPDP Act, and only under contractual
-                  safeguards.
-                </P>
               </>
             ),
           },
           {
             id: "retention",
-            title: "8. Retention",
+            title: "9. Data retention",
             body: (
               <>
                 <P>
-                  We retain account and billing data for the duration of your workspace plus the period
-                  mandated by Indian tax and telecom regulations (typically up to eight years for financial
-                  records and the TRAI-mandated window for message metadata). Message content and delivery
-                  reports are retained per your workspace&apos;s plan and the retention defaults documented in
-                  the dashboard; you can shorten these defaults from Settings → Data.
+                  We retain Personal Information and Customer Data only as long as necessary to provide the
+                  Services, comply with legal obligations, and resolve disputes.
                 </P>
-              </>
-            ),
-          },
-          {
-            id: "security",
-            title: "9. Security",
-            body: (
-              <>
-                <P>
-                  We follow industry-standard controls including encryption in transit (TLS 1.2+),
-                  encryption at rest for credentials and message payloads, role-based access control, hardened
-                  production access, structured audit logs, and regular third-party penetration testing. No
-                  system is perfectly secure; if we detect a personal-data breach, we notify the Data
-                  Protection Board of India and affected Data Principals within the timelines required by the
-                  DPDP Act.
-                </P>
+                <Ul>
+                  <Li>
+                    <Strong>Account and KYC records</Strong> — for the life of the account plus 5–8 years as
+                    required by Indian law.
+                  </Li>
+                  <Li>
+                    <Strong>Message metadata and delivery logs</Strong> — 180 days in active storage, longer in
+                    archival.
+                  </Li>
+                  <Li>
+                    <Strong>Billing and tax records</Strong> — at least 8 years.
+                  </Li>
+                  <Li>
+                    <Strong>Contact lists and chatbot data</Strong> — for the active life of the account,
+                    deleted within 90 days of closure.
+                  </Li>
+                </Ul>
               </>
             ),
           },
           {
             id: "your-rights",
-            title: "10. Your rights as a Data Principal",
+            title: "10. Your rights",
             body: (
               <>
-                <P>Under the DPDP Act, if SMSLocal holds personal data about you, you can:</P>
+                <P>Subject to applicable law, you have the right to:</P>
                 <Ul>
-                  <Li>Request a summary of the personal data we hold and how we use it.</Li>
-                  <Li>Request correction or erasure of inaccurate or no-longer-needed data.</Li>
-                  <Li>Withdraw consent for any processing that relies on consent.</Li>
-                  <Li>Nominate another individual to exercise your rights in the event of your incapacity.</Li>
-                  <Li>
-                    File a grievance with our Data Protection Officer (details below) and, if unresolved,
-                    with the Data Protection Board of India.
-                  </Li>
+                  <Li>Access a summary of the Personal Information we hold about you.</Li>
+                  <Li>Correct and update inaccurate data.</Li>
+                  <Li>Request erasure, subject to legal retention requirements.</Li>
+                  <Li>Seek grievance redressal.</Li>
+                  <Li>Nominate another person to exercise your rights.</Li>
                 </Ul>
                 <P>
-                  To make a request, write to{" "}
-                  <a href="mailto:dpo@smslocal.in" className="font-medium text-primary hover:underline">
-                    dpo@smslocal.in
-                  </a>{" "}
-                  with enough detail to verify your identity. We respond to verified requests within 30
-                  calendar days.
+                  <Strong>Additional rights for EU / EEA users (GDPR)</Strong> — the GDPR grants rights to
+                  object to processing, restrict processing, data portability, and to lodge a complaint with a
+                  Supervisory Authority. Such requests may be directed to our customers (acting as data
+                  controllers) or to SMSLocal using the contact details in Section 19.
                 </P>
               </>
             ),
           },
           {
             id: "cookies",
-            title: "11. Cookies and analytics",
+            title: "11. Cookies and tracking technologies",
             body: (
               <>
                 <P>
-                  Our marketing website uses a small number of strictly necessary cookies for session handling
-                  and a privacy-respecting analytics tool to measure traffic in aggregate. We do not use
-                  third-party advertising cookies. You can disable non-essential cookies from your browser
-                  settings.
-                </P>
-              </>
-            ),
-          },
-          {
-            id: "childrens-data",
-            title: "12. Children's data",
-            body: (
-              <>
-                <P>
-                  SMSLocal is a B2B product intended for businesses and developers. We do not knowingly
-                  process personal data of anyone under 18 years of age. If you become aware that a child has
-                  shared personal data with us, email{" "}
-                  <a href="mailto:dpo@smslocal.in" className="font-medium text-primary hover:underline">
-                    dpo@smslocal.in
+                  We use cookies and similar technologies (pixels, local storage, SDKs) to operate the website,
+                  remember your preferences, secure your account, and measure usage. You can control cookies
+                  through your browser settings, though disabling certain cookies may limit some features. See
+                  our{" "}
+                  <a href="/legal/cookie-policy" className="font-medium text-primary hover:underline">
+                    Cookie Policy
                   </a>{" "}
-                  and we will delete it.
+                  for more detail.
                 </P>
               </>
             ),
           },
           {
-            id: "updates",
-            title: "13. Updates to this policy",
+            id: "international-transfers",
+            title: "12. International data transfers",
             body: (
               <>
                 <P>
-                  We review this policy at least annually. Material changes are announced at least 14 days in
-                  advance by email to workspace owners and via a banner in the dashboard. The &quot;Last
-                  updated&quot; date at the top of this page always reflects the current version.
+                  Your information may be processed or stored in India and in other countries where our service
+                  providers operate. Transfers of data outside your country rely on Standard Contractual
+                  Clauses, intra-group agreements, and provider certifications.
+                </P>
+              </>
+            ),
+          },
+          {
+            id: "childrens-privacy",
+            title: "13. Children's privacy",
+            body: (
+              <>
+                <P>
+                  SMSLocal is intended exclusively for businesses and individuals over 18 years of age. We do
+                  not knowingly collect information from children. If a child has provided information to us,
+                  please contact support and we will delete it.
+                </P>
+              </>
+            ),
+          },
+          {
+            id: "third-party",
+            title: "14. Third-party websites and integrations",
+            body: (
+              <>
+                <P>
+                  Our website and platform contain links to and integrations with third-party services
+                  (Shopify, WooCommerce, Zoho, Razorpay, Stripe, Meta, Google, and others). We are not
+                  responsible for their privacy practices. Please review the privacy policies of those third
+                  parties before sharing information with them.
+                </P>
+              </>
+            ),
+          },
+          {
+            id: "security",
+            title: "15. Data security",
+            body: (
+              <>
+                <P>
+                  We implement reasonable technical, administrative, and physical safeguards to protect your
+                  Personal Information, including:
+                </P>
+                <Ul>
+                  <Li>TLS / SSL encryption in transit.</Li>
+                  <Li>Encryption at rest for sensitive fields.</Li>
+                  <Li>Role-based access controls.</Li>
+                  <Li>Multi-factor authentication for administrative access.</Li>
+                  <Li>Secure cloud hosting.</Li>
+                  <Li>Periodic vulnerability assessments.</Li>
+                  <Li>Employee confidentiality obligations.</Li>
+                </Ul>
+                <P>
+                  No method of transmission or storage is 100% secure. Keep your credentials confidential and
+                  notify{" "}
+                  <a href="mailto:support@smslocal.in" className="font-medium text-primary hover:underline">
+                    support@smslocal.in
+                  </a>{" "}
+                  of any suspected unauthorised access.
+                </P>
+              </>
+            ),
+          },
+          {
+            id: "law-enforcement",
+            title: "16. Government and law enforcement requests",
+            body: (
+              <>
+                <P>
+                  Swadesh Mobile cooperates with valid requests from Indian and foreign government, security,
+                  defence, revenue, regulatory, and law enforcement authorities. We disclose Personal Information
+                  and Customer Data when legally compelled, or when necessary to comply with law, enforce our
+                  terms, protect our users, or investigate fraud.
+                </P>
+              </>
+            ),
+          },
+          {
+            id: "grievance-officer",
+            title: "17. Grievance Officer",
+            body: (
+              <>
+                <P>
+                  In accordance with the Information Technology Act, 2000, the IT (Reasonable Security Practices)
+                  Rules, 2011, and the DPDP Act, 2023, the Grievance Officer can be reached at:
+                </P>
+                <Ul>
+                  <Li>
+                    <Strong>Name</Strong> — to be appointed by Swadesh Mobile.
+                  </Li>
+                  <Li>
+                    <Strong>Entity</Strong> — Swadesh Mobile (operator of SMSLocal.in).
+                  </Li>
+                  <Li>
+                    <Strong>Email</Strong> —{" "}
+                    <a href="mailto:grievance@smslocal.in" className="font-medium text-primary hover:underline">
+                      grievance@smslocal.in
+                    </a>
+                  </Li>
+                </Ul>
+                <P>Complaints are acknowledged within 48 hours and resolved within the timelines set by law.</P>
+              </>
+            ),
+          },
+          {
+            id: "changes",
+            title: "18. Changes to this Privacy Policy",
+            body: (
+              <>
+                <P>
+                  We may update this policy to reflect changes in our practices, technology, legal requirements,
+                  or operations. Updated versions are posted with a revised date, and material changes receive
+                  additional notice by email or in-product notification. Your continued use of the Services after
+                  an update constitutes acceptance of the revised policy.
                 </P>
               </>
             ),
           },
           {
             id: "contact",
-            title: "14. Contact and grievances",
+            title: "19. Contact us",
             body: (
               <>
-                <P>
-                  For questions about this policy, our data protection practices, or to exercise any of the
-                  rights listed above:
-                </P>
+                <P>For questions or requests regarding our privacy practices:</P>
                 <Ul>
                   <Li>
-                    <Strong>Data Protection Officer</Strong> —{" "}
-                    <a href="mailto:dpo@smslocal.in" className="font-medium text-primary hover:underline">
-                      dpo@smslocal.in
+                    <Strong>Email</Strong> —{" "}
+                    <a href="mailto:privacy@smslocal.in" className="font-medium text-primary hover:underline">
+                      privacy@smslocal.in
                     </a>
                   </Li>
                   <Li>
-                    <Strong>Grievance Officer (India)</Strong> —{" "}
-                    <a href="mailto:grievance@smslocal.in" className="font-medium text-primary hover:underline">
-                      grievance@smslocal.in
+                    <Strong>Website</Strong> —{" "}
+                    <a href="https://www.smslocal.in" className="font-medium text-primary hover:underline">
+                      smslocal.in
                     </a>
                   </Li>
                   <Li>
-                    <Strong>Postal address</Strong> — see{" "}
-                    <a href="/company/contact" className="font-medium text-primary hover:underline">
-                      Contact us
-                    </a>
+                    <Strong>Operator</Strong> — Swadesh Mobile
                   </Li>
                 </Ul>
               </>

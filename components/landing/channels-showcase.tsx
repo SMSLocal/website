@@ -26,15 +26,15 @@ function Panel({ c, n }: { c: Channel; n: number }) {
   return (
     <a
       href={c.href}
-      className="group relative flex min-h-[240px] flex-col overflow-hidden rounded-2xl p-5 text-white shadow-lg transition-all duration-500 ease-out lg:min-h-0 lg:flex-1 lg:hover:flex-[2.2]"
+      className="group relative flex h-full min-h-[270px] flex-col overflow-hidden rounded-2xl p-5 text-white shadow-lg ring-1 ring-white/10 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-2xl hover:ring-white/25"
       style={{ background: c.grad }}
     >
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-2/3" style={{ background: "radial-gradient(120% 80% at 50% 0%, rgba(255,255,255,0.12), transparent 70%)" }} />
-      <c.icon aria-hidden className="pointer-events-none absolute -bottom-4 -right-3 h-28 w-28 text-white/[0.07]" />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-2/3 opacity-80 transition-opacity duration-300 group-hover:opacity-100" style={{ background: "radial-gradient(120% 80% at 50% 0%, rgba(255,255,255,0.13), transparent 70%)" }} />
+      <c.icon aria-hidden className="pointer-events-none absolute -bottom-4 -right-3 h-28 w-28 text-white/[0.06] transition-transform duration-500 ease-out group-hover:scale-110" />
 
       <div className="relative flex items-start justify-between">
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-white backdrop-blur-sm"><c.icon className="h-5 w-5" /></span>
-        <span className="font-mono text-[11px] text-white/55">0{n} / 06</span>
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/15 backdrop-blur-sm transition-colors group-hover:bg-white/25"><c.icon className="h-5 w-5" /></span>
+        <span className="font-mono text-[11px] text-white/45">0{n} / 06</span>
       </div>
 
       {/* live feature demo */}
@@ -43,23 +43,18 @@ function Panel({ c, n }: { c: Channel; n: number }) {
       </div>
 
       <div className="relative">
-        <div className="text-[11px] font-semibold uppercase tracking-wider text-white/65">{c.tag}</div>
-        <h3 className="mt-1 text-lg font-bold leading-tight">
-          <span className="lg:hidden">{c.title}</span>
-          <span className="hidden lg:inline lg:group-hover:hidden">{c.short}</span>
-          <span className="hidden lg:group-hover:inline">{c.title}</span>
-        </h3>
-        <div className="overflow-hidden opacity-100 transition-all duration-500 lg:max-h-0 lg:opacity-0 lg:group-hover:mt-2 lg:group-hover:max-h-40 lg:group-hover:opacity-100">
-          <p className="mt-2 max-w-sm text-[13px] leading-relaxed text-white/80 lg:mt-0">{c.desc}</p>
-          <span className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-white">Learn more <ArrowUpRight className="h-4 w-4" /></span>
-        </div>
+        <div className="text-[11px] font-semibold uppercase tracking-wider text-white/60">{c.tag}</div>
+        <h3 className="mt-1 text-lg font-bold leading-tight">{c.title}</h3>
+        <p className="mt-1.5 text-[13px] leading-relaxed text-white/75">{c.desc}</p>
+        <span className="mt-3 inline-flex items-center gap-1 text-[13px] font-semibold text-white/90">
+          Learn more <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </span>
       </div>
     </a>
   )
 }
 
 export function ChannelsShowcase() {
-  const rows = [CHANNELS.slice(0, 3), CHANNELS.slice(3, 6)]
   return (
     <section className="relative overflow-hidden border-b border-border bg-background py-20 lg:py-28">
       <div aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-border to-transparent" />
@@ -73,16 +68,14 @@ export function ChannelsShowcase() {
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">one dashboard</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
-            SMS, WhatsApp, RCS, OTP and AI agents — one API, one wallet. Hover a panel to explore.
+            SMS, WhatsApp, RCS, OTP and AI agents — one API, one wallet, one dashboard.
           </p>
         </Reveal>
 
-        <div className="mt-12 space-y-3">
-          {rows.map((row, ri) => (
-            <Reveal key={ri} delay={ri * 120} className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:flex lg:h-[300px]">
-              {row.map((c, j) => (
-                <Panel key={c.title} c={c} n={ri * 3 + j + 1} />
-              ))}
+        <div className="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {CHANNELS.map((c, i) => (
+            <Reveal key={c.title} delay={(i % 3) * 90} className="h-full">
+              <Panel c={c} n={i + 1} />
             </Reveal>
           ))}
         </div>

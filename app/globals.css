@@ -212,6 +212,28 @@
 /* Traveling dot used for connector flow animations */
 @keyframes flow-x { 0% { left: 0; opacity: 0; } 12% { opacity: 1; } 88% { opacity: 1; } 100% { left: 100%; opacity: 0; } }
 
+/* Robot waving hand */
+@keyframes wave { 0%, 100% { transform: rotate(10deg); } 50% { transform: rotate(-22deg); } }
+.animate-wave { transform-origin: top center; animation: wave 1.6s ease-in-out infinite; }
+
+/* Robot happy blink (chevron eyes squash briefly) */
+@keyframes robot-blink { 0%, 90%, 100% { transform: scaleY(1); } 95% { transform: scaleY(0.12); } }
+.animate-robot-blink { transform-origin: center; animation: robot-blink 4.8s ease-in-out infinite; }
+
+/* Gentle idle bob for the robot */
+@keyframes robot-bob { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+.animate-robot-bob { animation: robot-bob 4s ease-in-out infinite; }
+
+/* Branded page loader — three dots that light up 1·2·3 like typing */
+@keyframes loader-typing {
+  0%, 70%, 100% { opacity: 0.2; transform: translateY(0) scale(0.85); }
+  35%           { opacity: 1;   transform: translateY(-4px) scale(1); }
+}
+
+/* Slow drift for the hero dot grid */
+@keyframes dot-drift { from { background-position: 0 0; } to { background-position: 48px 48px; } }
+.animate-dot-drift { animation: dot-drift 18s linear infinite; }
+
 /* Grid pattern used in hero / sections */
 .bg-grid-ink {
   background-image:

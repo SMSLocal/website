@@ -1,5 +1,4 @@
 import Link from "next/link"
-import { BrandMark } from "@/components/brand/brand-mark"
 
 export function BrandLogo({
   href = "/",
@@ -10,22 +9,25 @@ export function BrandLogo({
   size?: "sm" | "md" | "lg"
   tone?: "light" | "dark"
 }) {
-  const markSize = size === "sm" ? 18 : size === "lg" ? 26 : 22
-  const textSize = size === "sm" ? "text-[13.5px]" : size === "lg" ? "text-[17px]" : "text-[15px]"
-  const textColor = tone === "dark" ? "text-foreground" : "text-white"
+  const height = size === "sm" ? 20 : size === "lg" ? 30 : 24
+  // tone "dark"  → dark text on a light surface → full-colour lockup
+  // tone "light" → white text on a dark surface  → white lockup
+  const src = tone === "dark" ? "/smslocal-logo.svg" : "/smslocal-logo-white.svg"
 
   const inner = (
-    <span className="inline-flex items-center gap-2">
-      <BrandMark size={markSize} />
-      <span className={`font-semibold tracking-tight ${textSize} ${textColor}`}>
-        SMSLocal
-      </span>
-    </span>
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={src}
+      alt="SMSLocal"
+      style={{ height, width: "auto" }}
+      className="block w-auto select-none"
+      draggable={false}
+    />
   )
 
   if (href === false) return inner
   return (
-    <Link href={href} className="inline-flex items-center gap-2" aria-label="SMSLocal home">
+    <Link href={href} className="inline-flex items-center" aria-label="SMSLocal home">
       {inner}
     </Link>
   )
