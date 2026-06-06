@@ -18,3 +18,6 @@ node_modules
 
 # Local-only logo backup (kept on disk, not committed)
 _old-logo-backup/
+
+# Local-only raw image source drops (optimized copies live in public/)
+Imgs/

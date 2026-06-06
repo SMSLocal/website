@@ -130,23 +130,35 @@ export default function BulkSmsPage() {
             {
               title: "DLT in the dashboard, not outside it",
               body: "Every step of DLT compliance — entity registration, Sender ID approval, template submission and PE-TM binding — is tracked inside your SMSLocal dashboard. You don't have to juggle tabs between Jio's DLT portal, Airtel's, and ours. We handle the portal dance for you and surface approvals in one status view.",
+              image: "/products/bulk-sms-dlt-compliance-dashboard.png",
+              imageAlt:
+                "SMSLocal dashboard showing DLT compliance status — entity registration, Sender ID approval and template submission tracked across Jio, Airtel, Vi and BSNL in one view.",
             },
             {
               title: "10+ Indian languages, one Unicode engine",
               body: "Send SMS in Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, Malayalam, Punjabi, Odia and more. Unicode support is built in, character counts are calculated correctly, and regional-language templates are approved through the same DLT flow.",
+              image: "/products/bulk-sms-indian-language-unicode-sms.png",
+              imageAlt:
+                "Bulk SMS composer rendering regional-language messages in Hindi, Tamil and Telugu with a live Unicode character count on the SMSLocal platform.",
               href: "/long-sms-messages",
               linkLabel: "How long SMS messages are billed",
             },
             {
               title: "Built for Indian scale, not global dashboards",
               body: "We're not a US or European platform adapted for India — we're built for India from day one. Direct operator connections with every major Indian telecom, TRAI time windows enforced automatically, and regional-language rendering tested on popular Indian handsets.",
+              image: "/products/bulk-sms-built-for-indian-scale.png",
+              imageAlt:
+                "SMSLocal's India-first bulk SMS infrastructure with direct operator connections to Jio, Airtel, Vi and BSNL and automatic TRAI time-window enforcement.",
             },
           ]}
         />
 
         <ProductEditorialBand
-          src="/products/bulk-sms-editorial.jpg"
-          alt="Marketing operations team at a long desk watching a live delivery-rate dashboard with a map of India on a large curved monitor, in a softly lit modern Indian tech office."
+          layout="split"
+          src="/products/bulk-sms-delivery-reports-dashboard.png"
+          imageWidth={1400}
+          imageHeight={500}
+          alt="SMSLocal bulk SMS delivery dashboard showing every send, real-time delivery receipts, per-carrier breakdown and automatic retries for millions of messages in a single view."
           eyebrow="Built for scale"
           headline="Every send, every delivery receipt, every retry — in one view."
           caption="Teams running millions of messages a month need to see what shipped, what bounced, and what&apos;s still in the queue without opening five tools."

@@ -130,21 +130,33 @@ export default function AiAgentsPage() {
             {
               title: "Trained only on sources you approve",
               body: "The agent answers from your uploaded docs, catalog, and past transcripts — nothing else. Every reply surfaces the exact source document in the back office so your QA team can verify grounding. No public web scraping, no generic training data leaking through.",
+              image: "/products/ai-agents-trained-on-approved-sources.png",
+              imageAlt:
+                "SMSLocal AI agent source-verification view — the agent trained only on approved sources (product catalog, company documents, customer transcripts and knowledge base), each reply traced to its source document with a 98% confidence score, and no public web scraping or generic training data.",
             },
             {
               title: "Code-switching and transliteration, handled natively",
               body: "Customers in India routinely code-switch inside a single message — Hindi words in Latin script, English mixed with Tamil, transliterated regional spellings like 'kitna hai' instead of 'कितना है'. The agent reads all of it without a translation layer and replies in whichever script the customer opened with, so the chat never feels machine-translated.",
+              image: "/products/ai-agents-code-switching-transliteration.png",
+              imageAlt:
+                "SMSLocal AI agent inbox showing a WhatsApp conversation where the customer code-switches between transliterated Hindi and English and the agent replies natively in the same script, alongside contact details and an auto-generated conversation summary.",
             },
             {
               title: "Handoff that humans actually want",
               body: "When the agent escalates, the human agent opens the same WhatsApp thread with the full transcript pinned, the customer's intent summarised, and the next suggested action already queued. No one has to type 'could you repeat that?' — the customer stays in flow.",
+              image: "/products/ai-agents-human-handoff-transcript.png",
+              imageAlt:
+                "SMSLocal AI-to-human handoff screen showing a completed escalation in the same WhatsApp thread with the full transcript pinned, the customer's intent summarised, and a suggested next reply pre-drafted and ready to send.",
             },
           ]}
         />
 
         <ProductEditorialBand
-          src="/products/ai-agents-editorial.jpg"
-          alt="Customer support specialist with a headset at a modern support desk, looking at a large monitor showing a split view of a WhatsApp chat thread and an AI agent suggestion card."
+          layout="split"
+          src="/products/ai-agents-human-agent-same-thread-dashboard.png"
+          imageWidth={1400}
+          imageHeight={500}
+          alt="SMSLocal AI agent and human team working the same WhatsApp thread — a handoff summary dashboard showing the customer's intent, order status, a suggested reply and the next best action already queued so the human never starts cold."
           eyebrow="Humans and agents, same thread"
           headline="The agent handles the obvious. Your team handles what matters."
           caption="Escalations arrive with the full transcript, the customer&apos;s intent summarised, and the next best action already queued — so the human never starts cold."

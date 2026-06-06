@@ -286,6 +286,8 @@ export type DeepDive = {
   title: string
   body: string
   visual?: ReactNode
+  image?: string
+  imageAlt?: string
   href?: string
   linkLabel?: string
 }
@@ -329,7 +331,20 @@ export function DeepDiveFeatures({
               ) : null}
             </div>
             <div className="relative overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-muted to-background p-6 shadow-sm">
-              {item.visual ?? <DeepDivePlaceholder index={i} />}
+              {item.visual ??
+                (item.image ? (
+                  <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl border border-border/60 bg-background shadow-sm">
+                    <Image
+                      src={item.image}
+                      alt={item.imageAlt ?? item.title}
+                      fill
+                      sizes="(min-width: 1024px) 40vw, (min-width: 640px) 90vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <DeepDivePlaceholder index={i} />
+                ))}
             </div>
           </div>
         ))}
@@ -636,13 +651,106 @@ export function ProductEditorialBand({
   eyebrow,
   headline,
   caption,
+  layout = "overlay",
+  imageWidth = 2098,
+  imageHeight = 749,
 }: {
   src: string
   alt: string
   eyebrow?: string
   headline: string
   caption?: string
+  /**
+   * "overlay" (default) — cinematic photo band with the copy set over a dark
+   * gradient. Best for photographic imagery.
+   * "split" — copy as plain, selectable text above a fully-visible image
+   * panel (no crop, no dark wash). Best for UI / dashboard graphics.
+   */
+  layout?: "overlay" | "split"
+  imageWidth?: number
+  imageHeight?: number
 }) {
+  if (layout === "split") {
+    // Shared, fully-selectable copy. Rendered overlaid in the image's empty
+    // left zone on desktop, and stacked below the image on mobile/tablet.
+    const copy = (
+      <>
+        {eyebrow ? (
+          <span className="inline-flex w-fit rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/85 backdrop-blur-md">
+            {eyebrow}
+          </span>
+        ) : null}
+        <h3 className="mt-4 text-balance text-2xl font-semibold tracking-tight text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.7)] sm:text-3xl">
+          {headline}
+        </h3>
+        {caption ? (
+          <p className="mt-3 max-w-md text-pretty text-[14px] leading-relaxed text-white/80 drop-shadow-[0_1px_10px_rgba(0,0,0,0.7)] sm:text-[15px]">
+            {caption}
+          </p>
+        ) : null}
+      </>
+    )
+
+    return (
+      <section className="relative overflow-hidden py-6 sm:py-8 lg:py-10">
+        {/* Layered, clearly-visible dark band background */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              "linear-gradient(180deg, oklch(0.18 0.03 240) 0%, oklch(0.14 0.025 235) 55%, oklch(0.11 0.02 230) 100%)",
+          }}
+        />
+        <div aria-hidden className="bg-grid-ink pointer-events-none absolute inset-0 opacity-50 mask-radial-fade" />
+        <div
+          aria-hidden
+          className="pointer-events-none absolute -top-24 right-[-6rem] h-[520px] w-[520px] rounded-full opacity-50 blur-3xl"
+          style={{
+            background:
+              "radial-gradient(circle, color-mix(in oklch, var(--primary) 50%, transparent), transparent 70%)",
+          }}
+        />
+
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl ring-1 ring-white/10">
+            {/* The dashboard image IS the background — never cropped */}
+            <Image
+              src={src}
+              alt={alt}
+              width={imageWidth}
+              height={imageHeight}
+              sizes="(min-width: 1280px) 1216px, 100vw"
+              className="h-auto w-full"
+              priority
+            />
+
+            {/* Very light left tint — desktop only. Just enough to lift the
+                white copy off the dark left zone; the image (including the top
+                status pills) stays fully visible. */}
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 hidden lg:block"
+              style={{
+                background:
+                  "linear-gradient(90deg, oklch(0.10 0.02 230 / 0.45) 0%, oklch(0.10 0.02 230 / 0.28) 28%, oklch(0.10 0.02 230 / 0.10) 42%, transparent 55%)",
+              }}
+            />
+
+            {/* Copy overlaid in the image's empty left half — desktop only */}
+            <div className="absolute inset-y-0 left-0 hidden max-w-[48%] flex-col justify-center pl-8 pr-6 lg:flex xl:pl-12">
+              {copy}
+            </div>
+          </div>
+
+          {/* Mobile / tablet: copy stacked under the image (a wide banner is too
+              short to overlay text on small screens). */}
+          <div className="mt-6 lg:hidden">{copy}</div>
+        </div>
+      </section>
+    )
+  }
+
   return (
     <section className="relative overflow-hidden bg-[oklch(0.14_0.02_230)]">
       <div className="relative aspect-[21/9] w-full sm:aspect-[21/8]">
@@ -656,7 +764,7 @@ export function ProductEditorialBand({
         {/* Dark gradient for caption legibility */}
         <div
           aria-hidden
-          className="absolute inset-0"
+          className="pointer-events-none absolute inset-0"
           style={{
             background:
               "linear-gradient(90deg, oklch(0.14 0.02 230 / 0.82) 0%, oklch(0.14 0.02 230 / 0.55) 45%, oklch(0.14 0.02 230 / 0.15) 100%)",

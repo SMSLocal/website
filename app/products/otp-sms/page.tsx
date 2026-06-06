@@ -229,8 +229,11 @@ export default function OtpSmsPage() {
         </Section>
 
         <ProductEditorialBand
-          src="/products/otp-sms-editorial.jpg"
-          alt="Close-up of a hand holding a smartphone showing an OTP verification screen with six empty code input boxes, with a login screen visible on a laptop in the soft background."
+          layout="split"
+          src="/products/otp-sms-delivery-performance-dashboard.png"
+          imageWidth={1400}
+          imageHeight={541}
+          alt="SMSLocal OTP SMS delivery performance dashboard showing 2.3-second delivery speed, a 99.6% success rate and per-channel performance across WhatsApp, SMS, voice and email, with smart routing, auto-retries and WhatsApp fallback."
           eyebrow="The critical 30 seconds"
           headline="Every OTP is a trust decision. Make it instant, make it arrive."
           caption="Fastest-route selection, automatic retries, and WhatsApp fallback on enterprise — built around the one metric that matters: sub-5-second delivery."

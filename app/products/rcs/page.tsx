@@ -382,8 +382,11 @@ export default function RcsPage() {
         </Section>
 
         <ProductEditorialBand
-          src="/products/rcs-editorial.jpg"
-          alt="An Indian professional smiling at a smartphone showing a rich branded messaging card with a verified blue check, a product image, and three action buttons, in a softly lit modern Bengaluru office."
+          layout="split"
+          src="/products/rcs-verified-branded-business-card.png"
+          imageWidth={1400}
+          imageHeight={540}
+          alt="SMSLocal RCS business messaging dashboard showing a verified branded sender with a live overview, real-time delivery status, carrier-direct connections and global coverage across 200+ countries."
           eyebrow="The moment SMS grew up"
           headline="A verified, branded card where your customer already reads everything."
           caption="Logos, images, carousels, and tap-to-reply chips on the messaging app that ships with every Android phone — with DLT SMS picking up whoever isn't there yet."
