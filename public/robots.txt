@@ -1,0 +1,32 @@
+# SMSLocal — robots.txt
+#
+# This static file is a SAFETY-NET fallback. On Vercel / Next.js production,
+# the dynamic `/robots.txt` route at `app/robots.ts` is served instead and
+# this file is ignored. The dynamic version reflects the live "Allow indexing"
+# toggle in the SEO admin (/dev/seo/settings).
+#
+# Default: site is HIDDEN from search engines until the indexing toggle
+# is flipped ON in the dashboard.
+
+User-agent: *
+Disallow: /
+
+# When the site is launched and the toggle is flipped ON, this file is
+# replaced at runtime with the rules below (already emitted by app/robots.ts):
+#
+#   User-agent: *
+#   Allow: /
+#   Disallow: /signin
+#   Disallow: /api/
+#   Disallow: /_next/
+#   Disallow: /dev/
+#
+#   User-agent: Googlebot
+#   Allow: /
+#   Disallow: /signin
+#   Disallow: /api/
+#   Disallow: /_next/
+#   Disallow: /dev/
+#
+#   Sitemap: https://www.smslocal.in/sitemap.xml
+#   Host: https://www.smslocal.in
