@@ -7,7 +7,6 @@ import {
   BarChart3,
   Bot,
   CheckCircle2,
-  Layers,
   LayoutPanelTop,
   Megaphone,
   MessagesSquare,
@@ -16,7 +15,6 @@ import {
   Send,
   Sparkles,
   Star,
-  Users,
 } from "lucide-react"
 
 /* ──────────────────────────────────────────────────────────────────────────
@@ -59,30 +57,6 @@ function VisualAgentic() {
           ))}
         </ul>
       </div>
-    </div>
-  )
-}
-
-function VisualTiers() {
-  const tiers = [
-    { t: "Tier 1 · AI self-serve", d: "Resolves 70% of routine queries instantly", w: "70%", c: "from-primary to-emerald-400" },
-    { t: "Tier 2 · Specialist agents", d: "Complex cases, full transcript handed over", w: "45%", c: "from-indigo-500 to-sky-400" },
-    { t: "Tier 3 · Priority / VIP", d: "Highest-value customers, fastest lane", w: "25%", c: "from-amber-500 to-orange-400" },
-  ]
-  return (
-    <div className="space-y-2.5 rounded-2xl border border-border bg-secondary/30 p-4 sm:p-5">
-      {tiers.map((tier) => (
-        <div key={tier.t} className="rounded-xl border border-border bg-card p-3">
-          <div className="flex items-center justify-between">
-            <span className="text-[12px] font-semibold text-foreground">{tier.t}</span>
-            <span className="text-[10.5px] font-semibold text-muted-foreground">{tier.w}</span>
-          </div>
-          <div className="mt-1.5 text-[11px] text-muted-foreground">{tier.d}</div>
-          <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-border">
-            <div className={`h-full rounded-full bg-gradient-to-r ${tier.c}`} style={{ width: tier.w }} />
-          </div>
-        </div>
-      ))}
     </div>
   )
 }
@@ -171,27 +145,6 @@ function VisualRichCard() {
   )
 }
 
-function VisualHybrid() {
-  return (
-    <div className="space-y-2.5 rounded-2xl border border-border bg-secondary/30 p-4 sm:p-5">
-      <div className="flex items-start gap-2">
-        <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-amber-400 to-orange-500 text-[9px] font-bold text-white">J</span>
-        <div className="rounded-2xl rounded-bl-sm border border-border bg-card px-3 py-2 text-[11.5px] text-foreground">My refund hasn&apos;t arrived yet.</div>
-      </div>
-      <div className="flex flex-row-reverse items-start gap-2">
-        <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-primary-foreground">AI</span>
-        <div className="rounded-2xl rounded-br-sm bg-primary px-3 py-2 text-[11.5px] text-primary-foreground">Checking your order #4821 — one moment.</div>
-      </div>
-      <div className="flex items-center justify-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[10.5px] font-semibold text-primary">
-        <Users className="h-3 w-3" /> Priya (human) joined — transcript &amp; intent loaded
-      </div>
-      <div className="rounded-xl border border-border bg-card p-2.5 text-[10.5px] text-muted-foreground">
-        <span className="font-semibold text-foreground">Suggested reply:</span> Your refund of ₹6,499 is processed — funds land in 24h.
-      </div>
-    </div>
-  )
-}
-
 function VisualAnalytics() {
   const bars = ["55%", "72%", "48%", "88%", "66%", "94%"]
   return (
@@ -226,18 +179,8 @@ const TABS = [
     headline: "Agentic AI for intelligent automation",
     body: "Deploy AI agents that resolve customer queries end to end, trigger backend workflows, and escalate to a human only when it truly matters. No scripts, no rigid decision trees, and no human in the loop for routine conversations.",
     ctaLabel: "Let AI do the heavy lifting",
-    ctaHref: "/products/ai-agents",
+    ctaHref: "/products/ai-agentic",
     Visual: VisualAgentic,
-  },
-  {
-    id: "multi-tier-cx",
-    label: "Multi-tiered CX",
-    Icon: Layers,
-    headline: "Multi-tiered CX management",
-    body: "Route every conversation to the right level — self-serve AI for the simple stuff, specialist agents for complex cases, and a priority lane for your highest-value customers. One workspace, tiered exactly the way your team already works.",
-    ctaLabel: "See how routing works",
-    ctaHref: "/products/ai-agents",
-    Visual: VisualTiers,
   },
   {
     id: "omnichannel-bot",
@@ -268,16 +211,6 @@ const TABS = [
     ctaLabel: "See RCS in action",
     ctaHref: "/products/rcs",
     Visual: VisualRichCard,
-  },
-  {
-    id: "hybrid-chat",
-    label: "Hybrid Chat",
-    Icon: Users,
-    headline: "Hybrid AI + human chat",
-    body: "The AI lands the first response in under a second and stays on as a co-pilot. When a human steps in, they inherit the full transcript, the customer's intent and a suggested reply already drafted — so no one starts cold.",
-    ctaLabel: "Meet the team inbox",
-    ctaHref: "/products/ai-agents",
-    Visual: VisualHybrid,
   },
   {
     id: "analytics",
@@ -363,13 +296,15 @@ export function AgenticCpaas() {
               <p className="mt-4 text-pretty text-[15px] leading-relaxed text-muted-foreground">
                 {current.body}
               </p>
-              <Link
-                href={current.ctaHref}
-                className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/30 transition hover:opacity-90"
-              >
-                {current.ctaLabel}
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+              {current.id !== "analytics" ? (
+                <Link
+                  href={current.ctaHref}
+                  className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/30 transition hover:opacity-90"
+                >
+                  {current.ctaLabel}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              ) : null}
             </div>
 
             {/* Visual */}

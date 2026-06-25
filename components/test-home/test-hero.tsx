@@ -11,7 +11,7 @@ import { ArrowUpRight, Check, Send, Star } from "lucide-react"
 
 const FEATURES = ["DLT-compliant", "99.7% delivery", "AI in 8 languages", "₹60 free credit"]
 
-const TYPED_WORDS = ["Bulk SMS", "WhatsApp", "RCS", "AI replies"]
+const TYPED_WORDS = ["Bulk SMS", "WhatsApp", "RCS Message", "Agentic AI"]
 
 // Conversation bubbles scattered around the hero edges; they scatter away from
 // the cursor for a light, game-like feel.

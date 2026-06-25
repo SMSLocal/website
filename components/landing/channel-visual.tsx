@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { CheckCheck } from "lucide-react"
+import { CheckCheck, Mail } from "lucide-react"
 
 const WRAP = "w-full max-w-[210px]"
 const INK = "oklch(0.2 0.02 230)"
@@ -87,6 +87,27 @@ export function ChannelVisual({ kind }: { kind: string }) {
           <div className="text-[11px] font-semibold text-white">Diwali Offer 🎉</div>
           <div className="mt-1.5 animate-pulse rounded-md bg-white/20 px-2 py-1 text-center text-[10px] font-medium text-white">Shop now</div>
         </div>
+      </div>
+    )
+  }
+
+  if (kind === "email") {
+    const assigned = t % 4 >= 2
+    return (
+      <div className={`${WRAP} rounded-xl bg-white/10 p-3 backdrop-blur-sm`}>
+        <div className="flex items-center justify-between text-[9.5px] text-white/55">
+          <span className="inline-flex items-center gap-1"><Mail className="h-3 w-3" /> Support inbox</span>
+          <span className="transition-opacity duration-300" style={{ opacity: assigned ? 1 : 0.3 }}>Assigned · Priya</span>
+        </div>
+        <div className="mt-2 rounded-lg bg-white/15 px-2.5 py-2">
+          <div className="text-[10.5px] font-semibold text-white">Refund request · #4821</div>
+          <div className="truncate text-[9.5px] text-white/70">Hi, I&apos;d like to return my order…</div>
+        </div>
+        {assigned && (
+          <div key={`n-${Math.floor(t / 4)}`} style={{ animation: "message-in .4s ease both" }} className="mt-1.5 flex items-center gap-1 text-[9.5px] text-white/85">
+            <CheckCheck className="h-3 w-3" /> Internal note added · approved
+          </div>
+        )}
       </div>
     )
   }
