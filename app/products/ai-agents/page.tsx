@@ -33,7 +33,6 @@ import {
   DeepDiveFeatures,
   FeatureGrid,
   HowItWorks,
-  ProductEditorialBand,
   ProductFinalCta,
   ProductHero,
   Section,
@@ -44,6 +43,12 @@ import {
   UseCasesGrid,
 } from "@/components/product/product-page"
 import { AiAgentsVisual } from "@/components/product/ai-agents-visual"
+import {
+  CodeSwitchScene,
+  HandoffScene,
+  InboxScene,
+  SourceGroundingScene,
+} from "@/components/product/ai-agents-scenes"
 import { FaqSection } from "@/components/landing/faq-section"
 import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
 
@@ -222,37 +227,40 @@ export default function AiAgentsPage() {
             {
               title: "Trained only on sources you approve",
               body: "Captain answers from your uploaded docs, catalog, and past transcripts — nothing else. Every reply surfaces the exact source document in the back office so your QA team can verify grounding. No public web scraping, no generic training data leaking through.",
-              image: "/products/ai-agents-trained-on-approved-sources.png",
-              imageAlt:
-                "SMSLocal Captain AI source-verification view — the agent trained only on approved sources (product catalog, company documents, customer transcripts and knowledge base), each reply traced to its source document with a 98% confidence score, and no public web scraping or generic training data.",
+              visual: <SourceGroundingScene />,
             },
             {
               title: "Code-switching and transliteration, handled natively",
               body: "Customers in India routinely code-switch inside a single message — Hindi words in Latin script, English mixed with Tamil, transliterated regional spellings like 'kitna hai' instead of 'कितना है'. Captain reads all of it without a translation layer and replies in whichever script the customer opened with, so the chat never feels machine-translated.",
-              image: "/products/ai-agents-code-switching-transliteration.png",
-              imageAlt:
-                "SMSLocal Captain AI inbox showing a WhatsApp conversation where the customer code-switches between transliterated Hindi and English and the agent replies natively in the same script, alongside contact details and an auto-generated conversation summary.",
+              visual: <CodeSwitchScene />,
             },
             {
               title: "Handoff that humans actually want",
               body: "When Captain escalates, the human opens the same thread with the full transcript pinned, the customer's intent summarised, and the next suggested action already queued. No one has to type 'could you repeat that?' — the customer stays in flow.",
-              image: "/products/ai-agents-human-handoff-transcript.png",
-              imageAlt:
-                "SMSLocal AI-to-human handoff screen showing a completed escalation in the same thread with the full transcript pinned, the customer's intent summarised, and a suggested next reply pre-drafted and ready to send.",
+              visual: <HandoffScene />,
             },
           ]}
         />
 
-        <ProductEditorialBand
-          layout="split"
-          src="/products/ai-agents-human-agent-same-thread-dashboard.png"
-          imageWidth={1400}
-          imageHeight={500}
-          alt="SMSLocal Captain AI and human team working the same thread — a handoff summary dashboard showing the customer's intent, order status, a suggested reply and the next best action already queued so the human never starts cold."
-          eyebrow="Humans and agents, same thread"
-          headline="Captain handles the obvious. Your team handles what matters."
-          caption="Escalations arrive with the full transcript, the customer&apos;s intent summarised, and the next best action already queued — so the human never starts cold."
-        />
+        <Section tone="dark">
+          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-12">
+            <div>
+              <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/85">
+                One inbox, every channel
+              </span>
+              <h3 className="mt-4 text-balance text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+                Captain handles the obvious. Your team handles what matters.
+              </h3>
+              <p className="mt-4 max-w-md text-pretty text-[15px] leading-relaxed text-white/70">
+                WhatsApp, Email, Instagram, Messenger, Telegram and more land in one shared inbox.
+                Captain triages and resolves the routine, and every escalation arrives with the full
+                transcript, the intent summarised, and the next best action already queued — so the
+                human never starts cold.
+              </p>
+            </div>
+            <InboxScene />
+          </div>
+        </Section>
 
         {/* ── Help desk controls ────────────────────────────────────────── */}
         <Section tone="muted">
