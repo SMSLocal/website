@@ -82,21 +82,6 @@ const PRIMARY_PRODUCTS: Product[] = [
     ],
   },
   {
-    name: "OTP SMS",
-    tag: "Authentication",
-    href: "/products/otp-sms",
-    icon: <ShieldCheck className="h-6 w-6" />,
-    accent: "from-accent/25 to-accent/5",
-    description:
-      "Priority-routed OTPs for login, signup, and high-value transactions. Built for auth teams that cannot afford a missed delivery.",
-    features: [
-      "Priority transactional lanes, separate from promotional queues",
-      "Signed delivery webhooks and /send + /verify endpoints",
-      "Automatic retry and SMS → WhatsApp fallback on enterprise plans",
-      "Scoped API keys, IP allowlists, and per-key rate limits",
-    ],
-  },
-  {
     name: "Quick SMS",
     tag: "No-code dashboard",
     href: "/products/quick-sms",

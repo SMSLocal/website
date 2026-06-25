@@ -55,15 +55,6 @@ const TILES: Tile[] = [
     tone: "accent",
   },
   {
-    label: "OTP & Transactional",
-    icon: KeyRound,
-    href: "/products/otp-sms",
-    headline: "OTPs that arrive the first time — on priority lanes",
-    body: "Separate transactional routing, signed delivery webhooks, optional managed /send and /verify endpoints, and SMS-to-WhatsApp fallback on enterprise plans.",
-    link: "Explore OTP API",
-    tone: "primary",
-  },
-  {
     label: "Quick SMS",
     icon: Zap,
     href: "/products/quick-sms",

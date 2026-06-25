@@ -69,7 +69,6 @@ const NAV: NavItem[] = [
           { label: "RCS Business Messaging", href: "/products/rcs", icon: Sparkles, description: "Verified, branded rich cards — new" },
           { label: "WhatsApp Business API", href: "/products/whatsapp-business-api", icon: MessageCircle, description: "Native BSP with no monthly plan" },
           { label: "Email", href: "/products/email", icon: Mail, description: "Transactional & bulk email" },
-          { label: "OTP & Transactional SMS", href: "/products/otp-sms", icon: ShieldCheck, description: "Priority routes, 24/7 delivery" },
           { label: "Quick SMS", href: "/products/quick-sms", icon: Zap, description: "DND-compliant promotional blasts" },
         ],
       },

@@ -197,22 +197,6 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "call support software",
     ],
   },
-  "/products/otp-sms": {
-    title: "OTP SMS API India — Sub-1s, Trusted Delivery",
-    description:
-      "OTP SMS in India with priority routing and sub-second delivery on every Indian operator — DLT-compliant templates, signed webhooks, and ₹60 free credit.",
-    focusKeyword: "OTP SMS",
-    keywords: [
-      "OTP SMS",
-      "OTP API India",
-      "SMS OTP service",
-      "two factor authentication SMS",
-      "OTP verification API",
-      "login OTP API",
-      "OTP SMS gateway",
-      "priority OTP route India",
-    ],
-  },
   "/products/quick-sms": {
     title: "Quick SMS — Trusted, No-Code Sending in 5 Minutes",
     description:

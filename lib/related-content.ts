@@ -29,11 +29,6 @@ const LINKS = {
     label: "WhatsApp Business API",
     blurb: "Broadcasts, AI agents in 8 Indian languages, and a visual flow builder.",
   },
-  otp: {
-    href: "/products/otp-sms",
-    label: "OTP & Transactional SMS",
-    blurb: "Priority routes, sub-second delivery, and a ship-today API.",
-  },
   quickSms: {
     href: "/products/quick-sms",
     label: "Quick SMS",
@@ -154,14 +149,20 @@ const LINKS = {
   },
 } as const
 
-function products(...keys: (keyof typeof LINKS)[]): RelatedGroup {
-  return { title: "Explore products", links: keys.map((k) => LINKS[k]) }
+// Resolve keys to links, silently skipping any that have been retired
+// (e.g. a removed product) so a single removal doesn't require editing every
+// call site below.
+function pick(keys: string[]): RelatedLink[] {
+  return keys.map((k) => (LINKS as Record<string, RelatedLink>)[k]).filter(Boolean)
 }
-function solutions(...keys: (keyof typeof LINKS)[]): RelatedGroup {
-  return { title: "See it in your industry", links: keys.map((k) => LINKS[k]) }
+function products(...keys: string[]): RelatedGroup {
+  return { title: "Explore products", links: pick(keys) }
 }
-function resources(...keys: (keyof typeof LINKS)[]): RelatedGroup {
-  return { title: "Keep reading", links: keys.map((k) => LINKS[k]) }
+function solutions(...keys: string[]): RelatedGroup {
+  return { title: "See it in your industry", links: pick(keys) }
+}
+function resources(...keys: string[]): RelatedGroup {
+  return { title: "Keep reading", links: pick(keys) }
 }
 
 // Registry keyed by the current page path.
@@ -187,17 +188,6 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       products("rcs", "bulkSms", "otp", "quickSms"),
       solutions("ecommerce", "retail", "healthcare", "realEstate"),
       resources("pricing", "developers"),
-    ],
-  },
-  "/products/otp-sms": {
-    eyebrow: "Related reading",
-    title: "OTPs are rarely a product of one.",
-    subtitle:
-      "Most teams combine OTP with transactional SMS, WhatsApp verification, or industry-specific authentication flows.",
-    groups: [
-      products("bulkSms", "rcs", "whatsapp", "quickSms"),
-      solutions("banking", "healthcare", "ecommerce"),
-      resources("developers", "pricing"),
     ],
   },
   "/products/quick-sms": {
