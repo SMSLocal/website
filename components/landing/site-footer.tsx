@@ -14,7 +14,6 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "WhatsApp Business API", href: "/products/whatsapp-business-api" },
       { label: "AI Agents", href: "/products/ai-agents" },
       { label: "Quick SMS", href: "/products/quick-sms" },
-      { label: "Reseller / White-label", href: "/products/reseller" },
       { label: "Inbox", href: "/products/inbox" },
       { label: "Automation", href: "/products/automation" },
       { label: "Integration", href: "/products/integrations" },

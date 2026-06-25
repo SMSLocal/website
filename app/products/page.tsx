@@ -114,21 +114,6 @@ const SECONDARY_PRODUCTS: Product[] = [
     ],
     status: "live",
   },
-  {
-    name: "Reseller / White-label",
-    tag: "Partner platform",
-    href: "/products/reseller",
-    icon: <Boxes className="h-6 w-6" />,
-    accent: "from-amber-500/25 to-amber-500/5",
-    description:
-      "Launch your own messaging platform on SMSLocal infrastructure — full white-label branding, multi-tenant billing, and your own markups on every channel.",
-    features: [
-      "Full white-label branding and custom domains",
-      "Multi-tenant user management and credit control",
-      "Your own markups on every channel",
-    ],
-    status: "live",
-  },
 ]
 
 const PLATFORM_CAPABILITIES = [

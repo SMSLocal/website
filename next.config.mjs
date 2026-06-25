@@ -169,6 +169,12 @@ const nextConfig = {
         destination: "/products",
         permanent: true,
       },
+      // Reseller / white-label page retired — send old links to the products hub.
+      {
+        source: "/products/reseller",
+        destination: "/products",
+        permanent: true,
+      },
     ]
   },
 }

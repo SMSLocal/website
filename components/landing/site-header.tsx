@@ -77,7 +77,6 @@ const NAV: NavItem[] = [
         items: [
           { label: "AI Agents", href: "/products/ai-agents", icon: Sparkles, description: "Replies in 8 Indian languages" },
           { label: "AI Agentic", href: "/products/ai-agentic", icon: Bot, description: "Autonomous multi-step AI workflows" },
-          { label: "Reseller / White-label", href: "/products/reseller", icon: Package, description: "Launch your own platform" },
         ],
       },
       {
