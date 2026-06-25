@@ -1,4 +1,4 @@
-import { ArrowUpRight, Bot, KeyRound, MessageCircle, MessageSquareText, Radio, Zap } from "lucide-react"
+import { ArrowUpRight, Bot, MessageCircle, MessageSquareText, Radio, Workflow } from "lucide-react"
 import { ChannelVisual } from "./channel-visual"
 import { Reveal } from "./reveal"
 
@@ -17,8 +17,8 @@ const CHANNELS: Channel[] = [
   { kind: "bulk", short: "Bulk SMS", title: "Bulk SMS", tag: "From ₹0.09 / SMS", desc: "DLT-compliant transactional & promotional SMS on direct-operator routes.", icon: MessageSquareText, href: "/products/bulk-sms", grad: "linear-gradient(155deg, oklch(0.50 0.13 170), oklch(0.18 0.03 220))" },
   { kind: "wa", short: "WhatsApp API", title: "WhatsApp Business API", tag: "Green-tick BSP", desc: "Broadcasts, templates, and a shared team inbox on the official API.", icon: MessageCircle, href: "/products/whatsapp-business-api", grad: "linear-gradient(155deg, oklch(0.48 0.14 160), oklch(0.17 0.03 228))" },
   { kind: "ai", short: "AI Agents", title: "AI WhatsApp Agents", tag: "8 Indian languages", desc: "Auto-reply and deflect tickets in eight Indian languages, around the clock.", icon: Bot, href: "/products/ai-agents", grad: "linear-gradient(155deg, oklch(0.52 0.13 180), oklch(0.19 0.03 214))" },
+  { kind: "agentic", short: "Agentic AI", title: "Agentic AI Automation", tag: "Thinks · acts · resolves", desc: "Self-learning agents that resolve queries end to end, trigger workflows, and escalate only when needed.", icon: Workflow, href: "/products/ai-agents", grad: "linear-gradient(155deg, oklch(0.49 0.13 166), oklch(0.17 0.03 226))" },
   { kind: "rcs", short: "RCS", title: "RCS Business Messaging", tag: "Branded + SMS fallback", desc: "Verified, branded rich cards that fall back to SMS automatically.", icon: Radio, href: "/products/rcs", grad: "linear-gradient(155deg, oklch(0.50 0.12 186), oklch(0.18 0.03 222))" },
-  { kind: "quick", short: "Quick SMS", title: "Quick SMS", tag: "No code", desc: "Launch campaigns without code — straight from your dashboard.", icon: Zap, href: "/products/quick-sms", grad: "linear-gradient(155deg, oklch(0.49 0.13 166), oklch(0.17 0.03 226))" },
 ]
 
 function Panel({ c, n }: { c: Channel; n: number }) {
@@ -33,7 +33,7 @@ function Panel({ c, n }: { c: Channel; n: number }) {
 
       <div className="relative flex items-start justify-between">
         <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-white/15 text-white ring-1 ring-white/15 backdrop-blur-sm transition-colors group-hover:bg-white/25"><c.icon className="h-5 w-5" /></span>
-        <span className="font-mono text-[11px] text-white/45">0{n} / 06</span>
+        <span className="font-mono text-[11px] text-white/45">0{n} / 0{CHANNELS.length}</span>
       </div>
 
       {/* live feature demo */}

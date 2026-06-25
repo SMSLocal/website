@@ -4,7 +4,9 @@ import { useEffect, useRef, useState } from "react"
 import {
   BarChart3,
   Bell,
+  Blocks,
   Bot,
+  CheckCircle2,
   Inbox,
   LayoutDashboard,
   Lock,
@@ -13,6 +15,7 @@ import {
   Search,
   Send,
   Sparkles,
+  Workflow,
   Zap,
 } from "lucide-react"
 
@@ -31,7 +34,27 @@ const NAV = [
   { Icon: Radio, label: "RCS" },
   { Icon: Inbox, label: "Inbox", badge: 3 },
   { Icon: Bot, label: "AI Agent" },
+  { Icon: Workflow, label: "Automations" },
+  { Icon: Blocks, label: "Integrations" },
   { Icon: BarChart3, label: "Analytics" },
+]
+
+/** Indian-market CRMs the AI agent syncs to. */
+const CRMS = [
+  { name: "Zoho", dot: "bg-rose-500", live: true },
+  { name: "LeadSquared", dot: "bg-indigo-500", live: true },
+  { name: "Freshsales", dot: "bg-emerald-500", live: true },
+  { name: "Kylas", dot: "bg-amber-500", live: false },
+  { name: "Salesforce", dot: "bg-sky-500", live: true },
+  { name: "HubSpot", dot: "bg-orange-500", live: false },
+]
+
+/** Agentic automation run — the agent acting across steps, end to end. */
+const AGENT_STEPS = [
+  { text: "New lead from WhatsApp", done: true },
+  { text: "AI qualified · intent: buy", done: true },
+  { text: "Contact synced to Zoho CRM", done: true },
+  { text: "Follow-up WhatsApp queued", done: false },
 ]
 
 /** Counts up to `to` once it scrolls into view. */
@@ -123,8 +146,8 @@ export function AiShowcase() {
             </span>
           </h2>
           <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
-            Bulk SMS, WhatsApp and RCS in a single SMSLocal workspace — with a built-in AI
-            agent that answers customers in real time.
+            Bulk SMS, WhatsApp and RCS in a single SMSLocal workspace — with an agentic AI
+            that answers customers, runs automations, and syncs every contact straight to your CRM.
           </p>
         </div>
 
@@ -265,6 +288,60 @@ export function AiShowcase() {
                     ))}
                   </ul>
                 </div>
+
+                {/* AI agent · agentic automation run */}
+                <div className="rounded-xl border border-border bg-secondary/20 p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1.5 text-[12.5px] font-semibold text-foreground">
+                      <Workflow className="h-4 w-4 text-primary" /> AI agent · Automation
+                    </div>
+                    <span className="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[10.5px] font-semibold text-primary">
+                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-primary" /> Running
+                    </span>
+                  </div>
+                  <ol className="mt-3 space-y-2">
+                    {AGENT_STEPS.map((s, i) => (
+                      <li key={i} className="flex items-center gap-2 text-[11.5px]">
+                        {s.done ? (
+                          <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-primary" />
+                        ) : (
+                          <span className="inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center">
+                            <span className="h-2 w-2 animate-pulse rounded-full border-2 border-primary" />
+                          </span>
+                        )}
+                        <span className={s.done ? "text-foreground/80" : "font-medium text-foreground"}>{s.text}</span>
+                        {!s.done && <span className="ml-auto text-[10px] text-muted-foreground">now</span>}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+
+                {/* CRM integrations · auto-sync */}
+                <div className="rounded-xl border border-border bg-secondary/20 p-4">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1.5 text-[12.5px] font-semibold text-foreground">
+                      <Blocks className="h-4 w-4 text-primary" /> CRM integrations
+                    </div>
+                    <span className="inline-flex items-center gap-1 rounded-full bg-emerald-500/10 px-2 py-0.5 text-[10.5px] font-semibold text-emerald-600">
+                      <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-500" /> Auto-sync on
+                    </span>
+                  </div>
+                  <div className="mt-3 grid grid-cols-2 gap-1.5 sm:grid-cols-3">
+                    {CRMS.map((c) => (
+                      <span
+                        key={c.name}
+                        className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-2 py-1 text-[10.5px] font-medium text-foreground"
+                      >
+                        <span className={`h-2 w-2 shrink-0 rounded-full ${c.dot}`} />
+                        <span className="truncate">{c.name}</span>
+                        {c.live && <CheckCircle2 className="ml-auto h-3 w-3 shrink-0 text-emerald-500" />}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-3 text-[11px] text-muted-foreground">
+                    <span className="font-semibold text-foreground">2,418</span> contacts synced · 6 apps connected
+                  </div>
+                </div>
               </div>
             </main>
 
@@ -304,6 +381,15 @@ export function AiShowcase() {
                     </div>
                   </div>
                 )}
+              </div>
+
+              {/* agentic action — the AI didn't just reply, it acted */}
+              <div className="relative mt-3 px-4">
+                <div className="flex items-center gap-2 rounded-lg border border-primary/25 bg-primary/10 px-2.5 py-1.5 text-[10.5px] font-medium text-emerald-200">
+                  <Workflow className="h-3.5 w-3.5 shrink-0 text-primary" />
+                  <span className="truncate">Agent synced this contact to Zoho CRM</span>
+                  <CheckCircle2 className="ml-auto h-3.5 w-3.5 shrink-0 text-emerald-400" />
+                </div>
               </div>
 
               {/* input bar */}

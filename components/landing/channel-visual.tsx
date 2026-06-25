@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { CheckCheck, Send } from "lucide-react"
+import { CheckCheck } from "lucide-react"
 
 const WRAP = "w-full max-w-[210px]"
 const INK = "oklch(0.2 0.02 230)"
@@ -91,22 +91,28 @@ export function ChannelVisual({ kind }: { kind: string }) {
     )
   }
 
-  // quick
-  const s = t % 4
-  const sent = s === 3
+  // agentic — the agent reasoning + acting across steps, looping
+  const shown = t % 4 // 0..3 → reveal up to 3 steps, then reset
+  const steps = ["Understood the intent", "Fetched order status", "Replied & synced CRM"]
   return (
-    <div className={`${WRAP} rounded-xl bg-white/10 p-2.5 backdrop-blur-sm`}>
-      {sent ? (
-        <div key={`s-${Math.floor(t / 4)}`} style={{ animation: "message-in .4s ease both" }} className="ml-auto w-fit rounded-lg rounded-br-sm bg-white px-2.5 py-1.5 text-[10.5px] font-medium text-primary">Sent to 2,418 ✓</div>
-      ) : (
-        <div className="flex items-center gap-2">
-          <div className="flex-1 rounded-md bg-white/15 px-2.5 py-1.5 text-[10.5px] text-white/65">
-            {["Type…", "Type your m…", "Type your message…"][s] ?? "Type your message…"}
-            <span className="ml-0.5 inline-block h-3 w-px animate-pulse bg-white/70 align-middle" />
-          </div>
-          <span className="inline-flex h-7 w-7 items-center justify-center rounded-md bg-white text-primary"><Send className="h-3.5 w-3.5" /></span>
-        </div>
-      )}
+    <div className={`${WRAP} rounded-xl bg-white/10 p-3 backdrop-blur-sm`}>
+      <div className="flex items-center gap-1.5 text-[9.5px] uppercase tracking-wide text-white/55">
+        <Dot /> agent working
+      </div>
+      <div className="mt-2 space-y-1.5">
+        {steps.map((st, i) => {
+          const on = i < shown
+          return (
+            <div
+              key={i}
+              className={`flex items-center gap-1.5 text-[10.5px] transition-opacity duration-300 ${on ? "opacity-100" : "opacity-30"}`}
+            >
+              <CheckCheck className={`h-3 w-3 shrink-0 ${on ? "text-white" : "text-white/30"}`} />
+              <span className="text-white/90">{st}</span>
+            </div>
+          )
+        })}
+      </div>
     </div>
   )
 }

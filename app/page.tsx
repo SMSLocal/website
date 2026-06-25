@@ -8,7 +8,7 @@ import { FinalCta } from "@/components/landing/final-cta"
 import { HowItWorks } from "@/components/landing/how-it-works"
 import { Industries } from "@/components/landing/industries"
 import { OperatorsStrip } from "@/components/landing/operators-strip"
-import { PricingTeaser } from "@/components/landing/pricing-teaser"
+import { AgenticCpaas } from "@/components/landing/agentic-cpaas"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
@@ -60,6 +60,26 @@ const HOMEPAGE_FAQS = [
     q: "Where is my data stored?",
     a: "All customer data and message logs are stored in India, on infrastructure that complies with the Digital Personal Data Protection Act (DPDPA) 2023. A signed Data Processing Agreement (DPA) is available for all customers on request.",
   },
+  {
+    q: "What is agentic AI?",
+    a: "Agentic AI describes AI agents that don't just answer a single prompt — they reason about a goal, plan the steps, and act on their own across multiple tools and systems. On SMSLocal, an agentic AI agent reads a customer's WhatsApp message, looks up the order in your CRM, drafts the reply, updates the record, and escalates to a human only when needed — all without a person in the loop for routine conversations.",
+  },
+  {
+    q: "How is an agentic AI agent different from a chatbot?",
+    a: "A traditional chatbot follows a fixed decision tree — it can only answer what it was scripted for. An agentic AI agent is goal-driven: it understands intent in natural language, decides which actions to take, calls APIs and CRMs to get real data, and adapts its response. That's why SMSLocal's agents resolve open-ended queries end to end instead of dropping the customer into a 'type MENU for options' loop.",
+  },
+  {
+    q: "Can I use agentic AI for WhatsApp customer support in India?",
+    a: "Yes. SMSLocal's agentic AI agents run on top of your official WhatsApp Business API number and auto-reply in eight Indian languages, including Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati and Kannada. They handle order status, FAQs, lead qualification and follow-ups around the clock, and hand off to a human agent with the full transcript when a conversation needs one.",
+  },
+  {
+    q: "What can SMSLocal's AI agents automate?",
+    a: "They qualify inbound leads, answer product and policy questions from your own documents, trigger workflows like order lookups and appointment booking, sync contacts and conversations to your CRM (Zoho, LeadSquared, Freshsales, Salesforce and more), send follow-ups across SMS, WhatsApp and RCS, and escalate complex or high-value cases to your team — all from one dashboard.",
+  },
+  {
+    q: "Do agentic AI agents replace human support agents?",
+    a: "No — they work alongside them. The AI handles routine, repetitive conversations instantly and 24/7, while your human team focuses on complex, sensitive or high-value cases. When the agent escalates, the human inherits the full transcript, the customer's intent and a suggested reply, so nobody starts cold and customers never repeat themselves.",
+  },
 ]
 
 export default function HomePage() {
@@ -73,10 +93,10 @@ export default function HomePage() {
       <OperatorsStrip />
       <ChannelsShowcase />
       <StatsStrip />
+      <AgenticCpaas />
       <HowItWorks />
       <Differentiators />
       <Industries />
-      <PricingTeaser />
       <ComplianceStrip />
       <DeveloperStrip />
       <FaqSection items={HOMEPAGE_FAQS} />

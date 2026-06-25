@@ -10,7 +10,7 @@ const STATS = [
 
 export function StatsStrip() {
   return (
-    <section className="relative overflow-hidden bg-[oklch(0.14_0.02_230)] py-20 text-white sm:py-24">
+    <section className="relative overflow-hidden bg-[oklch(0.14_0.02_230)] py-8 text-white sm:py-10">
       {/* base vertical depth tint */}
       <div
         aria-hidden
@@ -61,19 +61,19 @@ export function StatsStrip() {
             <span className="h-1.5 w-1.5 rounded-full bg-primary shadow-[0_0_8px_var(--primary)]" />
             What we&apos;ve built
           </span>
-          <h2 className="mt-4 text-pretty text-3xl font-semibold tracking-tight sm:text-4xl">
+          <h2 className="mt-3 text-pretty text-2xl font-semibold tracking-tight sm:text-3xl">
             Infrastructure tuned for Indian messaging.
           </h2>
-          <p className="mt-3 text-[15px] leading-relaxed text-white/65">
+          <p className="mt-2.5 text-[14px] leading-relaxed text-white/65">
             Delivery rates, carrier failover, and DLT rules are solved at the platform layer so
             your team can ship.
           </p>
         </Reveal>
 
-        <div className="mt-12 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        <div className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-4">
           {STATS.map((stat, i) => (
             <Reveal key={stat.label} delay={i * 90} className="h-full">
-              <div className="group relative flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-6 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)]">
+              <div className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-white/10 bg-gradient-to-b from-white/[0.07] to-white/[0.02] p-3.5 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-[0_24px_60px_-24px_rgba(0,0,0,0.7)]">
                 {/* top accent line on hover */}
                 <span
                   aria-hidden
@@ -90,14 +90,14 @@ export function StatsStrip() {
                   className="pointer-events-none absolute -bottom-3 -right-2 h-20 w-20 text-white/[0.04] transition-transform duration-500 ease-out group-hover:scale-110"
                 />
 
-                <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/15 text-primary ring-1 ring-primary/25 transition-colors group-hover:bg-primary/25">
-                  <stat.Icon className="h-5 w-5" />
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-primary/15 text-primary ring-1 ring-primary/25 transition-colors group-hover:bg-primary/25">
+                  <stat.Icon className="h-4 w-4" />
                 </span>
 
-                <div className="mt-4 bg-gradient-to-r from-white to-primary bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl">
+                <div className="mt-2.5 bg-gradient-to-r from-white to-primary bg-clip-text text-2xl font-bold tracking-tight text-transparent sm:text-3xl">
                   {stat.value}
                 </div>
-                <p className="mt-2.5 text-sm leading-snug text-white/60">{stat.label}</p>
+                <p className="mt-1.5 text-[12.5px] leading-snug text-white/60">{stat.label}</p>
               </div>
             </Reveal>
           ))}
