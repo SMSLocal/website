@@ -262,18 +262,18 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/ai-agents": {
-    title: "AI Agents for WhatsApp — Trusted, 8 Indian Languages",
+    title: "AI Agents That Resolve, Not Just Reply — Captain AI",
     description:
-      "AI agents for WhatsApp that reply in 8 Indian languages, 24/7 — deflect repeat queries, escalate to a human when needed, and cut first-response time fast.",
+      "Captain AI is an AI support agent that answers in 8 Indian languages and takes real actions across 300+ connected apps — look up orders, update invoices, issue refunds — then hands off to a human. Macros, canned responses, SLAs, roles and audit logs built in.",
     focusKeyword: "AI agents",
     keywords: [
       "AI agents",
+      "AI customer support agent",
+      "agentic AI support",
       "AI chatbot WhatsApp",
       "WhatsApp AI bot India",
       "multilingual WhatsApp chatbot",
-      "Hindi WhatsApp bot",
       "AI customer support WhatsApp",
-      "WhatsApp ChatGPT bot",
       "WhatsApp auto reply bot",
     ],
   },

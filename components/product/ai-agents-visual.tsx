@@ -21,30 +21,9 @@ const TURNS: Turn[] = [
     lang: "Hindi",
   },
   {
-    role: "customer",
-    name: "Ravi (Chennai)",
-    text: "Return policy என்ன? 15 நாட்கள் இருக்கா?",
-    time: "10:44",
-    lang: "Tamil",
-  },
-  {
-    role: "ai",
-    text: "வணக்கம் Ravi. ஆம், purchase-க்கு பிறகு 15 நாட்கள் return window உண்டு. Original packaging-ல் இருக்க வேண்டும்.",
-    time: "10:44",
-    source: "Policy doc v3.2",
-    lang: "Tamil",
-  },
-  {
-    role: "customer",
-    name: "Anita (Bengaluru)",
-    text: "I want to raise a complaint about a damaged product. This is urgent.",
-    time: "10:47",
-    lang: "English",
-  },
-  {
     role: "human",
     name: "Meera (Support)",
-    text: "Hi Anita, I&apos;m Meera from SMSLocal. I have the full chat already — let me fix this for you right now.",
+    text: "Hi Priya, Meera here — I have the full chat already. Stepping in to help.",
     time: "10:48",
   },
 ]
@@ -57,15 +36,15 @@ export function AiAgentsVisual() {
         className="absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-primary/20 via-emerald-500/5 to-transparent blur-2xl"
       />
 
-      <div className="relative rounded-[2rem] border border-white/10 bg-[oklch(0.14_0.03_230)] p-5 shadow-2xl shadow-emerald-500/10 sm:p-6">
+      <div className="relative rounded-[2rem] border border-white/10 bg-[oklch(0.14_0.03_230)] p-4 shadow-2xl shadow-emerald-500/10 sm:p-5">
         {/* Header */}
-        <div className="flex items-center justify-between border-b border-white/5 pb-4">
+        <div className="flex items-center justify-between border-b border-white/5 pb-3">
           <div className="flex items-center gap-2.5">
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/15 text-emerald-300">
               <Bot className="h-4 w-4" />
             </span>
             <div>
-              <p className="text-[13px] font-semibold text-white">SMSLocal AI Agent</p>
+              <p className="text-[13px] font-semibold text-white">Captain AI</p>
               <p className="text-[11px] text-white/50">Online · 8 Indian languages</p>
             </div>
           </div>
@@ -76,7 +55,7 @@ export function AiAgentsVisual() {
         </div>
 
         {/* Stream */}
-        <ul className="mt-4 space-y-3">
+        <ul className="mt-3 space-y-2.5">
           {TURNS.map((turn, i) => {
             if (turn.role === "customer") {
               return (
@@ -161,7 +140,7 @@ export function AiAgentsVisual() {
         </ul>
 
         {/* Footer stats */}
-        <div className="mt-5 grid grid-cols-3 gap-2 border-t border-white/5 pt-4 text-center">
+        <div className="mt-4 grid grid-cols-3 gap-2 border-t border-white/5 pt-3 text-center">
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-white/50">Auto-resolved</p>
             <p className="mt-0.5 text-[15px] font-semibold text-white">78%</p>
