@@ -21,3 +21,5 @@ _old-logo-backup/
 
 # Local-only raw image source drops (optimized copies live in public/)
 Imgs/
+# local prod build
+.next-prod/

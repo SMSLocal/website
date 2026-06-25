@@ -20,15 +20,17 @@ export function Section({
   className?: string
   children: ReactNode
   tone?: "light" | "muted" | "dark"
+  /** Accepted for layout intent on some product pages; currently a no-op. */
+  screenHeight?: boolean
 }) {
   const toneClass =
     tone === "dark"
       ? "bg-[oklch(0.13_0.02_230)] text-white"
       : tone === "muted"
-        ? "bg-muted/40"
-        : "bg-background"
+        ? "bg-muted/50 border-y border-border"
+        : "bg-background border-y border-border"
   return (
-    <section id={id} className={`${toneClass} py-20 sm:py-24 ${className}`}>
+    <section id={id} className={`${toneClass} py-14 sm:py-16 ${className}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6">{children}</div>
     </section>
   )
@@ -97,6 +99,7 @@ export function ProductHero({
   trustBar,
   trustItems,
   visual,
+  compact = false,
 }: {
   eyebrow: string
   title: ReactNode
@@ -107,6 +110,7 @@ export function ProductHero({
   trustBar?: HeroStat[]
   trustItems?: string[]
   visual: ReactNode
+  compact?: boolean
 }) {
   const heroCopy = subtitle ?? description ?? ""
   const heroTrust: HeroStat[] =
@@ -115,38 +119,46 @@ export function ProductHero({
       ? trustItems.map((label) => ({ icon: Check, label }))
       : [])
   return (
-    <section className="relative overflow-hidden bg-[oklch(0.14_0.02_230)] text-white">
+    <section className="relative bg-[oklch(0.14_0.02_230)] text-white">
       {/* Backdrop */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -top-40 -left-32 h-[520px] w-[520px] rounded-full opacity-50 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, color-mix(in oklch, var(--primary) 45%, transparent), transparent 70%)",
-        }}
-      />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-40 top-20 h-[520px] w-[520px] rounded-full opacity-30 blur-3xl"
-        style={{
-          background:
-            "radial-gradient(circle, color-mix(in oklch, var(--accent) 50%, transparent), transparent 70%)",
-        }}
-      />
-      <div aria-hidden className="bg-grid-ink absolute inset-0 opacity-60 mask-radial-fade" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+        <div
+          className="absolute -top-40 -left-32 h-[520px] w-[520px] rounded-full opacity-50 blur-3xl"
+          style={{
+            background:
+              "radial-gradient(circle, color-mix(in oklch, var(--primary) 45%, transparent), transparent 70%)",
+          }}
+        />
+        <div
+          className="absolute -right-40 top-20 h-[520px] w-[520px] rounded-full opacity-30 blur-3xl"
+          style={{
+            background:
+              "radial-gradient(circle, color-mix(in oklch, var(--accent) 50%, transparent), transparent 70%)",
+          }}
+        />
+        <div className="bg-grid-ink absolute inset-0 opacity-60 mask-radial-fade" />
+      </div>
 
-      <div className="relative mx-auto grid max-w-7xl grid-cols-1 gap-12 px-4 py-20 sm:px-6 sm:py-24 lg:grid-cols-[1.05fr_1fr] lg:items-center lg:py-28">
-        <div>
+      <div
+        className={`relative mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 sm:px-6 lg:grid-cols-[1.05fr_1fr] lg:gap-12 ${
+          compact ? "py-8 sm:py-10 lg:py-10 lg:items-start" : "py-20 sm:py-24 lg:py-28 lg:items-center"
+        }`}
+      >
+        <div className={compact ? "lg:py-2" : ""}>
           <span className="inline-flex rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/80 backdrop-blur-md">
             {eyebrow}
           </span>
-          <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
+          <h1
+            className={`text-balance font-semibold leading-[1.08] tracking-tight ${
+              compact ? "mt-4 text-3xl sm:text-4xl lg:text-[2.9rem]" : "mt-5 text-4xl sm:text-5xl lg:text-6xl"
+            }`}
+          >
             {title}
           </h1>
-          <p className="mt-5 max-w-xl text-pretty text-base leading-relaxed text-white/70 sm:text-[17px]">
+          <p className={`max-w-xl text-pretty leading-relaxed text-white/70 ${compact ? "mt-4 text-[15px] sm:text-base" : "mt-5 text-base sm:text-[17px]"}`}>
             {heroCopy}
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-3">
+          <div className={`flex flex-wrap items-center gap-3 ${compact ? "mt-6" : "mt-8"}`}>
             <Link
               href={primaryCta.href}
               className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
@@ -164,7 +176,7 @@ export function ProductHero({
           </div>
 
           {/* Trust bar */}
-          <div className="mt-10 grid grid-cols-2 gap-3 border-t border-white/10 pt-6 sm:grid-cols-4">
+          <div className={`grid grid-cols-2 gap-3 border-t border-white/10 sm:grid-cols-4 ${compact ? "mt-6 pt-5" : "mt-10 pt-6"}`}>
             {heroTrust.map((item) => {
               const Icon = item.icon
               return (
@@ -207,7 +219,6 @@ export function CapabilityGrid({
   return (
     <Section>
       <SectionHeader eyebrow={eyebrow} title={title} subtitle={subtitle} />
-      {/* Borderless editorial grid — accent rule on the left, no card chrome */}
       <div className="mt-14 grid grid-cols-1 gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-4">
         {items.map((item) => {
           const Icon = item.icon
@@ -249,7 +260,6 @@ export function HowItWorks({
   const body = (
     <>
       {title ? <SectionHeader eyebrow={eyebrow} title={title} subtitle={subtitle} /> : null}
-      {/* Connected timeline — hairline rule with numbered badges, content hanging below */}
       <ol
         className={`relative ${title ? "mt-14" : ""} grid grid-cols-1 gap-x-6 gap-y-10 md:grid-cols-2 lg:grid-cols-4`}
       >
@@ -259,7 +269,11 @@ export function HowItWorks({
           className="pointer-events-none absolute left-4 right-4 top-4 hidden h-px bg-border lg:block"
         />
         {steps.map((step, i) => (
-          <li key={step.title} className="relative flex flex-col">
+          <li
+            key={step.title}
+            className="animate-step-loop relative flex flex-col"
+            style={{ animationDelay: `${i * 250}ms` }}
+          >
             <span className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-primary/40 bg-background text-[12.5px] font-semibold text-primary shadow-sm">
               {step.icon ?? String(i + 1).padStart(2, "0")}
             </span>
@@ -501,19 +515,19 @@ export function CompareTable({
   const body = (
     <>
       {title ? <SectionHeader eyebrow={eyebrow} title={title} subtitle={subtitle} /> : null}
-      <div className={`${title ? "mt-10" : ""} overflow-hidden rounded-2xl border border-border bg-background shadow-sm`}>
+      <div className={`${title ? "mt-10" : ""} overflow-hidden rounded-2xl border border-[oklch(0.84_0.018_160)] bg-background shadow-md`}>
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[640px] border-collapse text-left text-[13.5px]">
+          <table className="w-full min-w-[640px] border-collapse text-left text-[14px] [&_td]:border [&_td]:border-[oklch(0.86_0.014_160)] [&_th]:border [&_th]:border-[oklch(0.86_0.014_160)]">
             <thead>
-              <tr className="border-b border-border bg-muted/40">
-                <th className="px-5 py-4 text-[12px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
+              <tr className="bg-[oklch(0.94_0.025_155)]">
+                <th className="px-5 py-3.5 text-[12px] font-bold uppercase tracking-[0.12em] text-foreground/75">
                   Feature
                 </th>
                 {columns.map((c, i) => (
                   <th
                     key={c}
-                    className={`px-5 py-4 text-center text-[12px] font-semibold uppercase tracking-[0.12em] ${
-                      i === 0 ? "text-primary" : "text-muted-foreground"
+                    className={`px-5 py-3.5 text-center text-[12px] font-bold uppercase tracking-[0.12em] ${
+                      i === 0 ? "text-primary" : "text-foreground/80"
                     }`}
                   >
                     {c}
@@ -525,13 +539,13 @@ export function CompareTable({
               {normalized.map((row, ri) => (
                 <tr
                   key={row.feature}
-                  className={`border-b border-border last:border-b-0 ${ri % 2 ? "bg-muted/20" : ""}`}
+                  className={ri % 2 ? "bg-[oklch(0.975_0.01_160)]" : "bg-background"}
                 >
-                  <td className="px-5 py-3.5 font-medium text-foreground">{row.feature}</td>
+                  <td className="px-5 py-3 font-semibold text-foreground">{row.feature}</td>
                   {row.cells.map((cell, ci) => (
                     <td
                       key={ci}
-                      className={`px-5 py-3.5 text-center ${ci === 0 ? "bg-primary/5" : ""}`}
+                      className={`px-5 py-3 text-center ${ci === 0 ? "bg-primary/[0.07]" : ""}`}
                     >
                       <CompareMark value={cell} emphasize={ci === 0} />
                     </td>
@@ -612,9 +626,9 @@ export function TechnicalBlock({
     <Section tone="dark">
       <SectionHeader eyebrow={eyebrow} title={title} subtitle={subtitle} dark />
       <div className="mt-10 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
-        {items.map((item) => (
+        {items.map((item, i) => (
           <div
-            key={item.label}
+            key={`${item.label}-${i}`}
             className="rounded-xl border border-white/10 bg-white/[0.02] p-5 backdrop-blur"
           >
             <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-white/50">
@@ -639,11 +653,7 @@ export function TechnicalBlock({
   )
 }
 
-/* ---------- Editorial image band ----------
- * Full-bleed cinematic photo with a short headline + caption inside the
- * image. Drop between content sections on a product page to give the
- * layout visual weight and a human moment between tech-heavy blocks.
- */
+/* ---------- Editorial image band ---------- */
 
 export function ProductEditorialBand({
   src,
@@ -660,19 +670,11 @@ export function ProductEditorialBand({
   eyebrow?: string
   headline: string
   caption?: string
-  /**
-   * "overlay" (default) — cinematic photo band with the copy set over a dark
-   * gradient. Best for photographic imagery.
-   * "split" — copy as plain, selectable text above a fully-visible image
-   * panel (no crop, no dark wash). Best for UI / dashboard graphics.
-   */
   layout?: "overlay" | "split"
   imageWidth?: number
   imageHeight?: number
 }) {
   if (layout === "split") {
-    // Shared, fully-selectable copy. Rendered overlaid in the image's empty
-    // left zone on desktop, and stacked below the image on mobile/tablet.
     const copy = (
       <>
         {eyebrow ? (
@@ -693,7 +695,6 @@ export function ProductEditorialBand({
 
     return (
       <section className="relative overflow-hidden py-6 sm:py-8 lg:py-10">
-        {/* Layered, clearly-visible dark band background */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
@@ -714,7 +715,6 @@ export function ProductEditorialBand({
 
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
           <div className="relative overflow-hidden rounded-2xl border border-white/10 shadow-2xl ring-1 ring-white/10">
-            {/* The dashboard image IS the background — never cropped */}
             <Image
               src={src}
               alt={alt}
@@ -724,10 +724,6 @@ export function ProductEditorialBand({
               className="h-auto w-full"
               priority
             />
-
-            {/* Very light left tint — desktop only. Just enough to lift the
-                white copy off the dark left zone; the image (including the top
-                status pills) stays fully visible. */}
             <div
               aria-hidden
               className="pointer-events-none absolute inset-0 hidden lg:block"
@@ -736,15 +732,10 @@ export function ProductEditorialBand({
                   "linear-gradient(90deg, oklch(0.10 0.02 230 / 0.45) 0%, oklch(0.10 0.02 230 / 0.28) 28%, oklch(0.10 0.02 230 / 0.10) 42%, transparent 55%)",
               }}
             />
-
-            {/* Copy overlaid in the image's empty left half — desktop only */}
             <div className="absolute inset-y-0 left-0 hidden max-w-[48%] flex-col justify-center pl-8 pr-6 lg:flex xl:pl-12">
               {copy}
             </div>
           </div>
-
-          {/* Mobile / tablet: copy stacked under the image (a wide banner is too
-              short to overlay text on small screens). */}
           <div className="mt-6 lg:hidden">{copy}</div>
         </div>
       </section>
@@ -761,7 +752,6 @@ export function ProductEditorialBand({
           sizes="100vw"
           className="object-cover"
         />
-        {/* Dark gradient for caption legibility */}
         <div
           aria-hidden
           className="pointer-events-none absolute inset-0"
@@ -884,7 +874,6 @@ export type FeatureItem = {
 
 export function FeatureGrid({ items }: { items: FeatureItem[] }) {
   return (
-    // Card rhythm — centre column of each row gets a subtle tonal shift so the 3-up row has visual variance instead of reading as 3 identical tiles
     <div className="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
       {items.map((item, i) => {
         const offset = i % 3 === 1
@@ -945,7 +934,6 @@ export type UseCaseItem = {
 
 export function UseCaseGrid({ items }: { items: UseCaseItem[] }) {
   return (
-    // Hairline-divided grid — no card chrome, just dividers between rows/cols
     <div className="mt-10 grid grid-cols-1 divide-y divide-border overflow-hidden rounded-2xl border border-border sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4">
       {items.map((item, i) => (
         <div
