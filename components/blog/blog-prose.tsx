@@ -161,12 +161,48 @@ export function BlogFigure({
   alt,
   caption,
   priority = false,
+  width,
+  height,
+  narrow = false,
 }: {
   src: string
   alt: string
   caption?: ReactNode
   priority?: boolean
+  /** Intrinsic pixel size. When provided, the image renders at its natural
+   *  aspect ratio (no 16:9 crop) — pass for charts, diagrams, and mockups. */
+  width?: number
+  height?: number
+  /** Constrain a tall/portrait image (e.g. a phone mockup) to a sensible width. */
+  narrow?: boolean
 }) {
+  // Natural-aspect mode: keeps charts/diagrams/mockups uncropped.
+  if (width && height) {
+    return (
+      <figure className="mt-10">
+        <div
+          className={`overflow-hidden rounded-2xl border border-border bg-white ${
+            narrow ? "mx-auto max-w-[360px]" : ""
+          }`}
+        >
+          <Image
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            sizes={narrow ? "360px" : "(max-width: 768px) 100vw, 720px"}
+            priority={priority}
+            className="h-auto w-full object-contain"
+          />
+        </div>
+        {caption ? (
+          <figcaption className="mt-3 text-center text-[13px] leading-relaxed text-muted-foreground">
+            {caption}
+          </figcaption>
+        ) : null}
+      </figure>
+    )
+  }
   return (
     <figure className="mt-10">
       <div className="relative aspect-[16/9] overflow-hidden rounded-2xl border border-border bg-muted">

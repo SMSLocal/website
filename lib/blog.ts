@@ -6,6 +6,9 @@ import ReceiveSmsOnlineIndiaPost from "@/content/blog/receive-sms-online-india"
 import SmsActivationPost from "@/content/blog/sms-activation"
 import GmailPasswordRecoveryPost from "@/content/blog/gmail-password-recovery-via-sms"
 import SendSmsOnlinePost from "@/content/blog/send-sms-online"
+import BulkWhatsAppMessagingPost from "@/content/blog/bulk-whatsapp-messaging"
+import WhatsAppMarketingPost from "@/content/blog/whatsapp-marketing"
+import WhatsAppSandalPost from "@/content/blog/whatsapp-sandal"
 
 export type BlogAuthor = {
   name: string
@@ -49,6 +52,91 @@ const TEAM: BlogAuthor = {
 }
 
 export const POSTS_BY_SLUG: Record<string, BlogPost> = {
+  "bulk-whatsapp-messaging": {
+    meta: {
+      slug: "bulk-whatsapp-messaging",
+      title:
+        "Bulk WhatsApp Messaging: How to Send at Scale Without Getting Banned (2026)",
+      description:
+        "How bulk WhatsApp messaging works on the official Business API in 2026 — the four sending steps, template categories, the updated messaging tiers and frequency caps, DPDP-compliant opt-in, pricing, and how to send thousands of messages without getting your number banned.",
+      date: "2026-06-16",
+      readingTime: "11 min read",
+      category: "WhatsApp",
+      author: TEAM,
+      coverAlt:
+        "One broadcast hub fanning out to many opted-in WhatsApp contacts, in SMSLocal's dark and emerald theme.",
+      toc: [
+        { id: "what-it-is", label: "What bulk WhatsApp messaging is" },
+        { id: "api-vs-app", label: "API vs Business App vs unofficial" },
+        { id: "how-it-works", label: "How it works" },
+        { id: "message-types", label: "Kinds of messages you can send" },
+        { id: "limits-tiers", label: "Messaging limits and tiers in 2026" },
+        { id: "opt-in", label: "The opt-in requirement" },
+        { id: "cost", label: "What it costs" },
+        { id: "platform", label: "What to look for in a platform" },
+        { id: "replies", label: "When customers reply" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["whatsapp-marketing", "send-sms-online"],
+    },
+    Component: BulkWhatsAppMessagingPost,
+  },
+
+  "whatsapp-marketing": {
+    meta: {
+      slug: "whatsapp-marketing",
+      title: "WhatsApp Marketing in India: The Complete 2026 Strategy Guide",
+      description:
+        "The complete WhatsApp marketing playbook for India — why it works, official API vs unofficial tools, the three campaign types, Click-to-WhatsApp ads, templates that convert, automation, the metrics to watch, the five mistakes that get numbers banned, and what it costs.",
+      date: "2026-06-14",
+      readingTime: "12 min read",
+      category: "Marketing",
+      author: TEAM,
+      coverAlt:
+        "Rising WhatsApp campaign performance chart with a megaphone message bubble, in SMSLocal's dark and emerald theme.",
+      toc: [
+        { id: "why-it-works", label: "Why it works in India" },
+        { id: "official-vs-unofficial", label: "Official API vs unofficial tools" },
+        { id: "three-types", label: "The three types of marketing" },
+        { id: "ctwa", label: "Click-to-WhatsApp ads" },
+        { id: "getting-started", label: "How to get started" },
+        { id: "templates", label: "Templates that convert" },
+        { id: "automation", label: "Automation at scale" },
+        { id: "measure", label: "How to measure success" },
+        { id: "mistakes", label: "Five mistakes that get bans" },
+        { id: "cost", label: "What it costs in India" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-sandal"],
+    },
+    Component: WhatsAppMarketingPost,
+  },
+
+  "whatsapp-sandal": {
+    meta: {
+      slug: "whatsapp-sandal",
+      title: "WhatsApp Scams in India: How to Identify Every Type and Stay Safe (2026)",
+      description:
+        "KYC fraud, fake jobs, investment scams, OTP theft, digital arrest, malicious APKs and QR-code fraud — how each WhatsApp scam in India works, the universal warning signs, how businesses prevent impersonation, and exactly what to do in the first hour if you have been scammed.",
+      date: "2026-06-12",
+      readingTime: "12 min read",
+      category: "Security",
+      author: TEAM,
+      coverAlt:
+        "A suspicious WhatsApp message asking for an OTP beside a warning shield, in a dark amber caution theme.",
+      toc: [
+        { id: "why-whatsapp", label: "Why scammers target WhatsApp" },
+        { id: "common-scams", label: "The most common scams" },
+        { id: "warning-signs", label: "Universal warning signs" },
+        { id: "businesses", label: "Protecting your customers" },
+        { id: "if-scammed", label: "If you have been scammed" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["whatsapp-marketing", "dnd-means"],
+    },
+    Component: WhatsAppSandalPost,
+  },
+
   "dlt-registration-guide": {
     meta: {
       slug: "dlt-registration-guide",
