@@ -19,8 +19,9 @@
  *   changes required.
  *
  * DEFAULT
- *   https://app.smslocal.in — placeholder until the AWS app is deployed.
- *   Update the env var to the real URL before pointing DNS at this build.
+ *   https://staging.app.smslocal.in — the current staging app. Sign-in goes to
+ *   /login and signup to /signup. Update the env var to the production URL when
+ *   ready, before pointing DNS at this build.
  * ────────────────────────────────────────────────────────────────────────────
  */
 
@@ -30,7 +31,7 @@
  * default. Trailing slashes are stripped so we can safely concatenate paths.
  */
 export const APP_BASE_URL: string = (
-  process.env.NEXT_PUBLIC_APP_URL?.trim() || "https://app.smslocal.in"
+  process.env.NEXT_PUBLIC_APP_URL?.trim() || "https://staging.app.smslocal.in"
 ).replace(/\/+$/, "")
 
 /** Join a path onto APP_BASE_URL, normalizing the leading slash. */
@@ -40,7 +41,8 @@ export function appUrl(path: string): string {
 }
 
 export const APP_SIGNUP_URL = appUrl("/signup")
-export const APP_SIGNIN_URL = appUrl("/signin")
+// The product app's sign-in route is /login (not /signin).
+export const APP_SIGNIN_URL = appUrl("/login")
 export const APP_FORGOT_PASSWORD_URL = appUrl("/forgot-password")
 export const APP_VERIFY_EMAIL_URL = appUrl("/verify-email")
 export const APP_DASHBOARD_URL = appUrl("/")
