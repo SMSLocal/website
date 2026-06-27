@@ -163,6 +163,13 @@ const nextConfig = {
         destination: "/products/ai-agents",
         permanent: true,
       },
+      // The use-case agent pages live under /ai-agents/*; the bare path
+      // sends visitors to the main Captain AI product page.
+      {
+        source: "/ai-agents",
+        destination: "/products/ai-agents",
+        permanent: false,
+      },
       // OTP SMS product page retired — send old links to the products hub.
       {
         source: "/products/otp-sms",

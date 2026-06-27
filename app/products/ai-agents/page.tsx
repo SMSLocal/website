@@ -5,9 +5,12 @@ import {
   ArrowRight,
   Bot,
   Building2,
+  CalendarCheck,
   Clock,
   Database,
+  Filter,
   GraduationCap,
+  Headphones,
   HeartPulse,
   Inbox,
   Languages,
@@ -130,6 +133,42 @@ export default function AiAgentsPage() {
             },
           ]}
         />
+
+        {/* ── Use-case agents ───────────────────────────────────────────── */}
+        <Section tone="muted">
+          <SectionHeader
+            eyebrow="Use cases"
+            title="See Captain AI in action for your team"
+            subtitle="Dive into a specific use case to see exactly how the agent works for that workflow."
+          />
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              { icon: Headphones, title: "Customer Service", body: "Deflect repetitive tickets across every channel and escalate the rest with full context.", href: "/ai-agents/customer-service", cta: "See how it works" },
+              { icon: ShoppingBag, title: "Sales", body: "Recommend products, recover carts, and guide buyers to checkout inside the conversation.", href: "/ai-agents/sales", cta: "See how it works" },
+              { icon: CalendarCheck, title: "Booking", body: "Schedule appointments inside the chat, check availability, and send automatic reminders.", href: "/ai-agents/booking", cta: "See how it works" },
+              { icon: Filter, title: "Lead Qualification", body: "Capture, qualify, score, and route hot leads to your team — synced to your CRM automatically.", href: "/ai-agents/lead-qualification", cta: "See how it works" },
+              { icon: Workflow, title: "Agent Builder", body: "Build, train, and launch AI agents visually — no code, no developers, no waiting.", href: "/ai-agents/agent-builder", cta: "Start building" },
+            ].map((c) => {
+              const Icon = c.icon
+              return (
+                <Link
+                  key={c.href}
+                  href={c.href}
+                  className="group flex flex-col rounded-2xl border border-border bg-background p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md"
+                >
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                    <Icon className="h-5 w-5" />
+                  </span>
+                  <h3 className="mt-4 text-[16px] font-semibold tracking-tight text-foreground">{c.title}</h3>
+                  <p className="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">{c.body}</p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-primary transition group-hover:gap-2.5">
+                    {c.cta} <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                </Link>
+              )
+            })}
+          </div>
+        </Section>
 
         <Section>
           <SectionHeader
