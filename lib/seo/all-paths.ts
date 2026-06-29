@@ -82,16 +82,16 @@ export function getAllDashboardEntries(): DashboardEntry[] {
       path: `/blog/${post.meta.slug}`,
       kind: "blog",
       kindLabel: "Blog post",
-      title: post.meta.title,
+      title: post.meta.seoTitle ?? post.meta.title,
       description: post.meta.description,
-      keywords: [],
+      keywords: post.meta.keywords ?? [],
       ogImage: post.meta.coverImage,
       noindex: false,
       type: "article",
       publishedTime: post.meta.date,
       modifiedTime: post.meta.updatedDate,
       editable: true,
-      defaultFocusKeyword: "",
+      defaultFocusKeyword: post.meta.keywords?.[0] ?? "",
     })
   }
 

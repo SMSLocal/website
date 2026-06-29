@@ -23,7 +23,11 @@ export type BlogTocItem = {
 export type BlogMeta = {
   slug: string
   title: string
+  /** ≤60-char title for the <title> tag and SERP. Falls back to `title`. */
+  seoTitle?: string
   description: string
+  /** 4–8 SEO keywords for this post (meta tag + dev SEO dashboard). */
+  keywords?: string[]
   date: string // ISO 8601
   updatedDate?: string // ISO 8601
   readingTime: string
@@ -55,10 +59,20 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "bulk-whatsapp-messaging": {
     meta: {
       slug: "bulk-whatsapp-messaging",
+      seoTitle: "Bulk WhatsApp Messaging in 2026: Send at Scale Safely",
       title:
         "Bulk WhatsApp Messaging: How to Send at Scale Without Getting Banned (2026)",
       description:
-        "How bulk WhatsApp messaging works on the official Business API in 2026 — the four sending steps, template categories, the updated messaging tiers and frequency caps, DPDP-compliant opt-in, pricing, and how to send thousands of messages without getting your number banned.",
+        "How bulk WhatsApp messaging works on the official Business API in 2026 — the sending steps, template categories, messaging tiers, opt-in and pricing.",
+      keywords: [
+        "bulk WhatsApp messaging",
+        "WhatsApp Business API",
+        "send bulk WhatsApp",
+        "WhatsApp broadcast India",
+        "WhatsApp message limits",
+        "WhatsApp template messages",
+        "bulk WhatsApp without ban",
+      ],
       date: "2026-06-16",
       readingTime: "11 min read",
       category: "WhatsApp",
@@ -85,9 +99,19 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "whatsapp-marketing": {
     meta: {
       slug: "whatsapp-marketing",
+      seoTitle: "WhatsApp Marketing in India: 2026 Strategy Guide",
       title: "WhatsApp Marketing in India: The Complete 2026 Strategy Guide",
       description:
-        "The complete WhatsApp marketing playbook for India — why it works, official API vs unofficial tools, the three campaign types, Click-to-WhatsApp ads, templates that convert, automation, the metrics to watch, the five mistakes that get numbers banned, and what it costs.",
+        "The complete WhatsApp marketing playbook for India — official API vs unofficial tools, campaign types, Click-to-WhatsApp ads, templates and what it costs.",
+      keywords: [
+        "WhatsApp marketing",
+        "WhatsApp marketing India",
+        "WhatsApp Business API",
+        "Click to WhatsApp ads",
+        "WhatsApp campaign",
+        "WhatsApp template marketing",
+        "WhatsApp marketing strategy",
+      ],
       date: "2026-06-14",
       readingTime: "12 min read",
       category: "Marketing",
@@ -115,9 +139,19 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "whatsapp-sandal": {
     meta: {
       slug: "whatsapp-sandal",
+      seoTitle: "WhatsApp Scams in India: Identify Them & Stay Safe",
       title: "WhatsApp Scams in India: How to Identify Every Type and Stay Safe (2026)",
       description:
-        "KYC fraud, fake jobs, investment scams, OTP theft, digital arrest, malicious APKs and QR-code fraud — how each WhatsApp scam in India works, the universal warning signs, how businesses prevent impersonation, and exactly what to do in the first hour if you have been scammed.",
+        "How every major WhatsApp scam in India works — KYC fraud, fake jobs, investment scams, OTP theft, digital arrest and malicious APKs — with the warning signs.",
+      keywords: [
+        "WhatsApp scams",
+        "WhatsApp scams India",
+        "WhatsApp fraud",
+        "OTP scam",
+        "KYC fraud WhatsApp",
+        "digital arrest scam",
+        "how to avoid WhatsApp scams",
+      ],
       date: "2026-06-12",
       readingTime: "12 min read",
       category: "Security",
@@ -140,10 +174,20 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "dlt-registration-guide": {
     meta: {
       slug: "dlt-registration-guide",
+      seoTitle: "DLT Registration Guide for Indian Businesses (2026)",
       title:
         "DLT Registration: The Practical Guide for Indian Businesses (2026)",
       description:
-        "Every step, every document, every rejection reason — from Principal Entity signup to sending your first SMS. Based on 7 years of onboarding Indian businesses onto DLT.",
+        "Every step, document and rejection reason — from Principal Entity signup to your first SMS. Based on 7 years onboarding Indian businesses onto DLT.",
+      keywords: [
+        "DLT registration",
+        "DLT registration India",
+        "TRAI DLT",
+        "Principal Entity registration",
+        "DLT SMS registration",
+        "sender ID registration",
+        "DLT template approval",
+      ],
       date: "2026-04-15",
       updatedDate: "2026-04-22",
       readingTime: "14 min read",
@@ -175,9 +219,19 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "dnd-means": {
     meta: {
       slug: "dnd-means",
+      seoTitle: "DND Meaning: What It Blocks & How to Activate It",
       title: "DND Means: What It Is, How to Activate It, and What It Actually Blocks",
       description:
-        "A consumer guide to India's Do Not Disturb registry — how to activate it on Jio, Airtel, Vi and BSNL, what it blocks, and what to do when promotional SMS still slip through.",
+        "A consumer guide to India's Do Not Disturb registry — how to activate it on Jio, Airtel, Vi and BSNL, what it blocks, and why some SMS still slip through.",
+      keywords: [
+        "DND meaning",
+        "what is DND",
+        "Do Not Disturb registry",
+        "activate DND",
+        "DND Jio Airtel Vi",
+        "block promotional SMS",
+        "NCPR DND",
+      ],
       date: "2026-03-28",
       readingTime: "9 min read",
       category: "Consumer",
@@ -202,9 +256,19 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "dnd-services": {
     meta: {
       slug: "dnd-services",
+      seoTitle: "DND Services for Senders: Scrubbing & Compliance",
       title: "DND Services for Senders: Scrubbing, Compliance, and Category Rules",
       description:
-        "If you send SMS in India, DND decides whether your campaigns are legal. A practical guide to NCPR scrubbing, send windows, consent, and the exact violations that get your sender ID suspended.",
+        "If you send SMS in India, DND decides whether your campaigns are legal. A practical guide to NCPR scrubbing, send windows, consent and the violations to avoid.",
+      keywords: [
+        "DND services",
+        "DND scrubbing",
+        "NCPR scrubbing",
+        "SMS compliance India",
+        "promotional SMS rules",
+        "sender DND compliance",
+        "TRAI send windows",
+      ],
       date: "2026-03-30",
       readingTime: "11 min read",
       category: "Compliance",
@@ -234,9 +298,19 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "receive-sms-online-india": {
     meta: {
       slug: "receive-sms-online-india",
+      seoTitle: "Receive SMS Online in India: Uses & Alternatives",
       title: "Receive SMS Online in India: Legitimate Uses, Tradeoffs, and Better Alternatives",
       description:
-        "An honest look at receive-SMS-online services in India — when they're a valid privacy tool, when they're fraud, and what senders can do to block them from abusing OTP flows.",
+        "An honest look at receive-SMS-online services in India — when they're a valid privacy tool, when they're fraud, and how senders can block them from OTP abuse.",
+      keywords: [
+        "receive SMS online",
+        "receive SMS online India",
+        "temporary phone number",
+        "virtual number OTP",
+        "online SMS receiving",
+        "disposable number India",
+        "OTP bypass risks",
+      ],
       date: "2026-03-14",
       readingTime: "10 min read",
       category: "Consumer",
@@ -262,9 +336,19 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "sms-activation": {
     meta: {
       slug: "sms-activation",
+      seoTitle: "SMS Not Working? Activation & Troubleshooting Guide",
       title: "SMS Not Working on Your Phone? The Complete Activation & Troubleshooting Guide",
       description:
-        "Can't send or receive SMS? Walk through every check — device settings, SMSC numbers for Indian carriers, iMessage gotchas, DND filters, and when to escalate to your carrier.",
+        "Can't send or receive SMS? Walk through every check — device settings, SMSC numbers for Indian carriers, iMessage gotchas, DND filters and carrier escalation.",
+      keywords: [
+        "SMS not working",
+        "SMS activation",
+        "can't send SMS",
+        "SMSC number India",
+        "fix SMS issues",
+        "not receiving SMS",
+        "SMS troubleshooting",
+      ],
       date: "2026-02-22",
       readingTime: "10 min read",
       category: "Troubleshooting",
@@ -289,9 +373,19 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "gmail-password-recovery-via-sms": {
     meta: {
       slug: "gmail-password-recovery-via-sms",
+      seoTitle: "Gmail Password Recovery via SMS: How It Works",
       title: "Gmail Password Recovery via SMS: How It Works, Common Failures, and Security Tips",
       description:
-        "A step-by-step walkthrough of Gmail's SMS-based password recovery — setup, the exact failure modes when the SMS won't arrive, the account recovery form, and how to secure your recovery phone against SIM-swap attacks.",
+        "A step-by-step guide to Gmail's SMS password recovery — setup, why the code sometimes won't arrive, the account recovery form, and blocking SIM-swap attacks.",
+      keywords: [
+        "Gmail password recovery",
+        "Gmail recovery SMS",
+        "reset Gmail password",
+        "Gmail recovery code not arriving",
+        "Google account recovery",
+        "SIM swap protection",
+        "Gmail recovery phone",
+      ],
       date: "2026-02-08",
       readingTime: "9 min read",
       category: "Security",
@@ -319,9 +413,19 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "send-sms-online": {
     meta: {
       slug: "send-sms-online",
+      seoTitle: "How to Send SMS Online in India: The 4 Ways",
       title: "How to Send SMS Online in India: The 4 Ways and When to Use Each",
       description:
-        "Web-to-SMS dashboard, SMS API, bulk platform, or WhatsApp Business API — a practical comparison of how to send SMS online in India, with the legal requirements every sender has to follow.",
+        "Web-to-SMS dashboard, SMS API, bulk platform or WhatsApp Business API — a practical comparison of how to send SMS online in India, plus the legal must-knows.",
+      keywords: [
+        "send SMS online",
+        "send SMS online India",
+        "web to SMS",
+        "SMS API India",
+        "bulk SMS online",
+        "online SMS sender",
+        "how to send SMS online",
+      ],
       date: "2026-01-18",
       readingTime: "11 min read",
       category: "Getting started",

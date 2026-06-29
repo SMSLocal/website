@@ -184,7 +184,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/voice": {
     title: "AI Voice Receptionist — Answer & Route Every Call 24/7",
     description:
-      "An AI voice receptionist that answers inbound calls 24/7, routes them, books appointments and captures every lead — with business numbers and clean human handoff.",
+      "An AI voice receptionist that answers inbound calls 24/7, routes them, books appointments and captures every lead — with business numbers and human handoff.",
     focusKeyword: "AI voice receptionist",
     keywords: [
       "AI voice receptionist",

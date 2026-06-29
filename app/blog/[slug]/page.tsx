@@ -33,13 +33,13 @@ export async function generateMetadata({
   }
   const { meta } = post
   return buildArticleMetadata({
-    title: meta.title,
+    title: meta.seoTitle ?? meta.title,
     description: meta.description,
     path: `/blog/${meta.slug}`,
     publishedTime: meta.date,
     modifiedTime: meta.updatedDate ?? meta.date,
     authors: [meta.author.name],
-    keywords: [
+    keywords: meta.keywords ?? [
       meta.category,
       `${meta.category} guide India`,
       "SMSLocal blog",

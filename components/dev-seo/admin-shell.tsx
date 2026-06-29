@@ -4,6 +4,7 @@ import { useMemo, useState } from "react"
 import { useRouter } from "next/navigation"
 import {
   Activity,
+  Archive,
   ArrowRight,
   EyeOff,
   FileText,
@@ -16,6 +17,7 @@ import {
   ShieldCheck,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { BackupDashboard } from "./backup-dashboard"
 import { OverviewPanel } from "./overview-panel"
 import { PagesTable } from "./pages-table"
 import { PageSpeedDashboard } from "./pagespeed-dashboard"
@@ -35,6 +37,7 @@ type TabKey =
   | "technical"
   | "pagespeed"
   | "site-audit"
+  | "backup"
 
 const TABS: { key: TabKey; label: string; icon: typeof Activity }[] = [
   { key: "overview", label: "Overview", icon: Activity },
@@ -44,6 +47,7 @@ const TABS: { key: TabKey; label: string; icon: typeof Activity }[] = [
   { key: "technical", label: "Technical audit", icon: ShieldCheck },
   { key: "pagespeed", label: "PageSpeed", icon: Gauge },
   { key: "site-audit", label: "Site audit", icon: Radar },
+  { key: "backup", label: "Backup", icon: Archive },
 ]
 
 export type PageSpeedPage = {
@@ -234,6 +238,7 @@ export function AdminShell({
         {active === "site-audit" ? (
           <SiteAuditDashboard pages={siteAuditPages} />
         ) : null}
+        {active === "backup" ? <BackupDashboard /> : null}
       </main>
     </div>
   )
