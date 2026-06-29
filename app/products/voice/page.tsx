@@ -26,16 +26,16 @@ export default function VoicePage() {
   return (
     <>
       <ProductServiceJsonLd
-        name="SMSLocal Voice — Phone Support in Your Inbox"
-        description="Handle inbound and outbound customer calls directly inside your support inbox, with click-to-call, business phone numbers, call context, and team collaboration."
+        name="SMSLocal AI Voice Receptionist"
+        description="An AI voice receptionist that answers inbound calls 24/7, routes them, books appointments, and captures every lead — with business numbers, call context, and clean human handoff."
         path="/products/voice"
-        category="Voice support and business calling software"
+        category="AI voice receptionist software"
       />
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
           { name: "Products", path: "/products" },
-          { name: "Voice", path: "/products/voice" },
+          { name: "AI Voice Receptionist", path: "/products/voice" },
         ]}
       />
       <AnnouncementStrip />
@@ -43,13 +43,13 @@ export default function VoicePage() {
       <main className="voice-tight">
         {/* 1 ─ Hero */}
         <ProductHero
-          eyebrow="SMSLocal Voice"
+          eyebrow="AI Voice Receptionist"
           title={
             <>
-              Customer calls, directly inside your <span className="text-primary">support inbox</span>.
+              An AI voice receptionist that <span className="text-primary">answers every call</span>.
             </>
           }
-          subtitle="Handle inbound and outbound calls without switching tools — phone support, customer context, and conversations in one workspace."
+          subtitle="Answer inbound calls 24/7, route them to the right place, book appointments, and capture every lead — in your customers' language, without adding headcount."
           primaryCta={{ label: "Add Voice", href: "/signup" }}
           secondaryCta={{ label: "Book a demo", href: "/company/contact" }}
           trustBar={[

@@ -77,6 +77,7 @@ const NAV: NavItem[] = [
         items: [
           { label: "AI Agents", href: "/products/ai-agents", icon: Sparkles, description: "Replies in 8 Indian languages" },
           { label: "AI Agentic", href: "/products/ai-agentic", icon: Bot, description: "Autonomous multi-step AI workflows" },
+          { label: "AI Voice Receptionist", href: "/products/voice", icon: Mic, description: "Answers, routes & books calls 24/7" },
         ],
       },
       {
@@ -85,7 +86,6 @@ const NAV: NavItem[] = [
           { label: "Inbox", href: "/products/inbox", icon: Inbox, description: "Unified team inbox for every channel" },
           { label: "Automation", href: "/products/automation", icon: Workflow, description: "No-code drip & trigger flows" },
           { label: "Integration", href: "/products/integrations", icon: Puzzle, description: "CRM, e-commerce & 100+ apps" },
-          { label: "Voice", href: "/products/voice", icon: Mic, description: "IVR, OTP & voice broadcast" },
           { label: "Live Chat", href: "/products/live-chat", icon: MessageCircle, description: "Website widget with agent handoff" },
         ],
       },

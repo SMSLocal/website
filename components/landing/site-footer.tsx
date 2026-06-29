@@ -18,7 +18,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "Automation", href: "/products/automation" },
       { label: "Integration", href: "/products/integrations" },
       { label: "Email", href: "/products/email" },
-      { label: "Voice", href: "/products/voice" },
+      { label: "AI Voice Receptionist", href: "/products/voice" },
       { label: "Live chat", href: "/products/live-chat" },
     ],
   },
