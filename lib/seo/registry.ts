@@ -136,7 +136,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/inbox": {
     title: "Shared Team Inbox — Every Channel, One Workspace",
     description:
-      "SMSLocal Inbox unifies WhatsApp, Email, Instagram, Messenger, Telegram, SMS, and Voice into one collaborative workspace — with Customer 360, smart routing, and team assignments.",
+      "SMSLocal Inbox unifies WhatsApp, Email, Instagram, Messenger, SMS and Voice in one workspace — with Customer 360, smart routing and team assignments.",
     focusKeyword: "shared team inbox",
     keywords: [
       "shared team inbox",
@@ -168,7 +168,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/automation": {
     title: "Conversation Automation Platform — Replies, AI, Workflows",
     description:
-      "Automate customer conversations with auto-reply rules, an AI chatbot, a no-code workflow builder, REST API, and webhooks — with instant human handoff when it matters.",
+      "Automate customer conversations with auto-reply rules, an AI chatbot, a no-code workflow builder, REST API and webhooks — with instant human handoff.",
     focusKeyword: "conversation automation",
     keywords: [
       "conversation automation",
@@ -184,7 +184,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/voice": {
     title: "AI Voice Receptionist — Answer & Route Every Call 24/7",
     description:
-      "An AI voice receptionist that answers inbound calls 24/7, routes them, books appointments, and captures every lead — with business numbers, call context, and clean human handoff.",
+      "An AI voice receptionist that answers inbound calls 24/7, routes them, books appointments and captures every lead — with business numbers and clean human handoff.",
     focusKeyword: "AI voice receptionist",
     keywords: [
       "AI voice receptionist",
@@ -248,7 +248,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/ai-agents": {
     title: "AI Agents That Resolve, Not Just Reply — Captain AI",
     description:
-      "Captain AI is an AI support agent that answers in 8 Indian languages and takes real actions across 300+ connected apps — look up orders, update invoices, issue refunds — then hands off to a human. Macros, canned responses, SLAs, roles and audit logs built in.",
+      "Captain AI answers in 8 Indian languages and takes real actions across 300+ apps — look up orders, update invoices, issue refunds — then hands off to a human.",
     focusKeyword: "AI agents",
     keywords: [
       "AI agents",
@@ -259,6 +259,54 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "multilingual WhatsApp chatbot",
       "AI customer support WhatsApp",
       "WhatsApp auto reply bot",
+    ],
+  },
+  "/products/ai-agentic": {
+    title: "Agentic AI for Customer Support — Captain AI",
+    description:
+      "Captain AI is agentic AI that resolves conversations end to end — acting across 300+ connected apps to look up orders, update invoices and issue refunds.",
+    focusKeyword: "agentic AI",
+    keywords: [
+      "agentic AI",
+      "agentic AI support",
+      "AI agent for customer support",
+      "autonomous AI agent",
+      "AI support automation",
+      "Captain AI",
+      "AI agent that takes actions",
+      "agentic AI India",
+    ],
+  },
+  "/products/integrations": {
+    title: "Integrations — Connect SMSLocal to Your Stack",
+    description:
+      "Connect SMSLocal to Shopify, HubSpot, Salesforce, Slack, Zapier and 30+ apps with 1-click OAuth, native channels and a full REST API — no glue code required.",
+    focusKeyword: "messaging integrations",
+    keywords: [
+      "messaging integrations",
+      "SMSLocal integrations",
+      "CRM SMS integration",
+      "Shopify SMS integration",
+      "HubSpot WhatsApp integration",
+      "Zapier SMS integration",
+      "Salesforce messaging integration",
+      "REST API messaging",
+    ],
+  },
+  "/products/live-chat": {
+    title: "Live Chat for Your Website — AI + Human, One Inbox",
+    description:
+      "Add a live chat widget to your website and answer visitors from the same inbox as WhatsApp, SMS and email — with an AI agent handling the first reply instantly.",
+    focusKeyword: "live chat software",
+    keywords: [
+      "live chat software",
+      "website live chat",
+      "live chat widget",
+      "AI live chat",
+      "customer live chat",
+      "live chat for website India",
+      "website chat widget",
+      "live chat with human handoff",
     ],
   },
 
@@ -281,7 +329,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/solutions/saas-b2b": {
     title: "Customer Support Built for SaaS Teams — B2B Platform",
     description:
-      "Manage onboarding, retention, expansion, and churn prevention from one AI-powered customer support platform built for SaaS teams — with Stripe, HubSpot, and Linear context.",
+      "Run onboarding, retention, expansion and churn prevention from one AI-powered support platform built for SaaS teams — with Stripe, HubSpot and Linear context.",
     focusKeyword: "customer support for SaaS",
     keywords: [
       "customer support for SaaS",
@@ -297,7 +345,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/solutions/restaurant": {
     title: "Customer Support for Restaurants — Reservations & Reviews",
     description:
-      "Manage guest conversations, automate SMS reservations, send order updates, and collect reviews from one inbox — built for restaurants, cafes, chains, and multi-location groups.",
+      "Manage guest conversations, automate SMS reservations, send order updates and collect reviews from one inbox — built for restaurants, cafes and chains.",
     focusKeyword: "customer support for restaurants",
     keywords: [
       "customer support for restaurants",
@@ -680,7 +728,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/resources/status": {
     title: "System Status — Real-Time Platform Health & Uptime",
     description:
-      "Monitor SMSLocal platform health in real time — live service status, 90-day uptime, historical analytics, incident history, and maintenance updates across every service.",
+      "Monitor SMSLocal platform health in real time — live service status, 90-day uptime, historical analytics, incident history and maintenance updates.",
     focusKeyword: "system status",
     keywords: [
       "system status",
@@ -696,7 +744,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/resources/changelog": {
     title: "Changelog — New Features, Improvements & Fixes",
     description:
-      "See what's new in SMSLocal. New features, improvements, and fixes shipped every two weeks — AI agents, omnichannel inbox, automation, integrations, and platform releases.",
+      "See what's new in SMSLocal — features, improvements and fixes shipped every two weeks across AI agents, omnichannel inbox, automation and integrations.",
     focusKeyword: "SMSLocal changelog",
     keywords: [
       "SMSLocal changelog",
