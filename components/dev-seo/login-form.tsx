@@ -47,7 +47,7 @@ export function LoginForm({
     setCaptchaError(null)
     setCaptchaAnswer("")
     try {
-      const res = await fetch("/api/dev/seo/captcha", {
+      const res = await fetch("/api/dev/seo/captcha/", {
         method: "GET",
         cache: "no-store",
       })
@@ -91,7 +91,7 @@ export function LoginForm({
 
     setPending(true)
     try {
-      const res = await fetch("/api/dev/seo/auth", {
+      const res = await fetch("/api/dev/seo/auth/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

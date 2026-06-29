@@ -579,7 +579,7 @@ function BuildYourOwn() {
             className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-sm transition hover:opacity-90">
             Get API Access <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link href="/company/contact"
+          <Link href="/company/contact/"
             className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-5 py-3 text-sm font-semibold text-foreground transition hover:border-primary/30">
             Talk to Sales
           </Link>
@@ -605,7 +605,7 @@ function BuildYourOwn() {
         <div className="flex items-center gap-2 border-t border-white/10 px-4 py-2.5 text-[11.5px] font-mono">
           <span className="rounded bg-emerald-500/15 px-2 py-0.5 font-semibold text-emerald-400">201 Created</span>
           <span className="text-white/40">· 82ms</span>
-          <Link href="/developers/api-docs" className="ml-auto text-primary hover:underline">/docs</Link>
+          <Link href="/developers/api-docs/" className="ml-auto text-primary hover:underline">/docs</Link>
         </div>
       </div>
     </div>
@@ -753,7 +753,7 @@ export function IntegrationsStackPage() {
                 className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-[14px] font-bold text-primary-foreground shadow-lg shadow-primary/30 transition hover:-translate-y-0.5 hover:opacity-90">
                 Start Free <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link href="/pricing"
+              <Link href="/pricing/"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-[14px] font-semibold text-white transition hover:border-primary/40 hover:bg-white/10">
                 See all plans
               </Link>
@@ -838,9 +838,9 @@ export function IntegrationsStackPage() {
           <Faq />
           <p className="mt-8 text-[14px] text-muted-foreground">
             More questions?{" "}
-            <Link href="/company/contact" className="font-semibold text-primary hover:underline">Talk to us</Link>{" "}
+            <Link href="/company/contact/" className="font-semibold text-primary hover:underline">Talk to us</Link>{" "}
             or check the{" "}
-            <Link href="/help" className="font-semibold text-primary hover:underline">Help Center</Link>.
+            <Link href="/help/" className="font-semibold text-primary hover:underline">Help Center</Link>.
           </p>
         </div>
       </section>
@@ -859,7 +859,7 @@ export function IntegrationsStackPage() {
             <Link href="https://app.smslocal.in/signup" className="inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-4 text-[15px] font-bold text-primary-foreground shadow-lg transition hover:-translate-y-0.5 hover:opacity-90">
               <Zap className="h-4 w-4" /> Start Free
             </Link>
-            <Link href="/pricing" className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-7 py-4 text-[15px] font-semibold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30">
+            <Link href="/pricing/" className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-7 py-4 text-[15px] font-semibold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30">
               See all plans <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

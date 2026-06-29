@@ -86,7 +86,7 @@ export default async function HelpCategoryPage({
                 Home
               </Link>
               <ChevronRight className="h-3 w-3" />
-              <Link href="/resources/help" className="hover:text-white">
+              <Link href="/resources/help/" className="hover:text-white">
                 Help Centre
               </Link>
               <ChevronRight className="h-3 w-3" />
@@ -192,8 +192,8 @@ export default async function HelpCategoryPage({
         <ProductFinalCta
           title="Still stuck?"
           subtitle="Our support team responds within 15 minutes during Indian business hours, seven days a week."
-          primaryCta={{ label: "Contact support", href: "/company/contact" }}
-          secondaryCta={{ label: "All help topics", href: "/resources/help" }}
+          primaryCta={{ label: "Contact support", href: "/company/contact/" }}
+          secondaryCta={{ label: "All help topics", href: "/resources/help/" }}
         />
       </main>
 

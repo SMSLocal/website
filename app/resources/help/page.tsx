@@ -151,7 +151,7 @@ export default function HelpCentrePage() {
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <Link
-                  href="/resources/dlt-guide"
+                  href="/resources/dlt-guide/"
                   className="group inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
                 >
                   Open DLT guide
@@ -184,7 +184,7 @@ export default function HelpCentrePage() {
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <Link
-                    href="/company/contact"
+                    href="/company/contact/"
                     className="group inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
                   >
                     Contact support
@@ -209,7 +209,7 @@ export default function HelpCentrePage() {
           title="Documentation that tells the truth."
           subtitle="Every article is written by the engineer who owns the feature. If a doc is wrong, a human fixes it the same day."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Open developer hub", href: "/developers" }}
+          secondaryCta={{ label: "Open developer hub", href: "/developers/" }}
         />
       </main>
 

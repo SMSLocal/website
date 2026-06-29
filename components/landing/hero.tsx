@@ -90,7 +90,7 @@ export function Hero() {
               />
             </a>
             <a
-              href="/company/contact"
+              href="/company/contact/"
               className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-6 py-3.5 text-sm font-semibold text-foreground shadow-sm transition hover:bg-secondary"
             >
               Book a Demo

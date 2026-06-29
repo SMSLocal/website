@@ -104,7 +104,7 @@ export function AnalyticsShell({
       setErrors((prev) => ({ ...prev, [tab]: undefined }))
       try {
         const reportName = tab === "journeys" ? "journey" : tab
-        const res = await fetch("/api/dev/analytics/query", {
+        const res = await fetch("/api/dev/analytics/query/", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ report: reportName, range: rangeKey }),
@@ -153,7 +153,7 @@ export function AnalyticsShell({
 
   async function signOut() {
     setSigningOut(true)
-    await fetch("/api/dev/seo/auth", {
+    await fetch("/api/dev/seo/auth/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ action: "logout" }),
@@ -945,7 +945,7 @@ function JourneysPanel({
     let cancelled = false
     setJourneyLoading(true)
     setJourney(null)
-    fetch("/api/dev/analytics/query", {
+    fetch("/api/dev/analytics/query/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ report: "visitor", range, visitorId }),

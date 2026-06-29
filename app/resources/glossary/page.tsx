@@ -218,7 +218,7 @@ export default function GlossaryPage() {
               add it within the week.
             </p>
             <Link
-              href="/company/contact"
+              href="/company/contact/"
               className="group inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
             >
               Suggest a term
@@ -233,7 +233,7 @@ export default function GlossaryPage() {
           title="The vocabulary is only half the job."
           subtitle="The other half is software that actually does what the words say. Start with ₹60 of free credit and send your first message in minutes."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Open the help centre", href: "/resources/help" }}
+          secondaryCta={{ label: "Open the help centre", href: "/resources/help/" }}
         />
       </main>
 

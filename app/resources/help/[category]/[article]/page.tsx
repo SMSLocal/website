@@ -100,7 +100,7 @@ export default async function HelpArticlePage({
                 Home
               </Link>
               <ChevronRight className="h-3 w-3" />
-              <Link href="/resources/help" className="hover:text-white">
+              <Link href="/resources/help/" className="hover:text-white">
                 Help Centre
               </Link>
               <ChevronRight className="h-3 w-3" />
@@ -236,8 +236,8 @@ export default async function HelpArticlePage({
         <ProductFinalCta
           title="Did this article help?"
           subtitle="If something isn't clear or the steps don't match what you're seeing, tell us and we'll fix the doc the same day."
-          primaryCta={{ label: "Contact support", href: "/company/contact" }}
-          secondaryCta={{ label: "Back to help centre", href: "/resources/help" }}
+          primaryCta={{ label: "Contact support", href: "/company/contact/" }}
+          secondaryCta={{ label: "Back to help centre", href: "/resources/help/" }}
         />
       </main>
 

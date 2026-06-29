@@ -32,7 +32,7 @@ const DATA: AgentLandingData = {
   trustLine: "From idea to live agent in days, no developers required.",
   visual: <AgentBuilderVisual />,
   primaryCta: { label: "Build your AI agent", href: "https://app.smslocal.in/signup" },
-  secondaryCta: { label: "Get a demo", href: "/company/contact" },
+  secondaryCta: { label: "Get a demo", href: "/company/contact/" },
   results: [
     "No-code, point and click",
     "Trained on your data",
@@ -106,10 +106,10 @@ const DATA: AgentLandingData = {
       "Create, train, and deploy an agentic AI agent across every channel — no code, no developers, no waiting. Start free with ₹60 credit.",
   },
   related: [
-    { label: "Explore Captain AI", href: "/products/ai-agents" },
-    { label: "How agentic AI works", href: "/products/ai-agentic" },
-    { label: "All integrations", href: "/products/integrations" },
-    { label: "Compare platforms", href: "/compare" },
+    { label: "Explore Captain AI", href: "/products/ai-agents/" },
+    { label: "How agentic AI works", href: "/products/ai-agentic/" },
+    { label: "All integrations", href: "/products/integrations/" },
+    { label: "Compare platforms", href: "/compare/" },
   ],
 }
 

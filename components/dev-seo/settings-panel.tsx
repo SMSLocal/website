@@ -91,7 +91,7 @@ export function SettingsPanel({
         extraDisallow: parseLines(extraDisallowText),
         blockedBots: parseLines(blockedBotsText),
       }
-      const res = await fetch("/api/dev/seo/settings", {
+      const res = await fetch("/api/dev/seo/settings/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(patch),

@@ -92,7 +92,7 @@ export default function LogisticsSolutionPage() {
           }
           subtitle="Dispatch alerts, delivery OTPs, live tracking, driver check-ins, and customer notifications — in every Indian language the driver or customer speaks."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant templates" },
             { icon: Radio, label: "Smart route failover" },
@@ -168,7 +168,7 @@ export default function LogisticsSolutionPage() {
                 title: "Dispatch and delivery SMS",
                 description:
                   "Auto-triggered from your WMS or TMS via API, with DLT-approved templates and smart route failover to keep the 7pm blast on time.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Transactional SMS details",
               },
               {
@@ -176,7 +176,7 @@ export default function LogisticsSolutionPage() {
                 title: "Delivery OTPs on a priority route",
                 description:
                   "Typically 98% under 1 sec on clean DLT traffic, DND-exempt via transactional template, with automatic retry on failure.",
-                href: "/products/otp-sms",
+                href: "/products/otp-sms/",
                 linkLabel: "OTP API details",
               },
               {
@@ -184,7 +184,7 @@ export default function LogisticsSolutionPage() {
                 title: "Live-tracking links",
                 description:
                   "Send a tap-through tracking link over SMS or WhatsApp. Customers stop calling the hub for ETAs.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Bulk SMS details",
               },
               {
@@ -192,7 +192,7 @@ export default function LogisticsSolutionPage() {
                 title: "Driver WhatsApp flows",
                 description:
                   "Two-way WhatsApp for pickup confirmation, issue escalation, and shift check-in — in the language each driver speaks.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "WhatsApp details",
               },
             ]}
@@ -244,7 +244,7 @@ export default function LogisticsSolutionPage() {
           title="Faster messaging, fewer exceptions."
           subtitle="Free trial with ₹60 credit. Dispatch your first million SMS without a monthly plan."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
         />
       </main>
 

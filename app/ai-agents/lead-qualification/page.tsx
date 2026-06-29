@@ -32,7 +32,7 @@ const DATA: AgentLandingData = {
   trustLine: "Built for sales teams that lose leads to slow follow-up.",
   visual: <LeadQualificationVisual />,
   primaryCta: { label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" },
-  secondaryCta: { label: "Get a demo", href: "/company/contact" },
+  secondaryCta: { label: "Get a demo", href: "/company/contact/" },
   results: [
     "Captures leads on every channel",
     "Qualifies with dynamic questions",
@@ -106,10 +106,10 @@ const DATA: AgentLandingData = {
       "Let an agentic AI agent qualify, score, and route every inbound the moment it arrives — synced to your CRM. Start free with ₹60 credit.",
   },
   related: [
-    { label: "Explore Captain AI", href: "/products/ai-agents" },
-    { label: "How agentic AI works", href: "/products/ai-agentic" },
-    { label: "The AI sales agent", href: "/ai-agents/sales" },
-    { label: "Compare platforms", href: "/compare" },
+    { label: "Explore Captain AI", href: "/products/ai-agents/" },
+    { label: "How agentic AI works", href: "/products/ai-agentic/" },
+    { label: "The AI sales agent", href: "/ai-agents/sales/" },
+    { label: "Compare platforms", href: "/compare/" },
   ],
 }
 

@@ -20,130 +20,130 @@ export type RelatedContent = {
 const LINKS = {
   // Products
   bulkSms: {
-    href: "/products/bulk-sms",
+    href: "/products/bulk-sms/",
     label: "Bulk SMS",
     blurb: "DLT-compliant campaigns with AI routing and wrong-number detection.",
   },
   whatsapp: {
-    href: "/products/whatsapp-business-api",
+    href: "/products/whatsapp-business-api/",
     label: "WhatsApp Business API",
     blurb: "Broadcasts, AI agents in 8 Indian languages, and a visual flow builder.",
   },
   quickSms: {
-    href: "/products/quick-sms",
+    href: "/products/quick-sms/",
     label: "Quick SMS",
     blurb: "Send DLT-compliant SMS from your browser without a developer.",
   },
   rcs: {
-    href: "/products/rcs",
+    href: "/products/rcs/",
     label: "RCS Business Messaging",
     blurb: "Verified, branded rich cards on Jio, Airtel, and Vi — with SMS fallback.",
   },
 
   // Solutions
   ecommerce: {
-    href: "/solutions/ecommerce",
+    href: "/solutions/ecommerce/",
     label: "E-commerce",
     blurb: "Abandoned-cart recovery, COD confirmation, and order-status loops.",
   },
   banking: {
-    href: "/solutions/banking-fintech",
+    href: "/solutions/banking-fintech/",
     label: "Banking & Fintech",
     blurb: "Low-latency OTPs, KYC nudges, and DPDPA-aligned data handling.",
   },
   healthcare: {
-    href: "/solutions/healthcare",
+    href: "/solutions/healthcare/",
     label: "Healthcare",
     blurb: "Appointment reminders, lab-report delivery, and consent-first workflows.",
   },
   education: {
-    href: "/solutions/education",
+    href: "/solutions/education/",
     label: "Education",
     blurb: "Admissions nudges, fee reminders, and attendance alerts at scale.",
   },
   logistics: {
-    href: "/solutions/logistics",
+    href: "/solutions/logistics/",
     label: "Logistics",
     blurb: "Out-for-delivery pings, rider OTPs, and COD confirmations.",
   },
   realEstate: {
-    href: "/solutions/real-estate",
+    href: "/solutions/real-estate/",
     label: "Real Estate",
     blurb: "Site-visit reminders, lead nurture, and multi-language follow-ups.",
   },
   retail: {
-    href: "/solutions/retail",
+    href: "/solutions/retail/",
     label: "Retail & Hospitality",
     blurb: "Loyalty broadcasts, reservations, and catalog-driven WhatsApp flows.",
   },
 
   // Resources / conversion
   pricing: {
-    href: "/pricing",
+    href: "/pricing/",
     label: "Pricing",
     blurb: "Volume-tier SMS, pay-as-you-go WhatsApp, and 24-month wallet validity.",
   },
   developers: {
-    href: "/developers",
+    href: "/developers/",
     label: "Developer hub",
     blurb: "REST API, SDKs in 6 languages, webhooks, and a full Postman collection.",
   },
   help: {
-    href: "/resources/help",
+    href: "/resources/help/",
     label: "Help centre",
     blurb: "DLT onboarding, WhatsApp verification, and integration guides.",
   },
   compareHub: {
-    href: "/compare",
+    href: "/compare/",
     label: "Compare SMSLocal",
     blurb: "Honest side-by-side breakdowns vs. common Indian messaging vendors.",
   },
   msg91: {
-    href: "/compare/smslocal-vs-msg91",
+    href: "/compare/smslocal-vs-msg91/",
     label: "SMSLocal vs MSG91",
     blurb: "Fifteen-row comparison of routing, pricing, WhatsApp depth, and support.",
   },
   dpdpa: {
-    href: "/legal/dpdpa",
+    href: "/legal/dpdpa/",
     label: "DPDPA notice",
     blurb: "How we handle your data under India's Digital Personal Data Protection Act.",
   },
   about: {
-    href: "/company/about",
+    href: "/company/about/",
     label: "About SMSLocal",
     blurb: "Built by engineers who were tired of paying US prices for tools built for the US.",
   },
 
   // Developer docs
   apiDocs: {
-    href: "/developers/api-docs",
+    href: "/developers/api-docs/",
     label: "API reference",
     blurb: "Every endpoint, parameter, and error code — with copy-paste cURL, Node, and Python.",
   },
   quickstart: {
-    href: "/developers/quickstart",
+    href: "/developers/quickstart/",
     label: "Quickstart",
     blurb: "From signup to your first delivered SMS in under five minutes.",
   },
   smsApi: {
-    href: "/developers/sms-api",
+    href: "/developers/sms-api/",
     label: "SMS API overview",
     blurb: "Why thousands of teams ship SMS on our API — and the snippets to start with.",
   },
   xmlApi: {
-    href: "/developers/xml-api",
+    href: "/developers/xml-api/",
     label: "XML API reference",
     blurb: "Legacy XML endpoint for teams integrating through older SMPP-style stacks.",
   },
 
   // Blog + resources
   blog: {
-    href: "/blog",
+    href: "/blog/",
     label: "SMSLocal blog",
     blurb: "Honest guides on DLT, WhatsApp, and messaging delivery — written by the team.",
   },
   blogDlt: {
-    href: "/blog/dlt-registration-guide",
+    href: "/blog/dlt-registration-guide/",
     label: "DLT registration — the practical guide",
     blurb: "Every step, every document, every rejection reason for Indian SMS registration.",
   },
@@ -499,7 +499,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       {
         title: "Continue reading",
         links: [
-          { href: "/blog/dnd-services", label: "DND services for senders", blurb: "The business side of NCPR scrubbing, send windows, and template categories." },
+          { href: "/blog/dnd-services/", label: "DND services for senders", blurb: "The business side of NCPR scrubbing, send windows, and template categories." },
           LINKS.blogDlt,
           LINKS.blog,
         ],
@@ -516,7 +516,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
         title: "Continue reading",
         links: [
           LINKS.blogDlt,
-          { href: "/blog/dnd-means", label: "DND means — the consumer side", blurb: "How your end-users activate and interact with DND — useful context for senders." },
+          { href: "/blog/dnd-means/", label: "DND means — the consumer side", blurb: "How your end-users activate and interact with DND — useful context for senders." },
           LINKS.blog,
         ],
       },
@@ -531,8 +531,8 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       {
         title: "Continue reading",
         links: [
-          { href: "/blog/dnd-means", label: "DND means — consumer guide", blurb: "The legitimate way to reduce promotional SMS without shared numbers." },
-          { href: "/blog/send-sms-online", label: "Send SMS online — the 4 ways", blurb: "Every legitimate path to send SMS online in India." },
+          { href: "/blog/dnd-means/", label: "DND means — consumer guide", blurb: "The legitimate way to reduce promotional SMS without shared numbers." },
+          { href: "/blog/send-sms-online/", label: "Send SMS online — the 4 ways", blurb: "Every legitimate path to send SMS online in India." },
           LINKS.blog,
         ],
       },
@@ -547,8 +547,8 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       {
         title: "Continue reading",
         links: [
-          { href: "/blog/gmail-password-recovery-via-sms", label: "Gmail password recovery via SMS", blurb: "What to do when recovery SMS don't arrive." },
-          { href: "/blog/send-sms-online", label: "Send SMS online — the 4 ways", blurb: "Sending SMS from a browser or app, reliably." },
+          { href: "/blog/gmail-password-recovery-via-sms/", label: "Gmail password recovery via SMS", blurb: "What to do when recovery SMS don't arrive." },
+          { href: "/blog/send-sms-online/", label: "Send SMS online — the 4 ways", blurb: "Sending SMS from a browser or app, reliably." },
           LINKS.blog,
         ],
       },
@@ -563,8 +563,8 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       {
         title: "Continue reading",
         links: [
-          { href: "/blog/sms-activation", label: "SMS not working — troubleshooting", blurb: "Every device + carrier check to get SMS flowing again." },
-          { href: "/blog/send-sms-online", label: "Send SMS online — the 4 ways", blurb: "Building a recovery-grade OTP pipeline." },
+          { href: "/blog/sms-activation/", label: "SMS not working — troubleshooting", blurb: "Every device + carrier check to get SMS flowing again." },
+          { href: "/blog/send-sms-online/", label: "Send SMS online — the 4 ways", blurb: "Building a recovery-grade OTP pipeline." },
           LINKS.blog,
         ],
       },
@@ -580,7 +580,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
         title: "Continue reading",
         links: [
           LINKS.blogDlt,
-          { href: "/blog/dnd-services", label: "DND services for senders", blurb: "Compliance rules every Indian sender has to follow." },
+          { href: "/blog/dnd-services/", label: "DND services for senders", blurb: "Compliance rules every Indian sender has to follow." },
           LINKS.blog,
         ],
       },

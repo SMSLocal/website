@@ -149,7 +149,7 @@ export default function LongSmsPage() {
             }
             subtitle="When your SMS runs past the 160-character limit, we split it into segments at the wire and your recipient sees it as a single message. Works in English, Hindi, Tamil, Bengali, Malayalam, Marathi, Kannada, Gujarati, and Telugu — with full DLT compliance."
             primaryCta={{ label: "Try it with ₹60 credit", href: "https://app.smslocal.in/signup" }}
-            secondaryCta={{ label: "See pricing", href: "/pricing" }}
+            secondaryCta={{ label: "See pricing", href: "/pricing/" }}
             trustItems={[
               "Automatic segmentation",
               "8 Indian languages",
@@ -359,37 +359,37 @@ export default function LongSmsPage() {
               {
                 industry: "Order + shipping updates",
                 use: "Merchant name, item, ETA, link, support action — 220 characters of actual signal, not fluff.",
-                href: "/solutions/ecommerce",
+                href: "/solutions/ecommerce/",
                 icon: Sparkles,
               },
               {
                 industry: "Appointment reminders",
                 use: "Clinic name, doctor, date/time, address, reschedule link. Patients show up more when every detail is in the text.",
-                href: "/solutions/healthcare",
+                href: "/solutions/healthcare/",
                 icon: Sparkles,
               },
               {
                 industry: "Banking alerts",
                 use: "Bank, transaction type, amount, merchant, balance, fraud-report action. Compliance departments mandate every field.",
-                href: "/solutions/banking-fintech",
+                href: "/solutions/banking-fintech/",
                 icon: Sparkles,
               },
               {
                 industry: "COD delivery coordination",
                 use: "Rider name, rider phone, delivery window, payment expected, package ID. Riders save time when customers know what's coming.",
-                href: "/solutions/logistics",
+                href: "/solutions/logistics/",
                 icon: Sparkles,
               },
               {
                 industry: "Event invites + RSVPs",
                 use: "Event, venue, time, dress code, RSVP deadline, contact for questions. Long-form beats five short SMS.",
-                href: "/solutions/retail",
+                href: "/solutions/retail/",
                 icon: Sparkles,
               },
               {
                 industry: "Admission + fee notices",
                 use: "Institution, fee breakup, due date, payment link, helpline. Parents don't forget when the full context is in one text.",
-                href: "/solutions/education",
+                href: "/solutions/education/",
                 icon: Sparkles,
               },
             ]}
@@ -411,14 +411,14 @@ export default function LongSmsPage() {
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <Link
-                    href="/pricing"
+                    href="/pricing/"
                     className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:brightness-110"
                   >
                     See current rates
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
-                    href="/developers/api-docs"
+                    href="/developers/api-docs/"
                     className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-medium text-foreground transition hover:bg-muted"
                   >
                     API details
@@ -516,7 +516,7 @@ export default function LongSmsPage() {
             title="Stop truncating. Send the full message."
             subtitle="Upload your template, pick your language, and let the platform handle encoding, segmentation, and DLT compliance. ₹60 free credit lets you send hundreds of long SMS to see the delivery for yourself."
             primaryCta={{ label: "Start free with ₹60 credit", href: "https://app.smslocal.in/signup" }}
-            secondaryCta={{ label: "See bulk SMS", href: "/products/bulk-sms" }}
+            secondaryCta={{ label: "See bulk SMS", href: "/products/bulk-sms/" }}
           />
         </main>
         <SiteFooter />

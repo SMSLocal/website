@@ -105,7 +105,7 @@ export function LegalDoc({
                     Home
                   </Link>
                   <ChevronRight className="h-3 w-3" />
-                  <Link href="/legal/privacy" className="hover:text-white">
+                  <Link href="/legal/privacy/" className="hover:text-white">
                     Legal
                   </Link>
                   <ChevronRight className="h-3 w-3" />

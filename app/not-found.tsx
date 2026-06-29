@@ -11,19 +11,19 @@ export const metadata: Metadata = getPageMetadata("/404")
 
 const QUICK_LINKS = [
   {
-    href: "/products",
+    href: "/products/",
     title: "Products",
     description: "SMS, WhatsApp, OTP, and AI agents — all our channels on one page.",
     icon: Send,
   },
   {
-    href: "/pricing",
+    href: "/pricing/",
     title: "Pricing",
     description: "Volume-tier SMS rates and pay-as-you-go WhatsApp pricing.",
     icon: Search,
   },
   {
-    href: "/company/contact",
+    href: "/company/contact/",
     title: "Talk to us",
     description: "Questions about onboarding, DLT, or enterprise routing? Reach our team.",
     icon: LifeBuoy,
@@ -67,7 +67,7 @@ export default function NotFound() {
                 Go home
               </Link>
               <Link
-                href="/products"
+                href="/products/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white backdrop-blur-md transition hover:bg-white/10"
               >
                 Browse products

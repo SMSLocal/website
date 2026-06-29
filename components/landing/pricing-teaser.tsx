@@ -16,7 +16,7 @@ type Tier = {
 const TIERS: Tier[] = [
   { name: "Starter", rate: 0.24, max: 16000, features: ["Unlimited validity", "Full DLT compliance", "Pay-as-you-go, no lock-in"], cta: { label: "Start Free", href: "https://app.smslocal.in/signup" } },
   { name: "Growth", rate: 0.16, max: 375000, features: ["24-month validity", "AI WhatsApp agents included", "Priority support"], cta: { label: "Start Free", href: "https://app.smslocal.in/signup" }, popular: true },
-  { name: "Enterprise", rate: 0.09, max: Number.POSITIVE_INFINITY, features: ["Dedicated account manager", "Custom routing & SLAs", "24-month validity"], cta: { label: "Talk to Sales", href: "/company/contact" } },
+  { name: "Enterprise", rate: 0.09, max: Number.POSITIVE_INFINITY, features: ["Dedicated account manager", "Custom routing & SLAs", "24-month validity"], cta: { label: "Talk to Sales", href: "/company/contact/" } },
 ]
 
 const MIN = 5000
@@ -115,7 +115,7 @@ export function PricingTeaser() {
               <a href={tier.cta.href} className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110">
                 {tier.cta.label} <ArrowRight className="h-4 w-4" />
               </a>
-              <a href="/pricing" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline">
+              <a href="/pricing/" className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary hover:underline">
                 See full pricing <ArrowRight className="h-4 w-4" />
               </a>
             </div>

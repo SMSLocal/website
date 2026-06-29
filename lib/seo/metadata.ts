@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { SITE, absoluteUrl } from "./config"
+import { SITE, absoluteUrl, withTrailingSlash } from "./config"
 
 /**
  * Input accepted by `buildMetadata`. All fields except `path` are optional;
@@ -62,7 +62,7 @@ export function buildMetadata(input: PageSeo): Metadata {
     languages,
   } = input
 
-  const canonical = path || "/"
+  const canonical = withTrailingSlash(path || "/")
   const absoluteImage = absoluteUrl(ogImage)
   const resolvedTitle = titleAbsolute ?? title ?? SITE.defaultTitle
   const finalTitle: Metadata["title"] = titleAbsolute

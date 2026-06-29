@@ -123,6 +123,9 @@ const nextConfig = {
   // Build output dir. Defaults to `.next`; override with NEXT_DIST_DIR so a
   // production build can run alongside a dev server that already locks `.next`.
   distDir: process.env.NEXT_DIST_DIR || ".next",
+  // Canonical URLs end with a trailing slash (e.g. /products/bulk-sms/).
+  // Next 308-redirects the non-slash form and emits slashed <Link> hrefs.
+  trailingSlash: true,
   typescript: {
     ignoreBuildErrors: true,
   },

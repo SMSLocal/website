@@ -160,7 +160,7 @@ export function SitemapManager({
   async function patchEntry(path: string, patch: Partial<SeoOverride>) {
     setSavingPath(path)
     try {
-      const res = await fetch("/api/dev/seo/pages", {
+      const res = await fetch("/api/dev/seo/pages/", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ path, patch }),
@@ -214,7 +214,7 @@ export function SitemapManager({
   async function loadXml() {
     setLoadingXml(true)
     try {
-      const res = await fetch("/api/dev/seo/sitemap-xml")
+      const res = await fetch("/api/dev/seo/sitemap-xml/")
       const text = await res.text()
       setXml(text)
     } catch {
@@ -233,7 +233,7 @@ export function SitemapManager({
     setPinging(true)
     setPingResults(null)
     try {
-      const res = await fetch("/api/dev/seo/ping", { method: "POST" })
+      const res = await fetch("/api/dev/seo/ping/", { method: "POST" })
       const data = (await res.json()) as { results?: PingResult[] }
       setPingResults(data.results ?? [])
     } catch {

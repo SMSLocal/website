@@ -32,7 +32,7 @@ const DATA: AgentLandingData = {
   trustLine: "Built for D2C and retail teams that sell in the chat.",
   visual: <SalesVisual />,
   primaryCta: { label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" },
-  secondaryCta: { label: "Get a demo", href: "/company/contact" },
+  secondaryCta: { label: "Get a demo", href: "/company/contact/" },
   results: [
     "Recommends from your catalog",
     "Recovers carts automatically",
@@ -106,10 +106,10 @@ const DATA: AgentLandingData = {
       "Put an agentic AI sales agent on WhatsApp and your website — recommending, answering, and guiding buyers to checkout. Start free with ₹60 credit.",
   },
   related: [
-    { label: "Explore Captain AI", href: "/products/ai-agents" },
-    { label: "How agentic AI works", href: "/products/ai-agentic" },
-    { label: "Retail & e-commerce solutions", href: "/solutions/retail" },
-    { label: "Compare platforms", href: "/compare" },
+    { label: "Explore Captain AI", href: "/products/ai-agents/" },
+    { label: "How agentic AI works", href: "/products/ai-agentic/" },
+    { label: "Retail & e-commerce solutions", href: "/solutions/retail/" },
+    { label: "Compare platforms", href: "/compare/" },
   ],
 }
 

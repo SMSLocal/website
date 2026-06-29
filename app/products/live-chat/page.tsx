@@ -103,7 +103,7 @@ export default function LiveChatPage() {
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
-                  href="/company/contact"
+                  href="/company/contact/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
                 >
                   Book a Demo
@@ -369,37 +369,37 @@ export default function LiveChatPage() {
               industry: "E-commerce",
               use: "Recover abandoned carts and answer product questions instantly",
               icon: ShoppingBag,
-              href: "/solutions/ecommerce",
+              href: "/solutions/ecommerce/",
             },
             {
               industry: "SaaS",
               use: "Convert visitors into demo requests and sales opportunities",
               icon: Sparkles,
-              href: "/solutions",
+              href: "/solutions/",
             },
             {
               industry: "Education",
               use: "Help students and manage admission inquiries in real time",
               icon: GraduationCap,
-              href: "/solutions/education",
+              href: "/solutions/education/",
             },
             {
               industry: "Healthcare",
               use: "Provide instant assistance and appointment booking support",
               icon: HeartPulse,
-              href: "/solutions/healthcare",
+              href: "/solutions/healthcare/",
             },
             {
               industry: "D2C Brands",
               use: "Build loyalty and handle post-purchase queries faster",
               icon: Building2,
-              href: "/solutions/ecommerce",
+              href: "/solutions/ecommerce/",
             },
             {
               industry: "Customer Support Teams",
               use: "Reduce ticket volume with real-time chat and AI deflection",
               icon: Users,
-              href: "/solutions",
+              href: "/solutions/",
             },
           ]}
         />
@@ -640,7 +640,7 @@ export default function LiveChatPage() {
           title="Start Chatting With Customers Today"
           subtitle="Install SMSLocal Live Chat in minutes and turn more visitors into customers. Free forever. No credit card required."
           primaryCta={{ label: "Start Free", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Book a Demo", href: "/company/contact" }}
+          secondaryCta={{ label: "Book a Demo", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

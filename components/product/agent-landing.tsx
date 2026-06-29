@@ -153,7 +153,7 @@ export function AgentLanding({ data }: { data: AgentLandingData }) {
           title={data.finalCta.title}
           subtitle={data.finalCta.subtitle}
           primaryCta={data.primaryCta}
-          secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

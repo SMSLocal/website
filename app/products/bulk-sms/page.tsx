@@ -59,7 +59,7 @@ export default function BulkSmsPage() {
           title={<>Bulk SMS that actually gets delivered</>}
           subtitle="Launch DLT-compliant bulk SMS campaigns with smart route failover, real-time delivery reports, and AI-powered routing that hits 98% delivery in under one second. Built for Indian businesses since 2019."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
           trustBar={[
             { icon: Zap, label: "98% delivery in under 1 second" },
             { icon: ShieldCheck, label: "99.99% platform uptime" },
@@ -138,7 +138,7 @@ export default function BulkSmsPage() {
               image: "/products/bulk-sms-indian-language-unicode-sms.png",
               imageAlt:
                 "Bulk SMS composer rendering regional-language messages in Hindi, Tamil and Telugu with a live Unicode character count on the SMSLocal platform.",
-              href: "/long-sms-messages",
+              href: "/long-sms-messages/",
               linkLabel: "How long SMS messages are billed",
             },
             {
@@ -167,12 +167,12 @@ export default function BulkSmsPage() {
           title="What Indian businesses send with Bulk SMS"
           subtitle="Every industry has its own delivery profile — explore the playbooks."
           items={[
-            { industry: "E-commerce", use: "Order confirmations, cart recovery, festive sales", icon: ShoppingBag, href: "/solutions/ecommerce" },
-            { industry: "Banking & Fintech", use: "Transaction alerts, account notifications", icon: Building2, href: "/solutions/banking-fintech" },
-            { industry: "Healthcare", use: "Appointment reminders, lab results, prescription refills", icon: HeartPulse, href: "/solutions/healthcare" },
-            { industry: "Education", use: "Fee reminders, results, exam schedules", icon: GraduationCap, href: "/solutions/education" },
-            { industry: "Logistics", use: "Dispatch alerts, delivery OTPs", icon: Truck, href: "/solutions/logistics" },
-            { industry: "Real Estate", use: "Listing alerts, open-house invites", icon: Home, href: "/solutions/real-estate" },
+            { industry: "E-commerce", use: "Order confirmations, cart recovery, festive sales", icon: ShoppingBag, href: "/solutions/ecommerce/" },
+            { industry: "Banking & Fintech", use: "Transaction alerts, account notifications", icon: Building2, href: "/solutions/banking-fintech/" },
+            { industry: "Healthcare", use: "Appointment reminders, lab results, prescription refills", icon: HeartPulse, href: "/solutions/healthcare/" },
+            { industry: "Education", use: "Fee reminders, results, exam schedules", icon: GraduationCap, href: "/solutions/education/" },
+            { industry: "Logistics", use: "Dispatch alerts, delivery OTPs", icon: Truck, href: "/solutions/logistics/" },
+            { industry: "Real Estate", use: "Listing alerts, open-house invites", icon: Home, href: "/solutions/real-estate/" },
           ]}
         />
 
@@ -188,7 +188,7 @@ export default function BulkSmsPage() {
             { label: "Sandbox", value: "Free mock route for integration testing" },
             { label: "Docs", value: "/developers/api-docs" },
           ]}
-          cta={{ label: "View API docs", href: "/developers/api-docs" }}
+          cta={{ label: "View API docs", href: "/developers/api-docs/" }}
         />
 
         <Faq
@@ -231,7 +231,7 @@ export default function BulkSmsPage() {
           title="Ready to send?"
           subtitle="₹60 free credit. Two-minute signup. DLT registration support included."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
         />
       </main>
       <SiteFooter />

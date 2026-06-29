@@ -1,5 +1,5 @@
 import Script from "next/script"
-import { SITE, absoluteUrl } from "@/lib/seo/config"
+import { SITE, absoluteUrl, withTrailingSlash } from "@/lib/seo/config"
 
 const SITE_URL = SITE.url
 
@@ -70,7 +70,7 @@ export function BreadcrumbJsonLd({ crumbs }: { crumbs: Crumb[] }) {
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      item: `${SITE_URL}${c.path}`,
+      item: `${SITE_URL}${withTrailingSlash(c.path)}`,
     })),
   }
   return <JsonLd id={`ld-breadcrumb-${crumbs[crumbs.length - 1]?.path ?? "root"}`} data={data} />
@@ -94,10 +94,10 @@ export function ProductServiceJsonLd({
   const data = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `${SITE_URL}${path}#service`,
+    "@id": `${SITE_URL}${withTrailingSlash(path)}#service`,
     name,
     description,
-    url: `${SITE_URL}${path}`,
+    url: `${SITE_URL}${withTrailingSlash(path)}`,
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: { "@type": "Country", name: "India" },
     category,
@@ -147,8 +147,8 @@ export function ArticleJsonLd({
   const data = {
     "@context": "https://schema.org",
     "@type": type,
-    "@id": `${SITE_URL}${path}#article`,
-    mainEntityOfPage: `${SITE_URL}${path}`,
+    "@id": `${SITE_URL}${withTrailingSlash(path)}#article`,
+    mainEntityOfPage: `${SITE_URL}${withTrailingSlash(path)}`,
     headline,
     description,
     image: image ? [absoluteUrl(image)] : [absoluteUrl(SITE.defaultOgImage)],

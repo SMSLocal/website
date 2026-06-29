@@ -249,7 +249,7 @@ export function PageSpeedDashboard({ pages }: { pages: PageSpeedPage[] }) {
     const fetchOne = async (strategy: PsiStrategy) => {
       const params = new URLSearchParams({ urls: urls.join(","), strategy })
       try {
-        const res = await fetch(`/api/dev/seo/pagespeed/list?${params}`)
+        const res = await fetch(`/api/dev/seo/pagespeed/list/?${params}`)
         if (!res.ok) return {}
         const data = await res.json()
         return (data.ok ? data.results : {}) as Record<string, PageSpeedResult>
@@ -291,7 +291,7 @@ export function PageSpeedDashboard({ pages }: { pages: PageSpeedPage[] }) {
   async function runOne(url: string, strategy: PsiStrategy) {
     patchStrategy(url, strategy, { running: true, error: null })
     try {
-      const res = await fetch("/api/dev/seo/pagespeed", {
+      const res = await fetch("/api/dev/seo/pagespeed/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url, strategy }),

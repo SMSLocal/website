@@ -20,24 +20,24 @@ export type PlaceholderRoute = {
 
 const related = {
   product: [
-    { label: "See all products", href: "/products" },
-    { label: "Pricing", href: "/pricing" },
-    { label: "Talk to sales", href: "/company/contact" },
+    { label: "See all products", href: "/products/" },
+    { label: "Pricing", href: "/pricing/" },
+    { label: "Talk to sales", href: "/company/contact/" },
   ],
   developer: [
-    { label: "API reference", href: "/developers/api-docs" },
-    { label: "Quickstart", href: "/developers/quickstart" },
-    { label: "Products overview", href: "/products" },
+    { label: "API reference", href: "/developers/api-docs/" },
+    { label: "Quickstart", href: "/developers/quickstart/" },
+    { label: "Products overview", href: "/products/" },
   ],
   resource: [
-    { label: "Blog", href: "/blog" },
-    { label: "Help centre", href: "/resources/help" },
-    { label: "Pricing", href: "/pricing" },
+    { label: "Blog", href: "/blog/" },
+    { label: "Help centre", href: "/resources/help/" },
+    { label: "Pricing", href: "/pricing/" },
   ],
   company: [
-    { label: "About", href: "/company/about" },
-    { label: "Contact", href: "/company/contact" },
-    { label: "Products", href: "/products" },
+    { label: "About", href: "/company/about/" },
+    { label: "Contact", href: "/company/contact/" },
+    { label: "Products", href: "/products/" },
   ],
 }
 

@@ -59,7 +59,7 @@ export default function WhatsAppPage() {
           title={<>WhatsApp Business API with AI agents in 8 Indian languages</>}
           subtitle="Run broadcasts, build visual chatbot flows, and let AI agents handle routine customer queries across eight Indian languages. Zero setup fee, no monthly plan — only pay for the conversations you actually have."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
           trustBar={[
             { icon: ShieldCheck, label: "Native WhatsApp BSP" },
             { icon: Languages, label: "Templates in 11 Indian languages" },
@@ -150,12 +150,12 @@ export default function WhatsAppPage() {
           eyebrow="Use cases"
           title="The conversations every Indian business needs to have on WhatsApp"
           items={[
-            { industry: "E-commerce", use: "Order confirmations, shipping updates, cart recovery by AI", icon: ShoppingBag, href: "/solutions/ecommerce" },
-            { industry: "D2C brands", use: "Launch broadcasts, Diwali sales, AI-handled returns", icon: Sparkles, href: "/solutions/ecommerce" },
-            { industry: "Banking & Fintech", use: "KYC reminders, account notifications, utility messages", icon: Building2, href: "/solutions/banking-fintech" },
-            { industry: "Education", use: "Admissions, fee reminders, parent comms in regional languages", icon: GraduationCap, href: "/solutions/education" },
-            { industry: "Healthcare", use: "Appointment reminders, prescription refills, follow-up", icon: HeartPulse, href: "/solutions/healthcare" },
-            { industry: "All industries", use: "Any team that chats with customers on WhatsApp", icon: Inbox, href: "/solutions" },
+            { industry: "E-commerce", use: "Order confirmations, shipping updates, cart recovery by AI", icon: ShoppingBag, href: "/solutions/ecommerce/" },
+            { industry: "D2C brands", use: "Launch broadcasts, Diwali sales, AI-handled returns", icon: Sparkles, href: "/solutions/ecommerce/" },
+            { industry: "Banking & Fintech", use: "KYC reminders, account notifications, utility messages", icon: Building2, href: "/solutions/banking-fintech/" },
+            { industry: "Education", use: "Admissions, fee reminders, parent comms in regional languages", icon: GraduationCap, href: "/solutions/education/" },
+            { industry: "Healthcare", use: "Appointment reminders, prescription refills, follow-up", icon: HeartPulse, href: "/solutions/healthcare/" },
+            { industry: "All industries", use: "Any team that chats with customers on WhatsApp", icon: Inbox, href: "/solutions/" },
           ]}
         />
 
@@ -170,7 +170,7 @@ export default function WhatsAppPage() {
             { label: "SDKs", value: "PHP · Java · Python · Node.js · C# · JavaScript" },
             { label: "Docs", value: "/developers/api-docs" },
           ]}
-          cta={{ label: "View API docs", href: "/developers/api-docs" }}
+          cta={{ label: "View API docs", href: "/developers/api-docs/" }}
         />
 
         <Faq
@@ -211,7 +211,7 @@ export default function WhatsAppPage() {
           title="Launch WhatsApp in 10 minutes."
           subtitle="Zero setup. Zero monthly plan. Pay only for what you send. ₹60 free credit."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
         />
       </main>
       <SiteFooter />

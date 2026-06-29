@@ -275,7 +275,7 @@ export default function CompareAiSensyPage() {
           title="See SMSLocal on your own WhatsApp number."
           subtitle="₹60 free credit, no card. Connect a number, send a real broadcast, try the AI agent on your own catalogue."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
         />
       </main>
 

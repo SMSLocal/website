@@ -266,7 +266,7 @@ export default function ApiDocsPage() {
               </li>
               <li aria-hidden>/</li>
               <li>
-                <Link href="/developers" className="hover:text-white">
+                <Link href="/developers/" className="hover:text-white">
                   Developers
                 </Link>
               </li>
@@ -301,7 +301,7 @@ export default function ApiDocsPage() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="/developers/quickstart"
+                  href="/developers/quickstart/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-4 py-2.5 text-[14px] font-semibold text-white transition hover:bg-white/[0.08]"
                 >
                   <Sparkles className="h-4 w-4" />
@@ -766,7 +766,7 @@ export default function ApiDocsPage() {
         title="Ready to send your first SMS?"
         subtitle="₹60 free credit — enough for 60 real deliveries. No credit card, full DLT support from our team."
         primaryCta={{ label: "Get your API key", href: "https://app.smslocal.in/signup" }}
-        secondaryCta={{ label: "See pricing", href: "/pricing" }}
+        secondaryCta={{ label: "See pricing", href: "/pricing/" }}
       />
 
       <SiteFooter />

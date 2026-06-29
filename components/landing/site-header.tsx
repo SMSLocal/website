@@ -65,32 +65,32 @@ const NAV: NavItem[] = [
       {
         heading: "Messaging channels",
         items: [
-          { label: "Bulk SMS", href: "/products/bulk-sms", icon: MessageSquareText, description: "DLT-compliant SMS at scale" },
-          { label: "RCS Business Messaging", href: "/products/rcs", icon: Sparkles, description: "Verified, branded rich cards — new" },
-          { label: "WhatsApp Business API", href: "/products/whatsapp-business-api", icon: MessageCircle, description: "Native BSP with no monthly plan" },
-          { label: "Email", href: "/products/email", icon: Mail, description: "Transactional & bulk email" },
-          { label: "Quick SMS", href: "/products/quick-sms", icon: Zap, description: "DND-compliant promotional blasts" },
+          { label: "Bulk SMS", href: "/products/bulk-sms/", icon: MessageSquareText, description: "DLT-compliant SMS at scale" },
+          { label: "RCS Business Messaging", href: "/products/rcs/", icon: Sparkles, description: "Verified, branded rich cards — new" },
+          { label: "WhatsApp Business API", href: "/products/whatsapp-business-api/", icon: MessageCircle, description: "Native BSP with no monthly plan" },
+          { label: "Email", href: "/products/email/", icon: Mail, description: "Transactional & bulk email" },
+          { label: "Quick SMS", href: "/products/quick-sms/", icon: Zap, description: "DND-compliant promotional blasts" },
         ],
       },
       {
         heading: "Intelligence & scale",
         items: [
-          { label: "AI Agents", href: "/products/ai-agents", icon: Sparkles, description: "Replies in 8 Indian languages" },
-          { label: "AI Agentic", href: "/products/ai-agentic", icon: Bot, description: "Autonomous multi-step AI workflows" },
-          { label: "AI Voice Receptionist", href: "/products/voice", icon: Mic, description: "Answers, routes & books calls 24/7" },
+          { label: "AI Agents", href: "/products/ai-agents/", icon: Sparkles, description: "Replies in 8 Indian languages" },
+          { label: "AI Agentic", href: "/products/ai-agentic/", icon: Bot, description: "Autonomous multi-step AI workflows" },
+          { label: "AI Voice Receptionist", href: "/products/voice/", icon: Mic, description: "Answers, routes & books calls 24/7" },
         ],
       },
       {
         heading: "Features & Capabilities",
         items: [
-          { label: "Inbox", href: "/products/inbox", icon: Inbox, description: "Unified team inbox for every channel" },
-          { label: "Automation", href: "/products/automation", icon: Workflow, description: "No-code drip & trigger flows" },
-          { label: "Integration", href: "/products/integrations", icon: Puzzle, description: "CRM, e-commerce & 100+ apps" },
-          { label: "Live Chat", href: "/products/live-chat", icon: MessageCircle, description: "Website widget with agent handoff" },
+          { label: "Inbox", href: "/products/inbox/", icon: Inbox, description: "Unified team inbox for every channel" },
+          { label: "Automation", href: "/products/automation/", icon: Workflow, description: "No-code drip & trigger flows" },
+          { label: "Integration", href: "/products/integrations/", icon: Puzzle, description: "CRM, e-commerce & 100+ apps" },
+          { label: "Live Chat", href: "/products/live-chat/", icon: MessageCircle, description: "Website widget with agent handoff" },
         ],
       },
     ],
-    footer: { label: "View all products", href: "/products" },
+    footer: { label: "View all products", href: "/products/" },
     
   },
   {
@@ -99,47 +99,47 @@ const NAV: NavItem[] = [
       {
         heading: "By industry",
         items: [
-          { label: "E-commerce & D2C", href: "/solutions/ecommerce", icon: ShoppingBag },
-          { label: "Banking & Fintech", href: "/solutions/banking-fintech", icon: Building2 },
-          { label: "Healthcare", href: "/solutions/healthcare", icon: Stethoscope },
-          { label: "Education & EdTech", href: "/solutions/education", icon: GraduationCap },
+          { label: "E-commerce & D2C", href: "/solutions/ecommerce/", icon: ShoppingBag },
+          { label: "Banking & Fintech", href: "/solutions/banking-fintech/", icon: Building2 },
+          { label: "Healthcare", href: "/solutions/healthcare/", icon: Stethoscope },
+          { label: "Education & EdTech", href: "/solutions/education/", icon: GraduationCap },
         ],
       },
       {
         heading: "More industries",
         items: [
-          { label: "Logistics & Delivery", href: "/solutions/logistics", icon: Truck },
-          { label: "Real Estate", href: "/solutions/real-estate", icon: Building2 },
-          { label: "Retail & Hospitality", href: "/solutions/retail", icon: Store },
-          { label: "Healthcare networks", href: "/solutions/healthcare", icon: HeartPulse },
+          { label: "Logistics & Delivery", href: "/solutions/logistics/", icon: Truck },
+          { label: "Real Estate", href: "/solutions/real-estate/", icon: Building2 },
+          { label: "Retail & Hospitality", href: "/solutions/retail/", icon: Store },
+          { label: "Healthcare networks", href: "/solutions/healthcare/", icon: HeartPulse },
         ],
       },
       {
         heading: "More sectors",
         items: [
-          { label: "SaaS / B2B", href: "/solutions/saas-b2b", icon: Cloud },
-          { label: "Restaurant", href: "/solutions/restaurant", icon: UtensilsCrossed },
+          { label: "SaaS / B2B", href: "/solutions/saas-b2b/", icon: Cloud },
+          { label: "Restaurant", href: "/solutions/restaurant/", icon: UtensilsCrossed },
         ],
       },
     ],
-    footer: { label: "View all industries", href: "/solutions" },
-    featured: { icon: PhoneCall, title: "Talk to our team", body: "Not sure which fits? We'll map SMSLocal to your use case.", cta: "Talk to sales", href: "/company/contact" },
+    footer: { label: "View all industries", href: "/solutions/" },
+    featured: { icon: PhoneCall, title: "Talk to our team", body: "Not sure which fits? We'll map SMSLocal to your use case.", cta: "Talk to sales", href: "/company/contact/" },
   },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Pricing", href: "/pricing/" },
   {
     label: "Developers",
     columns: [
       {
         heading: "Build",
         items: [
-          { label: "API docs", href: "/developers/api-docs", icon: Code2, description: "Full REST reference" },
-          { label: "Quickstart", href: "/developers/quickstart", icon: Zap, description: "Send your first message in 5 min" },
-          { label: "SMS API reference", href: "/developers/sms-api", icon: MessageSquare, description: "Send, status, webhooks — full spec" },
+          { label: "API docs", href: "/developers/api-docs/", icon: Code2, description: "Full REST reference" },
+          { label: "Quickstart", href: "/developers/quickstart/", icon: Zap, description: "Send your first message in 5 min" },
+          { label: "SMS API reference", href: "/developers/sms-api/", icon: MessageSquare, description: "Send, status, webhooks — full spec" },
         ],
       },
     ],
-    footer: { label: "Open developer hub", href: "/developers" },
-    featured: { icon: Zap, title: "Send in 5 minutes", body: "Live API keys on signup — start with the Quickstart.", cta: "Open Quickstart", href: "/developers/quickstart" },
+    footer: { label: "Open developer hub", href: "/developers/" },
+    featured: { icon: Zap, title: "Send in 5 minutes", body: "Live API keys on signup — start with the Quickstart.", cta: "Open Quickstart", href: "/developers/quickstart/" },
   },
   {
     label: "Resources",
@@ -147,29 +147,29 @@ const NAV: NavItem[] = [
       {
         heading: "Learn",
         items: [
-          { label: "Blog", href: "/blog", icon: FileText },
-          { label: "DLT registration guide", href: "/resources/dlt-guide", icon: BookOpen },
-          { label: "WhatsApp API guide", href: "/resources/whatsapp-api-guide", icon: BookOpen },
+          { label: "Blog", href: "/blog/", icon: FileText },
+          { label: "DLT registration guide", href: "/resources/dlt-guide/", icon: BookOpen },
+          { label: "WhatsApp API guide", href: "/resources/whatsapp-api-guide/", icon: BookOpen },
         ],
       },
       {
         heading: "Support",
         items: [
-          { label: "Help centre", href: "/resources/help", icon: LifeBuoy },
-          { label: "Glossary", href: "/resources/glossary", icon: BookOpen },
-          { label: "Tools", href: "/resources/tools", icon: Wrench },
-          { label: "Customer stories", href: "/resources/customer-stories", icon: Users },
+          { label: "Help centre", href: "/resources/help/", icon: LifeBuoy },
+          { label: "Glossary", href: "/resources/glossary/", icon: BookOpen },
+          { label: "Tools", href: "/resources/tools/", icon: Wrench },
+          { label: "Customer stories", href: "/resources/customer-stories/", icon: Users },
         ],
       },
       {
         heading: "Stay updated",
         items: [
-          { label: "Status", href: "/resources/status", icon: Activity },
-          { label: "Changelog", href: "/resources/changelog", icon: FileClock },
+          { label: "Status", href: "/resources/status/", icon: Activity },
+          { label: "Changelog", href: "/resources/changelog/", icon: FileClock },
         ],
       },
     ],
-    featured: { icon: BookOpen, title: "DLT registration guide", body: "Everything you need to get DLT-approved in India.", cta: "Read the guide", href: "/resources/dlt-guide" },
+    featured: { icon: BookOpen, title: "DLT registration guide", body: "Everything you need to get DLT-approved in India.", cta: "Read the guide", href: "/resources/dlt-guide/" },
   },
 ]
 
@@ -182,12 +182,12 @@ export function SiteHeader() {
       {/* Utility bar */}
       <div className="hidden border-b border-border text-[11px] text-muted-foreground md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-end gap-5 px-6 py-1.5">
-          <Link href="/resources/help" className="inline-flex items-center gap-1.5 hover:text-foreground">
+          <Link href="/resources/help/" className="inline-flex items-center gap-1.5 hover:text-foreground">
             <HeadphonesIcon className="h-3 w-3" />
             Support
           </Link>
           <span className="h-3 w-px bg-border" />
-          <Link href="/company/contact" className="inline-flex items-center gap-1.5 hover:text-foreground">
+          <Link href="/company/contact/" className="inline-flex items-center gap-1.5 hover:text-foreground">
             <PhoneCall className="h-3 w-3" />
             Talk to sales
           </Link>

@@ -32,7 +32,7 @@ const DATA: AgentLandingData = {
   trustLine: "Built for support teams that want resolution, not just deflection.",
   visual: <CustomerServiceVisual />,
   primaryCta: { label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" },
-  secondaryCta: { label: "Get a demo", href: "/company/contact" },
+  secondaryCta: { label: "Get a demo", href: "/company/contact/" },
   results: [
     "24/7 across 7 channels",
     "Resolves without pre-built journeys",
@@ -107,10 +107,10 @@ const DATA: AgentLandingData = {
       "Put an agentic AI customer service agent on every channel, grounded in your own data, with clean handoff to your team. Start free with ₹60 credit.",
   },
   related: [
-    { label: "Explore Captain AI", href: "/products/ai-agents" },
-    { label: "How agentic AI works", href: "/products/ai-agentic" },
-    { label: "The shared team inbox", href: "/products/inbox" },
-    { label: "Compare platforms", href: "/compare" },
+    { label: "Explore Captain AI", href: "/products/ai-agents/" },
+    { label: "How agentic AI works", href: "/products/ai-agentic/" },
+    { label: "The shared team inbox", href: "/products/inbox/" },
+    { label: "Compare platforms", href: "/compare/" },
   ],
 }
 

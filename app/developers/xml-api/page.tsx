@@ -213,7 +213,7 @@ export default function XmlApiPage() {
               </li>
               <li aria-hidden>/</li>
               <li>
-                <Link href="/developers" className="hover:text-white">
+                <Link href="/developers/" className="hover:text-white">
                   Developers
                 </Link>
               </li>
@@ -248,7 +248,7 @@ export default function XmlApiPage() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="/developers/api-docs"
+                  href="/developers/api-docs/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-4 py-2.5 text-[14px] font-semibold text-white transition hover:bg-white/[0.08]"
                 >
                   <Sparkles className="h-4 w-4" />
@@ -306,7 +306,7 @@ export default function XmlApiPage() {
                 <div className="text-[13.5px] leading-relaxed text-muted-foreground">
                   <span className="font-semibold text-foreground">New integrations</span> should
                   prefer the{" "}
-                  <Link href="/developers/api-docs" className="text-primary hover:underline">
+                  <Link href="/developers/api-docs/" className="text-primary hover:underline">
                     HTTP / REST API
                   </Link>
                   . It is easier to test, documents better, and receives new features first. XML is
@@ -702,14 +702,14 @@ export default function XmlApiPage() {
                   </p>
                   <div className="mt-4 flex flex-wrap items-center gap-3">
                     <Link
-                      href="/developers/api-docs"
+                      href="/developers/api-docs/"
                       className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-[13.5px] font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:brightness-110"
                     >
                       Read HTTP API docs
                       <ArrowRight className="h-3.5 w-3.5" />
                     </Link>
                     <Link
-                      href="/company/contact"
+                      href="/company/contact/"
                       className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-4 py-2 text-[13.5px] font-semibold text-foreground transition hover:bg-muted"
                     >
                       Talk to solutions engineering
@@ -728,7 +728,7 @@ export default function XmlApiPage() {
         title="Same API. Whichever format your stack prefers."
         subtitle="Grab a key, pick REST or XML, and start sending. \u20B960 free credit on every new account."
         primaryCta={{ label: "Sign up free", href: "https://app.smslocal.in/signup" }}
-        secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
+        secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
       />
 
       <SiteFooter />

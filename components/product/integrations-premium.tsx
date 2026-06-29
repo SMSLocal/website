@@ -478,7 +478,7 @@ function FeaturedItem({ f, i }: { f: (typeof FEATURED)[0]; i: number }) {
           <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-0.5" />
         </Link>
         <Link
-          href="/developers/api-docs"
+          href="/developers/api-docs/"
           className="inline-flex items-center rounded-full border border-border px-4 py-2 text-[12.5px] font-semibold text-foreground/60 transition hover:border-primary/40 hover:text-primary"
         >
           Docs
@@ -910,7 +910,7 @@ function DeveloperSection() {
             </p>
             <DevFeatureList />
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/developers/api-docs"
+              <Link href="/developers/api-docs/"
                 className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-lg transition hover:opacity-90"
                 style={{ boxShadow: "0 8px 24px color-mix(in oklch, var(--primary) 30%, transparent)" }}>
                 View API Docs <ArrowRight className="h-4 w-4" />
@@ -1400,7 +1400,7 @@ export function IntegrationsPremiumPage() {
                   Start Free Trial
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
                 </Link>
-                <Link href="/developers/api-docs"
+                <Link href="/developers/api-docs/"
                   className="inline-flex items-center gap-2.5 rounded-2xl border border-border bg-card px-7 py-4 text-[15px] font-semibold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md">
                   <Code2 className="h-4 w-4 text-primary" /> View API Docs
                 </Link>
@@ -1525,7 +1525,7 @@ export function IntegrationsPremiumPage() {
                   style={{ boxShadow: "0 8px 32px color-mix(in oklch, var(--primary) 40%, transparent)" }}>
                   <Zap className="h-4 w-4" /> Start Free Trial
                 </Link>
-                <Link href="/company/contact"
+                <Link href="/company/contact/"
                   className="inline-flex items-center gap-2.5 rounded-2xl border border-white/20 bg-white/8 px-7 py-4 text-[15px] font-semibold text-white backdrop-blur-sm transition hover:bg-white/12 hover:-translate-y-0.5">
                   Contact Sales <ArrowRight className="h-4 w-4" />
                 </Link>

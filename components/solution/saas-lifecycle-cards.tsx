@@ -155,7 +155,7 @@ export function SaasLifecycleCards() {
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
           <Link
-            href="/company/contact"
+            href="/company/contact/"
             className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition hover:bg-muted"
           >
             Book a demo

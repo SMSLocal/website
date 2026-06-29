@@ -32,7 +32,7 @@ const DATA: AgentLandingData = {
   trustLine: "Built for travel, hospitality, healthcare, and services teams.",
   visual: <BookingVisual />,
   primaryCta: { label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" },
-  secondaryCta: { label: "Get a demo", href: "/company/contact" },
+  secondaryCta: { label: "Get a demo", href: "/company/contact/" },
   results: [
     "Books inside the conversation",
     "Real-time availability checks",
@@ -106,10 +106,10 @@ const DATA: AgentLandingData = {
       "Let an agentic AI booking agent capture, confirm, and remind — inside the conversation, 24/7. Start free with ₹60 credit.",
   },
   related: [
-    { label: "Explore Captain AI", href: "/products/ai-agents" },
-    { label: "How agentic AI works", href: "/products/ai-agentic" },
-    { label: "Restaurant & hospitality solutions", href: "/solutions/restaurant" },
-    { label: "Compare platforms", href: "/compare" },
+    { label: "Explore Captain AI", href: "/products/ai-agents/" },
+    { label: "How agentic AI works", href: "/products/ai-agentic/" },
+    { label: "Restaurant & hospitality solutions", href: "/solutions/restaurant/" },
+    { label: "Compare platforms", href: "/compare/" },
   ],
 }
 

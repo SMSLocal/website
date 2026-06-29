@@ -111,7 +111,7 @@ export function SmsLocalForm() {
     setCaptcha((c) => ({ ...c, loading: true, error: null }))
     setCaptchaAnswer("")
     try {
-      const res = await fetch("/api/tools/free-sms/captcha", { cache: "no-store" })
+      const res = await fetch("/api/tools/free-sms/captcha/", { cache: "no-store" })
       const data = (await res.json()) as {
         question?: string
         token?: string
@@ -169,7 +169,7 @@ export function SmsLocalForm() {
 
     setStage("submitting")
     try {
-      const res = await fetch("/api/tools/free-sms/send", {
+      const res = await fetch("/api/tools/free-sms/send/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

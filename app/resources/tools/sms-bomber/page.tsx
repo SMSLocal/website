@@ -72,7 +72,7 @@ const REASONS = [
   {
     q: "“I need to test what happens when my app sends a lot of SMS.”",
     a: "Use our sandbox. SMSLocal provides free test numbers that return real delivery receipts without actually billing or touching a live subscriber. You can simulate burst traffic, retry storms, and failed routes safely.",
-    cta: { label: "Explore SMS API", href: "/developers/sms-api" },
+    cta: { label: "Explore SMS API", href: "/developers/sms-api/" },
   },
   {
     q: "“I want to prank a friend.”",
@@ -82,12 +82,12 @@ const REASONS = [
   {
     q: "“I need to send bulk SMS for my class / event / office.”",
     a: "That is exactly what DLT-registered Bulk SMS is designed for. You get an approved Sender ID, approved templates, per-recipient delivery receipts, and pay-as-you-go pricing starting at ₹0.1050 / SMS — fully legal, fully auditable.",
-    cta: { label: "See Bulk SMS", href: "/products/bulk-sms" },
+    cta: { label: "See Bulk SMS", href: "/products/bulk-sms/" },
   },
   {
     q: "“I want to teach myself the SMS protocol.”",
     a: "Read the SMPP specification, run SMPPSim locally, and use our developer sandbox for end-to-end tests on a real gateway — none of which involves sending unwanted messages to real people.",
-    cta: { label: "Read the docs", href: "/developers/api-docs" },
+    cta: { label: "Read the docs", href: "/developers/api-docs/" },
   },
 ] as const
 
@@ -144,13 +144,13 @@ export default function SmsBomberPage() {
           <nav aria-label="Breadcrumb" className="text-[12px] text-white/60">
             <ol className="flex flex-wrap items-center gap-1.5">
               <li>
-                <Link href="/resources/help" className="hover:text-white">
+                <Link href="/resources/help/" className="hover:text-white">
                   Resources
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/resources/tools" className="hover:text-white">
+                <Link href="/resources/tools/" className="hover:text-white">
                   Tools
                 </Link>
               </li>
@@ -177,13 +177,13 @@ export default function SmsBomberPage() {
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Link
-              href="/products/bulk-sms"
+              href="/products/bulk-sms/"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-[13px] font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
             >
               See the legitimate alternative <ArrowRight className="h-3.5 w-3.5" />
             </Link>
             <Link
-              href="/blog/dlt-registration-guide"
+              href="/blog/dlt-registration-guide/"
               className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-[13px] font-semibold text-white transition hover:bg-white/10"
             >
               Read the DLT guide
@@ -508,7 +508,7 @@ export default function SmsBomberPage() {
         title="Send bulk SMS the right way."
         description="DLT-registered infrastructure, ₹60 in free credits, and a team that has onboarded over 30,000 Indian businesses on compliant messaging."
         primaryCta={{ label: "Start free", href: "https://app.smslocal.in/signup" }}
-        secondaryCta={{ label: "Read DLT guide", href: "/blog/dlt-registration-guide" }}
+        secondaryCta={{ label: "Read DLT guide", href: "/blog/dlt-registration-guide/" }}
       />
       <SiteFooter />
     </>

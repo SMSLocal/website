@@ -277,7 +277,7 @@ export default function CompareMsg91Page() {
           title="See SMSLocal on your own data."
           subtitle="₹60 free credit. No credit card. Send a real SMS and a real WhatsApp template in under 5 minutes — then decide."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
         />
       </main>
 

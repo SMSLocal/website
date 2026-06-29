@@ -240,7 +240,7 @@ export function SiteAuditDashboard({ pages }: { pages: AuditPage[] }) {
       for (let i = 0; i < urls.length; i += CHUNK) {
         const slice = urls.slice(i, i + CHUNK)
         const params = new URLSearchParams({ urls: slice.join(",") })
-        const res = await fetch(`/api/dev/seo/audit/list?${params}`)
+        const res = await fetch(`/api/dev/seo/audit/list/?${params}`)
         if (!res.ok) continue
         const data = await res.json()
         if (data.ok) Object.assign(all, data.results)
@@ -262,7 +262,7 @@ export function SiteAuditDashboard({ pages }: { pages: AuditPage[] }) {
       prev.map((r) => (r.page.url === url ? { ...r, running: true, error: null } : r)),
     )
     try {
-      const res = await fetch("/api/dev/seo/audit/page", {
+      const res = await fetch("/api/dev/seo/audit/page/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ url }),

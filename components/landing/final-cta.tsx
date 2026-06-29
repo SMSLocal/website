@@ -46,7 +46,7 @@ export function FinalCta() {
                 <span aria-hidden className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               </a>
               <a
-                href="/company/contact"
+                href="/company/contact/"
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-6 py-3.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
               >
                 <Calendar className="h-4 w-4" />

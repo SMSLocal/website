@@ -19,7 +19,7 @@ const TILES: Tile[] = [
   {
     label: "Bulk SMS",
     icon: MessageSquare,
-    href: "/products/bulk-sms",
+    href: "/products/bulk-sms/",
     headline: "DLT-compliant bulk SMS, built for Indian scale",
     body: "Launch promotional and transactional campaigns on approved DLT templates. Priority routing, real-time delivery reports, and wrong-number detection on every send.",
     link: "Explore Bulk SMS",
@@ -28,7 +28,7 @@ const TILES: Tile[] = [
   {
     label: "RCS Business Messaging",
     icon: Sparkles,
-    href: "/products/rcs",
+    href: "/products/rcs/",
     headline: "Branded, verified RCS — with SMS fallback built in",
     body: "Send rich cards, carousels, suggested replies, and a verified sender badge over carrier RCS on Jio, Airtel, and Vi. Automatic fallback to DLT-compliant SMS when the handset doesn't support RCS.",
     link: "Explore RCS",
@@ -38,7 +38,7 @@ const TILES: Tile[] = [
   {
     label: "WhatsApp Business API",
     icon: MessageCircle,
-    href: "/products/whatsapp-business-api",
+    href: "/products/whatsapp-business-api/",
     headline: "Official WhatsApp BSP with shared inbox and flow builder",
     body: "Broadcasts, templates, a shared team inbox, and a visual flow builder on the official Meta API. No setup fee, no monthly plan — start with the ₹100 minimum top-up.",
     link: "Explore WhatsApp",
@@ -48,7 +48,7 @@ const TILES: Tile[] = [
   {
     label: "AI Agents",
     icon: Bot,
-    href: "/products/ai-agents",
+    href: "/products/ai-agents/",
     headline: "AI agents that deflect 40–60% of repeat WhatsApp queries",
     body: "Visual flow builder grounded on your docs and catalog. Clean escalation to a shared team inbox when the agent isn't sure. Cuts boilerplate work without ever confusing a customer.",
     link: "Explore AI Agents",
@@ -57,7 +57,7 @@ const TILES: Tile[] = [
   {
     label: "Quick SMS",
     icon: Zap,
-    href: "/products/quick-sms",
+    href: "/products/quick-sms/",
     headline: "No-code sender for ops, support, and marketing teams",
     body: "Upload a CSV, pick a DLT template, preview, and send — no developer required. Approval gates, per-workspace roles, and downloadable delivery reports.",
     link: "Explore Quick SMS",

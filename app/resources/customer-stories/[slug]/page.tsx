@@ -90,7 +90,7 @@ export default async function CustomerStoryPage({
             publisher: { "@type": "Organization", name: "SMSLocal" },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://www.smslocal.in/resources/customer-stories/${story.slug}`,
+              "@id": `https://www.smslocal.in/resources/customer-stories/${story.slug}/`,
             },
           }),
         }}
@@ -118,7 +118,7 @@ export default async function CustomerStoryPage({
                 Home
               </Link>
               <span aria-hidden>/</span>
-              <Link href="/resources/customer-stories" className="hover:text-white">
+              <Link href="/resources/customer-stories/" className="hover:text-white">
                 Customer stories
               </Link>
               <span aria-hidden>/</span>
@@ -290,7 +290,7 @@ export default async function CustomerStoryPage({
 
           <div className="mt-10">
             <Link
-              href="/resources/customer-stories"
+              href="/resources/customer-stories/"
               className="inline-flex items-center gap-2 text-[13.5px] font-semibold text-primary hover:underline"
             >
               <ArrowLeft className="h-4 w-4" />
@@ -319,7 +319,7 @@ export default async function CustomerStoryPage({
           title="Ship messaging like this team did."
           subtitle="Start with ₹60 free credit, send your first DLT-compliant SMS today, and keep the test balance forever."
           primaryCta={{ label: "Create free account", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
 

@@ -91,7 +91,7 @@ export default function RetailSolutionPage() {
           }
           subtitle="Loyalty offers, reservation confirmations, flash sales, feedback requests, and post-visit follow-up — from one dashboard."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant templates" },
             { icon: Clock, label: "Pay-as-you-go" },
@@ -167,7 +167,7 @@ export default function RetailSolutionPage() {
                 title: "Loyalty programme messaging",
                 description:
                   "Point-balance updates, earned-offer alerts, and tier-upgrade notifications — automated from your CRM or POS via API.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "WhatsApp details",
               },
               {
@@ -175,7 +175,7 @@ export default function RetailSolutionPage() {
                 title: "Reservation confirmations and reminders",
                 description:
                   "Day-before and 2-hour reminders, sent as DLT-compliant transactional SMS or WhatsApp. No-shows drop by a meaningful margin.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Transactional SMS details",
               },
               {
@@ -183,7 +183,7 @@ export default function RetailSolutionPage() {
                 title: "Flash sales and limited-time offers",
                 description:
                   "Launch a 4-hour promo in minutes from Quick SMS — no coding, no integration, just a segmented contact list and a DLT template.",
-                href: "/products/quick-sms",
+                href: "/products/quick-sms/",
                 linkLabel: "Quick SMS details",
               },
               {
@@ -191,7 +191,7 @@ export default function RetailSolutionPage() {
                 title: "Post-visit feedback with AI follow-up",
                 description:
                   "A WhatsApp survey link goes out after checkout. The AI agent follows up on negative feedback and escalates to a human manager.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "AI agent details",
               },
             ]}
@@ -240,7 +240,7 @@ export default function RetailSolutionPage() {
           title="Messaging that drives repeat visits."
           subtitle="Free trial with ₹60 credit. Loyalty, reservations, and flash sales from day one."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
         />
       </main>
 

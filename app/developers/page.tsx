@@ -32,21 +32,21 @@ const QUICKSTART_TILES = [
   {
     title: "Quickstart",
     description: "From zero to first SMS in 5 minutes. cURL, API key, and a single POST.",
-    href: "/developers/quickstart",
+    href: "/developers/quickstart/",
     icon: Zap,
     accent: "from-primary/20 to-primary/0",
   },
   {
     title: "API Reference",
     description: "Every endpoint, every parameter, every response code — with live examples.",
-    href: "/developers/api-docs",
+    href: "/developers/api-docs/",
     icon: BookOpen,
     accent: "from-sky-500/20 to-sky-500/0",
   },
   {
     title: "SMS API reference",
     description: "Deep dive on the SMS endpoint — DLT templates, sender IDs, Unicode, webhooks.",
-    href: "/developers/sms-api",
+    href: "/developers/sms-api/",
     icon: MessageSquare,
     accent: "from-amber-500/20 to-amber-500/0",
   },
@@ -158,14 +158,14 @@ export default function DevelopersPage() {
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
-                  href="/developers/quickstart"
+                  href="/developers/quickstart/"
                   className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
                 >
                   Start the quickstart
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
-                  href="/developers/api-docs"
+                  href="/developers/api-docs/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
                 >
                   API reference
@@ -341,7 +341,7 @@ export default function DevelopersPage() {
           title="The fastest path from curl to production."
           subtitle="SDKs, webhooks, signed events, idempotency, sandbox — everything your platform team will audit for, already built."
           primaryCta={{ label: "Start building — free", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs" }}
+          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs/" }}
         />
       </main>
 

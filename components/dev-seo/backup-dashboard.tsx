@@ -41,7 +41,7 @@ export function BackupDashboard() {
   const load = useCallback(async () => {
     setLoading(true)
     try {
-      const res = await fetch("/api/dev/backups", { cache: "no-store" })
+      const res = await fetch("/api/dev/backups/", { cache: "no-store" })
       const data = await res.json()
       setEnabled(Boolean(data.enabled))
       setBackups(Array.isArray(data.backups) ? data.backups : [])
@@ -60,7 +60,7 @@ export function BackupDashboard() {
     setBusy("create")
     setMsg(null)
     try {
-      const res = await fetch("/api/dev/backups", { method: "POST" })
+      const res = await fetch("/api/dev/backups/", { method: "POST" })
       const data = await res.json()
       if (data.ok) {
         setBackups(data.backups ?? [])
@@ -83,7 +83,7 @@ export function BackupDashboard() {
     setBusy(name)
     setMsg(null)
     try {
-      const res = await fetch("/api/dev/backups/restore", {
+      const res = await fetch("/api/dev/backups/restore/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name }),

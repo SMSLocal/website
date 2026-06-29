@@ -194,7 +194,7 @@ export function AnalyticsTracker() {
       identify({ userId, email, traits }) {
         if (!userId) return
         userRef.current = { userId, email }
-        fetch("/api/track/identify", {
+        fetch("/api/track/identify/", {
           method: "POST",
           credentials: "same-origin",
           headers: { "Content-Type": "application/json" },

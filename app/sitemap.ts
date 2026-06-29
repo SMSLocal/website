@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next"
 import { ALL_POSTS } from "@/lib/blog"
 import { ALL_STORIES } from "@/lib/customer-stories"
 import { HELP_CATEGORIES, getAllArticlePaths } from "@/lib/help-center"
-import { SITE } from "@/lib/seo/config"
+import { SITE, withTrailingSlash } from "@/lib/seo/config"
 import { SEO_REGISTRY } from "@/lib/seo/registry"
 import { getAllOverrides, getSettings } from "@/lib/seo/store"
 
@@ -139,7 +139,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .map((r) => {
       const ov = overrides.get(r.path)
       return {
-        url: `${SITE_URL}${r.path}`,
+        url: `${SITE_URL}${withTrailingSlash(r.path)}`,
         lastModified: r.lastModified,
         changeFrequency: (ov?.changeFrequency ?? r.defaultFreq) as ChangeFreq,
         priority: ov?.priority ?? r.defaultPriority,

@@ -50,7 +50,7 @@ export default function CustomerStoriesIndexPage() {
                 Home
               </Link>
               <span aria-hidden>/</span>
-              <Link href="/resources/help" className="hover:text-white">
+              <Link href="/resources/help/" className="hover:text-white">
                 Resources
               </Link>
               <span aria-hidden>/</span>
@@ -127,7 +127,7 @@ export default function CustomerStoriesIndexPage() {
               </p>
             </div>
             <Link
-              href="/company/contact"
+              href="/company/contact/"
               className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-[13.5px] font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90"
             >
               Talk to us
@@ -140,7 +140,7 @@ export default function CustomerStoriesIndexPage() {
           title="₹60 free credit. No credit card."
           subtitle="Open a live account, send your first DLT-compliant SMS, and keep the test balance forever."
           primaryCta={{ label: "Create free account", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs" }}
+          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs/" }}
         />
       </main>
 

@@ -94,7 +94,7 @@ const STEPS: Step[] = [
       "Register the template body of the SMS you want to send. Use {#var#} for dynamic fields.",
       "Copy the 19-digit Template ID after approval — you will pass it in every API call.",
     ],
-    cta: { label: "Full DLT walkthrough", href: "/resources/dlt-compliance" },
+    cta: { label: "Full DLT walkthrough", href: "/resources/dlt-compliance/" },
   },
   {
     number: "03",
@@ -155,7 +155,7 @@ export default function QuickstartPage() {
               </li>
               <li aria-hidden>/</li>
               <li>
-                <Link href="/developers" className="hover:text-white">
+                <Link href="/developers/" className="hover:text-white">
                   Developers
                 </Link>
               </li>
@@ -190,7 +190,7 @@ export default function QuickstartPage() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="/developers/api-docs"
+                  href="/developers/api-docs/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-4 py-2.5 text-[14px] font-semibold text-white transition hover:bg-white/[0.08]"
                 >
                   <BookOpen className="h-4 w-4" />
@@ -342,21 +342,21 @@ export default function QuickstartPage() {
                 icon: Terminal,
                 title: "Read the full API reference",
                 body: "Every endpoint, every parameter, every error code — with working cURL, Node.js, Python, and PHP samples.",
-                href: "/developers/api-docs",
+                href: "/developers/api-docs/",
                 cta: "Open API reference",
               },
               {
                 icon: FileCode2,
                 title: "Try the XML API",
                 body: "If your middleware speaks XML natively, the XML API mirrors every endpoint with clean XML payloads.",
-                href: "/developers/xml-api",
+                href: "/developers/xml-api/",
                 cta: "See XML examples",
               },
               {
                 icon: KeyRound,
                 title: "DLT compliance guide",
                 body: "Deep-dive on TRAI DLT requirements, PE registration, templates, and sender-ID approvals — the Indian SMS rulebook.",
-                href: "/resources/dlt-compliance",
+                href: "/resources/dlt-compliance/",
                 cta: "Read the guide",
               },
               {
@@ -400,7 +400,7 @@ export default function QuickstartPage() {
         title="Your first delivered SMS is one API call away."
         subtitle="Sign up, grab a key, paste the snippet. We will handle the routing, DLT scrub, and delivery report."
         primaryCta={{ label: "Start free", href: "https://app.smslocal.in/signup" }}
-        secondaryCta={{ label: "Read API docs", href: "/developers/api-docs" }}
+        secondaryCta={{ label: "Read API docs", href: "/developers/api-docs/" }}
       />
 
       <SiteFooter />

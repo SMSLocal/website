@@ -51,7 +51,7 @@ export default function VoicePage() {
           }
           subtitle="Answer inbound calls 24/7, route them to the right place, book appointments, and capture every lead — in your customers' language, without adding headcount."
           primaryCta={{ label: "Add Voice", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Book a demo", href: "/company/contact" }}
+          secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
           trustBar={[
             { icon: MapPin, label: "$5/mo local numbers" },
             { icon: PhoneCall, label: "$15/mo toll-free numbers" },

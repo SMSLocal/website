@@ -85,7 +85,7 @@ export default function RealEstateSolutionPage() {
           }
           subtitle="New listing alerts, open-house invites, buyer follow-ups, and lead nurture flows — personalised, DLT-compliant, and in the client's preferred language."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant templates" },
             { icon: Target, label: "Preference-based segmentation" },
@@ -161,7 +161,7 @@ export default function RealEstateSolutionPage() {
                 title: "Listing alerts by preference",
                 description:
                   "Segment buyers by city, budget band, and configuration. Send only the listings that actually fit — over SMS, WhatsApp, or both.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Bulk SMS details",
               },
               {
@@ -169,7 +169,7 @@ export default function RealEstateSolutionPage() {
                 title: "Open-house and site-visit invites",
                 description:
                   "Templated SMS and WhatsApp messages with a tap-through calendar invite. RSVP tracking into your CRM via webhooks.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Campaigns details",
               },
               {
@@ -177,7 +177,7 @@ export default function RealEstateSolutionPage() {
                 title: "AI WhatsApp qualification",
                 description:
                   "The AI agent asks qualification questions — budget, location, timeline — and hands hot leads to your sales team with full context.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "AI agent details",
               },
               {
@@ -185,7 +185,7 @@ export default function RealEstateSolutionPage() {
                 title: "Nurture flows over 30/60/90 days",
                 description:
                   "Scheduled WhatsApp and SMS sequences for leads who aren\u2019t ready today. Stay useful, not pushy, until they are.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "WhatsApp details",
               },
             ]}
@@ -233,7 +233,7 @@ export default function RealEstateSolutionPage() {
           title="Never let a lead go cold."
           subtitle="Start free with ₹60 credit. Qualify buyers on WhatsApp 24/7, without a monthly plan."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
         />
       </main>
 

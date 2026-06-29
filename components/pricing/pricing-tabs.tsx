@@ -115,14 +115,14 @@ function RcsComingSoon() {
       </p>
       <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
         <Link
-          href="/products/rcs"
+          href="/products/rcs/"
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
         >
           Learn about RCS
           <ArrowRight className="h-4 w-4" />
         </Link>
         <Link
-          href="/company/contact"
+          href="/company/contact/"
           className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-3 text-sm font-medium text-foreground hover:bg-muted"
         >
           Get notified at launch
@@ -235,7 +235,7 @@ function SmsPanel() {
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
-            href="/company/contact"
+            href="/company/contact/"
             className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-3 text-sm font-medium text-foreground hover:bg-muted"
           >
             Talk to Sales for volume above ₹6L
@@ -456,7 +456,7 @@ function VolumeCalculator() {
             <p className="mt-2.5 text-[12.5px] leading-relaxed text-muted-foreground">
               You&apos;re at our best per-SMS rate.{" "}
               <Link
-                href="/company/contact"
+                href="/company/contact/"
                 className="font-semibold text-foreground underline-offset-2 hover:underline"
               >
                 Talk to sales
@@ -853,7 +853,7 @@ function OtpPanel() {
 
       <div className="mt-8 flex flex-wrap gap-3">
         <Link
-          href="/developers/api-docs"
+          href="/developers/api-docs/"
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
         >
           View API docs

@@ -97,7 +97,7 @@ export default function AiAgentsPage() {
           }
           subtitle="The agent inside your support inbox. It answers in eight Indian languages from your own knowledge, takes real actions across 300+ connected apps — looking up orders, updating invoices, issuing refunds — and hands off to a human the moment a conversation needs one."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing" }}
+          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
           trustBar={[
             { icon: Languages, label: "8 Indian languages" },
             { icon: Zap, label: "Acts across 300+ apps" },
@@ -143,11 +143,11 @@ export default function AiAgentsPage() {
           />
           <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              { icon: Headphones, title: "Customer Service", body: "Deflect repetitive tickets across every channel and escalate the rest with full context.", href: "/ai-agents/customer-service", cta: "See how it works" },
-              { icon: ShoppingBag, title: "Sales", body: "Recommend products, recover carts, and guide buyers to checkout inside the conversation.", href: "/ai-agents/sales", cta: "See how it works" },
-              { icon: CalendarCheck, title: "Booking", body: "Schedule appointments inside the chat, check availability, and send automatic reminders.", href: "/ai-agents/booking", cta: "See how it works" },
-              { icon: Filter, title: "Lead Qualification", body: "Capture, qualify, score, and route hot leads to your team — synced to your CRM automatically.", href: "/ai-agents/lead-qualification", cta: "See how it works" },
-              { icon: Workflow, title: "Agent Builder", body: "Build, train, and launch AI agents visually — no code, no developers, no waiting.", href: "/ai-agents/agent-builder", cta: "Start building" },
+              { icon: Headphones, title: "Customer Service", body: "Deflect repetitive tickets across every channel and escalate the rest with full context.", href: "/ai-agents/customer-service/", cta: "See how it works" },
+              { icon: ShoppingBag, title: "Sales", body: "Recommend products, recover carts, and guide buyers to checkout inside the conversation.", href: "/ai-agents/sales/", cta: "See how it works" },
+              { icon: CalendarCheck, title: "Booking", body: "Schedule appointments inside the chat, check availability, and send automatic reminders.", href: "/ai-agents/booking/", cta: "See how it works" },
+              { icon: Filter, title: "Lead Qualification", body: "Capture, qualify, score, and route hot leads to your team — synced to your CRM automatically.", href: "/ai-agents/lead-qualification/", cta: "See how it works" },
+              { icon: Workflow, title: "Agent Builder", body: "Build, train, and launch AI agents visually — no code, no developers, no waiting.", href: "/ai-agents/agent-builder/", cta: "Start building" },
             ].map((c) => {
               const Icon = c.icon
               return (
@@ -227,10 +227,10 @@ export default function AiAgentsPage() {
             ))}
           </div>
           <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
-            <Link href="/products/ai-agentic" className="inline-flex items-center gap-2 text-[14px] font-semibold text-primary hover:underline">
+            <Link href="/products/ai-agentic/" className="inline-flex items-center gap-2 text-[14px] font-semibold text-primary hover:underline">
               Explore the full integration directory <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link href="/products/integrations" className="inline-flex items-center gap-2 text-[14px] font-semibold text-muted-foreground hover:text-primary">
+            <Link href="/products/integrations/" className="inline-flex items-center gap-2 text-[14px] font-semibold text-muted-foreground hover:text-primary">
               See all integrations <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -324,12 +324,12 @@ export default function AiAgentsPage() {
           eyebrow="Where teams put it to work"
           title="The conversations every Indian business has"
           items={[
-            { industry: "E-commerce & D2C", use: "Order status, returns, COD confirmations, refunds and cart recovery", icon: ShoppingBag, href: "/solutions/ecommerce" },
-            { industry: "Banking & Fintech", use: "Product FAQs, statement requests, KYC step-by-step in regional languages", icon: Building2, href: "/solutions/banking-fintech" },
-            { industry: "Healthcare", use: "Appointment FAQs, prep instructions, lab report pickup flows", icon: HeartPulse, href: "/solutions/healthcare" },
-            { industry: "Education & coaching", use: "Admissions, fee reminders, class timings, parent Q&A", icon: GraduationCap, href: "/solutions/education" },
-            { industry: "SaaS & B2B", use: "Triage tickets, detect churn signals, surface upsell-ready accounts", icon: Database, href: "/solutions/saas-b2b" },
-            { industry: "Any support team", use: "Replace the 'type MENU for options' flow with a real conversation", icon: Inbox, href: "/solutions" },
+            { industry: "E-commerce & D2C", use: "Order status, returns, COD confirmations, refunds and cart recovery", icon: ShoppingBag, href: "/solutions/ecommerce/" },
+            { industry: "Banking & Fintech", use: "Product FAQs, statement requests, KYC step-by-step in regional languages", icon: Building2, href: "/solutions/banking-fintech/" },
+            { industry: "Healthcare", use: "Appointment FAQs, prep instructions, lab report pickup flows", icon: HeartPulse, href: "/solutions/healthcare/" },
+            { industry: "Education & coaching", use: "Admissions, fee reminders, class timings, parent Q&A", icon: GraduationCap, href: "/solutions/education/" },
+            { industry: "SaaS & B2B", use: "Triage tickets, detect churn signals, surface upsell-ready accounts", icon: Database, href: "/solutions/saas-b2b/" },
+            { industry: "Any support team", use: "Replace the 'type MENU for options' flow with a real conversation", icon: Inbox, href: "/solutions/" },
           ]}
         />
 
@@ -367,7 +367,7 @@ export default function AiAgentsPage() {
             { label: "Auth", value: "OAuth 2.0 bearer tokens" },
             { label: "Docs", value: "/developers/api-docs" },
           ]}
-          cta={{ label: "View API docs", href: "/developers/api-docs" }}
+          cta={{ label: "View API docs", href: "/developers/api-docs/" }}
         />
 
         <FaqSection
@@ -390,7 +390,7 @@ export default function AiAgentsPage() {
           title="Put Captain AI on your support inbox today."
           subtitle="Connect your apps so it can actually resolve requests, train it on your docs in an afternoon, let it reply in eight Indian languages, and hand off to your team only when it matters."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

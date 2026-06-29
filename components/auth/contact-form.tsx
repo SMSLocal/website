@@ -36,7 +36,7 @@ export function ContactForm() {
     const payload = Object.fromEntries(data.entries())
 
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("/api/contact/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -92,7 +92,7 @@ export function ContactForm() {
             <Link href="/">Back to homepage</Link>
           </Button>
           <Button asChild variant="outline">
-            <Link href="/pricing">View pricing</Link>
+            <Link href="/pricing/">View pricing</Link>
           </Button>
         </div>
       </div>

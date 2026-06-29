@@ -196,7 +196,7 @@ export default function AiAgenticPage() {
                   Browse Integrations
                 </a>
                 <Link
-                  href="/company/contact"
+                  href="/company/contact/"
                   className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-transparent px-5 py-3 text-[14px] font-semibold text-white/70 transition hover:border-white/20 hover:text-white"
                 >
                   Book a Demo

@@ -92,7 +92,7 @@ export function AdminShell({
 
   async function signOut() {
     setSigningOut(true)
-    await fetch("/api/dev/seo/auth", {
+    await fetch("/api/dev/seo/auth/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ action: "logout" }),

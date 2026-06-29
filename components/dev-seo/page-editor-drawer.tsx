@@ -145,7 +145,7 @@ export function PageEditorDrawer({
     if (changeFrequency) patch.changeFrequency = changeFrequency as FreqValue
 
     try {
-      const res = await fetch("/api/dev/seo/pages", {
+      const res = await fetch("/api/dev/seo/pages/", {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ path: current.path, patch }),
@@ -187,7 +187,7 @@ export function PageEditorDrawer({
     setError(null)
     try {
       const res = await fetch(
-        `/api/dev/seo/pages?path=${encodeURIComponent(current.path)}`,
+        `/api/dev/seo/pages/?path=${encodeURIComponent(current.path)}`,
         { method: "DELETE" },
       )
       if (!res.ok) {

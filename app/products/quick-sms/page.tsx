@@ -66,7 +66,7 @@ export default function QuickSmsPage() {
           title="Send compliant SMS campaigns in minutes — no developers required."
           description="Upload a list, pick a DLT-registered template, preview the message, and send. Quick SMS is built for ops, marketing, and support teams who need to move fast without waiting on an engineering sprint."
           primaryCta={{ label: "Start sending free", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Book a 15-min demo", href: "/company/contact" }}
+          secondaryCta={{ label: "Book a 15-min demo", href: "/company/contact/" }}
           trustItems={[
             "No code required",
             "DLT-compliant templates",
@@ -237,7 +237,7 @@ export default function QuickSmsPage() {
             title="Send your first campaign today."
             description="Sign up for free, import a list, and send a test campaign in minutes. No credit card required to start."
             primaryCta={{ label: "Start sending free", href: "https://app.smslocal.in/signup" }}
-            secondaryCta={{ label: "Talk to our team", href: "/company/contact" }}
+            secondaryCta={{ label: "Talk to our team", href: "/company/contact/" }}
           />
         </Section>
       </main>

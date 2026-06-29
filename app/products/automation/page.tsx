@@ -140,7 +140,7 @@ export default function AutomationPage() {
           }
           subtitle="Create smart workflows, automate repetitive replies, and let AI handle customer conversations while your team focuses on the conversations that matter."
           primaryCta={{ label: "Try Lite Free", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Book a demo", href: "/company/contact" }}
+          secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
           trustBar={[
             { icon: Zap, label: "Trigger → reply in 0.4s" },
             { icon: Bot, label: "AI trained on your knowledge base" },
@@ -232,7 +232,7 @@ export default function AutomationPage() {
             ))}
           </div>
           <div className="mt-8">
-            <a href="/developers/api-docs" className="inline-flex items-center gap-2 text-[14px] font-semibold text-primary hover:underline">
+            <a href="/developers/api-docs/" className="inline-flex items-center gap-2 text-[14px] font-semibold text-primary hover:underline">
               View API docs <ArrowRight className="h-4 w-4" />
             </a>
           </div>
@@ -295,7 +295,7 @@ export default function AutomationPage() {
             title="Turn every conversation into an automated workflow."
             subtitle="Start with smart replies today and scale customer support with automation and AI."
             primaryCta={{ label: "Start Free Trial", href: "https://app.smslocal.in/signup" }}
-            secondaryCta={{ label: "Book a demo", href: "/company/contact" }}
+            secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
           />
         </div>
       </main>

@@ -79,3 +79,19 @@ export function absoluteUrl(path: string): string {
   if (path.startsWith("http")) return path
   return `${SITE.url}${path.startsWith("/") ? path : `/${path}`}`
 }
+
+/**
+ * Normalize a route path to end with a trailing slash, matching the site's
+ * `trailingSlash: true` config (so canonical URLs, the sitemap and JSON-LD all
+ * agree with the URL the browser lands on). Leaves the root, absolute URLs,
+ * query/hash strings and asset files (e.g. /og.png) untouched.
+ */
+export function withTrailingSlash(path: string): string {
+  if (!path || path === "/") return "/"
+  if (path.startsWith("http")) return path
+  const [p] = path.split(/[?#]/)
+  if (p.endsWith("/")) return path
+  const last = p.split("/").pop() ?? ""
+  if (last.includes(".")) return path // asset file — don't slash
+  return `${p}/${path.slice(p.length)}`
+}

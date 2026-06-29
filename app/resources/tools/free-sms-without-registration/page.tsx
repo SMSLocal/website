@@ -89,19 +89,19 @@ const PRODUCTS = [
     icon: MessageSquare,
     title: "Bulk SMS",
     body: "Send 1M+ SMS in minutes across India with DLT-certified Sender IDs and templates. Enterprise-grade reliability for campaigns, alerts, and notifications.",
-    href: "/products/bulk-sms",
+    href: "/products/bulk-sms/",
   },
   {
     icon: Rocket,
     title: "Quick SMS",
     body: "Get started with our onboarding guide. Reach DND and non-DND audiences for promotional and transactional campaigns — fast, flexible, low-friction.",
-    href: "/products/quick-sms",
+    href: "/products/quick-sms/",
   },
   {
     icon: KeyRound,
     title: "API SMS (OTP & Transactional)",
     body: "Integrate SMS into your app with a simple REST API. DLT-compliant, webhook DLRs, sub-3-second OTP delivery, built for enterprise-scale automation.",
-    href: "/products/otp-sms",
+    href: "/products/otp-sms/",
   },
 ] as const
 
@@ -192,13 +192,13 @@ export default function FreeSmsPage() {
           <nav aria-label="Breadcrumb" className="text-[12px] text-white/60">
             <ol className="flex flex-wrap items-center gap-1.5">
               <li>
-                <Link href="/resources/help" className="hover:text-white">
+                <Link href="/resources/help/" className="hover:text-white">
                   Resources
                 </Link>
               </li>
               <li>/</li>
               <li>
-                <Link href="/resources/tools" className="hover:text-white">
+                <Link href="/resources/tools/" className="hover:text-white">
                   Tools
                 </Link>
               </li>
@@ -232,7 +232,7 @@ export default function FreeSmsPage() {
                   Start free <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
                 <Link
-                  href="/pricing"
+                  href="/pricing/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-5 py-2.5 text-[13.5px] font-semibold text-white transition hover:bg-white/10"
                 >
                   See pricing
@@ -478,7 +478,7 @@ export default function FreeSmsPage() {
         title="Start your trial with ₹60 in free credits."
         description="Email signup, no credit card, no minimum commit. Send your first SMS today — and scale to a million when you need to."
         primaryCta={{ label: "Sign up now", href: "https://app.smslocal.in/signup" }}
-        secondaryCta={{ label: "Plans & pricing", href: "/pricing" }}
+        secondaryCta={{ label: "Plans & pricing", href: "/pricing/" }}
       />
       <SiteFooter />
     </>

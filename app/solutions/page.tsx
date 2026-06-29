@@ -149,7 +149,7 @@ export default function SolutionsHubPage() {
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="/pricing"
+                  href="/pricing/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
                 >
                   See Pricing
@@ -224,14 +224,14 @@ export default function SolutionsHubPage() {
             </div>
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/company/contact"
+                href="/company/contact/"
                 className="inline-flex items-center gap-2 rounded-lg bg-foreground px-5 py-3 text-sm font-semibold text-background transition hover:opacity-90"
               >
                 Talk to sales
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <Link
-                href="/products"
+                href="/products/"
                 className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-3 text-sm font-semibold text-foreground transition hover:bg-muted"
               >
                 Browse products

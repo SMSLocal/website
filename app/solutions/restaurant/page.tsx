@@ -151,7 +151,7 @@ export default function RestaurantSolutionPage() {
           }
           subtitle="Manage guest conversations, automate reservations, send order updates, collect reviews, and keep every customer interaction organized from one platform."
           primaryCta={{ label: "Start Free", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Book a demo", href: "/company/contact" }}
+          secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
           trustBar={[
             { icon: CalendarCheck, label: "SMS reservations" },
             { icon: Truck, label: "WhatsApp order updates" },
@@ -484,7 +484,7 @@ export default function RestaurantSolutionPage() {
           title="Give every guest a faster response."
           subtitle="Manage reservations, orders, reviews, and customer conversations from one restaurant inbox."
           primaryCta={{ label: "Start Free", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Book a demo", href: "/company/contact" }}
+          secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
         />
       </main>
 
@@ -801,7 +801,7 @@ function PriceCard({
           {featured ? <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" /> : null}
         </Link>
         <Link
-          href="/company/contact"
+          href="/company/contact/"
           className="inline-flex w-full items-center justify-center rounded-lg px-5 py-2.5 text-[13px] font-medium text-muted-foreground transition hover:text-foreground"
         >
           Book Demo

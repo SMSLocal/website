@@ -95,7 +95,7 @@ export default function BankingFintechSolutionPage() {
           }
           subtitle="OTP delivery in under a second, transaction alerts that always arrive, KYC flows that stay compliant, and WhatsApp utility messaging that respects DPDPA."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
           trustBar={[
             { icon: Zap, label: "Sub-second OTP routing" },
             { icon: ShieldCheck, label: "DLT-registered templates" },
@@ -176,7 +176,7 @@ export default function BankingFintechSolutionPage() {
                 title: "OTP API with priority route",
                 description:
                   "Dedicated infrastructure separated from promotional bulk. Automatic retry, idempotency keys, and fallback logic for failed OTPs.",
-                href: "/products/otp-sms",
+                href: "/products/otp-sms/",
                 linkLabel: "OTP API details",
               },
               {
@@ -184,7 +184,7 @@ export default function BankingFintechSolutionPage() {
                 title: "Transaction alerts over DLT-approved SMS",
                 description:
                   "Pre-registered templates for every common event — credit, debit, UPI, failed transaction, card swipe — with carrier-level audit logs.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Transactional SMS details",
               },
               {
@@ -192,7 +192,7 @@ export default function BankingFintechSolutionPage() {
                 title: "KYC and onboarding over WhatsApp",
                 description:
                   "Document upload, selfie submission, and follow-up questions — in the customer's language, with end-to-end encryption in transit.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "WhatsApp details",
               },
               {
@@ -200,7 +200,7 @@ export default function BankingFintechSolutionPage() {
                 title: "Compliance and audit layer",
                 description:
                   "DLT entity, Sender ID, and PE certificate management in the dashboard. Data residency in India. Exportable logs for regulators.",
-                href: "/pricing",
+                href: "/pricing/",
                 linkLabel: "See enterprise options",
               },
             ]}
@@ -258,7 +258,7 @@ export default function BankingFintechSolutionPage() {
           title="Built for regulated messaging."
           subtitle="Start with ₹60 free credit and priority OTP routing from day one. Talk to sales for enterprise SLAs, sub-accounts, and signed DPAs."
           primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
         />
       </main>
 
