@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { notFound } from "next/navigation"
 import { ComingSoon } from "@/components/placeholder/coming-soon"
 import { getPlaceholderForSlug, PLACEHOLDER_ROUTES } from "@/lib/placeholder-routes"
-import { buildMetadata } from "@/lib/seo"
+import { buildMetadata, getPageMetadata } from "@/lib/seo"
 
 type PageParams = { slug: string[] }
 
@@ -16,7 +16,9 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<PageParams> }): Promise<Metadata> {
   const { slug } = await params
   const route = getPlaceholderForSlug(slug)
-  if (!route) return {}
+  // Unknown URL → this renders the 404; emit the noindex "Page not found"
+  // metadata so search engines never index a soft-404.
+  if (!route) return getPageMetadata("/404")
   const path = "/" + slug.join("/")
   return buildMetadata({
     title: `${route.title} — Coming soon`,
