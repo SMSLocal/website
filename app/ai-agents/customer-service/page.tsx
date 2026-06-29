@@ -31,7 +31,7 @@ const DATA: AgentLandingData = {
     "Deflect repetitive tickets across every channel with an agent that answers from your data, completes multi-step tasks, and escalates the rest with full context — not just another deflection bot.",
   trustLine: "Built for support teams that want resolution, not just deflection.",
   visual: <CustomerServiceVisual />,
-  primaryCta: { label: "Start Free — ₹60 Credit", href: "/signup" },
+  primaryCta: { label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" },
   secondaryCta: { label: "Get a demo", href: "/company/contact" },
   results: [
     "24/7 across 7 channels",

@@ -31,7 +31,7 @@ const DATA: AgentLandingData = {
     "A visual, no-code builder to create, train, and launch agentic AI agents across every channel — grounded in your data, with logic, guardrails, and human handoff built in.",
   trustLine: "From idea to live agent in days, no developers required.",
   visual: <AgentBuilderVisual />,
-  primaryCta: { label: "Build your AI agent", href: "/signup" },
+  primaryCta: { label: "Build your AI agent", href: "https://app.smslocal.in/signup" },
   secondaryCta: { label: "Get a demo", href: "/company/contact" },
   results: [
     "No-code, point and click",

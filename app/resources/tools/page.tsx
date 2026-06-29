@@ -188,7 +188,7 @@ export default function ToolsIndexPage() {
       <ProductFinalCta
         title="Start with ₹60 in free credit."
         description="Email signup, no card, no minimum commit. Send your first SMS in under ten minutes."
-        primaryCta={{ label: "Start free", href: "/signup" }}
+        primaryCta={{ label: "Start free", href: "https://app.smslocal.in/signup" }}
         secondaryCta={{ label: "See pricing", href: "/pricing" }}
       />
       <SiteFooter />

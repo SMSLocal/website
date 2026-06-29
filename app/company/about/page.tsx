@@ -119,7 +119,7 @@ export default function AboutPage() {
 
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <Link
-                href="/signup"
+                href="https://app.smslocal.in/signup"
                 className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
               >
                 Start Free — ₹60 Credit
@@ -347,7 +347,7 @@ export default function AboutPage() {
         <ProductFinalCta
           title="See why Indian businesses pick SMSLocal."
           subtitle="₹60 free credit. No credit card. Full DLT onboarding support from our team."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See Pricing", href: "/pricing" }}
         />
       </main>

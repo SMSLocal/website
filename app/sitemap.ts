@@ -28,7 +28,7 @@ const STATIC_OVERRIDES: Record<string, { priority: number; changeFrequency: Chan
   "/developers/api-docs": { priority: 0.8, changeFrequency: "monthly" },
   "/developers/quickstart": { priority: 0.8, changeFrequency: "monthly" },
   "/company/contact": { priority: 0.7, changeFrequency: "yearly" },
-  "/signup": { priority: 0.6, changeFrequency: "yearly" },
+  "https://app.smslocal.in/signup": { priority: 0.6, changeFrequency: "yearly" },
 }
 
 function defaultFor(path: string): { priority: number; changeFrequency: ChangeFreq } {

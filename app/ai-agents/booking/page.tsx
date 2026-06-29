@@ -31,7 +31,7 @@ const DATA: AgentLandingData = {
     "Schedule appointments and reservations inside the chat — check availability, confirm on the spot, and send reminders that cut no-shows, all automatically.",
   trustLine: "Built for travel, hospitality, healthcare, and services teams.",
   visual: <BookingVisual />,
-  primaryCta: { label: "Start Free — ₹60 Credit", href: "/signup" },
+  primaryCta: { label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" },
   secondaryCta: { label: "Get a demo", href: "/company/contact" },
   results: [
     "Books inside the conversation",

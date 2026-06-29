@@ -58,7 +58,7 @@ export default function BulkSmsPage() {
           eyebrow="Bulk SMS"
           title={<>Bulk SMS that actually gets delivered</>}
           subtitle="Launch DLT-compliant bulk SMS campaigns with smart route failover, real-time delivery reports, and AI-powered routing that hits 98% delivery in under one second. Built for Indian businesses since 2019."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See pricing", href: "/pricing" }}
           trustBar={[
             { icon: Zap, label: "98% delivery in under 1 second" },
@@ -230,7 +230,7 @@ export default function BulkSmsPage() {
         <ProductFinalCta
           title="Ready to send?"
           subtitle="₹60 free credit. Two-minute signup. DLT registration support included."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See pricing", href: "/pricing" }}
         />
       </main>

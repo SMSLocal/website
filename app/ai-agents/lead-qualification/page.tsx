@@ -31,7 +31,7 @@ const DATA: AgentLandingData = {
     "Capture interest, ask the right questions, score intent, and route hot leads to the right rep — automatically, the moment a lead appears, on every channel.",
   trustLine: "Built for sales teams that lose leads to slow follow-up.",
   visual: <LeadQualificationVisual />,
-  primaryCta: { label: "Start Free — ₹60 Credit", href: "/signup" },
+  primaryCta: { label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" },
   secondaryCta: { label: "Get a demo", href: "/company/contact" },
   results: [
     "Captures leads on every channel",

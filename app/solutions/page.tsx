@@ -142,7 +142,7 @@ export default function SolutionsHubPage() {
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
-                  href="/signup"
+                  href="https://app.smslocal.in/signup"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:brightness-110"
                 >
                   Start Free — ₹60 Credit

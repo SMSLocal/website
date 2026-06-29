@@ -507,7 +507,7 @@ export default function SmsBomberPage() {
       <ProductFinalCta
         title="Send bulk SMS the right way."
         description="DLT-registered infrastructure, ₹60 in free credits, and a team that has onboarded over 30,000 Indian businesses on compliant messaging."
-        primaryCta={{ label: "Start free", href: "/signup" }}
+        primaryCta={{ label: "Start free", href: "https://app.smslocal.in/signup" }}
         secondaryCta={{ label: "Read DLT guide", href: "/blog/dlt-registration-guide" }}
       />
       <SiteFooter />

@@ -184,7 +184,7 @@ export default function AiAgenticPage() {
 
               <div className="mt-7 flex flex-wrap gap-3">
                 <Link
-                  href="/signup"
+                  href="https://app.smslocal.in/signup"
                   className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-[14px] font-bold text-primary-foreground shadow-lg shadow-primary/30 transition hover:-translate-y-0.5 hover:opacity-90"
                 >
                   Start Free <ArrowRight className="h-4 w-4" />
@@ -575,7 +575,7 @@ export default function AiAgenticPage() {
                 resolve conversations end-to-end across SMS, WhatsApp, Email and Voice.
               </p>
               <Link
-                href="/signup"
+                href="https://app.smslocal.in/signup"
                 className="mt-5 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-[14px] font-bold text-primary-foreground shadow-sm transition hover:opacity-90"
               >
                 Start Free <ArrowRight className="h-4 w-4" />

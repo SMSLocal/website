@@ -96,7 +96,7 @@ export default function LiveChatPage() {
               {/* CTAs */}
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <Link
-                  href="/signup"
+                  href="https://app.smslocal.in/signup"
                   className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition hover:brightness-110"
                 >
                   Start Free
@@ -317,7 +317,7 @@ export default function LiveChatPage() {
               </ul>
               <div className="mt-8">
                 <Link
-                  href="/signup"
+                  href="https://app.smslocal.in/signup"
                   className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:brightness-110"
                 >
                   Start Free
@@ -639,7 +639,7 @@ export default function LiveChatPage() {
         <ProductFinalCta
           title="Start Chatting With Customers Today"
           subtitle="Install SMSLocal Live Chat in minutes and turn more visitors into customers. Free forever. No credit card required."
-          primaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Start Free", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Book a Demo", href: "/company/contact" }}
         />
       </main>

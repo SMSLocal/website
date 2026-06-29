@@ -306,7 +306,7 @@ export function TestHero() {
         {/* CTAs — centered */}
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <a
-            href="/signup"
+            href="https://app.smslocal.in/signup"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
           >
             Start Free — ₹60 Credit

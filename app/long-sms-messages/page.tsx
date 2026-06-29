@@ -148,7 +148,7 @@ export default function LongSmsPage() {
               </>
             }
             subtitle="When your SMS runs past the 160-character limit, we split it into segments at the wire and your recipient sees it as a single message. Works in English, Hindi, Tamil, Bengali, Malayalam, Marathi, Kannada, Gujarati, and Telugu — with full DLT compliance."
-            primaryCta={{ label: "Try it with ₹60 credit", href: "/signup" }}
+            primaryCta={{ label: "Try it with ₹60 credit", href: "https://app.smslocal.in/signup" }}
             secondaryCta={{ label: "See pricing", href: "/pricing" }}
             trustItems={[
               "Automatic segmentation",
@@ -515,7 +515,7 @@ export default function LongSmsPage() {
           <ProductFinalCta
             title="Stop truncating. Send the full message."
             subtitle="Upload your template, pick your language, and let the platform handle encoding, segmentation, and DLT compliance. ₹60 free credit lets you send hundreds of long SMS to see the delivery for yourself."
-            primaryCta={{ label: "Start free with ₹60 credit", href: "/signup" }}
+            primaryCta={{ label: "Start free with ₹60 credit", href: "https://app.smslocal.in/signup" }}
             secondaryCta={{ label: "See bulk SMS", href: "/products/bulk-sms" }}
           />
         </main>

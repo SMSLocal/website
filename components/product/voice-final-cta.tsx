@@ -65,7 +65,7 @@ export function VoiceFinalCta() {
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3" style={reveal(240)}>
           <Link
-            href="/signup"
+            href="https://app.smslocal.in/signup"
             className="group inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110 hover:shadow-2xl hover:shadow-primary/30"
           >
             Add Voice

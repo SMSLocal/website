@@ -226,7 +226,7 @@ export default function FreeSmsPage() {
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
-                  href="/signup"
+                  href="https://app.smslocal.in/signup"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-[13.5px] font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
                 >
                   Start free <ArrowRight className="h-3.5 w-3.5" />
@@ -477,7 +477,7 @@ export default function FreeSmsPage() {
       <ProductFinalCta
         title="Start your trial with ₹60 in free credits."
         description="Email signup, no credit card, no minimum commit. Send your first SMS today — and scale to a million when you need to."
-        primaryCta={{ label: "Sign up now", href: "/signup" }}
+        primaryCta={{ label: "Sign up now", href: "https://app.smslocal.in/signup" }}
         secondaryCta={{ label: "Plans & pricing", href: "/pricing" }}
       />
       <SiteFooter />

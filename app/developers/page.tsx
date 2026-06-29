@@ -171,7 +171,7 @@ export default function DevelopersPage() {
                   API reference
                 </Link>
                 <Link
-                  href="/signup"
+                  href="https://app.smslocal.in/signup"
                   className="inline-flex items-center gap-2 rounded-lg px-4 py-2.5 text-sm text-white/70 transition hover:text-white"
                 >
                   <Sparkles className="h-4 w-4 text-primary" />
@@ -323,7 +323,7 @@ export default function DevelopersPage() {
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <Link
-                  href="/signup"
+                  href="https://app.smslocal.in/signup"
                   className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-2 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:brightness-110"
                 >
                   Get API key
@@ -340,7 +340,7 @@ export default function DevelopersPage() {
         <ProductFinalCta
           title="The fastest path from curl to production."
           subtitle="SDKs, webhooks, signed events, idempotency, sandbox — everything your platform team will audit for, already built."
-          primaryCta={{ label: "Start building — free", href: "/signup" }}
+          primaryCta={{ label: "Start building — free", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Read the docs", href: "/developers/api-docs" }}
         />
       </main>

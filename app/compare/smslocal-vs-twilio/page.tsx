@@ -278,7 +278,7 @@ export default function CompareTwilioPage() {
         <ProductFinalCta
           title="See SMSLocal on INR pricing."
           subtitle="₹60 free credit, no card, no procurement cycle. Send a real DLT SMS and a real WhatsApp template in 5 minutes — then decide."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See pricing", href: "/pricing" }}
         />
       </main>

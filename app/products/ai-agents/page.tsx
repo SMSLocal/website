@@ -96,7 +96,7 @@ export default function AiAgentsPage() {
             </>
           }
           subtitle="The agent inside your support inbox. It answers in eight Indian languages from your own knowledge, takes real actions across 300+ connected apps — looking up orders, updating invoices, issuing refunds — and hands off to a human the moment a conversation needs one."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See pricing", href: "/pricing" }}
           trustBar={[
             { icon: Languages, label: "8 Indian languages" },
@@ -389,7 +389,7 @@ export default function AiAgentsPage() {
         <ProductFinalCta
           title="Put Captain AI on your support inbox today."
           subtitle="Connect your apps so it can actually resolve requests, train it on your docs in an afternoon, let it reply in eight Indian languages, and hand off to your team only when it matters."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
         />
       </main>

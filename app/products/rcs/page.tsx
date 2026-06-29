@@ -159,7 +159,7 @@ export default function RcsPage() {
           eyebrow="RCS Business Messaging"
           title="RCS for Indian businesses — branded, verified, and with SMS always waiting to catch."
           description="Send rich cards, image carousels, and tappable suggested replies under your verified brand on Jio, Airtel, and Vi. When a handset doesn't yet support RCS, we fall back automatically to a DLT-compliant SMS on the same wallet and the same webhook. One integration, every Indian phone."
-          primaryCta={{ label: "Join RCS early access", href: "/signup" }}
+          primaryCta={{ label: "Join RCS early access", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Talk to our team", href: "/company/contact" }}
           trustItems={[
             "Verified sender badge",
@@ -558,7 +558,7 @@ export default function RcsPage() {
                       ))}
                     </ul>
                     <Link
-                      href="/signup"
+                      href="https://app.smslocal.in/signup"
                       className={`mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-[13px] font-semibold transition ${
                         featured
                           ? "bg-primary text-primary-foreground shadow-md shadow-primary/25 hover:brightness-110"
@@ -617,7 +617,7 @@ export default function RcsPage() {
           <ProductFinalCta
             title="Give your most-read inbox a real brand."
             description="Get onto the SMSLocal RCS early-access programme, ship your first branded card, and keep SMS as the safety net — on one wallet."
-            primaryCta={{ label: "Join RCS early access", href: "/signup" }}
+            primaryCta={{ label: "Join RCS early access", href: "https://app.smslocal.in/signup" }}
             secondaryCta={{ label: "Talk to our team", href: "/company/contact" }}
           />
         </Section>

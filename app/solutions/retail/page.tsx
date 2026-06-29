@@ -90,7 +90,7 @@ export default function RetailSolutionPage() {
             </>
           }
           subtitle="Loyalty offers, reservation confirmations, flash sales, feedback requests, and post-visit follow-up — from one dashboard."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See Pricing", href: "/pricing" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant templates" },
@@ -239,7 +239,7 @@ export default function RetailSolutionPage() {
         <ProductFinalCta
           title="Messaging that drives repeat visits."
           subtitle="Free trial with ₹60 credit. Loyalty, reservations, and flash sales from day one."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See Pricing", href: "/pricing" }}
         />
       </main>

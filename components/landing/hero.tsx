@@ -79,7 +79,7 @@ export function Hero() {
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
             <a
-              href="/signup"
+              href="https://app.smslocal.in/signup"
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
             >
               <span className="relative z-10">Start Free — ₹60 Credit</span>

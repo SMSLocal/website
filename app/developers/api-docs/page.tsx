@@ -294,7 +294,7 @@ export default function ApiDocsPage() {
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
-                  href="/signup"
+                  href="https://app.smslocal.in/signup"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-[14px] font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition hover:brightness-110"
                 >
                   Get your API key
@@ -385,7 +385,7 @@ export default function ApiDocsPage() {
             <p className="mt-4 max-w-3xl text-[15.5px] leading-relaxed text-muted-foreground">
               Every request must include your API key as the <code className="font-mono text-foreground">key</code>{" "}
               query parameter. Get your key from{" "}
-              <Link href="/signin" className="text-primary hover:underline">
+              <Link href="https://app.smslocal.in/" className="text-primary hover:underline">
                 Settings → API &amp; Webhooks
               </Link>{" "}
               after you sign up. Keys are 32-character hex strings.
@@ -765,7 +765,7 @@ export default function ApiDocsPage() {
       <ProductFinalCta
         title="Ready to send your first SMS?"
         subtitle="₹60 free credit — enough for 60 real deliveries. No credit card, full DLT support from our team."
-        primaryCta={{ label: "Get your API key", href: "/signup" }}
+        primaryCta={{ label: "Get your API key", href: "https://app.smslocal.in/signup" }}
         secondaryCta={{ label: "See pricing", href: "/pricing" }}
       />
 

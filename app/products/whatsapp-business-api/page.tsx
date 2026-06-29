@@ -58,7 +58,7 @@ export default function WhatsAppPage() {
           eyebrow="WhatsApp Business API"
           title={<>WhatsApp Business API with AI agents in 8 Indian languages</>}
           subtitle="Run broadcasts, build visual chatbot flows, and let AI agents handle routine customer queries across eight Indian languages. Zero setup fee, no monthly plan — only pay for the conversations you actually have."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See pricing", href: "/pricing" }}
           trustBar={[
             { icon: ShieldCheck, label: "Native WhatsApp BSP" },
@@ -210,7 +210,7 @@ export default function WhatsAppPage() {
         <ProductFinalCta
           title="Launch WhatsApp in 10 minutes."
           subtitle="Zero setup. Zero monthly plan. Pay only for what you send. ₹60 free credit."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See pricing", href: "/pricing" }}
         />
       </main>

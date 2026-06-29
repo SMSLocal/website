@@ -14,8 +14,8 @@ type Tier = {
 }
 
 const TIERS: Tier[] = [
-  { name: "Starter", rate: 0.24, max: 16000, features: ["Unlimited validity", "Full DLT compliance", "Pay-as-you-go, no lock-in"], cta: { label: "Start Free", href: "/signup" } },
-  { name: "Growth", rate: 0.16, max: 375000, features: ["24-month validity", "AI WhatsApp agents included", "Priority support"], cta: { label: "Start Free", href: "/signup" }, popular: true },
+  { name: "Starter", rate: 0.24, max: 16000, features: ["Unlimited validity", "Full DLT compliance", "Pay-as-you-go, no lock-in"], cta: { label: "Start Free", href: "https://app.smslocal.in/signup" } },
+  { name: "Growth", rate: 0.16, max: 375000, features: ["24-month validity", "AI WhatsApp agents included", "Priority support"], cta: { label: "Start Free", href: "https://app.smslocal.in/signup" }, popular: true },
   { name: "Enterprise", rate: 0.09, max: Number.POSITIVE_INFINITY, features: ["Dedicated account manager", "Custom routing & SLAs", "24-month validity"], cta: { label: "Talk to Sales", href: "/company/contact" } },
 ]
 

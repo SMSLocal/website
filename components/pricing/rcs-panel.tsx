@@ -324,7 +324,7 @@ function PlanCard({ plan }: { plan: RcsPlan }) {
         ))}
       </ul>
       <Link
-        href="/signup"
+        href="https://app.smslocal.in/signup"
         className={`mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-[13.5px] font-semibold transition ${
           featured
             ? "bg-primary text-primary-foreground shadow-md shadow-primary/25 hover:brightness-110"

@@ -38,7 +38,7 @@ export function FinalCta() {
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
-                href="/signup"
+                href="https://app.smslocal.in/signup"
                 className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
               >
                 <span className="relative z-10">Start Free — ₹60 Credit</span>

@@ -11,13 +11,11 @@ import {
   ShieldCheck,
   Star,
 } from "lucide-react"
-import { RcsPanel } from "@/components/pricing/rcs-panel"
-
 type TabKey = "sms" | "rcs" | "whatsapp" | "ai" | "otp"
 
 const TABS: { key: TabKey; label: string; icon: React.ComponentType<{ className?: string }>; badge?: string }[] = [
   { key: "sms", label: "SMS", icon: MessageSquareText },
-  { key: "rcs", label: "RCS Business Messaging", icon: Star, badge: "New" },
+  { key: "rcs", label: "RCS Business Messaging", icon: Star, badge: "Soon" },
   { key: "whatsapp", label: "WhatsApp Business API", icon: MessageCircle },
   { key: "ai", label: "AI WhatsApp Agents", icon: Bot },
   { key: "otp", label: "OTP & Transactional", icon: ShieldCheck },
@@ -89,13 +87,48 @@ export function PricingTabs() {
         {/* Panels */}
         <div className="py-14">
           {active === "sms" && <SmsPanel />}
-          {active === "rcs" && <RcsPanel />}
+          {active === "rcs" && <RcsComingSoon />}
           {active === "whatsapp" && <WhatsAppPanel />}
           {active === "ai" && <AiPanel />}
           {active === "otp" && <OtpPanel />}
         </div>
       </div>
     </section>
+  )
+}
+
+/* ---------- RCS Panel (coming soon) ---------- */
+
+function RcsComingSoon() {
+  return (
+    <div id="rcs" className="mx-auto max-w-2xl scroll-mt-32 py-10 text-center">
+      <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/5 px-3 py-1 text-[12px] font-semibold text-primary">
+        <Star className="h-3.5 w-3.5" /> Coming soon
+      </span>
+      <h2 className="mt-4 text-2xl font-semibold tracking-tight sm:text-3xl">
+        RCS Business Messaging is launching soon
+      </h2>
+      <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
+        Verified, branded rich cards with image carousels and suggested replies on Jio, Airtel and
+        Vi — with automatic DLT SMS fallback on the same wallet. Pricing will be published here at
+        launch.
+      </p>
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <Link
+          href="/products/rcs"
+          className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
+        >
+          Learn about RCS
+          <ArrowRight className="h-4 w-4" />
+        </Link>
+        <Link
+          href="/company/contact"
+          className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-3 text-sm font-medium text-foreground hover:bg-muted"
+        >
+          Get notified at launch
+        </Link>
+      </div>
+    </div>
   )
 }
 
@@ -113,13 +146,13 @@ type SmsTier = {
 }
 
 const SMS_TIERS: SmsTier[] = [
-  { tier: 1, range: "₹100 – ₹3,999", rate: "₹0.24", rateValue: 0.24, minRecharge: 100, maxRecharge: 3_999, validity: "Unlimited" },
-  { tier: 2, range: "₹4,000 – ₹7,999", rate: "₹0.20", rateValue: 0.20, minRecharge: 4_000, maxRecharge: 7_999, validity: "24 months" },
-  { tier: 3, range: "₹8,000 – ₹13,999", rate: "₹0.18", rateValue: 0.18, minRecharge: 8_000, maxRecharge: 13_999, validity: "24 months" },
-  { tier: 4, range: "₹14,000 – ₹59,999", rate: "₹0.16", rateValue: 0.16, minRecharge: 14_000, maxRecharge: 59_999, validity: "24 months" },
-  { tier: 5, range: "₹60,000 – ₹1,29,999", rate: "₹0.14", rateValue: 0.14, minRecharge: 60_000, maxRecharge: 129_999, validity: "24 months", badge: "Most popular" },
-  { tier: 6, range: "₹1,30,000 – ₹5,99,999", rate: "₹0.12", rateValue: 0.12, minRecharge: 130_000, maxRecharge: 599_999, validity: "24 months" },
-  { tier: 7, range: "₹6,00,000+", rate: "₹0.09", rateValue: 0.09, minRecharge: 600_000, maxRecharge: Number.POSITIVE_INFINITY, validity: "24 months", badge: "Best rate" },
+  { tier: 1, range: "₹100 – ₹3,999", rate: "₹0.25", rateValue: 0.25, minRecharge: 100, maxRecharge: 3_999, validity: "Unlimited" },
+  { tier: 2, range: "₹4,000 – ₹7,999", rate: "₹0.21", rateValue: 0.21, minRecharge: 4_000, maxRecharge: 7_999, validity: "24 months" },
+  { tier: 3, range: "₹8,000 – ₹13,999", rate: "₹0.19", rateValue: 0.19, minRecharge: 8_000, maxRecharge: 13_999, validity: "24 months" },
+  { tier: 4, range: "₹14,000 – ₹59,999", rate: "₹0.17", rateValue: 0.17, minRecharge: 14_000, maxRecharge: 59_999, validity: "24 months" },
+  { tier: 5, range: "₹60,000 – ₹1,29,999", rate: "₹0.15", rateValue: 0.15, minRecharge: 60_000, maxRecharge: 129_999, validity: "24 months", badge: "Most popular" },
+  { tier: 6, range: "₹1,30,000 – ₹5,99,999", rate: "₹0.13", rateValue: 0.13, minRecharge: 130_000, maxRecharge: 599_999, validity: "24 months" },
+  { tier: 7, range: "₹6,00,000+", rate: "₹0.1050", rateValue: 0.105, minRecharge: 600_000, maxRecharge: Number.POSITIVE_INFINITY, validity: "24 months", badge: "Best rate" },
 ]
 
 function SmsPanel() {
@@ -195,7 +228,7 @@ function SmsPanel() {
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
-            href="/signup"
+            href="https://app.smslocal.in/signup"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
           >
             Start Free — ₹60 Credit
@@ -434,7 +467,7 @@ function VolumeCalculator() {
         </div>
 
         <Link
-          href="/signup"
+          href="https://app.smslocal.in/signup"
           className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-[13.5px] font-semibold text-primary-foreground shadow-md shadow-primary/20 hover:brightness-110"
         >
           Start with ₹60 free credit
@@ -452,10 +485,10 @@ function VolumeCalculator() {
 /* ---------- WhatsApp Panel ---------- */
 
 const META_RATES = [
-  { type: "Marketing", rate: "₹0.8631", use: "Promotional campaigns, offers, broadcasts" },
-  { type: "Utility", rate: "₹0.1150", use: "Order updates, shipping alerts, account notifications" },
-  { type: "Authentication", rate: "₹0.1450", use: "OTPs, 2FA codes, identity verification" },
-  { type: "Service (user-initiated)", rate: "Free", use: "Replies within the 24h customer service window" },
+  { type: "Marketing", rate: "₹0.9000", use: "Promotional campaigns, offers, broadcasts" },
+  { type: "Utility", rate: "₹0.1700", use: "Order updates, shipping alerts, account notifications" },
+  { type: "Authentication", rate: "₹0.1700", use: "OTPs, 2FA codes, identity verification" },
+  { type: "Service (24h window)", rate: "₹0.0200", use: "Replies within the 24h customer service window" },
 ]
 
 const BSP_COMPARE = [
@@ -478,6 +511,34 @@ function WhatsAppPanel() {
           setup fee, and no activation fee. You load a wallet, and we deduct per message sent at
           Meta&apos;s published rate.
         </p>
+      </div>
+
+      {/* Starter plan callout */}
+      <div className="mt-8 rounded-2xl border border-primary/25 bg-primary/[0.04] p-6 shadow-sm">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-primary px-2.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-wider text-primary-foreground">
+              <Star className="h-3 w-3" /> Starter plan
+            </span>
+            <h3 className="mt-2.5 text-[18px] font-semibold tracking-tight text-foreground">
+              WhatsApp Starter — <span className="font-mono">₹499</span> one-time
+            </h3>
+            <p className="mt-1 max-w-xl text-[13.5px] leading-relaxed text-muted-foreground">
+              A one-time ₹499 gets you started on the WhatsApp Business API with the{" "}
+              <span className="font-semibold text-foreground">AI WhatsApp agent included</span>. The
+              24-hour customer service window is billed at just{" "}
+              <span className="font-semibold text-foreground font-mono">₹0.0200</span> per conversation —
+              template messages are charged at Meta&apos;s rates below.
+            </p>
+          </div>
+          <Link
+            href="https://app.smslocal.in/signup"
+            className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
+          >
+            Get the Starter plan
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
 
       <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_1fr]">
@@ -593,7 +654,7 @@ function WhatsAppPanel() {
 
       <div className="mt-8">
         <Link
-          href="/signup"
+          href="https://app.smslocal.in/signup"
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
         >
           Start WhatsApp — ₹60 Free Credit
@@ -708,7 +769,7 @@ function AiPanel() {
 
       <div className="mt-8">
         <Link
-          href="/signup"
+          href="https://app.smslocal.in/signup"
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
         >
           Launch an AI agent in 10 minutes
@@ -799,7 +860,7 @@ function OtpPanel() {
           <ArrowRight className="h-4 w-4" />
         </Link>
         <Link
-          href="/signup"
+          href="https://app.smslocal.in/signup"
           className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-3 text-sm font-medium text-foreground hover:bg-muted"
         >
           Start Free — ₹60 Credit

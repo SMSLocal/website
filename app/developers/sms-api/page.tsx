@@ -218,7 +218,7 @@ export default function SmsApiPage() {
           eyebrow="SMS API"
           title={<>Automate your business messaging with a powerful SMS API.</>}
           subtitle="Connect to the SMSLocal infrastructure and send DLT-compliant messages at scale. Developer-friendly REST and XML endpoints, comprehensive docs, and direct-operator delivery — so your customers hear from you the second it matters."
-          primaryCta={{ label: "Start with \u20B960 free credit", href: "/signup" }}
+          primaryCta={{ label: "Start with \u20B960 free credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Explore the HTTP API", href: "/developers/api-docs" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant" },
@@ -347,7 +347,7 @@ export default function SmsApiPage() {
         <ProductFinalCta
           title="Ship your first SMS in the next 15 minutes."
           subtitle="Claim \u20B960 free credit when you sign up — no credit card, no commitment. Approve a DLT template, grab an API key, and start sending."
-          primaryCta={{ label: "Sign up free", href: "/signup" }}
+          primaryCta={{ label: "Sign up free", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
         />
       </main>

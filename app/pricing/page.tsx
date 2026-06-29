@@ -123,7 +123,7 @@ export default function PricingPage() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
-                href="/signup"
+                href="https://app.smslocal.in/signup"
                 className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
               >
                 Start Free — ₹60 Credit
@@ -314,7 +314,7 @@ export default function PricingPage() {
         <ProductFinalCta
           title="Start sending in two minutes."
           subtitle="₹60 free credit. Full DLT compliance. No card. Every product included."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
         />
       </main>

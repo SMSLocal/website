@@ -276,7 +276,7 @@ export default function CompareGupshupPage() {
         <ProductFinalCta
           title="See SMSLocal without a procurement cycle."
           subtitle="₹60 free credit, no card, no enterprise call. Send a real SMS and a real WhatsApp template in 5 minutes — then decide."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See pricing", href: "/pricing" }}
         />
       </main>

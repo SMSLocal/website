@@ -78,7 +78,7 @@ export function AutomationPricing() {
 
         <div className="mt-9" style={reveal(620)}>
           <Link
-            href="/signup"
+            href="https://app.smslocal.in/signup"
             className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110 hover:shadow-2xl hover:shadow-primary/30"
           >
             Try Lite Free

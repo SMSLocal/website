@@ -318,7 +318,7 @@ export default async function CustomerStoryPage({
         <ProductFinalCta
           title="Ship messaging like this team did."
           subtitle="Start with ₹60 free credit, send your first DLT-compliant SMS today, and keep the test balance forever."
-          primaryCta={{ label: "Create free account", href: "/signup" }}
+          primaryCta={{ label: "Create free account", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
         />
       </main>

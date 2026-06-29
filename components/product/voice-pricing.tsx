@@ -158,7 +158,7 @@ export function VoicePricing() {
 
         <div className="mt-8 flex flex-col gap-3" style={reveal(800, "up")}>
           <Link
-            href="/signup"
+            href="https://app.smslocal.in/signup"
             className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
           >
             Add Voice

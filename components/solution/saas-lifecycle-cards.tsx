@@ -148,7 +148,7 @@ export function SaasLifecycleCards() {
         </p>
         <div className="mt-5 flex flex-wrap items-center gap-3 md:mt-7">
           <Link
-            href="/signup"
+            href="https://app.smslocal.in/signup"
             className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
           >
             Start Free

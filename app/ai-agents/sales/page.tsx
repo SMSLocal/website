@@ -31,7 +31,7 @@ const DATA: AgentLandingData = {
     "Recommend products, answer buyer questions, and guide customers to checkout inside the conversation — on WhatsApp, web chat, and every channel your shoppers use.",
   trustLine: "Built for D2C and retail teams that sell in the chat.",
   visual: <SalesVisual />,
-  primaryCta: { label: "Start Free — ₹60 Credit", href: "/signup" },
+  primaryCta: { label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" },
   secondaryCta: { label: "Get a demo", href: "/company/contact" },
   results: [
     "Recommends from your catalog",

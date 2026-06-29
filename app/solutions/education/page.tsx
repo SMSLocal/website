@@ -93,7 +93,7 @@ export default function EducationSolutionPage() {
             </>
           }
           subtitle="Fee reminders, exam schedules, result announcements, and day-to-day parent communication — in the language the family reads at home."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See Pricing", href: "/pricing" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-registered institution templates" },
@@ -241,7 +241,7 @@ export default function EducationSolutionPage() {
         <ProductFinalCta
           title="Communication that reaches every family."
           subtitle="Start with ₹60 free credit and DLT-compliant templates from day one."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "See Pricing", href: "/pricing" }}
         />
       </main>

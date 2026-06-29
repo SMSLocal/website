@@ -86,7 +86,7 @@ function defaultPriorityFor(e: EffectiveEntry): number {
 
 function defaultFreqFor(e: EffectiveEntry): FreqValue {
   if (e.path.startsWith("/legal/")) return "yearly"
-  if (e.path === "/signup" || e.path === "/company/contact") return "yearly"
+  if (e.path === "https://app.smslocal.in/signup" || e.path === "/company/contact") return "yearly"
   if (
     e.path === "/" ||
     e.path === "/blog" ||

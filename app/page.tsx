@@ -38,7 +38,7 @@ const HOMEPAGE_FAQS = [
   },
   {
     q: "How much does SMSLocal cost?",
-    a: "SMS pricing starts at ₹0.12 per message for transactional SMS at higher volumes. WhatsApp Business API is billed per conversation (utility, marketing, authentication, service) as per Meta's rates, with zero platform markup on the first slab. OTP SMS starts at ₹0.15 with priority routing. Every new account gets ₹60 of free credit to test on live numbers before paying.",
+    a: "SMS pricing starts at ₹0.1050 per message for transactional SMS at higher volumes (₹0.25 at the entry tier). WhatsApp Business API is billed per conversation as per Meta's marketing, utility and authentication rates, plus a ₹0.0200 service-window rate. OTP and transactional SMS follow the same volume tiers with priority routing. Every new account gets ₹60 of free credit to test on live numbers before paying.",
   },
   {
     q: "Do I need a credit card to start?",

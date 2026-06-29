@@ -81,7 +81,7 @@ export default function InboxPage() {
             </>
           }
           subtitle="Manage WhatsApp, Email, Instagram, Messenger, Telegram, SMS, Voice, and more from a single collaborative workspace — so your team replies with full context, not tab-switching."
-          primaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Start Free", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Book a demo", href: "/company/contact" }}
           trustBar={[
             { icon: MessagesSquare, label: "10+ channels in one timeline" },
@@ -160,7 +160,7 @@ export default function InboxPage() {
         {/* 6 ─ Final CTA */}
         <InboxFinalCta
           subtitle="Bring every conversation into one inbox and give your team the context they need to deliver exceptional support."
-          primaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Start Free", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Book a demo", href: "/company/contact" }}
         />
       </main>

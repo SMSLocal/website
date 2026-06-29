@@ -94,7 +94,7 @@ export default function BankingFintechSolutionPage() {
             </>
           }
           subtitle="OTP delivery in under a second, transaction alerts that always arrive, KYC flows that stay compliant, and WhatsApp utility messaging that respects DPDPA."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
           trustBar={[
             { icon: Zap, label: "Sub-second OTP routing" },
@@ -257,7 +257,7 @@ export default function BankingFintechSolutionPage() {
         <ProductFinalCta
           title="Built for regulated messaging."
           subtitle="Start with ₹60 free credit and priority OTP routing from day one. Talk to sales for enterprise SLAs, sub-accounts, and signed DPAs."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
         />
       </main>

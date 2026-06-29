@@ -132,7 +132,7 @@ export function SiteFooter() {
               </span>
             </div>
             <Link
-              href="/signup"
+              href="https://app.smslocal.in/signup"
               className="inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-[13px] font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
             >
               Start Free — ₹60 Credit

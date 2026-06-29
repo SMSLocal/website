@@ -192,7 +192,7 @@ export function SiteHeader() {
             Talk to sales
           </Link>
           <span className="h-3 w-px bg-border" />
-          <Link href="/signin" className="hover:text-foreground">
+          <Link href="https://app.smslocal.in/" className="hover:text-foreground">
             Sign in
           </Link>
           <span className="h-3 w-px bg-border" />
@@ -304,13 +304,13 @@ export function SiteHeader() {
         {/* CTA cluster */}
         <div className="flex items-center gap-2">
           <Link
-            href="/signin"
+            href="https://app.smslocal.in/"
             className="hidden rounded-md px-3 py-1.5 text-[13.5px] font-medium text-foreground/80 hover:text-foreground md:inline-flex"
           >
             Sign in
           </Link>
           <Link
-            href="/signup"
+            href="https://app.smslocal.in/signup"
             className="group relative inline-flex items-center gap-1.5 overflow-hidden rounded-md bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
           >
             <span className="relative z-10">Start Free — ₹60 Credit</span>
@@ -395,7 +395,7 @@ export function SiteHeader() {
               )
             })}
             <Link
-              href="/signin"
+              href="https://app.smslocal.in/"
               className="rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-secondary"
               onClick={() => setMobileOpen(false)}
             >

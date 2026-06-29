@@ -191,7 +191,7 @@ export default function HelpCentrePage() {
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                   </Link>
                   <Link
-                    href="/signin"
+                    href="https://app.smslocal.in/"
                     className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white"
                   >
                     <Send className="h-4 w-4" />
@@ -208,7 +208,7 @@ export default function HelpCentrePage() {
         <ProductFinalCta
           title="Documentation that tells the truth."
           subtitle="Every article is written by the engineer who owns the feature. If a doc is wrong, a human fixes it the same day."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Open developer hub", href: "/developers" }}
         />
       </main>

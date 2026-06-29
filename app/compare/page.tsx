@@ -265,7 +265,7 @@ export default function CompareHubPage() {
         <ProductFinalCta
           title="Still shortlisting? Try SMSLocal free."
           subtitle="₹60 credit, no card, no commitment. See the product on your own data before you compare anything."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "https://app.smslocal.in/signup" }}
           secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
         />
       </main>

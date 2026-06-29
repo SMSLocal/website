@@ -241,7 +241,7 @@ export default function XmlApiPage() {
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
-                  href="/signup"
+                  href="https://app.smslocal.in/signup"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-[14px] font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition hover:brightness-110"
                 >
                   Get your API key
@@ -727,7 +727,7 @@ export default function XmlApiPage() {
       <ProductFinalCta
         title="Same API. Whichever format your stack prefers."
         subtitle="Grab a key, pick REST or XML, and start sending. \u20B960 free credit on every new account."
-        primaryCta={{ label: "Sign up free", href: "/signup" }}
+        primaryCta={{ label: "Sign up free", href: "https://app.smslocal.in/signup" }}
         secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
       />
 
