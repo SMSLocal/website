@@ -146,6 +146,13 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // The free-SMS tool lives under /resources/tools; keep the short
+      // top-level slug working for old links and indexed URLs.
+      {
+        source: "/free-sms-without-registration",
+        destination: "/resources/tools/free-sms-without-registration/",
+        permanent: true,
+      },
       // The DLT guide content lives under the blog; keep the older resource
       // slug working so existing links and any indexed URLs still land.
       {
