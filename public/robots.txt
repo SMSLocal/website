@@ -9,14 +9,12 @@ User-agent: *
 Allow: /
 Disallow: /signin
 Disallow: /api/
-Disallow: /_next/
 Disallow: /dev/
 
 User-agent: Googlebot
 Allow: /
 Disallow: /signin
 Disallow: /api/
-Disallow: /_next/
 Disallow: /dev/
 
 # AI retrieval crawlers — allowed
