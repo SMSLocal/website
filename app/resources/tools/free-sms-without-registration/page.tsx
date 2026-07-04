@@ -101,7 +101,7 @@ const PRODUCTS = [
     icon: KeyRound,
     title: "API SMS (OTP & Transactional)",
     body: "Integrate SMS into your app with a simple REST API. DLT-compliant, webhook DLRs, sub-3-second OTP delivery, built for enterprise-scale automation.",
-    href: "/products/otp-sms/",
+    href: "/developers/sms-api/",
   },
 ] as const
 

@@ -194,7 +194,7 @@ export default function EducationSolutionPage() {
                 title: "Admissions and enrolment flows",
                 description:
                   "OTP verification at form start, document submission via WhatsApp, and application status updates by SMS. All auditable in one dashboard.",
-                href: "/products/otp-sms/",
+                href: "/developers/sms-api/",
                 linkLabel: "OTP API details",
               },
             ]}

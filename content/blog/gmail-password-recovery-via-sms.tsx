@@ -263,7 +263,7 @@ export default function GmailPasswordRecoveryPost() {
       <Callout variant="tip" title="For developers integrating OTP">
         Recovery SMS like Gmail&apos;s is the same category as your OTP SMS — transactional,
         time-sensitive, delivery-critical.{" "}
-        <A href="/products/otp-sms">SMSLocal OTP SMS</A> is built for exactly this pattern, with
+        <A href="/developers/sms-api/">SMSLocal OTP SMS</A> is built for exactly this pattern, with
         per-message delivery receipts and carrier-level retry. The{" "}
         <A href="/developers/api-docs">API reference</A> covers the full integration.
       </Callout>

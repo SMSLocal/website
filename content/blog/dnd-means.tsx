@@ -273,7 +273,7 @@ export default function DndMeansPost() {
         DND isn&apos;t a blocker — it&apos;s a filter. Transactional SMS (OTPs, receipts, alerts)
         still reaches every number, DND or not. Read our{" "}
         <A href="/blog/dnd-services">DND services for senders</A> guide for the business side,
-        or see how <A href="/products/otp-sms">SMSLocal OTP SMS</A> automatically handles DND
+        or see how <A href="/developers/sms-api/">SMSLocal OTP SMS</A> automatically handles DND
         scrubbing for you.
       </Callout>
     </>

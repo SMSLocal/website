@@ -176,7 +176,7 @@ export default function LogisticsSolutionPage() {
                 title: "Delivery OTPs on a priority route",
                 description:
                   "Typically 98% under 1 sec on clean DLT traffic, DND-exempt via transactional template, with automatic retry on failure.",
-                href: "/products/otp-sms/",
+                href: "/developers/sms-api/",
                 linkLabel: "OTP API details",
               },
               {

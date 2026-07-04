@@ -176,7 +176,7 @@ export default function BankingFintechSolutionPage() {
                 title: "OTP API with priority route",
                 description:
                   "Dedicated infrastructure separated from promotional bulk. Automatic retry, idempotency keys, and fallback logic for failed OTPs.",
-                href: "/products/otp-sms/",
+                href: "/developers/sms-api/",
                 linkLabel: "OTP API details",
               },
               {

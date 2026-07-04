@@ -169,7 +169,7 @@ export default function EcommerceSolutionPage() {
                 title: "Order alerts & shipping updates",
                 description:
                   "DLT-approved transactional templates for every order event. 24/7 delivery with smart route failover so updates land on time.",
-                href: "/products/otp-sms/",
+                href: "/developers/sms-api/",
                 linkLabel: "Transactional SMS details",
               },
               {
@@ -193,7 +193,7 @@ export default function EcommerceSolutionPage() {
                 title: "Login & checkout OTPs",
                 description:
                   "Priority route with 98% under 1 sec delivery on clean traffic. Automatic retry and fallback to keep conversions from dropping.",
-                href: "/products/otp-sms/",
+                href: "/developers/sms-api/",
                 linkLabel: "OTP API details",
               },
             ]}

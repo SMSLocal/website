@@ -293,7 +293,7 @@ export default function DndServicesPost() {
       <Callout variant="tip" title="Let us handle the plumbing">
         SMSLocal does NCPR scrub, send-window enforcement, category matching, and consent logging
         out of the box. See our <A href="/products/bulk-sms">Bulk SMS</A> and{" "}
-        <A href="/products/otp-sms">OTP SMS</A> products, or jump straight into the{" "}
+        <A href="/developers/sms-api/">OTP SMS</A> products, or jump straight into the{" "}
         <A href="/developers/api-docs">API reference</A>.
       </Callout>
     </>

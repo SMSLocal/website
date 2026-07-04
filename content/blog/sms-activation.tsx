@@ -263,7 +263,7 @@ export default function SmsActivationPost() {
 
       <Callout variant="tip" title="For developers integrating SMS">
         If you&apos;re building a product that sends SMS and customers are reporting non-delivery,
-        start with delivery receipts. <A href="/products/otp-sms">SMSLocal OTP SMS</A> gives you
+        start with delivery receipts. <A href="/developers/sms-api/">SMSLocal OTP SMS</A> gives you
         per-message DLR showing carrier, template match, and failure reason — so you know whether
         the issue is your side or theirs. The <A href="/developers/api-docs">API reference</A>
         covers the DLR endpoint.

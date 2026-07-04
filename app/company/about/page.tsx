@@ -59,7 +59,7 @@ const WHAT_WE_DO = [
     title: "OTP & transactional SMS",
     description:
       "Dedicated priority routes, retry logic, DLT-approved templates, and SDKs in six languages.",
-    href: "/products/otp-sms/",
+    href: "/developers/sms-api/",
     icon: ShieldCheck,
   },
   {
