@@ -6,15 +6,14 @@
  * `app/sitemap.ts` reads from this one config. Change a value here and it
  * propagates everywhere.
  *
- * The site URL falls back to the NEXT_PUBLIC_SITE_URL env var (used by
- * preview deployments) and then to the production domain.
+ * The site URL reads from NEXT_PUBLIC_SITE_URL and falls back to the
+ * production domain. NEXT_PUBLIC_VERCEL_URL is intentionally excluded
+ * because Vercel sets it to the deployment URL (e.g. xyz.vercel.app),
+ * which would produce non-canonical URLs on every deployment.
  */
 
 function resolveSiteUrl(): string {
-  const env =
-    process.env.NEXT_PUBLIC_SITE_URL?.trim() ??
-    process.env.NEXT_PUBLIC_VERCEL_URL?.trim() ??
-    ""
+  const env = process.env.NEXT_PUBLIC_SITE_URL?.trim() ?? ""
   if (env) {
     return env.startsWith("http") ? env : `https://${env}`
   }
