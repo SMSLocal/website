@@ -148,7 +148,7 @@ const NAV: NavItem[] = [
         heading: "Learn",
         items: [
           { label: "Blog", href: "/blog/", icon: FileText },
-          { label: "DLT registration guide", href: "/resources/dlt-guide/", icon: BookOpen },
+          { label: "DLT registration guide", href: "/blog/dlt-registration-guide/", icon: BookOpen },
           { label: "WhatsApp API guide", href: "/resources/whatsapp-api-guide/", icon: BookOpen },
         ],
       },
@@ -169,7 +169,7 @@ const NAV: NavItem[] = [
         ],
       },
     ],
-    featured: { icon: BookOpen, title: "DLT registration guide", body: "Everything you need to get DLT-approved in India.", cta: "Read the guide", href: "/resources/dlt-guide/" },
+    featured: { icon: BookOpen, title: "DLT registration guide", body: "Everything you need to get DLT-approved in India.", cta: "Read the guide", href: "/blog/dlt-registration-guide/" },
   },
 ]
 

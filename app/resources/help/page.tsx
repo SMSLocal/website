@@ -151,7 +151,7 @@ export default function HelpCentrePage() {
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <Link
-                  href="/resources/dlt-guide/"
+                  href="/blog/dlt-registration-guide/"
                   className="group inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
                 >
                   Open DLT guide
