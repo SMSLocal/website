@@ -840,7 +840,7 @@ export function IntegrationsStackPage() {
             More questions?{" "}
             <Link href="/company/contact/" className="font-semibold text-primary hover:underline">Talk to us</Link>{" "}
             or check the{" "}
-            <Link href="/help/" className="font-semibold text-primary hover:underline">Help Center</Link>.
+            <Link href="/resources/help/" className="font-semibold text-primary hover:underline">Help Center</Link>.
           </p>
         </div>
       </section>

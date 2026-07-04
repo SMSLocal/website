@@ -94,7 +94,7 @@ const STEPS: Step[] = [
       "Register the template body of the SMS you want to send. Use {#var#} for dynamic fields.",
       "Copy the 19-digit Template ID after approval — you will pass it in every API call.",
     ],
-    cta: { label: "Full DLT walkthrough", href: "/resources/dlt-compliance/" },
+    cta: { label: "Full DLT walkthrough", href: "/resources/help/dlt/register-principal-entity/" },
   },
   {
     number: "03",
@@ -356,7 +356,7 @@ export default function QuickstartPage() {
                 icon: KeyRound,
                 title: "DLT compliance guide",
                 body: "Deep-dive on TRAI DLT requirements, PE registration, templates, and sender-ID approvals — the Indian SMS rulebook.",
-                href: "/resources/dlt-compliance/",
+                href: "/resources/help/dlt/register-principal-entity/",
                 cta: "Read the guide",
               },
               {
