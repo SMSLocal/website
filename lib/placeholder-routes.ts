@@ -84,7 +84,7 @@ export const PLACEHOLDER_ROUTES: Record<string, PlaceholderRoute> = {
     title: "WhatsApp Business API guide",
     tagline: "From number migration to advanced flows.",
     description:
-      "Green-tick verification, template management, conversation pricing, interactive messages and AI agent patterns — everything a WhatsApp Business API team needs in one place.",
+      "Green-tick verification, template management, conversation pricing, interactive messages and AI agent patterns — all a WhatsApp Business API team needs.",
     expect: [
       "Number migration and verification steps",
       "Template categories and approval playbook",

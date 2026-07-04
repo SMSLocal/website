@@ -8,7 +8,7 @@ import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld
 export const metadata: Metadata = buildMetadata({
   titleAbsolute: "Agentic AI Customer Service Agent for Omnichannel Support | SMSLocal",
   description:
-    "Deflect and resolve repetitive tickets with an agentic AI customer service agent that answers across channels, stays grounded in your data, and hands off with context.",
+    "Deflect repetitive tickets with an AI customer service agent that answers across channels, stays grounded in your data, and hands off with full context.",
   path: "/ai-agents/customer-service",
   keywords: [
     "AI customer service agent",

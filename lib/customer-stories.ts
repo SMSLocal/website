@@ -94,7 +94,7 @@ export const ALL_STORIES: CustomerStory[] = [
     title:
       "How Nirvaana Capital cut loan-OTP delivery from nine seconds to two — and lifted approvals by 17%",
     summary:
-      "A mid-sized NBFC replaced a single-operator SMS stack with SMSLocal OTP SMS and WhatsApp fallback, and watched their application-completion rate climb by double digits in eight weeks.",
+      "A mid-sized NBFC replaced its single-operator SMS stack with SMSLocal OTP SMS and WhatsApp fallback — lifting application completions by double digits.",
     coverImage: "/customer-stories/nirvaana-capital-cover.jpg",
     coverAlt:
       "Warm-lit modern fintech office interior with polished concrete floors, minimalist wooden furniture, a large potted fiddle-leaf fig plant, and muted emerald upholstered chairs beside floor-to-ceiling windows.",
@@ -177,7 +177,7 @@ export const ALL_STORIES: CustomerStory[] = [
     title:
       "Kaveri & Co. rebuilt post-purchase on WhatsApp — and recovered 3.1x more abandoned carts",
     summary:
-      "A two-year-old D2C label moved order notifications, cart recovery, and post-purchase support onto SMSLocal’s WhatsApp Business API stack. Support load fell by 41%; recovered-cart revenue tripled.",
+      "D2C label moved order notifications, cart recovery, and post-purchase support to SMSLocal WhatsApp API. Support fell 41%; abandoned-cart revenue tripled.",
     coverImage: "/customer-stories/kaveri-co-cover.jpg",
     coverAlt:
       "Warm-lit D2C packaging station with neatly folded handwoven sarees in emerald, mustard, and rust, a kraft paper box, a roll of natural twine, fabric scissors, and a sprig of dried marigold on a wooden table.",
@@ -257,7 +257,7 @@ export const ALL_STORIES: CustomerStory[] = [
     title:
       "Srinivasa Academy ships exam-day results to 40,000 students in under 90 seconds",
     summary:
-      "A 17-year-old coaching institute moved admissions, results, and parent communications onto SMSLocal. DLT template approval time dropped from six days to fourteen hours; parent engagement on WhatsApp is now nearly 3x of SMS.",
+      "Coaching institute moved admissions, results, and parent comms onto SMSLocal. DLT approval fell from 6 days to 14 hours; WhatsApp engagement is now 3x SMS.",
     coverImage: "/customer-stories/srinivasa-academy-cover.jpg",
     coverAlt:
       "Warm golden-hour study desk scene with a brass lamp casting amber light onto closed blank notebooks, a wooden pencil case, and a small clay pot of green leaves, with a blurred empty classroom behind.",
