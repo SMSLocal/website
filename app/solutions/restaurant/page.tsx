@@ -210,7 +210,7 @@ export default function RestaurantSolutionPage() {
           <FeatureSplit
             eyebrow="Reservation automation"
             title="Fill more tables with automated reservations."
-            body="Confirm bookings the moment they come in, then send a reminder before the visit so guests show up — and you reduce no-shows without lifting a finger."
+            body={<>Confirm bookings the moment they come in, then send a reminder before the visit so guests show up — and you reduce no-shows without lifting a finger. <a href="/ai-agents/booking/" className="underline underline-offset-2">See how the AI Booking Agent works →</a></>}
             visual={<ReservationMock />}
           />
           <FeatureSplit

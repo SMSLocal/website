@@ -201,8 +201,8 @@ export default function WhatsAppPage() {
             { feature: "Pay-as-you-go wallet", cells: ["yes", "no", "no", "no", "partial"] },
           ]}
           footnote="Competitor feature sets change — re-verify tick marks before publishing."
-          ctaLabel="See the full WhatsApp comparison"
-          ctaHref="/compare/smslocal-vs-wati"
+          ctaLabel="See the full SMSLocal vs Gupshup comparison"
+          ctaHref="/compare/smslocal-vs-gupshup/"
         />
 
         <RelatedContent path="/products/whatsapp-business-api" />

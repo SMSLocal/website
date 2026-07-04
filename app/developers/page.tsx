@@ -330,6 +330,12 @@ export default function DevelopersPage() {
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
                 <span className="text-xs text-muted-foreground">₹60 free credit on first top-up</span>
+                <Link
+                  href="/compare/smslocal-vs-twilio/"
+                  className="text-xs text-muted-foreground underline-offset-2 hover:underline"
+                >
+                  Migrating from Twilio? See the comparison →
+                </Link>
               </div>
             </div>
           </div>

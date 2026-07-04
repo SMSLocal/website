@@ -177,8 +177,8 @@ export default function EcommerceSolutionPage() {
                 title: "Cart recovery with AI WhatsApp",
                 description:
                   "Train an AI agent on your catalogue. It follows up on abandoned carts, answers product questions, and closes the sale — in the language the customer shops in.",
-                href: "/products/whatsapp-business-api/",
-                linkLabel: "WhatsApp + AI details",
+                href: "/ai-agents/customer-service/",
+                linkLabel: "AI Customer Service Agent details",
               },
               {
                 icon: Sparkles,

@@ -221,8 +221,8 @@ export default function BulkSmsPage() {
             { feature: "AI agents in 8 Indian languages", cells: ["yes", "no", "no", "no"] },
           ]}
           footnote="Tick marks reflect publicly documented capabilities at time of publication and should be re-verified before launch."
-          ctaLabel="See the full Bulk SMS comparison"
-          ctaHref="/compare/smslocal-vs-msg91"
+          ctaLabel="See the full SMSLocal vs Textlocal comparison"
+          ctaHref="/compare/smslocal-vs-textlocal/"
         />
 
         <RelatedContent path="/products/bulk-sms" />

@@ -175,6 +175,30 @@ export default function SaasB2BPage() {
 
         <SaasFaq eyebrow="FAQ" title="Roles, SSO, HIPAA — straight answers." items={FAQS} />
 
+        {/* AI agent cross-links */}
+        <Section className="!py-8 sm:!py-10">
+          <div className="mx-auto max-w-3xl rounded-2xl border border-foreground/10 bg-muted/40 p-6 text-center">
+            <p className="text-sm font-medium text-foreground">Automate your pipeline with AI</p>
+            <p className="mt-1 text-[13.5px] text-muted-foreground">
+              Qualify inbound leads before they reach your team — or let customers build their own no-code agent flows.
+            </p>
+            <div className="mt-4 flex flex-wrap justify-center gap-3">
+              <Link
+                href="/ai-agents/lead-qualification/"
+                className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3.5 py-2 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:brightness-110"
+              >
+                AI Lead Qualification Agent <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+              <Link
+                href="/ai-agents/agent-builder/"
+                className="inline-flex items-center gap-1.5 rounded-lg border border-foreground/15 px-3.5 py-2 text-sm font-medium text-foreground transition hover:bg-foreground/5"
+              >
+                No-Code Agent Builder <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </div>
+          </div>
+        </Section>
+
         <RelatedContent path="/solutions/saas-b2b" />
 
         {/* Final CTA */}
