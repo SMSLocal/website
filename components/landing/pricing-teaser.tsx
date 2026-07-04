@@ -131,7 +131,7 @@ export function PricingTeaser() {
               </div>
               <p className="mt-3 text-[15px] font-semibold text-foreground">Zero setup. Zero activation. Zero monthly plan.</p>
               <p className="mt-1 text-[13.5px] leading-relaxed text-muted-foreground">Pay per message on Meta&apos;s India rate card. Start with the ₹100 minimum top-up — your first wallet shows ₹160 with the signup bonus.</p>
-              <a href="/pricing#whatsapp" className="mt-auto inline-flex items-center gap-1.5 pt-4 text-[13.5px] font-semibold text-primary hover:underline">See WhatsApp rates <ArrowRight className="h-3.5 w-3.5" /></a>
+              <a href="/pricing/#whatsapp" className="mt-auto inline-flex items-center gap-1.5 pt-4 text-[13.5px] font-semibold text-primary hover:underline">See WhatsApp rates <ArrowRight className="h-3.5 w-3.5" /></a>
             </div>
           </Reveal>
           <Reveal delay={180}>
@@ -144,7 +144,7 @@ export function PricingTeaser() {
               </div>
               <p className="mt-3 text-[15px] font-semibold text-foreground">Priced 1% below MSG91. Same Google RBM rails.</p>
               <p className="mt-1 text-[13.5px] leading-relaxed text-muted-foreground">Verified, branded rich cards on Jio, Airtel, Vi — with automatic DLT SMS fallback. From ₹0.1188 basic text · ₹0.1386 rich card.</p>
-              <a href="/pricing#rcs" className="mt-auto inline-flex items-center gap-1.5 pt-4 text-[13.5px] font-semibold text-primary hover:underline">See RCS rates &amp; cost calculator <ArrowRight className="h-3.5 w-3.5" /></a>
+              <a href="/pricing/#rcs" className="mt-auto inline-flex items-center gap-1.5 pt-4 text-[13.5px] font-semibold text-primary hover:underline">See RCS rates &amp; cost calculator <ArrowRight className="h-3.5 w-3.5" /></a>
             </div>
           </Reveal>
         </div>

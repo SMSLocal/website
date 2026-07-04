@@ -73,7 +73,7 @@ export default function WhatsAppMarketingPost() {
       <H2 id="official-vs-unofficial">Official API vs. unofficial tools</H2>
       <P>
         Before anything else: the only safe way to do WhatsApp marketing at scale is through the
-        official <A href="/products/whatsapp-business-api">WhatsApp Business Platform API</A>,
+        official <A href="/products/whatsapp-business-api/">WhatsApp Business Platform API</A>,
         accessed through a Meta-approved Business Solution Provider (BSP).
       </P>
       <P>
@@ -112,7 +112,7 @@ export default function WhatsAppMarketingPost() {
       <P>
         Two-way conversations where your business engages prospects individually — Click-to-WhatsApp
         ads, WhatsApp widgets on your site, and QR codes on packaging that start a chat. A
-        well-configured <A href="/products/ai-agents">AI agent</A> handles the conversation,
+        well-configured <A href="/products/ai-agents/">AI agent</A> handles the conversation,
         qualifies the lead, and either converts directly or hands off to a human agent.{" "}
         <Strong>Best for:</Strong> high-consideration purchases (real estate, insurance, financial
         products, B2B SaaS) where a conversation dramatically outperforms a landing page.
@@ -226,7 +226,7 @@ export default function WhatsAppMarketingPost() {
       </P>
       <H3>Do I need DLT registration for WhatsApp marketing in India?</H3>
       <P>
-        No. <A href="/blog/dlt-registration-guide">DLT registration</A> is a TRAI requirement for SMS,
+        No. <A href="/blog/dlt-registration-guide/">DLT registration</A> is a TRAI requirement for SMS,
         not WhatsApp. WhatsApp is governed by Meta&rsquo;s own Business Policy — you don&rsquo;t need a
         DLT sender ID, header, or template. You do need explicit opt-in consent, a verified WhatsApp
         Business Account, and approved templates.
@@ -237,7 +237,7 @@ export default function WhatsAppMarketingPost() {
         — how you send the same template to thousands of opted-in contacts at once. WhatsApp marketing
         is the wider strategy around it: list building, segmentation, CTWA ads, conversation flows, and
         measurement. See our full guide to{" "}
-        <A href="/blog/bulk-whatsapp-messaging">bulk WhatsApp messaging</A> for the sending side.
+        <A href="/blog/bulk-whatsapp-messaging/">bulk WhatsApp messaging</A> for the sending side.
       </P>
       <H3>Can WhatsApp marketing work for B2B?</H3>
       <P>
@@ -256,7 +256,7 @@ export default function WhatsAppMarketingPost() {
       <Callout variant="tip" title="Run WhatsApp marketing the right way">
         SMSLocal sets up your WhatsApp Business API, manages template approvals, runs your broadcasts,
         and handles every reply with AI — so you can start your Click-to-WhatsApp ads and turn
-        conversations into customers. <A href="/signup">Start free with ₹60 credit</A>.
+        conversations into customers. <A href="/signup/">Start free with ₹60 credit</A>.
       </Callout>
     </>
   )

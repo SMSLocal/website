@@ -505,7 +505,7 @@ export default function RcsPage() {
                 </p>
               </div>
               <Link
-                href="/pricing#rcs"
+                href="/pricing/#rcs"
                 className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-primary underline-offset-2 hover:underline"
               >
                 See full rate card

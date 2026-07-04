@@ -27,7 +27,7 @@ export default function DndMeansPost() {
 
       <Callout variant="info" title="Written for consumers, not marketers">
         If you&apos;re a business trying to figure out how DND affects your SMS campaigns, read our
-        companion guide on <A href="/blog/dnd-services">DND services for senders</A>. This post is
+        companion guide on <A href="/blog/dnd-services/">DND services for senders</A>. This post is
         written for anyone receiving SMS in India.
       </Callout>
 
@@ -272,7 +272,7 @@ export default function DndMeansPost() {
       <Callout variant="tip" title="Running a business?">
         DND isn&apos;t a blocker — it&apos;s a filter. Transactional SMS (OTPs, receipts, alerts)
         still reaches every number, DND or not. Read our{" "}
-        <A href="/blog/dnd-services">DND services for senders</A> guide for the business side,
+        <A href="/blog/dnd-services/">DND services for senders</A> guide for the business side,
         or see how <A href="/developers/sms-api/">SMSLocal OTP SMS</A> automatically handles DND
         scrubbing for you.
       </Callout>

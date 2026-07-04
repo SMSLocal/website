@@ -276,7 +276,7 @@ export default function QuickstartPage() {
                       three-digit error code (e.g. <code className="font-mono">110</code>) means the
                       request was rejected — see{" "}
                       <Link
-                        href="/developers/api-docs#error-codes"
+                        href="/developers/api-docs/#error-codes"
                         className="text-primary hover:underline"
                       >
                         error codes

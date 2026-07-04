@@ -639,7 +639,7 @@ export default function XmlApiPage() {
             </div>
             <p className="mt-4 text-[13px] text-muted-foreground">
               See the{" "}
-              <Link href="/developers/api-docs#error-codes" className="text-primary hover:underline">
+              <Link href="/developers/api-docs/#error-codes" className="text-primary hover:underline">
                 HTTP API reference
               </Link>{" "}
               for full error-code fixes and remediation tips — they apply identically to the XML

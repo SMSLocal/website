@@ -26,10 +26,10 @@ export default function DndServicesPost() {
 
       <Callout variant="info" title="Written for senders, not consumers">
         Looking for how to activate DND on your personal number? Read{" "}
-        <A href="/blog/dnd-means">DND means: the consumer guide</A>. This post is for founders,
+        <A href="/blog/dnd-means/">DND means: the consumer guide</A>. This post is for founders,
         marketers, and developers planning SMS campaigns to Indian numbers. If you landed here
         searching for SMS bombers, read{" "}
-        <A href="/resources/tools/sms-bomber">why SMS bombing is illegal in India</A> and what to
+        <A href="/resources/tools/sms-bomber/">why SMS bombing is illegal in India</A> and what to
         use instead.
       </Callout>
 
@@ -282,7 +282,7 @@ export default function DndServicesPost() {
       <P>
         No — WhatsApp is over-the-top (OTT), not telecom. WhatsApp has its own rules (opt-in,
         business verification, 24-hour session window) administered by Meta. Read our{" "}
-        <A href="/products/whatsapp-business-api">WhatsApp Business API</A> page for the details.
+        <A href="/products/whatsapp-business-api/">WhatsApp Business API</A> page for the details.
       </P>
 
       <Blockquote cite="Compliance lead, Indian fintech">
@@ -292,9 +292,9 @@ export default function DndServicesPost() {
 
       <Callout variant="tip" title="Let us handle the plumbing">
         SMSLocal does NCPR scrub, send-window enforcement, category matching, and consent logging
-        out of the box. See our <A href="/products/bulk-sms">Bulk SMS</A> and{" "}
+        out of the box. See our <A href="/products/bulk-sms/">Bulk SMS</A> and{" "}
         <A href="/developers/sms-api/">OTP SMS</A> products, or jump straight into the{" "}
-        <A href="/developers/api-docs">API reference</A>.
+        <A href="/developers/api-docs/">API reference</A>.
       </Callout>
     </>
   )

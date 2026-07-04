@@ -34,7 +34,7 @@ export default function BulkWhatsAppMessagingPost() {
       />
 
       <Callout variant="info" title="Official API only">
-        This guide covers the official <A href="/products/whatsapp-business-api">WhatsApp Business
+        This guide covers the official <A href="/products/whatsapp-business-api/">WhatsApp Business
         API</A> route. Unofficial tools that automate WhatsApp Web are against Meta&rsquo;s Terms of
         Service and will get your number permanently banned. There is no safe shortcut.
       </Callout>
@@ -80,7 +80,7 @@ export default function BulkWhatsAppMessagingPost() {
         <LI><Strong>Build a verified sender account.</Strong> Your business applies for a WhatsApp Business Account (WABA) through a BSP. Meta verifies your business, approves a display name, and assigns a messaging tier that controls how many unique users you can message per day.</LI>
         <LI><Strong>Create and submit message templates.</Strong> Every outbound bulk message must use a pre-approved template. You write it, submit it for Meta review (usually 24–48 hours), and once approved you can use it in campaigns. Templates support variables for personalisation — name, order ID, date.</LI>
         <LI><Strong>Upload your opted-in contact list.</Strong> The most legally sensitive step. WhatsApp requires every recipient to have explicitly consented to receive messages from your business. Sending to contacts who haven&rsquo;t opted in is a Terms violation and the fastest way to get banned.</LI>
-        <LI><Strong>Launch the campaign and handle replies.</Strong> Messages go out through the API, and replies arrive back in your inbox — which is where a well-configured platform like SMSLocal lets <A href="/products/ai-agents">agentic AI</A> handle them automatically, so a broadcast doesn&rsquo;t create a support backlog.</LI>
+        <LI><Strong>Launch the campaign and handle replies.</Strong> Messages go out through the API, and replies arrive back in your inbox — which is where a well-configured platform like SMSLocal lets <A href="/products/ai-agents/">agentic AI</A> handle them automatically, so a broadcast doesn&rsquo;t create a support backlog.</LI>
       </OL>
 
       <H2 id="message-types">What kinds of messages you can send</H2>
@@ -224,8 +224,8 @@ export default function BulkWhatsAppMessagingPost() {
       <H3>Is bulk WhatsApp messaging legal in India?</H3>
       <P>
         Yes — if you use the official API and have proper opt-in consent. Unlike{" "}
-        <A href="/products/bulk-sms">SMS</A> (governed by TRAI&rsquo;s{" "}
-        <A href="/blog/dlt-registration-guide">DLT framework</A>), WhatsApp is governed by Meta&rsquo;s
+        <A href="/products/bulk-sms/">SMS</A> (governed by TRAI&rsquo;s{" "}
+        <A href="/blog/dlt-registration-guide/">DLT framework</A>), WhatsApp is governed by Meta&rsquo;s
         own Terms and Commerce Policy, and consent is also required under India&rsquo;s DPDP Act. You
         don&rsquo;t need DLT registration for WhatsApp, but you do need explicit consent and must
         respect opt-outs.
@@ -249,7 +249,7 @@ export default function BulkWhatsAppMessagingPost() {
         If you&rsquo;re new to bulk WhatsApp, send order confirmations and shipping updates before
         marketing campaigns. Utility templates build your quality rating and warm up your audience —
         making your first marketing campaign far less likely to trigger complaints.{" "}
-        <A href="/signup">Start free with ₹60 credit</A>.
+        <A href="/signup/">Start free with ₹60 credit</A>.
       </Callout>
     </>
   )

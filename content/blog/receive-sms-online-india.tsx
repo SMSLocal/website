@@ -171,7 +171,7 @@ export default function ReceiveSmsOnlineIndiaPost() {
         </LI>
         <LI>
           <Strong>For avoiding telemarketing after signup:</Strong> Give your real number, then
-          activate <A href="/blog/dnd-means">DND</A>. That&apos;s what DND was designed for.
+          activate <A href="/blog/dnd-means/">DND</A>. That&apos;s what DND was designed for.
         </LI>
         <LI>
           <Strong>For international users needing an Indian number:</Strong> Most Indian services
@@ -241,7 +241,7 @@ export default function ReceiveSmsOnlineIndiaPost() {
         If you&apos;re integrating OTP SMS into your product, <A href="/developers/sms-api/">SMSLocal
         OTP SMS</A> handles DLT registration, delivery guarantees, and number-type detection
         out-of-the-box — so you can block virtual numbers before they cost you. See the{" "}
-        <A href="/developers/api-docs">API reference</A> for the integration.
+        <A href="/developers/api-docs/">API reference</A> for the integration.
       </Callout>
     </>
   )
