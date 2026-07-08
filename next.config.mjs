@@ -192,6 +192,17 @@ const nextConfig = {
         destination: "/products",
         permanent: true,
       },
+      // /signup and /signup/ send visitors to the external product app.
+      // Defined here (not as a page-level redirect) so Next.js returns a pure
+      // HTTP 307 with no HTML body — avoiding the meta-refresh fallback that
+      // page-level redirect() emits and that SEO crawlers flag as an error.
+      {
+        source: "/signup",
+        destination: process.env.NEXT_PUBLIC_APP_URL
+          ? `${process.env.NEXT_PUBLIC_APP_URL}/signup`
+          : "https://app.smslocal.in/signup",
+        permanent: false,
+      },
     ]
   },
 }
