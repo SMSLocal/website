@@ -87,28 +87,33 @@ export default function PrivacyPolicyPage() {
             title: "3. Information we collect",
             body: (
               <>
-                <P>
-                  <Strong>Information you provide</Strong> — account registration details (name, business name,
-                  email, mobile number, password, GSTIN, PAN, billing address), KYC and onboarding documents,
-                  payment information (processed through PCI-DSS compliant gateways; we do not store full card
-                  numbers), and your communications with our sales, support, billing, and grievance teams.
-                </P>
-                <P>
-                  <Strong>Customer Data you upload</Strong> — end-recipient contact lists, message content,
-                  templates, chatbot flows, and two-way conversation transcripts.
-                </P>
-                <P>
-                  <Strong>Information collected automatically</Strong> — device and connection data (IP address,
-                  browser type, device identifiers, operating system, timezone, language), usage data (pages
-                  visited, features used, API calls, campaign statistics), delivery, read, and engagement
-                  metadata from Meta, telecom operators, and Google, and information collected via cookies and
-                  similar technologies.
-                </P>
-                <P>
-                  <Strong>Information from third parties</Strong> — identity verification and anti-fraud
-                  signals, profile data from authentication providers (Google, Microsoft), and information from
-                  Meta, telecom operators, payment processors, and integration partners.
-                </P>
+                <P><Strong>Information you provide directly:</Strong></P>
+                <Ul>
+                  <Li>Account details — name, business name, email, mobile number, and password.</Li>
+                  <Li>Business identifiers — GSTIN, PAN, and billing address.</Li>
+                  <Li>KYC and onboarding documents.</Li>
+                  <Li>Payment details — processed via PCI-DSS compliant gateways. We never store full card numbers.</Li>
+                  <Li>Messages and requests sent to our sales, support, billing, or grievance teams.</Li>
+                </Ul>
+                <P><Strong>Customer Data you upload:</Strong></P>
+                <Ul>
+                  <Li>End-recipient contact lists.</Li>
+                  <Li>Message content, templates, and chatbot flows.</Li>
+                  <Li>Two-way conversation transcripts.</Li>
+                </Ul>
+                <P><Strong>Information collected automatically:</Strong></P>
+                <Ul>
+                  <Li>Device data — IP address, browser type, device identifiers, OS, timezone, and language.</Li>
+                  <Li>Usage data — pages visited, features used, API calls, and campaign statistics.</Li>
+                  <Li>Delivery and engagement metadata from Meta, telecom operators, and Google.</Li>
+                  <Li>Data collected via cookies and similar technologies.</Li>
+                </Ul>
+                <P><Strong>Information from third parties:</Strong></P>
+                <Ul>
+                  <Li>Identity verification and anti-fraud signals.</Li>
+                  <Li>Profile data from sign-in providers (Google, Microsoft).</Li>
+                  <Li>Data from Meta, telecom operators, payment processors, and integration partners.</Li>
+                </Ul>
               </>
             ),
           },
@@ -157,10 +162,17 @@ export default function PrivacyPolicyPage() {
               <>
                 <P>
                   All SMS services comply with TRAI&apos;s Telecom Commercial Communications Customer Preference
-                  Regulations, 2018 (TCCCPR) and the DLT framework. Before sending SMS, customers must complete
-                  Entity Registration, Sender ID (Header) Registration, and Template Registration on the DLT
-                  platforms (Jio, Airtel, Vi, BSNL). Consent records and DLT identifiers are retained as mandated
-                  by TRAI, and promotional SMS is honoured only outside Do-Not-Disturb hours.
+                  Regulations, 2018 (TCCCPR) and the DLT framework.
+                </P>
+                <P>Before sending SMS, customers must complete three registrations on DLT platforms (Jio, Airtel, Vi, BSNL):</P>
+                <Ul>
+                  <Li>Entity Registration</Li>
+                  <Li>Sender ID (Header) Registration</Li>
+                  <Li>Template Registration</Li>
+                </Ul>
+                <P>
+                  Consent records and DLT identifiers are kept as required by TRAI. Promotional SMS is only sent
+                  outside Do-Not-Disturb hours.
                 </P>
               </>
             ),

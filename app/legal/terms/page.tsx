@@ -34,19 +34,20 @@ export default function TermsPage() {
             body: (
               <>
                 <P>
-                  These Terms &amp; Conditions (&quot;Terms&quot;) constitute a legally binding agreement between
-                  you (&quot;Customer&quot;, &quot;you&quot;, &quot;your&quot;) and{" "}
-                  <Strong>Swadesh Mobile</Strong>, the operator of SMSLocal.in (&quot;SMSLocal&quot;,
-                  &quot;we&quot;, &quot;us&quot;, &quot;our&quot;), governing your access to and use of the
-                  SMSLocal website, platform, APIs, mobile applications, and all related services (collectively,
-                  the &quot;Services&quot;).
+                  These Terms &amp; Conditions (&quot;Terms&quot;) are a binding agreement between you
+                  (&quot;Customer&quot;) and <Strong>Swadesh Mobile</Strong>, the operator of SMSLocal.in
+                  (&quot;SMSLocal&quot;). They govern your use of the SMSLocal website, platform, APIs, mobile
+                  apps, and all related services (the &quot;Services&quot;).
                 </P>
                 <P>
-                  By creating an account, accessing the platform, or using any of the Services, you confirm that
-                  you have read, understood, and agreed to be bound by these Terms, our Privacy Policy, our
-                  Acceptable Use Policy, and any product-specific addenda. If you do not agree, you must not use
-                  the Services.
+                  By creating an account or using any Service, you agree to these Terms along with our:
                 </P>
+                <Ul>
+                  <Li>Privacy Policy</Li>
+                  <Li>Acceptable Use Policy</Li>
+                  <Li>Any product-specific addenda</Li>
+                </Ul>
+                <P>If you do not agree, you must not use the Services.</P>
               </>
             ),
           },
