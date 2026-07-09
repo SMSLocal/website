@@ -1,12 +1,16 @@
 import type { ComponentType } from "react"
+import BestFreeSmsPost from "@/content/blog/best-free-sms"
 import BulkWhatsappMessagingPost from "@/content/blog/bulk-whatsapp-messaging"
 import DltRegistrationGuide from "@/content/blog/dlt-registration-guide"
 import DndMeansPost from "@/content/blog/dnd-means"
 import DndServicesPost from "@/content/blog/dnd-services"
+import FreeSmsPost from "@/content/blog/free-sms"
+import GmailPasswordRecoveryPost from "@/content/blog/gmail-password-recovery-via-sms"
 import ReceiveSmsOnlineIndiaPost from "@/content/blog/receive-sms-online-india"
 import SmsActivationPost from "@/content/blog/sms-activation"
-import GmailPasswordRecoveryPost from "@/content/blog/gmail-password-recovery-via-sms"
 import SendSmsOnlinePost from "@/content/blog/send-sms-online"
+import TelegramCodeSmsPost from "@/content/blog/telegram-code-sms"
+import WhatIsSmsPost from "@/content/blog/what-is-sms"
 import WhatsappMarketingIndiaPost from "@/content/blog/whatsapp-marketing-india"
 import WhatsappScamsIndiaPost from "@/content/blog/whatsapp-scams-india"
 
@@ -344,6 +348,112 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       relatedSlugs: ["whatsapp-marketing-india", "dnd-means"],
     },
     Component: WhatsappScamsIndiaPost,
+  },
+
+  "what-is-sms": {
+    meta: {
+      slug: "what-is-sms",
+      title: "What Is SMS? How Text Messaging Works and Why It Still Matters in 2026",
+      description:
+        "A complete guide to SMS — how the Short Message Service works technically, the difference between transactional and promotional SMS, India's DLT and DND regulations, and why SMS still outperforms newer channels for OTPs and alerts.",
+      date: "2026-07-09",
+      readingTime: "10 min read",
+      category: "Getting started",
+      author: TEAM,
+      coverAlt:
+        "Overhead diagram-style flatlay of two smartphones connected by a glowing line with a central server node between them, on a clean white surface with subtle circuit-board texture.",
+      toc: [
+        { id: "what-is-sms", label: "What SMS actually is" },
+        { id: "how-sms-works", label: "How SMS works technically" },
+        { id: "types-of-sms", label: "The two types of SMS in India" },
+        { id: "sms-vs-whatsapp", label: "SMS vs WhatsApp" },
+        { id: "sms-in-india", label: "SMS in India: the regulatory context" },
+        { id: "sms-for-business", label: "SMS for business" },
+        { id: "sms-character-limits", label: "Character limits and encoding" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["send-sms-online", "dlt-registration-guide", "free-sms"],
+    },
+    Component: WhatIsSmsPost,
+  },
+
+  "free-sms": {
+    meta: {
+      slug: "free-sms",
+      title: "How to Send Free SMS in India: What Actually Works in 2026",
+      description:
+        "Your real options for free SMS in India — operator bundled SMS, online free SMS services, and platform trial credits compared. Includes why Way2SMS shut down and what replaced it.",
+      date: "2026-07-09",
+      readingTime: "8 min read",
+      category: "Consumer",
+      author: TEAM,
+      coverAlt:
+        "Person typing on a laptop at a home workspace with a smartphone beside the keyboard, warm afternoon light from a window casting a soft shadow across the desk.",
+      toc: [
+        { id: "what-free-sms-means", label: "What 'free SMS' actually means" },
+        { id: "bundled-sms", label: "Free SMS from your mobile plan" },
+        { id: "online-free-sms", label: "Online free SMS services" },
+        { id: "ways2sms-alternatives", label: "Way2SMS and its successors" },
+        { id: "free-trial-platforms", label: "Free trial credits from SMS platforms" },
+        { id: "when-free-isnt-enough", label: "When free SMS isn't the right answer" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["best-free-sms", "what-is-sms", "send-sms-online"],
+    },
+    Component: FreeSmsPost,
+  },
+
+  "best-free-sms": {
+    meta: {
+      slug: "best-free-sms",
+      title: "Best Free SMS Apps in India 2026: Compared by Use Case",
+      description:
+        "Operator bundled SMS, online free SMS sites, WhatsApp, and SMS platform trial credits — compared and tested for personal and business use in India. Includes daily limits, sender branding, and delivery speed for each.",
+      date: "2026-07-09",
+      readingTime: "9 min read",
+      category: "Consumer",
+      author: TEAM,
+      coverAlt:
+        "Side-by-side view of two smartphones: one showing a standard SMS conversation thread, the other showing an SMSLocal dashboard with delivery receipts and campaign analytics, on a clean white desk.",
+      toc: [
+        { id: "quick-pick", label: "Quick pick by use case" },
+        { id: "operator-bundled", label: "Operator bundled SMS" },
+        { id: "smslocal-trial", label: "SMSLocal free trial" },
+        { id: "whatsapp-alternative", label: "WhatsApp" },
+        { id: "textfree-apps", label: "Third-party SMS apps" },
+        { id: "why-free-limits-matter", label: "Why free SMS limits exist" },
+        { id: "business-sms-options", label: "Free options for business SMS" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["free-sms", "what-is-sms", "send-sms-online"],
+    },
+    Component: BestFreeSmsPost,
+  },
+
+  "telegram-code-sms": {
+    meta: {
+      slug: "telegram-code-sms",
+      title: "Telegram Verification Code Not Arriving via SMS? Fix It in 2026",
+      description:
+        "Why Telegram sends login codes via SMS, every reason the code might not arrive on Indian numbers (DND, operator blocks, wrong number, iMessage), and the step-by-step fix for each.",
+      date: "2026-07-09",
+      readingTime: "9 min read",
+      category: "Troubleshooting",
+      author: TEAM,
+      coverAlt:
+        "Close-up of a hand holding a smartphone showing the Telegram login screen with a phone number entry field, against a softly blurred home background with warm ambient light.",
+      toc: [
+        { id: "how-telegram-verification-works", label: "How Telegram verification works" },
+        { id: "not-arriving", label: "Why the SMS code isn't arriving" },
+        { id: "step-by-step-fix", label: "Step-by-step fix" },
+        { id: "voice-call-alternative", label: "Using the voice call option" },
+        { id: "account-recovery", label: "If you've lost access to the number" },
+        { id: "security", label: "Security implications" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["sms-activation", "gmail-password-recovery-via-sms", "what-is-sms"],
+    },
+    Component: TelegramCodeSmsPost,
   },
 }
 
