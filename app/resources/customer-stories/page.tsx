@@ -23,7 +23,7 @@ export default function CustomerStoriesIndexPage() {
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Resources", path: "/resources/help" },
+          { name: "Resources", path: "/resources/" },
           { name: "Customer stories", path: "/resources/customer-stories" },
         ]}
       />
@@ -50,7 +50,7 @@ export default function CustomerStoriesIndexPage() {
                 Home
               </Link>
               <span aria-hidden>/</span>
-              <Link href="/resources/help/" className="hover:text-white">
+              <Link href="/resources/" className="hover:text-white">
                 Resources
               </Link>
               <span aria-hidden>/</span>

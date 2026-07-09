@@ -106,7 +106,7 @@ export default function ChangelogPage() {
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Resources", path: "/resources/help" },
+          { name: "Resources", path: "/resources/" },
           { name: "Changelog", path: "/resources/changelog" },
         ]}
       />

@@ -68,7 +68,7 @@ export default async function CustomerStoryPage({
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Resources", path: "/resources/help" },
+          { name: "Resources", path: "/resources/" },
           { name: "Customer stories", path: "/resources/customer-stories" },
           {
             name: story.company,

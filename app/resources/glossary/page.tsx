@@ -33,7 +33,7 @@ export default function GlossaryPage() {
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Resources", path: "/resources/help" },
+          { name: "Resources", path: "/resources/" },
           { name: "Messaging glossary", path: "/resources/glossary" },
         ]}
       />

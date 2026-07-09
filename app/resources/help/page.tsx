@@ -29,7 +29,7 @@ export default function HelpCentrePage() {
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Resources", path: "/resources/help" },
+          { name: "Resources", path: "/resources/" },
           { name: "Help Centre", path: "/resources/help" },
         ]}
       />      <SiteHeader />

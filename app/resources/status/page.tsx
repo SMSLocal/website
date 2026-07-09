@@ -164,7 +164,7 @@ export default function StatusPage() {
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Resources", path: "/resources/help" },
+          { name: "Resources", path: "/resources/" },
           { name: "Status", path: "/resources/status" },
         ]}
       />
