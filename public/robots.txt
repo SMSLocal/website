@@ -92,4 +92,3 @@ User-agent: SerpstatBot
 Disallow: /
 
 Sitemap: https://www.smslocal.in/sitemap.xml
-Host: https://www.smslocal.in
