@@ -1095,6 +1095,21 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   },
 
   // ─── Resources ────────────────────────────────────────────────────────────
+  "/resources": {
+    title: "Resources — SMS, WhatsApp & Compliance Guides for India",
+    description:
+      "Help centre, customer stories, SMS glossary, free tools, system status, and product changelog — everything Indian businesses need to ship messaging with SMSLocal.",
+    focusKeyword: "SMS resources India",
+    keywords: [
+      "SMS resources India",
+      "WhatsApp messaging guides",
+      "DLT compliance help",
+      "bulk SMS help centre",
+      "SMS glossary India",
+      "SMSLocal resources",
+    ],
+  },
+
   "/resources/customer-stories": {
     title: "SMS Case Studies — Trusted Results from 3 Sectors",
     description:

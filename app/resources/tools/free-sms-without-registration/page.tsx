@@ -169,7 +169,7 @@ export default function FreeSmsPage() {
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Resources", path: "/resources/help" },
+          { name: "Resources", path: "/resources/" },
           { name: "Tools", path: "/resources/tools" },
           {
             name: "Free SMS without registration",

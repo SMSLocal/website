@@ -124,7 +124,7 @@ export default function SmsBomberPage() {
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Resources", path: "/resources/help" },
+          { name: "Resources", path: "/resources/" },
           { name: "Tools", path: "/resources/tools" },
           { name: "SMS Bomber", path: "/resources/tools/sms-bomber" },
         ]}
