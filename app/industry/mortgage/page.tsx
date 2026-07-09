@@ -93,8 +93,8 @@ export default function MortgagePage() {
             </>
           }
           subtitle="Move borrowers from inquiry to close with agents that qualify, remind, and update across channels."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
           trustBar={[
             { icon: ShieldCheck, label: "Built for lenders and mortgage/home-loan brokers" },
             { icon: Clock, label: "Pre-qualification around the clock" },
@@ -168,7 +168,7 @@ export default function MortgagePage() {
                 title: "Pre-qualification",
                 description:
                   "Capture and qualify borrowers in the conversation with dynamic questions and scoring, day or night.",
-                href: "/products/ai-agents/lead-qualification",
+                href: "/products/ai-agents/lead-qualification/",
                 linkLabel: "Lead qualification agent details",
               },
               {
@@ -176,7 +176,7 @@ export default function MortgagePage() {
                 title: "Agentic AI for applications",
                 description:
                   "Agents that qualify, remind, and update borrowers automatically, escalating anything needing underwriting judgment to a human.",
-                href: "/products/ai-agentic",
+                href: "/products/ai-agentic/",
                 linkLabel: "Agentic AI details",
               },
               {
@@ -184,7 +184,7 @@ export default function MortgagePage() {
                 title: "Document reminders",
                 description:
                   "Automated reminders for the paperwork that stalls applications, sent over SMS and WhatsApp.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Bulk SMS details",
               },
               {
@@ -192,7 +192,7 @@ export default function MortgagePage() {
                 title: "Why SMSLocal",
                 description:
                   "Pre-qualification, reminders, and campaigns share one borrower record across every channel.",
-                href: "/compare",
+                href: "/compare/",
                 linkLabel: "See how we compare",
               },
             ]}
@@ -231,10 +231,10 @@ export default function MortgagePage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agents/lead-qualification", label: "AI Agents — borrower pre-qualification" },
-                { href: "/products/ai-agentic", label: "Agentic AI — act, not just answer" },
-                { href: "/products/bulk-sms", label: "Bulk SMS — EMI and document reminders" },
-                { href: "/compare", label: "See how SMSLocal compares" },
+                { href: "/products/ai-agents/lead-qualification/", label: "AI Agents — borrower pre-qualification" },
+                { href: "/products/ai-agentic/", label: "Agentic AI — act, not just answer" },
+                { href: "/products/bulk-sms/", label: "Bulk SMS — EMI and document reminders" },
+                { href: "/compare/", label: "See how SMSLocal compares" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -253,8 +253,8 @@ export default function MortgagePage() {
         <ProductFinalCta
           title="Close more loans with agentic AI."
           subtitle="Pre-qualification, document reminders, and status updates handled by agents that act."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
         />
       </main>
 

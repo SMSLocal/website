@@ -148,14 +148,14 @@ export function SaasLifecycleCards() {
         </p>
         <div className="mt-5 flex flex-wrap items-center gap-3 md:mt-7">
           <Link
-            href="/signup"
+            href="/signup/"
             className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
           >
             Start Free
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
           <Link
-            href="/company/contact"
+            href="/company/contact/"
             className="inline-flex items-center gap-2 rounded-lg border border-border px-5 py-2.5 text-sm font-medium text-foreground transition hover:bg-muted"
           >
             Book a demo

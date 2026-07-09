@@ -72,7 +72,7 @@ export function SaasPricing() {
         </ul>
 
         <Link
-          href="/signup"
+          href="/signup/"
           className="mt-8 inline-flex w-full items-center justify-center rounded-xl border border-border px-5 py-3 text-sm font-semibold text-foreground transition hover:border-primary/40 hover:bg-secondary"
           style={feature(560)}
         >
@@ -116,14 +116,14 @@ export function SaasPricing() {
 
         <div className="mt-8 flex flex-col gap-3" style={feature(820)}>
           <Link
-            href="/signup"
+            href="/signup/"
             className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
           >
             Start Free
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
           <Link
-            href="/company/contact"
+            href="/company/contact/"
             className="inline-flex w-full items-center justify-center rounded-xl px-5 py-3 text-sm font-medium text-muted-foreground transition hover:text-foreground"
           >
             Talk to Sales

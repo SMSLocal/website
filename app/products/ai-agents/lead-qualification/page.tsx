@@ -122,8 +122,8 @@ export default function LeadQualificationPage() {
             </>
           }
           subtitle="Capture interest, ask the right questions, score intent, and route hot leads to your team, automatically."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: MessageCircle, label: "Captures leads on every channel" },
             { icon: Filter,        label: "Qualifies with dynamic questions" },
@@ -248,13 +248,13 @@ export default function LeadQualificationPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agents"
+                href="/products/ai-agents/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 See all AI agents
               </Link>
               <Link
-                href="/products/ai-agents/sales"
+                href="/products/ai-agents/sales/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 AI Sales Agent
@@ -287,10 +287,10 @@ export default function LeadQualificationPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agents",             label: "All AI agent use cases" },
-                { href: "/products/ai-agentic",            label: "How agentic AI works" },
-                { href: "/products/ai-agents/sales",       label: "AI Sales Agent — turn qualified leads into orders" },
-                { href: "/compare",                        label: "Compare SMSLocal with alternatives" },
+                { href: "/products/ai-agents/",             label: "All AI agent use cases" },
+                { href: "/products/ai-agentic/",            label: "How agentic AI works" },
+                { href: "/products/ai-agents/sales/",       label: "AI Sales Agent — turn qualified leads into orders" },
+                { href: "/compare/",                        label: "Compare SMSLocal with alternatives" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -309,8 +309,8 @@ export default function LeadQualificationPage() {
         <ProductFinalCta
           title="Stop losing leads to slow follow-up."
           subtitle="Connect your channels and CRM, let the agent qualify every inbound instantly, and hand your reps a pipeline full of leads worth closing."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

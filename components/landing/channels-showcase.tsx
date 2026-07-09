@@ -14,12 +14,12 @@ type Channel = {
 }
 
 const CHANNELS: Channel[] = [
-  { kind: "bulk", short: "Bulk SMS", title: "Bulk SMS", tag: "From ₹0.09 / SMS", desc: "DLT-compliant transactional & promotional SMS on direct-operator routes.", icon: MessageSquareText, href: "/products/bulk-sms", grad: "linear-gradient(155deg, oklch(0.50 0.13 170), oklch(0.18 0.03 220))" },
-  { kind: "wa", short: "WhatsApp API", title: "WhatsApp Business API", tag: "Green-tick BSP", desc: "Broadcasts, templates, and a shared team inbox on the official API.", icon: MessageCircle, href: "/products/whatsapp-business-api", grad: "linear-gradient(155deg, oklch(0.48 0.14 160), oklch(0.17 0.03 228))" },
-  { kind: "ai", short: "AI Agents", title: "AI WhatsApp Agents", tag: "8 Indian languages", desc: "Auto-reply and deflect tickets in eight Indian languages, around the clock.", icon: Bot, href: "/products/ai-agents", grad: "linear-gradient(155deg, oklch(0.52 0.13 180), oklch(0.19 0.03 214))" },
-  { kind: "otp", short: "OTP", title: "OTP & Verification", tag: "From ₹0.15 · 0.3s", desc: "Priority-routed OTP SMS with automatic carrier failover.", icon: KeyRound, href: "/products/otp-sms", grad: "linear-gradient(155deg, oklch(0.47 0.12 156), oklch(0.16 0.03 232))" },
-  { kind: "rcs", short: "RCS", title: "RCS Business Messaging", tag: "Branded + SMS fallback", desc: "Verified, branded rich cards that fall back to SMS automatically.", icon: Radio, href: "/products/rcs", grad: "linear-gradient(155deg, oklch(0.50 0.12 186), oklch(0.18 0.03 222))" },
-  { kind: "quick", short: "Quick SMS", title: "Quick SMS", tag: "No code", desc: "Launch campaigns without code — straight from your dashboard.", icon: Zap, href: "/products/quick-sms", grad: "linear-gradient(155deg, oklch(0.49 0.13 166), oklch(0.17 0.03 226))" },
+  { kind: "bulk", short: "Bulk SMS", title: "Bulk SMS", tag: "From ₹0.09 / SMS", desc: "DLT-compliant transactional & promotional SMS on direct-operator routes.", icon: MessageSquareText, href: "/products/bulk-sms/", grad: "linear-gradient(155deg, oklch(0.50 0.13 170), oklch(0.18 0.03 220))" },
+  { kind: "wa", short: "WhatsApp API", title: "WhatsApp Business API", tag: "Green-tick BSP", desc: "Broadcasts, templates, and a shared team inbox on the official API.", icon: MessageCircle, href: "/products/whatsapp-business-api/", grad: "linear-gradient(155deg, oklch(0.48 0.14 160), oklch(0.17 0.03 228))" },
+  { kind: "ai", short: "AI Agents", title: "AI WhatsApp Agents", tag: "8 Indian languages", desc: "Auto-reply and deflect tickets in eight Indian languages, around the clock.", icon: Bot, href: "/products/ai-agents/", grad: "linear-gradient(155deg, oklch(0.52 0.13 180), oklch(0.19 0.03 214))" },
+  { kind: "otp", short: "OTP", title: "OTP & Verification", tag: "From ₹0.15 · 0.3s", desc: "Priority-routed OTP SMS with automatic carrier failover.", icon: KeyRound, href: "/products/otp-sms/", grad: "linear-gradient(155deg, oklch(0.47 0.12 156), oklch(0.16 0.03 232))" },
+  { kind: "rcs", short: "RCS", title: "RCS Business Messaging", tag: "Branded + SMS fallback", desc: "Verified, branded rich cards that fall back to SMS automatically.", icon: Radio, href: "/products/rcs/", grad: "linear-gradient(155deg, oklch(0.50 0.12 186), oklch(0.18 0.03 222))" },
+  { kind: "quick", short: "Quick SMS", title: "Quick SMS", tag: "No code", desc: "Launch campaigns without code — straight from your dashboard.", icon: Zap, href: "/products/quick-sms/", grad: "linear-gradient(155deg, oklch(0.49 0.13 166), oklch(0.17 0.03 226))" },
 ]
 
 function Panel({ c, n }: { c: Channel; n: number }) {
@@ -82,7 +82,7 @@ export function ChannelsShowcase() {
 
         <Reveal className="mt-10 flex flex-wrap items-center justify-center gap-x-2 gap-y-1 text-sm">
           <span className="text-muted-foreground">Not sure where to start?</span>
-          <a href="/products" className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
+          <a href="/products/" className="inline-flex items-center gap-1 font-semibold text-primary hover:underline">
             Explore the full platform <ArrowUpRight className="h-4 w-4" />
           </a>
         </Reveal>

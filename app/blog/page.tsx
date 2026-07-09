@@ -24,7 +24,7 @@ export default function BlogIndexPage() {
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Blog", path: "/blog" },
+          { name: "Blog", path: "/blog/" },
         ]}
       />
 
@@ -125,7 +125,7 @@ export default function BlogIndexPage() {
               </p>
             </div>
             <Link
-              href="/company/contact"
+              href="/company/contact/"
               className="hidden shrink-0 items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-[13.5px] font-semibold text-primary-foreground shadow-sm transition hover:bg-primary/90 sm:inline-flex"
             >
               Pitch us
@@ -137,8 +137,8 @@ export default function BlogIndexPage() {
         <ProductFinalCta
           title="₹60 free credit. No credit card."
           subtitle="Open a live account, send your first DLT-compliant SMS, and keep the test balance forever."
-          primaryCta={{ label: "Create free account", href: "/signup" }}
-          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs" }}
+          primaryCta={{ label: "Create free account", href: "/signup/" }}
+          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs/" }}
         />
       </main>
 

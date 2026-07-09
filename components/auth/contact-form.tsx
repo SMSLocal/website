@@ -92,7 +92,7 @@ export function ContactForm() {
             <Link href="/">Back to homepage</Link>
           </Button>
           <Button asChild variant="outline">
-            <Link href="/pricing">View pricing</Link>
+            <Link href="/pricing/">View pricing</Link>
           </Button>
         </div>
       </div>

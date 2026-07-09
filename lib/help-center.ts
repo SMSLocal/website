@@ -1199,42 +1199,42 @@ export function getAllArticlePaths(): { category: string; article: string }[] {
 export const POPULAR_TOPIC_LINKS: { title: string; href: string }[] = [
   {
     title: "How do I register a DLT Principal Entity (PE)?",
-    href: "/resources/help/dlt/register-principal-entity",
+    href: "/resources/help/dlt/register-principal-entity/",
   },
   {
     title: "What is the difference between transactional and promotional SMS in India?",
-    href: "/resources/help/sms/transactional-vs-promotional",
+    href: "/resources/help/sms/transactional-vs-promotional/",
   },
   {
     title: "How long does WhatsApp Business API onboarding take?",
-    href: "/resources/help/whatsapp/business-api-onboarding",
+    href: "/resources/help/whatsapp/business-api-onboarding/",
   },
   {
     title: "Why is my SMS showing as 'submitted' but not 'delivered'?",
-    href: "/resources/help/sms/delivery-reports-explained",
+    href: "/resources/help/sms/delivery-reports-explained/",
   },
   {
     title: "How do I set up a six-character sender ID for DLT templates?",
-    href: "/resources/help/sms/sender-id-allocation",
+    href: "/resources/help/sms/sender-id-allocation/",
   },
   {
     title: "Does SMSLocal support multilingual SMS? Which scripts?",
-    href: "/resources/help/sms/unicode-and-multilingual",
+    href: "/resources/help/sms/unicode-and-multilingual/",
   },
   {
     title: "How do I integrate SMSLocal with Shopify?",
-    href: "/resources/help/api/shopify-integration",
+    href: "/resources/help/api/shopify-integration/",
   },
   {
     title: "What happens to unused credits on my wallet?",
-    href: "/resources/help/billing/add-credits",
+    href: "/resources/help/billing/add-credits/",
   },
   {
     title: "Can I schedule WhatsApp template broadcasts in advance?",
-    href: "/resources/help/whatsapp/broadcast-lists-and-consent",
+    href: "/resources/help/whatsapp/broadcast-lists-and-consent/",
   },
   {
     title: "How do webhooks authenticate? Are they signed?",
-    href: "/resources/help/api/webhooks-signing",
+    href: "/resources/help/api/webhooks-signing/",
   },
 ]

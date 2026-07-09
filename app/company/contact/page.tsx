@@ -86,7 +86,7 @@ export default function ContactPage() {
                 Home
               </Link>
               <span>/</span>
-              <Link href="/company/about" className="hover:text-white">
+              <Link href="/company/about/" className="hover:text-white">
                 Company
               </Link>
               <span>/</span>

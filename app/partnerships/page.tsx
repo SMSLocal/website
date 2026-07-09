@@ -100,8 +100,8 @@ export default function PartnershipsPage() {
             </>
           }
           subtitle="Grow with a platform that bundles agentic AI, channels, and broadcasting."
-          primaryCta={{ label: "Become a Partner", href: "/company/contact" }}
-          secondaryCta={{ label: "Contact Us", href: "/company/contact" }}
+          primaryCta={{ label: "Become a Partner", href: "/company/contact/" }}
+          secondaryCta={{ label: "Contact Us", href: "/company/contact/" }}
           trustBar={[
             { icon: Percent, label: "Recurring revenue share for resellers" },
             { icon: Layers, label: "White-label in progress" },
@@ -232,13 +232,13 @@ export default function PartnershipsPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agentic"
+                href="/products/ai-agentic/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Explore agentic AI
               </Link>
               <Link
-                href="/company/contact"
+                href="/company/contact/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Become a partner
@@ -275,10 +275,10 @@ export default function PartnershipsPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic",     label: "Explore agentic AI on SMSLocal" },
-                { href: "/products/integrations",   label: "See integrations and the open API" },
-                { href: "/platform/security",       label: "See the platform and security" },
-                { href: "/company/contact",         label: "Apply to become a partner" },
+                { href: "/products/ai-agentic/",     label: "Explore agentic AI on SMSLocal" },
+                { href: "/products/integrations/",   label: "See integrations and the open API" },
+                { href: "/platform/security/",       label: "See the platform and security" },
+                { href: "/company/contact/",         label: "Apply to become a partner" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -297,8 +297,8 @@ export default function PartnershipsPage() {
         <ProductFinalCta
           title="Let's build something together."
           subtitle="Agentic AI, every channel, and broadcasting bundled into one platform — become a partner and start growing with your customers this month."
-          primaryCta={{ label: "Become a Partner", href: "/company/contact" }}
-          secondaryCta={{ label: "Contact Us", href: "/company/contact" }}
+          primaryCta={{ label: "Become a Partner", href: "/company/contact/" }}
+          secondaryCta={{ label: "Contact Us", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

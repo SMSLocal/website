@@ -295,9 +295,9 @@ export default function CompareInfobipPage() {
             <SectionHeader eyebrow="Explore more" title="Compare more" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic", label: "Agentic AI — automate support and sales" },
-                { href: "/compare", label: "See all SMSLocal comparisons" },
-                { href: "/platform/security", label: "Platform security — SSO, audit logs, access controls" },
+                { href: "/products/ai-agentic/", label: "Agentic AI — automate support and sales" },
+                { href: "/compare/", label: "See all SMSLocal comparisons" },
+                { href: "/platform/security/", label: "Platform security — SSO, audit logs, access controls" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -320,8 +320,8 @@ export default function CompareInfobipPage() {
         <ProductFinalCta
           title="Get omnichannel agentic AI without the enterprise overhead."
           subtitle="Self-serve signup, no mandatory sales-quote cycle. Send a real DLT SMS and a real WhatsApp template in 5 minutes — then decide."
-          primaryCta={{ label: "Start Free", href: "/signup" }}
-          secondaryCta={{ label: "Talk to us", href: "/company/contact" }}
+          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to us", href: "/company/contact/" }}
         />
       </main>
 

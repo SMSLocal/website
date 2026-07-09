@@ -98,8 +98,8 @@ export default function AiAgentsPage() {
             </>
           }
           subtitle="The agent inside your support inbox — answers in 8 Indian languages, takes real actions across 300+ apps, and hands off to a human the moment it's needed."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
           trustBar={[
             { icon: Languages, label: "8 Indian languages" },
             { icon: Zap, label: "Acts across 300+ apps" },
@@ -145,7 +145,7 @@ export default function AiAgentsPage() {
           />
           <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             <Link
-              href="/products/ai-agents/customer-service"
+              href="/products/ai-agents/customer-service/"
               className="group flex flex-col gap-3 rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:border-primary/40 hover:shadow-md"
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -165,7 +165,7 @@ export default function AiAgentsPage() {
             </Link>
 
             <Link
-              href="/products/ai-agents/sales"
+              href="/products/ai-agents/sales/"
               className="group flex flex-col gap-3 rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:border-primary/40 hover:shadow-md"
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -184,7 +184,7 @@ export default function AiAgentsPage() {
               </span>
             </Link>
             <Link
-              href="/products/ai-agents/booking"
+              href="/products/ai-agents/booking/"
               className="group flex flex-col gap-3 rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:border-primary/40 hover:shadow-md"
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -204,7 +204,7 @@ export default function AiAgentsPage() {
             </Link>
 
             <Link
-              href="/products/ai-agents/lead-qualification"
+              href="/products/ai-agents/lead-qualification/"
               className="group flex flex-col gap-3 rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:border-primary/40 hover:shadow-md"
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -224,7 +224,7 @@ export default function AiAgentsPage() {
             </Link>
 
             <Link
-              href="/products/ai-agents/agent-builder"
+              href="/products/ai-agents/agent-builder/"
               className="group flex flex-col gap-3 rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:border-primary/40 hover:shadow-md"
             >
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
@@ -302,10 +302,10 @@ export default function AiAgentsPage() {
             ))}
           </div>
           <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
-            <Link href="/products/ai-agentic" className="inline-flex items-center gap-2 text-[14px] font-semibold text-primary hover:underline">
+            <Link href="/products/ai-agentic/" className="inline-flex items-center gap-2 text-[14px] font-semibold text-primary hover:underline">
               Explore the full integration directory <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link href="/products/integrations" className="inline-flex items-center gap-2 text-[14px] font-semibold text-muted-foreground hover:text-primary">
+            <Link href="/products/integrations/" className="inline-flex items-center gap-2 text-[14px] font-semibold text-muted-foreground hover:text-primary">
               See all integrations <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -399,12 +399,12 @@ export default function AiAgentsPage() {
           eyebrow="Where teams put it to work"
           title="The conversations every Indian business has"
           items={[
-            { industry: "E-commerce & D2C", use: "Order status, returns, COD confirmations, refunds and cart recovery", icon: ShoppingBag, href: "/solutions/ecommerce" },
-            { industry: "Banking & Fintech", use: "Product FAQs, statement requests, KYC step-by-step in regional languages", icon: Building2, href: "/solutions/banking-fintech" },
-            { industry: "Healthcare", use: "Appointment FAQs, prep instructions, lab report pickup flows", icon: HeartPulse, href: "/solutions/healthcare" },
-            { industry: "Education & coaching", use: "Admissions, fee reminders, class timings, parent Q&A", icon: GraduationCap, href: "/solutions/education" },
-            { industry: "SaaS & B2B", use: "Triage tickets, detect churn signals, surface upsell-ready accounts", icon: Database, href: "/solutions/saas-b2b" },
-            { industry: "Any support team", use: "Replace the 'type MENU for options' flow with a real conversation", icon: Inbox, href: "/solutions" },
+            { industry: "E-commerce & D2C", use: "Order status, returns, COD confirmations, refunds and cart recovery", icon: ShoppingBag, href: "/solutions/ecommerce/" },
+            { industry: "Banking & Fintech", use: "Product FAQs, statement requests, KYC step-by-step in regional languages", icon: Building2, href: "/solutions/banking-fintech/" },
+            { industry: "Healthcare", use: "Appointment FAQs, prep instructions, lab report pickup flows", icon: HeartPulse, href: "/solutions/healthcare/" },
+            { industry: "Education & coaching", use: "Admissions, fee reminders, class timings, parent Q&A", icon: GraduationCap, href: "/solutions/education/" },
+            { industry: "SaaS & B2B", use: "Triage tickets, detect churn signals, surface upsell-ready accounts", icon: Database, href: "/solutions/saas-b2b/" },
+            { industry: "Any support team", use: "Replace the 'type MENU for options' flow with a real conversation", icon: Inbox, href: "/solutions/" },
           ]}
         />
 
@@ -442,7 +442,7 @@ export default function AiAgentsPage() {
             { label: "Auth", value: "OAuth 2.0 bearer tokens" },
             { label: "Docs", value: "/developers/api-docs" },
           ]}
-          cta={{ label: "View API docs", href: "/developers/api-docs" }}
+          cta={{ label: "View API docs", href: "/developers/api-docs/" }}
         />
 
         <FaqSection
@@ -464,8 +464,8 @@ export default function AiAgentsPage() {
         <ProductFinalCta
           title="Put Captain AI on your support inbox today."
           subtitle="Connect your apps so it can actually resolve requests, train it on your docs in an afternoon, let it reply in eight Indian languages, and hand off to your team only when it matters."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

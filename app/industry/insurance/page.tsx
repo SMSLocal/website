@@ -93,8 +93,8 @@ export default function InsurancePage() {
             </>
           }
           subtitle="Guide quotes, claims, and renewals across every channel with agents that act and escalate."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
           trustBar={[
             { icon: ShieldCheck, label: "Built for carriers, brokers, and insurtech" },
             { icon: Clock, label: "Instant guidance, day or night" },
@@ -168,7 +168,7 @@ export default function InsurancePage() {
                 title: "Quotes and lead qualification",
                 description:
                   "Assist with quotes and qualify leads in the conversation with dynamic questions and scoring, day or night.",
-                href: "/products/ai-agents/lead-qualification",
+                href: "/products/ai-agents/lead-qualification/",
                 linkLabel: "Lead qualification agent details",
               },
               {
@@ -176,7 +176,7 @@ export default function InsurancePage() {
                 title: "Claims intake and status updates",
                 description:
                   "Capture first notice of loss and send automated status updates at every stage — submitted, under review, settled.",
-                href: "/products/ai-agentic",
+                href: "/products/ai-agentic/",
                 linkLabel: "Agentic AI details",
               },
               {
@@ -184,7 +184,7 @@ export default function InsurancePage() {
                 title: "Secure by design",
                 description:
                   "SSO, audit logs, and role-based access so your compliance and security teams stay in control.",
-                href: "/platform/security",
+                href: "/platform/security/",
                 linkLabel: "Security details",
               },
               {
@@ -192,7 +192,7 @@ export default function InsurancePage() {
                 title: "Why SMSLocal",
                 description:
                   "Quotes, claims, and renewals share one record across every channel and campaign.",
-                href: "/compare",
+                href: "/compare/",
                 linkLabel: "See how we compare",
               },
             ]}
@@ -231,10 +231,10 @@ export default function InsurancePage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agents/lead-qualification", label: "AI Agents — lead qualification" },
-                { href: "/products/ai-agentic", label: "Agentic AI — act, not just answer" },
-                { href: "/platform/security", label: "Platform Security — SSO, audit logs, RBAC" },
-                { href: "/compare", label: "See how SMSLocal compares" },
+                { href: "/products/ai-agents/lead-qualification/", label: "AI Agents — lead qualification" },
+                { href: "/products/ai-agentic/", label: "Agentic AI — act, not just answer" },
+                { href: "/platform/security/", label: "Platform Security — SSO, audit logs, RBAC" },
+                { href: "/compare/", label: "See how SMSLocal compares" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -253,8 +253,8 @@ export default function InsurancePage() {
         <ProductFinalCta
           title="Guide policyholders with agentic AI."
           subtitle="Quotes, claims, and renewals handled by agents that act and escalate."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
         />
       </main>
 

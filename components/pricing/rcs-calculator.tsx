@@ -365,7 +365,7 @@ export function RcsCalculator({
           ) : null}
 
           <Link
-            href="/signup"
+            href="/signup/"
             className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-[13.5px] font-semibold text-primary-foreground shadow-md shadow-primary/20 transition hover:brightness-110"
           >
             Start with ₹60 free credit

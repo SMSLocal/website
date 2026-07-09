@@ -123,14 +123,14 @@ export default function PricingPage() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
-                href="/signup"
+                href="/signup/"
                 className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
               >
                 Start Free — ₹60 Credit
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
-                href="/company/contact"
+                href="/company/contact/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
               >
                 <Headphones className="h-4 w-4" />
@@ -276,14 +276,14 @@ export default function PricingPage() {
                 </p>
                 <div className="mt-8 flex flex-wrap gap-3">
                   <Link
-                    href="/company/contact"
+                    href="/company/contact/"
                     className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 hover:brightness-110"
                   >
                     Talk to sales
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
-                    href="/products"
+                    href="/products/"
                     className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-white hover:bg-white/10"
                   >
                     View all products
@@ -314,8 +314,8 @@ export default function PricingPage() {
         <ProductFinalCta
           title="Start sending in two minutes."
           subtitle="₹60 free credit. Full DLT compliance. No card. Every product included."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

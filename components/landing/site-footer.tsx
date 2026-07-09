@@ -9,79 +9,79 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
     title: "Products",
     links: [
-      { label: "Bulk SMS", href: "/products/bulk-sms" },
-      { label: "RCS Business Messaging", href: "/products/rcs" },
-      { label: "WhatsApp Business API", href: "/products/whatsapp-business-api" },
-      { label: "AI Agents", href: "/products/ai-agents" },
-      { label: "OTP & Transactional SMS", href: "/products/otp-sms" },
-      { label: "Quick SMS", href: "/products/quick-sms" },
-      { label: "Reseller / White-label", href: "/products/reseller" },
-      { label: "Inbox", href: "/products/inbox" },
-      { label: "Automation", href: "/products/automation" },
-      { label: "Integration", href: "/products/integrations" },
-      { label: "Email", href: "/products/email" },
-      { label: "Voice", href: "/products/voice" },
-      { label: "Live chat", href: "/products/live-chat" },
-      { label: "Agentic AI", href: "/products/ai-agentic" },
+      { label: "Bulk SMS", href: "/products/bulk-sms/" },
+      { label: "RCS Business Messaging", href: "/products/rcs/" },
+      { label: "WhatsApp Business API", href: "/products/whatsapp-business-api/" },
+      { label: "AI Agents", href: "/products/ai-agents/" },
+      { label: "OTP & Transactional SMS", href: "/products/otp-sms/" },
+      { label: "Quick SMS", href: "/products/quick-sms/" },
+      { label: "Reseller / White-label", href: "/products/reseller/" },
+      { label: "Inbox", href: "/products/inbox/" },
+      { label: "Automation", href: "/products/automation/" },
+      { label: "Integration", href: "/products/integrations/" },
+      { label: "Email", href: "/products/email/" },
+      { label: "Voice", href: "/products/voice/" },
+      { label: "Live chat", href: "/products/live-chat/" },
+      { label: "Agentic AI", href: "/products/ai-agentic/" },
     ],
   },
   {
     title: "Solutions",
     links: [
-      { label: "E-commerce & D2C", href: "/solutions/ecommerce" },
-      { label: "Banking & Fintech", href: "/solutions/banking-fintech" },
-      { label: "Healthcare", href: "/solutions/healthcare" },
-      { label: "Education", href: "/solutions/education" },
-      { label: "Logistics", href: "/solutions/logistics" },
-      { label: "Real Estate", href: "/solutions/real-estate" },
-      { label: "Retail & Hospitality", href: "/solutions/retail" },
-      { label: "SaaS / B2B", href: "/solutions/saas-b2b" },
-      { label: "Restaurant", href: "/solutions/restaurant" },
+      { label: "E-commerce & D2C", href: "/solutions/ecommerce/" },
+      { label: "Banking & Fintech", href: "/solutions/banking-fintech/" },
+      { label: "Healthcare", href: "/solutions/healthcare/" },
+      { label: "Education", href: "/solutions/education/" },
+      { label: "Logistics", href: "/solutions/logistics/" },
+      { label: "Real Estate", href: "/solutions/real-estate/" },
+      { label: "Retail & Hospitality", href: "/solutions/retail/" },
+      { label: "SaaS / B2B", href: "/solutions/saas-b2b/" },
+      { label: "Restaurant", href: "/solutions/restaurant/" },
     ],
   },
   {
     title: "Developers",
     links: [
-      { label: "API docs", href: "/developers/api-docs" },
-      { label: "Quickstart", href: "/developers/quickstart" },
-      { label: "SMS API reference", href: "/developers/sms-api" },
-      { label: "XML API", href: "/developers/xml-api" },
+      { label: "API docs", href: "/developers/api-docs/" },
+      { label: "Quickstart", href: "/developers/quickstart/" },
+      { label: "SMS API reference", href: "/developers/sms-api/" },
+      { label: "XML API", href: "/developers/xml-api/" },
     ],
   },
   {
     title: "Resources",
     links: [
-      { label: "Blog", href: "/blog" },
-      { label: "DLT registration guide", href: "/blog/dlt-registration-guide" },
-      { label: "Long SMS messages", href: "/long-sms-messages" },
-      { label: "DND: the consumer guide", href: "/blog/dnd-means" },
-      { label: "Free SMS online", href: "/resources/tools/free-sms-without-registration" },
-      { label: "SMS tools", href: "/resources/tools" },
-      { label: "SMS bomber (legal alternative)", href: "/resources/tools/sms-bomber" },
-      { label: "Help centre", href: "/resources/help" },
-      { label: "Glossary", href: "/resources/glossary" },
-      { label: "Compare alternatives", href: "/compare" },
-      { label: "Status", href: "/resources/status" },
-      { label: "Changelog", href: "/resources/changelog" },
+      { label: "Blog", href: "/blog/" },
+      { label: "DLT registration guide", href: "/blog/dlt-registration-guide/" },
+      { label: "Long SMS messages", href: "/long-sms-messages/" },
+      { label: "DND: the consumer guide", href: "/blog/dnd-means/" },
+      { label: "Free SMS online", href: "/resources/tools/free-sms-without-registration/" },
+      { label: "SMS tools", href: "/resources/tools/" },
+      { label: "SMS bomber (legal alternative)", href: "/resources/tools/sms-bomber/" },
+      { label: "Help centre", href: "/resources/help/" },
+      { label: "Glossary", href: "/resources/glossary/" },
+      { label: "Compare alternatives", href: "/compare/" },
+      { label: "Status", href: "/resources/status/" },
+      { label: "Changelog", href: "/resources/changelog/" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About", href: "/company/about" },
-      { label: "Careers", href: "/company/careers" },
-      { label: "Contact", href: "/company/contact" },
+      { label: "About", href: "/company/about/" },
+      { label: "Careers", href: "/company/careers/" },
+      { label: "Contact", href: "/company/contact/" },
     ],
   },
   {
     title: "Legal",
     links: [
-      { label: "Privacy policy", href: "/legal/privacy" },
-      { label: "Terms of service", href: "/legal/terms" },
-      { label: "Acceptable use", href: "/legal/acceptable-use" },
-      { label: "Data Processing Addendum", href: "/legal/dpa" },
-      { label: "DPDPA notice", href: "/legal/dpdpa" },
-      { label: "Cookie policy", href: "/legal/cookie-policy" },
+      { label: "Privacy policy", href: "/legal/privacy/" },
+      { label: "Terms of service", href: "/legal/terms/" },
+      { label: "Acceptable use", href: "/legal/acceptable-use/" },
+      { label: "Data Processing Addendum", href: "/legal/dpa/" },
+      { label: "DPDPA notice", href: "/legal/dpdpa/" },
+      { label: "Cookie policy", href: "/legal/cookie-policy/" },
     ],
   },
 ]
@@ -135,7 +135,7 @@ export function SiteFooter() {
               </span>
             </div>
             <Link
-              href="/signup"
+              href="/signup/"
               className="inline-flex w-fit items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-[13px] font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
             >
               Start Free — ₹60 Credit
@@ -173,7 +173,7 @@ export function SiteFooter() {
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
               <ManageConsentLink className="text-[12px] text-white/55 underline-offset-2 transition hover:text-white hover:underline" />
               <Link
-                href="/legal/cookie-policy"
+                href="/legal/cookie-policy/"
                 className="text-[12px] text-white/55 underline-offset-2 transition hover:text-white hover:underline"
               >
                 Cookie policy

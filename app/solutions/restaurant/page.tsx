@@ -151,8 +151,8 @@ export default function RestaurantSolutionPage() {
             </>
           }
           subtitle="Manage guest conversations, automate reservations, send order updates, collect reviews, and keep every customer interaction organized from one platform."
-          primaryCta={{ label: "Start Free", href: "/signup" }}
-          secondaryCta={{ label: "Book a demo", href: "/company/contact" }}
+          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
           trustBar={[
             { icon: CalendarCheck, label: "SMS reservations" },
             { icon: Truck, label: "WhatsApp order updates" },
@@ -484,8 +484,8 @@ export default function RestaurantSolutionPage() {
         <ProductFinalCta
           title="Give every guest a faster response."
           subtitle="Manage reservations, orders, reviews, and customer conversations from one restaurant inbox."
-          primaryCta={{ label: "Start Free", href: "/signup" }}
-          secondaryCta={{ label: "Book a demo", href: "/company/contact" }}
+          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
         />
       </main>
 
@@ -792,7 +792,7 @@ function PriceCard({
       </ul>
       <div className="mt-7 flex flex-col gap-2.5">
         <Link
-          href="/signup"
+          href="/signup/"
           className={`group inline-flex w-full items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition ${featured
               ? "bg-primary text-primary-foreground shadow-xl shadow-primary/25 hover:brightness-110"
               : "border border-border bg-background text-foreground hover:border-primary/40 hover:bg-secondary"
@@ -802,7 +802,7 @@ function PriceCard({
           {featured ? <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" /> : null}
         </Link>
         <Link
-          href="/company/contact"
+          href="/company/contact/"
           className="inline-flex w-full items-center justify-center rounded-lg px-5 py-2.5 text-[13px] font-medium text-muted-foreground transition hover:text-foreground"
         >
           Book Demo

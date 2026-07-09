@@ -277,8 +277,8 @@ export default function CompareWatiPage() {
         <ProductFinalCta
           title="See SMSLocal on your own inbox."
           subtitle="₹60 free credit, no card. Connect a WhatsApp number, send a real broadcast, and compare on your own data."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
         />
       </main>
 

@@ -91,8 +91,8 @@ export default function EcommerceSolutionPage() {
             </>
           }
           subtitle="Confirm orders, recover carts, blast festive sales, and run AI WhatsApp agents that nudge browsers to buy — all from one dashboard."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant templates" },
             { icon: Bot, label: "AI WhatsApp in 8 Indian languages" },
@@ -170,7 +170,7 @@ export default function EcommerceSolutionPage() {
                 title: "Order alerts & shipping updates",
                 description:
                   "DLT-approved transactional templates for every order event. 24/7 delivery with smart route failover so updates land on time.",
-                href: "/products/otp-sms",
+                href: "/products/otp-sms/",
                 linkLabel: "Transactional SMS details",
               },
               {
@@ -178,7 +178,7 @@ export default function EcommerceSolutionPage() {
                 title: "Cart recovery with AI WhatsApp",
                 description:
                   "Train an AI agent on your catalogue. It follows up on abandoned carts, answers product questions, and closes the sale — in the language the customer shops in.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "WhatsApp + AI details",
               },
               {
@@ -186,7 +186,7 @@ export default function EcommerceSolutionPage() {
                 title: "Festive campaigns at scale",
                 description:
                   "Diwali, Holi, Independence Day, Black Friday — launch multi-million-SMS blasts with smart route failover so the 7pm send actually lands at 7pm.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Bulk SMS details",
               },
               {
@@ -194,7 +194,7 @@ export default function EcommerceSolutionPage() {
                 title: "Login & checkout OTPs",
                 description:
                   "Priority route with 98% under 1 sec delivery on clean traffic. Automatic retry and fallback to keep conversions from dropping.",
-                href: "/products/otp-sms",
+                href: "/products/otp-sms/",
                 linkLabel: "OTP API details",
               },
             ]}
@@ -246,8 +246,8 @@ export default function EcommerceSolutionPage() {
         <ProductFinalCta
           title="Start selling more with every message."
           subtitle="Free trial with ₹60 credit. No card, no monthly plan, no lock-in — just send."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
         />
       </main>
 

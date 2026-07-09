@@ -40,7 +40,7 @@ export function CompareHero({ competitor, tagline, intro, lastUpdated }: Compare
         <nav className="mb-6 flex items-center justify-center gap-2 text-xs text-white/50" aria-label="Breadcrumb">
           <Link href="/" className="hover:text-white/80">Home</Link>
           <span>/</span>
-          <Link href="/compare" className="hover:text-white/80">Compare</Link>
+          <Link href="/compare/" className="hover:text-white/80">Compare</Link>
           <span>/</span>
           <span className="text-white/80">vs {competitor}</span>
         </nav>

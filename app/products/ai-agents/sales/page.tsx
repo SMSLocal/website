@@ -127,8 +127,8 @@ export default function SalesAgentPage() {
             </>
           }
           subtitle="Recommend products, answer buyer questions, and guide customers to checkout inside the conversation, on every channel."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: PackageSearch, label: "Recommends from your catalog" },
             { icon: ShoppingCart, label: "Recovers carts automatically" },
@@ -254,13 +254,13 @@ export default function SalesAgentPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agents"
+                href="/products/ai-agents/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 See all AI agents
               </Link>
               <Link
-                href="/solutions/ecommerce"
+                href="/solutions/ecommerce/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Retail &amp; D2C solutions
@@ -293,10 +293,10 @@ export default function SalesAgentPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agents", label: "All AI agent use cases" },
-                { href: "/products/ai-agentic", label: "How agentic AI works" },
-                { href: "/solutions/ecommerce", label: "E-commerce & D2C solutions" },
-                { href: "/compare", label: "Compare SMSLocal with alternatives" },
+                { href: "/products/ai-agents/", label: "All AI agent use cases" },
+                { href: "/products/ai-agentic/", label: "How agentic AI works" },
+                { href: "/solutions/ecommerce/", label: "E-commerce & D2C solutions" },
+                { href: "/compare/", label: "Compare SMSLocal with alternatives" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -315,8 +315,8 @@ export default function SalesAgentPage() {
         <ProductFinalCta
           title="Turn more conversations into orders."
           subtitle="Connect your catalog, train the agent on your products, and start converting chats into sales — across every channel your customers already use."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

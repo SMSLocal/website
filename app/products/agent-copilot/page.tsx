@@ -112,8 +112,8 @@ export default function AgentCopilotPage() {
             </>
           }
           subtitle="Reply drafting, thread summaries, and knowledge-grounded answers that make your human team faster and more consistent."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: Sparkles, label: "On-brand reply drafts" },
             { icon: FileText, label: "5-second thread summaries" },
@@ -236,13 +236,13 @@ export default function AgentCopilotPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agentic"
+                href="/products/ai-agentic/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Agentic AI
               </Link>
               <Link
-                href="/products/omnichannel-inbox"
+                href="/products/omnichannel-inbox/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Omnichannel inbox
@@ -275,10 +275,10 @@ export default function AgentCopilotPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic",        label: "Agentic AI — automate support and sales" },
-                { href: "/products/omnichannel-inbox", label: "Omnichannel inbox — one place for every channel" },
-                { href: "/products/analytics",         label: "Analytics — CSAT, NPS, and campaign results" },
-                { href: "/compare",                    label: "Compare SMSLocal with alternatives" },
+                { href: "/products/ai-agentic/",        label: "Agentic AI — automate support and sales" },
+                { href: "/products/omnichannel-inbox/", label: "Omnichannel inbox — one place for every channel" },
+                { href: "/products/analytics/",         label: "Analytics — CSAT, NPS, and campaign results" },
+                { href: "/compare/",                    label: "Compare SMSLocal with alternatives" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -297,8 +297,8 @@ export default function AgentCopilotPage() {
         <ProductFinalCta
           title="Give every agent an AI copilot."
           subtitle="Drafted replies, thread summaries, and knowledge-grounded answers — connect your inbox and let your team respond faster and more consistently."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

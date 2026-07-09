@@ -26,11 +26,11 @@ export default function PrivacyPolicyPage() {
         lastUpdated={LAST_UPDATED}
         effectiveDate={EFFECTIVE_DATE}
         relatedLinks={[
-          { label: "Terms of service", href: "/legal/terms" },
-          { label: "DPDPA notice", href: "/legal/dpdpa" },
-          { label: "Cookie policy", href: "/legal/cookie-policy" },
-          { label: "Data Processing Addendum", href: "/legal/dpa" },
-          { label: "Acceptable use", href: "/legal/acceptable-use" },
+          { label: "Terms of service", href: "/legal/terms/" },
+          { label: "DPDPA notice", href: "/legal/dpdpa/" },
+          { label: "Cookie policy", href: "/legal/cookie-policy/" },
+          { label: "Data Processing Addendum", href: "/legal/dpa/" },
+          { label: "Acceptable use", href: "/legal/acceptable-use/" },
         ]}
         sections={[
           {
@@ -283,7 +283,7 @@ export default function PrivacyPolicyPage() {
                   remember your preferences, secure your account, and measure usage. You can control cookies
                   through your browser settings, though disabling certain cookies may limit some features. See
                   our{" "}
-                  <a href="/legal/cookie-policy" className="font-medium text-primary hover:underline">
+                  <a href="/legal/cookie-policy/" className="font-medium text-primary hover:underline">
                     Cookie Policy
                   </a>{" "}
                   for more detail.

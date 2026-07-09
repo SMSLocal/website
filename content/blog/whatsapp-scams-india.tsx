@@ -293,7 +293,7 @@ export default function WhatsappScamsIndiaPost() {
       <OL>
         <LI>
           <Strong>
-            Use the official <A href="/products/whatsapp-business-api">WhatsApp Business API</A>{" "}
+            Use the official <A href="/products/whatsapp-business-api/">WhatsApp Business API</A>{" "}
             with a verified green tick.
           </Strong>{" "}
           The verified badge tells customers Meta has authenticated your account. Scammers
@@ -301,7 +301,7 @@ export default function WhatsappScamsIndiaPost() {
         </LI>
         <LI>
           <Strong>Publish your official WhatsApp number prominently.</Strong> Put your{" "}
-          <A href="/blog/whatsapp-marketing-india">verified WhatsApp Business account</A> number on
+          <A href="/blog/whatsapp-marketing-india/">verified WhatsApp Business account</A> number on
           your website, app, invoices, and packaging so customers know which number to trust. Any
           other number claiming to be you is an impersonator.
         </LI>

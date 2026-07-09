@@ -274,8 +274,8 @@ export default function CompareInteraktPage() {
         <ProductFinalCta
           title="See SMSLocal on your own storefront."
           subtitle="₹60 free credit, no card. Connect a WhatsApp number, wire an OTP into checkout, run one abandoned-cart broadcast — decide from there."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
         />
       </main>
 

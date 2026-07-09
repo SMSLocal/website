@@ -119,8 +119,8 @@ export default function RcsBroadcastingPage() {
             </>
           }
           subtitle="Send branded, interactive RCS campaigns with automatic SMS fallback, then let agentic AI handle the replies."
-          primaryCta={{ label: "Start Broadcasting", href: "/signup" }}
-          secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+          primaryCta={{ label: "Start Broadcasting", href: "/signup/" }}
+          secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
           trustBar={[
             { icon: ImageIcon, label: "Rich cards and carousels" },
             { icon: BadgeCheck, label: "Verified brand sender" },
@@ -242,13 +242,13 @@ export default function RcsBroadcastingPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/rcs"
+                href="/products/rcs/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 RCS Business Messaging
               </Link>
               <Link
-                href="/channels/whatsapp-broadcasting"
+                href="/channels/whatsapp-broadcasting/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 WhatsApp Broadcasting
@@ -281,10 +281,10 @@ export default function RcsBroadcastingPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/rcs",                    label: "RCS Business Messaging — rich, verified messaging" },
-                { href: "/channels/whatsapp-broadcasting",  label: "WhatsApp Broadcasting — campaigns and conversations" },
-                { href: "/products/bulk-sms",                label: "Bulk SMS — reliable fallback at scale" },
-                { href: "/compare",                          label: "See how SMSLocal compares" },
+                { href: "/products/rcs/",                    label: "RCS Business Messaging — rich, verified messaging" },
+                { href: "/channels/whatsapp-broadcasting/",  label: "WhatsApp Broadcasting — campaigns and conversations" },
+                { href: "/products/bulk-sms/",                label: "Bulk SMS — reliable fallback at scale" },
+                { href: "/compare/",                          label: "See how SMSLocal compares" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -303,8 +303,8 @@ export default function RcsBroadcastingPage() {
         <ProductFinalCta
           title="Run branded RCS campaigns with AI built in."
           subtitle="Design a rich card, let automatic SMS fallback cover every recipient, and let agentic AI handle the replies."
-          primaryCta={{ label: "Start Broadcasting", href: "/signup" }}
-          secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+          primaryCta={{ label: "Start Broadcasting", href: "/signup/" }}
+          secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

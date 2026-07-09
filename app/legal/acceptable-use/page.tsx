@@ -23,9 +23,9 @@ export default function AcceptableUsePage() {
         lastUpdated="April 22, 2026"
         effectiveDate="April 22, 2026"
         relatedLinks={[
-          { label: "Terms of service", href: "/legal/terms" },
-          { label: "Privacy policy", href: "/legal/privacy" },
-          { label: "DPDPA notice", href: "/legal/dpdpa" },
+          { label: "Terms of service", href: "/legal/terms/" },
+          { label: "Privacy policy", href: "/legal/privacy/" },
+          { label: "DPDPA notice", href: "/legal/dpdpa/" },
         ]}
         sections={[
           {

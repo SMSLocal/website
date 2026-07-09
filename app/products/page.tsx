@@ -39,7 +39,7 @@ const PRIMARY_PRODUCTS: Product[] = [
   {
     name: "Bulk SMS",
     tag: "Campaigns at scale",
-    href: "/products/bulk-sms",
+    href: "/products/bulk-sms/",
     icon: <Send className="h-6 w-6" />,
     accent: "from-primary/25 to-primary/5",
     description:
@@ -54,7 +54,7 @@ const PRIMARY_PRODUCTS: Product[] = [
   {
     name: "RCS Business Messaging",
     tag: "Rich, verified messaging",
-    href: "/products/rcs",
+    href: "/products/rcs/",
     icon: <Star className="h-6 w-6" />,
     accent: "from-amber-500/25 to-amber-500/5",
     description:
@@ -69,7 +69,7 @@ const PRIMARY_PRODUCTS: Product[] = [
   {
     name: "WhatsApp Business API",
     tag: "Two-way conversations",
-    href: "/products/whatsapp-business-api",
+    href: "/products/whatsapp-business-api/",
     icon: <MessageCircle className="h-6 w-6" />,
     accent: "from-emerald-500/25 to-emerald-500/5",
     description:
@@ -84,7 +84,7 @@ const PRIMARY_PRODUCTS: Product[] = [
   {
     name: "OTP SMS",
     tag: "Authentication",
-    href: "/products/otp-sms",
+    href: "/products/otp-sms/",
     icon: <ShieldCheck className="h-6 w-6" />,
     accent: "from-accent/25 to-accent/5",
     description:
@@ -99,7 +99,7 @@ const PRIMARY_PRODUCTS: Product[] = [
   {
     name: "Quick SMS",
     tag: "No-code dashboard",
-    href: "/products/quick-sms",
+    href: "/products/quick-sms/",
     icon: <Zap className="h-6 w-6" />,
     accent: "from-sky-500/25 to-sky-500/5",
     description:
@@ -117,7 +117,7 @@ const SECONDARY_PRODUCTS: Product[] = [
   {
     name: "AI Agents",
     tag: "Conversational AI",
-    href: "/products/ai-agents",
+    href: "/products/ai-agents/",
     icon: <Bot className="h-6 w-6" />,
     accent: "from-violet-500/25 to-violet-500/5",
     description:
@@ -132,7 +132,7 @@ const SECONDARY_PRODUCTS: Product[] = [
   {
     name: "Reseller / White-label",
     tag: "Partner platform",
-    href: "/products/reseller",
+    href: "/products/reseller/",
     icon: <Boxes className="h-6 w-6" />,
     accent: "from-amber-500/25 to-amber-500/5",
     description:
@@ -199,13 +199,13 @@ export default function ProductsPage() {
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-3">
               <Link
-                href="/signup"
+                href="/signup/"
                 className="inline-flex items-center justify-center rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:bg-primary/90"
               >
                 Start building free
               </Link>
               <Link
-                href="/pricing"
+                href="/pricing/"
                 className="inline-flex items-center justify-center rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10"
               >
                 See pricing

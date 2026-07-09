@@ -156,7 +156,7 @@ export function SecurityShield() {
           </p>
         </div>
         <Link
-          href="/legal/privacy"
+          href="/legal/privacy/"
           className="group inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-primary hover:underline"
         >
           Read our data &amp; privacy practices

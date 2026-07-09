@@ -76,49 +76,49 @@ const NAV: NavItem[] = [
       {
         heading: "Platform",
         items: [
-          { label: "Platform Overview", href: "/platform", icon: Sparkles, description: "One product, every capability" },
-          { label: "Agentic AI", href: "/products/ai-agentic", icon: Bot, description: "Takes action, not just answers" },
-          { label: "AI Agents", href: "/products/ai-agents", icon: Sparkles, description: "Service, sales, booking & more" },
-          { label: "Voice AI Agent", href: "/voice-ai-agents", icon: Mic, description: "AI that answers the phone" },
-          { label: "Agent Copilot", href: "/products/agent-copilot", icon: MessageSquare, description: "AI inside the reply box" },
-          { label: "Omnichannel Inbox", href: "/products/omnichannel-inbox", icon: Inbox, description: "Every channel, one inbox" },
+          { label: "Platform Overview", href: "/platform/", icon: Sparkles, description: "One product, every capability" },
+          { label: "Agentic AI", href: "/products/ai-agentic/", icon: Bot, description: "Takes action, not just answers" },
+          { label: "AI Agents", href: "/products/ai-agents/", icon: Sparkles, description: "Service, sales, booking & more" },
+          { label: "Voice AI Agent", href: "/voice-ai-agents/", icon: Mic, description: "AI that answers the phone" },
+          { label: "Agent Copilot", href: "/products/agent-copilot/", icon: MessageSquare, description: "AI inside the reply box" },
+          { label: "Omnichannel Inbox", href: "/products/omnichannel-inbox/", icon: Inbox, description: "Every channel, one inbox" },
         ],
       },
       {
         heading: "Channels",
         items: [
-          { label: "WhatsApp", href: "/channels/whatsapp", icon: MessageCircle, description: "Official Business API" },
-          { label: "Instagram", href: "/channels/instagram", icon: Instagram, description: "DMs, answered by AI" },
-          { label: "Messenger", href: "/channels/messenger", icon: Facebook, description: "Facebook Messenger, 24/7" },
-          { label: "Web Chat", href: "/channels/web-chat", icon: Globe, description: "Widget for your site" },
-          { label: "Voice", href: "/products/voice", icon: PhoneCall, description: "IVR, OTP & voice broadcast" },
-          { label: "Social", href: "/channels/social", icon: Share2, description: "Every social DM, unified" },
+          { label: "WhatsApp", href: "/channels/whatsapp/", icon: MessageCircle, description: "Official Business API" },
+          { label: "Instagram", href: "/channels/instagram/", icon: Instagram, description: "DMs, answered by AI" },
+          { label: "Messenger", href: "/channels/messenger/", icon: Facebook, description: "Facebook Messenger, 24/7" },
+          { label: "Web Chat", href: "/channels/web-chat/", icon: Globe, description: "Widget for your site" },
+          { label: "Voice", href: "/products/voice/", icon: PhoneCall, description: "IVR, OTP & voice broadcast" },
+          { label: "Social", href: "/channels/social/", icon: Share2, description: "Every social DM, unified" },
         ],
       },
       {
         heading: "Broadcasting & Numbers",
         items: [
-          { label: "WhatsApp Broadcasting", href: "/channels/whatsapp-broadcasting", icon: MessageSquareText, description: "Template campaigns at scale" },
-          { label: "RCS Messaging", href: "/products/rcs", icon: Sparkles, description: "Rich cards & suggested replies" },
-          { label: "RCS Broadcasting", href: "/channels/rcs-broadcasting", icon: Sparkles, description: "Rich campaigns + SMS fallback" },
-          { label: "SMS Broadcasting", href: "/channels/sms-broadcasting", icon: Send, description: "Bulk A2P campaigns" },
-          { label: "Virtual Numbers", href: "/numbers/did", icon: Package, description: "Local, toll-free & short codes" },
-          { label: "Integrations", href: "/products/integrations", icon: Puzzle, description: "200+ apps & CRMs" },
+          { label: "WhatsApp Broadcasting", href: "/channels/whatsapp-broadcasting/", icon: MessageSquareText, description: "Template campaigns at scale" },
+          { label: "RCS Messaging", href: "/products/rcs/", icon: Sparkles, description: "Rich cards & suggested replies" },
+          { label: "RCS Broadcasting", href: "/channels/rcs-broadcasting/", icon: Sparkles, description: "Rich campaigns + SMS fallback" },
+          { label: "SMS Broadcasting", href: "/channels/sms-broadcasting/", icon: Send, description: "Bulk A2P campaigns" },
+          { label: "Virtual Numbers", href: "/numbers/did/", icon: Package, description: "Local, toll-free & short codes" },
+          { label: "Integrations", href: "/products/integrations/", icon: Puzzle, description: "200+ apps & CRMs" },
         ],
       },
       {
         heading: "Why SMSLocal",
         items: [
-          { label: "Why SMSLocal", href: "/why-smslocal", icon: Bot, description: "One platform vs the stack" },
-          { label: "Compare", href: "/compare", icon: BarChart3, description: "vs Haptik, Twilio & more" },
-          { label: "Security", href: "/platform/security", icon: ShieldCheck, description: "SSO, RBAC & audit logs" },
-          { label: "Analytics", href: "/products/analytics", icon: Activity, description: "Dashboards & insights" },
-          { label: "Partnerships", href: "/partnerships", icon: Users, description: "Agency & reseller program" },
-          { label: "AI Consulting", href: "/services/ai-consulting", icon: Wrench, description: "POC to production" },
+          { label: "Why SMSLocal", href: "/why-smslocal/", icon: Bot, description: "One platform vs the stack" },
+          { label: "Compare", href: "/compare/", icon: BarChart3, description: "vs Haptik, Twilio & more" },
+          { label: "Security", href: "/platform/security/", icon: ShieldCheck, description: "SSO, RBAC & audit logs" },
+          { label: "Analytics", href: "/products/analytics/", icon: Activity, description: "Dashboards & insights" },
+          { label: "Partnerships", href: "/partnerships/", icon: Users, description: "Agency & reseller program" },
+          { label: "AI Consulting", href: "/services/ai-consulting/", icon: Wrench, description: "POC to production" },
         ],
       },
     ],
-    footer: { label: "View all products", href: "/products" },
+    footer: { label: "View all products", href: "/products/" },
 
   },
   {
@@ -127,57 +127,57 @@ const NAV: NavItem[] = [
       {
         heading: "By industry",
         items: [
-          { label: "E-commerce & D2C", href: "/solutions/ecommerce", icon: ShoppingBag },
-          { label: "Banking & Fintech", href: "/solutions/banking-fintech", icon: Building2 },
-          { label: "Healthcare", href: "/solutions/healthcare", icon: Stethoscope },
-          { label: "Education & EdTech", href: "/solutions/education", icon: GraduationCap },
+          { label: "E-commerce & D2C", href: "/solutions/ecommerce/", icon: ShoppingBag },
+          { label: "Banking & Fintech", href: "/solutions/banking-fintech/", icon: Building2 },
+          { label: "Healthcare", href: "/solutions/healthcare/", icon: Stethoscope },
+          { label: "Education & EdTech", href: "/solutions/education/", icon: GraduationCap },
         ],
       },
       {
         heading: "More industries",
         items: [
-          { label: "Logistics & Delivery", href: "/solutions/logistics", icon: Truck },
-          { label: "Real Estate", href: "/solutions/real-estate", icon: Building2 },
-          { label: "Retail & Hospitality", href: "/solutions/retail", icon: Store },
-          { label: "Healthcare networks", href: "/solutions/healthcare", icon: HeartPulse },
+          { label: "Logistics & Delivery", href: "/solutions/logistics/", icon: Truck },
+          { label: "Real Estate", href: "/solutions/real-estate/", icon: Building2 },
+          { label: "Retail & Hospitality", href: "/solutions/retail/", icon: Store },
+          { label: "Healthcare networks", href: "/solutions/healthcare/", icon: HeartPulse },
         ],
       },
       {
         heading: "More sectors",
         items: [
-          { label: "SaaS / B2B", href: "/solutions/saas-b2b", icon: Cloud },
-          { label: "Restaurant", href: "/solutions/restaurant", icon: UtensilsCrossed },
+          { label: "SaaS / B2B", href: "/solutions/saas-b2b/", icon: Cloud },
+          { label: "Restaurant", href: "/solutions/restaurant/", icon: UtensilsCrossed },
         ],
       },
       {
         heading: "Specialized industries",
         items: [
-          { label: "Travel & Hospitality", href: "/industry/travel-and-hospitality", icon: Plane },
-          { label: "Media & Entertainment", href: "/industry/media-entertainment", icon: Tv },
-          { label: "Insurance", href: "/industry/insurance", icon: Umbrella },
-          { label: "Mortgage", href: "/industry/mortgage", icon: Home },
-          { label: "Telecom", href: "/industry/telecom", icon: RadioTower },
+          { label: "Travel & Hospitality", href: "/industry/travel-and-hospitality/", icon: Plane },
+          { label: "Media & Entertainment", href: "/industry/media-entertainment/", icon: Tv },
+          { label: "Insurance", href: "/industry/insurance/", icon: Umbrella },
+          { label: "Mortgage", href: "/industry/mortgage/", icon: Home },
+          { label: "Telecom", href: "/industry/telecom/", icon: RadioTower },
         ],
       },
     ],
-    footer: { label: "View all industries", href: "/solutions" },
-    featured: { icon: PhoneCall, title: "Talk to our team", body: "Not sure which fits? We'll map SMSLocal to your use case.", cta: "Talk to sales", href: "/company/contact" },
+    footer: { label: "View all industries", href: "/solutions/" },
+    featured: { icon: PhoneCall, title: "Talk to our team", body: "Not sure which fits? We'll map SMSLocal to your use case.", cta: "Talk to sales", href: "/company/contact/" },
   },
-  { label: "Pricing", href: "/pricing" },
+  { label: "Pricing", href: "/pricing/" },
   {
     label: "Developers",
     columns: [
       {
         heading: "Build",
         items: [
-          { label: "API docs", href: "/developers/api-docs", icon: Code2, description: "Full REST reference" },
-          { label: "Quickstart", href: "/developers/quickstart", icon: Zap, description: "Send your first message in 5 min" },
-          { label: "SMS API reference", href: "/developers/sms-api", icon: MessageSquare, description: "Send, status, webhooks — full spec" },
+          { label: "API docs", href: "/developers/api-docs/", icon: Code2, description: "Full REST reference" },
+          { label: "Quickstart", href: "/developers/quickstart/", icon: Zap, description: "Send your first message in 5 min" },
+          { label: "SMS API reference", href: "/developers/sms-api/", icon: MessageSquare, description: "Send, status, webhooks — full spec" },
         ],
       },
     ],
-    footer: { label: "Open developer hub", href: "/developers" },
-    featured: { icon: Zap, title: "Send in 5 minutes", body: "Live API keys on signup — start with the Quickstart.", cta: "Open Quickstart", href: "/developers/quickstart" },
+    footer: { label: "Open developer hub", href: "/developers/" },
+    featured: { icon: Zap, title: "Send in 5 minutes", body: "Live API keys on signup — start with the Quickstart.", cta: "Open Quickstart", href: "/developers/quickstart/" },
   },
   {
     label: "Resources",
@@ -185,29 +185,29 @@ const NAV: NavItem[] = [
       {
         heading: "Learn",
         items: [
-          { label: "Blog", href: "/blog", icon: FileText },
-          { label: "DLT registration guide", href: "/blog/dlt-registration-guide", icon: BookOpen },
-          { label: "WhatsApp API guide", href: "/resources/whatsapp-api-guide", icon: BookOpen },
+          { label: "Blog", href: "/blog/", icon: FileText },
+          { label: "DLT registration guide", href: "/blog/dlt-registration-guide/", icon: BookOpen },
+          { label: "WhatsApp API guide", href: "/resources/whatsapp-api-guide/", icon: BookOpen },
         ],
       },
       {
         heading: "Support",
         items: [
-          { label: "Help centre", href: "/resources/help", icon: LifeBuoy },
-          { label: "Glossary", href: "/resources/glossary", icon: BookOpen },
-          { label: "Tools", href: "/resources/tools", icon: Wrench },
-          { label: "Customer stories", href: "/resources/customer-stories", icon: Users },
+          { label: "Help centre", href: "/resources/help/", icon: LifeBuoy },
+          { label: "Glossary", href: "/resources/glossary/", icon: BookOpen },
+          { label: "Tools", href: "/resources/tools/", icon: Wrench },
+          { label: "Customer stories", href: "/resources/customer-stories/", icon: Users },
         ],
       },
       {
         heading: "Stay updated",
         items: [
-          { label: "Status", href: "/resources/status", icon: Activity },
-          { label: "Changelog", href: "/resources/changelog", icon: FileClock },
+          { label: "Status", href: "/resources/status/", icon: Activity },
+          { label: "Changelog", href: "/resources/changelog/", icon: FileClock },
         ],
       },
     ],
-    featured: { icon: BookOpen, title: "DLT registration guide", body: "Everything you need to get DLT-approved in India.", cta: "Read the guide", href: "/blog/dlt-registration-guide" },
+    featured: { icon: BookOpen, title: "DLT registration guide", body: "Everything you need to get DLT-approved in India.", cta: "Read the guide", href: "/blog/dlt-registration-guide/" },
   },
 ]
 
@@ -220,17 +220,17 @@ export function SiteHeader() {
       {/* Utility bar */}
       <div className="hidden border-b border-border text-[11px] text-muted-foreground md:block">
         <div className="mx-auto flex max-w-7xl items-center justify-end gap-5 px-6 py-1.5">
-          <Link href="/resources/help" className="inline-flex items-center gap-1.5 hover:text-foreground">
+          <Link href="/resources/help/" className="inline-flex items-center gap-1.5 hover:text-foreground">
             <HeadphonesIcon className="h-3 w-3" />
             Support
           </Link>
           <span className="h-3 w-px bg-border" />
-          <Link href="/company/contact" className="inline-flex items-center gap-1.5 hover:text-foreground">
+          <Link href="/company/contact/" className="inline-flex items-center gap-1.5 hover:text-foreground">
             <PhoneCall className="h-3 w-3" />
             Talk to sales
           </Link>
           <span className="h-3 w-px bg-border" />
-          <Link href="/signin" className="hover:text-foreground">
+          <Link href="/signin/" className="hover:text-foreground">
             Sign in
           </Link>
           <span className="h-3 w-px bg-border" />
@@ -342,13 +342,13 @@ export function SiteHeader() {
         {/* CTA cluster */}
         <div className="flex items-center gap-2">
           <Link
-            href="/signin"
+            href="/signin/"
             className="hidden rounded-md px-3 py-1.5 text-[13.5px] font-medium text-foreground/80 hover:text-foreground md:inline-flex"
           >
             Sign in
           </Link>
           <Link
-            href="/signup"
+            href="/signup/"
             className="group relative inline-flex items-center gap-1.5 overflow-hidden rounded-md bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
           >
             <span className="relative z-10">Start Free — ₹60 Credit</span>
@@ -433,7 +433,7 @@ export function SiteHeader() {
               )
             })}
             <Link
-              href="/signin"
+              href="/signin/"
               className="rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-secondary"
               onClick={() => setMobileOpen(false)}
             >

@@ -12,6 +12,7 @@ import { BlogCard } from "@/components/blog/blog-card"
 import { BlogToc } from "@/components/blog/blog-toc"
 import { ALL_POSTS, formatBlogDate, getPost, getRelatedPosts } from "@/lib/blog"
 import { buildArticleMetadata } from "@/lib/seo"
+import { SITE } from "@/lib/seo/config"
 
 export function generateStaticParams() {
   return ALL_POSTS.map((p) => ({ slug: p.meta.slug }))
@@ -25,17 +26,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const post = getPost(slug)
-  if (!post) {
-    return {
-      title: "Article not found",
-      robots: { index: false, follow: false },
-    }
-  }
+  if (!post) notFound()
   const { meta } = post
   return buildArticleMetadata({
     title: meta.title,
     description: meta.description,
-    path: `/blog/${meta.slug}`,
+    path: `/blog/${meta.slug}/`,
     publishedTime: meta.date,
     modifiedTime: meta.updatedDate ?? meta.date,
     authors: [meta.author.name],
@@ -67,8 +63,8 @@ export default async function BlogPostPage({
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Blog", path: "/blog" },
-          { name: meta.title, path: `/blog/${meta.slug}` },
+          { name: "Blog", path: "/blog/" },
+          { name: meta.title, path: `/blog/${meta.slug}/` },
         ]}
       />
 
@@ -78,21 +74,26 @@ export default async function BlogPostPage({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BlogPosting",
+            "@id": `${SITE.url}/blog/${meta.slug}/#article`,
             headline: meta.title,
             description: meta.description,
+            image: meta.coverImage
+              ? [`${SITE.url}${meta.coverImage}`]
+              : [`${SITE.url}/og-default.png`],
             datePublished: meta.date,
             dateModified: meta.updatedDate ?? meta.date,
+            inLanguage: "en-IN",
             author: {
               "@type": "Organization",
               name: meta.author.name,
+              "@id": `${SITE.url}/#organization`,
             },
             publisher: {
-              "@type": "Organization",
-              name: "SMSLocal",
+              "@id": `${SITE.url}/#organization`,
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://www.smslocal.in/blog/${meta.slug}`,
+              "@id": `${SITE.url}/blog/${meta.slug}/`,
             },
           }),
         }}
@@ -117,7 +118,7 @@ export default async function BlogPostPage({
                 Home
               </Link>
               <span aria-hidden>/</span>
-              <Link href="/blog" className="hover:text-white">
+              <Link href="/blog/" className="hover:text-white">
                 Blog
               </Link>
               <span aria-hidden>/</span>
@@ -217,7 +218,7 @@ export default async function BlogPostPage({
 
               <div className="mt-10">
                 <Link
-                  href="/blog"
+                  href="/blog/"
                   className="inline-flex items-center gap-2 text-[13.5px] font-semibold text-primary hover:underline"
                 >
                   <ArrowLeft className="h-4 w-4" />
@@ -249,8 +250,8 @@ export default async function BlogPostPage({
         <ProductFinalCta
           title="₹60 free credit. No credit card."
           subtitle="Open a live account, send your first DLT-compliant SMS, and keep the test balance forever."
-          primaryCta={{ label: "Create free account", href: "/signup" }}
-          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs" }}
+          primaryCta={{ label: "Create free account", href: "/signup/" }}
+          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs/" }}
         />
       </main>
 

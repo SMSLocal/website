@@ -105,8 +105,8 @@ export default function OtpSmsPage() {
           eyebrow="OTP SMS API"
           title="OTP delivery that your users actually receive — on the first try."
           description="Priority routes to Indian operators, DLT-compliant templates, automatic fallbacks, and a simple API that your team can ship in an afternoon. Built for login, signup, payment, and high-value transaction flows."
-          primaryCta={{ label: "Get OTP API keys", href: "/signup" }}
-          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs" }}
+          primaryCta={{ label: "Get OTP API keys", href: "/signup/" }}
+          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs/" }}
           trustItems={[
             "Sub-second typical delivery",
             "DLT-compliant templates",
@@ -284,8 +284,8 @@ export default function OtpSmsPage() {
           <ProductFinalCta
             title="Give your users OTPs that just work."
             description="Get an API key in minutes, ship OTPs in an afternoon, and stop losing signups to bad delivery."
-            primaryCta={{ label: "Get OTP API keys", href: "/signup" }}
-            secondaryCta={{ label: "Talk to our team", href: "/company/contact" }}
+            primaryCta={{ label: "Get OTP API keys", href: "/signup/" }}
+            secondaryCta={{ label: "Talk to our team", href: "/company/contact/" }}
           />
         </Section>
       </main>

@@ -39,7 +39,7 @@ export default async function AppCategoryPage({ params }: { params: Promise<{ ca
         <section className="border-b border-border bg-muted/30 py-12 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <Link
-              href="/products/ai-agentic#apps"
+              href="/products/ai-agentic/#apps"
               className="inline-flex items-center gap-1.5 text-[13px] font-medium text-muted-foreground transition hover:text-foreground"
             >
               <ArrowLeft className="h-3.5 w-3.5" /> Powered by Composio
@@ -66,13 +66,13 @@ export default async function AppCategoryPage({ params }: { params: Promise<{ ca
 
             <div className="mt-7 flex flex-wrap gap-3">
               <Link
-                href="/signup"
+                href="/signup/"
                 className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-2.5 text-[13px] font-bold text-primary-foreground shadow-sm transition hover:opacity-90"
               >
                 Connect {cat.label} <ArrowRight className="h-3.5 w-3.5" />
               </Link>
               <Link
-                href="/products/ai-agentic"
+                href="/products/ai-agentic/"
                 className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-5 py-2.5 text-[13px] font-semibold text-foreground transition hover:border-primary/30"
               >
                 See all integrations
@@ -142,7 +142,7 @@ export default async function AppCategoryPage({ params }: { params: Promise<{ ca
                 One-click OAuth. No API keys to manage. Captain gets the right scopes and can start taking actions immediately.
               </p>
               <Link
-                href="/signup"
+                href="/signup/"
                 className="mt-5 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-[14px] font-bold text-primary-foreground shadow-sm transition hover:opacity-90"
               >
                 Start Free <ArrowRight className="h-4 w-4" />

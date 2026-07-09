@@ -93,8 +93,8 @@ export default function TelecomPage() {
             </>
           }
           subtitle="Handle support, billing, and notifications at scale with agents that act across every channel."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
           trustBar={[
             { icon: ShieldCheck, label: "Built for carriers, MVNOs, and ISPs" },
             { icon: Zap, label: "Built for high-volume sends" },
@@ -168,7 +168,7 @@ export default function TelecomPage() {
                 title: "Agentic AI for plans and billing",
                 description:
                   "Recommend plans, process upgrades, and answer billing questions with agents that take action, not just reply.",
-                href: "/products/ai-agentic",
+                href: "/products/ai-agentic/",
                 linkLabel: "Agentic AI details",
               },
               {
@@ -176,7 +176,7 @@ export default function TelecomPage() {
                 title: "Recharge and bill reminders",
                 description:
                   "Expiry and payment-due alerts sent as high-throughput transactional SMS, timed to each subscriber's cycle to cut disconnections.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Bulk SMS details",
               },
               {
@@ -184,7 +184,7 @@ export default function TelecomPage() {
                 title: "Notifications across every channel",
                 description:
                   "Outage and service updates delivered over SMS, WhatsApp, and RCS so subscribers hear it from you first.",
-                href: "/products/omnichannel-inbox",
+                href: "/products/omnichannel-inbox/",
                 linkLabel: "Omnichannel inbox details",
               },
               {
@@ -192,7 +192,7 @@ export default function TelecomPage() {
                 title: "Why SMSLocal",
                 description:
                   "Support, billing, and notifications share one record across every channel and campaign.",
-                href: "/compare",
+                href: "/compare/",
                 linkLabel: "See how we compare",
               },
             ]}
@@ -231,10 +231,10 @@ export default function TelecomPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic", label: "Agentic AI — act, not just answer" },
-                { href: "/products/bulk-sms", label: "Bulk SMS — high-throughput transactional alerts" },
-                { href: "/products/omnichannel-inbox", label: "Omnichannel Inbox — every channel, one queue" },
-                { href: "/compare", label: "See how SMSLocal compares" },
+                { href: "/products/ai-agentic/", label: "Agentic AI — act, not just answer" },
+                { href: "/products/bulk-sms/", label: "Bulk SMS — high-throughput transactional alerts" },
+                { href: "/products/omnichannel-inbox/", label: "Omnichannel Inbox — every channel, one queue" },
+                { href: "/compare/", label: "See how SMSLocal compares" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -253,8 +253,8 @@ export default function TelecomPage() {
         <ProductFinalCta
           title="Scale telecom support with agentic AI."
           subtitle="Support, billing, and notifications handled by agents that act across every channel."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
         />
       </main>
 

@@ -30,7 +30,7 @@ export default function DpaPage() {
           toc={TOC}
           breadcrumb={[
             { label: "Home", href: "/" },
-            { label: "Legal", href: "/legal/privacy" },
+            { label: "Legal", href: "/legal/privacy/" },
             { label: "Data Processing Addendum" },
           ]}
         >

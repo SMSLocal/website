@@ -108,8 +108,8 @@ export default function VoiceAiAgentsPage() {
             </>
           }
           subtitle="Natural voice conversations that resolve inbound and outbound calls and route the rest to a live agent."
-          primaryCta={{ label: "Experience Voice AI", href: "/company/contact" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Experience Voice AI", href: "/company/contact/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
           trustBar={[
             { icon: Mic, label: "Natural voice conversations" },
             { icon: PhoneForwarded, label: "Dynamic call routing" },
@@ -233,13 +233,13 @@ export default function VoiceAiAgentsPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agentic"
+                href="/products/ai-agentic/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Agentic AI
               </Link>
               <Link
-                href="/products/voice"
+                href="/products/voice/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Voice — IVR & broadcast
@@ -272,10 +272,10 @@ export default function VoiceAiAgentsPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic",        label: "Agentic AI — the platform behind every channel" },
-                { href: "/products/ai-agents",         label: "AI Agents — automate WhatsApp support and sales" },
-                { href: "/products/omnichannel-inbox", label: "Omnichannel inbox — one place for every channel" },
-                { href: "/compare",                    label: "Compare SMSLocal with alternatives" },
+                { href: "/products/ai-agentic/",        label: "Agentic AI — the platform behind every channel" },
+                { href: "/products/ai-agents/",         label: "AI Agents — automate WhatsApp support and sales" },
+                { href: "/products/omnichannel-inbox/", label: "Omnichannel inbox — one place for every channel" },
+                { href: "/compare/",                    label: "Compare SMSLocal with alternatives" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -294,8 +294,8 @@ export default function VoiceAiAgentsPage() {
         <ProductFinalCta
           title="Automate your phone calls with agentic AI."
           subtitle="Natural voice conversations that resolve calls and route the rest to a live agent — with full context, every time."
-          primaryCta={{ label: "Experience Voice AI", href: "/company/contact" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Experience Voice AI", href: "/company/contact/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

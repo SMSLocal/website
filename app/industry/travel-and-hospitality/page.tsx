@@ -94,8 +94,8 @@ export default function TravelHospitalityPage() {
             </>
           }
           subtitle="Handle bookings, itineraries, and support around the clock with agents that act, not just answer."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: ShieldCheck, label: "Built for airlines, hotels, OTAs, and tour operators" },
             { icon: Clock, label: "24/7 multilingual support" },
@@ -169,7 +169,7 @@ export default function TravelHospitalityPage() {
                 title: "Bookings and reservations",
                 description:
                   "Schedule and confirm bookings inside the conversation, with real-time availability checks before anything is promised.",
-                href: "/products/ai-agents/booking",
+                href: "/products/ai-agents/booking/",
                 linkLabel: "Booking agent details",
               },
               {
@@ -177,7 +177,7 @@ export default function TravelHospitalityPage() {
                 title: "Itinerary management",
                 description:
                   "Updates, changes, and reminders delivered over SMS, WhatsApp, or email, so travelers always know what's next.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "WhatsApp details",
               },
               {
@@ -185,7 +185,7 @@ export default function TravelHospitalityPage() {
                 title: "Agentic AI for every touchpoint",
                 description:
                   "One agentic layer books, updates, and supports travelers automatically, escalating to a human only when it truly needs one.",
-                href: "/products/ai-agentic",
+                href: "/products/ai-agentic/",
                 linkLabel: "Agentic AI details",
               },
               {
@@ -193,7 +193,7 @@ export default function TravelHospitalityPage() {
                 title: "Why SMSLocal",
                 description:
                   "Bookings, reminders, and campaigns share one customer record, so every touch knows the traveler's trip.",
-                href: "/compare",
+                href: "/compare/",
                 linkLabel: "See how we compare",
               },
             ]}
@@ -232,10 +232,10 @@ export default function TravelHospitalityPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agents/booking", label: "AI Agents — booking automation" },
-                { href: "/products/ai-agentic", label: "Agentic AI — act, not just answer" },
-                { href: "/products/whatsapp-business-api", label: "WhatsApp Business API — rich itinerary messages" },
-                { href: "/compare", label: "See how SMSLocal compares" },
+                { href: "/products/ai-agents/booking/", label: "AI Agents — booking automation" },
+                { href: "/products/ai-agentic/", label: "Agentic AI — act, not just answer" },
+                { href: "/products/whatsapp-business-api/", label: "WhatsApp Business API — rich itinerary messages" },
+                { href: "/compare/", label: "See how SMSLocal compares" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -254,8 +254,8 @@ export default function TravelHospitalityPage() {
         <ProductFinalCta
           title="Serve travelers with agentic AI."
           subtitle="Bookings, itineraries, and support handled by agents that act, not just answer."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
         />
       </main>
 

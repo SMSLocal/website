@@ -63,7 +63,7 @@ const CARDS = [
     titleA: "One message, ",
     titleB: "every channel",
     body: "Send one payload — we try RCS first, fall through to WhatsApp, then DLT SMS. Same wallet, same delivery report, same webhook. No second vendor.",
-    href: "/products",
+    href: "/products/",
     visual: <WaterfallVisual />,
   },
   {
@@ -73,7 +73,7 @@ const CARDS = [
     titleA: "Delivery that fights for ",
     titleB: "every message",
     body: "Smart route failover takes the fastest carrier path and auto-switches if it slows. Wrong-number detection and failed-batch retry recover deliveries most platforms write off.",
-    href: "/products/bulk-sms",
+    href: "/products/bulk-sms/",
     visual: <DeliveryVisual />,
   },
   {
@@ -83,7 +83,7 @@ const CARDS = [
     titleA: "Speaks ",
     titleB: "your customer's language",
     body: "Hand off repeat queries to an agent that replies in the language the customer writes in — Hindi, Tamil, Telugu, Bengali and more — with clean escalation to a human.",
-    href: "/products/ai-agents",
+    href: "/products/ai-agents/",
     visual: <AiVisual />,
   },
 ]

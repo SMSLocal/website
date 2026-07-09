@@ -126,8 +126,8 @@ export default function CustomerServiceAgentPage() {
             </>
           }
           subtitle="Deflect repetitive tickets across every channel with an agent that answers from your data and escalates the rest with full context."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: HeadphonesIcon, label: "24/7 across 7 channels" },
             { icon: Zap, label: "Resolves without pre-built journeys" },
@@ -258,13 +258,13 @@ export default function CustomerServiceAgentPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agents"
+                href="/products/ai-agents/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 See all AI agents
               </Link>
               <Link
-                href="/products/omnichannel-inbox"
+                href="/products/omnichannel-inbox/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Omnichannel inbox
@@ -300,10 +300,10 @@ export default function CustomerServiceAgentPage() {
             />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agents", label: "All AI agent use cases" },
-                { href: "/products/ai-agentic", label: "How agentic AI works" },
-                { href: "/products/omnichannel-inbox", label: "Omnichannel inbox — one place for every channel" },
-                { href: "/compare", label: "Compare SMSLocal with alternatives" },
+                { href: "/products/ai-agents/", label: "All AI agent use cases" },
+                { href: "/products/ai-agentic/", label: "How agentic AI works" },
+                { href: "/products/omnichannel-inbox/", label: "Omnichannel inbox — one place for every channel" },
+                { href: "/compare/", label: "Compare SMSLocal with alternatives" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -322,8 +322,8 @@ export default function CustomerServiceAgentPage() {
         <ProductFinalCta
           title="Resolve more tickets without adding headcount."
           subtitle="Connect your channels, train the agent on your data, and go live in days. Your team handles what needs a person — the agent handles everything else."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

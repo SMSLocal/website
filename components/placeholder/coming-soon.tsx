@@ -78,13 +78,13 @@ export function ComingSoon({ route }: { route: PlaceholderRoute }) {
             <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-white/60">{route.description}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button asChild size="lg">
-                <Link href="/company/contact">
+                <Link href="/company/contact/">
                   Talk to us now
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white/20 bg-white/5 text-white hover:bg-white/10">
-                <Link href="/products">Explore live products</Link>
+                <Link href="/products/">Explore live products</Link>
               </Button>
             </div>
           </div>
@@ -157,13 +157,13 @@ export function ComingSoon({ route }: { route: PlaceholderRoute }) {
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-3">
               <Button asChild size="lg">
-                <Link href="/company/contact">
+                <Link href="/company/contact/">
                   Talk to us
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/pricing">See pricing</Link>
+                <Link href="/pricing/">See pricing</Link>
               </Button>
             </div>
           </div>

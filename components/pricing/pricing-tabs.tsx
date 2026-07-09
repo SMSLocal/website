@@ -195,14 +195,14 @@ function SmsPanel() {
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Link
-            href="/signup"
+            href="/signup/"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
           >
             Start Free — ₹60 Credit
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
-            href="/company/contact"
+            href="/company/contact/"
             className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-3 text-sm font-medium text-foreground hover:bg-muted"
           >
             Talk to Sales for volume above ₹6L
@@ -423,7 +423,7 @@ function VolumeCalculator() {
             <p className="mt-2.5 text-[12.5px] leading-relaxed text-muted-foreground">
               You&apos;re at our best per-SMS rate.{" "}
               <Link
-                href="/company/contact"
+                href="/company/contact/"
                 className="font-semibold text-foreground underline-offset-2 hover:underline"
               >
                 Talk to sales
@@ -434,7 +434,7 @@ function VolumeCalculator() {
         </div>
 
         <Link
-          href="/signup"
+          href="/signup/"
           className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-[13.5px] font-semibold text-primary-foreground shadow-md shadow-primary/20 hover:brightness-110"
         >
           Start with ₹60 free credit
@@ -593,7 +593,7 @@ function WhatsAppPanel() {
 
       <div className="mt-8">
         <Link
-          href="/signup"
+          href="/signup/"
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
         >
           Start WhatsApp — ₹60 Free Credit
@@ -708,7 +708,7 @@ function AiPanel() {
 
       <div className="mt-8">
         <Link
-          href="/signup"
+          href="/signup/"
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
         >
           Launch an AI agent in 10 minutes
@@ -792,14 +792,14 @@ function OtpPanel() {
 
       <div className="mt-8 flex flex-wrap gap-3">
         <Link
-          href="/developers/api-docs"
+          href="/developers/api-docs/"
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
         >
           View API docs
           <ArrowRight className="h-4 w-4" />
         </Link>
         <Link
-          href="/signup"
+          href="/signup/"
           className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-3 text-sm font-medium text-foreground hover:bg-muted"
         >
           Start Free — ₹60 Credit

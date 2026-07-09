@@ -100,8 +100,8 @@ export default function AiConsultingPage() {
             </>
           }
           subtitle="From proof-of-concept to production, we help you launch agentic AI that works."
-          primaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
-          secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+          primaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
+          secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
           trustBar={[
             { icon: Bot, label: "Full AI agent implementation" },
             { icon: ArrowRightLeft, label: "Migration from other platforms" },
@@ -234,13 +234,13 @@ export default function AiConsultingPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agentic"
+                href="/products/ai-agentic/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Agentic AI
               </Link>
               <Link
-                href="/products/ai-agents/agent-builder"
+                href="/products/ai-agents/agent-builder/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Agent Builder
@@ -277,10 +277,10 @@ export default function AiConsultingPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic",              label: "Explore agentic AI on SMSLocal" },
-                { href: "/products/ai-agents/agent-builder",  label: "Agent Builder — build your first agent" },
-                { href: "/platform/security",                 label: "See the platform and security" },
-                { href: "/company/contact",                   label: "Talk to an AI consulting specialist" },
+                { href: "/products/ai-agentic/",              label: "Explore agentic AI on SMSLocal" },
+                { href: "/products/ai-agents/agent-builder/",  label: "Agent Builder — build your first agent" },
+                { href: "/platform/security/",                 label: "See the platform and security" },
+                { href: "/company/contact/",                   label: "Talk to an AI consulting specialist" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -299,8 +299,8 @@ export default function AiConsultingPage() {
         <ProductFinalCta
           title="Launch agentic AI with expert help."
           subtitle="Scoping, build, integration, onboarding, and ongoing optimization — talk to sales and get a scoped plan for your business."
-          primaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
-          secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+          primaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
+          secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

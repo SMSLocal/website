@@ -65,14 +65,14 @@ export function VoiceFinalCta() {
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3" style={reveal(240)}>
           <Link
-            href="/signup"
+            href="/signup/"
             className="group inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110 hover:shadow-2xl hover:shadow-primary/30"
           >
             Add Voice
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Link>
           <Link
-            href="/company/contact"
+            href="/company/contact/"
             className="group inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-medium text-foreground transition hover:text-primary"
           >
             Book a demo

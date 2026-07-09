@@ -94,8 +94,8 @@ export default function EducationSolutionPage() {
             </>
           }
           subtitle="Fee reminders, exam schedules, result announcements, and day-to-day parent communication — in the language the family reads at home."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-registered institution templates" },
             { icon: Languages, label: "10+ Indian scripts for SMS" },
@@ -171,7 +171,7 @@ export default function EducationSolutionPage() {
                 title: "Fee and fine reminders",
                 description:
                   "Scheduled, DLT-approved transactional SMS with a UPI deep-link. Cuts follow-up calls to the front desk dramatically.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Transactional SMS details",
               },
               {
@@ -179,7 +179,7 @@ export default function EducationSolutionPage() {
                 title: "Exam schedules and result drops",
                 description:
                   "Broadcast to 10,000+ students or parents at once over Bulk SMS or WhatsApp, in Hindi, Tamil, Marathi, or whatever language each family reads.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Bulk SMS details",
               },
               {
@@ -187,7 +187,7 @@ export default function EducationSolutionPage() {
                 title: "Parent-teacher AI WhatsApp",
                 description:
                   "The AI answers routine questions — PTA timing, holiday list, uniform supplier — and hands grades or discipline questions to the teacher with full context.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "WhatsApp details",
               },
               {
@@ -195,7 +195,7 @@ export default function EducationSolutionPage() {
                 title: "Admissions and enrolment flows",
                 description:
                   "OTP verification at form start, document submission via WhatsApp, and application status updates by SMS. All auditable in one dashboard.",
-                href: "/products/otp-sms",
+                href: "/products/otp-sms/",
                 linkLabel: "OTP API details",
               },
             ]}
@@ -242,8 +242,8 @@ export default function EducationSolutionPage() {
         <ProductFinalCta
           title="Communication that reaches every family."
           subtitle="Start with ₹60 free credit and DLT-compliant templates from day one."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
         />
       </main>
 

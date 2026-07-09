@@ -253,10 +253,10 @@ export default function CompareHaptikPage() {
             <SectionHeader eyebrow="Explore more" title="Compare more" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/compare", label: "See all SMSLocal comparisons" },
-                { href: "/compare/smslocal-vs-twilio", label: "SMSLocal vs Twilio — global CPaaS comparison" },
-                { href: "/pricing", label: "Pricing — published INR rate card" },
-                { href: "/products/ai-agents", label: "AI Agents — automate support and sales" },
+                { href: "/compare/", label: "See all SMSLocal comparisons" },
+                { href: "/compare/smslocal-vs-twilio/", label: "SMSLocal vs Twilio — global CPaaS comparison" },
+                { href: "/pricing/", label: "Pricing — published INR rate card" },
+                { href: "/products/ai-agents/", label: "AI Agents — automate support and sales" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -275,8 +275,8 @@ export default function CompareHaptikPage() {
         <ProductFinalCta
           title="See SMSLocal's transparent pricing."
           subtitle="Free signup credit, no card, no procurement cycle. Send a real DLT SMS and a real WhatsApp template in 5 minutes — then decide."
-          primaryCta={{ label: "Start Free", href: "/signup" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing" }}
+          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
         />
       </main>
 

@@ -148,8 +148,8 @@ export default function WhatsAppBroadcastingPage() {
             </>
           }
           subtitle="Send template campaigns to opted-in audiences on the WhatsApp Business API, then let agentic AI handle every reply."
-          primaryCta={{ label: "Start Broadcasting", href: "/signup" }}
-          secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+          primaryCta={{ label: "Start Broadcasting", href: "/signup/" }}
+          secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
           trustBar={[
             { icon: ShieldCheck, label: "Official Business API" },
             { icon: LayoutList,  label: "Templates with media and buttons" },
@@ -318,10 +318,10 @@ export default function WhatsAppBroadcastingPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/whatsapp-business-api", label: "WhatsApp Business API — two-way conversations and AI" },
-                { href: "/channels/rcs-broadcasting",       label: "RCS Broadcasting — branded rich campaigns" },
-                { href: "/products/ai-agentic",             label: "How agentic AI works" },
-                { href: "/compare",                         label: "See how SMSLocal compares" },
+                { href: "/products/whatsapp-business-api/", label: "WhatsApp Business API — two-way conversations and AI" },
+                { href: "/channels/rcs-broadcasting/",       label: "RCS Broadcasting — branded rich campaigns" },
+                { href: "/products/ai-agentic/",             label: "How agentic AI works" },
+                { href: "/compare/",                         label: "See how SMSLocal compares" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -340,8 +340,8 @@ export default function WhatsAppBroadcastingPage() {
         <ProductFinalCta
           title="Broadcast on WhatsApp and let AI handle the replies."
           subtitle="Connect the official API, build your templates, and send campaigns your agentic AI can follow up on — automatically."
-          primaryCta={{ label: "Start Broadcasting", href: "/signup" }}
-          secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+          primaryCta={{ label: "Start Broadcasting", href: "/signup/" }}
+          secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

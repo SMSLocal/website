@@ -225,7 +225,7 @@ function CookieBanner() {
               use analytics to understand how pages are used so we can improve them. You can change
               your choice any time from the footer. Read our{" "}
               <Link
-                href="/legal/cookie-policy"
+                href="/legal/cookie-policy/"
                 className="font-medium text-foreground underline underline-offset-2 hover:text-primary"
               >
                 cookie policy

@@ -151,7 +151,7 @@ export default function HelpCentrePage() {
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-4">
                 <Link
-                  href="/blog/dlt-registration-guide"
+                  href="/blog/dlt-registration-guide/"
                   className="group inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
                 >
                   Open DLT guide
@@ -184,14 +184,14 @@ export default function HelpCentrePage() {
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <Link
-                    href="/company/contact"
+                    href="/company/contact/"
                     className="group inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
                   >
                     Contact support
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                   </Link>
                   <Link
-                    href="/signin"
+                    href="/signin/"
                     className="inline-flex items-center gap-2 text-sm font-medium text-white/70 hover:text-white"
                   >
                     <Send className="h-4 w-4" />
@@ -208,8 +208,8 @@ export default function HelpCentrePage() {
         <ProductFinalCta
           title="Documentation that tells the truth."
           subtitle="Every article is written by the engineer who owns the feature. If a doc is wrong, a human fixes it the same day."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "Open developer hub", href: "/developers" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "Open developer hub", href: "/developers/" }}
         />
       </main>
 
