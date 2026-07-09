@@ -20,7 +20,6 @@ import {
   FileClock,
   Facebook,
   Globe,
-  HeartPulse,
   Inbox,
   Instagram,
   LifeBuoy,
@@ -139,7 +138,6 @@ const NAV: NavItem[] = [
           { label: "Logistics & Delivery", href: "/solutions/logistics/", icon: Truck },
           { label: "Real Estate", href: "/solutions/real-estate/", icon: Building2 },
           { label: "Retail & Hospitality", href: "/solutions/retail/", icon: Store },
-          { label: "Healthcare networks", href: "/solutions/healthcare/", icon: HeartPulse },
         ],
       },
       {
