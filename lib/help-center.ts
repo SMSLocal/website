@@ -48,13 +48,13 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "getting-started",
     title: "Getting started",
-    description: "Create your account, add credits, and send your first message in under fifteen minutes.",
+    description: "Create your SMSLocal account, add INR credits to your wallet, complete DLT registration, and send your first compliant SMS, WhatsApp, or OTP in under fifteen minutes.",
     icon: Play,
     articles: [
       {
         slug: "create-your-account",
         title: "How do I create an SMSLocal account?",
-        excerpt: "Signing up takes about two minutes and gives you ₹60 of free credit to try SMS, WhatsApp and OTP.",
+        excerpt: "Signing up takes two minutes and gives you ₹60 of free credit to try SMS, WhatsApp, and OTP sending — no credit card or DLT registration required to get started.",
         readMinutes: 2,
         updatedOn: "2026-02-10",
         body: [
@@ -81,7 +81,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "add-credits-and-billing",
         title: "How do I add credits to my wallet?",
-        excerpt: "Credits are paid-in-advance INR balance. You can top up by UPI, card, net banking or bank transfer.",
+        excerpt: "Credits are paid-in-advance INR balance — no monthly minimum on pay-as-you-go plans. Top up by UPI, card, net banking, or bank transfer and start sending immediately.",
         readMinutes: 3,
         updatedOn: "2026-02-12",
         body: [
@@ -129,7 +129,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "connect-whatsapp-business",
         title: "How do I connect a WhatsApp Business number?",
-        excerpt: "Bring your own number or port a new one. Meta approval usually lands within 24 hours.",
+        excerpt: "Bring your own number or migrate an existing WhatsApp Business API number from another BSP. Meta business verification and display-name approval typically land within 24 hours.",
         readMinutes: 4,
         updatedOn: "2026-02-15",
         body: [
@@ -150,7 +150,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "invite-your-team",
         title: "How do I invite teammates?",
-        excerpt: "All plans — including the free tier — include unlimited team seats with role-based permissions.",
+        excerpt: "All SMSLocal plans — including the free tier — include unlimited team seats with role-based permissions for Marketer, Agent, Developer, Finance, and custom roles.",
         readMinutes: 2,
         updatedOn: "2026-02-16",
         body: [
@@ -173,7 +173,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "understand-the-dashboard",
         title: "A tour of the SMSLocal dashboard",
-        excerpt: "What lives where — campaigns, inbox, reports, billing, and compliance — and why.",
+        excerpt: "Tour the SMSLocal dashboard and learn where Campaigns, Inbox, Reports, Compliance, Developers, and Billing live and how each section connects to your daily messaging workflow.",
         readMinutes: 4,
         updatedOn: "2026-02-18",
         body: [
@@ -200,7 +200,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "sms",
     title: "SMS campaigns",
-    description: "Templates, DLT routing, sender IDs, delivery reports, scheduling, and retries.",
+    description: "SMS content templates, DLT routing, sender ID setup, delivery report statuses, bulk campaign scheduling, throttle controls, and automatic retry logic for India.",
     icon: MessageSquare,
     articles: [
       {
@@ -275,7 +275,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "sender-id-allocation",
         title: "How do I get a six-character sender ID?",
-        excerpt: "You pick the header, the operator assigns the availability, DLT records it for you.",
+        excerpt: "You choose the six-character header, the operator confirms availability on DLT, and SMSLocal handles propagation across all Indian carriers within 24–72 hours.",
         readMinutes: 3,
         updatedOn: "2026-02-25",
         body: [
@@ -296,7 +296,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "unicode-and-multilingual",
         title: "How many characters fit in a multilingual SMS?",
-        excerpt: "English SMS fits 160 chars. Hindi and regional scripts fit 70. This is an operator limit, not ours.",
+        excerpt: "English SMS fits 160 characters per part; Hindi, Tamil, and other regional scripts drop to 70 per part on UCS-2 encoding. This is an operator limit, not an SMSLocal restriction.",
         readMinutes: 3,
         updatedOn: "2026-02-26",
         body: [
@@ -321,7 +321,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "scheduling-and-throttling",
         title: "Scheduling and throttling bulk campaigns",
-        excerpt: "For promotional sends above 50k recipients, throttle the send so your inbound hotline doesn't melt.",
+        excerpt: "For promotional sends above 50k recipients, throttle the rate so your inbound team can keep up. Set exact send times and per-minute caps via dashboard or API.",
         readMinutes: 3,
         updatedOn: "2026-02-27",
         body: [
@@ -345,13 +345,13 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "whatsapp",
     title: "WhatsApp Business API",
-    description: "Onboarding, template approval, chatbot flows, team inbox, quality rating, and analytics.",
+    description: "Complete guide to WhatsApp Business API — onboarding, Meta template approval, chatbot flow setup, shared team inbox, quality rating management, and conversation analytics.",
     icon: MessageCircle,
     articles: [
       {
         slug: "business-api-onboarding",
         title: "The WhatsApp Business API onboarding, end to end",
-        excerpt: "From signing up to your first approved template usually takes between 24 and 48 hours.",
+        excerpt: "Three parallel approvals — Meta Business Manager verification, display-name review, and content template — make up WABA onboarding, typically completing in 24–48 hours.",
         readMinutes: 5,
         updatedOn: "2026-02-28",
         body: [
@@ -372,7 +372,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "template-approval-guide",
         title: "Writing a WhatsApp template that Meta will approve first time",
-        excerpt: "The three most common reasons templates get rejected and how to write around them.",
+        excerpt: "Category mismatch, unclear variable usage, and prohibited content cause most rejections. Use this guide to write a WhatsApp template that Meta approves on the first submission.",
         readMinutes: 4,
         updatedOn: "2026-03-01",
         body: [
@@ -399,7 +399,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "template-categories-and-pricing",
         title: "WhatsApp template categories and pricing",
-        excerpt: "Meta splits templates into Marketing, Utility and Authentication. Each has its own rate.",
+        excerpt: "Meta divides templates into Marketing, Utility, and Authentication, each with its own India rate per conversation. Getting the category right can save up to 85% per send.",
         readMinutes: 3,
         updatedOn: "2026-03-02",
         body: [
@@ -420,7 +420,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "team-inbox-setup",
         title: "Setting up the WhatsApp team inbox",
-        excerpt: "Auto-assign threads, tag conversations, and keep your reply SLA under a minute.",
+        excerpt: "Set up round-robin assignment, canned replies in multiple languages, away-mode auto-reply, and CRM sync to keep your WhatsApp team inbox reply SLA under a minute.",
         readMinutes: 4,
         updatedOn: "2026-03-03",
         body: [
@@ -442,7 +442,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "broadcast-lists-and-consent",
         title: "Broadcasts, consent, and the 24-hour rule",
-        excerpt: "You can broadcast to anyone who opted in. The 24-hour free service window starts with their reply.",
+        excerpt: "You can broadcast to any contact who opted in using an approved WhatsApp template. The 24-hour free service window begins the moment the customer sends a message back.",
         readMinutes: 4,
         updatedOn: "2026-03-04",
         body: [
@@ -463,7 +463,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "quality-rating-and-tier",
         title: "Your WhatsApp quality rating and messaging tier",
-        excerpt: "Meta rates your number green, yellow or red. Yellow is a warning, red is a throttle.",
+        excerpt: "Meta rates your WhatsApp number green, yellow, or red on a rolling 24-hour quality signal. Yellow is a warning; red throttles your messaging tier until quality recovers.",
         readMinutes: 3,
         updatedOn: "2026-03-05",
         body: [
@@ -487,13 +487,13 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "ai-agents",
     title: "AI WhatsApp Agents",
-    description: "Train your agent, sync your catalogue, set handoff rules, and go multilingual.",
+    description: "Train your AI WhatsApp agent on your own knowledge, sync your product catalogue, configure handoff triggers, and serve customers across twelve Indian languages.",
     icon: Bot,
     articles: [
       {
         slug: "train-your-first-agent",
         title: "Training your first AI WhatsApp agent",
-        excerpt: "Upload your knowledge sources, pick a tone, and the agent is live in under an hour.",
+        excerpt: "Upload PDFs, website pages, Q&A CSV, or Shopify data as knowledge sources, set a response tone, and your AI WhatsApp agent is indexed and live in under an hour.",
         readMinutes: 4,
         updatedOn: "2026-03-06",
         body: [
@@ -515,7 +515,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "catalogue-sync",
         title: "Syncing your product catalogue to the agent",
-        excerpt: "Shopify, WooCommerce, Magento and custom sources all supported with webhook-based live sync.",
+        excerpt: "Connect Shopify or WooCommerce via webhook for sub-minute catalogue sync, or poll Magento every 15 minutes. The agent then answers stock, pricing, and variant questions live.",
         readMinutes: 3,
         updatedOn: "2026-03-07",
         body: [
@@ -535,7 +535,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "handoff-rules",
         title: "When should the AI hand off to a human?",
-        excerpt: "Handoff rules are how you stay in control. Start simple and evolve as you see real conversations.",
+        excerpt: "Set keyword triggers, confidence thresholds, and turn-count limits so your AI agent hands off to a human agent with a full transcript and intent summary attached.",
         readMinutes: 3,
         updatedOn: "2026-03-08",
         body: [
@@ -577,7 +577,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "agent-analytics",
         title: "Understanding your AI agent analytics",
-        excerpt: "Deflection rate, CSAT, confidence distribution, and the top ten questions drive the biggest wins.",
+        excerpt: "Track deflection rate, CSAT, confidence distribution, and the top ten unanswered questions — the four metrics that drive the biggest weekly gains for your AI agent.",
         readMinutes: 3,
         updatedOn: "2026-03-10",
         body: [
@@ -601,13 +601,13 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "otp",
     title: "OTP & Transactional",
-    description: "Priority routing, retry logic, idempotency keys, carrier failover, and WhatsApp OTP fallback.",
+    description: "Priority routing to the fastest carrier, automatic retry and failover logic, idempotency keys to prevent double-sends, and WhatsApp OTP fallback when SMS is slow or fails.",
     icon: KeyRound,
     articles: [
       {
         slug: "set-up-otp-api",
         title: "Setting up the OTP API",
-        excerpt: "One endpoint for send, one for verify. Most teams are live in under 30 minutes.",
+        excerpt: "One endpoint to send, one to verify. The API handles code generation, expiry, attempt limits, and resend cooldowns automatically. Most teams go live in under 30 minutes.",
         readMinutes: 4,
         updatedOn: "2026-03-11",
         body: [
@@ -675,7 +675,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "idempotency-keys",
         title: "Idempotency keys for OTP sends",
-        excerpt: "Stop double-sending when a retry happens on your side. Pass an idempotency key and we deduplicate.",
+        excerpt: "Prevent duplicate OTPs when your app retries. Pass a UUIDv4 Idempotency-Key header on /v2/otp/send and we return the original response without triggering a new send.",
         readMinutes: 2,
         updatedOn: "2026-03-14",
         body: [
@@ -701,7 +701,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "whatsapp-otp-fallback",
         title: "Using WhatsApp as a fallback for SMS OTP",
-        excerpt: "When SMS is slow or fails, the same OTP is delivered over WhatsApp — usually in under a second.",
+        excerpt: "If SMS is slow or fails, the same OTP is automatically delivered over WhatsApp — usually in under a second. You pay only for the channel that successfully delivers the code.",
         readMinutes: 3,
         updatedOn: "2026-03-15",
         body: [
@@ -725,13 +725,13 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "dlt",
     title: "DLT & Compliance",
-    description: "Principal Entity, content templates, TRAI rules, DND preferences, and DPDPA.",
+    description: "DLT Principal Entity registration, content template submission, TRAI rules, DND preference scrubbing, NCPR compliance, and DPDPA obligations explained for Indian businesses.",
     icon: ShieldCheck,
     articles: [
       {
         slug: "register-principal-entity",
         title: "How do I register a DLT Principal Entity?",
-        excerpt: "You need GST, PAN, and authorisation letter. Approval is 24–72 hours on most operator portals.",
+        excerpt: "Register as a DLT Principal Entity using your PAN, GST certificate, and an authorisation letter. Approval typically arrives in 24–72 hours on most Indian operator portals.",
         readMinutes: 5,
         updatedOn: "2026-03-16",
         body: [
@@ -780,7 +780,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "rejection-reasons",
         title: "The top 10 reasons DLT templates get rejected",
-        excerpt: "90% of rejections come from the same handful of mistakes. Here's the cheat sheet.",
+        excerpt: "Ninety percent of DLT rejections share the same root causes — wrong category, missing opt-out, or banned URL shorteners. Use this cheat sheet to avoid them before you submit.",
         readMinutes: 4,
         updatedOn: "2026-03-18",
         body: [
@@ -807,7 +807,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "dnd-and-preferences",
         title: "DND, consent, and customer preferences",
-        excerpt: "Transactional SMS reaches DND numbers. Promotional does not. Here's how we apply that at send time.",
+        excerpt: "Transactional SMS bypasses DND and reaches all numbers. Promotional SMS is scrubbed live against the NCPR at send time and the filtered count is shown in your campaign report.",
         readMinutes: 4,
         updatedOn: "2026-03-19",
         body: [
@@ -849,7 +849,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "appeals-process",
         title: "How to appeal a rejected DLT template",
-        excerpt: "If the rejection reason is wrong, the appeal takes 24–48 hours and succeeds about 70% of the time.",
+        excerpt: "If a DLT template rejection looks wrong, appeal with your use-case context and customer journey details. About 70% of legitimate appeals succeed and resolve within 24–48 hours.",
         readMinutes: 3,
         updatedOn: "2026-03-21",
         body: [
@@ -874,13 +874,13 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "billing",
     title: "Billing & Wallet",
-    description: "Top-ups, GST invoices, auto-recharge, refunds, and plan changes.",
+    description: "Wallet top-ups by UPI, card, net banking, and NEFT, auto-emailed GST invoices, configurable auto-recharge, refund and dispute policy, and plan upgrade and downgrade options.",
     icon: CreditCard,
     articles: [
       {
         slug: "add-credits",
         title: "Adding credits to your wallet",
-        excerpt: "UPI, cards, net banking and NEFT. Credits are non-expiring and fully consumable.",
+        excerpt: "UPI, cards, net banking, and NEFT all accepted. Wallet credits are real INR balance that never expire and are fully usable across SMS, WhatsApp, and OTP sends.",
         readMinutes: 2,
         updatedOn: "2026-03-22",
         body: [
@@ -906,7 +906,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "auto-recharge",
         title: "Setting up auto-recharge",
-        excerpt: "Never run out mid-campaign. Set a threshold and an amount, and we refill automatically.",
+        excerpt: "Set a low-balance threshold and a refill amount — SMSLocal tops up your wallet automatically before it runs dry so no campaign ever stalls or stops mid-send.",
         readMinutes: 2,
         updatedOn: "2026-03-23",
         body: [
@@ -969,7 +969,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "change-plan",
         title: "Changing your plan",
-        excerpt: "Upgrade or downgrade at any time. Pro-rated to the day, no termination fees.",
+        excerpt: "Upgrade for a lower per-message rate or downgrade to the next bracket at any time. Changes are pro-rated to the day with no termination fees or minimum-commitment penalties.",
         readMinutes: 2,
         updatedOn: "2026-03-26",
         body: [
@@ -993,13 +993,13 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "api",
     title: "API & Integrations",
-    description: "REST docs, SDKs, webhooks, sandbox mode, Shopify, Zapier, and more.",
+    description: "REST API reference, official SDKs for Node, Python, PHP, Go, and Java, signed webhook delivery, sandbox test mode, Shopify app, and Zapier integration guides.",
     icon: Code2,
     articles: [
       {
         slug: "authentication",
         title: "Authenticating API requests",
-        excerpt: "One API key per environment. Pass it as a Bearer token on every request.",
+        excerpt: "Generate live or sandbox API keys from the Developers section, store them securely in your secrets manager, and pass them as Bearer tokens on every API request.",
         readMinutes: 3,
         updatedOn: "2026-03-27",
         body: [
@@ -1032,7 +1032,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "webhooks-signing",
         title: "How webhooks are signed and verified",
-        excerpt: "Every webhook carries an HMAC-SHA256 signature. Verify it before trusting the payload.",
+        excerpt: "Every SMSLocal webhook includes an HMAC-SHA256 signature and timestamp. Reject requests older than 5 minutes and verify the signature before trusting any incoming payload.",
         readMinutes: 4,
         updatedOn: "2026-03-28",
         body: [
@@ -1070,7 +1070,7 @@ function verify(req, secret) {
       {
         slug: "sdks",
         title: "Official SDKs",
-        excerpt: "Node, Python, PHP, Ruby, Go, Java and .NET. All open source, all versioned in lockstep.",
+        excerpt: "Open-source SDKs for Node, Python, PHP, Ruby, Go, Java, and .NET — all versioned in lockstep with the REST API and bundled with retry logic and typed responses.",
         readMinutes: 2,
         updatedOn: "2026-03-29",
         body: [
@@ -1100,7 +1100,7 @@ go get github.com/smslocal/smslocal-go`,
       {
         slug: "sandbox-mode",
         title: "Sandbox mode",
-        excerpt: "Develop and test against a real API surface without sending real messages or burning credits.",
+        excerpt: "Test the full API surface using sandbox keys and free test credits. Deterministic test numbers return predictable outcomes, and webhooks fire identically to live production.",
         readMinutes: 3,
         updatedOn: "2026-03-30",
         body: [
@@ -1123,7 +1123,7 @@ go get github.com/smslocal/smslocal-go`,
       {
         slug: "rate-limits",
         title: "Rate limits and throughput",
-        excerpt: "Default 1000 requests per minute, burst to 5000. Enterprise gets higher custom limits.",
+        excerpt: "Default limit is 1,000 requests per minute, burst to 5,000. Enterprise plans start at 10,000 per minute with custom capacity reservations for peak-traffic events.",
         readMinutes: 2,
         updatedOn: "2026-03-31",
         body: [
