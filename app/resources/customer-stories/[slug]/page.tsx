@@ -17,6 +17,8 @@ import {
 } from "@/lib/customer-stories"
 import { buildArticleMetadata } from "@/lib/seo"
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return ALL_STORIES.map((s) => ({ slug: s.slug }))
 }

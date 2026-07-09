@@ -8,6 +8,8 @@ import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { getAppCategoryBySlug, generateAppCategorySlugs, APP_CATEGORIES } from "../data"
 import { AppLogo } from "@/components/product/app-logo"
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
   return generateAppCategorySlugs()
 }

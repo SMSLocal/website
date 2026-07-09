@@ -12,6 +12,8 @@ import { buildMetadata } from "@/lib/seo"
 
 type Params = { category: string }
 
+export const dynamicParams = false
+
 export function generateStaticParams(): Params[] {
   return HELP_CATEGORIES.map((c) => ({ category: c.slug }))
 }

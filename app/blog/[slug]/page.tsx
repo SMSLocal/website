@@ -14,6 +14,8 @@ import { ALL_POSTS, formatBlogDate, getPost, getRelatedPosts } from "@/lib/blog"
 import { buildArticleMetadata } from "@/lib/seo"
 import { SITE } from "@/lib/seo/config"
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return ALL_POSTS.map((p) => ({ slug: p.meta.slug }))
 }

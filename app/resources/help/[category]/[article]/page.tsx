@@ -13,6 +13,8 @@ import { buildArticleMetadata } from "@/lib/seo"
 
 type Params = { category: string; article: string }
 
+export const dynamicParams = false
+
 export function generateStaticParams(): Params[] {
   return getAllArticlePaths()
 }
