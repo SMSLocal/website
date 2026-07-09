@@ -25,12 +25,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const post = getPost(slug)
-  if (!post) {
-    return {
-      title: "Article not found",
-      robots: { index: false, follow: false },
-    }
-  }
+  if (!post) notFound()
   const { meta } = post
   return buildArticleMetadata({
     title: meta.title,
