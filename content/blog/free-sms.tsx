@@ -118,11 +118,11 @@ export default function FreeSmsPost() {
         </LI>
       </UL>
 
-      <BlogFigure
-        src="/blog/free-sms-laptop.jpg"
-        alt="Person typing on a laptop at a home workspace with a smartphone beside the keyboard, warm afternoon light from a window casting a soft shadow across the desk."
-        caption="Online SMS services work well for occasional personal messages from a PC — but daily caps and shared sender numbers limit their usefulness for anything regular."
-      />
+      <Callout variant="warning" title="Daily caps make free services impractical for regular use">
+        Online SMS services typically cap free accounts at 5–25 messages per day. If you need to
+        message the same person more than a few times per week, your operator&apos;s bundled 100
+        SMS/day is both more generous and more reliable.
+      </Callout>
 
       <H2 id="ways2sms-alternatives">Way2SMS and its successors</H2>
       <P>

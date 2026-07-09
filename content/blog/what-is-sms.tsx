@@ -74,11 +74,11 @@ export default function WhatIsSmsPost() {
         </LI>
       </OL>
 
-      <BlogFigure
-        src="/blog/what-is-sms-network.jpg"
-        alt="Overhead diagram-style flatlay of two smartphones connected by a glowing line with a central server node between them, on a clean white surface with subtle circuit-board texture."
-        caption="The SMSC sits between sender and recipient, acting as a store-and-forward relay. Unlike WhatsApp or email, no internet connectivity is required at either end."
-      />
+      <Callout variant="info" title="Store-and-forward reliability">
+        The SMSC sits between sender and recipient as a relay. Unlike WhatsApp or email, no
+        internet connectivity is required at either end — the operator network handles delivery,
+        and messages queue for up to 72 hours if the recipient is offline.
+      </Callout>
 
       <H2 id="types-of-sms">The two types of SMS in India</H2>
       <P>
@@ -228,11 +228,11 @@ export default function WhatIsSmsPost() {
         </LI>
       </UL>
 
-      <BlogFigure
-        src="/blog/what-is-sms-business.jpg"
-        alt="Indian small-business owner in a blue kurta reviewing SMS campaign analytics on a laptop in a warm, naturally lit office with a chai cup beside the keyboard."
-        caption="SMS remains the highest-reach channel for Indian businesses — 97% of messages are read, and most within 3 minutes of delivery."
-      />
+      <Callout variant="tip" title="Open rates that email can't match">
+        SMS open rates in India consistently reach 85–97%, with most messages read within 3 minutes
+        of delivery. No other channel — email, WhatsApp, or push notification — achieves this
+        combination of reach and immediacy across all device types.
+      </Callout>
 
       <H2 id="sms-character-limits">Character limits and encoding</H2>
       <P>

@@ -131,11 +131,12 @@ export default function TelegramCodeSmsPost() {
         A voice call bypasses most SMS routing issues.
       </P>
 
-      <BlogFigure
-        src="/blog/telegram-code-sms-phone.jpg"
-        alt="Close-up of a hand holding a smartphone showing the Telegram login screen with a phone number entry field, against a softly blurred home background with warm ambient light."
-        caption="Telegram shows a countdown timer after sending the code. When it expires, the 'Call me' option appears — this is often faster than waiting for a delayed SMS."
-      />
+      <Callout variant="tip" title="The countdown timer is your friend">
+        Telegram shows a countdown after sending the code. When it hits zero, the{" "}
+        <Strong>&ldquo;Call me instead&rdquo;</Strong> option appears. Do not wait longer than
+        90 seconds — switch to the voice call option, which bypasses most SMS routing issues
+        and typically connects within 10–30 seconds.
+      </Callout>
 
       <H2 id="step-by-step-fix">Step-by-step fix</H2>
       <P>

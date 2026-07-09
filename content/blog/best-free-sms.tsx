@@ -121,11 +121,12 @@ export default function BestFreeSmsPost() {
         </LI>
       </UL>
 
-      <BlogFigure
-        src="/blog/best-free-sms-comparison.jpg"
-        alt="Side-by-side view of two smartphones: one showing a standard SMS conversation thread, the other showing an SMSLocal dashboard with delivery receipts and campaign analytics, on a clean white desk."
-        caption="Personal SMS (left) works perfectly through your operator's bundled quota. Business SMS (right) needs a platform with delivery tracking and DLT compliance."
-      />
+      <Callout variant="info" title="Personal vs. business SMS needs different tools">
+        Personal SMS through your operator&apos;s bundled quota is free, instant, and requires no
+        setup — perfect for casual messages. Business SMS needs delivery tracking, DLT compliance,
+        and a registered sender ID, which requires a platform account even if you start on a free
+        trial.
+      </Callout>
 
       <H2 id="why-free-limits-matter">Why free SMS limits exist</H2>
       <P>

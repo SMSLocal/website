@@ -360,8 +360,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "10 min read",
       category: "Getting started",
       author: TEAM,
+      coverImage: "/blog/what-is-sms-cover.svg",
       coverAlt:
-        "Overhead diagram-style flatlay of two smartphones connected by a glowing line with a central server node between them, on a clean white surface with subtle circuit-board texture.",
+        "Two smartphones connected via a signal path with a central SMSC relay node — illustrating how SMS travels through the cellular network.",
       toc: [
         { id: "what-is-sms", label: "What SMS actually is" },
         { id: "how-sms-works", label: "How SMS works technically" },
@@ -387,8 +388,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "8 min read",
       category: "Consumer",
       author: TEAM,
+      coverImage: "/blog/free-sms-cover.svg",
       coverAlt:
-        "Person typing on a laptop at a home workspace with a smartphone beside the keyboard, warm afternoon light from a window casting a soft shadow across the desk.",
+        "Illustration showing a zero-rupee symbol representing free SMS options in India, with stacked coins on the right side.",
       toc: [
         { id: "what-free-sms-means", label: "What 'free SMS' actually means" },
         { id: "bundled-sms", label: "Free SMS from your mobile plan" },
@@ -413,8 +415,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "9 min read",
       category: "Consumer",
       author: TEAM,
+      coverImage: "/blog/best-free-sms-cover.svg",
       coverAlt:
-        "Side-by-side view of two smartphones: one showing a standard SMS conversation thread, the other showing an SMSLocal dashboard with delivery receipts and campaign analytics, on a clean white desk.",
+        "Ranked list graphic showing top free SMS options in India: operator bundled SMS at #1, SMSLocal free trial at #2, WhatsApp at #3, and third-party apps at #4.",
       toc: [
         { id: "quick-pick", label: "Quick pick by use case" },
         { id: "operator-bundled", label: "Operator bundled SMS" },
@@ -440,8 +443,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "9 min read",
       category: "Troubleshooting",
       author: TEAM,
+      coverImage: "/blog/telegram-code-sms-cover.svg",
       coverAlt:
-        "Close-up of a hand holding a smartphone showing the Telegram login screen with a phone number entry field, against a softly blurred home background with warm ambient light.",
+        "Five question-mark OTP digit boxes with a warning triangle icon and a phone screen showing an X, representing a Telegram verification code that hasn't arrived.",
       toc: [
         { id: "how-telegram-verification-works", label: "How Telegram verification works" },
         { id: "not-arriving", label: "Why the SMS code isn't arriving" },

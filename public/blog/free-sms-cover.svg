@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0b1220"/>
+      <stop offset="100%" style="stop-color:#0f1e35"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="75%" cy="15%" r="50%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#0ea5e9;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="15%" cy="80%" r="45%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:0.22"/>
+      <stop offset="100%" style="stop-color:#2563eb;stop-opacity:0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect width="1200" height="630" fill="url(#glow1)"/>
+  <rect width="1200" height="630" fill="url(#glow2)"/>
+
+  <!-- Grid lines -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="200" y1="0" x2="200" y2="630"/>
+    <line x1="400" y1="0" x2="400" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="800" y1="0" x2="800" y2="630"/>
+    <line x1="1000" y1="0" x2="1000" y2="630"/>
+  </g>
+
+  <!-- Rupee + envelope icon -->
+  <circle cx="145" cy="240" r="65" fill="#0ea5e9" fill-opacity="0.15" stroke="#0ea5e9" stroke-opacity="0.4" stroke-width="1.5"/>
+  <text x="145" y="255" font-family="system-ui,-apple-system,sans-serif" font-size="52" font-weight="700" fill="#38bdf8" text-anchor="middle">₹0</text>
+
+  <!-- Category pill -->
+  <rect x="80" y="140" width="115" height="32" rx="16" fill="#0ea5e9" fill-opacity="0.15" stroke="#0ea5e9" stroke-opacity="0.4" stroke-width="1"/>
+  <text x="137" y="161" font-family="system-ui,-apple-system,sans-serif" font-size="13" font-weight="600" fill="#7dd3fc" text-anchor="middle" letter-spacing="2">CONSUMER</text>
+
+  <!-- Title -->
+  <text x="80" y="390" font-family="system-ui,-apple-system,sans-serif" font-size="54" font-weight="700" fill="#ffffff" letter-spacing="-1">How to Send Free SMS</text>
+  <text x="80" y="452" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="400" fill="#94a3b8">in India: What Actually</text>
+  <text x="80" y="498" font-family="system-ui,-apple-system,sans-serif" font-size="32" font-weight="400" fill="#94a3b8">Works in 2026</text>
+
+  <!-- SMSLocal branding -->
+  <text x="80" y="590" font-family="system-ui,-apple-system,sans-serif" font-size="18" font-weight="600" fill="#0ea5e9">SMSLocal</text>
+  <text x="190" y="590" font-family="system-ui,-apple-system,sans-serif" font-size="18" fill="#475569">· smslocal.in/blog</text>
+
+  <!-- Right decoration: stacked coins -->
+  <ellipse cx="970" cy="370" rx="90" ry="22" fill="#0ea5e9" fill-opacity="0.12" stroke="#0ea5e9" stroke-opacity="0.3" stroke-width="1.5"/>
+  <ellipse cx="970" cy="330" rx="90" ry="22" fill="#0ea5e9" fill-opacity="0.16" stroke="#0ea5e9" stroke-opacity="0.35" stroke-width="1.5"/>
+  <ellipse cx="970" cy="290" rx="90" ry="22" fill="#0ea5e9" fill-opacity="0.22" stroke="#0ea5e9" stroke-opacity="0.4" stroke-width="1.5"/>
+  <ellipse cx="970" cy="253" rx="90" ry="22" fill="#0ea5e9" fill-opacity="0.28" stroke="#0ea5e9" stroke-opacity="0.5" stroke-width="1.5"/>
+  <text x="970" y="260" font-family="system-ui,-apple-system,sans-serif" font-size="20" font-weight="700" fill="#38bdf8" text-anchor="middle">FREE</text>
+</svg>

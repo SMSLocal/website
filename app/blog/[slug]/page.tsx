@@ -40,6 +40,7 @@ export async function generateMetadata({
       `${meta.category} guide India`,
       "SMSLocal blog",
     ],
+    ...(meta.coverImage ? { ogImage: meta.coverImage, ogImageAlt: meta.coverAlt } : {}),
   })
 }
 

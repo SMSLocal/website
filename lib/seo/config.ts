@@ -52,8 +52,8 @@ export const SITE = {
   locale: "en_IN",
   htmlLang: "en-IN",
 
-  /** Default social share image. Place a 1200x630 PNG at /public/og-default.png. */
-  defaultOgImage: "/og-default.png",
+  /** Default social share image — 1200x630 JPG at /public/og-default.jpg. */
+  defaultOgImage: "/og-default.jpg",
   defaultOgImageAlt:
     "SMSLocal — India's SMS, WhatsApp and AI messaging platform",
 
