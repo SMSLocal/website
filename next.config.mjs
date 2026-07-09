@@ -120,6 +120,7 @@ const SECURITY_HEADERS = [
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  trailingSlash: true,
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -144,33 +145,33 @@ const nextConfig = {
       // slug working so existing links and any indexed URLs still land.
       {
         source: "/resources/dlt-guide",
-        destination: "/blog/dlt-registration-guide",
+        destination: "/blog/dlt-registration-guide/",
         permanent: true,
       },
       // The old voice-broadcasting slug is retired; the new Voice product
       // lives at /products/voice (no longer redirected).
       {
         source: "/products/voice-broadcasting",
-        destination: "/products/voice",
+        destination: "/products/voice/",
         permanent: true,
       },
       // AI agents consolidated onto a single slug.
       {
         source: "/products/ai-whatsapp-agents",
-        destination: "/products/ai-agents",
+        destination: "/products/ai-agents/",
         permanent: true,
       },
       // Renamed from the old FloatChat-branded slug.
       {
         source: "/why-floatchat",
-        destination: "/why-smslocal",
+        destination: "/why-smslocal/",
         permanent: true,
       },
       // The use-case agent pages live under /ai-agents/*; the bare path
       // sends visitors to the main Captain AI product page.
       {
         source: "/ai-agents",
-        destination: "/products/ai-agents",
+        destination: "/products/ai-agents/",
         permanent: false,
       },
       // OTP SMS product page retired — send old links to the SMS API docs.
@@ -182,13 +183,13 @@ const nextConfig = {
       // Reseller / white-label page retired — send old links to the products hub.
       {
         source: "/products/reseller",
-        destination: "/products",
+        destination: "/products/",
         permanent: true,
       },
       // SMS Bomber tool moved to the /resources/tools/ section.
       {
         source: "/tools/sms-bomber",
-        destination: "/resources/tools/sms-bomber",
+        destination: "/resources/tools/sms-bomber/",
         permanent: true,
       },
     ]
