@@ -4,7 +4,7 @@ import { ALL_STORIES } from "@/lib/customer-stories"
 import { HELP_CATEGORIES, getAllArticlePaths } from "@/lib/help-center"
 import { SITE } from "@/lib/seo/config"
 import { SEO_REGISTRY } from "@/lib/seo/registry"
-import { getAllOverrides, getSettings } from "@/lib/seo/store"
+import { getAllOverrides } from "@/lib/seo/store"
 
 const SITE_URL = SITE.url
 
@@ -29,6 +29,22 @@ const STATIC_OVERRIDES: Record<string, { priority: number; changeFrequency: Chan
   "/developers/quickstart": { priority: 0.8, changeFrequency: "monthly" },
   "/company/contact": { priority: 0.7, changeFrequency: "yearly" },
   "/signup": { priority: 0.6, changeFrequency: "yearly" },
+}
+
+// Routes that should never appear in the sitemap regardless of registry state.
+const SITEMAP_SKIP = new Set<string>([
+  "/404",
+  "/signin",
+  "/forgot-password",
+  "/test-home",
+  "/dev",
+])
+
+function shouldSkip(path: string): boolean {
+  if (SITEMAP_SKIP.has(path)) return true
+  if (path.startsWith("/dev/")) return true
+  if (path.startsWith("/api/")) return true
+  return false
 }
 
 function defaultFor(path: string): { priority: number; changeFrequency: ChangeFreq } {
@@ -59,29 +75,27 @@ function defaultFor(path: string): { priority: number; changeFrequency: ChangeFr
   return { priority: 0.7, changeFrequency: "monthly" }
 }
 
-const REGISTRY_SKIP = new Set<string>(["/404"])
+/** Ensure every path ends with `/` to match trailingSlash:true canonical URLs. */
+function toUrl(path: string): string {
+  const withSlash = path === "/" ? "/" : path.endsWith("/") ? path : `${path}/`
+  return `${SITE_URL}${withSlash}`
+}
 
 export const revalidate = 60 // Refresh sitemap at most once per minute.
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const now = new Date()
-  const [overrides, settings] = await Promise.all([
-    getAllOverrides().catch(() => new Map()),
-    getSettings().catch(
-      () => ({}) as Awaited<ReturnType<typeof getSettings>>,
-    ),
-  ])
 
-  // Global kill switch — returns an empty sitemap if the site is temporarily
-  // meant to be invisible to search engines.
-  if (settings.globalNoindex) return []
+  // Load Redis overrides for priority/changeFreq customisation.
+  // Never let a Redis failure break the sitemap — gracefully degrade.
+  const overrides = await getAllOverrides().catch(() => new Map<string, { noindex?: boolean; includeInSitemap?: boolean; changeFrequency?: ChangeFreq; priority?: number }>())
 
   type RawEntry = { path: string; lastModified: Date; defaultPriority: number; defaultFreq: ChangeFreq }
   const raw: RawEntry[] = []
 
   // ─── Static pages — derived from lib/seo/registry.ts ──────────────────────
   for (const [path, entry] of Object.entries(SEO_REGISTRY)) {
-    if (entry.noindex || REGISTRY_SKIP.has(path)) continue
+    if (entry.noindex || shouldSkip(path)) continue
     const { priority, changeFrequency } = defaultFor(path)
     raw.push({ path, lastModified: now, defaultPriority: priority, defaultFreq: changeFrequency })
   }
@@ -139,7 +153,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .map((r) => {
       const ov = overrides.get(r.path)
       return {
-        url: `${SITE_URL}${r.path}`,
+        url: toUrl(r.path),
         lastModified: r.lastModified,
         changeFrequency: (ov?.changeFrequency ?? r.defaultFreq) as ChangeFreq,
         priority: ov?.priority ?? r.defaultPriority,
