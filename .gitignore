@@ -1,0 +1,29 @@
+# v0 runtime files
+__v0_runtime_loader.js
+__v0_devtools.tsx
+__v0_jsx-dev-runtime.ts
+
+# Common ignores
+node_modules
+.next/
+.env
+.env*.local
+.DS_Store
+
+# Build artifacts
+*.tsbuildinfo
+
+# Vercel
+.vercel
+
+# Local-only logo backup (kept on disk, not committed)
+_old-logo-backup/
+
+# Local-only raw image source drops (optimized copies live in public/)
+Imgs/
+.vercel
+
+# Reference/scratch material — not part of the live site
+agent-builder-ref/
+smslocal.in-main/
+inbox_automation.zip
