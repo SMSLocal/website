@@ -151,8 +151,8 @@ export default function OmnichannelInboxPage() {
             </>
           }
           subtitle="Live agents and agentic AI work WhatsApp, RCS, SMS, voice, email, Instagram, and Messenger from one place."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: Inbox,      label: "7 channels, one view" },
             { icon: Bot,        label: "AI agent plus copilot built in" },
@@ -307,19 +307,19 @@ export default function OmnichannelInboxPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agentic"
+                href="/products/ai-agentic/"
                 className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/40"
               >
                 Agentic AI <ArrowRight className="h-3.5 w-3.5 text-primary" />
               </Link>
               <Link
-                href="/products/ai-agents"
+                href="/products/ai-agents/"
                 className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/40"
               >
                 AI Agents <ArrowRight className="h-3.5 w-3.5 text-primary" />
               </Link>
               <Link
-                href="/compare"
+                href="/compare/"
                 className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/40"
               >
                 Compare <ArrowRight className="h-3.5 w-3.5 text-primary" />
@@ -352,10 +352,10 @@ export default function OmnichannelInboxPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic", label: "How agentic AI works" },
-                { href: "/products/ai-agents",  label: "AI Agents — automate support and sales" },
-                { href: "/products/analytics",  label: "Analytics — CSAT, NPS, and campaign results" },
-                { href: "/compare",             label: "Compare SMSLocal with alternatives" },
+                { href: "/products/ai-agentic/", label: "How agentic AI works" },
+                { href: "/products/ai-agents/",  label: "AI Agents — automate support and sales" },
+                { href: "/products/analytics/",  label: "Analytics — CSAT, NPS, and campaign results" },
+                { href: "/compare/",             label: "Compare SMSLocal with alternatives" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -374,8 +374,8 @@ export default function OmnichannelInboxPage() {
         <ProductFinalCta
           title="Put every conversation in one inbox."
           subtitle="Connect your channels, bring in the AI, and give your team one place to work every customer — no tab switching, no lost context."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

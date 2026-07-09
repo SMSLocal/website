@@ -51,8 +51,8 @@ export default function VoicePage() {
             </>
           }
           subtitle="Handle inbound and outbound calls without switching tools — phone support, customer context, and conversations in one workspace."
-          primaryCta={{ label: "Add Voice", href: "/signup" }}
-          secondaryCta={{ label: "Book a demo", href: "/company/contact" }}
+          primaryCta={{ label: "Add Voice", href: "/signup/" }}
+          secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
           trustBar={[
             { icon: MapPin, label: "$5/mo local numbers" },
             { icon: PhoneCall, label: "$15/mo toll-free numbers" },

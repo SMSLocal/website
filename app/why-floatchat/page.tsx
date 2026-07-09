@@ -101,8 +101,8 @@ export default function WhySmsLocalPage() {
             </>
           }
           subtitle="The agentic AI agent, the channels, the numbers, and the broadcasting in one product."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant by default" },
             { icon: BadgeIndianRupee, label: "INR billing, GST invoices" },
@@ -229,13 +229,13 @@ export default function WhySmsLocalPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/compare"
+                href="/compare/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Compare platforms
               </Link>
               <Link
-                href="/platform/security"
+                href="/platform/security/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 See the platform
@@ -272,10 +272,10 @@ export default function WhySmsLocalPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic", label: "Explore agentic AI on SMSLocal" },
-                { href: "/platform/security",   label: "See the platform and security" },
-                { href: "/compare",             label: "Compare SMSLocal with alternatives" },
-                { href: "/company/contact",     label: "Talk to our team" },
+                { href: "/products/ai-agentic/", label: "Explore agentic AI on SMSLocal" },
+                { href: "/platform/security/",   label: "See the platform and security" },
+                { href: "/compare/",             label: "Compare SMSLocal with alternatives" },
+                { href: "/company/contact/",     label: "Talk to our team" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -294,8 +294,8 @@ export default function WhySmsLocalPage() {
         <ProductFinalCta
           title="See why teams run on SMSLocal."
           subtitle="Agentic AI, every channel, numbers, and broadcasting in one product — start free and see for yourself."
-          primaryCta={{ label: "Start Free", href: "/signup" }}
-          secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

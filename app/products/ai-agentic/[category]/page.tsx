@@ -186,13 +186,13 @@ export default function AiAgenticPage() {
               </p>
 
               <div className="mt-7 flex flex-wrap gap-3">
-                <Link href="/signup" className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-[14px] font-bold text-primary-foreground shadow-lg shadow-primary/30 transition hover:-translate-y-0.5 hover:opacity-90">
+                <Link href="/signup/" className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-[14px] font-bold text-primary-foreground shadow-lg shadow-primary/30 transition hover:-translate-y-0.5 hover:opacity-90">
                   Start Free <ArrowRight className="h-4 w-4" />
                 </Link>
                 <a href="#apps" className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-[14px] font-semibold text-white transition hover:border-primary/40 hover:bg-white/10">
                   Browse Integrations
                 </a>
-                <Link href="/company/contact" className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-transparent px-5 py-3 text-[14px] font-semibold text-white/70 transition hover:border-white/20 hover:text-white">
+                <Link href="/company/contact/" className="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-transparent px-5 py-3 text-[14px] font-semibold text-white/70 transition hover:border-white/20 hover:text-white">
                   Book a Demo
                 </Link>
               </div>
@@ -543,7 +543,7 @@ export default function AiAgenticPage() {
               <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">
                 Connect your first app in minutes, scope it with Custom Roles, and watch Captain resolve conversations end-to-end across SMS, WhatsApp, Email and Voice.
               </p>
-              <Link href="/signup" className="mt-5 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-[14px] font-bold text-primary-foreground shadow-sm transition hover:opacity-90">
+              <Link href="/signup/" className="mt-5 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-[14px] font-bold text-primary-foreground shadow-sm transition hover:opacity-90">
                 Start Free <ArrowRight className="h-4 w-4" />
               </Link>
             </div>

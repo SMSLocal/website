@@ -251,8 +251,8 @@ export default function SmsActivationPost() {
       <H3>Can I send SMS from a computer?</H3>
       <P>
         Yes — using web-to-SMS services, your carrier&apos;s portal, or an API like{" "}
-        <A href="/products/bulk-sms">SMSLocal Bulk SMS</A>. See our guide on{" "}
-        <A href="/blog/send-sms-online">sending SMS online</A> for the full breakdown.
+        <A href="/products/bulk-sms/">SMSLocal Bulk SMS</A>. See our guide on{" "}
+        <A href="/blog/send-sms-online/">sending SMS online</A> for the full breakdown.
       </P>
 
       <Blockquote cite="Support engineer, SMSLocal">
@@ -263,9 +263,9 @@ export default function SmsActivationPost() {
 
       <Callout variant="tip" title="For developers integrating SMS">
         If you&apos;re building a product that sends SMS and customers are reporting non-delivery,
-        start with delivery receipts. <A href="/products/otp-sms">SMSLocal OTP SMS</A> gives you
+        start with delivery receipts. <A href="/products/otp-sms/">SMSLocal OTP SMS</A> gives you
         per-message DLR showing carrier, template match, and failure reason — so you know whether
-        the issue is your side or theirs. The <A href="/developers/api-docs">API reference</A>
+        the issue is your side or theirs. The <A href="/developers/api-docs/">API reference</A>
         covers the DLR endpoint.
       </Callout>
     </>

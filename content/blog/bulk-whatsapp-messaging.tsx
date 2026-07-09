@@ -18,7 +18,7 @@ export default function BulkWhatsappMessagingPost() {
       <Lead>
         Bulk WhatsApp messaging lets businesses send thousands of messages to opted-in customers
         at once — order updates, offers, reminders, and campaigns — all on the official{" "}
-        <A href="/products/whatsapp-business-api">WhatsApp Business API</A>. This guide explains
+        <A href="/products/whatsapp-business-api/">WhatsApp Business API</A>. This guide explains
         how it actually works in 2026, what it costs, and how to do it without getting your number
         banned.
       </Lead>
@@ -303,9 +303,9 @@ export default function BulkWhatsappMessagingPost() {
         customer replies, agentic AI picks up the thread, answers from your product knowledge base,
         and escalates to a human only when the conversation genuinely needs one. SMSLocal connects
         broadcasting and the inbox so every reply is handled automatically, at any volume. Good{" "}
-        <A href="/blog/whatsapp-marketing-india">WhatsApp marketing</A> and good support are the
+        <A href="/blog/whatsapp-marketing-india/">WhatsApp marketing</A> and good support are the
         same discipline — and getting it wrong is also how businesses fail to{" "}
-        <A href="/blog/whatsapp-scams-india">protect your customers</A> from impersonation and
+        <A href="/blog/whatsapp-scams-india/">protect your customers</A> from impersonation and
         confusion during high-volume campaigns.
       </P>
 
@@ -369,7 +369,7 @@ export default function BulkWhatsappMessagingPost() {
       <Callout variant="success" title="Scale bulk WhatsApp safely with SMSLocal">
         Official BSP, template management, campaign scheduling, and AI that handles every reply —
         so you can broadcast at scale without risking your number.{" "}
-        <A href="/company/contact">Book a demo</A> to get started.
+        <A href="/company/contact/">Book a demo</A> to get started.
       </Callout>
     </>
   )

@@ -109,8 +109,8 @@ export default function DidNumbersPage() {
             </>
           }
           subtitle="Provision local, toll-free, and short code numbers for voice and messaging, all in one place."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
           trustBar={[
             { icon: MapPin, label: "Local, toll-free & short codes" },
             { icon: PhoneCall, label: "Numbers for voice and SMS" },
@@ -234,13 +234,13 @@ export default function DidNumbersPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/voice"
+                href="/products/voice/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Voice — IVR & broadcast
               </Link>
               <Link
-                href="/voice-ai-agents"
+                href="/voice-ai-agents/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Voice AI Agents
@@ -273,10 +273,10 @@ export default function DidNumbersPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/voice",       label: "Voice — IVR, OTP calls, and voice broadcast" },
-                { href: "/products/bulk-sms",    label: "Bulk SMS — send at scale on registered numbers" },
-                { href: "/platform/security",    label: "Platform security — controls behind every number" },
-                { href: "/compare",              label: "Compare SMSLocal with alternatives" },
+                { href: "/products/voice/",       label: "Voice — IVR, OTP calls, and voice broadcast" },
+                { href: "/products/bulk-sms/",    label: "Bulk SMS — send at scale on registered numbers" },
+                { href: "/platform/security/",    label: "Platform security — controls behind every number" },
+                { href: "/compare/",              label: "Compare SMSLocal with alternatives" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -295,8 +295,8 @@ export default function DidNumbersPage() {
         <ProductFinalCta
           title="Get the numbers your agentic AI runs on."
           subtitle="Local, toll-free, and short code numbers for voice and messaging, with DLT and sender-ID registration guided by our team — all in one platform."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

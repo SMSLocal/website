@@ -83,7 +83,7 @@ const STEPS: Step[] = [
     number: "01",
     title: "Create an SMSLocal account",
     body: "Sign up with a work email. Every new account lands with \u20B960 free credit — enough for ~200 test SMS. No credit card required. You will be asked for a company name and the country you operate in; for Indian operators, pick India.",
-    cta: { label: "Sign up for free", href: "/signup" },
+    cta: { label: "Sign up for free", href: "/signup/" },
   },
   {
     number: "02",
@@ -94,7 +94,7 @@ const STEPS: Step[] = [
       "Register the template body of the SMS you want to send. Use {#var#} for dynamic fields.",
       "Copy the 19-digit Template ID after approval — you will pass it in every API call.",
     ],
-    cta: { label: "Full DLT walkthrough", href: "/resources/dlt-compliance" },
+    cta: { label: "Full DLT walkthrough", href: "/resources/dlt-compliance/" },
   },
   {
     number: "03",
@@ -155,7 +155,7 @@ export default function QuickstartPage() {
               </li>
               <li aria-hidden>/</li>
               <li>
-                <Link href="/developers" className="hover:text-white">
+                <Link href="/developers/" className="hover:text-white">
                   Developers
                 </Link>
               </li>
@@ -183,14 +183,14 @@ export default function QuickstartPage() {
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
-                  href="/signup"
+                  href="/signup/"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-[14px] font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition hover:brightness-110"
                 >
                   Start — \u20B960 free credit
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="/developers/api-docs"
+                  href="/developers/api-docs/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-4 py-2.5 text-[14px] font-semibold text-white transition hover:bg-white/[0.08]"
                 >
                   <BookOpen className="h-4 w-4" />
@@ -276,7 +276,7 @@ export default function QuickstartPage() {
                       three-digit error code (e.g. <code className="font-mono">110</code>) means the
                       request was rejected — see{" "}
                       <Link
-                        href="/developers/api-docs#error-codes"
+                        href="/developers/api-docs/#error-codes"
                         className="text-primary hover:underline"
                       >
                         error codes
@@ -342,28 +342,28 @@ export default function QuickstartPage() {
                 icon: Terminal,
                 title: "Read the full API reference",
                 body: "Every endpoint, every parameter, every error code — with working cURL, Node.js, Python, and PHP samples.",
-                href: "/developers/api-docs",
+                href: "/developers/api-docs/",
                 cta: "Open API reference",
               },
               {
                 icon: FileCode2,
                 title: "Try the XML API",
                 body: "If your middleware speaks XML natively, the XML API mirrors every endpoint with clean XML payloads.",
-                href: "/developers/xml-api",
+                href: "/developers/xml-api/",
                 cta: "See XML examples",
               },
               {
                 icon: KeyRound,
                 title: "DLT compliance guide",
                 body: "Deep-dive on TRAI DLT requirements, PE registration, templates, and sender-ID approvals — the Indian SMS rulebook.",
-                href: "/resources/dlt-compliance",
+                href: "/resources/dlt-compliance/",
                 cta: "Read the guide",
               },
               {
                 icon: Webhook,
                 title: "Set up webhooks",
                 body: "Receive delivery reports and inbound replies in real time. Signed, versioned, and retry-safe out of the box.",
-                href: "/developers/api-docs#webhooks",
+                href: "/developers/api-docs/#webhooks",
                 cta: "Configure webhooks",
               },
             ].map((card) => {
@@ -399,8 +399,8 @@ export default function QuickstartPage() {
       <ProductFinalCta
         title="Your first delivered SMS is one API call away."
         subtitle="Sign up, grab a key, paste the snippet. We will handle the routing, DLT scrub, and delivery report."
-        primaryCta={{ label: "Start free", href: "/signup" }}
-        secondaryCta={{ label: "Read API docs", href: "/developers/api-docs" }}
+        primaryCta={{ label: "Start free", href: "/signup/" }}
+        secondaryCta={{ label: "Read API docs", href: "/developers/api-docs/" }}
       />
 
       <SiteFooter />

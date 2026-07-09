@@ -118,8 +118,8 @@ export default function AgentBuilderPage() {
                     eyebrow="SMSLocal — AI Agent Builder"
                     title={<>Build Your Agentic AI Agent Without Code</>}
                     subtitle="A visual, no-code builder to create, train, and launch agentic AI agents across every channel."
-                    primaryCta={{ label: "Build Your AI Agent", href: "/signup" }}
-                    secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+                    primaryCta={{ label: "Build Your AI Agent", href: "/signup/" }}
+                    secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
                     trustBar={[
                         { icon: MousePointerClick, label: "No-code, point and click" },
                         { icon: Bot, label: "Trained on your data" },
@@ -215,7 +215,7 @@ export default function AgentBuilderPage() {
                         { label: "Shared inbox", value: "All channels, one inbox, one dataset" },
                         { label: "Docs", value: "/developers/api-docs" },
                     ]}
-                    cta={{ label: "View API docs", href: "/developers/api-docs" }}
+                    cta={{ label: "View API docs", href: "/developers/api-docs/" }}
                 />
 
                 {/* ── Why it works + Why SMSLocal ── */}
@@ -304,8 +304,8 @@ export default function AgentBuilderPage() {
                 <ProductFinalCta
                     title="Build and launch your agent this week."
                     subtitle="No developers required. From idea to live agent in days."
-                    primaryCta={{ label: "Build Your AI Agent", href: "/signup" }}
-                    secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+                    primaryCta={{ label: "Build Your AI Agent", href: "/signup/" }}
+                    secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
                 />
             </main>
 

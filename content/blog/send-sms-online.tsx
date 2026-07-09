@@ -113,10 +113,10 @@ export default function SendSmsOnlinePost() {
         </LI>
       </UL>
       <Callout variant="tip" title="Our take">
-        <A href="/products/bulk-sms">SMSLocal Bulk SMS</A> is our web-to-SMS product, built for
+        <A href="/products/bulk-sms/">SMSLocal Bulk SMS</A> is our web-to-SMS product, built for
         exactly this use case. DLT onboarding, NCPR scrub, scheduling, and DLR are all
         out-of-the-box. If you just want to{" "}
-        <A href="/resources/tools/free-sms-without-registration">
+        <A href="/resources/tools/free-sms-without-registration/">
           send free SMS without registration
         </A>{" "}
         to test the waters, we have a ₹60 credit to start.
@@ -170,8 +170,8 @@ export default function SendSmsOnlinePost() {
       />
 
       <Callout variant="tip" title="Start here">
-        Our <A href="/developers/quickstart">Quickstart</A> gets you from signup to first SMS in
-        under 5 minutes. The <A href="/developers/api-docs">full API reference</A> covers every
+        Our <A href="/developers/quickstart/">Quickstart</A> gets you from signup to first SMS in
+        under 5 minutes. The <A href="/developers/api-docs/">full API reference</A> covers every
         endpoint.
       </Callout>
 
@@ -215,7 +215,7 @@ export default function SendSmsOnlinePost() {
         <LI>You have the bandwidth to manage template approvals through Meta.</LI>
       </UL>
       <Callout variant="tip" title="Deep dive">
-        See our <A href="/products/whatsapp-business-api">WhatsApp Business API</A> page for
+        See our <A href="/products/whatsapp-business-api/">WhatsApp Business API</A> page for
         pricing, session windows, and template approval guidance.
       </Callout>
 
@@ -228,7 +228,7 @@ export default function SendSmsOnlinePost() {
         <LI>
           <Strong>DLT registration.</Strong> Your company (Principal Entity), sender ID
           (Header), and every template you send must be registered on TRAI&apos;s DLT platform.
-          Read the full <A href="/blog/dlt-registration-guide">DLT registration guide</A>.
+          Read the full <A href="/blog/dlt-registration-guide/">DLT registration guide</A>.
         </LI>
         <LI>
           <Strong>Consent.</Strong> You must hold documented, auditable opt-in for every
@@ -293,10 +293,10 @@ export default function SendSmsOnlinePost() {
 
       <Callout variant="tip" title="Pick your starting point">
         Not sure which path fits? If you&apos;re non-technical and want to send a few thousand
-        messages for a promotion, start with <A href="/products/bulk-sms">Bulk SMS</A>. If
+        messages for a promotion, start with <A href="/products/bulk-sms/">Bulk SMS</A>. If
         you&apos;re a developer integrating into your product, jump into the{" "}
-        <A href="/developers/quickstart">Quickstart</A>. And if you want richer conversations,{" "}
-        <A href="/products/whatsapp-business-api">WhatsApp Business API</A> is probably what
+        <A href="/developers/quickstart/">Quickstart</A>. And if you want richer conversations,{" "}
+        <A href="/products/whatsapp-business-api/">WhatsApp Business API</A> is probably what
         you&apos;re looking for.
       </Callout>
     </>

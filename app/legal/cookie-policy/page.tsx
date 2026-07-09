@@ -48,7 +48,7 @@ export default function CookiePolicyPage() {
           toc={TOC}
           breadcrumb={[
             { label: "Home", href: "/" },
-            { label: "Legal", href: "/legal/privacy" },
+            { label: "Legal", href: "/legal/privacy/" },
             { label: "Cookie Policy" },
           ]}
         >

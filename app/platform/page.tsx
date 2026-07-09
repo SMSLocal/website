@@ -104,8 +104,8 @@ export default function PlatformPage() {
             </>
           }
           subtitle="The agentic AI agent, the omnichannel inbox, the campaigns, and the developer tools, in a single product."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: Sparkles, label: "Agentic AI across every channel" },
             { icon: Send, label: "SMS, WhatsApp, and RCS broadcasting" },
@@ -210,19 +210,19 @@ export default function PlatformPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agentic"
+                href="/products/ai-agentic/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Agentic AI
               </Link>
               <Link
-                href="/products/omnichannel-inbox"
+                href="/products/omnichannel-inbox/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Omnichannel inbox
               </Link>
               <Link
-                href="/platform/security"
+                href="/platform/security/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Platform security
@@ -255,10 +255,10 @@ export default function PlatformPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic",         label: "Agentic AI — how it works" },
-                { href: "/products/omnichannel-inbox",  label: "Omnichannel inbox — one place for every channel" },
-                { href: "/products/integrations",       label: "Integrations — connect your existing stack" },
-                { href: "/platform/security",           label: "Platform security — SSO, audit logs, and controls" },
+                { href: "/products/ai-agentic/",         label: "Agentic AI — how it works" },
+                { href: "/products/omnichannel-inbox/",  label: "Omnichannel inbox — one place for every channel" },
+                { href: "/products/integrations/",       label: "Integrations — connect your existing stack" },
+                { href: "/platform/security/",           label: "Platform security — SSO, audit logs, and controls" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -277,8 +277,8 @@ export default function PlatformPage() {
         <ProductFinalCta
           title="Run your customer experience from one platform."
           subtitle="Agentic AI, every channel, broadcasting, and a shared inbox — connected from day one."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

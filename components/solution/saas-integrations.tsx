@@ -60,7 +60,7 @@ export function SaasIntegrations() {
       {/* ── Build your own — boxless pretty callout ────────────────── */}
       <div className="mt-12 flex justify-center">
         <Link
-          href="/developers/api-docs"
+          href="/developers/api-docs/"
           className="group relative inline-flex items-center gap-4 overflow-hidden rounded-2xl px-7 py-5 transition-transform hover:scale-[1.02]"
         >
           {/* soft glow */}

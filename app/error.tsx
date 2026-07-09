@@ -66,7 +66,7 @@ export default function GlobalError({
 
         <p className="mt-10 text-xs text-white/50">
           If this keeps happening,{" "}
-          <Link href="/company/contact" className="text-white/80 underline underline-offset-4 hover:text-white">
+          <Link href="/company/contact/" className="text-white/80 underline underline-offset-4 hover:text-white">
             let our support team know
           </Link>
           .

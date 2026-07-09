@@ -129,8 +129,8 @@ export default function AnalyticsPage() {
             </>
           }
           subtitle="Real-time dashboards for agent performance, customer sentiment, and campaign results, in one view."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: BarChart2,    label: "Real-time dashboards" },
             { icon: Heart,        label: "CSAT, NPS, and resolution" },
@@ -256,13 +256,13 @@ export default function AnalyticsPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/omnichannel-inbox"
+                href="/products/omnichannel-inbox/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Omnichannel inbox
               </Link>
               <Link
-                href="/products/ai-agentic"
+                href="/products/ai-agentic/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Agentic AI
@@ -295,10 +295,10 @@ export default function AnalyticsPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic",         label: "How agentic AI works" },
-                { href: "/products/omnichannel-inbox",  label: "Omnichannel inbox — one place for every channel" },
-                { href: "/products/ai-agents",          label: "AI Agents — automate support and sales" },
-                { href: "/compare",                     label: "Compare SMSLocal with alternatives" },
+                { href: "/products/ai-agentic/",         label: "How agentic AI works" },
+                { href: "/products/omnichannel-inbox/",  label: "Omnichannel inbox — one place for every channel" },
+                { href: "/products/ai-agents/",          label: "AI Agents — automate support and sales" },
+                { href: "/compare/",                     label: "Compare SMSLocal with alternatives" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -317,8 +317,8 @@ export default function AnalyticsPage() {
         <ProductFinalCta
           title="See what is really driving your customer experience."
           subtitle="Connect your channels and get a live view of agent performance, campaign results, and customer sentiment — all in one dashboard."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

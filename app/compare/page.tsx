@@ -188,14 +188,14 @@ export default function CompareHubPage() {
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
-                href="/compare/smslocal-vs-msg91"
+                href="/compare/smslocal-vs-msg91/"
                 className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
               >
                 Start with MSG91
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
-                href="/pricing"
+                href="/pricing/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
               >
                 See our pricing
@@ -292,8 +292,8 @@ export default function CompareHubPage() {
         <ProductFinalCta
           title="Still shortlisting? Try SMSLocal free."
           subtitle="₹60 credit, no card, no commitment. See the product on your own data before you compare anything."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
 

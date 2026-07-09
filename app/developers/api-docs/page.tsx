@@ -266,7 +266,7 @@ export default function ApiDocsPage() {
               </li>
               <li aria-hidden>/</li>
               <li>
-                <Link href="/developers" className="hover:text-white">
+                <Link href="/developers/" className="hover:text-white">
                   Developers
                 </Link>
               </li>
@@ -294,14 +294,14 @@ export default function ApiDocsPage() {
 
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
-                  href="/signup"
+                  href="/signup/"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-[14px] font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition hover:brightness-110"
                 >
                   Get your API key
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="/developers/quickstart"
+                  href="/developers/quickstart/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/[0.04] px-4 py-2.5 text-[14px] font-semibold text-white transition hover:bg-white/[0.08]"
                 >
                   <Sparkles className="h-4 w-4" />
@@ -385,7 +385,7 @@ export default function ApiDocsPage() {
             <p className="mt-4 max-w-3xl text-[15.5px] leading-relaxed text-muted-foreground">
               Every request must include your API key as the <code className="font-mono text-foreground">key</code>{" "}
               query parameter. Get your key from{" "}
-              <Link href="/signin" className="text-primary hover:underline">
+              <Link href="/signin/" className="text-primary hover:underline">
                 Settings → API &amp; Webhooks
               </Link>{" "}
               after you sign up. Keys are 32-character hex strings.
@@ -765,8 +765,8 @@ export default function ApiDocsPage() {
       <ProductFinalCta
         title="Ready to send your first SMS?"
         subtitle="₹60 free credit — enough for 60 real deliveries. No credit card, full DLT support from our team."
-        primaryCta={{ label: "Get your API key", href: "/signup" }}
-        secondaryCta={{ label: "See pricing", href: "/pricing" }}
+        primaryCta={{ label: "Get your API key", href: "/signup/" }}
+        secondaryCta={{ label: "See pricing", href: "/pricing/" }}
       />
 
       <SiteFooter />

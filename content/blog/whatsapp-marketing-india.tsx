@@ -74,7 +74,7 @@ export default function WhatsappMarketingIndiaPost() {
       <H2 id="official-api-vs-unofficial-tools">Official API vs. unofficial tools</H2>
       <P>
         Before anything else: the only safe way to do WhatsApp marketing at scale is through the
-        official <A href="/products/whatsapp-business-api">WhatsApp Business API</A>, accessed
+        official <A href="/products/whatsapp-business-api/">WhatsApp Business API</A>, accessed
         through a Meta-approved Business Solution Provider (BSP).
       </P>
       <P>
@@ -313,11 +313,11 @@ export default function WhatsappMarketingIndiaPost() {
 
       <H3>How is WhatsApp marketing different from bulk WhatsApp messaging?</H3>
       <P>
-        They overlap. &quot;<A href="/blog/bulk-whatsapp-messaging">Bulk WhatsApp messaging</A>
+        They overlap. &quot;<A href="/blog/bulk-whatsapp-messaging/">Bulk WhatsApp messaging</A>
         &quot; usually refers to the broadcast mechanics — how you send the same template to
         thousands of opted-in contacts at once. WhatsApp marketing is the wider strategy around
         it: list building, segmentation, CTWA ads, conversation flows, and measurement. (See our
-        full guide to <A href="/blog/bulk-whatsapp-messaging">bulk WhatsApp messaging</A> for the
+        full guide to <A href="/blog/bulk-whatsapp-messaging/">bulk WhatsApp messaging</A> for the
         sending side.)
       </P>
 
@@ -332,17 +332,17 @@ export default function WhatsappMarketingIndiaPost() {
       <H3>What&apos;s the difference between the WhatsApp Business App and the API?</H3>
       <P>
         The Business App is a free app for very small businesses — one user, no broadcasting, no
-        API, a cap of a few hundred conversations. The <A href="/products/whatsapp-business-api">
+        API, a cap of a few hundred conversations. The <A href="/products/whatsapp-business-api/">
         WhatsApp Business API</A> (via a BSP) is for businesses that need bulk sending, multiple
         agents on one inbox, automated replies, and CRM integration. If you&apos;re doing
         marketing, you need the API.
       </P>
 
       <Callout variant="tip" title="Ready to run WhatsApp marketing the right way?">
-        SMSLocal sets up your <A href="/products/whatsapp-business-api">WhatsApp Business API</A>,
+        SMSLocal sets up your <A href="/products/whatsapp-business-api/">WhatsApp Business API</A>,
         manages template approvals, runs your broadcasts, and handles every reply with AI. Start
         your Click-to-WhatsApp ads and turn conversations into customers — and watch out for{" "}
-        <A href="/blog/whatsapp-scams-india">WhatsApp scams</A> that erode customer trust in the
+        <A href="/blog/whatsapp-scams-india/">WhatsApp scams</A> that erode customer trust in the
         channel while you're at it.
       </Callout>
     </>

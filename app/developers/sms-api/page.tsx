@@ -219,8 +219,8 @@ export default function SmsApiPage() {
           eyebrow="SMS API"
           title={<>Automate your business messaging with a powerful SMS API.</>}
           subtitle="Connect to the SMSLocal infrastructure and send DLT-compliant messages at scale. Developer-friendly REST and XML endpoints, comprehensive docs, and direct-operator delivery — so your customers hear from you the second it matters."
-          primaryCta={{ label: "Start with \u20B960 free credit", href: "/signup" }}
-          secondaryCta={{ label: "Explore the HTTP API", href: "/developers/api-docs" }}
+          primaryCta={{ label: "Start with \u20B960 free credit", href: "/signup/" }}
+          secondaryCta={{ label: "Explore the HTTP API", href: "/developers/api-docs/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant" },
             { icon: Bolt, label: "Sub-second delivery" },
@@ -328,14 +328,14 @@ export default function SmsApiPage() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3 text-[14px]">
             <span className="text-muted-foreground">More questions?</span>
             <Link
-              href="/resources/help"
+              href="/resources/help/"
               className="inline-flex items-center gap-1.5 font-semibold text-primary hover:underline"
             >
               Visit the help centre <ArrowRight className="h-3.5 w-3.5" />
             </Link>
             <span className="text-muted-foreground">or</span>
             <Link
-              href="/developers/api-docs"
+              href="/developers/api-docs/"
               className="inline-flex items-center gap-1.5 font-semibold text-primary hover:underline"
             >
               read the full API reference <ArrowRight className="h-3.5 w-3.5" />
@@ -348,8 +348,8 @@ export default function SmsApiPage() {
         <ProductFinalCta
           title="Ship your first SMS in the next 15 minutes."
           subtitle="Claim \u20B960 free credit when you sign up — no credit card, no commitment. Approve a DLT template, grab an API key, and start sending."
-          primaryCta={{ label: "Sign up free", href: "/signup" }}
-          secondaryCta={{ label: "Talk to sales", href: "/company/contact" }}
+          primaryCta={{ label: "Sign up free", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
 

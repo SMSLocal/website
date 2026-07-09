@@ -115,8 +115,8 @@ export default function SmsBroadcastingPage() {
             </>
           }
           subtitle="Segment a list, personalize, schedule, and send bulk SMS at scale, then let agentic AI handle every reply."
-          primaryCta={{ label: "Start Broadcasting", href: "/company/contact" }}
-          secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+          primaryCta={{ label: "Start Broadcasting", href: "/company/contact/" }}
+          secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
           trustBar={[
             { icon: Users,     label: "Bulk SMS at scale" },
             { icon: ShieldCheck, label: "DLT and sender-ID support" },
@@ -221,13 +221,13 @@ export default function SmsBroadcastingPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/channels/whatsapp-broadcasting"
+                href="/channels/whatsapp-broadcasting/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 WhatsApp Broadcasting
               </Link>
               <Link
-                href="/channels/rcs-broadcasting"
+                href="/channels/rcs-broadcasting/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 RCS Broadcasting
@@ -260,10 +260,10 @@ export default function SmsBroadcastingPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/channels/whatsapp-broadcasting", label: "WhatsApp Broadcasting — campaigns at scale" },
-                { href: "/channels/rcs-broadcasting",       label: "RCS Broadcasting — rich cards with SMS fallback" },
-                { href: "/numbers/did",                     label: "DID and virtual numbers, managed in-platform" },
-                { href: "/compare",                         label: "Compare SMSLocal with alternatives" },
+                { href: "/channels/whatsapp-broadcasting/", label: "WhatsApp Broadcasting — campaigns at scale" },
+                { href: "/channels/rcs-broadcasting/",       label: "RCS Broadcasting — rich cards with SMS fallback" },
+                { href: "/numbers/did/",                     label: "DID and virtual numbers, managed in-platform" },
+                { href: "/compare/",                         label: "Compare SMSLocal with alternatives" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -282,8 +282,8 @@ export default function SmsBroadcastingPage() {
         <ProductFinalCta
           title="Broadcast SMS and let AI handle the replies."
           subtitle="Segment your list, personalize the send, and let agentic AI carry every reply into a real conversation."
-          primaryCta={{ label: "Start Broadcasting", href: "/company/contact" }}
-          secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+          primaryCta={{ label: "Start Broadcasting", href: "/company/contact/" }}
+          secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

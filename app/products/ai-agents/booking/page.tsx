@@ -126,8 +126,8 @@ export default function BookingAgentPage() {
             </>
           }
           subtitle="Schedule appointments and reservations inside the chat, check availability, confirm, and send reminders, all automatically."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: CalendarCheck, label: "Books inside the conversation" },
             { icon: Zap,           label: "Real-time availability checks" },
@@ -252,13 +252,13 @@ export default function BookingAgentPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agents"
+                href="/products/ai-agents/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 See all AI agents
               </Link>
               <Link
-                href="/solutions/healthcare"
+                href="/solutions/healthcare/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Healthcare solutions
@@ -291,10 +291,10 @@ export default function BookingAgentPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agents", label: "All AI agent use cases" },
-                { href: "/products/ai-agentic", label: "How agentic AI works" },
-                { href: "/solutions/healthcare", label: "Healthcare solutions" },
-                { href: "/compare",             label: "Compare SMSLocal with alternatives" },
+                { href: "/products/ai-agents/", label: "All AI agent use cases" },
+                { href: "/products/ai-agentic/", label: "How agentic AI works" },
+                { href: "/solutions/healthcare/", label: "Healthcare solutions" },
+                { href: "/compare/",             label: "Compare SMSLocal with alternatives" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -313,8 +313,8 @@ export default function BookingAgentPage() {
         <ProductFinalCta
           title="Fill your calendar without the phone tag."
           subtitle="Connect your calendar, set your availability, and let the agent handle bookings, reminders, and reschedules — automatically."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

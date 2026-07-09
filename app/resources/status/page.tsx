@@ -1182,7 +1182,7 @@ export default function StatusPage() {
                 </p>
               </div>
               <Link
-                href="/company/contact"
+                href="/company/contact/"
                 className="group inline-flex shrink-0 items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
               >
                 Contact Support

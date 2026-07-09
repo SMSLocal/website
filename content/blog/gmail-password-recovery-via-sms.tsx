@@ -128,7 +128,7 @@ export default function GmailPasswordRecoveryPost() {
       <H3>4. Toggle airplane mode and reboot</H3>
       <P>
         Classic fix. Your phone may not be properly registered with the carrier. See our{" "}
-        <A href="/blog/sms-activation">SMS activation guide</A> for the full device-level
+        <A href="/blog/sms-activation/">SMS activation guide</A> for the full device-level
         checklist.
       </P>
 
@@ -251,7 +251,7 @@ export default function GmailPasswordRecoveryPost() {
       <P>
         No. Google&apos;s recovery SMS is categorised as transactional/service-explicit and is
         exempt from DND. If you&apos;re on DND and still not receiving the SMS, the cause is
-        elsewhere. Read our <A href="/blog/dnd-means">DND means</A> guide for the mechanics.
+        elsewhere. Read our <A href="/blog/dnd-means/">DND means</A> guide for the mechanics.
       </P>
 
       <Blockquote cite="A support engineer who handles recovery escalations">
@@ -263,9 +263,9 @@ export default function GmailPasswordRecoveryPost() {
       <Callout variant="tip" title="For developers integrating OTP">
         Recovery SMS like Gmail&apos;s is the same category as your OTP SMS — transactional,
         time-sensitive, delivery-critical.{" "}
-        <A href="/products/otp-sms">SMSLocal OTP SMS</A> is built for exactly this pattern, with
+        <A href="/products/otp-sms/">SMSLocal OTP SMS</A> is built for exactly this pattern, with
         per-message delivery receipts and carrier-level retry. The{" "}
-        <A href="/developers/api-docs">API reference</A> covers the full integration.
+        <A href="/developers/api-docs/">API reference</A> covers the full integration.
       </Callout>
     </>
   )

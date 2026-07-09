@@ -23,9 +23,9 @@ export default function DpdpaPage() {
         lastUpdated="April 22, 2026"
         effectiveDate="April 22, 2026"
         relatedLinks={[
-          { label: "Privacy policy", href: "/legal/privacy" },
-          { label: "Terms of service", href: "/legal/terms" },
-          { label: "Grievance contact", href: "/company/contact" },
+          { label: "Privacy policy", href: "/legal/privacy/" },
+          { label: "Terms of service", href: "/legal/terms/" },
+          { label: "Grievance contact", href: "/company/contact/" },
         ]}
         sections={[
           {

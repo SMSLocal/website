@@ -335,7 +335,7 @@ function IntegrationCategoryTabs() {
 
             {/* CTA */}
             <Link
-              href="/signup"
+              href="/signup/"
               className="group/cta mt-6 inline-flex items-center gap-1.5 text-[13px] font-semibold text-primary"
             >
               Connect now
@@ -470,7 +470,7 @@ function FeaturedItem({ f, i }: { f: (typeof FEATURED)[0]; i: number }) {
       {/* CTAs — full row on mobile, inline on sm+ */}
       <div className="col-span-2 flex gap-2 sm:col-span-1 sm:shrink-0">
         <Link
-          href="/signup"
+          href="/signup/"
           className="group/btn inline-flex items-center gap-1.5 rounded-full px-4 py-2 text-[12.5px] font-bold text-primary-foreground shadow-sm transition hover:scale-[1.04] hover:shadow-md active:scale-[0.97]"
           style={{ background: "linear-gradient(135deg,var(--primary),oklch(0.72 0.17 165))" }}
         >
@@ -478,7 +478,7 @@ function FeaturedItem({ f, i }: { f: (typeof FEATURED)[0]; i: number }) {
           <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover/btn:translate-x-0.5" />
         </Link>
         <Link
-          href="/developers/api-docs"
+          href="/developers/api-docs/"
           className="inline-flex items-center rounded-full border border-border px-4 py-2 text-[12.5px] font-semibold text-foreground/60 transition hover:border-primary/40 hover:text-primary"
         >
           Docs
@@ -910,12 +910,12 @@ function DeveloperSection() {
             </p>
             <DevFeatureList />
             <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/developers/api-docs"
+              <Link href="/developers/api-docs/"
                 className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground shadow-lg transition hover:opacity-90"
                 style={{ boxShadow: "0 8px 24px color-mix(in oklch, var(--primary) 30%, transparent)" }}>
                 View API Docs <ArrowRight className="h-4 w-4" />
               </Link>
-              <Link href="/signup"
+              <Link href="/signup/"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/10">
                 Get Free API Key
               </Link>
@@ -1394,13 +1394,13 @@ export function IntegrationsPremiumPage() {
               </p>
 
               <div className="mt-7 flex flex-wrap items-center gap-4">
-                <Link href="/signup"
+                <Link href="/signup/"
                   className="group inline-flex items-center gap-2.5 rounded-2xl px-7 py-4 text-[15px] font-bold text-primary-foreground shadow-xl transition hover:opacity-90 hover:-translate-y-0.5"
                   style={{ background: "linear-gradient(135deg,var(--primary),oklch(0.72 0.17 165))", boxShadow: "0 12px 40px color-mix(in oklch, var(--primary) 32%, transparent)" }}>
                   Start Free Trial
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
                 </Link>
-                <Link href="/developers/api-docs"
+                <Link href="/developers/api-docs/"
                   className="inline-flex items-center gap-2.5 rounded-2xl border border-border bg-card px-7 py-4 text-[15px] font-semibold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md">
                   <Code2 className="h-4 w-4 text-primary" /> View API Docs
                 </Link>
@@ -1520,12 +1520,12 @@ export function IntegrationsPremiumPage() {
                 Launch SMS, WhatsApp and RCS workflows in minutes. Free plan includes 60 SMS credits — no credit card required.
               </p>
               <div className="mt-10 flex flex-wrap gap-4">
-                <Link href="/signup"
+                <Link href="/signup/"
                   className="inline-flex items-center gap-2.5 rounded-2xl bg-primary px-7 py-4 text-[15px] font-bold text-primary-foreground shadow-xl transition hover:-translate-y-0.5 hover:opacity-90"
                   style={{ boxShadow: "0 8px 32px color-mix(in oklch, var(--primary) 40%, transparent)" }}>
                   <Zap className="h-4 w-4" /> Start Free Trial
                 </Link>
-                <Link href="/company/contact"
+                <Link href="/company/contact/"
                   className="inline-flex items-center gap-2.5 rounded-2xl border border-white/20 bg-white/8 px-7 py-4 text-[15px] font-semibold text-white backdrop-blur-sm transition hover:bg-white/12 hover:-translate-y-0.5">
                   Contact Sales <ArrowRight className="h-4 w-4" />
                 </Link>

@@ -85,14 +85,14 @@ export default function SaasB2BPage() {
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Link
-                  href="/signup"
+                  href="/signup/"
                   className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/30 transition hover:brightness-110"
                 >
                   Start Free
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
-                  href="/company/contact"
+                  href="/company/contact/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white transition hover:bg-white/10"
                 >
                   Talk to Sales
@@ -181,8 +181,8 @@ export default function SaasB2BPage() {
         <FinalCtaBoxless
           title="Replace Intercom + Zendesk with one customer platform."
           subtitle="Give your SaaS team the context, automation, and AI tools needed to build stronger customer relationships."
-          primaryCta={{ label: "Start Free", href: "/signup" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
         />
       </main>
 

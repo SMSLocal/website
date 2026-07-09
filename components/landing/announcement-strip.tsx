@@ -15,7 +15,7 @@ export function AnnouncementStrip() {
             <Sparkles className="h-3 w-3" />
             New
           </span>
-          <a href="/products/ai-agents" className="group inline-flex items-center gap-1.5 font-medium hover:text-primary">
+          <a href="/products/ai-agents/" className="group inline-flex items-center gap-1.5 font-medium hover:text-primary">
             AI WhatsApp agents that reply in 8 Indian languages. Launch yours in 10 minutes
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
           </a>

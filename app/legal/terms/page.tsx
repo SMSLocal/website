@@ -23,9 +23,9 @@ export default function TermsPage() {
         lastUpdated="April 22, 2026"
         effectiveDate="April 22, 2026"
         relatedLinks={[
-          { label: "Privacy policy", href: "/legal/privacy" },
-          { label: "Acceptable use", href: "/legal/acceptable-use" },
-          { label: "DPDPA notice", href: "/legal/dpdpa" },
+          { label: "Privacy policy", href: "/legal/privacy/" },
+          { label: "Acceptable use", href: "/legal/acceptable-use/" },
+          { label: "DPDPA notice", href: "/legal/dpdpa/" },
         ]}
         sections={[
           {
@@ -152,7 +152,7 @@ export default function TermsPage() {
                     Per-message charges are based on Meta&apos;s WhatsApp conversation rates, telecom operator
                     tariffs, and Google RCS rates (as applicable), plus a transparent platform markup. Detailed
                     pricing is published on our{" "}
-                    <a href="/pricing" className="font-medium text-primary hover:underline">
+                    <a href="/pricing/" className="font-medium text-primary hover:underline">
                       pricing page
                     </a>
                     .
@@ -247,7 +247,7 @@ export default function TermsPage() {
                 </Ul>
                 <P>
                   Full details are in our{" "}
-                  <a href="/legal/acceptable-use" className="font-medium text-primary hover:underline">
+                  <a href="/legal/acceptable-use/" className="font-medium text-primary hover:underline">
                     Acceptable Use Policy
                   </a>
                   .
@@ -402,7 +402,7 @@ export default function TermsPage() {
                   Each party agrees to protect the confidential information of the other party with the same
                   degree of care it uses to protect its own confidential information, and in any event with no
                   less than reasonable care. Our processing of Personal Information is described in our{" "}
-                  <a href="/legal/privacy" className="font-medium text-primary hover:underline">
+                  <a href="/legal/privacy/" className="font-medium text-primary hover:underline">
                     Privacy Policy
                   </a>{" "}
                   and, where applicable, in a Data Processing Addendum that may be executed between the parties.

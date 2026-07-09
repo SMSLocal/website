@@ -160,7 +160,7 @@ export default function ReceiveSmsOnlineIndiaPost() {
         <LI>
           <Strong>For QA/testing your own OTP flow:</Strong> Use your own number or your team&apos;s
           QA numbers. Production-grade SMS platforms like{" "}
-          <A href="/products/otp-sms">SMSLocal OTP SMS</A> let you set up test flows with logging
+          <A href="/products/otp-sms/">SMSLocal OTP SMS</A> let you set up test flows with logging
           and delivery receipts so you don&apos;t actually need to receive the SMS on a phone at
           all — you inspect the payload in the dashboard.
         </LI>
@@ -171,7 +171,7 @@ export default function ReceiveSmsOnlineIndiaPost() {
         </LI>
         <LI>
           <Strong>For avoiding telemarketing after signup:</Strong> Give your real number, then
-          activate <A href="/blog/dnd-means">DND</A>. That&apos;s what DND was designed for.
+          activate <A href="/blog/dnd-means/">DND</A>. That&apos;s what DND was designed for.
         </LI>
         <LI>
           <Strong>For international users needing an Indian number:</Strong> Most Indian services
@@ -238,10 +238,10 @@ export default function ReceiveSmsOnlineIndiaPost() {
       </Blockquote>
 
       <Callout variant="tip" title="Building OTP flows?">
-        If you&apos;re integrating OTP SMS into your product, <A href="/products/otp-sms">SMSLocal
+        If you&apos;re integrating OTP SMS into your product, <A href="/products/otp-sms/">SMSLocal
         OTP SMS</A> handles DLT registration, delivery guarantees, and number-type detection
         out-of-the-box — so you can block virtual numbers before they cost you. See the{" "}
-        <A href="/developers/api-docs">API reference</A> for the integration.
+        <A href="/developers/api-docs/">API reference</A> for the integration.
       </Callout>
     </>
   )

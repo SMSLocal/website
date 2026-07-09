@@ -119,8 +119,8 @@ export default function SocialChannelsPage() {
             </>
           }
           subtitle="Instagram and Messenger DMs unified with chat, voice, SMS, and email, answered by agentic AI."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: Instagram, label: "Social DMs in one inbox" },
             { icon: Bot, label: "AI answers across platforms" },
@@ -283,10 +283,10 @@ export default function SocialChannelsPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/channels/instagram",         label: "Instagram — DMs, comments, and story replies" },
-                { href: "/channels/messenger",         label: "Facebook Messenger — automated and AI-handled" },
-                { href: "/products/omnichannel-inbox", label: "Omnichannel inbox — every channel in one place" },
-                { href: "/compare",                    label: "See how SMSLocal compares" },
+                { href: "/channels/instagram/",         label: "Instagram — DMs, comments, and story replies" },
+                { href: "/channels/messenger/",         label: "Facebook Messenger — automated and AI-handled" },
+                { href: "/products/omnichannel-inbox/", label: "Omnichannel inbox — every channel in one place" },
+                { href: "/compare/",                    label: "See how SMSLocal compares" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -305,8 +305,8 @@ export default function SocialChannelsPage() {
         <ProductFinalCta
           title="Unify your social conversations with agentic AI."
           subtitle="Connect Instagram and Messenger alongside chat, voice, SMS, and email — one AI agent, one customer record, every platform."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

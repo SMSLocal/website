@@ -106,8 +106,8 @@ export default function PlatformSecurityPage() {
             </>
           }
           subtitle="SSO, audit logs, and data controls that satisfy IT and compliance, without slowing your team down."
-          primaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
-          secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+          primaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
+          secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
           trustBar={[
             { icon: KeyRound, label: "SSO and SAML" },
             { icon: FileSearch, label: "Audit logs & IP blocklisting" },
@@ -233,13 +233,13 @@ export default function PlatformSecurityPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/legal/dpa"
+                href="/legal/dpa/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Data Processing Addendum
               </Link>
               <Link
-                href="/legal/privacy"
+                href="/legal/privacy/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Privacy Policy
@@ -272,11 +272,11 @@ export default function PlatformSecurityPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/legal/dpa",           label: "Data Processing Addendum — how we process your data" },
-                { href: "/legal/privacy",       label: "Privacy Policy — what we collect and why" },
-                { href: "/products/ai-agentic", label: "Agentic AI — the AI these controls protect" },
-                { href: "/products/integrations", label: "Integrations — connect your existing stack securely" },
-                { href: "/compare",             label: "Compare SMSLocal with alternatives" },
+                { href: "/legal/dpa/",           label: "Data Processing Addendum — how we process your data" },
+                { href: "/legal/privacy/",       label: "Privacy Policy — what we collect and why" },
+                { href: "/products/ai-agentic/", label: "Agentic AI — the AI these controls protect" },
+                { href: "/products/integrations/", label: "Integrations — connect your existing stack securely" },
+                { href: "/compare/",             label: "Compare SMSLocal with alternatives" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -295,8 +295,8 @@ export default function PlatformSecurityPage() {
         <ProductFinalCta
           title="Bring agentic AI to your team with controls IT will approve."
           subtitle="SSO, audit logs, role-based access, and GDPR/CCPA-aligned data handling — built into the platform, not bolted on."
-          primaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
-          secondaryCta={{ label: "Get a Demo", href: "/company/contact" }}
+          primaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
+          secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

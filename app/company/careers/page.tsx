@@ -324,7 +324,7 @@ export default function CareersPage() {
                 Home
               </Link>
               <span>/</span>
-              <Link href="/company/about" className="hover:text-white/80">
+              <Link href="/company/about/" className="hover:text-white/80">
                 Company
               </Link>
               <span>/</span>
@@ -569,7 +569,7 @@ export default function CareersPage() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
-                href="/company/about"
+                href="/company/about/"
                 className="inline-flex items-center gap-2 rounded-lg border border-foreground/10 bg-card px-5 py-3 text-sm font-medium text-foreground transition hover:border-primary/30"
               >
                 <MessageSquare className="h-4 w-4" />
@@ -588,7 +588,7 @@ export default function CareersPage() {
             label: "Send your application",
             href: "mailto:careers@smslocal.in?subject=Open%20application",
           }}
-          secondaryCta={{ label: "About SMSLocal", href: "/company/about" }}
+          secondaryCta={{ label: "About SMSLocal", href: "/company/about/" }}
         />
       </main>
 

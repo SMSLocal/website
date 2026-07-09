@@ -92,8 +92,8 @@ export default function HealthcareSolutionPage() {
             </>
           }
           subtitle="Appointment reminders, prescription refills, lab result notifications, and chronic-care follow-ups — delivered in the language the patient understands."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant templates" },
             { icon: Languages, label: "10+ Indian scripts via SMS" },
@@ -174,7 +174,7 @@ export default function HealthcareSolutionPage() {
                 title: "Appointment reminders",
                 description:
                   "DLT-approved transactional templates, scheduled day-before and same-day, with a WhatsApp follow-up for patients who prefer reading the reminder.",
-                href: "/products/bulk-sms",
+                href: "/products/bulk-sms/",
                 linkLabel: "Transactional SMS details",
               },
               {
@@ -182,7 +182,7 @@ export default function HealthcareSolutionPage() {
                 title: "Lab results via secure WhatsApp link",
                 description:
                   "Send a link to your secure patient portal. WhatsApp's end-to-end encryption keeps the message private in transit; the report never lives in the message body.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "WhatsApp details",
               },
               {
@@ -190,7 +190,7 @@ export default function HealthcareSolutionPage() {
                 title: "Multilingual patient reach",
                 description:
                   "SMS in 10+ Indian scripts via Unicode. AI WhatsApp replies in 8 Indian languages today — Hindi, English, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada — with Malayalam, Punjabi, Urdu on the roadmap.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "AI agent details",
               },
               {
@@ -198,7 +198,7 @@ export default function HealthcareSolutionPage() {
                 title: "AI-assisted patient Q&A",
                 description:
                   "An AI WhatsApp agent answers common queries (clinic hours, directions, insurance accepted) and hands medical questions to a human clinician with full chat context.",
-                href: "/products/whatsapp-business-api",
+                href: "/products/whatsapp-business-api/",
                 linkLabel: "AI agent details",
               },
             ]}
@@ -259,8 +259,8 @@ export default function HealthcareSolutionPage() {
         <ProductFinalCta
           title="Better patient communication starts here."
           subtitle={"Try the full stack free with ₹60 credit. No plan, no card, no lock-in \u2014 and every message is DLT-compliant by default."}
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
         />
       </main>
 

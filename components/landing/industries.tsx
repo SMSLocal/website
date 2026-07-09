@@ -15,12 +15,12 @@ type Industry = {
 }
 
 const INDUSTRIES: Industry[] = [
-  { icon: ShoppingBag, name: "E-commerce", href: "/solutions/ecommerce", channel: "SMS", sender: "SHOPLY", msg: "Your order #4821 is out for delivery 🛵 Track: smsl.in/t/4821", hook: "Order, shipping & cart-recovery alerts." },
-  { icon: Banknote, name: "Banking & Fintech", href: "/solutions/banking-fintech", channel: "SMS", sender: "HDFCBK", msg: "₹25,000 credited to a/c XX4567 on 25-May. Avl bal ₹1,02,300.", hook: "Secure OTPs & transaction alerts." },
-  { icon: HeartPulse, name: "Healthcare", href: "/solutions/healthcare", channel: "WhatsApp", sender: "CityCare", msg: "Reminder: Dr. Mehta tomorrow 11:00 AM. Reply C to confirm.", hook: "Appointment & report reminders." },
-  { icon: GraduationCap, name: "Education", href: "/solutions/education", channel: "SMS", sender: "GRNWUD", msg: "Fee due ₹12,000 by 30 May. Pay: smsl.in/fee -Greenwood", hook: "Fee, result & exam updates." },
-  { icon: Truck, name: "Logistics", href: "/solutions/logistics", channel: "SMS", sender: "SHIPIT", msg: "Your parcel arrives today. Delivery OTP: 4821.", hook: "Dispatch alerts & delivery OTPs." },
-  { icon: Home, name: "Real Estate", href: "/solutions/real-estate", channel: "WhatsApp", sender: "Acre", msg: "New 2BHK in Whitefield, ₹85L. Open house Sat 11 AM. Reply Y.", hook: "Listing alerts & lead follow-up." },
+  { icon: ShoppingBag, name: "E-commerce", href: "/solutions/ecommerce/", channel: "SMS", sender: "SHOPLY", msg: "Your order #4821 is out for delivery 🛵 Track: smsl.in/t/4821", hook: "Order, shipping & cart-recovery alerts." },
+  { icon: Banknote, name: "Banking & Fintech", href: "/solutions/banking-fintech/", channel: "SMS", sender: "HDFCBK", msg: "₹25,000 credited to a/c XX4567 on 25-May. Avl bal ₹1,02,300.", hook: "Secure OTPs & transaction alerts." },
+  { icon: HeartPulse, name: "Healthcare", href: "/solutions/healthcare/", channel: "WhatsApp", sender: "CityCare", msg: "Reminder: Dr. Mehta tomorrow 11:00 AM. Reply C to confirm.", hook: "Appointment & report reminders." },
+  { icon: GraduationCap, name: "Education", href: "/solutions/education/", channel: "SMS", sender: "GRNWUD", msg: "Fee due ₹12,000 by 30 May. Pay: smsl.in/fee -Greenwood", hook: "Fee, result & exam updates." },
+  { icon: Truck, name: "Logistics", href: "/solutions/logistics/", channel: "SMS", sender: "SHIPIT", msg: "Your parcel arrives today. Delivery OTP: 4821.", hook: "Dispatch alerts & delivery OTPs." },
+  { icon: Home, name: "Real Estate", href: "/solutions/real-estate/", channel: "WhatsApp", sender: "Acre", msg: "New 2BHK in Whitefield, ₹85L. Open house Sat 11 AM. Reply Y.", hook: "Listing alerts & lead follow-up." },
 ]
 
 export function Industries() {
@@ -59,7 +59,7 @@ export function Industries() {
                 <span className="font-mono text-[12px] text-muted-foreground">{String(current).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
               </div>
 
-              <a href="/solutions" className="mt-7 inline-flex items-center gap-1.5 rounded-full bg-foreground px-5 py-3 text-sm font-semibold text-background transition hover:opacity-90">
+              <a href="/solutions/" className="mt-7 inline-flex items-center gap-1.5 rounded-full bg-foreground px-5 py-3 text-sm font-semibold text-background transition hover:opacity-90">
                 See all industry solutions <ArrowUpRight className="h-4 w-4" />
               </a>
             </div>

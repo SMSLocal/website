@@ -160,8 +160,8 @@ export default function RcsPage() {
           eyebrow="RCS Business Messaging"
           title="RCS for Indian Businesses — Branded, Verified, Always Delivered"
           description="Rich cards, carousels, and tappable replies under your verified brand on Jio, Airtel, and Vi — with automatic SMS fallback on the same wallet and webhook, so every message reaches every phone."
-          primaryCta={{ label: "Join RCS early access", href: "/signup" }}
-          secondaryCta={{ label: "Talk to our team", href: "/company/contact" }}
+          primaryCta={{ label: "Join RCS early access", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to our team", href: "/company/contact/" }}
           trustItems={[
             "Verified sender badge",
             "Rich cards & carousels",
@@ -506,7 +506,7 @@ export default function RcsPage() {
                 </p>
               </div>
               <Link
-                href="/pricing#rcs"
+                href="/pricing/#rcs"
                 className="inline-flex items-center gap-1.5 text-[13px] font-semibold text-primary underline-offset-2 hover:underline"
               >
                 See full rate card
@@ -559,7 +559,7 @@ export default function RcsPage() {
                       ))}
                     </ul>
                     <Link
-                      href="/signup"
+                      href="/signup/"
                       className={`mt-6 inline-flex w-full items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-[13px] font-semibold transition ${
                         featured
                           ? "bg-primary text-primary-foreground shadow-md shadow-primary/25 hover:brightness-110"
@@ -618,8 +618,8 @@ export default function RcsPage() {
           <ProductFinalCta
             title="Give your most-read inbox a real brand."
             description="Get onto the SMSLocal RCS early-access programme, ship your first branded card, and keep SMS as the safety net — on one wallet."
-            primaryCta={{ label: "Join RCS early access", href: "/signup" }}
-            secondaryCta={{ label: "Talk to our team", href: "/company/contact" }}
+            primaryCta={{ label: "Join RCS early access", href: "/signup/" }}
+            secondaryCta={{ label: "Talk to our team", href: "/company/contact/" }}
           />
         </Section>
       </main>

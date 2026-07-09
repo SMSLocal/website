@@ -306,14 +306,14 @@ export function TestHero() {
         {/* CTAs — centered */}
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <a
-            href="/signup"
+            href="/signup/"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
           >
             Start Free — ₹60 Credit
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <a
-            href="/company/contact"
+            href="/company/contact/"
             className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-7 py-3.5 text-sm font-semibold text-foreground shadow-sm transition hover:bg-secondary"
           >
             Book a Demo

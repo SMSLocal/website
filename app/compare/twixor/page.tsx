@@ -291,9 +291,9 @@ export default function CompareTwixorPage() {
             <SectionHeader eyebrow="Explore more" title="Compare more" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic", label: "Agentic AI — automate support and sales for your brand" },
-                { href: "/compare", label: "See all SMSLocal comparisons" },
-                { href: "/numbers/did", label: "DID numbers — provisioned in-platform" },
+                { href: "/products/ai-agentic/", label: "Agentic AI — automate support and sales for your brand" },
+                { href: "/compare/", label: "See all SMSLocal comparisons" },
+                { href: "/numbers/did/", label: "DID numbers — provisioned in-platform" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -316,8 +316,8 @@ export default function CompareTwixorPage() {
         <ProductFinalCta
           title="Run your own CX with agentic AI."
           subtitle="Agentic AI and omnichannel reach, built for your brand — not a white-label reseller platform. Fast, self-serve setup, typically live within days."
-          primaryCta={{ label: "Start Free", href: "/signup" }}
-          secondaryCta={{ label: "Talk to us", href: "/company/contact" }}
+          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to us", href: "/company/contact/" }}
         />
       </main>
 

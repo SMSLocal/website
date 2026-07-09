@@ -114,8 +114,8 @@ export default function MessengerPage() {
             </>
           }
           subtitle="Auto-reply to common questions, hand off to a human when it matters, and broadcast to opted-in subscribers — all from the same inbox as your other channels."
-          primaryCta={{ label: "Connect Messenger", href: "/signup" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Connect Messenger", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
           trustBar={[
             { icon: MessageCircle, label: "Automated replies" },
             { icon: Bot, label: "AI agent handoff" },
@@ -241,13 +241,13 @@ export default function MessengerPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/omnichannel-inbox"
+                href="/products/omnichannel-inbox/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Omnichannel inbox
               </Link>
               <Link
-                href="/products/ai-agents"
+                href="/products/ai-agents/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 AI Agents
@@ -288,10 +288,10 @@ export default function MessengerPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/omnichannel-inbox", label: "Omnichannel inbox — one place for every channel" },
-                { href: "/products/ai-agents",          label: "AI Agents — automate support and sales" },
-                { href: "/channels/instagram",          label: "Instagram — same inbox, another channel" },
-                { href: "/products/analytics",          label: "Analytics — CSAT, NPS, and campaign results" },
+                { href: "/products/omnichannel-inbox/", label: "Omnichannel inbox — one place for every channel" },
+                { href: "/products/ai-agents/",          label: "AI Agents — automate support and sales" },
+                { href: "/channels/instagram/",          label: "Instagram — same inbox, another channel" },
+                { href: "/products/analytics/",          label: "Analytics — CSAT, NPS, and campaign results" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -310,8 +310,8 @@ export default function MessengerPage() {
         <ProductFinalCta
           title="Bring Messenger into your real inbox."
           subtitle="Automate the routine questions, hand off to a human when it matters, and broadcast to subscribers who've opted in."
-          primaryCta={{ label: "Connect Messenger", href: "/signup" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Connect Messenger", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

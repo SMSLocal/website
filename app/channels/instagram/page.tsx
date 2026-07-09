@@ -114,8 +114,8 @@ export default function InstagramPage() {
             </>
           }
           subtitle="Turn story replies and comments into DMs, answer them with your AI agent, and manage every conversation in the same inbox as WhatsApp and SMS."
-          primaryCta={{ label: "Connect Instagram", href: "/signup" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Connect Instagram", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
           trustBar={[
             { icon: MessageCircle, label: "DM automation" },
             { icon: Camera, label: "Story-reply capture" },
@@ -241,13 +241,13 @@ export default function InstagramPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/omnichannel-inbox"
+                href="/products/omnichannel-inbox/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Omnichannel inbox
               </Link>
               <Link
-                href="/products/ai-agents"
+                href="/products/ai-agents/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 AI Agents
@@ -284,10 +284,10 @@ export default function InstagramPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/omnichannel-inbox", label: "Omnichannel inbox — one place for every channel" },
-                { href: "/products/ai-agents",          label: "AI Agents — automate support and sales" },
-                { href: "/channels/messenger",          label: "Facebook Messenger — same inbox, another channel" },
-                { href: "/products/analytics",          label: "Analytics — CSAT, NPS, and campaign results" },
+                { href: "/products/omnichannel-inbox/", label: "Omnichannel inbox — one place for every channel" },
+                { href: "/products/ai-agents/",          label: "AI Agents — automate support and sales" },
+                { href: "/channels/messenger/",          label: "Facebook Messenger — same inbox, another channel" },
+                { href: "/products/analytics/",          label: "Analytics — CSAT, NPS, and campaign results" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -306,8 +306,8 @@ export default function InstagramPage() {
         <ProductFinalCta
           title="Bring Instagram into your real inbox."
           subtitle="Automate story replies and comments, let your AI agent handle the routine questions, and sell straight from the DM."
-          primaryCta={{ label: "Connect Instagram", href: "/signup" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact" }}
+          primaryCta={{ label: "Connect Instagram", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

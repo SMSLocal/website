@@ -8,7 +8,7 @@
  * What it catches:
  *   - Multiple <h1> tags in one page
  *   - <img> / <Image> without alt, or with empty alt (info)
- *   - Internal <Link href="/foo"> where /foo doesn't match any app route
+ *   - Internal <Link href="/foo/"> where /foo doesn't match any app route
  *   - External <a target="_blank"> without rel="noopener"
  *   - Generic link text ("click here", "read more")
  *   - Placeholder hrefs ("#" or empty)
@@ -294,7 +294,7 @@ export async function runTechnicalAudit(
       }
     }
 
-    // --- Hrefs declared in data arrays, e.g. `{ href: "/products/otp-sms" }`.
+    // --- Hrefs declared in data arrays, e.g. `{ href: "/products/otp-sms/" }`.
     //     These get rendered via .map() and aren't matched by the JSX regex above.
     //     We only use these for incoming-link tracking (not for broken-link errors,
     //     to avoid false positives on template strings and computed values).

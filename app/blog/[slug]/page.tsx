@@ -112,7 +112,7 @@ export default async function BlogPostPage({
                 Home
               </Link>
               <span aria-hidden>/</span>
-              <Link href="/blog" className="hover:text-white">
+              <Link href="/blog/" className="hover:text-white">
                 Blog
               </Link>
               <span aria-hidden>/</span>
@@ -212,7 +212,7 @@ export default async function BlogPostPage({
 
               <div className="mt-10">
                 <Link
-                  href="/blog"
+                  href="/blog/"
                   className="inline-flex items-center gap-2 text-[13.5px] font-semibold text-primary hover:underline"
                 >
                   <ArrowLeft className="h-4 w-4" />
@@ -244,8 +244,8 @@ export default async function BlogPostPage({
         <ProductFinalCta
           title="₹60 free credit. No credit card."
           subtitle="Open a live account, send your first DLT-compliant SMS, and keep the test balance forever."
-          primaryCta={{ label: "Create free account", href: "/signup" }}
-          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs" }}
+          primaryCta={{ label: "Create free account", href: "/signup/" }}
+          secondaryCta={{ label: "Read the docs", href: "/developers/api-docs/" }}
         />
       </main>
 

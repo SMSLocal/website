@@ -93,8 +93,8 @@ export default function MediaEntertainmentPage() {
             </>
           }
           subtitle="Grow audiences and handle high volume with agents that recommend, support, and engage."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
           trustBar={[
             { icon: ShieldCheck, label: "Built for streaming, ticketing, sports, and publishers" },
             { icon: Clock, label: "Absorbs release-day spikes" },
@@ -175,7 +175,7 @@ export default function MediaEntertainmentPage() {
                 title: "Ticketing and booking",
                 description:
                   "Assist with purchases and reservations inside the chat, with QR codes and seat details delivered the instant a booking confirms.",
-                href: "/products/ai-agents",
+                href: "/products/ai-agents/",
                 linkLabel: "AI agent details",
               },
               {
@@ -183,7 +183,7 @@ export default function MediaEntertainmentPage() {
                 title: "Reminders and updates",
                 description:
                   "Event reminders and changes broadcast over SMS, WhatsApp, and RCS, so fans never miss a premiere or showtime.",
-                href: "/channels/rcs-broadcasting",
+                href: "/channels/rcs-broadcasting/",
                 linkLabel: "RCS broadcasting details",
               },
               {
@@ -191,7 +191,7 @@ export default function MediaEntertainmentPage() {
                 title: "Agentic AI for subscriber support",
                 description:
                   "Billing questions, plan changes, and account access resolved instantly by agents that act, not just answer — with human handoff for disputes.",
-                href: "/products/ai-agentic",
+                href: "/products/ai-agentic/",
                 linkLabel: "Agentic AI details",
               },
               {
@@ -199,7 +199,7 @@ export default function MediaEntertainmentPage() {
                 title: "Why SMSLocal",
                 description:
                   "Recommendations, support, and campaigns share one record, so every fan interaction is connected.",
-                href: "/compare",
+                href: "/compare/",
                 linkLabel: "See how we compare",
               },
             ]}
@@ -238,10 +238,10 @@ export default function MediaEntertainmentPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agents", label: "AI Agents — subscriber support at scale" },
-                { href: "/products/ai-agentic", label: "Agentic AI — act, not just answer" },
-                { href: "/channels/rcs-broadcasting", label: "RCS Broadcasting — rich event alerts" },
-                { href: "/compare", label: "See how SMSLocal compares" },
+                { href: "/products/ai-agents/", label: "AI Agents — subscriber support at scale" },
+                { href: "/products/ai-agentic/", label: "Agentic AI — act, not just answer" },
+                { href: "/channels/rcs-broadcasting/", label: "RCS Broadcasting — rich event alerts" },
+                { href: "/compare/", label: "See how SMSLocal compares" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -260,8 +260,8 @@ export default function MediaEntertainmentPage() {
         <ProductFinalCta
           title="Engage audiences with agentic AI."
           subtitle="Recommendations, support, and campaigns handled by agents that act, not just answer."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact" }}
-          secondaryCta={{ label: "Start Free", href: "/signup" }}
+          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
+          secondaryCta={{ label: "Start Free", href: "/signup/" }}
         />
       </main>
 

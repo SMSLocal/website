@@ -395,7 +395,7 @@ export default function DltRegistrationGuide() {
         SMSLocal customers on any paid tier get free DLT onboarding support — we handle the PE
         paperwork, Header submission, and first-template approval with you. Email{" "}
         <A href="mailto:info@smslocal.in">info@smslocal.in</A> or{" "}
-        <A href="/company/contact">reach out to sales</A>.
+        <A href="/company/contact/">reach out to sales</A>.
       </Callout>
     </>
   )

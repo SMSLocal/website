@@ -45,28 +45,28 @@ const WHAT_WE_DO = [
     title: "Bulk SMS that respects DLT",
     description:
       "Template governance, DND handling, smart route failover, and transactional priority — in one dashboard.",
-    href: "/products/bulk-sms",
+    href: "/products/bulk-sms/",
     icon: MessageSquare,
   },
   {
     title: "WhatsApp Business API + AI agents",
     description:
       "Broadcasts, visual chatbot builder, team inbox, and AI agents that reply in 8 Indian languages.",
-    href: "/products/whatsapp-business-api",
+    href: "/products/whatsapp-business-api/",
     icon: MessageCircle,
   },
   {
     title: "OTP & transactional SMS",
     description:
       "Dedicated priority routes, retry logic, DLT-approved templates, and SDKs in six languages.",
-    href: "/products/otp-sms",
+    href: "/products/otp-sms/",
     icon: ShieldCheck,
   },
   {
     title: "Quick SMS for non-technical teams",
     description:
       "Upload a CSV, pick a template, preview, send. No code, full compliance, real-time delivery reports.",
-    href: "/products/quick-sms",
+    href: "/products/quick-sms/",
     icon: Zap,
   },
 ]
@@ -119,14 +119,14 @@ export default function AboutPage() {
 
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <Link
-                href="/signup"
+                href="/signup/"
                 className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
               >
                 Start Free — ₹60 Credit
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
-                href="/company/contact"
+                href="/company/contact/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
               >
                 Talk to the team
@@ -327,7 +327,7 @@ export default function AboutPage() {
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <Link
-                    href="/company/careers"
+                    href="/company/careers/"
                     className="group inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
                   >
                     See open roles
@@ -347,8 +347,8 @@ export default function AboutPage() {
         <ProductFinalCta
           title="See why Indian businesses pick SMSLocal."
           subtitle="₹60 free credit. No credit card. Full DLT onboarding support from our team."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing" }}
+          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
         />
       </main>
 
