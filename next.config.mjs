@@ -144,7 +144,7 @@ const nextConfig = {
       // Work around Next.js 16 + trailingSlash:true conflict where [..slug]
       // catch-all intercepts /sitemap.xml before the metadata route can serve it.
       // The API route at /api/sitemap calls the same sitemap() function.
-      { source: "/sitemap.xml", destination: "/api/sitemap" },
+      { source: "/sitemap.xml", destination: "/sitemap-xml" },
     ]
   },
   async redirects() {
