@@ -179,6 +179,12 @@ const nextConfig = {
         destination: "/products",
         permanent: true,
       },
+      // SMS Bomber tool moved to the /resources/tools/ section.
+      {
+        source: "/tools/sms-bomber",
+        destination: "/resources/tools/sms-bomber",
+        permanent: true,
+      },
     ]
   },
 }
