@@ -62,7 +62,11 @@ export function buildMetadata(input: PageSeo): Metadata {
     languages,
   } = input
 
-  const canonical = path || "/"
+  // Ensure canonical ends with / — Next.js is configured with trailingSlash:true
+  // so the served URL always has a trailing slash. Without this the canonical
+  // points to a different URL than the page Google actually crawls.
+  const rawPath = path || "/"
+  const canonical = rawPath === "/" ? rawPath : rawPath.endsWith("/") ? rawPath : `${rawPath}/`
   const absoluteImage = absoluteUrl(ogImage)
   const resolvedTitle = titleAbsolute ?? title ?? SITE.defaultTitle
   const finalTitle: Metadata["title"] = titleAbsolute

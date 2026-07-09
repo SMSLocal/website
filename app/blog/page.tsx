@@ -24,7 +24,7 @@ export default function BlogIndexPage() {
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Blog", path: "/blog" },
+          { name: "Blog", path: "/blog/" },
         ]}
       />
 
