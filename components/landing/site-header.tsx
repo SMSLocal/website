@@ -109,7 +109,7 @@ const NAV: NavItem[] = [
       {
         heading: "Why SMSLocal",
         items: [
-          { label: "Why SMSLocal", href: "/why-floatchat", icon: Bot, description: "One platform vs the stack" },
+          { label: "Why SMSLocal", href: "/why-smslocal", icon: Bot, description: "One platform vs the stack" },
           { label: "Compare", href: "/compare", icon: BarChart3, description: "vs Haptik, Twilio & more" },
           { label: "Security", href: "/platform/security", icon: ShieldCheck, description: "SSO, RBAC & audit logs" },
           { label: "Analytics", href: "/products/analytics", icon: Activity, description: "Dashboards & insights" },

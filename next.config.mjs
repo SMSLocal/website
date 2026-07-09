@@ -160,6 +160,12 @@ const nextConfig = {
         destination: "/products/ai-agents",
         permanent: true,
       },
+      // Renamed from the old FloatChat-branded slug.
+      {
+        source: "/why-floatchat",
+        destination: "/why-smslocal",
+        permanent: true,
+      },
     ]
   },
 }

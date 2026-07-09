@@ -374,6 +374,54 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "customer service automation",
     ],
   },
+  "/products/ai-agents/sales": {
+    titleAbsolute: "Agentic AI Sales Agent for Conversational Commerce | SMSLocal",
+    description:
+      "Recommend products, answer buyer questions, and guide customers to checkout with an agentic AI sales agent across WhatsApp, web, and more.",
+    focusKeyword: "AI sales agent",
+    keywords: [
+      "AI sales agent",
+      "agentic AI sales",
+      "conversational commerce AI",
+      "WhatsApp sales bot",
+      "AI product recommendation agent",
+      "AI checkout assistant",
+      "sales automation AI",
+      "AI shopping assistant",
+    ],
+  },
+  "/products/ai-agents/booking": {
+    titleAbsolute: "Agentic AI Booking Agent for Appointments & Reservations | SMSLocal",
+    description:
+      "Schedule appointments and reservations inside the chat with an agentic AI booking agent that checks availability, confirms, and sends reminders.",
+    focusKeyword: "AI booking agent",
+    keywords: [
+      "AI booking agent",
+      "agentic AI appointment scheduling",
+      "WhatsApp booking bot",
+      "AI reservation assistant",
+      "automated appointment reminders",
+      "AI scheduling agent",
+      "conversational booking AI",
+      "SMSLocal booking agent",
+    ],
+  },
+  "/products/ai-agents/lead-qualification": {
+    titleAbsolute: "Agentic AI Lead Qualification Agent for Faster Pipeline | SMSLocal",
+    description:
+      "Capture, qualify, and route leads automatically with an agentic AI agent that asks the right questions, scores intent, and syncs to your CRM.",
+    focusKeyword: "AI lead qualification agent",
+    keywords: [
+      "AI lead qualification agent",
+      "agentic AI lead scoring",
+      "WhatsApp lead capture bot",
+      "AI lead routing",
+      "conversational lead qualification",
+      "CRM AI agent",
+      "automated lead scoring",
+      "SMSLocal lead qualification",
+    ],
+  },
   "/products/ai-agents/agent-builder": {
     titleAbsolute: "No-Code Agentic AI Agent Builder | SMSLocal",
     description:
@@ -1253,7 +1301,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   },
 
   // ─── Company positioning, partnerships & services ─────────────────────────
-  "/why-floatchat": {
+  "/why-smslocal": {
     title: "Why SMSLocal — One Platform for Agentic AI and Broadcasting",
     description:
       "SMSLocal combines agentic AI, every channel, numbers, and broadcasting in one product, with deep integrations and one predictable bill.",

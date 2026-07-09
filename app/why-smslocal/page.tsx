@@ -25,7 +25,7 @@ import {
   StatsBand,
 } from "@/components/product/product-page"
 
-export const metadata: Metadata = getPageMetadata("/why-floatchat")
+export const metadata: Metadata = getPageMetadata("/why-smslocal")
 
 /* ── Hero visual ──────────────────────────────────────────────────────────── */
 function WhySmsLocalVisual() {
@@ -84,7 +84,7 @@ export default function WhySmsLocalPage() {
       <BreadcrumbJsonLd
         crumbs={[
           { name: "Home", path: "/" },
-          { name: "Why SMSLocal", path: "/why-floatchat" },
+          { name: "Why SMSLocal", path: "/why-smslocal" },
         ]}
       />
       <SiteHeader />
