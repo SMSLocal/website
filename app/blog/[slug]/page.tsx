@@ -80,7 +80,7 @@ export default async function BlogPostPage({
             description: meta.description,
             image: meta.coverImage
               ? [`${SITE.url}${meta.coverImage}`]
-              : [`${SITE.url}/og-default.png`],
+              : [`${SITE.url}/og-default.jpg`],
             datePublished: meta.date,
             dateModified: meta.updatedDate ?? meta.date,
             inLanguage: "en-IN",

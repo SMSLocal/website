@@ -1,0 +1,67 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#0c1a24"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14b8a6;stop-opacity:0.16"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <ellipse cx="930" cy="140" rx="380" ry="280" fill="url(#glow)"/>
+
+  <!-- 4-way split icon (the 4 methods) -->
+  <g transform="translate(810, 90)">
+    <!-- Center hub -->
+    <circle cx="170" cy="175" r="28" fill="#0f2a28" stroke="#14b8a6" stroke-width="2.5"/>
+    <text x="170" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" fill="#14b8a6">SMS</text>
+
+    <!-- Arm 1: Dashboard (top-left) -->
+    <line x1="148" y1="153" x2="70" y2="80" stroke="#14b8a6" stroke-width="2" stroke-dasharray="5 3" opacity="0.6"/>
+    <rect x="20" y="30" width="80" height="55" rx="6" fill="#1e293b" stroke="#14b8a6" stroke-width="1.5" opacity="0.8"/>
+    <rect x="30" y="42" width="60" height="6" rx="2" fill="#14b8a6" opacity="0.6"/>
+    <rect x="30" y="54" width="40" height="6" rx="2" fill="#334155"/>
+    <rect x="30" y="66" width="50" height="6" rx="2" fill="#334155"/>
+    <text x="60" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Dashboard</text>
+
+    <!-- Arm 2: API (top-right) -->
+    <line x1="192" y1="153" x2="270" y2="80" stroke="#14b8a6" stroke-width="2" stroke-dasharray="5 3" opacity="0.6"/>
+    <rect x="240" y="30" width="80" height="55" rx="6" fill="#1e293b" stroke="#14b8a6" stroke-width="1.5" opacity="0.8"/>
+    <text x="280" y="58" text-anchor="middle" font-family="monospace" font-size="10" fill="#14b8a6" opacity="0.8">{"{ }"}</text>
+    <text x="280" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">API</text>
+
+    <!-- Arm 3: Bulk (bottom-left) -->
+    <line x1="148" y1="197" x2="70" y2="270" stroke="#14b8a6" stroke-width="2" stroke-dasharray="5 3" opacity="0.6"/>
+    <rect x="20" y="265" width="80" height="55" rx="6" fill="#1e293b" stroke="#14b8a6" stroke-width="1.5" opacity="0.8"/>
+    <rect x="30" y="278" width="60" height="4" rx="2" fill="#334155"/>
+    <rect x="30" y="287" width="60" height="4" rx="2" fill="#334155"/>
+    <rect x="30" y="296" width="60" height="4" rx="2" fill="#334155"/>
+    <rect x="30" y="305" width="40" height="4" rx="2" fill="#14b8a6" opacity="0.5"/>
+    <text x="60" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">Bulk</text>
+
+    <!-- Arm 4: WhatsApp (bottom-right) -->
+    <line x1="192" y1="197" x2="270" y2="270" stroke="#14b8a6" stroke-width="2" stroke-dasharray="5 3" opacity="0.6"/>
+    <rect x="240" y="265" width="80" height="55" rx="6" fill="#1e293b" stroke="#25d366" stroke-width="1.5" opacity="0.8"/>
+    <circle cx="280" cy="285" r="10" fill="none" stroke="#25d366" stroke-width="2"/>
+    <path d="M274 285 q0-6 6-6 t6 6 q0 4-3 5 l2 5 l-5-2 q-1 0-6-3 z" fill="#25d366" opacity="0.6"/>
+    <text x="280" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">WhatsApp API</text>
+  </g>
+
+  <!-- Category pill -->
+  <rect x="80" y="110" width="165" height="32" rx="16" fill="#14b8a6" fill-opacity="0.12" stroke="#14b8a6" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="162" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#2dd4bf" opacity="0.85">GETTING STARTED</text>
+
+  <!-- Title -->
+  <text x="80" y="218" font-family="Arial, sans-serif" font-size="54" font-weight="800" fill="#f8fafc" letter-spacing="-1">Send SMS Online</text>
+  <text x="80" y="278" font-family="Arial, sans-serif" font-size="54" font-weight="800" fill="#f8fafc" letter-spacing="-1">in India</text>
+  <text x="80" y="332" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#94a3b8">The 4 Ways and When</text>
+  <text x="80" y="370" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#94a3b8">to Use Each</text>
+
+  <line x1="80" y1="408" x2="280" y2="408" stroke="#14b8a6" stroke-width="2" opacity="0.5"/>
+  <text x="80" y="433" font-family="Arial, sans-serif" font-size="16" fill="#64748b">Dashboard · API · Bulk · WhatsApp</text>
+
+  <text x="80" y="575" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#475569" letter-spacing="1">SMSLocal.in</text>
+</svg>

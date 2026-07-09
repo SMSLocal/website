@@ -1,0 +1,47 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#0c1a2e"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.18"/>
+      <stop offset="100%" style="stop-color:#0f172a;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <ellipse cx="940" cy="140" rx="380" ry="280" fill="url(#glow)"/>
+
+  <!-- Filter / scrubbing funnel icon -->
+  <g transform="translate(820, 110)">
+    <!-- Funnel shape -->
+    <path d="M20 20 h280 l-110 140 v120 l-60 40 v-160 z" fill="#1e293b" stroke="#4f46e5" stroke-width="2.5" stroke-linejoin="round"/>
+    <!-- Horizontal filter lines (going into funnel) -->
+    <line x1="40" y1="50" x2="280" y2="50" stroke="#6366f1" stroke-width="2" opacity="0.6" stroke-dasharray="6 3"/>
+    <line x1="60" y1="80" x2="260" y2="80" stroke="#6366f1" stroke-width="2" opacity="0.4" stroke-dasharray="6 3"/>
+    <line x1="80" y1="110" x2="240" y2="110" stroke="#6366f1" stroke-width="2" opacity="0.3" stroke-dasharray="6 3"/>
+    <!-- Blocked dots (red, upper half) -->
+    <circle cx="80" cy="145" r="8" fill="#ef4444" opacity="0.8"/>
+    <circle cx="130" cy="155" r="8" fill="#ef4444" opacity="0.8"/>
+    <circle cx="185" cy="148" r="8" fill="#ef4444" opacity="0.8"/>
+    <circle cx="237" cy="158" r="8" fill="#ef4444" opacity="0.6"/>
+    <!-- Allowed dot (green, exit) -->
+    <circle cx="160" cy="280" r="12" fill="#22c55e" opacity="0.9"/>
+    <path d="M153 280 l5 5 l10 -10" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Category pill -->
+  <rect x="80" y="110" width="130" height="32" rx="16" fill="#6366f1" fill-opacity="0.12" stroke="#6366f1" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="145" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#818cf8" opacity="0.85">COMPLIANCE</text>
+
+  <!-- Title -->
+  <text x="80" y="225" font-family="Arial, sans-serif" font-size="66" font-weight="800" fill="#f8fafc" letter-spacing="-1">DND Services</text>
+  <text x="80" y="290" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#94a3b8">Scrubbing, Compliance</text>
+  <text x="80" y="333" font-family="Arial, sans-serif" font-size="31" font-weight="400" fill="#94a3b8">and Category Rules</text>
+
+  <line x1="80" y1="375" x2="320" y2="375" stroke="#6366f1" stroke-width="2" opacity="0.5"/>
+  <text x="80" y="400" font-family="Arial, sans-serif" font-size="17" fill="#64748b">NCPR · TRAI · Send Windows · Consent</text>
+
+  <text x="80" y="575" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#475569" letter-spacing="1">SMSLocal.in</text>
+</svg>

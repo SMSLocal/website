@@ -68,7 +68,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "14 min read",
       category: "Compliance",
       author: TEAM,
-      coverImage: "/blog/dlt-registration-guide-cover.jpg",
+      coverImage: "/blog/dlt-registration-guide-cover.svg",
       coverAlt:
         "Overhead still life of a neat stack of cream paper documents, a closed fountain pen, a small brass stamp, folded reading glasses, and a green leaf sprig on a wooden desk.",
       toc: [
@@ -101,7 +101,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "9 min read",
       category: "Consumer",
       author: TEAM,
-      coverImage: "/blog/dnd-means-cover.jpg",
+      coverImage: "/blog/dnd-means-cover.svg",
       coverAlt:
         "Smartphone lying face-down on a warm linen tablecloth beside a ceramic coffee cup with rising steam, reading glasses, and a small vase with a single white flower in soft morning light.",
       toc: [
@@ -128,7 +128,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "11 min read",
       category: "Compliance",
       author: TEAM,
-      coverImage: "/blog/dnd-services-cover.jpg",
+      coverImage: "/blog/dnd-services-cover.svg",
       coverAlt:
         "Portrait of a focused Indian woman compliance analyst in professional attire, seated thoughtfully at a modern office desk with a blurred leafy plant and warm lamp glow behind her.",
       toc: [
@@ -160,7 +160,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "10 min read",
       category: "Consumer",
       author: TEAM,
-      coverImage: "/blog/receive-sms-online-india-cover.jpg",
+      coverImage: "/blog/receive-sms-online-india-cover.svg",
       coverAlt:
         "Dimly lit modern desk at night with a closed laptop, a face-down smartphone, and a small lamp casting a single warm amber pool of light onto a blank leather notebook.",
       toc: [
@@ -188,7 +188,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "10 min read",
       category: "Troubleshooting",
       author: TEAM,
-      coverImage: "/blog/sms-activation-cover.jpg",
+      coverImage: "/blog/sms-activation-cover.svg",
       coverAlt:
         "Hands holding a smartphone face-down on a wooden desk beside an open empty dual-SIM tray, a single nano-SIM card, and a small metal ejector pin in warm window light.",
       toc: [
@@ -215,7 +215,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "9 min read",
       category: "Security",
       author: TEAM,
-      coverImage: "/blog/gmail-password-recovery-via-sms-cover.jpg",
+      coverImage: "/blog/gmail-password-recovery-via-sms-cover.svg",
       coverAlt:
         "Still life of a small metal padlock on a closed leather notebook, a face-down smartphone, and folded glasses, lit by a warm brass desk lamp on a dark walnut desk.",
       toc: [
@@ -245,7 +245,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "11 min read",
       category: "Getting started",
       author: TEAM,
-      coverImage: "/blog/send-sms-online-cover.jpg",
+      coverImage: "/blog/send-sms-online-cover.svg",
       coverAlt:
         "Portrait of an Indian small-business owner in his mid-30s in a casual smart shirt, seated at a softly lit cafe table with a ceramic coffee cup and a closed leather notebook in front of him.",
       toc: [

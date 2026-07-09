@@ -1,0 +1,63 @@
+# SMSLocal
+# https://llmstxt.org/
+#
+# SMSLocal is India's messaging platform for SMS, WhatsApp Business API,
+# OTP, RCS, and AI agents. Founded 2019. Headquarters: India.
+
+> SMSLocal is a cloud communications platform that lets Indian businesses
+> send bulk SMS, OTP, WhatsApp messages, and deploy AI agents — all on a
+> single pay-as-you-go wallet with no monthly lock-in.
+
+## Products
+
+- [Bulk SMS](https://www.smslocal.in/products/bulk-sms/): DLT-compliant promotional and transactional SMS with smart route failover.
+- [WhatsApp Business API](https://www.smslocal.in/products/whatsapp-business-api/): Green-tick verified WhatsApp messaging, templates, and team inbox.
+- [OTP SMS](https://www.smslocal.in/developers/sms-api/): Priority-routed one-time passwords with sub-second delivery and retry logic.
+- [RCS Business Messaging](https://www.smslocal.in/products/rcs/): Rich cards, carousels, and verified sender for Android.
+- [AI Agents](https://www.smslocal.in/products/ai-agents/): No-code WhatsApp AI agents in 8 Indian languages.
+- [AI Customer Service Agent](https://www.smslocal.in/ai-agents/customer-service/): Deflect support tickets across channels with grounded AI.
+- [AI Booking Agent](https://www.smslocal.in/ai-agents/booking/): Automate appointment scheduling and reservation confirmations.
+- [AI Lead Qualification Agent](https://www.smslocal.in/ai-agents/lead-qualification/): Score and qualify inbound leads before they reach your team.
+- [AI Agent Builder](https://www.smslocal.in/ai-agents/agent-builder/): Build custom no-code AI agent flows without engineering.
+- [Inbox](https://www.smslocal.in/products/inbox/): Shared team inbox for WhatsApp, SMS, and live chat.
+- [Automation](https://www.smslocal.in/products/automation/): Workflow automation for messaging campaigns and drip sequences.
+- [Email](https://www.smslocal.in/products/email/): Transactional and marketing email on the same wallet.
+- [Voice](https://www.smslocal.in/products/voice/): AI voice receptionist and outbound voice messaging.
+- [Live Chat](https://www.smslocal.in/products/live-chat/): Embeddable live chat with agent handoff.
+
+## Solutions
+
+- [E-commerce & D2C](https://www.smslocal.in/solutions/ecommerce/)
+- [Banking & Fintech](https://www.smslocal.in/solutions/banking-fintech/)
+- [Healthcare](https://www.smslocal.in/solutions/healthcare/)
+- [Education](https://www.smslocal.in/solutions/education/)
+- [Logistics](https://www.smslocal.in/solutions/logistics/)
+- [Real Estate](https://www.smslocal.in/solutions/real-estate/)
+- [Restaurant](https://www.smslocal.in/solutions/restaurant/)
+- [Retail & Hospitality](https://www.smslocal.in/solutions/retail/)
+- [SaaS / B2B](https://www.smslocal.in/solutions/saas-b2b/)
+
+## Developers
+
+- [API Docs](https://www.smslocal.in/developers/api-docs/)
+- [Quickstart](https://www.smslocal.in/developers/quickstart/)
+- [SMS API Reference](https://www.smslocal.in/developers/sms-api/)
+- [XML API](https://www.smslocal.in/developers/xml-api/)
+
+## Resources
+
+- [Blog](https://www.smslocal.in/blog/)
+- [Help Centre](https://www.smslocal.in/resources/help/)
+- [DLT Registration Guide](https://www.smslocal.in/blog/dlt-registration-guide/)
+- [Pricing](https://www.smslocal.in/pricing/)
+- [Customer Stories](https://www.smslocal.in/resources/customer-stories/)
+- [Glossary](https://www.smslocal.in/resources/glossary/)
+- [Status](https://www.smslocal.in/resources/status/)
+
+## Company
+
+- [About](https://www.smslocal.in/company/about/)
+- [Contact](https://www.smslocal.in/company/contact/)
+- [Careers](https://www.smslocal.in/company/careers/)
+- [Privacy Policy](https://www.smslocal.in/legal/privacy/)
+- [Terms of Service](https://www.smslocal.in/legal/terms/)
