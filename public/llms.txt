@@ -1,8 +1,4 @@
 # SMSLocal
-# https://llmstxt.org/
-#
-# SMSLocal is India's messaging platform for SMS, WhatsApp Business API,
-# OTP, RCS, and AI agents. Founded 2019. Headquarters: India.
 
 > SMSLocal is a cloud communications platform that lets Indian businesses
 > send bulk SMS, OTP, WhatsApp messages, and deploy AI agents — all on a
