@@ -6,7 +6,7 @@ import { PLACEHOLDER_ROUTES } from "@/lib/placeholder-routes"
 const ROUTE = PLACEHOLDER_ROUTES["resources/whatsapp-api-guide"]
 
 export const metadata: Metadata = buildMetadata({
-  title: ROUTE.title,
+  title: "WhatsApp Business API Guide for Indian Businesses",
   description: ROUTE.description,
   path: "/resources/whatsapp-api-guide",
   noindex: true,
