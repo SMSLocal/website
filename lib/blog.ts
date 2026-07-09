@@ -360,9 +360,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "10 min read",
       category: "Getting started",
       author: TEAM,
-      coverImage: "/blog/what-is-sms-cover.svg",
+      coverImage: "/blog/what-is-sms-how-text-messaging-works-and-why-it-still-matters-in-2026-hero.webp",
       coverAlt:
-        "Two smartphones connected via a signal path with a central SMSC relay node — illustrating how SMS travels through the cellular network.",
+        "Abstract illustration representing SMS text messaging — how Short Message Service works and why it still matters in 2026.",
       toc: [
         { id: "what-is-sms", label: "What SMS actually is" },
         { id: "how-sms-works", label: "How SMS works technically" },

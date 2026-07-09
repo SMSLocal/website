@@ -47,6 +47,12 @@ export default function WhatIsSmsPost() {
         encoding and the per-segment limit drops to 70 characters.
       </P>
 
+      <BlogFigure
+        src="/blog/what-sms-actually-is.webp"
+        alt="Visual representation of SMS — a Short Message Service text message displayed on a mobile phone screen, illustrating the basics of text messaging."
+        caption="SMS is built into every mobile network globally — no internet, no app, no smartphone required."
+      />
+
       <H2 id="how-sms-works">How SMS works technically</H2>
       <P>
         When you send a text, here is what happens in under two seconds:
@@ -73,6 +79,12 @@ export default function WhatIsSmsPost() {
           retries periodically.
         </LI>
       </OL>
+
+      <BlogFigure
+        src="/blog/how-sms-works-technically.webp"
+        alt="Diagram illustrating how SMS works technically — message flow from sender handset through the SMSC relay to the recipient handset over the cellular network."
+        caption="An SMS never touches the internet — it travels through the operator's cellular signalling layer and is held by the SMSC until the recipient device is reachable."
+      />
 
       <Callout variant="info" title="Store-and-forward reliability">
         The SMSC sits between sender and recipient as a relay. Unlike WhatsApp or email, no
@@ -184,6 +196,12 @@ export default function WhatIsSmsPost() {
         queued by operators and delivered at 9 AM the next day.
       </P>
 
+      <BlogFigure
+        src="/blog/sms-in-india-the-regulatory-context.webp"
+        alt="Overview of SMS regulations in India — DLT registration, DND scrubbing, and TRAI send-window rules that govern commercial SMS messaging."
+        caption="India's SMS compliance framework — DLT, DND, and send windows — is among the most structured in the world. Every commercial sender must register before messaging."
+      />
+
       <H2 id="sms-for-business">SMS for business: the practical use cases</H2>
       <P>
         Businesses in India use SMS for two broad categories:
@@ -227,6 +245,12 @@ export default function WhatIsSmsPost() {
           reply keyword.
         </LI>
       </UL>
+
+      <BlogFigure
+        src="/blog/sms-for-business.webp"
+        alt="Business professional using SMS for customer communication — OTP delivery, promotional campaigns, and transactional alerts on a mobile device."
+        caption="From OTPs to promotional campaigns — SMS for business spans two very different use cases, each with distinct compliance rules and delivery requirements."
+      />
 
       <Callout variant="tip" title="Open rates that email can't match">
         SMS open rates in India consistently reach 85–97%, with most messages read within 3 minutes

@@ -249,6 +249,70 @@ export default function DndServicesPost() {
         </LI>
       </OL>
 
+      <H2 id="suspended-header-recovery">How to recover a suspended sender ID</H2>
+      <P>
+        A suspended header means your messages stop being delivered — silently, with no error shown
+        to your application. Recovery follows a defined process, but it takes time. Here is what
+        to do the moment you suspect a suspension.
+      </P>
+      <OL>
+        <LI>
+          <Strong>Confirm the suspension.</Strong> Log in to your operator&apos;s DLT portal and
+          check the Header status. A suspended header shows as &ldquo;Blocked&rdquo; or
+          &ldquo;Suspended&rdquo;. SMSLocal also flags this in your dashboard under Sender IDs.
+        </LI>
+        <LI>
+          <Strong>Identify the violation.</Strong> The DLT portal lists the complaint or
+          violation that triggered the suspension — usually a DND breach, a send-window violation,
+          or template mismatch. Read it carefully before submitting a response.
+        </LI>
+        <LI>
+          <Strong>File a re-instatement request.</Strong> On the DLT portal (Jio, Airtel, Vi, or
+          BSNL), there is a &ldquo;Raise Dispute&rdquo; or &ldquo;Re-instatement Request&rdquo;
+          option against the suspended header. Attach evidence: your NCPR scrub logs, consent
+          records, and a corrective action plan.
+        </LI>
+        <LI>
+          <Strong>During suspension: register a new header.</Strong> If you need to keep sending
+          while the dispute is resolved, register a second header under your PE and use that for
+          production traffic. Migrating DLT-approved templates to a new header takes 2–4 hours.
+        </LI>
+        <LI>
+          <Strong>Fix the root cause before re-instating.</Strong> Operators reinstate suspended
+          headers but will not tolerate a second violation. If you sent to DND numbers because your
+          list was stale, clean it. If a template was mis-categorised, correct the template
+          category before sending again.
+        </LI>
+      </OL>
+      <Callout variant="warning" title="Suspension timelines">
+        A first-time promotional DND violation typically results in a 7–30 day suspension.
+        Repeat violations can extend to 90 days or result in permanent PE blacklisting. The
+        re-instatement window is usually 15–30 days from the date of suspension notice.
+      </Callout>
+
+      <H2 id="dpdp-consent">Consent in 2026 — DPDP Act adds a new layer</H2>
+      <P>
+        India&apos;s <Strong>Digital Personal Data Protection (DPDP) Act 2023</Strong> adds a
+        statutory consent framework on top of TRAI&apos;s existing DND rules. The practical
+        difference: TRAI governs what you can send and when; DPDP governs how you collected the
+        data and whether the consent is legally valid.
+      </P>
+      <P>
+        Under DPDP, consent for receiving promotional SMS must be:
+      </P>
+      <UL>
+        <LI><Strong>Free</Strong> — not bundled with other terms or gated on a product purchase</LI>
+        <LI><Strong>Specific</Strong> — covering the exact type of SMS you plan to send</LI>
+        <LI><Strong>Informed</Strong> — the user must understand what they are consenting to</LI>
+        <LI><Strong>Unambiguous</Strong> — a pre-ticked checkbox is not valid consent</LI>
+        <LI><Strong>Withdrawable</Strong> — a STOP mechanism must be provided and honoured</LI>
+      </UL>
+      <P>
+        Enforcement is through the Data Protection Board, which can impose penalties up to ₹250
+        crore per breach for large data principals. Most SMS compliance teams are revisiting their
+        opt-in flows in 2026 to ensure DPDP alignment sits alongside existing TRAI compliance.
+      </P>
+
       <H2 id="faq">FAQ</H2>
       <H3>Do I need to scrub NCPR for transactional SMS?</H3>
       <P>

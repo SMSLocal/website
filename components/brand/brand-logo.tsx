@@ -22,6 +22,9 @@ export function BrandLogo({
       style={{ height, width: "auto" }}
       className="block w-auto select-none"
       draggable={false}
+      // High-priority fetch so the logo (LCP candidate on most pages) is
+      // requested immediately rather than after script/CSS parsing.
+      fetchPriority="high"
     />
   )
 

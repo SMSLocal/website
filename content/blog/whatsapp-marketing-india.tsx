@@ -285,6 +285,76 @@ export default function WhatsappMarketingIndiaPost() {
         messaging restrictions, account suspension, or a permanent ban of the phone number.
       </Callout>
 
+      <H2 id="catalog-collections">WhatsApp Catalog and Collections</H2>
+      <P>
+        WhatsApp&apos;s Catalog feature lets businesses publish a product or service listing
+        directly inside the WhatsApp interface — customers browse, tap items, and add them to a
+        cart without ever leaving the app. Collections group products by category (e.g. &ldquo;New
+        Arrivals&rdquo;, &ldquo;Sale&rdquo;, &ldquo;Bestsellers&rdquo;), making it easy for a
+        buyer to discover what they want in a few taps.
+      </P>
+      <P>
+        For D2C and e-commerce brands in India, this is significant. A customer who clicks a
+        broadcast campaign can land inside your catalog instead of being sent to a mobile website.
+        No load time, no drop-off at an unfamiliar URL — the entire browse-to-buy journey stays on
+        WhatsApp. Businesses that have switched repeat-purchase flows from landing pages to
+        Catalog+WhatsApp Pay report meaningful improvements in conversion, particularly in Tier 2
+        and Tier 3 markets where mobile data is slower and web pages add friction.
+      </P>
+      <UL>
+        <LI>
+          <Strong>Set up via WhatsApp Business Manager:</Strong> connect your product feed (via
+          Meta Commerce Manager) and sync to your WABA. Updates to price or availability
+          propagate automatically.
+        </LI>
+        <LI>
+          <Strong>Link from broadcast templates:</Strong> send a marketing template with a
+          &ldquo;View catalog&rdquo; quick-reply button — the tap opens your catalog inline.
+        </LI>
+        <LI>
+          <Strong>Combine with WhatsApp Pay:</Strong> a customer can go from product tap to
+          payment without leaving the conversation, which eliminates the abandoned-cart drop-off
+          that plagues mobile web.
+        </LI>
+      </UL>
+
+      <H2 id="whatsapp-flows">WhatsApp Flows</H2>
+      <P>
+        WhatsApp Flows — released by Meta in 2024 and expanding through 2025–26 — let businesses
+        embed interactive forms, selection screens, and multi-step journeys directly inside a
+        WhatsApp conversation. Instead of sending a customer to a separate URL to fill out an
+        enquiry form or select an appointment slot, the entire interaction happens as a native
+        chat-adjacent widget.
+      </P>
+      <P>
+        Typical Flows use cases in India:
+      </P>
+      <UL>
+        <LI>
+          <Strong>Lead qualification:</Strong> a CTWA ad starts a conversation; a Flow immediately
+          captures name, city, budget, and requirement — giving sales a pre-qualified lead instead
+          of a cold chat.
+        </LI>
+        <LI>
+          <Strong>Appointment booking:</Strong> a Flow presents available slots, lets the customer
+          select, and triggers a calendar confirmation — zero human involvement required.
+        </LI>
+        <LI>
+          <Strong>Insurance and BFSI applications:</Strong> a multi-step Flow walks an applicant
+          through policy selection, nominee declaration, and premium payment, all verified within
+          the trusted WhatsApp context.
+        </LI>
+        <LI>
+          <Strong>Post-purchase feedback:</Strong> a Flow collects a structured NPS rating and
+          comment immediately after delivery, before the customer opens any other app.
+        </LI>
+      </UL>
+      <Callout variant="tip" title="Why Flows outperform landing pages for conversions">
+        Flows render inside the native WhatsApp UI — no browser switch, no slow mobile page load,
+        no unfamiliar interface. For markets like India where customers are comfortable on
+        WhatsApp but wary of third-party links, the trust and UX differential is substantial.
+      </Callout>
+
       <H2 id="cost-in-india">How much does WhatsApp marketing cost in India?</H2>
       <P>
         You pay Meta a per-conversation fee (a conversation is a 24-hour session you initiate).
@@ -293,6 +363,14 @@ export default function WhatsappMarketingIndiaPost() {
         or as a monthly plan. One way to lower total cost: customer-initiated (service)
         conversations are cheaper, and Meta includes a monthly allowance of free service
         conversations, so building a genuine two-way presence pays for itself.
+      </P>
+      <P>
+        To put the cost in concrete terms: a campaign of 10,000 marketing messages at ₹0.68 each
+        costs ₹6,800 in Meta conversation fees. At a 3% conversion rate — typical for a warm,
+        opted-in list in e-commerce — that is 300 sales from ₹6,800 spend, or roughly ₹23 per
+        converted customer. Add BSP platform fees and you might be at ₹35–50 per conversion,
+        still well below what the same result costs on paid search or performance social for most
+        categories.
       </P>
 
       <H2 id="faq">Frequently asked questions</H2>
@@ -308,7 +386,9 @@ export default function WhatsappMarketingIndiaPost() {
         No. DLT registration is a TRAI requirement for SMS, not WhatsApp. WhatsApp is governed by
         Meta&apos;s own Business Policy — you don&apos;t need a DLT sender ID, header, or
         template. You do need explicit opt-in consent, a verified WhatsApp Business Account, and
-        approved templates.
+        approved templates. If you run SMS alongside WhatsApp, read our{" "}
+        <A href="/blog/dlt-registration-guide/">DLT registration guide</A> for the SMS compliance
+        side.
       </P>
 
       <H3>How is WhatsApp marketing different from bulk WhatsApp messaging?</H3>

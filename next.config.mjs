@@ -125,7 +125,10 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    // SVG images need this flag; non-SVG files (PNG/JPG/WebP) are still
+    // compressed and served as WebP with responsive srcsets.
+    dangerouslyAllowSVG: true,
+    contentSecurityPolicy: "default-src 'none'; script-src 'none'; sandbox;",
   },
   async headers() {
     return [

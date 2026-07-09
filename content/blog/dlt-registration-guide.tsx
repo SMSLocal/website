@@ -57,14 +57,17 @@ export default function DltRegistrationGuide() {
       <UL>
         <LI>
           <Strong>Transactional senders</Strong> (OTPs, payment receipts, shipping updates): yes,
-          DLT required.
+          DLT required. See our <A href="/products/otp-sms/">OTP SMS product</A> for how this
+          works end-to-end once you are registered.
         </LI>
         <LI>
           <Strong>Service senders</Strong> (alerts, reminders, policy updates): yes, DLT required.
         </LI>
         <LI>
           <Strong>Promotional senders</Strong> (marketing, offers, newsletters): yes, and
-          additionally constrained by DND rules and 9am–9pm IST send windows.
+          additionally constrained by DND rules and 9am–9pm IST send windows. Our{" "}
+          <A href="/products/bulk-sms/">Bulk SMS product</A> handles NCPR scrubbing, send-window
+          enforcement, and DLT compliance automatically.
         </LI>
         <LI>
           <Strong>International businesses sending to Indian numbers</Strong>: yes, you still need
@@ -332,6 +335,32 @@ export default function DltRegistrationGuide() {
         If the test succeeds, you&apos;re cleared to send at whatever volume your route supports.
         Scale gradually — even a compliant Header looks suspicious to the operator if it jumps
         from 100 sends to 500,000 overnight.
+      </Callout>
+
+      <H2 id="dlt-cost">DLT registration cost in India</H2>
+      <P>
+        DLT registration is not free. You pay once per operator at the Principal Entity level, and
+        once per content template in some categories. Here is what to budget in 2026:
+      </P>
+      <FigureTable
+        columns={["Item", "Jio", "Airtel", "Vi", "BSNL"]}
+        rows={[
+          ["PE registration", "₹5,900 + GST", "₹5,900 + GST", "₹5,900 + GST", "₹4,000 + GST"],
+          ["Header registration", "Free (after PE)", "Free", "Free", "Free"],
+          ["Template registration", "Free (most categories)", "Free", "Free", "Free"],
+          ["Annual renewal (PE)", "₹5,900 + GST", "₹5,900 + GST", "₹5,900 + GST", "₹4,000 + GST"],
+        ]}
+        caption="Fees are per operator. You only need to register with one operator — your PE, headers, and templates sync to all other operators automatically."
+      />
+      <P>
+        Most businesses register with a single operator (typically Jio or Vi for UI quality) and
+        pay once. The annual renewal applies on the anniversary date. Templates are free regardless
+        of how many you register — so register generously.
+      </P>
+      <Callout variant="info" title="SMSLocal handles DLT for you">
+        SMSLocal customers complete DLT registration inside the platform during onboarding.
+        We guide you through the PE application, header selection, and template submission, and
+        our team reviews your documents before you submit to avoid common rejection reasons.
       </Callout>
 
       <H2 id="ongoing">Ongoing obligations</H2>

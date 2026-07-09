@@ -119,7 +119,10 @@ export default function SendSmsOnlinePost() {
         <A href="/resources/tools/free-sms-without-registration/">
           send free SMS without registration
         </A>{" "}
-        to test the waters, we have a ₹60 credit to start.
+        to test the waters, we have a ₹60 credit to start. For personal sending from a browser
+        using your own SIM, see our{" "}
+        <A href="/blog/free-sms/">guide to free SMS in India</A> — operator portals like MyJio
+        and Airtel Thanks let you send from your real number at no cost.
       </Callout>
 
       <BlogFigure
@@ -283,6 +286,18 @@ export default function SendSmsOnlinePost() {
         Same architecture, different channel. SMS APIs dispatch via telecom carriers; email APIs
         dispatch via SMTP. In India, SMS has DLT + NCPR requirements that email doesn&apos;t, so
         SMS onboarding is more paperwork-heavy but delivery rates are higher.
+      </P>
+
+      <H3>Can I send SMS in Hindi or regional languages?</H3>
+      <P>
+        Yes — all Indian SMS platforms support Unicode (UCS-2) encoding for Devanagari, Tamil,
+        Telugu, Malayalam, Bengali, Gujarati, Kannada, and Odia. The tradeoff is character limit:
+        a standard ASCII/GSM-7 SMS fits 160 characters per segment, but a Unicode SMS fits only
+        70 characters per segment. A Hindi OTP message like &ldquo;आपका OTP है: {"{#var#}"}. 5
+        मिनट में उपयोग करें।&rdquo; uses about 55 characters — comfortably in one segment. Longer
+        promotional messages will span two segments (billed as two SMS). DLT template approval for
+        regional-language templates works the same as for English; declare the correct language on
+        the portal when submitting.
       </P>
 
       <Blockquote cite="A growth marketer onboarded in 2024">

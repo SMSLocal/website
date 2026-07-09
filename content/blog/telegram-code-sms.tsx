@@ -162,7 +162,9 @@ export default function TelegramCodeSmsPost() {
         </LI>
         <LI>
           <Strong>Restart your phone</Strong> — clears carrier network registration issues that can
-          block incoming SMS.
+          block incoming SMS. If SMS problems persist on your device generally, see our{" "}
+          <A href="/blog/sms-activation/">SMS not working guide</A> for the full device-level
+          checklist.
         </LI>
         <LI>
           <Strong>Temporarily deactivate DND</Strong> — send STOP to 1909, wait 10 minutes,
@@ -288,6 +290,13 @@ export default function TelegramCodeSmsPost() {
         If you receive a login code without requesting one, someone may be attempting to log into
         your account. Do not share the code with anyone.
       </Blockquote>
+
+      <Callout variant="tip" title="Still getting no SMS on your phone in general?">
+        If Telegram isn&apos;t the only app failing to deliver codes — OTPs from banks, Gmail,
+        or other services are also missing — the issue is your phone or SIM, not Telegram. Our{" "}
+        <A href="/blog/sms-activation/">SMS not working troubleshooting guide</A> covers every
+        device-level fix, from Android message settings to SMSC numbers and dual-SIM configuration.
+      </Callout>
 
       <Callout variant="tip" title="Building SMS OTP into your own app?">
         If you&apos;re a developer building your own SMS verification flow, SMSLocal&apos;s OTP

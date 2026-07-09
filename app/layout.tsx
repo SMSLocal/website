@@ -54,6 +54,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={SITE.htmlLang} className={`${geistSans.variable} ${geistMono.variable} bg-background`}>
+      <head>
+        {/* Preload both logo variants so the browser fetches them during HTML
+            parse, before it encounters the <img> element deep in SiteHeader.
+            This is the primary fix for the 4–5 s LCP reported in GSC. */}
+        <link rel="preload" href="/smslocal-logo-white.svg" as="image" type="image/svg+xml" />
+        <link rel="preload" href="/smslocal-logo.svg" as="image" type="image/svg+xml" />
+      </head>
       <body className="font-sans antialiased">
         {/* Emits a site-wide <meta name="robots"> when the SEO admin's
             "Allow indexing" toggle is OFF. Also injects Google / Bing

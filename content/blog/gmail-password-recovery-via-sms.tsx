@@ -260,6 +260,13 @@ export default function GmailPasswordRecoveryPost() {
         months — it takes two minutes and saves days.
       </Blockquote>
 
+      <Callout variant="tip" title="Gmail recovery SMS arrived but other SMS aren&apos;t?">
+        If the Gmail code eventually came through but you regularly miss OTPs from banks, Telegram,
+        or other apps, the issue is your phone or SIM — not Google. Our{" "}
+        <A href="/blog/sms-activation/">SMS not working troubleshooting guide</A> covers every
+        fix: SMSC numbers, Android message settings, DND status, and dual-SIM misconfigurations.
+      </Callout>
+
       <Callout variant="tip" title="For developers integrating OTP">
         Recovery SMS like Gmail&apos;s is the same category as your OTP SMS — transactional,
         time-sensitive, delivery-critical.{" "}

@@ -1,12 +1,12 @@
 import {
   A,
-  BlogFigure,
   Callout,
   FigureTable,
   H2,
   H3,
   LI,
   Lead,
+  OL,
   P,
   Strong,
   UL,
@@ -17,195 +17,348 @@ export default function BestFreeSmsPost() {
     <>
       <Lead>
         The best free SMS app in India depends entirely on what you are trying to do. For personal
-        messages from your smartphone, your operator&apos;s own bundled allowance is unbeatable. For
-        web-to-SMS from a PC, a handful of services deliver reliably. For business use — OTPs,
-        order notifications, bulk campaigns — free-tier trial credits from a proper SMS platform
-        are the only option that actually works. This guide compares every meaningful option in
-        2026 so you can pick the right one for your situation.
+        messages from your Android phone, Google Messages with your operator&apos;s bundled
+        allowance is unbeatable. For SMS from a PC, AirDroid or Samsung Link beats any web-to-SMS
+        site. For occasional online sending, Jio&apos;s MyJio web portal works without any
+        third-party account. For business use — OTPs, notifications, bulk campaigns — free-tier
+        trial credits from a proper SMS platform are the only option that actually works at scale
+        in India. This guide reviews every meaningful option in 2026 with real pros, cons, and
+        recommendations by use case.
       </Lead>
 
-      <Callout variant="info" title="How we evaluated these options">
-        We tested each service for delivery speed, sender branding, daily limits, reliability on
-        DND and non-DND numbers, and privacy policy clarity. All tests conducted in India using
-        Airtel, Jio, and Vi numbers in July 2026.
+      <Callout variant="info" title="How we compared these options">
+        We tested each for delivery speed, daily limits, reliability on DND and non-DND numbers,
+        privacy practices, and actual usability on Indian networks (Airtel, Jio, Vi) in July 2026.
+        Where we refer to &quot;free&quot; we mean zero rupees out of pocket with no credit card —
+        apps with a free tier but aggressive upsell are noted.
       </Callout>
 
       <H2 id="quick-pick">Quick pick by use case</H2>
       <FigureTable
-        columns={["Use case", "Best option", "Why"]}
+        columns={["What you want to do", "Best free option", "Why it wins"]}
         rows={[
-          ["Personal SMS from phone", "Your operator's bundled 100/day", "No app needed, your own number, instant delivery"],
-          ["Message from PC/laptop", "Web-to-SMS via SMSLocal trial", "No footer, real delivery receipts, trial covers testing"],
-          ["OTP / login verification (personal)", "Google Voice / operator bundled", "Reliable delivery, no shared numbers"],
-          ["Business OTPs and transactional", "SMSLocal OTP route (₹60 free trial)", "DLT-compliant, sub-5s delivery, real receipts"],
-          ["Bulk promotional (business)", "SMSLocal bulk plan", "DLT + DND scrubbing + sender ID"],
+          ["Personal SMS from Android phone", "Google Messages + operator bundle", "Native, no ads, your own number, 100 SMS/day free"],
+          ["Personal SMS from iPhone", "Built-in Messages app + SIM bundle", "Seamless, no app install, iMessage fallback"],
+          ["Send SMS from PC (Android phone nearby)", "AirDroid (free tier)", "Mirror your phone's SMS to browser; no third party route"],
+          ["Send SMS from PC (no phone nearby)", "MyJio web / Airtel Thanks web", "Uses your own bundled quota, no shared sender"],
+          ["Test a business OTP flow", "SMSLocal ₹60 free credit", "Real production route, delivery receipts, API access"],
+          ["Bulk promotional (business)", "SMSLocal bulk trial", "DLT-compliant, DND scrub, scheduled campaigns"],
         ]}
-        caption="Free options are best for personal and testing use. Business use requires a DLT-registered platform."
+        caption="The right answer changes completely by use case — personal and business free SMS are entirely different problems."
       />
 
-      <H2 id="operator-bundled">1. Operator bundled SMS — best for personal use</H2>
+      <H2 id="google-messages">1. Google Messages — best free SMS app for Android</H2>
       <P>
-        The overlooked best answer: most Indian mobile plans include{" "}
-        <Strong>100 free SMS per day</Strong>. These are real SMS sent from your own number with
-        no branding, no app, and no caps beyond the daily 100. If you are trying to send personal
-        messages, you almost certainly already have this for free.
-      </P>
-      <FigureTable
-        columns={["Operator", "Free SMS included", "How to check"]}
-        rows={[
-          ["Jio", "100 SMS/day on most plans", "MyJio app → Balance"],
-          ["Airtel", "100 SMS/day (postpaid), varies prepaid", "Airtel Thanks → Plan"],
-          ["Vi", "100 SMS/day on most plans", "Vi app → My Plan"],
-          ["BSNL", "20–100 SMS/day depending on recharge", "SMS BAL to 123"],
-        ]}
-        caption="Bundled SMS reset daily. They cannot be used to send commercial (DLT) messages."
-      />
-      <P>
-        <Strong>Verdict:</Strong> If you need &lt;100 personal SMS per day, your existing plan is
-        the best free SMS option available. No registration needed beyond your SIM.
+        Google Messages is the default messaging app on most Android phones sold in India in 2025–26
+        (Pixel, OnePlus, Motorola, and many Xiaomi and Realme models). For personal SMS, it is the
+        single best free option available — and most Indian users already have it.
       </P>
 
-      <H2 id="smslocal-trial">2. SMSLocal free trial — best for business testing</H2>
-      <P>
-        SMSLocal offers <Strong>₹60 free credit</Strong> on signup, no credit card required. This
-        covers approximately 200–400 transactional SMS at production rates, through direct operator
-        connectivity.
-      </P>
-      <UL>
-        <LI>Messages sent from your own registered DLT header (no shared sender branding)</LI>
-        <LI>Real-time delivery receipts per message</LI>
-        <LI>Sub-5-second OTP delivery on direct routes</LI>
-        <LI>Full API access to test integrations before committing</LI>
-        <LI>Works for both OTP/transactional and promotional templates</LI>
-      </UL>
-      <P>
-        <Strong>Verdict:</Strong> The best free option for any business use case. The ₹60 credit
-        is enough to fully validate an SMS workflow end-to-end.
-      </P>
-
-      <H2 id="whatsapp-alternative">3. WhatsApp — best for rich messaging</H2>
-      <P>
-        For personal messaging to smartphones, WhatsApp is free and unlimited — provided both
-        parties have it installed and internet access. For casual, non-time-sensitive personal
-        communication, WhatsApp is usually the better choice over SMS.
-      </P>
-      <P>
-        <Strong>Where WhatsApp fails vs SMS:</Strong> feature phones (no app), offline recipients,
-        OTPs (industry still uses SMS for security), users who have not installed WhatsApp, and any
-        scenario where the recipient&apos;s internet connection is unreliable.
-      </P>
-      <P>
-        <Strong>Verdict:</Strong> Best for personal smartphone-to-smartphone messaging. Not a
-        replacement for SMS in business or OTP contexts.
-      </P>
-
-      <H2 id="textfree-apps">4. Third-party SMS apps</H2>
-      <P>
-        Apps like Truecaller (message feature), TextNow, and various India-specific SMS apps offer
-        free messaging, but almost all have significant limitations for Indian users:
-      </P>
+      <H3>What makes it the best</H3>
       <UL>
         <LI>
-          <Strong>Truecaller messages</Strong> — sent via internet to other Truecaller users only;
-          falls back to standard SMS (uses your carrier) for non-users. The free SMS aspect is
-          simply your carrier&apos;s bundled SMS.
+          <Strong>Uses your SIM&apos;s bundled quota.</Strong> Most Jio, Airtel, and Vi plans
+          include 100 free SMS per day. Google Messages uses this — so the SMS is completely free
+          and sent from your own number with zero branding.
         </LI>
         <LI>
-          <Strong>TextNow / TextFree</Strong> — US-focused services. Unreliable for sending to
-          Indian numbers, no DLT support, often blocked by Indian operators.
+          <Strong>RCS support in 2026.</Strong> On supported networks (Jio and Airtel have
+          activated RCS), Google Messages upgrades to Rich Communication Services automatically —
+          giving you read receipts, typing indicators, and group chat features without switching
+          apps.
         </LI>
         <LI>
-          <Strong>Web-to-SMS ad-funded sites</Strong> — daily caps of 5–25 messages, mandatory
-          registration, shared sender number, slow routes. Functional for occasional personal use;
-          unsuitable for anything regular or business-related.
+          <Strong>Built-in spam filter.</Strong> Google&apos;s spam detection flags suspicious
+          messages (phishing, OTP-fishing, fake package deliveries) and moves them to a separate
+          folder. It learns from your behaviour.
+        </LI>
+        <LI>
+          <Strong>Message scheduling.</Strong> Long-press the send button → &ldquo;Schedule
+          send&rdquo; — useful for sending reminders at a specific time without staying up.
+        </LI>
+        <LI>
+          <Strong>Send from PC / web.</Strong> messages.google.com lets you read and reply to SMS
+          from any browser — no extra app needed.
         </LI>
       </UL>
 
-      <Callout variant="info" title="Personal vs. business SMS needs different tools">
-        Personal SMS through your operator&apos;s bundled quota is free, instant, and requires no
-        setup — perfect for casual messages. Business SMS needs delivery tracking, DLT compliance,
-        and a registered sender ID, which requires a platform account even if you start on a free
-        trial.
+      <H3>Limitations</H3>
+      <UL>
+        <LI>Not pre-installed on Samsung phones (Samsung uses its own Messages app by default)</LI>
+        <LI>RCS works only when <em>both</em> sender and recipient have RCS-enabled phones and networks</LI>
+        <LI>Not useful for business SMS — no DLT support, no bulk sends, no delivery receipts</LI>
+      </UL>
+
+      <Callout variant="tip" title="Samsung users">
+        Samsung Messages works the same way for SMS using your bundled SIM quota. For PC
+        mirroring, Samsung offers Samsung Link (now part of Samsung Flow) which mirrors messages
+        to Windows — similar to Google Messages on web.
       </Callout>
 
-      <H2 id="why-free-limits-matter">Why free SMS limits exist</H2>
+      <H2 id="airdroid">2. AirDroid — best free app for SMS from your PC</H2>
       <P>
-        Free SMS services all impose limits for the same reason: SMS is not actually free to route.
-        Every message costs the sender money — ₹0.01–0.15 depending on route type. Free services
-        fund this through:
-      </P>
-      <UL>
-        <LI>Advertising revenue (showing you ads during or after registration)</LI>
-        <LI>Data monetisation (selling your contact list and behaviour data)</LI>
-        <LI>Upsell conversion (getting you to upgrade to a paid plan)</LI>
-      </UL>
-      <P>
-        This is why the &ldquo;best free SMS&rdquo; for most purposes is either the SMS already
-        included in your mobile plan or a platform&apos;s trial credit — both avoid the
-        ad/data tradeoff.
+        AirDroid solves a specific problem that surprises many users: how do you send SMS from a
+        laptop or desktop without picking up your phone? Its free tier is genuinely useful for
+        personal use.
       </P>
 
-      <H2 id="business-sms-options">Free options for business SMS</H2>
+      <H3>How it works</H3>
       <P>
-        No genuinely free service exists for compliant business SMS at volume. TRAI requires DLT
-        registration for commercial messages, which involves a registered sender ID, pre-approved
-        templates, and per-message DLT fees. The cost of an OTP SMS in India on a paid platform
-        is typically ₹0.03–0.08 — approximately the cost of one WhatsApp sticker pack for 1,000
-        OTPs.
+        AirDroid runs a background service on your Android phone, connects it to the AirDroid web
+        interface or desktop app, and mirrors your phone&apos;s SMS through that connection. When
+        you type a message on your PC, it is sent as a real SMS <Strong>from your SIM</Strong> —
+        not through AirDroid&apos;s servers. The recipient sees your real number, not a shared one.
+      </P>
+
+      <H3>Pros</H3>
+      <UL>
+        <LI>SMS sends from your own number — no branded footer, no shared sender</LI>
+        <LI>Uses your SIM&apos;s bundled 100 SMS/day — completely free</LI>
+        <LI>Access photos, files, and notifications from the PC simultaneously</LI>
+        <LI>Free tier covers SMS mirroring without needing a paid subscription</LI>
+        <LI>Works on Android 6+ — covers most phones in use in India today</LI>
+      </UL>
+
+      <H3>Cons</H3>
+      <UL>
+        <LI>Requires your phone to be on, charged, and connected to the same Wi-Fi (or mobile data with AirDroid Premium)</LI>
+        <LI>Free tier has a 200 MB/month data transfer limit — fine for SMS, not for file transfers</LI>
+        <LI>iPhone users: AirDroid has an iOS app but Apple&apos;s restrictions mean it cannot mirror iMessages or SMS to PC</LI>
+        <LI>Not suitable for business use — personal SIM limits, no DLT support</LI>
+      </UL>
+
+      <H2 id="pushbullet">3. Pushbullet — SMS mirroring plus notifications</H2>
+      <P>
+        Pushbullet mirrors your Android phone&apos;s SMS and notifications to your PC browser or
+        Windows app. The free tier is more limited than AirDroid&apos;s but adequate for reading
+        and replying to SMS from your computer.
+      </P>
+      <FigureTable
+        columns={["Feature", "Pushbullet Free", "AirDroid Free"]}
+        rows={[
+          ["SMS mirroring to PC", "Yes", "Yes"],
+          ["Send SMS from PC", "Yes (via phone)", "Yes (via phone)"],
+          ["Notification mirroring", "Yes — stronger feature", "Yes — secondary feature"],
+          ["File transfer", "25 MB/month", "200 MB/month"],
+          ["Universal copy-paste", "Yes — standout feature", "Limited"],
+          ["Phone must be on Wi-Fi", "Yes (free)", "Yes (free)"],
+          ["Monthly free SMS limit", "None (uses your SIM)", "None (uses your SIM)"],
+        ]}
+        caption="Both mirror SMS through your phone — the difference is in secondary features."
+      />
+      <P>
+        <Strong>Verdict:</Strong> Choose Pushbullet if you want seamless notification sync across
+        devices. Choose AirDroid if you want a more complete phone-on-PC experience. Either is
+        better than any web-to-SMS site for personal use because both use your real number.
+      </P>
+
+      <H2 id="operator-web">4. Operator web portals — free SMS from a browser, no third party</H2>
+      <P>
+        The most overlooked option: Indian operators let you send SMS through their own apps and,
+        in some cases, web portals — using your bundled SIM quota. No third-party account, no
+        shared number, no data sold.
+      </P>
+
+      <H3>Jio — MyJio web SMS</H3>
+      <OL>
+        <LI>
+          Go to <Strong>jio.com</Strong> and sign in with your Jio number.
+        </LI>
+        <LI>
+          Open the <Strong>MyJio</Strong> section and look for &ldquo;Send SMS&rdquo; under your
+          account dashboard.
+        </LI>
+        <LI>
+          Enter the recipient&apos;s number and your message (up to 160 characters for standard
+          SMS). Hit send.
+        </LI>
+        <LI>
+          The SMS is sent from your Jio number and deducted from your bundled 100 SMS/day allowance.
+        </LI>
+      </OL>
+      <P>
+        <Strong>Limitation:</Strong> Works only from a browser where you are logged into your Jio
+        account. The feature is available on most Jio postpaid and many prepaid plans.
+      </P>
+
+      <H3>Airtel — Airtel Thanks web</H3>
+      <P>
+        Airtel Thanks (airtelthanks.com) allows SMS sending to contacts directly from your browser
+        when logged in. The process mirrors Jio&apos;s: your own number sends the message, uses
+        bundled quota, no branding added.
       </P>
       <P>
-        What you can do for free is test everything before paying. The{" "}
-        <A href="/signup/">SMSLocal ₹60 free credit</A> covers:
+        For a full walkthrough of all operator-specific options, see our{" "}
+        <A href="/blog/free-sms/">guide to free SMS in India</A> which covers every operator&apos;s
+        balance check codes and quota details.
+      </P>
+
+      <H2 id="operator-bundled">5. Your mobile plan&apos;s bundled SMS — still the best for daily personal use</H2>
+      <P>
+        It bears saying clearly: most Indian mobile plans include{" "}
+        <Strong>100 free SMS per day</Strong>, and most users never use more than 10. Before
+        installing any app or signing up for any service, check whether you already have more than
+        enough free SMS.
+      </P>
+      <FigureTable
+        columns={["Operator", "Free SMS/day", "How to check remaining balance"]}
+        rows={[
+          ["Jio", "100 on most plans", "MyJio app → Balance → SMS balance"],
+          ["Airtel", "100 on most postpaid; varies prepaid", "Airtel Thanks app → Plan details"],
+          ["Vi (Vodafone Idea)", "100 on most plans", "Vi app → My Plan"],
+          ["BSNL", "20–100 depending on recharge", "SMS BAL to 123 or BSNL Selfcare portal"],
+        ]}
+        caption="Bundled SMS reset at midnight daily. They are real SMS sent from your number — no footer, no branding."
+      />
+      <P>
+        <Strong>Verdict:</Strong> If you send fewer than 100 personal messages a day — which is
+        almost every personal user — your existing SIM plan is the best free SMS option. No app
+        required beyond your built-in dialer.
+      </P>
+
+      <H2 id="ad-funded-sites">6. Ad-funded web-to-SMS sites — use with caution</H2>
+      <P>
+        Several websites offer free SMS sending to Indian numbers through a browser. Way2SMS shut
+        down in 2022, but successors operate in the same model. These are worth understanding
+        before using.
+      </P>
+
+      <H3>How they work</H3>
+      <P>
+        These services buy bulk SMS credits from aggregators at wholesale rates (₹0.01–0.03 per
+        message) and give users a small free daily quota, funded by advertising revenue or data
+        monetisation. The SMS arrives from a shared sender number or header — not your personal
+        number.
+      </P>
+
+      <H3>What you actually get</H3>
+      <FigureTable
+        columns={["Feature", "Reality on free tier"]}
+        rows={[
+          ["Daily free SMS", "5–25 messages (varies by service)"],
+          ["Sender identity", "Shared generic number — recipient does not see your name"],
+          ["Delivery speed", "1–10 minutes (low-priority routes)"],
+          ["Delivery receipts", "Not available on free tier"],
+          ["DND numbers", "Blocked (commercial sender header)"],
+          ["Privacy", "Your phone number is in their database; check the privacy policy"],
+        ]}
+        caption="Ad-funded web SMS sites are functional for very occasional use — not reliable for anything regular."
+      />
+
+      <H3>When they make sense</H3>
+      <P>
+        For a one-off message to a non-urgent recipient when you have no other option — yes. For
+        anything regular, time-sensitive, or business-related — no. Your bundled 100 SMS/day or
+        the operator web portals above are both better options.
+      </P>
+
+      <H2 id="smslocal-trial">7. SMSLocal free trial — best for business testing</H2>
+      <P>
+        SMSLocal provides <Strong>₹60 free credit</Strong> on signup with no credit card required.
+        This is the only free option that gives you the full production SMS experience for business
+        use cases.
       </P>
       <UL>
-        <LI>~750 OTP SMS on the OTP route (₹0.08/SMS)</LI>
-        <LI>~400 transactional SMS (₹0.15/SMS)</LI>
-        <LI>~300 promotional SMS (₹0.20/SMS)</LI>
+        <LI>Messages from your own registered DLT sender ID (not shared branding)</LI>
+        <LI>Real-time delivery receipts per message — delivered, pending, failed</LI>
+        <LI>Sub-5-second OTP delivery on direct operator routes</LI>
+        <LI>Full API access to test integrations before committing</LI>
+        <LI>Works for transactional (OTP, alerts) and promotional (campaigns) templates</LI>
+        <LI>₹60 covers roughly 200–750 messages depending on route type</LI>
       </UL>
       <P>
-        No credit card required. DLT registration can be done within the platform as part of
-        onboarding — the free credit works while your DLT registration is in progress using
-        SMSLocal&apos;s shared test header.
+        <Strong>Verdict:</Strong> The only free option for any business use case. The trial credit
+        is enough to fully validate an SMS workflow — OTP delivery, webhook integration, delivery
+        receipt parsing — before spending anything.
       </P>
+
+      <Callout variant="info" title="Personal vs. business: different problems, different tools">
+        Personal SMS through your operator&apos;s bundled quota is free, instant, and requires no
+        setup. Business SMS needs delivery tracking, DLT compliance, and a registered sender ID,
+        which requires a platform account even if you start on a free trial. Mixing the two leads
+        to either wasted effort or compliance violations.
+      </Callout>
+
+      <H2 id="comparison">Full comparison table</H2>
+      <FigureTable
+        columns={["Option", "Cost", "Sender identity", "Daily limit", "From PC?", "Business use?"]}
+        rows={[
+          ["Bundled SIM SMS (Jio/Airtel/Vi)", "Free", "Your number", "100 SMS", "Via operator web", "No"],
+          ["Google Messages", "Free (uses SIM)", "Your number", "100 SMS", "messages.google.com", "No"],
+          ["AirDroid (free tier)", "Free", "Your number", "100 SMS", "Yes", "No"],
+          ["Pushbullet (free tier)", "Free", "Your number", "100 SMS", "Yes", "No"],
+          ["Operator web portal (MyJio, Airtel)", "Free", "Your number", "100 SMS", "Yes", "No"],
+          ["Ad-funded web SMS site", "Free", "Shared generic", "5–25 SMS", "Yes", "No"],
+          ["SMSLocal ₹60 trial", "Free (trial)", "Your DLT sender ID", "No cap (credit-limited)", "Yes", "Yes"],
+        ]}
+        caption="Apps like AirDroid and Google Messages are the same cost as using your phone — they mirror your SIM's free allowance."
+      />
 
       <H2 id="faq">Frequently asked questions</H2>
 
       <H3>What is the best free SMS app for Android in India?</H3>
       <P>
-        For personal messaging, your phone&apos;s default Messages app (Google Messages on Android)
-        using your operator&apos;s bundled 100 SMS/day is both free and the most reliable. For
-        business testing, the SMSLocal app with ₹60 free trial credit gives you full production
-        SMS capabilities without cost.
-      </P>
-
-      <H3>Is there a free SMS app that doesn&apos;t show the sender&apos;s name?</H3>
-      <P>
-        SMS sent from a properly registered DLT header (like SMSLTD or YOURCO) show the header,
-        not a personal name. Achieving this requires registering your own header on a DLT platform
-        — it cannot be done through free consumer SMS apps. SMSLocal&apos;s trial credit lets you
-        test with SMSLocal&apos;s own shared header at no cost before you register your own.
-      </P>
-
-      <H3>Can I send international SMS for free?</H3>
-      <P>
-        No mainstream free service supports reliable international SMS to/from India. International
-        SMS requires inter-carrier routing that carries a real cost — typically ₹2–5 per message.
-        WhatsApp is the free alternative for most international personal messaging.
+        Google Messages, using your SIM&apos;s bundled daily allowance. It is pre-installed on
+        most non-Samsung Android phones, uses your real number, has a built-in spam filter, and
+        supports RCS on Jio and Airtel for read receipts and better group chats. For Samsung
+        phones, Samsung Messages offers the same bundled-SMS benefits with Windows mirroring via
+        Samsung Flow.
       </P>
 
       <H3>What is the best free SMS website in India?</H3>
       <P>
-        The landscape changes frequently as services reduce quotas or shut down. In 2026, the most
-        reliable options for occasional free personal SMS from a browser are operator self-service
-        portals (MyJio, Airtel Thanks web) — you are using your own bundled quota through a
-        web interface. For testing business SMS workflows, SMSLocal&apos;s trial is more useful
-        than any ad-funded site.
+        For personal use, your operator&apos;s own portal is best: MyJio (jio.com) or Airtel
+        Thanks (airtelthanks.com) send SMS from your real number using your bundled daily quota.
+        For business testing, <A href="/resources/tools/free-sms-without-registration/">SMSLocal&apos;s
+        free SMS tool</A> with the ₹60 trial credit gives you a real production SMS without
+        registration friction.
+      </P>
+
+      <H3>Can I send free SMS from my laptop without installing anything?</H3>
+      <P>
+        Yes. Google Messages works at messages.google.com — scan a QR code on your phone once and
+        your phone&apos;s SMS threads appear in any browser. Samsung users can use Samsung Messages
+        mirroring through Samsung Flow. Both use your SIM&apos;s bundled quota and your real number.
+      </P>
+
+      <H3>Which app lets me send free SMS without showing my number?</H3>
+      <P>
+        No legitimate free app does this for Indian numbers. Ad-funded sites use a shared generic
+        number, but you lose control over the sender identity. For business SMS where a branded
+        sender ID (like SMSLCL or YOURCO) appears instead of a number, you need DLT registration
+        — the SMSLocal trial covers this at no cost for testing.
+      </P>
+
+      <H3>Is there a free SMS app for Android that doesn&apos;t show ads?</H3>
+      <P>
+        Google Messages has no ads. AirDroid&apos;s free tier shows a &ldquo;Go Premium&rdquo;
+        banner occasionally but no interstitials. Your operator&apos;s built-in messaging app also
+        has no ads. Ad-funded web-to-SMS sites are the only free SMS option that actually shows
+        ads — it is how they fund the service.
+      </P>
+
+      <H3>Can I send free SMS internationally from India?</H3>
+      <P>
+        Not through any mainstream free service. International SMS routing carries real cost —
+        typically ₹2–5 per message. WhatsApp is the free alternative for most international
+        personal messaging to smartphone users. For business international SMS, expect paid rates
+        from any platform.
+      </P>
+
+      <H3>What is the best free bulk SMS app in India?</H3>
+      <P>
+        No free service supports genuine bulk SMS at any meaningful scale. Daily caps of 5–25 SMS
+        exist on all free services to prevent abuse. For bulk sends, a paid platform is necessary
+        — costs in India start at ₹0.08 per SMS on promotional routes and ₹0.03 on OTP routes.
+        The SMSLocal ₹60 trial lets you test the full bulk SMS workflow before paying.
       </P>
 
       <Callout variant="tip" title="Need more than free limits allow?">
-        SMSLocal&apos;s OTP SMS starts at ₹0.03 per message with no monthly minimums. Top up
-        your wallet, send as many or as few as you need, and only pay for what you use.{" "}
-        <A href="/signup/">Create a free account</A> to start with ₹60 in credit.
+        SMSLocal&apos;s OTP SMS starts at ₹0.03 per message with no monthly minimums. Top up your
+        wallet, send as many or as few as you need, and only pay for what you use.{" "}
+        <A href="/signup/">Create a free account</A> to start with ₹60 in credit — no credit card
+        required. Or see <A href="/blog/free-sms/">our complete free SMS guide</A> for all the
+        personal options in detail.
       </Callout>
     </>
   )
