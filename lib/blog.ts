@@ -1,6 +1,7 @@
 import type { ComponentType } from "react"
 import BestFreeSmsPost from "@/content/blog/best-free-sms"
 import BestSmsAppsForAndroidPost from "@/content/blog/best-sms-apps-for-android"
+import SmsVsMmsPost from "@/content/blog/sms-vs-mms"
 import BulkWhatsappMessagingPost from "@/content/blog/bulk-whatsapp-messaging"
 import DltRegistrationGuide from "@/content/blog/dlt-registration-guide"
 import DndMeansPost from "@/content/blog/dnd-means"
@@ -435,6 +436,36 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       relatedSlugs: ["free-sms", "what-is-sms", "send-sms-online"],
     },
     Component: BestFreeSmsPost,
+  },
+
+  "sms-vs-mms": {
+    meta: {
+      slug: "sms-vs-mms",
+      title: "SMS vs MMS in India: Key Differences, Why MMS Stalled, and What to Use in 2026",
+      description:
+        "SMS vs MMS in India — technical differences, why MMS never became a business channel, what WhatsApp and RCS replaced it with, and when to use each in 2026.",
+      date: "2026-07-10",
+      readingTime: "10 min read",
+      category: "Getting started",
+      author: TEAM,
+      coverImage: "/blog/sms-vs-mms-cover.svg",
+      coverAlt:
+        "Comparison illustration of SMS versus MMS messaging — showing text-only SMS on one side and multimedia MMS with image on the other, in the context of Indian mobile networks.",
+      toc: [
+        { id: "what-is-sms", label: "What is SMS?" },
+        { id: "what-is-mms", label: "What is MMS?" },
+        { id: "key-differences", label: "Key differences" },
+        { id: "why-mms-stalled-india", label: "Why MMS stalled in India" },
+        { id: "sms-vs-mms-personal", label: "Personal use in India" },
+        { id: "sms-vs-mms-business", label: "Business use in India" },
+        { id: "what-replaced-mms", label: "What replaced MMS" },
+        { id: "when-to-use-which", label: "When to use which" },
+        { id: "sms-vs-mms-cost", label: "Pricing in India" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["what-is-sms", "send-sms-online", "dlt-registration-guide"],
+    },
+    Component: SmsVsMmsPost,
   },
 
   "best-sms-apps-for-android": {
