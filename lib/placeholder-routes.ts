@@ -46,23 +46,6 @@ const related = {
 // keeping stale entries here would be misleading and would still get them
 // rendered as "coming soon" through the PLACEHOLDER_ROUTES sitemap loop.
 export const PLACEHOLDER_ROUTES: Record<string, PlaceholderRoute> = {
-  // ---------- Products (not yet launched) ----------
-  "products/reseller": {
-    slug: "products/reseller",
-    category: "Product",
-    title: "Reseller & White-label",
-    tagline: "Launch your own messaging platform on SMSLocal infrastructure.",
-    description:
-      "White-label the SMSLocal stack under your brand, set your own margins, and ship SMS, WhatsApp, OTP and AI agents to your customers with full multi-tenant control and billing.",
-    expect: [
-      "Full white-label branding and custom domains",
-      "Multi-tenant user management and credit control",
-      "Your own markups on every channel",
-      "Dedicated partner success and onboarding",
-    ],
-    related: related.product,
-  },
-
   // ---------- Developers (secondary surfaces) ----------
   "developers/webhooks": {
     slug: "developers/webhooks",
@@ -93,22 +76,6 @@ export const PLACEHOLDER_ROUTES: Record<string, PlaceholderRoute> = {
       "Email and webhook subscriptions",
     ],
     related: related.developer,
-  },
-  // ---------- Resources ----------
-  "resources/whatsapp-api-guide": {
-    slug: "resources/whatsapp-api-guide",
-    category: "Resource",
-    title: "WhatsApp Business API guide",
-    tagline: "From number migration to advanced flows.",
-    description:
-      "Green-tick verification, template management, conversation pricing, interactive messages and AI agent patterns — everything a WhatsApp Business API team needs in one place.",
-    expect: [
-      "Number migration and verification steps",
-      "Template categories and approval playbook",
-      "Conversation pricing explained",
-      "Interactive, flow and catalogue patterns",
-    ],
-    related: related.resource,
   },
 }
 

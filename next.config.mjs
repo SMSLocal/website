@@ -193,6 +193,18 @@ const nextConfig = {
         destination: "/resources/tools/sms-bomber/",
         permanent: true,
       },
+      // /help/ has no page — redirect to the real help centre.
+      {
+        source: "/help",
+        destination: "/resources/help/",
+        permanent: true,
+      },
+      // DLT compliance content lives in the blog.
+      {
+        source: "/resources/dlt-compliance",
+        destination: "/blog/dlt-registration-guide/",
+        permanent: true,
+      },
     ]
   },
 }

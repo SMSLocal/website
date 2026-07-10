@@ -9,7 +9,6 @@ export const metadata: Metadata = buildMetadata({
   title: "WhatsApp Business API Guide for Indian Businesses",
   description: ROUTE.description,
   path: "/resources/whatsapp-api-guide",
-  noindex: true,
 })
 
 export default function Page() {
