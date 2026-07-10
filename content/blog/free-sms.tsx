@@ -53,6 +53,12 @@ export default function FreeSmsPost() {
         plan.
       </Callout>
 
+      <BlogFigure
+        src="/blog/what-free-sms-actually-means.webp"
+        alt="Comparison of three types of free SMS in India — bundled operator SMS, online free SMS services, and platform trial credits."
+        caption="'Free SMS' means three different things in 2026 — and they differ significantly in reliability, branding, and daily limits."
+      />
+
       <H2 id="bundled-sms">Free SMS from your mobile plan</H2>
       <P>
         Indian operators have bundled free SMS into most plans since 2016, largely as a response to
@@ -127,6 +133,12 @@ export default function FreeSmsPost() {
         SMS/day is both more generous and more reliable.
       </Callout>
 
+      <BlogFigure
+        src="/blog/online-free-sms-services.webp"
+        alt="Overview of online free SMS services in India — how they work, their limitations including branded footers, daily caps, and delayed delivery on free routes."
+        caption="Online free SMS services fund their free quota through ads and data collection — the tradeoffs include shared sender IDs, caps, and slower delivery."
+      />
+
       <H2 id="ways2sms-alternatives">Way2SMS and its successors</H2>
       <P>
         Way2SMS was India&apos;s most popular free SMS website for over a decade. It shut down in
@@ -139,6 +151,12 @@ export default function FreeSmsPost() {
         this category frequently reduce free quotas, add mandatory logins, insert branded footers,
         or shut down entirely. Relying on one for anything time-sensitive is risky.
       </P>
+
+      <BlogFigure
+        src="/blog/way2sms-and-its-successors.webp"
+        alt="History of Way2SMS and its successor free SMS services in India — why Way2SMS shut down in 2022 and what alternatives exist today."
+        caption="Way2SMS shut down in 2022 as bundled operator SMS and WhatsApp made the ad-funded model unviable — successor services face the same structural problem."
+      />
 
       <H2 id="free-trial-platforms">Free trial credits from SMS platforms</H2>
       <P>
@@ -187,6 +205,12 @@ export default function FreeSmsPost() {
           delivery receipts with DLT tracking.
         </LI>
       </UL>
+
+      <BlogFigure
+        src="/blog/when-free-sms-isnt-the-answer.webp"
+        alt="Four scenarios where free SMS services are not suitable — OTPs, high volume, DLT compliance, and delivery receipt requirements."
+        caption="Free SMS works for occasional personal messages — but OTPs, compliance-sensitive sends, and anything above 25 messages per day need a paid platform."
+      />
 
       <H2 id="faq">Frequently asked questions</H2>
 

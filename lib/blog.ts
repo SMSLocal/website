@@ -388,9 +388,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "8 min read",
       category: "Consumer",
       author: TEAM,
-      coverImage: "/blog/free-sms-cover.svg",
+      coverImage: "/blog/how-to-send-free-sms-in-india-hero.webp",
       coverAlt:
-        "Illustration showing a zero-rupee symbol representing free SMS options in India, with stacked coins on the right side.",
+        "Abstract illustration representing how to send free SMS in India — mobile phone with message bubbles showing free text messaging options in 2026.",
       toc: [
         { id: "what-free-sms-means", label: "What 'free SMS' actually means" },
         { id: "bundled-sms", label: "Free SMS from your mobile plan" },
