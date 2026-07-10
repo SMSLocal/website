@@ -278,6 +278,22 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "city wise virtual numbers",
     ],
   },
+  "/products/reseller": {
+    title: "White-Label SMS & WhatsApp Platform for Resellers",
+    description:
+      "Launch your own branded SMS and WhatsApp platform with SMSLocal white-label. Custom domain, your logo, sub-accounts, margin control, and full API access. Start free.",
+    focusKeyword: "SMS reseller white-label India",
+    keywords: [
+      "SMS reseller India",
+      "white-label SMS platform",
+      "bulk SMS reseller",
+      "WhatsApp API reseller",
+      "SMS white-label solution",
+      "branded SMS gateway India",
+      "SMS reseller program",
+      "bulk SMS business reseller",
+    ],
+  },
   "/products/otp-sms": {
     title: "OTP SMS API India — Sub-1s, Trusted Delivery",
     description:

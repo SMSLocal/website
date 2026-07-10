@@ -186,12 +186,7 @@ const nextConfig = {
         permanent: true,
       },
 
-      // Reseller / white-label page retired — send old links to the products hub.
-      {
-        source: "/products/reseller",
-        destination: "/products/",
-        permanent: true,
-      },
+
       // SMS Bomber tool moved to the /resources/tools/ section.
       {
         source: "/tools/sms-bomber",
