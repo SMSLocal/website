@@ -194,14 +194,26 @@ const nextConfig = {
         permanent: true,
       },
       // /help/ has no page — redirect to the real help centre.
+      // Both with and without trailing slash — trailingSlash:true means the
+      // browser may hit /help/ directly, which wouldn't match source:"/help".
       {
         source: "/help",
+        destination: "/resources/help/",
+        permanent: true,
+      },
+      {
+        source: "/help/",
         destination: "/resources/help/",
         permanent: true,
       },
       // DLT compliance content lives in the blog.
       {
         source: "/resources/dlt-compliance",
+        destination: "/blog/dlt-registration-guide/",
+        permanent: true,
+      },
+      {
+        source: "/resources/dlt-compliance/",
         destination: "/blog/dlt-registration-guide/",
         permanent: true,
       },
