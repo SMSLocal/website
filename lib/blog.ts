@@ -1,5 +1,6 @@
 import type { ComponentType } from "react"
 import BestFreeSmsPost from "@/content/blog/best-free-sms"
+import BestSmsAppsForAndroidPost from "@/content/blog/best-sms-apps-for-android"
 import BulkWhatsappMessagingPost from "@/content/blog/bulk-whatsapp-messaging"
 import DltRegistrationGuide from "@/content/blog/dlt-registration-guide"
 import DndMeansPost from "@/content/blog/dnd-means"
@@ -434,6 +435,37 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       relatedSlugs: ["free-sms", "what-is-sms", "send-sms-online"],
     },
     Component: BestFreeSmsPost,
+  },
+
+  "best-sms-apps-for-android": {
+    meta: {
+      slug: "best-sms-apps-for-android",
+      title: "Best SMS Apps for Android in India 2026: Tested on Jio, Airtel and Vi",
+      description:
+        "The best Android SMS apps in 2026 compared — Google Messages, Samsung Messages, Textra, QKSMS, Pulse SMS, AirDroid, and Chomp SMS. Tested on Jio, Airtel, and Vi.",
+      date: "2026-07-10",
+      readingTime: "11 min read",
+      category: "Getting started",
+      author: TEAM,
+      coverImage: "/blog/best-sms-apps-for-android-cover.svg",
+      coverAlt:
+        "Illustration of the best SMS apps for Android in India 2026 — Google Messages, Samsung Messages, Textra, QKSMS, Pulse SMS, and AirDroid side by side.",
+      toc: [
+        { id: "quick-pick", label: "Quick pick by use case" },
+        { id: "google-messages", label: "Google Messages" },
+        { id: "samsung-messages", label: "Samsung Messages" },
+        { id: "textra-sms", label: "Textra SMS" },
+        { id: "qksms", label: "QKSMS" },
+        { id: "pulse-sms", label: "Pulse SMS" },
+        { id: "airdroid", label: "AirDroid" },
+        { id: "chomp-sms", label: "Chomp SMS" },
+        { id: "business-sms", label: "Business SMS on Android" },
+        { id: "comparison", label: "Full comparison table" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["best-free-sms", "sms-activation", "send-sms-online"],
+    },
+    Component: BestSmsAppsForAndroidPost,
   },
 
   "telegram-code-sms": {
