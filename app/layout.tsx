@@ -25,7 +25,6 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   applicationName: SITE.name,
-  generator: "v0.app",
   authors: [{ name: SITE.name }],
   title: {
     default: SITE.defaultTitle,

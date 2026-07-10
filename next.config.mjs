@@ -183,7 +183,7 @@ const nextConfig = {
       {
         source: "/ai-agents",
         destination: "/products/ai-agents/",
-        permanent: false,
+        permanent: true,
       },
       // OTP SMS product page retired — send old links to the SMS API docs.
       {

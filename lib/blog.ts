@@ -62,7 +62,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       title:
         "DLT Registration: The Practical Guide for Indian Businesses (2026)",
       description:
-        "Every step, every document, every rejection reason — from Principal Entity signup to sending your first SMS. Based on 7 years of onboarding Indian businesses onto DLT.",
+        "Every step, every document, every rejection reason — from Principal Entity signup to first SMS. Based on 7 years onboarding Indian businesses onto DLT.",
       date: "2026-04-15",
       updatedDate: "2026-04-22",
       readingTime: "14 min read",
@@ -96,7 +96,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       slug: "dnd-means",
       title: "DND Means: What It Is, How to Activate It, and What It Actually Blocks",
       description:
-        "A consumer guide to India's Do Not Disturb registry — how to activate it on Jio, Airtel, Vi and BSNL, what it blocks, and what to do when promotional SMS still slip through.",
+        "India's Do Not Disturb guide — how to activate DND on Jio, Airtel, Vi and BSNL, what it blocks, and what to do when promotional SMS still slip through.",
       date: "2026-03-28",
       readingTime: "9 min read",
       category: "Consumer",
@@ -123,7 +123,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       slug: "dnd-services",
       title: "DND Services for Senders: Scrubbing, Compliance, and Category Rules",
       description:
-        "If you send SMS in India, DND decides whether your campaigns are legal. A practical guide to NCPR scrubbing, send windows, consent, and the exact violations that get your sender ID suspended.",
+        "A practical guide to DND for SMS senders in India — NCPR scrubbing, send windows, consent rules, and the violations that get your sender ID suspended.",
       date: "2026-03-30",
       readingTime: "11 min read",
       category: "Compliance",
@@ -155,7 +155,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       slug: "receive-sms-online-india",
       title: "Receive SMS Online in India: Legitimate Uses, Tradeoffs, and Better Alternatives",
       description:
-        "An honest look at receive-SMS-online services in India — when they're a valid privacy tool, when they're fraud, and what senders can do to block them from abusing OTP flows.",
+        "When receive-SMS-online services in India are a valid privacy tool, when they're fraud, and what senders can do to block them from abusing OTP flows.",
       date: "2026-03-14",
       readingTime: "10 min read",
       category: "Consumer",
@@ -183,7 +183,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       slug: "sms-activation",
       title: "SMS Not Working on Your Phone? The Complete Activation & Troubleshooting Guide",
       description:
-        "Can't send or receive SMS? Walk through every check — device settings, SMSC numbers for Indian carriers, iMessage gotchas, DND filters, and when to escalate to your carrier.",
+        "Can't send or receive SMS? Walk through every check — SMSC numbers for Indian carriers, iMessage gotchas, DND filters, and when to escalate to your carrier.",
       date: "2026-02-22",
       readingTime: "10 min read",
       category: "Troubleshooting",
@@ -210,7 +210,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       slug: "gmail-password-recovery-via-sms",
       title: "Gmail Password Recovery via SMS: How It Works, Common Failures, and Security Tips",
       description:
-        "A step-by-step walkthrough of Gmail's SMS-based password recovery — setup, the exact failure modes when the SMS won't arrive, the account recovery form, and how to secure your recovery phone against SIM-swap attacks.",
+        "Step-by-step guide to Gmail's SMS recovery — setup, why the SMS won't arrive, the account recovery form, and how to protect your phone from SIM-swap attacks.",
       date: "2026-02-08",
       readingTime: "9 min read",
       category: "Security",
@@ -240,7 +240,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       slug: "send-sms-online",
       title: "How to Send SMS Online in India: The 4 Ways and When to Use Each",
       description:
-        "Web-to-SMS dashboard, SMS API, bulk platform, or WhatsApp Business API — a practical comparison of how to send SMS online in India, with the legal requirements every sender has to follow.",
+        "Web-to-SMS dashboard, SMS API, bulk platform, or WhatsApp Business API — a practical comparison of how to send SMS online in India with the legal requirements.",
       date: "2026-01-18",
       readingTime: "11 min read",
       category: "Getting started",
@@ -329,7 +329,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       slug: "whatsapp-scams-india",
       title: "WhatsApp Scams in India: How to Identify Every Type and Stay Safe (2026)",
       description:
-        "The most common WhatsApp scams in India in 2026 — KYC fraud, OTP theft, digital arrest, job & investment scams. How to identify each and what to do if scammed.",
+        "The most common WhatsApp scams in India 2026 — KYC fraud, OTP theft, digital arrest, job & investment scams. How to spot each and what to do if scammed.",
       date: "2026-05-28",
       readingTime: "13 min read",
       category: "Consumer",
@@ -355,7 +355,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       slug: "what-is-sms",
       title: "What Is SMS? How Text Messaging Works and Why It Still Matters in 2026",
       description:
-        "A complete guide to SMS — how the Short Message Service works technically, the difference between transactional and promotional SMS, India's DLT and DND regulations, and why SMS still outperforms newer channels for OTPs and alerts.",
+        "SMS explained: how it works technically, transactional vs promotional, India's DLT and DND rules, and why SMS still beats newer channels for OTPs and alerts.",
       date: "2026-07-09",
       readingTime: "10 min read",
       category: "Getting started",
@@ -383,7 +383,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       slug: "free-sms",
       title: "How to Send Free SMS in India: What Actually Works in 2026",
       description:
-        "Your real options for free SMS in India — operator bundled SMS, online free SMS services, and platform trial credits compared. Includes why Way2SMS shut down and what replaced it.",
+        "Free SMS in India compared — operator bundled SMS, online services, and platform trial credits. Why Way2SMS shut down and what replaced it in 2026.",
       date: "2026-07-09",
       readingTime: "8 min read",
       category: "Consumer",
@@ -410,7 +410,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       slug: "best-free-sms",
       title: "Best Free SMS App in India 2026: Android, PC & Business Options Compared",
       description:
-        "Compare the best free SMS apps in India 2026 — Google Messages, AirDroid, Pushbullet, operator portals, and free business trial credits. Tested on Jio, Airtel, and Vi.",
+        "The best free SMS apps in India 2026 — Google Messages, AirDroid, Pushbullet, operator portals, and free trial credits. Tested on Jio, Airtel, and Vi.",
       date: "2026-07-09",
       readingTime: "10 min read",
       category: "Consumer",
@@ -441,7 +441,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       slug: "telegram-code-sms",
       title: "Telegram Verification Code Not Arriving via SMS? Fix It in 2026",
       description:
-        "Why Telegram sends login codes via SMS, every reason the code might not arrive on Indian numbers (DND, operator blocks, wrong number, iMessage), and the step-by-step fix for each.",
+        "Why Telegram sends codes via SMS, every reason the code might not arrive on Indian numbers (DND, operator blocks, wrong number, iMessage), and the step-by-step fix.",
       date: "2026-07-09",
       readingTime: "9 min read",
       category: "Troubleshooting",

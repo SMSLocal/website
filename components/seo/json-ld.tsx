@@ -38,7 +38,12 @@ export function OrganizationJsonLd() {
       "@type": "Country",
       name: "India",
     },
-    sameAs: [],
+    sameAs: [
+      "https://www.linkedin.com/company/smslocal",
+      "https://twitter.com/smslocal",
+      "https://www.facebook.com/smslocal",
+      "https://www.youtube.com/@smslocal",
+    ],
   }
 
   const website = {
