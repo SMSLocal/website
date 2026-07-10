@@ -185,12 +185,7 @@ const nextConfig = {
         destination: "/products/ai-agents/",
         permanent: true,
       },
-      // OTP SMS product page retired — send old links to the SMS API docs.
-      {
-        source: "/products/otp-sms",
-        destination: "/developers/sms-api/",
-        permanent: true,
-      },
+
       // Reseller / white-label page retired — send old links to the products hub.
       {
         source: "/products/reseller",

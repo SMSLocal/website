@@ -13,6 +13,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "RCS Business Messaging", href: "/products/rcs/" },
       { label: "WhatsApp Business API", href: "/products/whatsapp-business-api/" },
       { label: "AI Agents", href: "/products/ai-agents/" },
+      { label: "OTP & Transactional SMS", href: "/products/otp-sms/" },
       { label: "Quick SMS", href: "/products/quick-sms/" },
       { label: "Inbox", href: "/products/inbox/" },
       { label: "Automation", href: "/products/automation/" },
