@@ -40,7 +40,7 @@ export function appUrl(path: string): string {
 }
 
 export const APP_SIGNUP_URL = appUrl("/signup")
-export const APP_SIGNIN_URL = appUrl("/signin")
+export const APP_SIGNIN_URL = APP_BASE_URL
 export const APP_FORGOT_PASSWORD_URL = appUrl("/forgot-password")
 export const APP_VERIFY_EMAIL_URL = appUrl("/verify-email")
 export const APP_DASHBOARD_URL = appUrl("/")
