@@ -46,6 +46,12 @@ export default function DndMeansPost() {
         through promotional channels.
       </P>
 
+      <BlogFigure
+        src="/blog/what-dnd-actually-is.webp"
+        alt="Infographic explaining what DND (Do Not Disturb) actually is — a TRAI-mandated network-level filter that blocks promotional SMS and calls on Indian mobile numbers."
+        caption="DND works at the network level through TRAI's National Customer Preference Register — no app needed, and every compliant sender is legally required to scrub against it."
+      />
+
       <H2 id="what-dnd-blocks">What DND blocks and doesn&apos;t block</H2>
       <P>
         DND is specifically scoped to <Strong>promotional</Strong> communication. It does not
@@ -84,12 +90,6 @@ export default function DndMeansPost() {
         caption="DND is a filter on commercial senders — not a total mute button."
       />
 
-      <BlogFigure
-        src="/blog/dnd-means-activation.jpg"
-        alt="Hand gently holding a smartphone with the screen turned away from camera, against a softly blurred warm living-room background with a lamp glow."
-        caption="DND activation by SMS to 1909. Takes under a minute on any Indian operator and works straight from the default messaging app."
-      />
-
       <H2 id="why-it-exists">Why DND exists</H2>
       <P>
         In the early 2010s, Indian mobile users were drowning in spam. Some numbers were getting
@@ -103,6 +103,12 @@ export default function DndMeansPost() {
         registered sender messages a DND-activated number, the operator can fine them, suspend
         their sender ID, and in repeat cases, blacklist the company from sending SMS entirely.
       </P>
+
+      <BlogFigure
+        src="/blog/why-dnd-exists.webp"
+        alt="Visual showing why India's DND (Do Not Disturb) regulation exists — the history of TRAI's anti-spam telecom rules and the NCPR system that protects mobile users."
+        caption="India's DND regime emerged from the 2007 National Do Not Call Registry and was strengthened with TCCCPR 2018 — making it one of the strictest anti-spam frameworks in the world."
+      />
 
       <H2 id="how-to-activate">How to activate DND on your number</H2>
       <P>
@@ -178,6 +184,12 @@ export default function DndMeansPost() {
         covered by DLT at all. If you&apos;re still receiving spam, you have recourse.
       </P>
 
+      <BlogFigure
+        src="/blog/still-getting-promotional-sms-what-to-do.webp"
+        alt="Step-by-step guide on what to do if you are still receiving promotional SMS after activating DND in India — how to verify, report, and escalate spam."
+        caption="Even with DND active, some senders still break through. Report them to 1909 by forwarding the unwanted SMS — the complaint creates an official record the operator must act on."
+      />
+
       <H3>Step 1: Verify the SMS is actually promotional</H3>
       <P>
         Service SMS (OTPs, delivery updates, bank alerts) aren&apos;t covered by DND and will keep
@@ -204,12 +216,6 @@ export default function DndMeansPost() {
         respond to every complaint, and repeat offenders face Header suspension.
       </P>
 
-      <BlogFigure
-        src="/blog/dnd-means-quiet-evening.jpg"
-        alt="Woman reading a book in warm evening light, her smartphone lying face-down on the armrest beside a mug of tea."
-        caption="What DND is actually designed to protect: quiet, uninterrupted evenings. Transactional and personal messages still arrive; only registered promotional traffic is filtered."
-      />
-
       <H2 id="limitations">Limitations and edge cases</H2>
       <P>Three things DND can&apos;t fix:</P>
       <OL>
@@ -228,6 +234,12 @@ export default function DndMeansPost() {
           spam&quot; setting that adds a second layer.
         </LI>
       </OL>
+
+      <BlogFigure
+        src="/blog/limitations-and-edge-cases.webp"
+        alt="Infographic outlining the limitations and edge cases of DND in India — unregistered senders, international SMS, and robocalls that still slip through."
+        caption="DND has real limits: personal 10-digit spammers, international SMS, and robocalls all bypass it. Android's built-in spam filter adds a useful second layer for these gaps."
+      />
 
       <H2 id="faq">Frequently asked questions</H2>
       <H3>Does DND block WhatsApp?</H3>

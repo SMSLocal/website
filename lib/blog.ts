@@ -102,7 +102,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "9 min read",
       category: "Consumer",
       author: TEAM,
-      coverImage: "/blog/dnd-means-cover.svg",
+      coverImage: "/blog/dnd-meaning-what-it-is-and-how-to-activate-it-hero.webp",
       coverAlt:
         "Smartphone lying face-down on a warm linen tablecloth beside a ceramic coffee cup with rising steam, reading glasses, and a small vase with a single white flower in soft morning light.",
       toc: [
