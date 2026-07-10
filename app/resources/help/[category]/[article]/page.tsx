@@ -35,7 +35,7 @@ export async function generateMetadata({
   }
   const { article: art, category: cat } = match
   return buildArticleMetadata({
-    title: `${art.title} — ${cat.title}`,
+    title: art.title,
     description: art.excerpt,
     path: `/resources/help/${cat.slug}/${art.slug}`,
     publishedTime: art.updatedOn,

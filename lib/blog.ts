@@ -155,7 +155,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "receive-sms-online-india": {
     meta: {
       slug: "receive-sms-online-india",
-      title: "Receive SMS Online in India: Legitimate Uses, Tradeoffs, and Better Alternatives",
+      title: "Receive SMS Online in India: Uses, Risks & Alternatives",
       description:
         "When receive-SMS-online services in India are a valid privacy tool, when they're fraud, and what senders can do to block them from abusing OTP flows.",
       date: "2026-03-14",
@@ -183,7 +183,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "sms-activation": {
     meta: {
       slug: "sms-activation",
-      title: "SMS Not Working on Your Phone? The Complete Activation & Troubleshooting Guide",
+      title: "SMS Not Working? Activation & Fix Guide for India",
       description:
         "Can't send or receive SMS? Walk through every check — SMSC numbers for Indian carriers, iMessage gotchas, DND filters, and when to escalate to your carrier.",
       date: "2026-02-22",
@@ -210,7 +210,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "gmail-password-recovery-via-sms": {
     meta: {
       slug: "gmail-password-recovery-via-sms",
-      title: "Gmail Password Recovery via SMS: How It Works, Common Failures, and Security Tips",
+      title: "Gmail Password Recovery via SMS: Fixes & Security Tips",
       description:
         "Step-by-step guide to Gmail's SMS recovery — setup, why the SMS won't arrive, the account recovery form, and how to protect your phone from SIM-swap attacks.",
       date: "2026-02-08",

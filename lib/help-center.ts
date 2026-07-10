@@ -371,7 +371,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       },
       {
         slug: "template-approval-guide",
-        title: "Writing a WhatsApp template that Meta will approve first time",
+        title: "WhatsApp Template Approval: Pass Meta's Review First Time",
         excerpt: "Category mismatch, unclear variable usage, and prohibited content cause most rejections. Use this guide to write a WhatsApp template that Meta approves on the first submission.",
         readMinutes: 4,
         updatedOn: "2026-03-01",
