@@ -189,7 +189,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "10 min read",
       category: "Troubleshooting",
       author: TEAM,
-      coverImage: "/blog/sms-activation-cover.svg",
+      coverImage: "/blog/sms-not-working-activation-troubleshooting-guide-hero.webp",
       coverAlt:
         "Hands holding a smartphone face-down on a wooden desk beside an open empty dual-SIM tray, a single nano-SIM card, and a small metal ejector pin in warm window light.",
       toc: [

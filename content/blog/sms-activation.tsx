@@ -95,7 +95,7 @@ export default function SmsActivationPost() {
       </UL>
 
       <BlogFigure
-        src="/blog/sms-activation-phone-settings.jpg"
+        src="/blog/device-level-checks.webp"
         alt="Hand holding an open empty smartphone SIM tray with a single nano-SIM card and a small metal ejector pin resting on a clean wooden desk in warm window light."
         caption="Where the SMSC lives on most Android builds. A blank or wrong value here is a silent killer for outbound SMS."
       />
@@ -160,7 +160,7 @@ export default function SmsActivationPost() {
       </P>
 
       <BlogFigure
-        src="/blog/sms-activation-cell-tower.jpg"
+        src="/blog/carrier-level-issues.webp"
         alt="Cell-phone tower silhouetted against a warm golden-hour sky over a suburban Indian neighborhood."
         caption="The last layer to rule out before calling your carrier: the tower itself. A weak cell or a stuck hand-off shows up as SMS-only failures more often than you&apos;d think."
       />
@@ -196,6 +196,12 @@ export default function SmsActivationPost() {
         </LI>
       </OL>
 
+      <BlogFigure
+        src="/blog/when-otps-specifically-arent-arriving.webp"
+        alt="Smartphone screen showing an empty SMS inbox with a loading spinner, illustrating an OTP that never arrived."
+        caption="OTP failures are usually upstream — DND filters, a suspended DLT template, or a carrier-side rate limit."
+      />
+
       <H2 id="business-side">If you&apos;re the business sending the OTP</H2>
       <P>
         When customers report &quot;not receiving your OTP&quot;, the issue is almost always
@@ -221,6 +227,12 @@ export default function SmsActivationPost() {
           plain 10-digit.
         </LI>
       </UL>
+
+      <BlogFigure
+        src="/blog/if-youre-the-business-sending-the-otp.webp"
+        alt="Developer looking at an SMS delivery report dashboard on a laptop, checking OTP delivery status."
+        caption="Check your SMSLocal delivery report first — it shows whether the failure is at the DLT layer, the carrier, or the end device."
+      />
 
       <H2 id="faq">FAQ</H2>
       <H3>My SIM works for calls but not SMS. Why?</H3>
