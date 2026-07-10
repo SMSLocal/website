@@ -1,64 +1,73 @@
 User-agent: *
 Allow: /
 Disallow: /signin
+Disallow: /signup
+Disallow: /forgot-password
 Disallow: /api/
-Disallow: /_next/
 Disallow: /dev/
 
 User-agent: Googlebot
 Allow: /
 Disallow: /signin
+Disallow: /signup
+Disallow: /forgot-password
 Disallow: /api/
-Disallow: /_next/
 Disallow: /dev/
 
 User-agent: SemrushBot
 Allow: /
 Disallow: /signin
+Disallow: /signup
+Disallow: /forgot-password
 Disallow: /api/
-Disallow: /_next/
 Disallow: /dev/
 
 User-agent: SiteAuditBot
 Allow: /
 Disallow: /signin
+Disallow: /signup
+Disallow: /forgot-password
 Disallow: /api/
-Disallow: /_next/
 Disallow: /dev/
 
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /signin
+Disallow: /signup
+Disallow: /forgot-password
 Disallow: /api/
-Disallow: /_next/
 Disallow: /dev/
 
 User-agent: ClaudeBot
 Allow: /
 Disallow: /signin
+Disallow: /signup
+Disallow: /forgot-password
 Disallow: /api/
-Disallow: /_next/
 Disallow: /dev/
 
 User-agent: PerplexityBot
 Allow: /
 Disallow: /signin
+Disallow: /signup
+Disallow: /forgot-password
 Disallow: /api/
-Disallow: /_next/
 Disallow: /dev/
 
 User-agent: Google-Extended
 Allow: /
 Disallow: /signin
+Disallow: /signup
+Disallow: /forgot-password
 Disallow: /api/
-Disallow: /_next/
 Disallow: /dev/
 
 User-agent: Applebot-Extended
 Allow: /
 Disallow: /signin
+Disallow: /signup
+Disallow: /forgot-password
 Disallow: /api/
-Disallow: /_next/
 Disallow: /dev/
 
 User-agent: AhrefsBot
