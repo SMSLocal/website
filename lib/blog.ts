@@ -443,9 +443,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "9 min read",
       category: "Troubleshooting",
       author: TEAM,
-      coverImage: "/blog/telegram-code-sms-cover.svg",
+      coverImage: "/blog/telegram-verification-code-not-arriving-hero.webp",
       coverAlt:
-        "Five question-mark OTP digit boxes with a warning triangle icon and a phone screen showing an X, representing a Telegram verification code that hasn't arrived.",
+        "Abstract illustration representing a Telegram verification code not arriving via SMS — phone screen with a warning indicator and pending OTP code.",
       toc: [
         { id: "how-telegram-verification-works", label: "How Telegram verification works" },
         { id: "not-arriving", label: "Why the SMS code isn't arriving" },

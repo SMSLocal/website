@@ -55,6 +55,12 @@ export default function TelegramCodeSmsPost() {
         arrived.
       </Callout>
 
+      <BlogFigure
+        src="/blog/how-telegrams-verification-works.webp"
+        alt="Diagram showing how Telegram's verification code system works — app-to-app delivery first, then SMS fallback, then voice call fallback."
+        caption="Telegram checks for an active session on another device first. SMS only fires as a fallback when no other Telegram session exists."
+      />
+
       <H2 id="not-arriving">Why the Telegram SMS code isn&apos;t arriving</H2>
       <P>
         If you&apos;ve confirmed there is no other active Telegram session and the SMS still has
@@ -131,6 +137,12 @@ export default function TelegramCodeSmsPost() {
         A voice call bypasses most SMS routing issues.
       </P>
 
+      <BlogFigure
+        src="/blog/why-telegram-sms-code-isnt-arriving.webp"
+        alt="Overview of reasons why a Telegram SMS verification code is not arriving — DND, spam filter, wrong number, operator block, and iMessage interference."
+        caption="Six common reasons Telegram's SMS code doesn't arrive — most are fixable in under two minutes."
+      />
+
       <Callout variant="tip" title="The countdown timer is your friend">
         Telegram shows a countdown after sending the code. When it hits zero, the{" "}
         <Strong>&ldquo;Call me instead&rdquo;</Strong> option appears. Do not wait longer than
@@ -187,6 +199,12 @@ export default function TelegramCodeSmsPost() {
         <LI>The code is the same code that would have come via SMS — enter it in the app</LI>
         <LI>Voice calls bypass DND restrictions and most SMS blocks</LI>
       </UL>
+      <BlogFigure
+        src="/blog/using-the-voice-call-option.webp"
+        alt="Screenshot of the Telegram login screen showing the 'Call me instead' voice call option as an alternative to the SMS verification code."
+        caption="The voice call option appears after the SMS countdown expires — it bypasses most operator SMS blocks and typically connects within 30 seconds."
+      />
+
       <Callout variant="tip" title="Voice call is often faster">
         The voice call option consistently outperforms SMS for Telegram login in India. If the SMS
         hasn&apos;t arrived within 90 seconds, tap &ldquo;Call me instead&rdquo; without waiting
@@ -215,6 +233,12 @@ export default function TelegramCodeSmsPost() {
           at telegram.org/support and include as much account ownership evidence as possible.
         </LI>
       </OL>
+
+      <BlogFigure
+        src="/blog/lost-access-to-phone-number.webp"
+        alt="Steps for recovering a Telegram account when you have lost access to the registered phone number — desktop session, account deletion flow, and Telegram support."
+        caption="If you no longer have the SIM on record, an active desktop session is your fastest recovery path — otherwise options are limited by design."
+      />
 
       <H2 id="security">Security implications of SMS verification</H2>
       <P>
