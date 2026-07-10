@@ -39,7 +39,9 @@ export default async function AppCategoryPage({ params }: { params: Promise<{ ca
   const cat = getAppCategoryBySlug(category)
   if (!cat) notFound()
 
-  const related = APP_CATEGORIES.filter((c) => c.slug !== cat.slug).slice(0, 4)
+  const catIndex = APP_CATEGORIES.findIndex((c) => c.slug === cat.slug)
+  const n = APP_CATEGORIES.length
+  const related = [1, 2, 3, 4].map((offset) => APP_CATEGORIES[(catIndex + offset) % n])
 
   return (
     <>

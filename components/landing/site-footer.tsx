@@ -13,6 +13,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "RCS Business Messaging", href: "/products/rcs/" },
       { label: "WhatsApp Business API", href: "/products/whatsapp-business-api/" },
       { label: "AI Agents", href: "/products/ai-agents/" },
+      { label: "AI Agents — Customer Service", href: "/products/ai-agents/customer-service/" },
       { label: "OTP & Transactional SMS", href: "/products/otp-sms/" },
       { label: "Quick SMS", href: "/products/quick-sms/" },
       { label: "Reseller / White-label", href: "/products/reseller/" },
@@ -51,6 +52,7 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
     title: "Resources",
     links: [
+      { label: "Resources", href: "/resources/" },
       { label: "Blog", href: "/blog/" },
       { label: "DLT registration guide", href: "/blog/dlt-registration-guide/" },
       { label: "Long SMS messages", href: "/long-sms-messages/" },
@@ -61,6 +63,11 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
       { label: "Help centre", href: "/resources/help/" },
       { label: "Glossary", href: "/resources/glossary/" },
       { label: "Compare alternatives", href: "/compare/" },
+      { label: "vs Haptik", href: "/compare/haptik/" },
+      { label: "vs Infobip", href: "/compare/infobip/" },
+      { label: "vs Twixor", href: "/compare/twixor/" },
+      { label: "vs Gupshup", href: "/compare/smslocal-vs-gupshup/" },
+      { label: "vs Textlocal", href: "/compare/smslocal-vs-textlocal/" },
       { label: "Status", href: "/resources/status/" },
       { label: "Changelog", href: "/resources/changelog/" },
     ],
