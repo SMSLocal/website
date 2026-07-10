@@ -1,5 +1,6 @@
 import {
   A,
+  BlogFigure,
   Callout,
   FigureTable,
   H2,
@@ -100,6 +101,12 @@ export default function BestSmsAppsForAndroidPost() {
         turned on&rdquo;, RCS is active on your number. Jio and Airtel both support RCS in India;
         Vi support is limited as of mid-2026.
       </Callout>
+
+      <BlogFigure
+        src="/blog/operator-web-portals-free-sms-browser.webp"
+        alt="Browser window showing an SMS web interface — Google Messages for web mirroring an Android phone's inbox in a desktop browser tab."
+        caption="Google Messages web (messages.google.com) lets you reply to SMS from any browser tab using your real SIM number and bundled quota — no third-party number needed."
+      />
 
       <H2 id="samsung-messages">2. Samsung Messages — Best for Samsung Phones</H2>
       <P>
@@ -264,6 +271,12 @@ export default function BestSmsAppsForAndroidPost() {
         caption="AirDroid is the most capable phone-management tool; Google Messages web is simpler for SMS-only PC access."
       />
 
+      <BlogFigure
+        src="/blog/whatsapp-free-sms-alternative-india.webp"
+        alt="Smartphone showing WhatsApp and an SMS app side by side on an Indian Android phone — illustrating the difference between internet-based messaging and carrier SMS."
+        caption="WhatsApp handles multimedia and group messaging on Indian smartphones, but it can't replace SMS for OTPs, bank alerts, or reaching feature phone users — that's where a dedicated SMS app still matters."
+      />
+
       <H2 id="chomp-sms">7. Chomp SMS — Best for Clean UI and Privacy</H2>
       <P>
         Chomp SMS is one of the longest-running third-party SMS apps on Android and has a loyal
@@ -335,6 +348,12 @@ export default function BestSmsAppsForAndroidPost() {
         See the <A href="/blog/send-sms-online/">guide to sending SMS online in India</A> for the
         full setup.
       </Callout>
+
+      <BlogFigure
+        src="/blog/ad-funded-web-to-sms-sites-caution.webp"
+        alt="Warning screen showing an ad-funded web-to-SMS site with pop-ups and third-party sender branding — contrasted with a clean DLT-compliant business SMS dashboard."
+        caption="Ad-funded web-to-SMS sites use shared sender IDs and are not DLT-compliant — messages can be blocked by Indian carriers. For business SMS, a registered platform with your own sender ID is required."
+      />
 
       <H2 id="comparison">Full comparison table</H2>
       <FigureTable
