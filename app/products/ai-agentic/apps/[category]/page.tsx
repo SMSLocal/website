@@ -21,6 +21,16 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   return {
     title: `${cat.label} Integrations — Captain AI | SMSLocal`,
     description: cat.desc,
+    alternates: {
+      canonical: `/products/ai-agentic/apps/${category}/`,
+    },
+    openGraph: {
+      type: "website",
+      url: `/products/ai-agentic/apps/${category}/`,
+      title: `${cat.label} Integrations — Captain AI | SMSLocal`,
+      description: cat.desc,
+      siteName: "SMSLocal",
+    },
   }
 }
 

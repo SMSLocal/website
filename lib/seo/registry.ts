@@ -358,6 +358,22 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "WhatsApp team inbox",
     ],
   },
+  "/products/ai-agentic": {
+    title: "Captain AI — Agentic AI That Acts Inside 300+ Business Apps",
+    description:
+      "Captain AI reads live data and takes real actions inside your CRM, helpdesk, e-commerce, and accounting tools — inside every WhatsApp, SMS, or chat conversation. Powered by Composio.",
+    focusKeyword: "agentic AI",
+    keywords: [
+      "agentic AI",
+      "Captain AI",
+      "AI agent business apps",
+      "Composio integration",
+      "AI WhatsApp agent India",
+      "AI CRM integration",
+      "agentic AI support agent",
+      "SMSLocal Captain AI",
+    ],
+  },
   "/products/ai-agents": {
     title: "AI WhatsApp Agents — Trusted, 8 Indian Languages",
     description:

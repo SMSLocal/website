@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { getPageMetadata } from "@/lib/seo"
 import {
   ArrowRight,
   BarChart3,
@@ -42,11 +43,7 @@ import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { AiAgenticVisual } from "@/components/product/ai-agentic-visual"
 
-export const metadata: Metadata = {
-  title: "Captain AI — Agentic AI Support Agent for SMSLocal | SMSLocal",
-  description:
-    "Captain AI connects to 300+ of your business apps via Composio — CRM, accounting, e-commerce, helpdesk — and takes real actions inside every conversation. Look up a contact, fetch an invoice, update a Razorpay order, resolve the ticket.",
-}
+export const metadata: Metadata = getPageMetadata("/products/ai-agentic")
 
 /* ─── DATA ────────────────────────────────────────────────────────────────── */
 
