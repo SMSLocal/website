@@ -45,6 +45,12 @@ export default function GmailPasswordRecoveryPost() {
         minutes.
       </P>
 
+      <BlogFigure
+        src="/blog/how-gmails-sms-recovery-works.webp"
+        alt="Diagram showing how Gmail's SMS recovery works — Google sends a 6-digit code via SMS to the registered recovery phone number, which the user enters to reset their password."
+        caption="Gmail routes recovery SMS through multiple providers. In India the sender typically appears as VM-Google and the code is valid for 15 minutes."
+      />
+
       <H2 id="setup">Setting up SMS recovery (do this before you need it)</H2>
       <OL>
         <LI>
@@ -72,9 +78,9 @@ export default function GmailPasswordRecoveryPost() {
       </Callout>
 
       <BlogFigure
-        src="/blog/gmail-recovery-2fa-setup.jpg"
-        alt="Small plain metallic hardware security key resting on a dark wooden desk beside a face-down smartphone, illuminated by a single warm amber lamp glow against a deep navy shadowed background."
-        caption="Add a hardware key or authenticator app alongside SMS. When the SMS path breaks, the second factor is what lets you recover without the form."
+        src="/blog/recovering-gmail-password-with-sms.webp"
+        alt="Step-by-step illustration of recovering a Gmail password using an SMS verification code — entering the 6-digit code received on the recovery phone to reset access."
+        caption="The SMS code appears within seconds on most Indian networks. Enter it before the 15-minute expiry and set a new password immediately."
       />
 
       <H2 id="recovering">Recovering your Gmail password with SMS</H2>
@@ -155,6 +161,12 @@ export default function GmailPasswordRecoveryPost() {
         </LI>
       </UL>
 
+      <BlogFigure
+        src="/blog/recovery-sms-not-arriving.webp"
+        alt="Checklist of fixes when a Gmail recovery SMS is not arriving — resend once, check spam folder, verify phone number, toggle airplane mode, and try alternate recovery methods."
+        caption="Work through these fixes in order — most users resolve the issue by step 3. Multiple resend attempts within 5 minutes can trigger a 24-hour hold."
+      />
+
       <H2 id="account-recovery-form">The account recovery form (last resort)</H2>
       <P>
         If all SMS and email paths are dead, Google&apos;s{" "}
@@ -172,6 +184,12 @@ export default function GmailPasswordRecoveryPost() {
         within 3–5 days. Persistence matters — if the first attempt fails, resubmit with more
         details or from a device/network Google associates with you.
       </P>
+
+      <BlogFigure
+        src="/blog/account-recovery-form-last-resort.webp"
+        alt="Google's account recovery form — the last resort for regaining Gmail access when SMS and email recovery paths are unavailable."
+        caption="Google's recovery form is slow (3–5 days) but reliable. Submit from a device and network Google recognises for the best chance of success."
+      />
 
       <H2 id="security-tips">Security tips so you never need recovery</H2>
 
@@ -194,11 +212,6 @@ export default function GmailPasswordRecoveryPost() {
         </LI>
       </UL>
 
-      <BlogFigure
-        src="/blog/gmail-recovery-sim-swap.jpg"
-        alt="Single tiny nano-SIM card resting on an ejected smartphone SIM tray on a dark polished wooden surface, illuminated by cool blue directional light with one subtle warm amber highlight."
-        caption="SIM swap attacks are the reason SMS-only recovery is no longer enough on accounts that matter. A second factor makes the SIM alone useless to an attacker."
-      />
 
       <H3>Set up multiple recovery paths</H3>
       <P>

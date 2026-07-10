@@ -215,9 +215,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "9 min read",
       category: "Security",
       author: TEAM,
-      coverImage: "/blog/gmail-password-recovery-via-sms-cover.svg",
+      coverImage: "/blog/gmail-password-recovery-via-sms-hero.webp",
       coverAlt:
-        "Still life of a small metal padlock on a closed leather notebook, a face-down smartphone, and folded glasses, lit by a warm brass desk lamp on a dark walnut desk.",
+        "Abstract illustration representing Gmail password recovery via SMS — phone receiving a verification code to regain access to a Google account.",
       toc: [
         { id: "how-it-works", label: "How Gmail SMS recovery works" },
         { id: "setup", label: "Setting up SMS recovery" },
