@@ -26,15 +26,18 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   applicationName: SITE.name,
   authors: [{ name: SITE.name }],
-  title: {
-    default: SITE.defaultTitle,
-    template: SITE.titleTemplate,
-  },
   ...buildMetadata({
     titleAbsolute: SITE.defaultTitle,
     description: SITE.description,
     path: "/",
   }),
+  // Must come AFTER the spread — buildMetadata returns { title: { absolute } }
+  // which would overwrite the template. Placing it last restores the template
+  // so every child page gets "Page Title | SMSLocal" in its <title> tag.
+  title: {
+    default: SITE.defaultTitle,
+    template: SITE.titleTemplate,
+  },
 }
 
 export const viewport: Viewport = {
