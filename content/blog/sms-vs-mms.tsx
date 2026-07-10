@@ -1,5 +1,6 @@
 import {
   A,
+  BlogFigure,
   Callout,
   FigureTable,
   H2,
@@ -54,6 +55,12 @@ export default function SmsVsMmsPost() {
         infrastructure a level of spam protection and accountability that most countries lack.
       </P>
 
+      <BlogFigure
+        src="/blog/what-is-sms.webp"
+        alt="Smartphone screen showing an SMS inbox with short text messages — OTP codes, bank alerts, and delivery notifications on an Indian mobile network."
+        caption="SMS is text-only, works on every phone, and remains the backbone of OTPs and business alerts in India."
+      />
+
       <H2 id="what-is-mms">What Is MMS?</H2>
       <P>
         MMS — Multimedia Messaging Service — is an extension of SMS that allows a message to
@@ -68,6 +75,12 @@ export default function SmsVsMmsPost() {
         phone plans, and businesses used it for image-based promotions. In India, this adoption
         never happened at scale.
       </P>
+
+      <BlogFigure
+        src="/blog/what-is-mms.webp"
+        alt="Smartphone displaying an MMS message thread with an image attachment alongside text, illustrating how MMS extends SMS with multimedia content."
+        caption="MMS extends SMS with images, audio, and video — but requires a data connection on both sides and never found a business use case in India."
+      />
 
       <H2 id="key-differences">SMS vs MMS: Key Technical Differences</H2>
       <FigureTable
@@ -135,6 +148,12 @@ export default function SmsVsMmsPost() {
         which is why SMS (which works on every phone) remained the business standard.
       </P>
 
+      <BlogFigure
+        src="/blog/why-mms-never-took-off.webp"
+        alt="Side-by-side view of a feature phone and a smartphone in India, illustrating why MMS never reached mass adoption — feature phones don't support it and WhatsApp arrived before MMS could establish itself."
+        caption="Four factors killed MMS in India: expensive data when it launched, WhatsApp's rise, no TRAI DLT framework, and a large feature phone user base that MMS simply can't reach."
+      />
+
       <Callout variant="info" title="MMS is not zero in India">
         Indian users do send personal MMS occasionally — a photo to a contact who is not on
         WhatsApp, or a group MMS between contacts on a feature phone. It works and is delivered.
@@ -185,6 +204,12 @@ export default function SmsVsMmsPost() {
           in India.
         </LI>
       </UL>
+
+      <BlogFigure
+        src="/blog/sms-vs-mms-business-use.webp"
+        alt="Business dashboard showing SMS campaign delivery stats with DLT-registered sender IDs and high delivery rates across Indian carriers."
+        caption="For Indian businesses, SMS is the only viable choice between the two — it has a complete DLT framework, reaches every phone, and offers trackable delivery receipts."
+      />
 
       <Callout variant="tip" title="Need to send rich media to customers in India?">
         The right channel is <Strong>WhatsApp Business API</Strong> — it supports images, PDFs,

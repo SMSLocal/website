@@ -447,7 +447,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "10 min read",
       category: "Getting started",
       author: TEAM,
-      coverImage: "/blog/sms-vs-mms-cover.svg",
+      coverImage: "/blog/sms-vs-mms-in-india-hero.webp",
       coverAlt:
         "Comparison illustration of SMS versus MMS messaging — showing text-only SMS on one side and multimedia MMS with image on the other, in the context of Indian mobile networks.",
       toc: [
