@@ -87,28 +87,32 @@ export default function PrivacyPolicyPage() {
             title: "3. Information we collect",
             body: (
               <>
-                <P>
-                  <Strong>Information you provide</Strong> — account registration details (name, business name,
-                  email, mobile number, password, GSTIN, PAN, billing address), KYC and onboarding documents,
-                  payment information (processed through PCI-DSS compliant gateways; we do not store full card
-                  numbers), and your communications with our sales, support, billing, and grievance teams.
-                </P>
-                <P>
-                  <Strong>Customer Data you upload</Strong> — end-recipient contact lists, message content,
-                  templates, chatbot flows, and two-way conversation transcripts.
-                </P>
-                <P>
-                  <Strong>Information collected automatically</Strong> — device and connection data (IP address,
-                  browser type, device identifiers, operating system, timezone, language), usage data (pages
-                  visited, features used, API calls, campaign statistics), delivery, read, and engagement
-                  metadata from Meta, telecom operators, and Google, and information collected via cookies and
-                  similar technologies.
-                </P>
-                <P>
-                  <Strong>Information from third parties</Strong> — identity verification and anti-fraud
-                  signals, profile data from authentication providers (Google, Microsoft), and information from
-                  Meta, telecom operators, payment processors, and integration partners.
-                </P>
+                <P><Strong>Information you provide</Strong></P>
+                <Ul>
+                  <Li>Account registration details: name, business name, email, mobile number, password, GSTIN, PAN, and billing address.</Li>
+                  <Li>KYC and onboarding documents.</Li>
+                  <Li>Payment information — processed through PCI-DSS compliant gateways; we do not store full card numbers.</Li>
+                  <Li>Communications with our sales, support, billing, and grievance teams.</Li>
+                </Ul>
+                <P><Strong>Customer Data you upload</Strong></P>
+                <Ul>
+                  <Li>End-recipient contact lists.</Li>
+                  <Li>Message content, templates, and chatbot flows.</Li>
+                  <Li>Two-way conversation transcripts.</Li>
+                </Ul>
+                <P><Strong>Information collected automatically</Strong></P>
+                <Ul>
+                  <Li>Device and connection data: IP address, browser type, device identifiers, operating system, timezone, and language.</Li>
+                  <Li>Usage data: pages visited, features used, API calls, and campaign statistics.</Li>
+                  <Li>Delivery, read, and engagement metadata from Meta, telecom operators, and Google.</Li>
+                  <Li>Information collected via cookies and similar technologies.</Li>
+                </Ul>
+                <P><Strong>Information from third parties</Strong></P>
+                <Ul>
+                  <Li>Identity verification and anti-fraud signals.</Li>
+                  <Li>Profile data from authentication providers (Google, Microsoft).</Li>
+                  <Li>Information from Meta, telecom operators, payment processors, and integration partners.</Li>
+                </Ul>
               </>
             ),
           },
@@ -193,9 +197,10 @@ export default function PrivacyPolicyPage() {
                   added to a suppression list.
                 </P>
                 <P>
-                  <Strong>Third parties</Strong> — Infobip (carrier aggregator) and Google RBM handle routing.{" "}
-                  <Strong>Retention</Strong> — opt-in/opt-out timestamps and audit logs are retained for 24
-                  months after account closure; message bodies for 90 days.
+                  <Strong>Third parties</Strong> — Infobip (carrier aggregator) and Google RBM handle routing.
+                </P>
+                <P>
+                  <Strong>Retention</Strong> — opt-in/opt-out timestamps and audit logs are kept for 24 months after account closure. Message bodies are kept for 90 days.
                 </P>
               </>
             ),

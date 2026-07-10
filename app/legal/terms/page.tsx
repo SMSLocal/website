@@ -202,15 +202,12 @@ export default function TermsPage() {
             title: "7. Refund policy",
             body: (
               <>
-                <P>
-                  Subscription fees and Wallet recharges are non-refundable once paid, except where required by
-                  applicable law or expressly agreed in writing. In the limited circumstances where a refund is
-                  approved at our sole discretion (for example, duplicate charges or proven service failure on
-                  our part), the refund will be processed to the original payment method within 7–14 working
-                  days, after deducting transaction fees levied by the payment gateway. Unused Wallet balance is
-                  not refundable on Account closure but may be transferred to another active Account at our
-                  discretion.
-                </P>
+                <Ul>
+                  <Li>Subscription fees and Wallet recharges are non-refundable once paid, unless required by law or agreed in writing.</Li>
+                  <Li>Refunds are considered only in limited cases — for example, duplicate charges or a proven service failure on our part.</Li>
+                  <Li>Approved refunds are processed to the original payment method within 7–14 working days, minus any gateway fees.</Li>
+                  <Li>Unused Wallet balance is not refunded when you close your Account, but may be transferred to another active Account at our discretion.</Li>
+                </Ul>
               </>
             ),
           },
@@ -377,19 +374,18 @@ export default function TermsPage() {
             body: (
               <>
                 <P>
-                  All intellectual property rights in the SMSLocal platform, including the website, logos, trade
-                  marks, software, source code, APIs, documentation, designs, and all derivative works, are owned
-                  by Swadesh Mobile or our licensors. We grant you a limited, non-exclusive, non-transferable,
-                  revocable licence to access and use the Services solely for your internal business purposes
-                  during the term of your subscription.
+                  All rights in the SMSLocal platform — including the website, logos, trade marks, software,
+                  APIs, documentation, and designs — are owned by Swadesh Mobile or our licensors. We give you a
+                  limited, non-exclusive, revocable licence to use the Services for your internal business
+                  purposes during your subscription.
                 </P>
-                <P>
-                  You retain all ownership of Customer Data. You grant us a limited licence to host, copy,
-                  transmit, and display Customer Data only as necessary to provide the Services. You must not (a)
-                  reverse engineer, decompile, or disassemble the platform; (b) resell or sublicense the Services
-                  without our prior written consent; (c) use the Services to build a competing product; or (d)
-                  remove or obscure any copyright, trademark, or proprietary notices.
-                </P>
+                <P>You retain full ownership of your Customer Data. You must not:</P>
+                <Ul>
+                  <Li>Reverse engineer, decompile, or disassemble the platform.</Li>
+                  <Li>Resell or sublicense the Services without our written consent.</Li>
+                  <Li>Use the Services to build a competing product.</Li>
+                  <Li>Remove or obscure any copyright, trademark, or proprietary notices.</Li>
+                </Ul>
               </>
             ),
           },
@@ -431,15 +427,13 @@ export default function TermsPage() {
             body: (
               <>
                 <P>
-                  To the maximum extent permitted by law, in no event shall Swadesh Mobile, its directors,
-                  employees, affiliates, or licensors be liable for any indirect, incidental, special,
-                  consequential, exemplary, or punitive damages, including without limitation loss of profits,
-                  revenue, business, goodwill, or data, or business interruption, arising out of or in connection
-                  with these Terms or the Services, even if advised of the possibility of such damages.
+                  To the maximum extent permitted by law, SMSLocal is not liable for indirect or consequential
+                  damages. This includes loss of profits, revenue, business, data, or goodwill — even if we were
+                  warned about the risk.
                 </P>
                 <P>
-                  Our aggregate liability under or in connection with these Terms in any rolling 12-month period
-                  shall not exceed the total fees actually paid by you to SMSLocal during that period.
+                  Our total liability in any rolling 12-month period is capped at the fees you actually paid
+                  SMSLocal during that period.
                 </P>
               </>
             ),
@@ -449,16 +443,14 @@ export default function TermsPage() {
             title: "17. Indemnification",
             body: (
               <>
-                <P>
-                  You agree to indemnify, defend, and hold harmless Swadesh Mobile, its officers, directors,
-                  employees, affiliates, and licensors from and against any and all claims, demands, actions,
-                  losses, damages, liabilities, costs, and expenses (including reasonable legal fees) arising out
-                  of or in connection with: (a) your use of the Services; (b) your violation of these Terms or of
-                  any applicable law; (c) your violation of any third-party right (including intellectual
-                  property and privacy rights); (d) the content of messages you send through the Services; or (e)
-                  penalties levied by Meta, Google, telecom operators, regulators, or end-recipients due to your
-                  acts or omissions.
-                </P>
+                <P>You agree to cover SMSLocal's legal costs and losses arising from:</P>
+                <Ul>
+                  <Li>Your use of the Services.</Li>
+                  <Li>Your breach of these Terms or any applicable law.</Li>
+                  <Li>Your violation of any third-party right (including intellectual property and privacy rights).</Li>
+                  <Li>The content of messages you send through the Services.</Li>
+                  <Li>Penalties from Meta, Google, telecom operators, regulators, or end-recipients caused by your actions.</Li>
+                </Ul>
               </>
             ),
           },
@@ -547,11 +539,11 @@ export default function TermsPage() {
             title: "22. Governing law and jurisdiction",
             body: (
               <>
+                <P>These Terms are governed by the laws of India.</P>
                 <P>
-                  These Terms shall be governed by and construed in accordance with the laws of India, without
-                  regard to its conflict of laws principles. Subject to the dispute resolution clause below, the
-                  courts at the principal place of business of Swadesh Mobile shall have exclusive jurisdiction
-                  over any dispute arising out of or in connection with these Terms or the Services.
+                  Subject to the dispute resolution clause below, courts at Swadesh Mobile&apos;s principal
+                  place of business have exclusive jurisdiction over any dispute arising from these Terms or the
+                  Services.
                 </P>
               </>
             ),
@@ -561,15 +553,8 @@ export default function TermsPage() {
             title: "23. Dispute resolution",
             body: (
               <>
-                <P>
-                  In the event of any dispute, the parties shall first attempt to resolve the matter amicably
-                  through good-faith negotiations within 30 days of written notice. If the dispute is not
-                  resolved within that period, it shall be referred to and finally resolved by arbitration under
-                  the Arbitration and Conciliation Act, 1996, by a sole arbitrator appointed by mutual consent.
-                  The seat and venue of arbitration shall be the principal place of business of Swadesh Mobile,
-                  and the language of arbitration shall be English. The arbitral award shall be final and
-                  binding.
-                </P>
+                <P>If a dispute arises, both parties will first try to resolve it through good-faith talks within 30 days of written notice.</P>
+                <P>If talks fail, the dispute goes to binding arbitration under the Arbitration and Conciliation Act, 1996. A sole arbitrator — agreed by both parties — will decide. The seat of arbitration is Swadesh Mobile&apos;s principal place of business, and proceedings will be in English. The arbitral award is final and binding.</P>
               </>
             ),
           },
@@ -578,13 +563,9 @@ export default function TermsPage() {
             title: "24. Severability, waiver and entire agreement",
             body: (
               <>
-                <P>
-                  If any provision of these Terms is held to be invalid, illegal, or unenforceable, the remaining
-                  provisions shall continue in full force and effect. No failure or delay in exercising any right
-                  shall operate as a waiver of that right. These Terms, together with the Privacy Policy,
-                  Acceptable Use Policy, and any product-specific addenda, constitute the entire agreement
-                  between the parties and supersede all prior understandings.
-                </P>
+                <P><Strong>Severability.</Strong> If any provision is found invalid or unenforceable, the rest of these Terms remain in full force.</P>
+                <P><Strong>No waiver.</Strong> Failing to enforce any right does not waive that right.</P>
+                <P><Strong>Entire agreement.</Strong> These Terms, together with the Privacy Policy, Acceptable Use Policy, and any product-specific addenda, form the complete agreement between the parties and replace all prior understandings.</P>
               </>
             ),
           },
