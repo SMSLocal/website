@@ -95,7 +95,7 @@ export const ALL_STORIES: CustomerStory[] = [
       "How Nirvaana Capital cut loan-OTP delivery from nine seconds to two — and lifted approvals by 17%",
     summary:
       "A mid-sized NBFC replaced a single-operator SMS stack with SMSLocal OTP SMS and WhatsApp fallback, and watched their application-completion rate climb by double digits in eight weeks.",
-    coverImage: "/customer-stories/nirvaana-capital-cover.jpg",
+    coverImage: "/customer-stories/nirvaana-capital-cover.svg",
     coverAlt:
       "Warm-lit modern fintech office interior with polished concrete floors, minimalist wooden furniture, a large potted fiddle-leaf fig plant, and muted emerald upholstered chairs beside floor-to-ceiling windows.",
     products: ["OTP SMS", "WhatsApp Business API"],
@@ -127,7 +127,7 @@ export const ALL_STORIES: CustomerStory[] = [
       text: "We stopped thinking of OTP delivery as a product problem and realised it was a revenue problem. Every dropped OTP was a customer we had paid to acquire and then lost at the last step. SMSLocal’s routing and operator-level visibility gave us back that last step.",
       name: "Priya Ramanathan",
       role: "VP Engineering, Nirvaana Capital",
-      portrait: "/customer-stories/nirvaana-capital-portrait.jpg",
+      portrait: "/customer-stories/nirvaana-capital-portrait.svg",
       portraitAlt:
         "Portrait of Priya Ramanathan, a confident Indian woman in her mid-30s with a short professional bob, wearing a charcoal blazer over a cream blouse, in soft natural window light.",
     },
@@ -178,7 +178,7 @@ export const ALL_STORIES: CustomerStory[] = [
       "Kaveri & Co. rebuilt post-purchase on WhatsApp — and recovered 3.1x more abandoned carts",
     summary:
       "A two-year-old D2C label moved order notifications, cart recovery, and post-purchase support onto SMSLocal’s WhatsApp Business API stack. Support load fell by 41%; recovered-cart revenue tripled.",
-    coverImage: "/customer-stories/kaveri-co-cover.jpg",
+    coverImage: "/customer-stories/kaveri-co-cover.svg",
     coverAlt:
       "Warm-lit D2C packaging station with neatly folded handwoven sarees in emerald, mustard, and rust, a kraft paper box, a roll of natural twine, fabric scissors, and a sprig of dried marigold on a wooden table.",
     products: ["WhatsApp Business API", "Bulk SMS", "AI WhatsApp Agents"],
@@ -207,7 +207,7 @@ export const ALL_STORIES: CustomerStory[] = [
       text: "Our customers are not reading marketing email. They are reading WhatsApp. Once we admitted that to ourselves, the whole post-purchase experience changed — and so did the retention curve.",
       name: "Ananya Srinivasan",
       role: "Founder & CEO, Kaveri & Co.",
-      portrait: "/customer-stories/kaveri-co-portrait.jpg",
+      portrait: "/customer-stories/kaveri-co-portrait.svg",
       portraitAlt:
         "Portrait of Ananya Srinivasan, an Indian woman in her late 30s with loosely tied-back black hair, wearing a deep emerald green handloom kurta, softly lit by warm daylight in her boutique studio.",
     },
@@ -258,7 +258,7 @@ export const ALL_STORIES: CustomerStory[] = [
       "Srinivasa Academy ships exam-day results to 40,000 students in under 90 seconds",
     summary:
       "A 17-year-old coaching institute moved admissions, results, and parent communications onto SMSLocal. DLT template approval time dropped from six days to fourteen hours; parent engagement on WhatsApp is now nearly 3x of SMS.",
-    coverImage: "/customer-stories/srinivasa-academy-cover.jpg",
+    coverImage: "/customer-stories/srinivasa-academy-cover.svg",
     coverAlt:
       "Warm golden-hour study desk scene with a brass lamp casting amber light onto closed blank notebooks, a wooden pencil case, and a small clay pot of green leaves, with a blurred empty classroom behind.",
     products: ["Bulk SMS", "WhatsApp Business API"],
@@ -288,7 +288,7 @@ export const ALL_STORIES: CustomerStory[] = [
       text: "On results day, we are talking to forty thousand families at the same time. A twelve-minute delivery window means the first family knows, the last family does not, and by the time the last SMS lands the WhatsApp groups have already misinformed everyone. Ninety seconds gives us a single moment of truth.",
       name: "Dr. Ramesh Sharma",
       role: "Director, Srinivasa Academy",
-      portrait: "/customer-stories/srinivasa-academy-portrait.jpg",
+      portrait: "/customer-stories/srinivasa-academy-portrait.svg",
       portraitAlt:
         "Portrait of Dr. Ramesh Sharma, a distinguished Indian man in his early 50s with salt-and-pepper hair, wearing a simple navy blue kurta, standing in front of a softly blurred traditional wooden bookshelf.",
     },

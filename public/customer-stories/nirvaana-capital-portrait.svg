@@ -1,0 +1,30 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#1e3a5c"/>
+    <stop offset="100%" stop-color="#0d1f35"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="150" cy="120" r="220" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#d4a84e" stop-opacity="0.22"/>
+    <stop offset="100%" stop-color="#d4a84e" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="sil" x1="0" y1="0" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#3a6080"/>
+    <stop offset="100%" stop-color="#1e3a5c"/>
+  </linearGradient>
+</defs>
+<circle cx="200" cy="200" r="200" fill="url(#bg)"/>
+<circle cx="200" cy="200" r="200" fill="url(#glow)"/>
+<!-- Silhouette: shoulders -->
+<path d="M 0 400 Q 80 290 148 270 Q 174 295 200 300 Q 226 295 252 270 Q 320 290 400 400 Z" fill="url(#sil)" opacity="0.9"/>
+<!-- Silhouette: head -->
+<ellipse cx="200" cy="188" rx="68" ry="78" fill="url(#sil)" opacity="0.9"/>
+<!-- Subtle highlight on head (window-light feel) -->
+<radialGradient id="hl" cx="168" cy="155" r="80" gradientUnits="userSpaceOnUse">
+  <stop offset="0%" stop-color="#d4a84e" stop-opacity="0.18"/>
+  <stop offset="100%" stop-color="#d4a84e" stop-opacity="0"/>
+</radialGradient>
+<circle cx="200" cy="200" r="200" fill="url(#hl)"/>
+<!-- Gold accent ring -->
+<circle cx="200" cy="200" r="196" fill="none" stroke="#d4a84e" stroke-width="2" opacity="0.4"/>
+</svg>

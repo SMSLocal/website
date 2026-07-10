@@ -1,0 +1,127 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#f5ede0"/>
+    <stop offset="100%" stop-color="#ebe0cc"/>
+  </linearGradient>
+  <radialGradient id="glow1" cx="900" cy="100" r="400" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.18"/>
+    <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="glow2" cx="200" cy="600" r="350" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#1a4a30" stop-opacity="0.1"/>
+    <stop offset="100%" stop-color="#1a4a30" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="table" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#c8a97a"/>
+    <stop offset="100%" stop-color="#a8844a"/>
+  </linearGradient>
+  <linearGradient id="lfade" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#f5ede0" stop-opacity="0.85"/>
+    <stop offset="100%" stop-color="#f5ede0" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+
+<!-- Warm cream background -->
+<rect width="1200" height="675" fill="url(#bg)"/>
+<rect width="1200" height="675" fill="url(#glow1)"/>
+<rect width="1200" height="675" fill="url(#glow2)"/>
+
+<!-- Subtle linen texture lines -->
+<g opacity="0.06" stroke="#8a6840" stroke-width="1">
+  <line x1="0" y1="90" x2="1200" y2="90"/>
+  <line x1="0" y1="180" x2="1200" y2="180"/>
+  <line x1="0" y1="270" x2="1200" y2="270"/>
+  <line x1="0" y1="360" x2="1200" y2="360"/>
+  <line x1="0" y1="450" x2="1200" y2="450"/>
+  <line x1="0" y1="540" x2="1200" y2="540"/>
+  <line x1="0" y1="630" x2="1200" y2="630"/>
+  <line x1="150" y1="0" x2="150" y2="675"/>
+  <line x1="300" y1="0" x2="300" y2="675"/>
+  <line x1="450" y1="0" x2="450" y2="675"/>
+  <line x1="600" y1="0" x2="600" y2="675"/>
+  <line x1="750" y1="0" x2="750" y2="675"/>
+  <line x1="900" y1="0" x2="900" y2="675"/>
+  <line x1="1050" y1="0" x2="1050" y2="675"/>
+</g>
+
+<!-- Wooden table surface -->
+<path d="M 280 480 Q 600 460 1200 480 L 1200 675 L 280 675 Z" fill="url(#table)" opacity="0.55"/>
+<!-- Table surface highlight -->
+<path d="M 280 480 Q 600 462 1200 480 L 1200 492 Q 600 474 280 492 Z" fill="#ddb97a" opacity="0.35"/>
+
+<!-- Kraft box (packaging) -->
+<rect x="580" y="280" width="260" height="200" rx="6" fill="#c8a060"/>
+<rect x="580" y="280" width="260" height="40" rx="6" fill="#b89050" opacity="0.8"/>
+<!-- Box flap lines -->
+<line x1="710" y1="280" x2="710" y2="320" stroke="#a07840" stroke-width="2" opacity="0.6"/>
+<!-- Box label area -->
+<rect x="610" y="350" width="200" height="80" rx="4" fill="#f5ede0" opacity="0.5"/>
+<!-- Label lines -->
+<rect x="625" y="366" width="120" height="6" rx="3" fill="#8a6840" opacity="0.4"/>
+<rect x="625" y="380" width="80" height="5" rx="2.5" fill="#8a6840" opacity="0.3"/>
+<rect x="625" y="393" width="100" height="5" rx="2.5" fill="#8a6840" opacity="0.25"/>
+<!-- Small emerald wax seal circle -->
+<circle cx="710" cy="430" r="18" fill="#1a4a30" opacity="0.75"/>
+<circle cx="710" cy="430" r="14" fill="#1e5c3a" opacity="0.8"/>
+<circle cx="710" cy="430" r="10" fill="none" stroke="#f5ede0" stroke-width="1.5" opacity="0.5"/>
+
+<!-- Folded sarees - emerald -->
+<rect x="350" y="310" width="200" height="12" rx="3" fill="#1a5c40" opacity="0.85"/>
+<rect x="345" y="325" width="210" height="130" rx="8" fill="#1e6a48"/>
+<!-- Saree fold texture lines -->
+<line x1="345" y1="345" x2="555" y2="345" stroke="#15503a" stroke-width="1" opacity="0.5"/>
+<line x1="345" y1="365" x2="555" y2="365" stroke="#15503a" stroke-width="1" opacity="0.5"/>
+<line x1="345" y1="385" x2="555" y2="385" stroke="#15503a" stroke-width="1" opacity="0.5"/>
+<line x1="345" y1="405" x2="555" y2="405" stroke="#15503a" stroke-width="1" opacity="0.5"/>
+<line x1="345" y1="425" x2="555" y2="425" stroke="#15503a" stroke-width="1" opacity="0.5"/>
+<!-- Gold border on saree -->
+<rect x="345" y="325" width="210" height="8" rx="3" fill="#c8922a" opacity="0.7"/>
+<rect x="345" y="447" width="210" height="8" rx="3" fill="#c8922a" opacity="0.7"/>
+
+<!-- Folded saree - mustard/ochre -->
+<rect x="340" y="230" width="220" height="80" rx="6" fill="#c8920a" opacity="0.8"/>
+<line x1="340" y1="248" x2="560" y2="248" stroke="#a87208" stroke-width="1.5" opacity="0.5"/>
+<line x1="340" y1="266" x2="560" y2="266" stroke="#a87208" stroke-width="1.5" opacity="0.5"/>
+<line x1="340" y1="284" x2="560" y2="284" stroke="#a87208" stroke-width="1.5" opacity="0.5"/>
+<rect x="340" y="230" width="220" height="7" rx="3" fill="#1a4a30" opacity="0.6"/>
+
+<!-- Folded saree - rust -->
+<rect x="860" y="250" width="180" height="220" rx="6" fill="#c4521a" opacity="0.75"/>
+<line x1="860" y1="270" x2="1040" y2="270" stroke="#a04015" stroke-width="1.5" opacity="0.4"/>
+<line x1="860" y1="290" x2="1040" y2="290" stroke="#a04015" stroke-width="1.5" opacity="0.4"/>
+<line x1="860" y1="310" x2="1040" y2="310" stroke="#a04015" stroke-width="1.5" opacity="0.4"/>
+<line x1="860" y1="330" x2="1040" y2="330" stroke="#a04015" stroke-width="1.5" opacity="0.4"/>
+<line x1="860" y1="350" x2="1040" y2="350" stroke="#a04015" stroke-width="1.5" opacity="0.4"/>
+<rect x="860" y="250" width="180" height="7" rx="3" fill="#c8922a" opacity="0.6"/>
+<rect x="860" y="463" width="180" height="7" rx="3" fill="#c8922a" opacity="0.6"/>
+
+<!-- Natural twine roll -->
+<ellipse cx="800" cy="420" rx="38" ry="38" fill="#c8a870"/>
+<ellipse cx="800" cy="420" rx="28" ry="28" fill="#f5ede0" opacity="0.5"/>
+<ellipse cx="800" cy="420" rx="8" ry="8" fill="#c8a870"/>
+<!-- Twine unraveling -->
+<path d="M 800 382 Q 770 370 750 390 Q 730 410 740 440" stroke="#a8885a" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.65"/>
+
+<!-- Fabric scissors -->
+<path d="M 900 360 L 970 430" stroke="#8a8a8a" stroke-width="4" stroke-linecap="round"/>
+<path d="M 910 350 L 975 420" stroke="#a0a0a0" stroke-width="3" stroke-linecap="round"/>
+<circle cx="898" cy="352" r="10" fill="none" stroke="#8a8a8a" stroke-width="3"/>
+<circle cx="908" cy="342" r="10" fill="none" stroke="#a0a0a0" stroke-width="3"/>
+
+<!-- Dried marigold sprig -->
+<circle cx="750" cy="310" r="14" fill="#f59e0b" opacity="0.8"/>
+<circle cx="762" cy="300" r="10" fill="#f59e0b" opacity="0.7"/>
+<circle cx="770" cy="316" r="8" fill="#f59e0b" opacity="0.65"/>
+<path d="M 750 324 Q 748 355 744 380" stroke="#5a7a40" stroke-width="2" fill="none" opacity="0.6"/>
+
+<!-- Left fade for text area -->
+<rect width="420" height="675" fill="url(#lfade)"/>
+
+<!-- Left-side label shapes -->
+<rect x="80" y="240" width="200" height="8" rx="4" fill="#1a4a30" opacity="0.2"/>
+<rect x="80" y="258" width="280" height="8" rx="4" fill="#1a4a30" opacity="0.14"/>
+<rect x="80" y="276" width="240" height="8" rx="4" fill="#1a4a30" opacity="0.1"/>
+<rect x="80" y="318" width="80" height="4" rx="2" fill="#c8922a" opacity="0.5"/>
+<rect x="80" y="328" width="220" height="1.5" rx="1" fill="#c8922a" opacity="0.35"/>
+</svg>

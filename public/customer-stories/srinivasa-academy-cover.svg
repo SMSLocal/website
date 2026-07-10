@@ -1,0 +1,121 @@
+<svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="675" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#fef3c7"/>
+    <stop offset="100%" stop-color="#fde68a"/>
+  </linearGradient>
+  <radialGradient id="lamp" cx="600" cy="200" r="360" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.45"/>
+    <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="lamp2" cx="600" cy="220" r="200" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#fffbeb" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#fffbeb" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="desk" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#92632a"/>
+    <stop offset="100%" stop-color="#6b4520"/>
+  </linearGradient>
+  <linearGradient id="room" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#d4a030" stop-opacity="0.15"/>
+    <stop offset="100%" stop-color="#92632a" stop-opacity="0.08"/>
+  </linearGradient>
+  <linearGradient id="lfade" x1="0" y1="0" x2="1" y2="0" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#fef3c7" stop-opacity="0.85"/>
+    <stop offset="100%" stop-color="#fef3c7" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="bkgnd" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+    <stop offset="0%" stop-color="#1a3050"/>
+    <stop offset="100%" stop-color="#0f1e35"/>
+  </linearGradient>
+</defs>
+
+<!-- Warm amber background -->
+<rect width="1200" height="675" fill="url(#bg)"/>
+
+<!-- Blurred classroom background (darkened, blurred feel) -->
+<rect x="0" y="0" width="1200" height="420" fill="url(#bkgnd)" opacity="0.22"/>
+
+<!-- Lamp cone of warm light -->
+<ellipse cx="600" cy="200" rx="380" ry="340" fill="url(#lamp)"/>
+<ellipse cx="600" cy="210" rx="200" ry="200" fill="url(#lamp2)"/>
+
+<!-- Desk surface -->
+<path d="M 0 450 Q 600 430 1200 450 L 1200 675 L 0 675 Z" fill="url(#desk)"/>
+<path d="M 0 450 Q 600 432 1200 450 L 1200 464 Q 600 446 0 464 Z" fill="#a87840" opacity="0.5"/>
+
+<!-- Brass/gold lamp base -->
+<rect x="570" y="300" width="60" height="150" rx="8" fill="#c8982a"/>
+<rect x="556" y="440" width="88" height="16" rx="6" fill="#b8880a"/>
+<rect x="548" y="452" width="104" height="10" rx="5" fill="#a07808"/>
+<!-- Lamp neck curve -->
+<path d="M 600 300 Q 560 260 540 210" stroke="#c8982a" stroke-width="16" fill="none" stroke-linecap="round"/>
+<!-- Lamp shade -->
+<path d="M 480 190 Q 540 175 600 178 Q 540 215 480 230 Z" fill="#c8982a"/>
+<path d="M 600 178 Q 660 175 720 190 L 720 230 Q 660 215 600 178 Z" fill="#b8880a"/>
+<!-- Light inside shade -->
+<ellipse cx="600" cy="195" rx="50" ry="18" fill="#fff8e0" opacity="0.7"/>
+
+<!-- Blank notebook / exam pad - large -->
+<rect x="320" y="390" width="260" height="200" rx="6" fill="#fffef5" transform="rotate(-3 450 490)"/>
+<rect x="322" y="392" width="260" height="12" rx="3" fill="#e8e0c0" opacity="0.7" transform="rotate(-3 452 398)"/>
+<!-- Notebook lines -->
+<g opacity="0.18" stroke="#8a7840" stroke-width="1.2" transform="rotate(-3 450 490)">
+  <line x1="336" y1="418" x2="564" y2="418"/>
+  <line x1="336" y1="434" x2="564" y2="434"/>
+  <line x1="336" y1="450" x2="564" y2="450"/>
+  <line x1="336" y1="466" x2="564" y2="466"/>
+  <line x1="336" y1="482" x2="564" y2="482"/>
+  <line x1="336" y1="498" x2="564" y2="498"/>
+  <line x1="336" y1="514" x2="564" y2="514"/>
+  <line x1="336" y1="530" x2="564" y2="530"/>
+  <line x1="336" y1="546" x2="564" y2="546"/>
+</g>
+<!-- Red margin line -->
+<line x1="362" y1="402" x2="356" y2="575" stroke="#e87060" stroke-width="1.5" opacity="0.4" transform="rotate(-3 359 490)"/>
+
+<!-- Second closed notebook -->
+<rect x="620" y="400" width="220" height="170" rx="5" fill="#1a3050" transform="rotate(2 730 485)"/>
+<rect x="622" y="402" width="220" height="10" rx="3" fill="#254070" opacity="0.9" transform="rotate(2 732 407)"/>
+<!-- Gold spine stripe -->
+<rect x="620" y="400" width="14" height="170" rx="3" fill="#c8982a" opacity="0.7" transform="rotate(2 627 485)"/>
+
+<!-- Wooden pencil case box -->
+<rect x="700" y="370" width="160" height="44" rx="8" fill="#92632a" transform="rotate(-1 780 392)"/>
+<rect x="702" y="372" width="156" height="10" rx="4" fill="#a87840" opacity="0.7" transform="rotate(-1 780 377)"/>
+<!-- Small pencils peeking out -->
+<rect x="724" y="350" width="8" height="30" rx="2" fill="#f59e0b" transform="rotate(-5 728 365)"/>
+<rect x="740" y="346" width="8" height="34" rx="2" fill="#ef4444" opacity="0.7" transform="rotate(0 744 363)"/>
+<rect x="756" y="348" width="8" height="32" rx="2" fill="#1a3050" transform="rotate(4 760 364)"/>
+<rect x="772" y="344" width="8" height="36" rx="2" fill="#1a4a30" transform="rotate(2 776 362)"/>
+<!-- Pencil tips -->
+<polygon points="724,344 728,344 726,338" fill="#c87820" transform="rotate(-5 726 341)"/>
+<polygon points="740,340 744,340 742,334" fill="#c83020" opacity="0.7"/>
+<polygon points="756,342 760,342 758,336" fill="#0f1e35"/>
+<polygon points="772,338 776,338 774,332" fill="#0e2b1c"/>
+
+<!-- Small clay pot of green leaves -->
+<ellipse cx="920" cy="458" rx="36" ry="24" fill="#b0702a"/>
+<path d="M 884 458 Q 884 500 920 510 Q 956 500 956 458 Z" fill="#c8802a"/>
+<ellipse cx="920" cy="458" rx="36" ry="12" fill="#d4902a"/>
+<!-- Leaves -->
+<ellipse cx="910" cy="420" rx="16" ry="28" fill="#1a5c30" transform="rotate(-15 910 440)"/>
+<ellipse cx="930" cy="415" rx="14" ry="26" fill="#1e6838" transform="rotate(10 930 435)"/>
+<ellipse cx="920" cy="410" rx="12" ry="24" fill="#228040" transform="rotate(0 920 430)"/>
+<!-- Leaf veins -->
+<line x1="910" y1="448" x2="906" y2="396" stroke="#14472a" stroke-width="1.5" opacity="0.6" transform="rotate(-15 910 440)"/>
+<line x1="920" y1="434" x2="920" y2="388" stroke="#14472a" stroke-width="1.5" opacity="0.5"/>
+
+<!-- Warm amber glow pool on desk under lamp -->
+<ellipse cx="600" cy="460" rx="220" ry="40" fill="#f59e0b" opacity="0.12"/>
+
+<!-- Left fade -->
+<rect width="380" height="675" fill="url(#lfade)"/>
+
+<!-- Left-side label shapes -->
+<rect x="80" y="240" width="200" height="8" rx="4" fill="#1a3050" opacity="0.22"/>
+<rect x="80" y="258" width="280" height="8" rx="4" fill="#1a3050" opacity="0.15"/>
+<rect x="80" y="276" width="230" height="8" rx="4" fill="#1a3050" opacity="0.1"/>
+<rect x="80" y="320" width="80" height="4" rx="2" fill="#f59e0b" opacity="0.55"/>
+<rect x="80" y="330" width="220" height="1.5" rx="1" fill="#f59e0b" opacity="0.35"/>
+</svg>

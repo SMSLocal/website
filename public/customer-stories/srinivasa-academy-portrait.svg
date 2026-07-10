@@ -1,0 +1,30 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="400" y2="400" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#1a2f4a"/>
+    <stop offset="100%" stop-color="#0f1e30"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="250" cy="130" r="200" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.2"/>
+    <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="sil" x1="0" y1="0" x2="0" y2="400" gradientUnits="userSpaceOnUse">
+    <stop offset="0%" stop-color="#2e4a6a"/>
+    <stop offset="100%" stop-color="#1a2f4a"/>
+  </linearGradient>
+</defs>
+<circle cx="200" cy="200" r="200" fill="url(#bg)"/>
+<circle cx="200" cy="200" r="200" fill="url(#glow)"/>
+<!-- Silhouette: shoulders (kurta, slightly broader for older distinguished man) -->
+<path d="M 0 400 Q 75 280 140 264 Q 168 292 200 298 Q 232 292 260 264 Q 325 280 400 400 Z" fill="url(#sil)" opacity="0.92"/>
+<!-- Silhouette: head (slightly broader jaw for older distinguished man) -->
+<ellipse cx="200" cy="184" rx="70" ry="78" fill="url(#sil)" opacity="0.92"/>
+<!-- Wooden bookshelf ambient glow (warm amber behind) -->
+<radialGradient id="hl" cx="240" cy="160" r="100" gradientUnits="userSpaceOnUse">
+  <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.14"/>
+  <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+</radialGradient>
+<circle cx="200" cy="200" r="200" fill="url(#hl)"/>
+<!-- Amber accent ring -->
+<circle cx="200" cy="200" r="196" fill="none" stroke="#f59e0b" stroke-width="2" opacity="0.38"/>
+</svg>
