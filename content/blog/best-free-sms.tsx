@@ -1,5 +1,6 @@
 import {
   A,
+  BlogFigure,
   Callout,
   FigureTable,
   H2,
@@ -191,6 +192,11 @@ export default function BestFreeSmsPost() {
         <A href="/blog/free-sms/">guide to free SMS in India</A> which covers every operator&apos;s
         balance check codes and quota details.
       </P>
+      <BlogFigure
+        src="/blog/operator-web-portals-free-sms-browser.webp"
+        alt="Operator web portals for free SMS in India — MyJio and Airtel Thanks browser interface for sending SMS from a computer"
+        caption="Operator web portals let you send SMS from a browser using your own bundled SIM quota — no shared number, no third-party account needed."
+      />
 
       <H2 id="operator-bundled">5. Bundled SIM SMS — 100 Free SMS Per Day Already in Your Plan</H2>
       <P>
@@ -251,6 +257,11 @@ export default function BestFreeSmsPost() {
         from a business or government service, SMS is unavoidable. Most Indian users need both
         running simultaneously.
       </Callout>
+      <BlogFigure
+        src="/blog/whatsapp-free-sms-alternative-india.webp"
+        alt="WhatsApp as a free SMS alternative in India — comparison of WhatsApp messaging versus traditional SMS for personal and business use"
+        caption="WhatsApp replaces personal SMS for most smartphone conversations in India, but cannot replace SMS for OTPs, bank alerts, or reaching feature phones."
+      />
 
       <H2 id="ad-funded-sites">7. Ad-Funded Web-to-SMS Sites — Use With Caution</H2>
       <P>
@@ -287,6 +298,11 @@ export default function BestFreeSmsPost() {
         anything regular, time-sensitive, or business-related — no. Your bundled 100 SMS/day or
         the operator web portals above are both better options.
       </P>
+      <BlogFigure
+        src="/blog/ad-funded-web-to-sms-sites-caution.webp"
+        alt="Ad-funded web to SMS sites caution — overview of risks and limitations when using free online SMS services in India"
+        caption="Ad-funded web SMS sites are functional for very occasional one-off messages, but use a shared sender number and have strict daily caps of 5–25 messages."
+      />
 
       <H2 id="smslocal-trial">8. SMSLocal Free Trial — Best Free SMS Option for Business in India</H2>
       <P>

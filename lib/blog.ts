@@ -415,9 +415,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "10 min read",
       category: "Consumer",
       author: TEAM,
-      coverImage: "/blog/best-free-sms-cover.svg",
+      coverImage: "/blog/best-free-sms-app-in-india-2026-hero.webp",
       coverAlt:
-        "Ranked list graphic showing top free SMS options in India: operator bundled SMS at #1, SMSLocal free trial at #2, WhatsApp at #3, and third-party apps at #4.",
+        "Hero illustration for the best free SMS app in India 2026 — comparing Google Messages, AirDroid, operator portals, WhatsApp, and SMSLocal trial credit.",
       toc: [
         { id: "quick-pick", label: "Quick pick by use case" },
         { id: "google-messages", label: "Google Messages (Android)" },
