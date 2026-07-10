@@ -83,7 +83,7 @@ export default function WhatsappScamsIndiaPost() {
       <P>
         <Strong>How to identify it:</Strong> no legitimate employer asks you to pay to start
         working. If you get paid first and are then asked to pay something back, it&apos;s a scam.
-        Verify any company name on the <A href="https://www.mca.gov.in">MCA portal</A> before
+        Verify any company name on the <A href="https://efiling.mca.gov.in/">MCA company search portal</A> before
         sharing personal information.
       </P>
 
