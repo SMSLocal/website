@@ -69,7 +69,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "14 min read",
       category: "Compliance",
       author: TEAM,
-      coverImage: "/blog/dlt-registration-guide-cover.svg",
+      coverImage: "/blog/dlt-registration-guide-for-indian-businesses-2026-hero.webp",
       coverAlt:
         "Overhead still life of a neat stack of cream paper documents, a closed fountain pen, a small brass stamp, folded reading glasses, and a green leaf sprig on a wooden desk.",
       toc: [

@@ -47,6 +47,12 @@ export default function DltRegistrationGuide() {
         not delivered, not reported, not billed.
       </P>
 
+      <BlogFigure
+        src="/blog/why-dlt-exists.webp"
+        alt="Illustration explaining why India's DLT (Distributed Ledger Technology) regulation exists — the TRAI-mandated compliance layer that governs every SMS sender in India."
+        caption="DLT is TRAI's answer to the Indian SMS spam crisis — a blockchain-backed registry that makes every sender, sender ID, and message template verifiable before delivery."
+      />
+
       <H2 id="who-needs-it">Who actually needs DLT</H2>
       <P>
         You need DLT if your application sends <Strong>any</Strong> SMS to <Strong>any</Strong>{" "}
@@ -74,6 +80,12 @@ export default function DltRegistrationGuide() {
           DLT, and typically appoint a local entity or use your Indian operations arm as the PE.
         </LI>
       </UL>
+
+      <BlogFigure
+        src="/blog/who-actually-needs-dlt.webp"
+        alt="Visual guide showing who actually needs DLT registration in India — covering transactional, service, promotional, and international SMS senders."
+        caption="If your application sends any SMS to any Indian mobile number, DLT is mandatory — no exceptions for OTPs, alerts, or promotional messages."
+      />
 
       <H2 id="the-four-things">The four things you&apos;ll register</H2>
       <P>
@@ -109,12 +121,6 @@ export default function DltRegistrationGuide() {
           ],
         ]}
         caption="Every sender registers all four. Templates and consent are the ongoing work."
-      />
-
-      <BlogFigure
-        src="/blog/dlt-registration-principal-entity.jpg"
-        alt="Closed manila folder tied with red string on a wooden desk with a fountain pen resting on top, beside a small porcelain cup of masala chai and a sprig of tulsi leaves."
-        caption="Principal Entity registration on an operator DLT portal. Expect 24 to 72 hours for approval once your paperwork is in."
       />
 
       <H2 id="principal-entity">Step 1: Register your Principal Entity (PE)</H2>
@@ -174,12 +180,6 @@ export default function DltRegistrationGuide() {
         it fit ten use cases. Keep templates specific — one for OTP login, one for OTP signup, one
         for password reset — so when you need to change copy you can do it per-flow.
       </Callout>
-
-      <BlogFigure
-        src="/blog/dlt-registration-template-approved.jpg"
-        alt="Wooden rubber-stamp handle resting on a clean red ink pad, beside a small stack of blank cream paper and a brass paperweight on a polished wooden desk."
-        caption="Approved content template in hand. Every variable slot has to match character-for-character on every send — including the Template ID you reference."
-      />
 
       <H3>What makes templates reject</H3>
       <UL>
@@ -292,6 +292,12 @@ export default function DltRegistrationGuide() {
         </LI>
       </OL>
 
+      <BlogFigure
+        src="/blog/common-rejection-reasons.webp"
+        alt="Infographic listing the most common DLT registration rejection reasons in India — PE name mismatch, GST address issues, generic header names, and template errors."
+        caption="Most first-time DLT applications get rejected. PE name must match your Certificate of Incorporation exactly — no abbreviations, no trading names."
+      />
+
       <H2 id="timelines">Realistic timelines</H2>
       <P>Plan backwards from your first send. Here&apos;s what actually happens:</P>
       <FigureTable
@@ -331,6 +337,12 @@ export default function DltRegistrationGuide() {
           launch.
         </LI>
       </OL>
+      <BlogFigure
+        src="/blog/sending-day1-sms.webp"
+        alt="Step-by-step illustration of sending your first DLT-compliant SMS in India — adding the sender ID in the SMSLocal dashboard and running a 3-step validation before production traffic."
+        caption="After PE, Header, and Template approval, add your Sender ID in the SMSLocal dashboard and run a 3-step validation — single test SMS, delivery report, and webhook — before going live."
+      />
+
       <Callout variant="success" title="You&apos;re live">
         If the test succeeds, you&apos;re cleared to send at whatever volume your route supports.
         Scale gradually — even a compliant Header looks suspicious to the operator if it jumps
