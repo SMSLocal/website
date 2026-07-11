@@ -188,7 +188,7 @@ export function SiteFooter() {
               <p>
                 Registered name &amp; address:{" "}
                 <span className="text-white/70">
-                  [PLACEHOLDER — legal entity name and address]
+                  SMSLocal — 1108, Sureshwari Techno IT Park Premises CHS, Link Road, Borivali West, Mumbai, Maharashtra 400092
                 </span>
               </p>
             </div>

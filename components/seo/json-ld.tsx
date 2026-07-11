@@ -30,6 +30,10 @@ export function OrganizationJsonLd() {
     description: SITE.description,
     address: {
       "@type": "PostalAddress",
+      streetAddress: "1108, Sureshwari Techno IT Park Premises CHS, Link Road",
+      addressLocality: "Borivali West",
+      addressRegion: "Maharashtra",
+      postalCode: "400092",
       addressCountry: "IN",
     },
     areaServed: {
