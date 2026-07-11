@@ -174,7 +174,7 @@ export function SiteFooter() {
         </div>
 
         {/* Base strip */}
-        <div className="mt-14 border-t border-white/10 pt-6 space-y-3">
+        <div className="mt-14 border-t border-white/10 pt-6">
           <div className="flex flex-col items-start justify-between gap-3 text-[12px] text-white/55 sm:flex-row sm:items-center">
             <p>Copyright © 2019–2026 SMSLocal. All rights reserved.</p>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
@@ -187,7 +187,7 @@ export function SiteFooter() {
               </Link>
             </div>
           </div>
-          <p className="text-right text-[12px] text-white/55">
+          <p className="mt-3 text-center text-[12px] text-white/55">
             Registered name &amp; address:{" "}
             <span className="text-white/70">
               SMSLocal — 1108, Sureshwari Techno IT Park Premises CHS, Link Road, Borivali West, Mumbai, Maharashtra 400092
