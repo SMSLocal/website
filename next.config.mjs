@@ -158,6 +158,17 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Old pricing slug — redirect to the canonical /pricing/ page.
+      {
+        source: "/pricing-plans",
+        destination: "/pricing/",
+        permanent: true,
+      },
+      {
+        source: "/pricing-plans/",
+        destination: "/pricing/",
+        permanent: true,
+      },
       // The DLT guide content lives under the blog; keep the older resource
       // slug working so existing links and any indexed URLs still land.
       {
