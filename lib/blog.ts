@@ -161,7 +161,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "10 min read",
       category: "Consumer",
       author: TEAM,
-      coverImage: "/blog/receive-sms-online-india-cover.svg",
+      coverImage: "/blog/receive-sms-online-india-hero.webp",
       coverAlt:
         "Dimly lit modern desk at night with a closed laptop, a face-down smartphone, and a small lamp casting a single warm amber pool of light onto a blank leather notebook.",
       toc: [

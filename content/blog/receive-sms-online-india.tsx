@@ -46,9 +46,9 @@ export default function ReceiveSmsOnlineIndiaPost() {
       </P>
 
       <BlogFigure
-        src="/blog/receive-sms-online-temporary-number.jpg"
-        alt="Single lit incense stick on a minimalist dark desk with a thin curl of smoke drifting upward into cool blue ambient light, a closed notebook and folded glasses softly out of focus nearby."
-        caption="A typical receive-SMS web interface. The number is real, the inbox is shared, and the countdown means any code that lands there is visible to everyone on the page."
+        src="/blog/how-receive-sms-online-works.webp"
+        alt="Diagram showing how receive-SMS-online services work in India — renting real mobile numbers via SIM boxes, displaying incoming OTPs on a shared web interface."
+        caption="A typical receive-SMS web interface. The number is real, the inbox is shared, and any code that lands there is visible to everyone on the page."
       />
 
       <H2 id="legit-uses">Legitimate use cases</H2>
@@ -70,6 +70,12 @@ export default function ReceiveSmsOnlineIndiaPost() {
           for genuine communication but require it for &quot;verification&quot;.
         </LI>
       </OL>
+
+      <BlogFigure
+        src="/blog/legitimate-use-cases.webp"
+        alt="Illustration of legitimate use cases for receive-SMS-online services in India — QA testing, app trials, international users, and privacy-first signups."
+        caption="Receive-SMS services are a valid tool for QA testing, throwaway signups, and international verification — just never use them for anything you want to keep or recover later."
+      />
 
       <H2 id="not-legit">When it&apos;s not OK</H2>
       <P>Receive-SMS services have real limits — both legal and practical.</P>
@@ -120,12 +126,6 @@ export default function ReceiveSmsOnlineIndiaPost() {
         account you care about using a public receive-SMS number.
       </Callout>
 
-      <BlogFigure
-        src="/blog/receive-sms-online-fraud-shield.jpg"
-        alt="Small antique brass shield-shaped paperweight resting on a dark wooden desk, illuminated by a single warm amber pool of lamp light against a deep navy shadowed background."
-        caption="On the defending side: number-type classification, velocity checks, and secondary signal binding are what actually keep receive-SMS boxes out of your sign-up flow."
-      />
-
       <H2 id="what-to-look-for">What to look for in a legitimate service</H2>
       <P>
         If you do have a genuine reason to use one, here&apos;s how to pick a service that
@@ -151,6 +151,12 @@ export default function ReceiveSmsOnlineIndiaPost() {
           signal.
         </LI>
       </OL>
+
+      <BlogFigure
+        src="/blog/what-to-look-for-in-a-legitimate-service.webp"
+        alt="Checklist of what to look for when evaluating a legitimate receive-SMS-online service in India — private numbers, clear data retention, reputable carriers."
+        caption="Private per-user numbers and a clear data-deletion policy are the two most important things to verify before trusting any receive-SMS service."
+      />
 
       <H2 id="better-alternatives">Better alternatives for most use cases</H2>
       <P>
@@ -202,6 +208,12 @@ export default function ReceiveSmsOnlineIndiaPost() {
           payment method before granting account privileges — OTP alone is easy to spoof.
         </LI>
       </OL>
+
+      <BlogFigure
+        src="/blog/blocking-these-numbers-as-a-business.webp"
+        alt="Diagram showing three defences businesses can use to block receive-SMS-online numbers — number-type classification, velocity checks, and secondary signal binding."
+        caption="Number-type classification is the first line of defence; velocity checks and secondary binding close the gap for numbers that slip through."
+      />
 
       <H2 id="faq">FAQ</H2>
       <H3>Is receive-SMS-online illegal in India?</H3>
