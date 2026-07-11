@@ -148,6 +148,12 @@ const nextConfig = {
       // catch-all intercepts /sitemap.xml before the metadata route can serve it.
       // The API route at /api/sitemap calls the same sitemap() function.
       { source: "/sitemap.xml", destination: "/sitemap-xml" },
+      // IndexNow key file for Ahrefs Site Audit — catch-all route would
+      // intercept /v8rcpyc9cjm9zewm2hm9gctu3uakcmb7.txt without this rewrite.
+      {
+        source: "/v8rcpyc9cjm9zewm2hm9gctu3uakcmb7.txt",
+        destination: "/api/indexnow-key",
+      },
     ]
   },
   async redirects() {
