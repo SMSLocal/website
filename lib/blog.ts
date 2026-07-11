@@ -246,7 +246,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "11 min read",
       category: "Getting started",
       author: TEAM,
-      coverImage: "/blog/send-sms-online-cover.svg",
+      coverImage: "/blog/send-sms-online-india-4-methods-when-to-use-hero.webp",
       coverAlt:
         "Portrait of an Indian small-business owner in his mid-30s in a casual smart shirt, seated at a softly lit cafe table with a ceramic coffee cup and a closed leather notebook in front of him.",
       toc: [

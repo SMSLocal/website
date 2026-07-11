@@ -55,6 +55,12 @@ export default function SendSmsOnlinePost() {
         </LI>
       </OL>
 
+      <BlogFigure
+        src="/blog/who-sends-sms-online-and-why.webp"
+        alt="Illustration of the four segments that send SMS online in India — small businesses, developers, enterprise marketing teams, and institutions like schools and clinics."
+        caption="Online SMS sending in India spans small businesses running 100-message reminders to enterprise teams pushing millions per campaign — the right method depends on volume and technical capability."
+      />
+
       <H2 id="ways-to-send">The four ways to send SMS online</H2>
       <FigureTable
         columns={["Method", "Best for", "Cost", "Setup time"]}
@@ -126,8 +132,8 @@ export default function SendSmsOnlinePost() {
       </Callout>
 
       <BlogFigure
-        src="/blog/send-sms-online-broadcast-campaign.jpg"
-        alt="Two Indian marketing teammates in their late 20s in a modern coworking space mid-conversation, the woman gesturing with her hands and the man listening thoughtfully, warm ambient lighting with blurred plants behind them."
+        src="/blog/web-to-sms-dashboard-no-code.webp"
+        alt="Screenshot of a web-to-SMS dashboard showing a bulk SMS campaign interface — upload CSV, select template, schedule send, and view delivery report with DND-filtered numbers highlighted."
         caption="A typical web-to-SMS campaign: upload, segment, schedule, watch the delivery stream. The best platforms surface DND drops and wrong-number filtering inline so you see exactly what was reached."
       />
 
@@ -165,12 +171,6 @@ export default function SendSmsOnlinePost() {
           throttles.
         </LI>
       </UL>
-
-      <BlogFigure
-        src="/blog/send-sms-online-api-developer.jpg"
-        alt="Abstract close-up of a dark mechanical keyboard at a dramatic side angle, with individual keys glowing in soft muted emerald light against a deep navy background in shallow depth of field."
-        caption="What the API path looks like in practice: a single POST, a template ID, and variables that match a DLT-approved body. Delivery receipts stream back over webhooks."
-      />
 
       <Callout variant="tip" title="Start here">
         Our <A href="/developers/quickstart/">Quickstart</A> gets you from signup to first SMS in
@@ -251,6 +251,12 @@ export default function SendSmsOnlinePost() {
           keyword instruction, and you must honour opt-outs within 24 hours.
         </LI>
       </OL>
+
+      <BlogFigure
+        src="/blog/legal-requirements-sms-india.webp"
+        alt="Summary of the legal requirements for sending SMS online in India — DLT registration, consent, NCPR scrub, send windows, and unsubscribe mechanism."
+        caption="All five rules apply regardless of which method you use. A compliant SMS platform handles NCPR scrub and send-window enforcement automatically — DLT registration and consent are on you."
+      />
 
       <H2 id="faq">FAQ</H2>
       <H3>Can I send SMS online for free?</H3>
