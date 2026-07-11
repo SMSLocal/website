@@ -6,7 +6,7 @@ import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { RelatedContent } from "@/components/shared/related-content"
 import { Faq, ProductFinalCta, Section } from "@/components/product/product-page"
-import { PricingTabs } from "@/components/pricing/pricing-tabs"
+import { PricingTabs } from "@/components/lazy"
 import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 import { getPageMetadata } from "@/lib/seo"
 

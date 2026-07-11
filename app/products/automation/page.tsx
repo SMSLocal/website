@@ -28,8 +28,7 @@ import {
   SectionHeader,
 } from "@/components/product/product-page"
 import { FinalCtaBoxless } from "@/components/shared/final-cta-boxless"
-import { AutomationVisual } from "@/components/product/automation-visual"
-import { AutomationChatbotWidget } from "@/components/product/automation-chatbot-widget"
+import { AutomationChatbotWidget, AutomationVisual } from "@/components/lazy"
 import { AutomationTestimonials } from "@/components/product/automation-testimonials"
 import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
 

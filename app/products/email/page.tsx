@@ -48,8 +48,7 @@ import {
   Section,
   SectionHeader,
 } from "@/components/product/product-page"
-import { EmailInboxVisual } from "@/components/product/email-inbox-visual"
-import { CollabLaptopVisual } from "@/components/product/collab-laptop-visual"
+import { CollabLaptopVisual, EmailInboxVisual } from "@/components/lazy"
 import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = getPageMetadata("/products/email")

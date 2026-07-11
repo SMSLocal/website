@@ -33,9 +33,7 @@ import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { StatusHero } from "@/components/resources/status-hero"
-import { StatusUptimeChart } from "@/components/resources/status-uptime-chart"
-import { StatusMonitor } from "@/components/resources/status-monitor"
-import { ChangelogSubscribe } from "@/components/resources/changelog-subscribe"
+import { ChangelogSubscribe, StatusMonitor, StatusUptimeChart } from "@/components/lazy"
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = getPageMetadata("/resources/status")

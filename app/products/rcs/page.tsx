@@ -30,7 +30,7 @@ import {
   RCS_PLANS,
   SMSLOCAL_RCS_RATE,
 } from "@/lib/pricing/rcs"
-import { RcsCalculator } from "@/components/pricing/rcs-calculator"
+import { RcsCalculator, RcsVisual } from "@/components/lazy"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
@@ -50,7 +50,6 @@ import {
   Section,
   SectionHeader,
 } from "@/components/product/product-page"
-import { RcsVisual } from "@/components/product/rcs-visual"
 import { CodeTabs } from "@/components/product/code-tabs"
 import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
 

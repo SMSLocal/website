@@ -2,9 +2,8 @@ import type { Metadata } from "next"
 import Link from "next/link"
 import { getPageMetadata } from "@/lib/seo"
 import { ChannelMarquee } from "@/components/product/channel-marquee"
-import { TeamCollabPhone } from "@/components/product/team-collab-phone"
 import { TeamFeatureList } from "@/components/product/team-feature-list"
-import { InboxFinalCta } from "@/components/product/inbox-final-cta"
+import { InboxFinalCta, InboxVisual, TeamCollabPhone } from "@/components/lazy"
 import {
   Facebook,
   Instagram,
@@ -29,7 +28,6 @@ import {
   Section,
   SectionHeader,
 } from "@/components/product/product-page"
-import { InboxVisual } from "@/components/product/inbox-visual"
 import { InboxFaq } from "@/components/product/inbox-faq"
 import { InboxTestimonials } from "@/components/product/inbox-testimonials"
 import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"

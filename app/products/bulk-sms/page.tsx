@@ -31,7 +31,7 @@ import {
   TechnicalBlock,
   UseCasesGrid,
 } from "@/components/product/product-page"
-import { BulkSmsVisual } from "@/components/product/bulk-sms-visual"
+import { BulkSmsVisual } from "@/components/lazy"
 import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
 
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────

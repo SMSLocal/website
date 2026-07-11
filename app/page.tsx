@@ -16,7 +16,7 @@ import { StatsStrip } from "@/components/landing/stats-strip"
 import { FaqSection } from "@/components/landing/faq-section"
 import { FaqJsonLd } from "@/components/seo/json-ld"
 import { TestHero } from "@/components/test-home/test-hero"
-import { AiShowcase } from "@/components/test-home/ai-showcase"
+import { AiShowcase } from "@/components/lazy"
 
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
 export const metadata: Metadata = getPageMetadata("/")

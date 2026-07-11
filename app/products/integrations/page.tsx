@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
-import { IntegrationsStackPage } from "@/components/product/integrations-stack"
+import { IntegrationsStackPage } from "@/components/lazy"
 
 export const metadata: Metadata = {
   title: "Integrations — Connect SMSLocal to Your Stack | SMSLocal",

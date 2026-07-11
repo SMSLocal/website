@@ -36,7 +36,7 @@ import {
   SectionHeader,
   UseCasesGrid,
 } from "@/components/product/product-page"
-import { LiveChatVisual } from "../../../components/product/livechat-visual"
+import { LiveChatVisual } from "@/components/lazy"
 import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
 
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────

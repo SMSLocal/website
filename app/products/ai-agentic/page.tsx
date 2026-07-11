@@ -41,7 +41,7 @@ import {
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
-import { AiAgenticVisual } from "@/components/product/ai-agentic-visual"
+import { AiAgenticVisual } from "@/components/lazy"
 
 export const metadata: Metadata = getPageMetadata("/products/ai-agentic")
 

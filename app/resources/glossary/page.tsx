@@ -11,7 +11,7 @@ import {
   SectionHeader,
 } from "@/components/product/product-page"
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
-import { GlossaryBrowser } from "@/components/glossary/glossary-browser"
+import { GlossaryBrowser } from "@/components/lazy"
 import {
   FEATURED_TERM_SLUGS,
   GLOSSARY_CATEGORIES,
