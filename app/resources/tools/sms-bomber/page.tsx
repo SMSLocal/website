@@ -20,9 +20,21 @@ import {
   Section,
   SectionHeader,
 } from "@/components/product/product-page"
+import dynamic from "next/dynamic"
 import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
-import { SmsBomberSimulator } from "@/components/tools/sms-bomber-simulator"
 import { getPageMetadata } from "@/lib/seo"
+
+// Lazy-loaded: keeps the 899-line interactive widget out of the initial HTML
+// and JS bundle so the above-the-fold hero text paints immediately.
+const SmsBomberSimulator = dynamic(
+  () => import("@/components/tools/sms-bomber-simulator").then((m) => m.SmsBomberSimulator),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="mx-auto mt-10 h-[480px] max-w-6xl animate-pulse rounded-2xl bg-muted" />
+    ),
+  },
+)
 
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
 export const metadata: Metadata = getPageMetadata("/resources/tools/sms-bomber")

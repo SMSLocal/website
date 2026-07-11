@@ -206,6 +206,12 @@ const nextConfig = {
         destination: "/resources/help/",
         permanent: true,
       },
+      // /help/:path* — old URLs Google indexed for individual help articles.
+      {
+        source: "/help/:path*",
+        destination: "/resources/help/:path*",
+        permanent: true,
+      },
       // DLT compliance content lives in the blog.
       {
         source: "/resources/dlt-compliance",
