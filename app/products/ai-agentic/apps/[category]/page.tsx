@@ -18,8 +18,9 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const { category } = await params
   const cat = getAppCategoryBySlug(category)
   if (!cat) return {}
+  const pageTitle = `${cat.label} Integrations — Captain AI | SMSLocal`
   return {
-    title: `${cat.label} Integrations — Captain AI | SMSLocal`,
+    title: { absolute: pageTitle },
     description: cat.desc,
     alternates: {
       canonical: `/products/ai-agentic/apps/${category}/`,
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     openGraph: {
       type: "website",
       url: `/products/ai-agentic/apps/${category}/`,
-      title: `${cat.label} Integrations — Captain AI | SMSLocal`,
+      title: pageTitle,
       description: cat.desc,
       siteName: "SMSLocal",
     },
