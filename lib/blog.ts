@@ -129,7 +129,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       readingTime: "11 min read",
       category: "Compliance",
       author: TEAM,
-      coverImage: "/blog/dnd-services-cover.svg",
+      coverImage: "/blog/dnd-services-for-sms-senders-compliance-guide-hero.webp",
       coverAlt:
         "Portrait of a focused Indian woman compliance analyst in professional attire, seated thoughtfully at a modern office desk with a blurred leafy plant and warm lamp glow behind her.",
       toc: [

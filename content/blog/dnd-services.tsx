@@ -46,6 +46,12 @@ export default function DndServicesPost() {
         TRAI can blacklist your company from sending SMS entirely.
       </P>
 
+      <BlogFigure
+        src="/blog/what-dnd-means-for-senders.webp"
+        alt="Illustration explaining what India's DND (Do Not Disturb) regulation means for SMS senders — the legal obligation to scrub recipient lists against the NCPR before every promotional send."
+        caption="DND isn't optional for senders. Every promotional SMS must be scrubbed against the National Customer Preference Register before it leaves your platform."
+      />
+
       <H2 id="how-scrubbing-works">How scrubbing actually works</H2>
       <P>
         Scrubbing happens in two places:
@@ -69,9 +75,9 @@ export default function DndServicesPost() {
       </Callout>
 
       <BlogFigure
-        src="/blog/dnd-services-queue-dashboard.jpg"
-        alt="Abstract macro photograph of warm amber and muted emerald light strands flowing diagonally across a deep navy background, evoking data streams and message queues."
-        caption="Sender-side scrub surfaced in the dashboard. You want the filtered count visible on every send — not buried in logs you check after the damage is done."
+        src="/blog/how-scrubbing-works.webp"
+        alt="Diagram showing how DND scrubbing works in India — sender-side NCPR scrub before submission and operator-side scrub at the gateway, with violations logged against the sender's header."
+        caption="Scrubbing happens twice: once on your platform before submission, and again at the operator gateway. Every drop at the gateway is a logged violation against your header."
       />
 
       <H2 id="promotional-vs-transactional">Promotional vs. transactional — the DND boundary</H2>
@@ -138,6 +144,12 @@ export default function DndServicesPost() {
         single number at <A href="https://www.trai.gov.in/">trai.gov.in</A>. Not suitable for
         list-scale work.
       </P>
+
+      <BlogFigure
+        src="/blog/how-to-check-dnd-status.webp"
+        alt="Step-by-step guide on how to check DND status of a mobile number in India — using an SMS provider dashboard, TRAI's NCPR API, or trai.gov.in for individual lookups."
+        caption="For production sends, let your SMS provider handle NCPR scrub automatically. Manual trai.gov.in checks are only useful for investigating individual complaints."
+      />
 
       <H2 id="send-windows">Send windows: when you can send what</H2>
       <P>
@@ -214,12 +226,6 @@ export default function DndServicesPost() {
         caption="TRAI&apos;s enforcement has real teeth — violations compound fast."
       />
 
-      <BlogFigure
-        src="/blog/dnd-services-compliance-review.jpg"
-        alt="Portrait of a professional Indian woman in her 30s standing in a softly lit modern office, arms lightly crossed, looking toward the window with a thoughtful expression."
-        caption="The fastest way to stay out of violation territory is a human review before every major campaign. It takes ten minutes and saves header suspensions."
-      />
-
       <H2 id="practical-playbook">Practical playbook: staying compliant</H2>
       <OL>
         <LI>
@@ -289,6 +295,12 @@ export default function DndServicesPost() {
         Repeat violations can extend to 90 days or result in permanent PE blacklisting. The
         re-instatement window is usually 15–30 days from the date of suspension notice.
       </Callout>
+
+      <BlogFigure
+        src="/blog/how-to-recover-a-suspended-sender-id.webp"
+        alt="Step-by-step guide on how to recover a suspended DLT sender ID in India — confirming the suspension, identifying the violation, filing a re-instatement request, and fixing the root cause."
+        caption="Recovery from a suspended header follows a defined process: confirm on the DLT portal, attach scrub logs and consent records, and fix the root cause before re-instating."
+      />
 
       <H2 id="dpdp-consent">Consent in 2026 — DPDP Act adds a new layer</H2>
       <P>
