@@ -7,7 +7,7 @@ import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { ProductFinalCta } from "@/components/product/product-page"
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 import { BlogCard } from "@/components/blog/blog-card"
 import { BlogToc } from "@/components/blog/blog-toc"
 import { ALL_POSTS, formatBlogDate, getPost, getRelatedPosts } from "@/lib/blog"
@@ -70,6 +70,10 @@ export default async function BlogPostPage({
           { name: meta.title, path: `/blog/${meta.slug}/` },
         ]}
       />
+
+      {meta.faqItems && meta.faqItems.length > 0 && (
+        <FaqJsonLd items={meta.faqItems} path={`/blog/${meta.slug}/`} />
+      )}
 
       <script
         type="application/ld+json"

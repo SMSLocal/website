@@ -1,16 +1,14 @@
-import Script from "next/script"
 import { SITE, absoluteUrl } from "@/lib/seo/config"
 
 const SITE_URL = SITE.url
 
 type Crumb = { name: string; path: string }
 
-function JsonLd({ id, data }: { id: string; data: Record<string, unknown> }) {
+// Server-rendered inline script — crawled immediately from HTML, no JS execution needed.
+function JsonLd({ data }: { data: Record<string, unknown> }) {
   return (
-    <Script
-      id={id}
+    <script
       type="application/ld+json"
-      strategy="afterInteractive"
       // eslint-disable-next-line react/no-danger
       dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
     />
@@ -58,8 +56,8 @@ export function OrganizationJsonLd() {
 
   return (
     <>
-      <JsonLd id="ld-organization" data={organization} />
-      <JsonLd id="ld-website" data={website} />
+      <JsonLd data={organization} />
+      <JsonLd data={website} />
     </>
   )
 }
@@ -78,7 +76,7 @@ export function BreadcrumbJsonLd({ crumbs }: { crumbs: Crumb[] }) {
       item: `${SITE_URL}${c.path}`,
     })),
   }
-  return <JsonLd id={`ld-breadcrumb-${crumbs[crumbs.length - 1]?.path ?? "root"}`} data={data} />
+  return <JsonLd data={data} />
 }
 
 /**
@@ -107,7 +105,7 @@ export function ProductServiceJsonLd({
     areaServed: { "@type": "Country", name: "India" },
     category,
   }
-  return <JsonLd id={`ld-service-${path}`} data={data} />
+  return <JsonLd data={data} />
 }
 
 /**
@@ -123,7 +121,7 @@ export function FaqJsonLd({ items, path }: { items: { q: string; a: string }[]; 
       acceptedAnswer: { "@type": "Answer", text: item.a },
     })),
   }
-  return <JsonLd id={`ld-faq-${path}`} data={data} />
+  return <JsonLd data={data} />
 }
 
 /**
@@ -165,7 +163,7 @@ export function ArticleJsonLd({
     publisher: { "@id": `${SITE_URL}/#organization` },
     inLanguage: SITE.htmlLang,
   }
-  return <JsonLd id={`ld-article-${path}`} data={data} />
+  return <JsonLd data={data} />
 }
 
 /**
@@ -200,7 +198,7 @@ export function HowToJsonLd({
       text: s.text,
     })),
   }
-  return <JsonLd id={`ld-howto-${path}`} data={data} />
+  return <JsonLd data={data} />
 }
 
 /**
@@ -228,5 +226,5 @@ export function ItemListJsonLd({
       url: `${SITE_URL}${it.path}`,
     })),
   }
-  return <JsonLd id={`ld-itemlist-${path}`} data={data} />
+  return <JsonLd data={data} />
 }
