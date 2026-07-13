@@ -716,11 +716,11 @@ function Faq() {
 }
 
 /* ─── MAIN ──────────────────────────────────────────────────────────────── */
-export function IntegrationsStackPage() {
+export function IntegrationsStackPage({ hideHero }: { hideHero?: boolean } = {}) {
   return (
     <>
       {/* ── HERO ──────────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden bg-[oklch(0.13_0.02_230)] py-10 sm:py-16">
+      <section className={`relative overflow-hidden bg-[oklch(0.13_0.02_230)] py-10 sm:py-16${hideHero ? " hidden" : ""}`}>
         {/* dark glow blobs */}
         <div aria-hidden className="pointer-events-none absolute -top-32 left-[15%] h-[480px] w-[480px] rounded-full opacity-25 blur-3xl"
           style={{ background: "radial-gradient(circle, color-mix(in oklch, var(--primary) 50%, transparent), transparent 70%)" }} />
@@ -731,12 +731,12 @@ export function IntegrationsStackPage() {
             <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-3.5 py-1.5 text-[12px] font-semibold text-primary">
               <Puzzle className="h-3.5 w-3.5" /> Integrations · 30+ apps · OAuth in one click
             </div>
-            <h1 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-[48px] lg:leading-[1.06]">
+            <h2 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-[48px] lg:leading-[1.06]">
               Connect SMSLocal to your{" "}
               <span style={{ background: "linear-gradient(135deg,var(--primary),oklch(0.72 0.17 165))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
                 stack.
               </span>
-            </h1>
+            </h2>
             <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-white/60">
               Shopify, HubSpot, Salesforce, Slack, Zapier and more — 1-click OAuth on Starter.
               Plus 10 native channels (SMS, WhatsApp, RCS, OTP) and a full REST API.
