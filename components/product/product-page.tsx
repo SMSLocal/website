@@ -728,6 +728,7 @@ export function ProductEditorialBand({
               sizes="(min-width: 1280px) 1216px, 100vw"
               className="h-auto w-full"
               priority
+              unoptimized={src.endsWith(".svg")}
             />
             <div
               aria-hidden
@@ -756,6 +757,7 @@ export function ProductEditorialBand({
           fill
           sizes="100vw"
           className="object-cover"
+          unoptimized={src.endsWith(".svg")}
         />
         <div
           aria-hidden
