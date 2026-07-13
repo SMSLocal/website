@@ -24,12 +24,11 @@ const BLOCKED_DEFAULT = [...SITE.noIndexRoutes, "/_next/", "/dev/"]
 // scrapers — they're tools the site owner is actively using.
 // SemrushBot covers the main Semrush index; SiteAuditBot is the dedicated
 // Site Audit crawler that fetches /siteaudit-*.txt for verification and
-// then crawls pages on demand. Both must NOT appear in BLOCKED_BOTS, and
-// runtime overrides also strip them out (see `blockedBots` below).
-const ALLOWED_AUDIT_BOTS = ["SemrushBot", "SiteAuditBot"]
+// then crawls pages on demand. AhrefsBot must be allowed so it can fetch
+// the IndexNow key file for validation. All must NOT appear in BLOCKED_BOTS.
+const ALLOWED_AUDIT_BOTS = ["SemrushBot", "SiteAuditBot", "AhrefsBot"]
 
 const BLOCKED_BOTS = [
-  "AhrefsBot",
   "MJ12bot",
   "DotBot",
   "BLEXBot",
