@@ -184,7 +184,7 @@ export default function QuickSmsPage() {
         </Section>
 
         <ProductEditorialBand
-          src="/products/quick-sms-editorial.jpg"
+          src="/products/quick-sms-editorial.svg"
           alt="Indian operations manager at a bright coworking-space desk, leaning toward a laptop displaying a no-code campaign composer with a CSV preview."
           eyebrow="No code, no wait"
           headline="Upload, compose, schedule — live in the time it takes to make tea."

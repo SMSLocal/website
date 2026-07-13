@@ -140,7 +140,7 @@ export default function WhatsAppPage() {
         />
 
         <ProductEditorialBand
-          src="/products/whatsapp-business-editorial.jpg"
+          src="/products/whatsapp-business-editorial.svg"
           alt="Indian small-business shop owner at her boutique counter, smiling at a smartphone displaying a WhatsApp-style chat thread, with a warm richly-textured shop background."
           eyebrow="WhatsApp in practice"
           headline="The way your customers already talk — now wired into your systems."

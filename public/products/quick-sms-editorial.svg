@@ -1,0 +1,297 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2100 900" width="2100" height="900" role="img" aria-label="Quick SMS no-code campaign composer interface showing CSV upload, contact list, and scheduled bulk SMS send">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#051812"/>
+      <stop offset="60%" stop-color="#061b17"/>
+      <stop offset="100%" stop-color="#04120f"/>
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d2e25"/>
+      <stop offset="100%" stop-color="#0a2420"/>
+    </linearGradient>
+    <linearGradient id="btn-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+    <linearGradient id="progress-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="card-shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="16" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+    <clipPath id="card-clip">
+      <rect x="580" y="80" width="1400" height="740" rx="16"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2100" height="900" fill="url(#bg)"/>
+  <rect width="2100" height="900" fill="url(#grid)"/>
+
+  <!-- Ambient glow -->
+  <ellipse cx="1400" cy="450" rx="600" ry="350" fill="rgba(16,185,129,0.06)" filter="url(#glow)"/>
+  <ellipse cx="900" cy="200" rx="300" ry="200" fill="rgba(16,185,129,0.04)"/>
+
+  <!-- ===== LEFT COLUMN: Step indicators ===== -->
+  <!-- Step 1: Upload CSV -->
+  <g transform="translate(80, 140)">
+    <circle cx="24" cy="24" r="24" fill="#10b981" opacity="0.15"/>
+    <circle cx="24" cy="24" r="16" fill="#10b981" opacity="0.25"/>
+    <text x="24" y="29" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#10b981">1</text>
+    <text x="56" y="20" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.9)">Upload CSV</text>
+    <text x="56" y="38" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.45)">Drag-and-drop contacts</text>
+  </g>
+  <!-- Connector line -->
+  <line x1="104" y1="218" x2="104" y2="258" stroke="rgba(16,185,129,0.3)" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Step 2: Compose Message -->
+  <g transform="translate(80, 270)">
+    <circle cx="24" cy="24" r="24" fill="#10b981" opacity="0.15"/>
+    <circle cx="24" cy="24" r="16" fill="#10b981" opacity="0.25"/>
+    <text x="24" y="29" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#10b981">2</text>
+    <text x="56" y="20" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.9)">Compose</text>
+    <text x="56" y="38" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.45)">With variables &amp; DLT ID</text>
+  </g>
+  <!-- Connector line -->
+  <line x1="104" y1="348" x2="104" y2="388" stroke="rgba(16,185,129,0.3)" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Step 3: Schedule -->
+  <g transform="translate(80, 400)">
+    <circle cx="24" cy="24" r="24" fill="#10b981" opacity="0.15"/>
+    <circle cx="24" cy="24" r="16" fill="#10b981" opacity="0.25"/>
+    <text x="24" y="29" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#10b981">3</text>
+    <text x="56" y="20" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.9)">Schedule</text>
+    <text x="56" y="38" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.45)">Pick date, time &amp; timezone</text>
+  </g>
+  <!-- Connector line -->
+  <line x1="104" y1="478" x2="104" y2="518" stroke="rgba(16,185,129,0.3)" stroke-width="2" stroke-dasharray="4,4"/>
+
+  <!-- Step 4: Go Live -->
+  <g transform="translate(80, 530)">
+    <circle cx="24" cy="24" r="24" fill="#10b981" opacity="0.3"/>
+    <circle cx="24" cy="24" r="16" fill="#10b981" opacity="0.6"/>
+    <text x="24" y="29" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="#fff">4</text>
+    <text x="56" y="20" font-family="system-ui,sans-serif" font-size="14" font-weight="600" fill="#10b981">Go live</text>
+    <text x="56" y="38" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.45)">Real-time delivery reports</text>
+  </g>
+
+  <!-- ===== MAIN CARD: Campaign Composer ===== -->
+  <g filter="url(#card-shadow)">
+    <rect x="580" y="80" width="1400" height="740" rx="16" fill="#0d2820" stroke="rgba(16,185,129,0.2)" stroke-width="1"/>
+  </g>
+
+  <!-- Card top bar -->
+  <rect x="580" y="80" width="1400" height="52" rx="16" fill="#0a2018"/>
+  <rect x="580" y="112" width="1400" height="20" fill="#0a2018"/>
+  <!-- Window dots -->
+  <circle cx="612" cy="106" r="6" fill="#ff5f57"/>
+  <circle cx="634" cy="106" r="6" fill="#febc2e"/>
+  <circle cx="656" cy="106" r="6" fill="#28c840"/>
+  <!-- Tab bar -->
+  <text x="690" y="112" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.9)">New Campaign</text>
+  <line x1="690" y1="132" x2="800" y2="132" stroke="#10b981" stroke-width="2"/>
+  <text x="830" y="112" font-family="system-ui,sans-serif" font-size="13" fill="rgba(255,255,255,0.4)">Drafts (3)</text>
+  <text x="930" y="112" font-family="system-ui,sans-serif" font-size="13" fill="rgba(255,255,255,0.4)">Scheduled (7)</text>
+  <text x="1060" y="112" font-family="system-ui,sans-serif" font-size="13" fill="rgba(255,255,255,0.4)">Reports</text>
+
+  <!-- ===== LEFT PANEL: CSV Upload ===== -->
+  <rect x="596" y="148" width="460" height="320" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="616" y="178" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="1">CONTACTS</text>
+
+  <!-- CSV drop zone -->
+  <rect x="612" y="190" width="428" height="100" rx="8" fill="rgba(16,185,129,0.05)" stroke="rgba(16,185,129,0.3)" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <!-- Upload icon -->
+  <path d="M826 228 L826 218 M820 224 L826 218 L832 224" stroke="rgba(16,185,129,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <rect x="818" y="232" width="16" height="2" rx="1" fill="rgba(16,185,129,0.4)"/>
+  <text x="826" y="262" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="rgba(255,255,255,0.7)">Drop CSV or click to upload</text>
+  <text x="826" y="280" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.35)">Supports .csv, .xlsx — up to 5,00,000 rows</text>
+
+  <!-- Uploaded file indicator -->
+  <rect x="612" y="300" width="428" height="40" rx="6" fill="rgba(16,185,129,0.1)" stroke="rgba(16,185,129,0.25)" stroke-width="1"/>
+  <rect x="624" y="312" width="16" height="16" rx="3" fill="rgba(16,185,129,0.4)"/>
+  <text x="648" y="325" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.85)">diwali_campaign_contacts.csv</text>
+  <text x="648" y="338" font-family="system-ui,sans-serif" font-size="11" fill="rgba(16,185,129,0.9)">✓  1,24,388 contacts loaded</text>
+  <text x="970" y="325" text-anchor="end" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.3)">4.2 MB</text>
+
+  <!-- Column mapping -->
+  <text x="616" y="366" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.4)" letter-spacing="0.5">COLUMN MAPPING</text>
+  <!-- Mapping rows -->
+  <g transform="translate(612, 378)">
+    <!-- Row 1 -->
+    <rect width="200" height="28" rx="5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="10" y="18" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.55)">mobile_number</text>
+    <text x="220" y="18" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.3)">→</text>
+    <rect x="244" width="196" height="28" rx="5" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.25)" stroke-width="1"/>
+    <text x="254" y="18" font-family="system-ui,sans-serif" font-size="11" fill="#10b981">Phone number</text>
+  </g>
+  <g transform="translate(612, 412)">
+    <rect width="200" height="28" rx="5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="10" y="18" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.55)">customer_name</text>
+    <text x="220" y="18" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.3)">→</text>
+    <rect x="244" width="196" height="28" rx="5" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.25)" stroke-width="1"/>
+    <text x="254" y="18" font-family="system-ui,sans-serif" font-size="11" fill="#10b981">&#123;&#123;name&#125;&#125; variable</text>
+  </g>
+  <g transform="translate(612, 446)">
+    <rect width="200" height="28" rx="5" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+    <text x="10" y="18" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.55)">discount_code</text>
+    <text x="220" y="18" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.3)">→</text>
+    <rect x="244" width="196" height="28" rx="5" fill="rgba(16,185,129,0.12)" stroke="rgba(16,185,129,0.25)" stroke-width="1"/>
+    <text x="254" y="18" font-family="system-ui,sans-serif" font-size="11" fill="#10b981">&#123;&#123;code&#125;&#125; variable</text>
+  </g>
+
+  <!-- ===== MIDDLE PANEL: Message Composer ===== -->
+  <rect x="1076" y="148" width="460" height="320" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="1096" y="178" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="1">MESSAGE</text>
+
+  <!-- DLT badge -->
+  <rect x="1350" y="162" width="168" height="24" rx="12" fill="rgba(16,185,129,0.1)" stroke="rgba(16,185,129,0.3)" stroke-width="1"/>
+  <text x="1434" y="178" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#10b981">✓ DLT ID linked</text>
+
+  <!-- Sender ID row -->
+  <text x="1096" y="208" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Sender ID</text>
+  <rect x="1096" y="214" width="428" height="32" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="1108" y="234" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.7)">SMSLTD</text>
+  <text x="1360" y="234" font-family="system-ui,sans-serif" font-size="11" fill="rgba(16,185,129,0.8)">Transactional</text>
+
+  <!-- Message body -->
+  <text x="1096" y="264" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Message body</text>
+  <rect x="1096" y="270" width="428" height="120" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="1108" y="292" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">Hi </text>
+  <text x="1126" y="292" font-family="system-ui,sans-serif" font-size="12" fill="#34d399">&#123;&#123;name&#125;&#125;</text>
+  <text x="1174" y="292" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">, this Diwali get </text>
+  <text x="1318" y="292" font-family="system-ui,sans-serif" font-size="12" fill="#34d399">&#123;&#123;discount&#125;&#125;</text>
+  <text x="1108" y="312" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">off your next order. Use code </text>
+  <text x="1338" y="312" font-family="system-ui,sans-serif" font-size="12" fill="#34d399">&#123;&#123;code&#125;&#125;</text>
+  <text x="1108" y="332" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.8)">Valid till 2 Nov. -SMSLTD</text>
+  <!-- Char count -->
+  <text x="1514" y="382" text-anchor="end" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.35)">148 / 160 chars · 1 SMS</text>
+
+  <!-- Preview badge -->
+  <rect x="1096" y="400" width="428" height="52" rx="6" fill="rgba(0,0,0,0.3)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="1108" y="420" font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.35)" letter-spacing="0.5">PREVIEW — SMSLTD</text>
+  <text x="1108" y="438" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.7)">Hi Priya, this Diwali get 20% off your next order...</text>
+
+  <!-- ===== RIGHT PANEL: Schedule ===== -->
+  <rect x="1556" y="148" width="404" height="320" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <text x="1576" y="178" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="rgba(255,255,255,0.5)" letter-spacing="1">SCHEDULE</text>
+
+  <!-- Date picker mockup -->
+  <rect x="1572" y="190" width="372" height="168" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <!-- Month header -->
+  <text x="1758" y="210" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.8)">October 2026</text>
+  <!-- Day labels -->
+  <g font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.35)" text-anchor="middle">
+    <text x="1598" y="228">Su</text><text x="1638" y="228">Mo</text><text x="1678" y="228">Tu</text>
+    <text x="1718" y="228">We</text><text x="1758" y="228">Th</text><text x="1798" y="228">Fr</text><text x="1838" y="228">Sa</text>
+  </g>
+  <!-- Calendar dates -->
+  <g font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.5)" text-anchor="middle">
+    <!-- Row 1 -->
+    <text x="1678" y="250">1</text><text x="1718" y="250">2</text><text x="1758" y="250">3</text><text x="1798" y="250">4</text><text x="1838" y="250">5</text>
+    <!-- Row 2 -->
+    <text x="1598" y="272">6</text><text x="1638" y="272">7</text><text x="1678" y="272">8</text><text x="1718" y="272">9</text><text x="1758" y="272">10</text><text x="1798" y="272">11</text><text x="1838" y="272">12</text>
+    <!-- Row 3 -->
+    <text x="1598" y="294">13</text><text x="1638" y="294">14</text><text x="1678" y="294">15</text><text x="1718" y="294">16</text><text x="1758" y="294">17</text><text x="1798" y="294">18</text><text x="1838" y="294">19</text>
+    <!-- Row 4 — highlight 20 (Diwali) -->
+    <text x="1598" y="316">20</text><text x="1638" y="316">21</text>
+  </g>
+  <!-- Highlighted date: 29 Oct -->
+  <circle cx="1838" cy="308" r="14" fill="#10b981"/>
+  <text x="1838" y="313" text-anchor="middle" font-family="system-ui,sans-serif" font-size="12" font-weight="700" fill="#fff">29</text>
+  <!-- Diwali indicator -->
+  <circle cx="1598" cy="313" r="3" fill="#f59e0b"/>
+  <text x="1598" y="337" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" fill="#f59e0b">Diwali</text>
+
+  <!-- Time selector -->
+  <text x="1576" y="380" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Send time (IST)</text>
+  <rect x="1572" y="386" width="180" height="32" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="1584" y="406" font-family="system-ui,sans-serif" font-size="13" font-weight="600" fill="rgba(255,255,255,0.85)">09:00 AM</text>
+  <rect x="1764" y="386" width="180" height="32" rx="6" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="1776" y="406" font-family="system-ui,sans-serif" font-size="12" fill="rgba(255,255,255,0.55)">Asia / Kolkata</text>
+
+  <!-- Throttle -->
+  <text x="1576" y="438" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">Send rate</text>
+  <rect x="1572" y="444" width="372" height="6" rx="3" fill="rgba(255,255,255,0.08)"/>
+  <rect x="1572" y="444" width="280" height="6" rx="3" fill="url(#progress-grad)"/>
+  <circle cx="1852" cy="447" r="8" fill="#fff" stroke="#10b981" stroke-width="2"/>
+  <text x="1760" y="468" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">~5,000 SMS / min</text>
+
+  <!-- ===== BOTTOM STATS BAR ===== -->
+  <rect x="596" y="488" width="1380" height="80" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- Stat: Total -->
+  <text x="660" y="516" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">TOTAL</text>
+  <text x="660" y="546" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="rgba(255,255,255,0.9)">1,24,388</text>
+  <line x1="770" y1="500" x2="770" y2="556" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- Stat: Delivered -->
+  <text x="880" y="516" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">DELIVERED</text>
+  <text x="880" y="546" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#10b981">1,21,904</text>
+  <line x1="990" y1="500" x2="990" y2="556" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- Stat: Failed -->
+  <text x="1090" y="516" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">FAILED</text>
+  <text x="1090" y="546" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#f87171">2,484</text>
+  <line x1="1200" y1="500" x2="1200" y2="556" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- Stat: Delivery rate -->
+  <text x="1320" y="516" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">DELIVERY RATE</text>
+  <text x="1320" y="546" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="#10b981">98.0%</text>
+  <line x1="1430" y1="500" x2="1430" y2="556" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- Stat: Cost -->
+  <text x="1570" y="516" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">ESTIMATED COST</text>
+  <text x="1570" y="546" text-anchor="middle" font-family="system-ui,sans-serif" font-size="22" font-weight="700" fill="rgba(255,255,255,0.75)">₹ 870</text>
+  <line x1="1680" y1="500" x2="1680" y2="556" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- Stat: DLT status -->
+  <text x="1810" y="516" text-anchor="middle" font-family="system-ui,sans-serif" font-size="11" fill="rgba(255,255,255,0.4)">DLT STATUS</text>
+  <text x="1810" y="546" text-anchor="middle" font-family="system-ui,sans-serif" font-size="18" font-weight="700" fill="#10b981">Approved</text>
+
+  <!-- ===== SEND BUTTON ===== -->
+  <rect x="596" y="590" width="670" height="52" rx="10" fill="url(#btn-grad)" filter="url(#glow)"/>
+  <text x="931" y="621" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="700" fill="#fff">Schedule Campaign — 29 Oct, 9:00 AM IST</text>
+
+  <!-- Save draft -->
+  <rect x="1286" y="590" width="690" height="52" rx="10" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="1631" y="621" text-anchor="middle" font-family="system-ui,sans-serif" font-size="15" font-weight="600" fill="rgba(255,255,255,0.6)">Save as draft</text>
+
+  <!-- ===== DELIVERY LIVE GRAPH ===== -->
+  <rect x="596" y="662" width="1380" height="140" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+  <text x="616" y="686" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.4)" letter-spacing="1">LIVE DELIVERY CHART</text>
+  <!-- Graph lines -->
+  <polyline points="620,790 680,770 740,750 800,730 860,710 920,695 980,682 1040,672 1100,665 1160,660 1220,658 1280,656 1340,655 1400,654 1460,654 1520,653 1580,653 1640,653 1700,652 1760,651 1820,651 1880,651 1940,651 1960,651" fill="none" stroke="rgba(16,185,129,0.25)" stroke-width="1"/>
+  <polyline points="620,790 680,770 740,750 800,730 860,710 920,695 980,682 1040,672 1100,665 1160,660 1220,658 1280,656 1340,655 1400,654 1460,654 1520,653 1580,653 1640,653 1700,652 1760,651 1820,651 1880,651 1940,651 1960,651" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Area fill -->
+  <polygon points="620,800 620,790 680,770 740,750 800,730 860,710 920,695 980,682 1040,672 1100,665 1160,660 1220,658 1280,656 1340,655 1400,654 1460,654 1520,653 1580,653 1640,653 1700,652 1760,651 1820,651 1880,651 1940,651 1960,651 1960,800" fill="rgba(16,185,129,0.06)"/>
+  <!-- Live indicator -->
+  <circle cx="1960" cy="651" r="5" fill="#10b981"/>
+  <circle cx="1960" cy="651" r="10" fill="rgba(16,185,129,0.3)"/>
+  <text x="1930" y="645" text-anchor="end" font-family="system-ui,sans-serif" font-size="10" fill="#10b981">LIVE</text>
+
+  <!-- Grid lines for graph -->
+  <line x1="620" y1="760" x2="1960" y2="760" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="620" y1="720" x2="1960" y2="720" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+  <line x1="620" y1="680" x2="1960" y2="680" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+  <!-- X-axis time labels -->
+  <g font-family="system-ui,sans-serif" font-size="10" fill="rgba(255,255,255,0.25)" text-anchor="middle">
+    <text x="620" y="810">9:00</text>
+    <text x="790" y="810">9:15</text>
+    <text x="960" y="810">9:30</text>
+    <text x="1130" y="810">9:45</text>
+    <text x="1300" y="810">10:00</text>
+    <text x="1470" y="810">10:15</text>
+    <text x="1640" y="810">10:30</text>
+    <text x="1810" y="810">10:45</text>
+  </g>
+</svg>
