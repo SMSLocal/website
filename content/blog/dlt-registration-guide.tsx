@@ -14,6 +14,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function DltRegistrationGuide() {
   return (
@@ -404,33 +405,28 @@ export default function DltRegistrationGuide() {
       </Blockquote>
 
       <H2 id="faq">FAQ</H2>
-      <H3>Can I start sending SMS while waiting for approval?</H3>
-      <P>No. Any send before PE + Header + Template approval will be rejected at the gateway.</P>
-
-      <H3>Do I need separate PE for a subsidiary?</H3>
-      <P>
-        Yes. Each legal entity (separate CoI) registers its own PE. You can share the AR, but the
-        entity records stay separate.
-      </P>
-
-      <H3>What if we change our company name after approval?</H3>
-      <P>
-        Submit an amendment on the DLT portal with the updated CoI. Your existing Headers keep
-        working during the amendment review.
-      </P>
-
-      <H3>Can international companies register as PE?</H3>
-      <P>
-        Typically no — you&apos;ll need an Indian legal entity (subsidiary, branch office, or LLP).
-        Some operators let you register as a foreign entity with additional paperwork; most find
-        it simpler to incorporate locally.
-      </P>
-
-      <H3>How do I handle multiple brands under one company?</H3>
-      <P>
-        Register one PE, and register a separate Header for each brand. Templates are filed per
-        Header, so you can keep brand voices separate.
-      </P>
+      <BlogFaq>
+        <BlogFaqItem q={"Can I start sending SMS while waiting for approval?"}>
+          No. Any send before PE + Header + Template approval will be rejected at the gateway.
+        </BlogFaqItem>
+        <BlogFaqItem q={"Do I need separate PE for a subsidiary?"}>
+          Yes. Each legal entity (separate CoI) registers its own PE. You can share the AR, but the
+          entity records stay separate.
+        </BlogFaqItem>
+        <BlogFaqItem q={"What if we change our company name after approval?"}>
+          Submit an amendment on the DLT portal with the updated CoI. Your existing Headers keep
+          working during the amendment review.
+        </BlogFaqItem>
+        <BlogFaqItem q={"Can international companies register as PE?"}>
+          Typically no — you&apos;ll need an Indian legal entity (subsidiary, branch office, or LLP).
+          Some operators let you register as a foreign entity with additional paperwork; most find
+          it simpler to incorporate locally.
+        </BlogFaqItem>
+        <BlogFaqItem q={"How do I handle multiple brands under one company?"}>
+          Register one PE, and register a separate Header for each brand. Templates are filed per
+          Header, so you can keep brand voices separate.
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Callout variant="tip" title="Need hands-on help?">
         SMSLocal customers on any paid tier get free DLT onboarding support — we handle the PE

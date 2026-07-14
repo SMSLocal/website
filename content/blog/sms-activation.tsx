@@ -14,6 +14,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function SmsActivationPost() {
   return (
@@ -235,37 +236,30 @@ export default function SmsActivationPost() {
       />
 
       <H2 id="faq">FAQ</H2>
-      <H3>My SIM works for calls but not SMS. Why?</H3>
-      <P>
-        Usually a wrong SMSC number on Android or a stuck iMessage registration on iPhone. Work
-        through the device-level checks above first.
-      </P>
-
-      <H3>I switched from iPhone to Android and SMS stopped working.</H3>
-      <P>
-        Known issue — iMessage &quot;captures&quot; your number even after you switch. Fix by
-        going to <A href="https://selfsolve.apple.com/deregister-imessage">Apple&apos;s
-        de-register iMessage page</A> and entering your number.
-      </P>
-
-      <H3>SMS works but sending is stuck at &quot;sending&quot; forever.</H3>
-      <P>
-        This is almost always a wrong SMSC or a network issue. Toggle airplane mode, verify SMSC,
-        and retry. If it keeps happening, delete the stuck message and restart.
-      </P>
-
-      <H3>My phone got a software update and SMS stopped working.</H3>
-      <P>
-        Some updates reset SMSC to a generic default. Re-set your carrier&apos;s SMSC number in
-        Messages → Settings → Advanced. On iPhone, sign out of iMessage and back in.
-      </P>
-
-      <H3>Can I send SMS from a computer?</H3>
-      <P>
-        Yes — using web-to-SMS services, your carrier&apos;s portal, or an API like{" "}
-        <A href="/products/bulk-sms/">SMSLocal Bulk SMS</A>. See our guide on{" "}
-        <A href="/blog/send-sms-online/">sending SMS online</A> for the full breakdown.
-      </P>
+      <BlogFaq>
+        <BlogFaqItem q={"My SIM works for calls but not SMS. Why?"}>
+          Usually a wrong SMSC number on Android or a stuck iMessage registration on iPhone. Work
+          through the device-level checks above first.
+        </BlogFaqItem>
+        <BlogFaqItem q={"I switched from iPhone to Android and SMS stopped working."}>
+          Known issue — iMessage &quot;captures&quot; your number even after you switch. Fix by
+          going to <A href="https://selfsolve.apple.com/deregister-imessage">Apple&apos;s
+          de-register iMessage page</A> and entering your number.
+        </BlogFaqItem>
+        <BlogFaqItem q={"SMS works but sending is stuck at \"sending\" forever."}>
+          This is almost always a wrong SMSC or a network issue. Toggle airplane mode, verify SMSC,
+          and retry. If it keeps happening, delete the stuck message and restart.
+        </BlogFaqItem>
+        <BlogFaqItem q={"My phone got a software update and SMS stopped working."}>
+          Some updates reset SMSC to a generic default. Re-set your carrier&apos;s SMSC number in
+          Messages → Settings → Advanced. On iPhone, sign out of iMessage and back in.
+        </BlogFaqItem>
+        <BlogFaqItem q={"Can I send SMS from a computer?"}>
+          Yes — using web-to-SMS services, your carrier&apos;s portal, or an API like{" "}
+          <A href="/products/bulk-sms/">SMSLocal Bulk SMS</A>. See our guide on{" "}
+          <A href="/blog/send-sms-online/">sending SMS online</A> for the full breakdown.
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Blockquote cite="Support engineer, SMSLocal">
         Half the &quot;SMS broken&quot; tickets we see are solved by airplane-mode toggle. The

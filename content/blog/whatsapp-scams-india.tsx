@@ -12,6 +12,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function WhatsappScamsIndiaPost() {
   return (
@@ -362,43 +363,40 @@ export default function WhatsappScamsIndiaPost() {
       </Callout>
 
       <H2 id="faq">Frequently asked questions</H2>
-      <H3>Can a scammer access my phone just by sending a WhatsApp message?</H3>
-      <P>
-        Not from a text message alone. The danger comes when you click a malicious link (which can
-        install malware or open a phishing page) or voluntarily install an app or APK the scammer
-        recommends. Don&apos;t click links from unknown numbers and never install apps on a
-        stranger&apos;s say-so.
-      </P>
+      <BlogFaq>
+        <BlogFaqItem q={"Can a scammer access my phone just by sending a WhatsApp message?"}>
+          Not from a text message alone. The danger comes when you click a malicious link (which can
+          install malware or open a phishing page) or voluntarily install an app or APK the scammer
+          recommends. Don&apos;t click links from unknown numbers and never install apps on a
+          stranger&apos;s say-so.
+        </BlogFaqItem>
 
-      <H3>Someone added me to a WhatsApp group I didn&apos;t join. Is it a scam?</H3>
-      <P>
-        It may be. Being added without consent — especially to a group promoting investments,
-        jobs, or giveaways — is a common scam setup. Leave immediately and don&apos;t interact.
-        Prevent it in future via WhatsApp Settings → Privacy → Groups → &quot;My Contacts
-        Only&quot;.
-      </P>
+        <BlogFaqItem q={"Someone added me to a WhatsApp group I didn't join. Is it a scam?"}>
+          It may be. Being added without consent — especially to a group promoting investments,
+          jobs, or giveaways — is a common scam setup. Leave immediately and don&apos;t interact.
+          Prevent it in future via WhatsApp Settings → Privacy → Groups → &quot;My Contacts
+          Only&quot;.
+        </BlogFaqItem>
 
-      <H3>I got a WhatsApp message saying I won a lottery. Is it real?</H3>
-      <P>
-        No. No legitimate lottery notifies winners by WhatsApp from an unknown number. These
-        always ask for a &quot;processing fee&quot; or personal details to &quot;release&quot; the
-        winnings. Block and report.
-      </P>
+        <BlogFaqItem q={"I got a WhatsApp message saying I won a lottery. Is it real?"}>
+          No. No legitimate lottery notifies winners by WhatsApp from an unknown number. These
+          always ask for a &quot;processing fee&quot; or personal details to &quot;release&quot; the
+          winnings. Block and report.
+        </BlogFaqItem>
 
-      <H3>Is a &quot;digital arrest&quot; real?</H3>
-      <P>
-        No. There is no legal concept of digital arrest in India. No police, CBI, or tax officer
-        will arrest, interrogate, or collect a fine over a WhatsApp video call. Disconnect and
-        report it on 1930.
-      </P>
+        <BlogFaqItem q={"Is a \"digital arrest\" real?"}>
+          No. There is no legal concept of digital arrest in India. No police, CBI, or tax officer
+          will arrest, interrogate, or collect a fine over a WhatsApp video call. Disconnect and
+          report it on 1930.
+        </BlogFaqItem>
 
-      <H3>Can I get my money back after a WhatsApp scam?</H3>
-      <P>
-        Possibly, if you act fast. Banks have fraud teams that can sometimes freeze a receiving
-        account before the money moves, and the 1930 helpline has recovered funds for people who
-        called within the first hour. The longer you wait, the lower the odds — fraudsters move
-        money through multiple accounts within minutes.
-      </P>
+        <BlogFaqItem q={"Can I get my money back after a WhatsApp scam?"}>
+          Possibly, if you act fast. Banks have fraud teams that can sometimes freeze a receiving
+          account before the money moves, and the 1930 helpline has recovered funds for people who
+          called within the first hour. The longer you wait, the lower the odds — fraudsters move
+          money through multiple accounts within minutes.
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Callout variant="tip" title="One rule prevents most scams">
         Pause before acting. Every WhatsApp scam works by creating urgency. A real emergency from

@@ -12,6 +12,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function WhatsappMarketingIndiaPost() {
   return (
@@ -374,49 +375,46 @@ export default function WhatsappMarketingIndiaPost() {
       </P>
 
       <H2 id="faq">Frequently asked questions</H2>
-      <H3>Is WhatsApp marketing legal in India?</H3>
-      <P>
+      <BlogFaq>
+      <BlogFaqItem q={"Is WhatsApp marketing legal in India?"}>
         Yes — when you use the official WhatsApp Business API and message only contacts who have
         explicitly opted in. Sending unsolicited bulk messages violates WhatsApp&apos;s Terms and
         can get your number banned.
-      </P>
+      </BlogFaqItem>
 
-      <H3>Do I need DLT registration for WhatsApp marketing in India?</H3>
-      <P>
+      <BlogFaqItem q={"Do I need DLT registration for WhatsApp marketing in India?"}>
         No. DLT registration is a TRAI requirement for SMS, not WhatsApp. WhatsApp is governed by
         Meta&apos;s own Business Policy — you don&apos;t need a DLT sender ID, header, or
         template. You do need explicit opt-in consent, a verified WhatsApp Business Account, and
         approved templates. If you run SMS alongside WhatsApp, read our{" "}
         <A href="/blog/dlt-registration-guide/">DLT registration guide</A> for the SMS compliance
         side.
-      </P>
+      </BlogFaqItem>
 
-      <H3>How is WhatsApp marketing different from bulk WhatsApp messaging?</H3>
-      <P>
+      <BlogFaqItem q={"How is WhatsApp marketing different from bulk WhatsApp messaging?"}>
         They overlap. &quot;<A href="/blog/bulk-whatsapp-messaging/">Bulk WhatsApp messaging</A>
         &quot; usually refers to the broadcast mechanics — how you send the same template to
         thousands of opted-in contacts at once. WhatsApp marketing is the wider strategy around
         it: list building, segmentation, CTWA ads, conversation flows, and measurement. (See our
         full guide to <A href="/blog/bulk-whatsapp-messaging/">bulk WhatsApp messaging</A> for the
         sending side.)
-      </P>
+      </BlogFaqItem>
 
-      <H3>Can WhatsApp marketing work for B2B?</H3>
-      <P>
+      <BlogFaqItem q={"Can WhatsApp marketing work for B2B?"}>
         Yes — often better than B2C, because B2B buyers are more likely to answer a relevant
         WhatsApp message than an email buried in their inbox. CTWA ads on LinkedIn or Google,
         paired with an AI that qualifies the lead, are a surprisingly strong top-of-funnel for
         complex sales cycles.
-      </P>
+      </BlogFaqItem>
 
-      <H3>What&apos;s the difference between the WhatsApp Business App and the API?</H3>
-      <P>
+      <BlogFaqItem q={"What's the difference between the WhatsApp Business App and the API?"}>
         The Business App is a free app for very small businesses — one user, no broadcasting, no
         API, a cap of a few hundred conversations. The <A href="/products/whatsapp-business-api/">
         WhatsApp Business API</A> (via a BSP) is for businesses that need bulk sending, multiple
         agents on one inbox, automated replies, and CRM integration. If you&apos;re doing
         marketing, you need the API.
-      </P>
+      </BlogFaqItem>
+      </BlogFaq>
 
       <Callout variant="tip" title="Ready to run WhatsApp marketing the right way?">
         SMSLocal sets up your <A href="/products/whatsapp-business-api/">WhatsApp Business API</A>,

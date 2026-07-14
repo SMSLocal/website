@@ -14,6 +14,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function SendSmsOnlinePost() {
   return (
@@ -259,43 +260,38 @@ export default function SendSmsOnlinePost() {
       />
 
       <H2 id="faq">FAQ</H2>
-      <H3>Can I send SMS online for free?</H3>
-      <P>
+      <BlogFaq>
+        <BlogFaqItem q={"Can I send SMS online for free?"}>
         Some platforms offer a free signup credit (SMSLocal gives you ₹60 to start), which is
         enough for a few hundred test messages. Beyond that, expect ₹0.10–0.40 per SMS depending
         on volume and route. Any &quot;totally free&quot; service for ongoing use is either
         running illegally without DLT, or is going to sell your data.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Do I need a separate account for each sender ID?</H3>
-      <P>
+        <BlogFaqItem q={"Do I need a separate account for each sender ID?"}>
         No. One account, one Principal Entity, but you can register multiple sender IDs
         (different brands, different campaign types) under the same account.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Can I send SMS to international numbers?</H3>
-      <P>
+        <BlogFaqItem q={"Can I send SMS to international numbers?"}>
         Yes, most Indian SMS platforms route international SMS, but the pricing and compliance
         rules vary sharply by destination country. Check your platform&apos;s international rate
         card.
-      </P>
+        </BlogFaqItem>
 
-      <H3>How fast is online SMS delivery?</H3>
-      <P>
+        <BlogFaqItem q={"How fast is online SMS delivery?"}>
         For transactional messages, expect sub-second carrier delivery (the time the recipient
         actually sees it depends on their phone/network). For promotional at scale, the batch
         clears within a few minutes to an hour depending on volume and your send rate.
-      </P>
+        </BlogFaqItem>
 
-      <H3>What&apos;s the difference between SMS API and email API?</H3>
-      <P>
+        <BlogFaqItem q={"What's the difference between SMS API and email API?"}>
         Same architecture, different channel. SMS APIs dispatch via telecom carriers; email APIs
         dispatch via SMTP. In India, SMS has DLT + NCPR requirements that email doesn&apos;t, so
         SMS onboarding is more paperwork-heavy but delivery rates are higher.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Can I send SMS in Hindi or regional languages?</H3>
-      <P>
+        <BlogFaqItem q={"Can I send SMS in Hindi or regional languages?"}>
         Yes — all Indian SMS platforms support Unicode (UCS-2) encoding for Devanagari, Tamil,
         Telugu, Malayalam, Bengali, Gujarati, Kannada, and Odia. The tradeoff is character limit:
         a standard ASCII/GSM-7 SMS fits 160 characters per segment, but a Unicode SMS fits only
@@ -304,7 +300,8 @@ export default function SendSmsOnlinePost() {
         promotional messages will span two segments (billed as two SMS). DLT template approval for
         regional-language templates works the same as for English; declare the correct language on
         the portal when submitting.
-      </P>
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Blockquote cite="A growth marketer onboarded in 2024">
         The whole process took three days — two for DLT header approval and one for us to set up

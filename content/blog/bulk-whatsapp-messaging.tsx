@@ -11,6 +11,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function BulkWhatsappMessagingPost() {
   return (
@@ -311,54 +312,37 @@ export default function BulkWhatsappMessagingPost() {
 
       <H2 id="faq">Frequently asked questions</H2>
 
-      <P>
-        <Strong>Can I send bulk WhatsApp messages without a business account?</Strong>
-      </P>
-      <P>
-        No. Personal WhatsApp accounts can only message contacts you&apos;ve saved. For bulk
-        outbound sends you need a WhatsApp Business Account through the official API. Unofficial
-        tools that automate WhatsApp Web will get your number banned, often permanently.
-      </P>
-
-      <P>
-        <Strong>How many messages can I send per day?</Strong>
-      </P>
-      <P>
-        It depends on your messaging tier and quality rating. Unverified accounts start around 250
-        unique recipients per day at Tier 0, then scale to 1,000, 10,000, 100,000, and unlimited as
-        you verify and maintain a high quality rating. Block and report rates control whether you
-        move up or get downgraded.
-      </P>
-
-      <P>
-        <Strong>Is bulk WhatsApp messaging legal in India?</Strong>
-      </P>
-      <P>
-        Yes — if you use the official API and have proper opt-in consent. Unlike SMS (governed by
-        TRAI&apos;s DLT framework), WhatsApp is governed by Meta&apos;s own Terms and Commerce
-        Policy, and consent is also required under India&apos;s DPDP Act. You don&apos;t need DLT
-        registration for WhatsApp, but you do need explicit consent and must respect opt-outs.
-      </P>
-
-      <P>
-        <Strong>What&apos;s the difference between bulk SMS and bulk WhatsApp?</Strong>
-      </P>
-      <P>
-        Bulk SMS has wider reach (any phone, no app required) but is text-only with a 160-character
-        limit. Bulk WhatsApp supports rich media, buttons, and interactive flows but requires the
-        recipient to have WhatsApp and to have opted in. For most Indian businesses the two work
-        together — WhatsApp for engaged customers, SMS for transactional alerts to everyone.
-      </P>
-
-      <P>
-        <Strong>How do I avoid getting banned?</Strong>
-      </P>
-      <P>
-        Use the official API, message only opted-in contacts, send approved and relevant templates,
-        start at low volume and scale gradually, honour opt-outs within 24 hours, and watch your
-        quality rating daily. The tool matters less than your behaviour — clean lists and relevance
-        keep you out of the ban zone.
-      </P>
+      <BlogFaq>
+        <BlogFaqItem q={"Can I send bulk WhatsApp messages without a business account?"}>
+          No. Personal WhatsApp accounts can only message contacts you&apos;ve saved. For bulk
+          outbound sends you need a WhatsApp Business Account through the official API. Unofficial
+          tools that automate WhatsApp Web will get your number banned, often permanently.
+        </BlogFaqItem>
+        <BlogFaqItem q={"How many messages can I send per day?"}>
+          It depends on your messaging tier and quality rating. Unverified accounts start around 250
+          unique recipients per day at Tier 0, then scale to 1,000, 10,000, 100,000, and unlimited as
+          you verify and maintain a high quality rating. Block and report rates control whether you
+          move up or get downgraded.
+        </BlogFaqItem>
+        <BlogFaqItem q={"Is bulk WhatsApp messaging legal in India?"}>
+          Yes — if you use the official API and have proper opt-in consent. Unlike SMS (governed by
+          TRAI&apos;s DLT framework), WhatsApp is governed by Meta&apos;s own Terms and Commerce
+          Policy, and consent is also required under India&apos;s DPDP Act. You don&apos;t need DLT
+          registration for WhatsApp, but you do need explicit consent and must respect opt-outs.
+        </BlogFaqItem>
+        <BlogFaqItem q={"What's the difference between bulk SMS and bulk WhatsApp?"}>
+          Bulk SMS has wider reach (any phone, no app required) but is text-only with a 160-character
+          limit. Bulk WhatsApp supports rich media, buttons, and interactive flows but requires the
+          recipient to have WhatsApp and to have opted in. For most Indian businesses the two work
+          together — WhatsApp for engaged customers, SMS for transactional alerts to everyone.
+        </BlogFaqItem>
+        <BlogFaqItem q={"How do I avoid getting banned?"}>
+          Use the official API, message only opted-in contacts, send approved and relevant templates,
+          start at low volume and scale gradually, honour opt-outs within 24 hours, and watch your
+          quality rating daily. The tool matters less than your behaviour — clean lists and relevance
+          keep you out of the ban zone.
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Callout variant="tip" title="Start with utility templates">
         If you&apos;re new to bulk WhatsApp, send order confirmations and shipping updates before

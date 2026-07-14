@@ -14,6 +14,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function DndMeansPost() {
   return (
@@ -242,38 +243,35 @@ export default function DndMeansPost() {
       />
 
       <H2 id="faq">Frequently asked questions</H2>
-      <H3>Does DND block WhatsApp?</H3>
-      <P>
-        No. WhatsApp runs over the internet, not the telecom SMS/voice layer, so TRAI&apos;s DND
-        rules don&apos;t apply. WhatsApp has its own report &amp; block mechanism — use the
-        in-app &quot;Report&quot; option on unwanted business messages.
-      </P>
+      <BlogFaq>
+        <BlogFaqItem q={"Does DND block WhatsApp?"}>
+          No. WhatsApp runs over the internet, not the telecom SMS/voice layer, so TRAI&apos;s DND
+          rules don&apos;t apply. WhatsApp has its own report &amp; block mechanism — use the
+          in-app &quot;Report&quot; option on unwanted business messages.
+        </BlogFaqItem>
 
-      <H3>Does DND stop OTPs?</H3>
-      <P>
-        No. OTPs are service-explicit transactional messages and are exempt from DND. If your OTPs
-        have stopped arriving, DND is almost never the cause — check your operator&apos;s DND
-        dashboard to confirm you&apos;re not on a stricter filter, but the real cause is usually
-        network delays or sender-side issues.
-      </P>
+        <BlogFaqItem q={"Does DND stop OTPs?"}>
+          No. OTPs are service-explicit transactional messages and are exempt from DND. If your OTPs
+          have stopped arriving, DND is almost never the cause — check your operator&apos;s DND
+          dashboard to confirm you&apos;re not on a stricter filter, but the real cause is usually
+          network delays or sender-side issues.
+        </BlogFaqItem>
 
-      <H3>How long does DND take to activate?</H3>
-      <P>
-        Up to 7 days officially. In practice, most compliant senders update their scrub lists
-        every 24 hours, so you&apos;ll notice a drop by the next day.
-      </P>
+        <BlogFaqItem q={"How long does DND take to activate?"}>
+          Up to 7 days officially. In practice, most compliant senders update their scrub lists
+          every 24 hours, so you&apos;ll notice a drop by the next day.
+        </BlogFaqItem>
 
-      <H3>Does DND expire?</H3>
-      <P>
-        No. Once activated, DND stays on until you explicitly de-activate it by sending{" "}
-        <InlineCode>STOP</InlineCode> to 1909 or toggling it off in your operator app.
-      </P>
+        <BlogFaqItem q={"Does DND expire?"}>
+          No. Once activated, DND stays on until you explicitly de-activate it by sending{" "}
+          <InlineCode>STOP</InlineCode> to 1909 or toggling it off in your operator app.
+        </BlogFaqItem>
 
-      <H3>If I change operators (MNP), does DND carry over?</H3>
-      <P>
-        Your DND preference is tied to your phone <Strong>number</Strong>, not your operator. When
-        you port, the new operator inherits the same DND setting within 48 hours.
-      </P>
+        <BlogFaqItem q={"If I change operators (MNP), does DND carry over?"}>
+          Your DND preference is tied to your phone <Strong>number</Strong>, not your operator. When
+          you port, the new operator inherits the same DND setting within 48 hours.
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Blockquote cite="TRAI consumer helpline, 2024">
         Every registered sender in India is legally required to scrub against NCPR before every

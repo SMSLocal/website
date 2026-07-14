@@ -14,6 +14,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function TelegramCodeSmsPost() {
   return (
@@ -276,39 +277,36 @@ export default function TelegramCodeSmsPost() {
 
       <H2 id="faq">Frequently asked questions</H2>
 
-      <H3>How long does the Telegram verification code take to arrive in India?</H3>
-      <P>
+      <BlogFaq>
+        <BlogFaqItem q={"How long does the Telegram verification code take to arrive in India?"}>
         Usually 10–30 seconds. If it hasn&apos;t arrived in 90 seconds, use the &ldquo;Call
         me&rdquo; option — the voice call is more reliable than SMS for Telegram in India.
-      </P>
+        </BlogFaqItem>
 
-      <H3>I got the code on another device but I don&apos;t have that device with me</H3>
-      <P>
+        <BlogFaqItem q={"I got the code on another device but I don't have that device with me"}>
         The code sent to your other Telegram session is a notification inside the app, not an SMS.
         You need to log in on the other device temporarily to retrieve it, or wait 60 seconds for
         the SMS fallback option to appear and then use &ldquo;Call me instead.&rdquo;
-      </P>
+        </BlogFaqItem>
 
-      <H3>Can I use a virtual number or VoIP number for Telegram?</H3>
-      <P>
+        <BlogFaqItem q={"Can I use a virtual number or VoIP number for Telegram?"}>
         Telegram actively blocks known VoIP number ranges for registration and verification. Real
         Indian mobile numbers (starting with 6, 7, 8, or 9 on Jio, Airtel, Vi, or BSNL) work
         reliably. Virtual numbers from apps like TextNow frequently fail.
-      </P>
+        </BlogFaqItem>
 
-      <H3>The code expired before I could enter it — what now?</H3>
-      <P>
+        <BlogFaqItem q={"The code expired before I could enter it — what now?"}>
         Telegram verification codes expire after 5 minutes. If the code expired, tap
         &ldquo;Resend code&rdquo; on the verification screen to request a new one. A 60-second
         cooldown applies between resend attempts.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Does Telegram use the same number for OTP every time?</H3>
-      <P>
+        <BlogFaqItem q={"Does Telegram use the same number for OTP every time?"}>
         No. Telegram uses different sender numbers and routes across different sessions, regions,
         and operators. The code may arrive from different international numbers on different
         occasions — this is normal. Do not block the sender number after receiving a code.
-      </P>
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Blockquote cite="Telegram FAQ, 2025">
         If you receive a login code without requesting one, someone may be attempting to log into

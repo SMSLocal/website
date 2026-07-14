@@ -13,6 +13,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function WhatIsSmsPost() {
   return (
@@ -281,47 +282,44 @@ export default function WhatIsSmsPost() {
 
       <H2 id="faq">Frequently asked questions</H2>
 
-      <H3>Does SMS work without internet?</H3>
-      <P>
-        Yes. SMS uses the cellular signalling layer, completely separate from your mobile data
-        connection. A phone with no SIM data plan can still send and receive SMS as long as it has
-        cellular network coverage.
-      </P>
+      <BlogFaq>
+        <BlogFaqItem q={"Does SMS work without internet?"}>
+          Yes. SMS uses the cellular signalling layer, completely separate from your mobile data
+          connection. A phone with no SIM data plan can still send and receive SMS as long as it has
+          cellular network coverage.
+        </BlogFaqItem>
 
-      <H3>What is the difference between SMS and MMS?</H3>
-      <P>
-        MMS (Multimedia Messaging Service) extends SMS to allow images, audio, and short video
-        clips. MMS requires a data connection and is significantly more expensive than SMS. In
-        India, MMS is rarely used for business messaging — WhatsApp Business API serves the same
-        purpose at better cost with richer features.
-      </P>
+        <BlogFaqItem q={"What is the difference between SMS and MMS?"}>
+          MMS (Multimedia Messaging Service) extends SMS to allow images, audio, and short video
+          clips. MMS requires a data connection and is significantly more expensive than SMS. In
+          India, MMS is rarely used for business messaging — WhatsApp Business API serves the same
+          purpose at better cost with richer features.
+        </BlogFaqItem>
 
-      <H3>Can I send SMS from a computer?</H3>
-      <P>
-        Yes — through a web-to-SMS platform or SMS API. You write the message in a browser
-        dashboard or integrate via API, and the platform routes it through operator connectivity to
-        the recipient's handset. See our guide on{" "}
-        <A href="/blog/send-sms-online/">how to send SMS online</A> for a comparison of the four
-        main approaches.
-      </P>
+        <BlogFaqItem q={"Can I send SMS from a computer?"}>
+          Yes — through a web-to-SMS platform or SMS API. You write the message in a browser
+          dashboard or integrate via API, and the platform routes it through operator connectivity to
+          the recipient's handset. See our guide on{" "}
+          <A href="/blog/send-sms-online/">how to send SMS online</A> for a comparison of the four
+          main approaches.
+        </BlogFaqItem>
 
-      <H3>Why does an SMS sometimes take hours to arrive?</H3>
-      <P>
-        When the recipient's phone is off or out of coverage, the SMSC holds the message and
-        retries. The default validity period is 72 hours. If you need near-instant delivery
-        guarantees (for OTPs especially), use a platform with direct operator connectivity and
-        real-time delivery receipts rather than a reseller with aggregated routes.
-      </P>
+        <BlogFaqItem q={"Why does an SMS sometimes take hours to arrive?"}>
+          When the recipient's phone is off or out of coverage, the SMSC holds the message and
+          retries. The default validity period is 72 hours. If you need near-instant delivery
+          guarantees (for OTPs especially), use a platform with direct operator connectivity and
+          real-time delivery receipts rather than a reseller with aggregated routes.
+        </BlogFaqItem>
 
-      <H3>Is SMS encrypted?</H3>
-      <P>
-        SMS is encrypted between your handset and the cell tower (over-the-air encryption), but
-        messages are stored in plaintext on the operator's SMSC and can be accessed by the operator
-        and, under legal authority, by law enforcement. SMS is not end-to-end encrypted the way
-        WhatsApp or iMessage are. For sensitive personal communications, a dedicated encrypted
-        messaging app is more appropriate. For business OTPs and alerts, SMS's traceability and
-        reliability remain the industry standard.
-      </P>
+        <BlogFaqItem q={"Is SMS encrypted?"}>
+          SMS is encrypted between your handset and the cell tower (over-the-air encryption), but
+          messages are stored in plaintext on the operator's SMSC and can be accessed by the operator
+          and, under legal authority, by law enforcement. SMS is not end-to-end encrypted the way
+          WhatsApp or iMessage are. For sensitive personal communications, a dedicated encrypted
+          messaging app is more appropriate. For business OTPs and alerts, SMS's traceability and
+          reliability remain the industry standard.
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Blockquote cite="TRAI Annual Report 2025">
         India processes over 1.5 billion commercial SMS messages every day — more than any other

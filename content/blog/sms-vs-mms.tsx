@@ -11,6 +11,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function SmsVsMmsPost() {
   return (
@@ -300,89 +301,82 @@ export default function SmsVsMmsPost() {
 
       <H2 id="faq">Frequently asked questions</H2>
 
-      <H3>What is the difference between SMS and MMS in India?</H3>
-      <P>
+      <BlogFaq>
+        <BlogFaqItem q={"What is the difference between SMS and MMS in India?"}>
         SMS is a text-only message (up to 160 characters per segment) that works on every phone
         and network in India with no data connection required. MMS allows images, audio, and video
         to be sent alongside text (up to ~1,600 characters) but requires a data connection on both
         sides and only works on smartphones. In India, SMS is the dominant business messaging
         channel; MMS is rarely used because WhatsApp handles multimedia messaging for smartphone
         users, and no commercial DLT-compliant MMS infrastructure exists for businesses.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Is MMS available on Jio in India?</H3>
-      <P>
+        <BlogFaqItem q={"Is MMS available on Jio in India?"}>
         Yes, Jio technically supports MMS for personal messaging between subscribers. However, it
         is not part of Jio&apos;s standard bundled quota (which covers 100 SMS/day), and each MMS
         is charged at a per-message rate. Jio does not offer commercial MMS services for business
         use — there is no DLT-registered business MMS route on Jio or any other Indian carrier.
         For rich media messaging, Jio has activated RCS, which is the recommended business-grade
         alternative.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Why does MMS not work on my Indian phone?</H3>
-      <P>
+        <BlogFaqItem q={"Why does MMS not work on my Indian phone?"}>
         If your MMS is not sending or receiving in India, the most common reasons are: your data
         connection is off (MMS requires active mobile data to download), your APN (Access Point
         Name) settings are not configured for MMS (older phones sometimes need this set manually),
         or the recipient&apos;s phone or plan does not support MMS. For specific APN settings,
         check your carrier&apos;s support page — Airtel, Jio, and Vi all publish the correct MMS
         APN values.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Can businesses send MMS in India?</H3>
-      <P>
+        <BlogFaqItem q={"Can businesses send MMS in India?"}>
         Technically yes, but practically no. There is no TRAI DLT registration framework for
         commercial MMS in India — you cannot register a sender ID or content template for MMS the
         way you can for SMS. Most Indian SMS aggregators do not offer bulk MMS as a product. For
         rich media, Indian businesses use WhatsApp Business API (for smartphone users) or SMS with
         a link to a landing page with images.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Is MMS free in India like SMS?</H3>
-      <P>
+        <BlogFaqItem q={"Is MMS free in India like SMS?"}>
         No. Most Indian mobile plans include 100 free SMS per day, but MMS is not included in this
         bundled quota. MMS is charged separately — typically ₹1–3 per message on most prepaid
         plans. Check your specific carrier plan for the exact MMS rate.
-      </P>
+        </BlogFaqItem>
 
-      <H3>What is the character limit for SMS and MMS in India?</H3>
-      <P>
+        <BlogFaqItem q={"What is the character limit for SMS and MMS in India?"}>
         SMS is limited to 160 characters per segment when using the standard GSM-7 character set.
         If you use Unicode characters (Hindi, Tamil, or other Indian scripts), the limit drops to
         70 characters per segment. Longer messages are automatically split into multiple segments
         and delivered concatenated — so a 300-character message is sent as two segments and billed
         as two SMS. MMS has a text limit of approximately 1,600 characters alongside the media
         attachment, with a total message size limit of 300–600 KB depending on the carrier.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Does MMS work on WhatsApp?</H3>
-      <P>
+        <BlogFaqItem q={"Does MMS work on WhatsApp?"}>
         No. WhatsApp is a separate messaging system that operates over the internet — it is not
         connected to the cellular SMS or MMS infrastructure. WhatsApp messages (including photos
         and videos) go through Meta&apos;s servers, not through your carrier&apos;s MMS system.
         The two systems are completely independent. An MMS you send will arrive in the
         recipient&apos;s native messaging app (SMS inbox), not in WhatsApp.
-      </P>
+        </BlogFaqItem>
 
-      <H3>What replaced MMS in India?</H3>
-      <P>
+        <BlogFaqItem q={"What replaced MMS in India?"}>
         For personal multimedia messaging, <Strong>WhatsApp</Strong> replaced MMS — it is free,
         unlimited, and handles full-resolution photos and videos. For business rich messaging,
         <Strong>RCS Business Messaging</Strong> is the emerging replacement — supported by Jio,
         Airtel, and Vi on 450M+ Android devices in India. For simple text-based business
         messaging, <Strong>SMS via DLT-registered routes</Strong> remains the dominant channel
         and has no replacement in sight for OTPs and transactional alerts.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Which is better for OTPs — SMS or MMS?</H3>
-      <P>
+        <BlogFaqItem q={"Which is better for OTPs — SMS or MMS?"}>
         SMS is the only correct choice for OTPs in India. OTP delivery requires near-instant
         delivery to every phone type (including feature phones) without a data connection. All
         banking and government systems in India send OTPs via SMS. MMS requires a data connection
         and only works on smartphones — it cannot be used for OTP delivery in a country where
         a significant portion of SIM cards belong to feature phone users.
-      </P>
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Callout variant="tip" title="Ready to send SMS in India?">
         SMSLocal provides DLT-compliant SMS for OTPs, transactional alerts, and promotional

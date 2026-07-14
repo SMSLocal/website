@@ -14,6 +14,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function ReceiveSmsOnlineIndiaPost() {
   return (
@@ -216,32 +217,27 @@ export default function ReceiveSmsOnlineIndiaPost() {
       />
 
       <H2 id="faq">FAQ</H2>
-      <H3>Is receive-SMS-online illegal in India?</H3>
-      <P>
-        The service itself isn&apos;t illegal, but using it to impersonate someone, commit fraud,
-        or violate a service&apos;s terms of use is. For personal-privacy uses on services that
-        don&apos;t prohibit it, you&apos;re fine.
-      </P>
-
-      <H3>Can I use a receive-SMS number for Aadhaar OTP?</H3>
-      <P>
-        No. Aadhaar OTP is tied to the mobile number linked to your Aadhaar record. Using any
-        other number is fraud and a criminal offence.
-      </P>
-
-      <H3>Why do some services still let me sign up with a shared number?</H3>
-      <P>
-        Because detecting them is imperfect. Many services don&apos;t invest heavily in
-        number-reputation checks, especially smaller apps. That doesn&apos;t mean they approve —
-        they&apos;ll ban you later if they find out.
-      </P>
-
-      <H3>Are there privacy-safe paid alternatives?</H3>
-      <P>
-        Yes. Signal (a secondary number), Google Voice (not India), JIO Number, Vi eSIM secondary
-        lines, and iPlum all give you a real, private-to-you number that&apos;s safer than a
-        public receive-SMS inbox and doesn&apos;t violate ToS.
-      </P>
+      <BlogFaq>
+        <BlogFaqItem q={"Is receive-SMS-online illegal in India?"}>
+          The service itself isn&apos;t illegal, but using it to impersonate someone, commit fraud,
+          or violate a service&apos;s terms of use is. For personal-privacy uses on services that
+          don&apos;t prohibit it, you&apos;re fine.
+        </BlogFaqItem>
+        <BlogFaqItem q={"Can I use a receive-SMS number for Aadhaar OTP?"}>
+          No. Aadhaar OTP is tied to the mobile number linked to your Aadhaar record. Using any
+          other number is fraud and a criminal offence.
+        </BlogFaqItem>
+        <BlogFaqItem q={"Why do some services still let me sign up with a shared number?"}>
+          Because detecting them is imperfect. Many services don&apos;t invest heavily in
+          number-reputation checks, especially smaller apps. That doesn&apos;t mean they approve —
+          they&apos;ll ban you later if they find out.
+        </BlogFaqItem>
+        <BlogFaqItem q={"Are there privacy-safe paid alternatives?"}>
+          Yes. Signal (a secondary number), Google Voice (not India), JIO Number, Vi eSIM secondary
+          lines, and iPlum all give you a real, private-to-you number that&apos;s safer than a
+          public receive-SMS inbox and doesn&apos;t violate ToS.
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Blockquote cite="A product security engineer we spoke to">
         The rule is simple: if you&apos;d be upset if your phone number got shared with strangers,

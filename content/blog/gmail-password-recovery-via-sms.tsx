@@ -14,6 +14,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function GmailPasswordRecoveryPost() {
   return (
@@ -235,37 +236,36 @@ export default function GmailPasswordRecoveryPost() {
       </Callout>
 
       <H2 id="faq">FAQ</H2>
-      <H3>Why does Google sometimes skip SMS recovery?</H3>
-      <P>
-        Google&apos;s recovery algorithm is conditional. If your sign-in attempt looks suspicious
-        — new country, unfamiliar device, strange timing — Google may disable SMS recovery
-        temporarily and force you through the recovery form instead. This is a feature, not a
-        bug.
-      </P>
+      <BlogFaq>
+        <BlogFaqItem q={"Why does Google sometimes skip SMS recovery?"}>
+          Google&apos;s recovery algorithm is conditional. If your sign-in attempt looks suspicious
+          — new country, unfamiliar device, strange timing — Google may disable SMS recovery
+          temporarily and force you through the recovery form instead. This is a feature, not a
+          bug.
+        </BlogFaqItem>
 
-      <H3>My recovery phone is an old number I don&apos;t have anymore. What do I do?</H3>
-      <P>
-        You can&apos;t change it without signing in first — catch-22. Use the account recovery
-        form and specify that you&apos;ve lost access to the phone number. Google will verify
-        through other signals and, if successful, let you update it post-recovery.
-      </P>
+        <BlogFaqItem q={"My recovery phone is an old number I don't have anymore. What do I do?"}>
+          You can&apos;t change it without signing in first — catch-22. Use the account recovery
+          form and specify that you&apos;ve lost access to the phone number. Google will verify
+          through other signals and, if successful, let you update it post-recovery.
+        </BlogFaqItem>
 
-      <H3>Can I use a friend&apos;s number for recovery?</H3>
-      <P>
-        Technically yes, but it&apos;s a bad idea. Your recovery phone is how Google proves
-        you&apos;re you — if a friend&apos;s number is on file, whoever has that number has the
-        power to reset your password. Only use a number you control.
-      </P>
+        <BlogFaqItem q={"Can I use a friend's number for recovery?"}>
+          Technically yes, but it&apos;s a bad idea. Your recovery phone is how Google proves
+          you&apos;re you — if a friend&apos;s number is on file, whoever has that number has the
+          power to reset your password. Only use a number you control.
+        </BlogFaqItem>
 
-      <H3>How long is the SMS code valid?</H3>
-      <P>About 15 minutes. After that you&apos;ll need to request a new one.</P>
+        <BlogFaqItem q={"How long is the SMS code valid?"}>
+          About 15 minutes. After that you&apos;ll need to request a new one.
+        </BlogFaqItem>
 
-      <H3>Does DND block Gmail recovery SMS?</H3>
-      <P>
-        No. Google&apos;s recovery SMS is categorised as transactional/service-explicit and is
-        exempt from DND. If you&apos;re on DND and still not receiving the SMS, the cause is
-        elsewhere. Read our <A href="/blog/dnd-means/">DND means</A> guide for the mechanics.
-      </P>
+        <BlogFaqItem q={"Does DND block Gmail recovery SMS?"}>
+          No. Google&apos;s recovery SMS is categorised as transactional/service-explicit and is
+          exempt from DND. If you&apos;re on DND and still not receiving the SMS, the cause is
+          elsewhere. Read our <A href="/blog/dnd-means/">DND means</A> guide for the mechanics.
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Blockquote cite="A support engineer who handles recovery escalations">
         The pattern is always the same: people set up a recovery phone, never update it, change

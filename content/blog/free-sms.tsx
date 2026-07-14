@@ -13,6 +13,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function FreeSmsPost() {
   return (
@@ -214,45 +215,42 @@ export default function FreeSmsPost() {
 
       <H2 id="faq">Frequently asked questions</H2>
 
-      <H3>Are free SMS websites safe to use?</H3>
-      <P>
-        The main risk is data collection. Registering on a free SMS site requires your phone number,
-        which becomes part of their contact database. Reputable services have privacy policies that
-        limit this; many smaller sites do not. For occasional use, the risk is low. For anything
-        sensitive or regular, use your operator&apos;s own bundled SMS or a verified platform.
-      </P>
+      <BlogFaq>
+        <BlogFaqItem q={"Are free SMS websites safe to use?"}>
+          The main risk is data collection. Registering on a free SMS site requires your phone number,
+          which becomes part of their contact database. Reputable services have privacy policies that
+          limit this; many smaller sites do not. For occasional use, the risk is low. For anything
+          sensitive or regular, use your operator&apos;s own bundled SMS or a verified platform.
+        </BlogFaqItem>
 
-      <H3>Can I send free SMS to DND numbers?</H3>
-      <P>
-        Not with commercial SMS services. DND (Do Not Disturb) blocks promotional messages at the
-        operator level regardless of which platform you use. Transactional SMS (OTPs, order
-        updates) bypasses DND — but you need a properly registered DLT header to send these, which
-        requires a paid business SMS account.
-      </P>
+        <BlogFaqItem q={"Can I send free SMS to DND numbers?"}>
+          Not with commercial SMS services. DND (Do Not Disturb) blocks promotional messages at the
+          operator level regardless of which platform you use. Transactional SMS (OTPs, order
+          updates) bypasses DND — but you need a properly registered DLT header to send these, which
+          requires a paid business SMS account.
+        </BlogFaqItem>
 
-      <H3>Can I send bulk SMS for free?</H3>
-      <P>
-        No free service supports genuine bulk SMS at any meaningful scale. Daily caps of 5–25 SMS
-        exist to prevent abuse. If you need to reach hundreds or thousands of contacts, a paid bulk
-        SMS platform is the only viable option — typical costs in India are ₹0.10–0.18 per SMS for
-        promotional and ₹0.03–0.08 per SMS for OTP routes.
-      </P>
+        <BlogFaqItem q={"Can I send bulk SMS for free?"}>
+          No free service supports genuine bulk SMS at any meaningful scale. Daily caps of 5–25 SMS
+          exist to prevent abuse. If you need to reach hundreds or thousands of contacts, a paid bulk
+          SMS platform is the only viable option — typical costs in India are ₹0.10–0.18 per SMS for
+          promotional and ₹0.03–0.08 per SMS for OTP routes.
+        </BlogFaqItem>
 
-      <H3>Is WhatsApp a replacement for free SMS?</H3>
-      <P>
-        For personal conversations, yes — WhatsApp is free, unlimited, and reaches most Indian
-        smartphone users. For business use cases (OTPs, order alerts, staff notifications), SMS
-        reaches everyone including feature phone users, requires no app, and works without internet.
-        The two channels serve different use cases; most businesses use both.
-      </P>
+        <BlogFaqItem q={"Is WhatsApp a replacement for free SMS?"}>
+          For personal conversations, yes — WhatsApp is free, unlimited, and reaches most Indian
+          smartphone users. For business use cases (OTPs, order alerts, staff notifications), SMS
+          reaches everyone including feature phone users, requires no app, and works without internet.
+          The two channels serve different use cases; most businesses use both.
+        </BlogFaqItem>
 
-      <H3>What happened to Way2SMS?</H3>
-      <P>
-        Way2SMS shut down its free service around 2022. The combination of WhatsApp eating personal
-        messaging and Indian operators bundling 100 free SMS/day into virtually every recharge made
-        the ad-funded free SMS business model unsustainable. Several sites operate in the same
-        space today but none has replicated Way2SMS&apos;s scale or reliability.
-      </P>
+        <BlogFaqItem q={"What happened to Way2SMS?"}>
+          Way2SMS shut down its free service around 2022. The combination of WhatsApp eating personal
+          messaging and Indian operators bundling 100 free SMS/day into virtually every recharge made
+          the ad-funded free SMS business model unsustainable. Several sites operate in the same
+          space today but none has replicated Way2SMS&apos;s scale or reliability.
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Blockquote cite="TRAI Telecom Subscription Data, 2025">
         India has over 1.1 billion active mobile connections, each with at least some SMS

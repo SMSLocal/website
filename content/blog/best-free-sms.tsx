@@ -12,6 +12,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function BestFreeSmsPost() {
   return (
@@ -348,97 +349,88 @@ export default function BestFreeSmsPost() {
 
       <H2 id="faq">Frequently asked questions</H2>
 
-      <H3>Which is the best free SMS app for Android in India in 2026?</H3>
-      <P>
+      <BlogFaq>
+        <BlogFaqItem q={"Which is the best free SMS app for Android in India in 2026?"}>
         Google Messages, using your SIM&apos;s bundled daily allowance. It is pre-installed on
         most non-Samsung Android phones, uses your real number, has a built-in spam filter, and
         supports RCS on Jio and Airtel for read receipts and better group chats. For Samsung
         phones, Samsung Messages offers the same bundled-SMS benefits with Windows mirroring via
         Samsung Flow.
-      </P>
+        </BlogFaqItem>
 
-      <H3>What is the best free SMS website in India?</H3>
-      <P>
+        <BlogFaqItem q={"What is the best free SMS website in India?"}>
         For personal use, your operator&apos;s own portal is best: MyJio (jio.com) or Airtel
         Thanks (airtelthanks.com) send SMS from your real number using your bundled daily quota.
         For business testing, <A href="/resources/tools/free-sms-without-registration/">SMSLocal&apos;s
         free SMS tool</A> with the ₹60 trial credit gives you a real production SMS without
         registration friction.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Can I send free SMS from my laptop without installing anything?</H3>
-      <P>
+        <BlogFaqItem q={"Can I send free SMS from my laptop without installing anything?"}>
         Yes. Google Messages works at messages.google.com — scan a QR code on your phone once and
         your phone&apos;s SMS threads appear in any browser. Samsung users can use Samsung Messages
         mirroring through Samsung Flow. Both use your SIM&apos;s bundled quota and your real number.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Which app lets me send free SMS without showing my number?</H3>
-      <P>
+        <BlogFaqItem q={"Which app lets me send free SMS without showing my number?"}>
         No legitimate free app does this for Indian numbers. Ad-funded sites use a shared generic
         number, but you lose control over the sender identity. For business SMS where a branded
         sender ID (like SMSLCL or YOURCO) appears instead of a number, you need DLT registration
         — the SMSLocal trial covers this at no cost for testing.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Is there a free SMS app for Android that doesn&apos;t show ads?</H3>
-      <P>
+        <BlogFaqItem q={"Is there a free SMS app for Android that doesn't show ads?"}>
         Google Messages has no ads. AirDroid&apos;s free tier shows a &ldquo;Go Premium&rdquo;
         banner occasionally but no interstitials. Your operator&apos;s built-in messaging app also
         has no ads. Ad-funded web-to-SMS sites are the only free SMS option that actually shows
         ads — it is how they fund the service.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Which free SMS app works without internet in India?</H3>
-      <P>
+        <BlogFaqItem q={"Which free SMS app works without internet in India?"}>
         Your phone&apos;s native SMS app (Google Messages, Samsung Messages, or any built-in
         dialer) sends SMS over the cellular network without any internet connection — using your
         SIM&apos;s bundled 100 SMS/day allowance. Apps like AirDroid and Pushbullet require an
         internet connection because they mirror your phone to a PC. WhatsApp requires internet on
         both ends. For internet-free SMS, stick to your phone&apos;s built-in messaging app.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Is there a free SMS app that does not require registration in India?</H3>
-      <P>
+        <BlogFaqItem q={"Is there a free SMS app that does not require registration in India?"}>
         Your phone&apos;s built-in messaging app and your SIM&apos;s bundled quota require no
         third-party registration — you already have access by virtue of owning the SIM. Ad-funded
         web SMS sites always require phone verification before you can send. Operator portals
         (MyJio, Airtel Thanks) require your operator account login but no new registration.
-      </P>
+        </BlogFaqItem>
 
-      <H3>What is the best free SMS app for iPhone in India?</H3>
-      <P>
+        <BlogFaqItem q={"What is the best free SMS app for iPhone in India?"}>
         The built-in iPhone Messages app using your SIM&apos;s bundled allowance is the best
         option — sends from your real number, no registration, no branding. For chatting between
         iPhones, iMessage is free over Wi-Fi or data and has no SMS character limits. AirDroid
         does not work for SMS mirroring on iPhone due to Apple&apos;s restrictions. For receiving
         OTPs and business messages, SMS via your SIM is always required regardless of phone model.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Can I send free SMS internationally from India?</H3>
-      <P>
+        <BlogFaqItem q={"Can I send free SMS internationally from India?"}>
         Not through any mainstream free service. International SMS routing carries real cost —
         typically ₹2–5 per message. WhatsApp is the free alternative for most international
         personal messaging to smartphone users. For business international SMS, expect paid rates
         from any platform.
-      </P>
+        </BlogFaqItem>
 
-      <H3>What is the best free bulk SMS app in India?</H3>
-      <P>
+        <BlogFaqItem q={"What is the best free bulk SMS app in India?"}>
         No free service supports genuine bulk SMS at any meaningful scale. Daily caps of 5–25 SMS
         exist on all free services to prevent abuse. For bulk sends, a paid platform is necessary
         — costs in India start at ₹0.08 per SMS on promotional routes and ₹0.03 on OTP routes.
         The SMSLocal ₹60 trial lets you test the full bulk SMS workflow before paying.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Which SMS app gives the most free messages per day in India?</H3>
-      <P>
+        <BlogFaqItem q={"Which SMS app gives the most free messages per day in India?"}>
         Your operator&apos;s bundled SIM allowance gives the most free SMS: 100 per day on most
         Jio, Airtel, and Vi plans — far more than any ad-funded web service (5–25 SMS/day). Check
         your balance via MyJio app, Airtel Thanks app, or SMS BAL to 123 (BSNL). If you are
         consistently hitting the 100 SMS/day cap, a low-cost paid SMS platform is a more practical
         solution than any free service.
-      </P>
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Callout variant="tip" title="Need more than free limits allow?">
         SMSLocal&apos;s OTP SMS starts at ₹0.03 per message with no monthly minimums. Top up your

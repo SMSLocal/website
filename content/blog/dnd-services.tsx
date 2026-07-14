@@ -14,6 +14,7 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
 
 export default function DndServicesPost() {
   return (
@@ -326,40 +327,37 @@ export default function DndServicesPost() {
       </P>
 
       <H2 id="faq">FAQ</H2>
-      <H3>Do I need to scrub NCPR for transactional SMS?</H3>
-      <P>
+      <BlogFaq>
+        <BlogFaqItem q={"Do I need to scrub NCPR for transactional SMS?"}>
         No. DND doesn&apos;t apply to transactional/service-explicit senders. OTPs, payment
         receipts, and delivery updates reach every number. That said, double-check that your
         header is correctly categorised as transactional — if it slips into promotional, DND
         scrub suddenly matters.
-      </P>
+        </BlogFaqItem>
 
-      <H3>How often should I scrub my list?</H3>
-      <P>
+        <BlogFaqItem q={"How often should I scrub my list?"}>
         Before every send. NCPR updates daily, and a number that was ok yesterday might be on
         DND today. SMSLocal scrubs on every submission automatically.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Can I use service-implicit category to reach DND numbers with soft marketing?</H3>
-      <P>
+        <BlogFaqItem q={"Can I use service-implicit category to reach DND numbers with soft marketing?"}>
         No. Service-implicit is for genuine service follow-ups (policy updates, expiry reminders
         for existing customers) — not disguised marketing. Operators review templates carefully
         and categorise based on actual content.
-      </P>
+        </BlogFaqItem>
 
-      <H3>What if a user gave consent then activated DND?</H3>
-      <P>
+        <BlogFaqItem q={"What if a user gave consent then activated DND?"}>
         DND overrides individual consent for promotional SMS. If they&apos;re on DND, you
         can&apos;t send them marketing, even if they signed up last month. Transactional messages
         still reach them.
-      </P>
+        </BlogFaqItem>
 
-      <H3>Do WhatsApp Business messages fall under DND?</H3>
-      <P>
+        <BlogFaqItem q={"Do WhatsApp Business messages fall under DND?"}>
         No — WhatsApp is over-the-top (OTT), not telecom. WhatsApp has its own rules (opt-in,
         business verification, 24-hour session window) administered by Meta. Read our{" "}
         <A href="/products/whatsapp-business-api/">WhatsApp Business API</A> page for the details.
-      </P>
+        </BlogFaqItem>
+      </BlogFaq>
 
       <Blockquote cite="Compliance lead, Indian fintech">
         The companies that never hit a violation are the boring ones. They scrub on every send,
