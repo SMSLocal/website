@@ -1,7 +1,7 @@
 "use client"
 
-import { useRef, useState } from "react"
-import { ArrowUpRight, Banknote, GraduationCap, HeartPulse, Home, ShoppingBag, Truck } from "lucide-react"
+import { useCallback, useEffect, useRef, useState } from "react"
+import { ArrowLeft, ArrowRight, ArrowUpRight, Banknote, GraduationCap, HeartPulse, Home, ShoppingBag, Truck } from "lucide-react"
 import { Reveal } from "./reveal"
 
 type Industry = {
@@ -25,16 +25,32 @@ const INDUSTRIES: Industry[] = [
 
 export function Industries() {
   const ref = useRef<HTMLDivElement>(null)
-  const [p, setP] = useState(0)
-  const total = INDUSTRIES.length
+  const [atStart, setAtStart] = useState(true)
+  const [atEnd, setAtEnd] = useState(false)
 
-  const onScroll = () => {
+  const updateEdges = useCallback(() => {
     const el = ref.current
     if (!el) return
     const max = el.scrollWidth - el.clientWidth
-    setP(max > 0 ? el.scrollLeft / max : 0)
+    setAtStart(el.scrollLeft <= 1)
+    setAtEnd(el.scrollLeft >= max - 1)
+  }, [])
+
+  useEffect(() => {
+    updateEdges()
+    const el = ref.current
+    if (!el) return
+    window.addEventListener("resize", updateEdges)
+    return () => window.removeEventListener("resize", updateEdges)
+  }, [updateEdges])
+
+  const scrollByCards = (dir: 1 | -1) => {
+    const el = ref.current
+    if (!el) return
+    const card = el.querySelector<HTMLElement>("[data-card]")
+    const step = card ? card.offsetWidth + 16 /* gap-4 */ : el.clientWidth * 0.8
+    el.scrollBy({ left: dir * step, behavior: "smooth" })
   }
-  const current = Math.min(total, Math.round(p * (total - 1)) + 1)
 
   return (
     <section className="overflow-hidden bg-muted/40 py-20 sm:py-24">
@@ -52,11 +68,31 @@ export function Industries() {
                 The messages businesses send every day — scroll to see each one live.
               </p>
 
-              <div className="mt-6 flex items-center gap-3">
-                <div className="h-1 w-40 overflow-hidden rounded-full bg-border">
-                  <div className="h-full rounded-full bg-gradient-to-r from-primary to-accent transition-[width] duration-200" style={{ width: `${Math.max(8, p * 100)}%` }} />
-                </div>
-                <span className="font-mono text-[12px] text-muted-foreground">{String(current).padStart(2, "0")} / {String(total).padStart(2, "0")}</span>
+              <div className="mt-6 flex items-center gap-2">
+                <button
+                  type="button"
+                  aria-label="Previous industry"
+                  aria-disabled={atStart}
+                  tabIndex={atStart ? -1 : 0}
+                  onClick={() => { if (!atStart) scrollByCards(-1) }}
+                  className={`inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-foreground transition-opacity duration-500 ease-out hover:border-primary/40 hover:text-primary ${
+                    atStart ? "pointer-events-none opacity-0" : "opacity-100"
+                  }`}
+                >
+                  <ArrowLeft className="h-4 w-4" />
+                </button>
+                <button
+                  type="button"
+                  aria-label="Next industry"
+                  aria-disabled={atEnd}
+                  tabIndex={atEnd ? -1 : 0}
+                  onClick={() => { if (!atEnd) scrollByCards(1) }}
+                  className={`inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-foreground transition-opacity duration-500 ease-out hover:border-primary/40 hover:text-primary ${
+                    atEnd ? "pointer-events-none opacity-0" : "opacity-100"
+                  }`}
+                >
+                  <ArrowRight className="h-4 w-4" />
+                </button>
               </div>
 
               <a href="/solutions/" className="mt-7 inline-flex items-center gap-1.5 rounded-full bg-foreground px-5 py-3 text-sm font-semibold text-background transition hover:opacity-90">
@@ -68,7 +104,7 @@ export function Industries() {
           {/* Horizontal scroll cards */}
           <div
             ref={ref}
-            onScroll={onScroll}
+            onScroll={updateEdges}
             className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {INDUSTRIES.map((it, i) => {
@@ -76,6 +112,7 @@ export function Industries() {
               return (
                 <a
                   key={it.name}
+                  data-card
                   href={it.href}
                   className="group flex w-[290px] shrink-0 snap-start flex-col rounded-2xl border border-border bg-card p-5 transition duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/5"
                 >

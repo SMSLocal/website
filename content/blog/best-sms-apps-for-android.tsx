@@ -11,6 +11,109 @@ import {
   Strong,
   UL,
 } from "@/components/blog/blog-prose"
+import { BlogFaq } from "@/components/blog/blog-faq"
+
+const FAQ_ITEMS = [
+  {
+    q: "Which is the best SMS app for Android in India in 2026?",
+    a: (
+      <>
+        Google Messages for most users. It is pre-installed on the majority of Android phones sold
+        in India, uses your SIM&apos;s free bundled quota, supports RCS on Jio and Airtel for read
+        receipts and group chats, and provides web access from any browser. For Samsung phones,
+        Samsung Messages is the better default because of Samsung Flow integration with Windows.
+      </>
+    ),
+  },
+  {
+    q: "Can I use two SMS apps on one Android phone?",
+    a: (
+      <>
+        Yes, but only one can be the &ldquo;default&rdquo; SMS app — the one that sends and receives.
+        You can install multiple apps and switch the default in Settings → Apps → Default apps →
+        SMS app. Only the current default can send outgoing messages; other installed apps can only
+        read the SMS already in your inbox.
+      </>
+    ),
+  },
+  {
+    q: "Which SMS app works best with Jio and Airtel in India?",
+    a: (
+      <>
+        Google Messages works best with both. Jio and Airtel are the two operators that have
+        activated RCS in India, and Google Messages is the only mainstream SMS app that supports
+        RCS. This gives you read receipts and high-quality media sharing with other Google Messages
+        users on Jio/Airtel — features that no other SMS app offers on Indian networks.
+      </>
+    ),
+  },
+  {
+    q: "What is the best Android SMS app with no ads?",
+    a: (
+      <>
+        Google Messages has no ads. QKSMS has no ads and is fully open source. Samsung Messages has
+        no ads. Textra and Chomp SMS have ads on the free tier but offer a one-time paid upgrade to
+        remove them (₹320 and ₹280 respectively). Pulse SMS has no ads but has a monthly message
+        limit on its free cloud tier.
+      </>
+    ),
+  },
+  {
+    q: "Which SMS app is best for receiving OTPs on Android?",
+    a: (
+      <>
+        Any SMS app works for receiving OTPs — the OTP is delivered by the operator network, not
+        by the app. The app only displays what your SIM receives. If OTPs are not arriving, the
+        issue is with the sender&apos;s SMS route or your carrier, not your SMS app. See our{" "}
+        <A href="/blog/sms-activation/">SMS activation and troubleshooting guide</A> for the full
+        diagnostic checklist.
+      </>
+    ),
+  },
+  {
+    q: "Does switching SMS apps affect my existing messages?",
+    a: (
+      <>
+        No. All SMS messages are stored on your Android device, not inside any specific app. When
+        you change the default SMS app, all your existing threads appear immediately in the new app.
+        You will not lose any messages by switching.
+      </>
+    ),
+  },
+  {
+    q: "Which SMS app is best for sending SMS from a laptop or PC?",
+    a: (
+      <>
+        Google Messages web (messages.google.com) is the simplest option — scan a QR code once and
+        your phone&apos;s SMS inbox mirrors to any browser tab. For users who want a dedicated
+        desktop app or need file management alongside SMS, AirDroid offers more. Both use your real
+        SIM number and your bundled SMS quota.
+      </>
+    ),
+  },
+  {
+    q: "Is there a free SMS app for Android that also supports bulk messaging?",
+    a: (
+      <>
+        No personal SMS app supports bulk messaging that complies with Indian regulations. Bulk
+        SMS in India requires DLT registration, approved content templates, and DND scrubbing —
+        none of which personal apps provide. For business bulk SMS, a platform like SMSLocal is
+        required. The free trial credit covers initial testing at no cost.
+      </>
+    ),
+  },
+  {
+    q: "Which SMS app is best for Android privacy?",
+    a: (
+      <>
+        QKSMS is the best choice for privacy — it is fully open source (you can inspect every line
+        of code), collects no data, requires no account, and has no ads or trackers. Chomp SMS is a
+        strong runner-up for users who want privacy features like per-conversation PIN locks and a
+        hidden private inbox, without the technical requirements of open-source verification.
+      </>
+    ),
+  },
+]
 
 export default function BestSmsAppsForAndroidPost() {
   return (
@@ -371,78 +474,7 @@ export default function BestSmsAppsForAndroidPost() {
       />
 
       <H2 id="faq">Frequently asked questions</H2>
-
-      <H3>Which is the best SMS app for Android in India in 2026?</H3>
-      <P>
-        Google Messages for most users. It is pre-installed on the majority of Android phones sold
-        in India, uses your SIM&apos;s free bundled quota, supports RCS on Jio and Airtel for read
-        receipts and group chats, and provides web access from any browser. For Samsung phones,
-        Samsung Messages is the better default because of Samsung Flow integration with Windows.
-      </P>
-
-      <H3>Can I use two SMS apps on one Android phone?</H3>
-      <P>
-        Yes, but only one can be the &ldquo;default&rdquo; SMS app — the one that sends and receives.
-        You can install multiple apps and switch the default in Settings → Apps → Default apps →
-        SMS app. Only the current default can send outgoing messages; other installed apps can only
-        read the SMS already in your inbox.
-      </P>
-
-      <H3>Which SMS app works best with Jio and Airtel in India?</H3>
-      <P>
-        Google Messages works best with both. Jio and Airtel are the two operators that have
-        activated RCS in India, and Google Messages is the only mainstream SMS app that supports
-        RCS. This gives you read receipts and high-quality media sharing with other Google Messages
-        users on Jio/Airtel — features that no other SMS app offers on Indian networks.
-      </P>
-
-      <H3>What is the best Android SMS app with no ads?</H3>
-      <P>
-        Google Messages has no ads. QKSMS has no ads and is fully open source. Samsung Messages has
-        no ads. Textra and Chomp SMS have ads on the free tier but offer a one-time paid upgrade to
-        remove them (₹320 and ₹280 respectively). Pulse SMS has no ads but has a monthly message
-        limit on its free cloud tier.
-      </P>
-
-      <H3>Which SMS app is best for receiving OTPs on Android?</H3>
-      <P>
-        Any SMS app works for receiving OTPs — the OTP is delivered by the operator network, not
-        by the app. The app only displays what your SIM receives. If OTPs are not arriving, the
-        issue is with the sender&apos;s SMS route or your carrier, not your SMS app. See our{" "}
-        <A href="/blog/sms-activation/">SMS activation and troubleshooting guide</A> for the full
-        diagnostic checklist.
-      </P>
-
-      <H3>Does switching SMS apps affect my existing messages?</H3>
-      <P>
-        No. All SMS messages are stored on your Android device, not inside any specific app. When
-        you change the default SMS app, all your existing threads appear immediately in the new app.
-        You will not lose any messages by switching.
-      </P>
-
-      <H3>Which SMS app is best for sending SMS from a laptop or PC?</H3>
-      <P>
-        Google Messages web (messages.google.com) is the simplest option — scan a QR code once and
-        your phone&apos;s SMS inbox mirrors to any browser tab. For users who want a dedicated
-        desktop app or need file management alongside SMS, AirDroid offers more. Both use your real
-        SIM number and your bundled SMS quota.
-      </P>
-
-      <H3>Is there a free SMS app for Android that also supports bulk messaging?</H3>
-      <P>
-        No personal SMS app supports bulk messaging that complies with Indian regulations. Bulk
-        SMS in India requires DLT registration, approved content templates, and DND scrubbing —
-        none of which personal apps provide. For business bulk SMS, a platform like SMSLocal is
-        required. The free trial credit covers initial testing at no cost.
-      </P>
-
-      <H3>Which SMS app is best for Android privacy?</H3>
-      <P>
-        QKSMS is the best choice for privacy — it is fully open source (you can inspect every line
-        of code), collects no data, requires no account, and has no ads or trackers. Chomp SMS is a
-        strong runner-up for users who want privacy features like per-conversation PIN locks and a
-        hidden private inbox, without the technical requirements of open-source verification.
-      </P>
+      <BlogFaq items={FAQ_ITEMS} />
 
       <Callout variant="tip" title="Need business SMS from Android?">
         SMSLocal&apos;s web dashboard works on any Android browser — send DLT-compliant OTPs,
