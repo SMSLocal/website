@@ -12,6 +12,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function SmsVsMmsPost() {
   return (
@@ -177,6 +178,13 @@ export default function SmsVsMmsPost() {
           ["Receiving an OTP or alert", "SMS (always)", "Banks and apps only send via SMS, never MMS"],
         ]}
         caption="For personal use, WhatsApp has largely replaced both MMS and casual SMS in India for smartphone-to-smartphone communication."
+      />
+
+      <BlogInlineCta
+        title="Choosing a channel for business messaging?"
+        body="SMS is the only DLT-regulated channel between the two, reaching every Indian number with delivery receipts. Set up compliant OTP and alert sending in minutes."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "See Bulk SMS", href: "/products/bulk-sms/" }}
       />
 
       <H2 id="sms-vs-mms-business">SMS vs MMS for Business Use in India</H2>

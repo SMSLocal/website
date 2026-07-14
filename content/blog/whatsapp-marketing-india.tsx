@@ -13,6 +13,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function WhatsappMarketingIndiaPost() {
   return (
@@ -217,6 +218,12 @@ export default function WhatsappMarketingIndiaPost() {
         caption="These patterns reflect aggregate campaign data across SMSLocal's customer base; individual results vary by vertical and list quality."
       />
 
+      <BlogInlineCta
+        title="Run WhatsApp marketing on the official API"
+        body="SMSLocal sets up your WhatsApp Business API, manages Meta template approvals, and runs compliant broadcasts for Indian businesses — so every campaign reaches opted-in customers safely."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "Explore WhatsApp API", href: "/products/whatsapp-business-api/" }}
+      />
       <H2 id="automation-at-scale">Automation: handling replies at scale</H2>
       <P>
         The hidden cost of WhatsApp marketing is the replies. A broadcast to 10,000 people at a

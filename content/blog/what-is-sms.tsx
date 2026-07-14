@@ -14,6 +14,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function WhatIsSmsPost() {
   return (
@@ -151,6 +152,12 @@ export default function WhatIsSmsPost() {
         regardless of device.
       </Callout>
 
+      <BlogInlineCta
+        title="Sending SMS in India starts with compliance"
+        body="SMSLocal handles DLT registration, DND scrubbing, and TRAI send-window rules, so your transactional and promotional SMS reach every Indian number compliantly."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "See Bulk SMS", href: "/products/bulk-sms/" }}
+      />
       <H2 id="sms-in-india">SMS in India: the regulatory context</H2>
       <P>
         India has one of the most sophisticated SMS compliance frameworks in the world, built on

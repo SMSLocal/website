@@ -13,6 +13,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function BestFreeSmsPost() {
   return (
@@ -199,6 +200,12 @@ export default function BestFreeSmsPost() {
         caption="Operator web portals let you send SMS from a browser using your own bundled SIM quota — no shared number, no third-party account needed."
       />
 
+      <BlogInlineCta
+        title="Sending OTPs or alerts for a business?"
+        body="Free personal SMS apps skip DLT compliance and delivery receipts. SMSLocal sends from your registered sender ID with per-message tracking — start free with ₹60 credit and test a real Indian route."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "View pricing", href: "/pricing/" }}
+      />
       <H2 id="operator-bundled">5. Bundled SIM SMS — 100 Free SMS Per Day Already in Your Plan</H2>
       <P>
         It bears saying clearly: most Indian mobile plans include{" "}

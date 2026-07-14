@@ -15,6 +15,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function SmsActivationPost() {
   return (
@@ -122,6 +123,12 @@ export default function SmsActivationPost() {
         published value. An SMSC mismatch can cause messages to be silently dropped for days.
       </Callout>
 
+      <BlogInlineCta
+        title="Sending OTPs your customers actually receive"
+        body="SMSLocal delivers DLT-compliant transactional OTP SMS across Jio, Airtel, Vi and BSNL, with per-message delivery receipts so you can see exactly where a message stopped."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "See OTP SMS", href: "/products/otp-sms/" }}
+      />
       <H2 id="carrier-level">Carrier-level issues</H2>
       <P>
         If device settings are correct and SMS still doesn&apos;t work, the issue is probably on

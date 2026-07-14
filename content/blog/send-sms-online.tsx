@@ -15,6 +15,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function SendSmsOnlinePost() {
   return (
@@ -136,6 +137,13 @@ export default function SendSmsOnlinePost() {
         src="/blog/web-to-sms-dashboard-no-code.webp"
         alt="Screenshot of a web-to-SMS dashboard showing a bulk SMS campaign interface — upload CSV, select template, schedule send, and view delivery report with DND-filtered numbers highlighted."
         caption="A typical web-to-SMS campaign: upload, segment, schedule, watch the delivery stream. The best platforms surface DND drops and wrong-number filtering inline so you see exactly what was reached."
+      />
+
+      <BlogInlineCta
+        title="Send your first SMS in minutes"
+        body="Sign up for an SMSLocal account to send SMS from a web dashboard or our API, with DLT-compliant routing for Indian numbers. Start with ₹60 credit."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "Read the docs", href: "/developers/api-docs/" }}
       />
 
       <H2 id="api">2. SMS API (for developers)</H2>

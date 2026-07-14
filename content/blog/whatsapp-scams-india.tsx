@@ -13,6 +13,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function WhatsappScamsIndiaPost() {
   return (
@@ -243,6 +244,12 @@ export default function WhatsappScamsIndiaPost() {
         and verify through an official channel before doing anything.
       </Callout>
 
+      <BlogInlineCta
+        title="Reach customers on WhatsApp they can trust"
+        body="Send transactional and support messages from a verified WhatsApp Business account with SMSLocal, so Indian customers can tell your real messages from impersonators."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "Explore WhatsApp API", href: "/products/whatsapp-business-api/" }}
+      />
       <H2 id="warning-signs">Universal warning signs of a WhatsApp scam</H2>
       <P>
         Across every scam type, the same psychological patterns repeat. Learn to spot these and

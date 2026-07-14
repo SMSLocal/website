@@ -15,6 +15,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function DndMeansPost() {
   return (
@@ -109,6 +110,13 @@ export default function DndMeansPost() {
         src="/blog/why-dnd-exists.webp"
         alt="Visual showing why India's DND (Do Not Disturb) regulation exists — the history of TRAI's anti-spam telecom rules and the NCPR system that protects mobile users."
         caption="India's DND regime emerged from the 2007 National Do Not Call Registry and was strengthened with TCCCPR 2018 — making it one of the strictest anti-spam frameworks in the world."
+      />
+
+      <BlogInlineCta
+        title="Sending SMS to Indian numbers?"
+        body="If you run campaigns, DND compliance is mandatory under TRAI's DLT rules. SMSLocal scrubs against the NCPR registry so your promotional and transactional messages reach the right numbers."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "View pricing", href: "/pricing/" }}
       />
 
       <H2 id="how-to-activate">How to activate DND on your number</H2>

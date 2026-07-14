@@ -15,6 +15,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function GmailPasswordRecoveryPost() {
   return (
@@ -107,6 +108,13 @@ export default function GmailPasswordRecoveryPost() {
           Set a new password. It must be different from your last one.
         </LI>
       </OL>
+
+      <BlogInlineCta
+        title="Sending OTPs your users actually receive"
+        body="SMSLocal delivers time-sensitive OTP and verification codes across every Indian carrier, with per-message delivery receipts and DLT-compliant routing."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "See OTP SMS", href: "/products/otp-sms/" }}
+      />
 
       <H2 id="not-arriving">Recovery SMS not arriving</H2>
       <P>

@@ -12,6 +12,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 const FAQ_ITEMS = [
   {
@@ -316,6 +317,13 @@ export default function BestSmsAppsForAndroidPost() {
         QKSMS is available on the Google Play Store and F-Droid. The F-Droid version is the most
         up-to-date and has no Play Store dependencies.
       </Callout>
+
+      <BlogInlineCta
+        title="Sending SMS for your business, not just your phone"
+        body="Personal SMS apps can't send DLT-compliant OTPs or bulk campaigns in India. SMSLocal handles registered sender IDs, approved templates, and delivery receipts from any device."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "See Bulk SMS", href: "/products/bulk-sms/" }}
+      />
 
       <H2 id="pulse-sms">5. Pulse SMS — Best for Multi-Device SMS Sync</H2>
       <P>

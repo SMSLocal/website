@@ -15,6 +15,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function TelegramCodeSmsPost() {
   return (
@@ -150,6 +151,13 @@ export default function TelegramCodeSmsPost() {
         90 seconds — switch to the voice call option, which bypasses most SMS routing issues
         and typically connects within 10–30 seconds.
       </Callout>
+
+      <BlogInlineCta
+        title="Sending OTPs to Indian users yourself?"
+        body="If you run login or verification flows for an Indian audience, SMSLocal delivers transactional OTPs reliably across Jio, Airtel, Vi, and BSNL. Test it before you commit."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "See OTP SMS", href: "/products/otp-sms/" }}
+      />
 
       <H2 id="step-by-step-fix">Step-by-step fix</H2>
       <P>

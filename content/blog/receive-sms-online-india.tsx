@@ -15,6 +15,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function ReceiveSmsOnlineIndiaPost() {
   return (
@@ -99,6 +100,12 @@ export default function ReceiveSmsOnlineIndiaPost() {
         </LI>
       </UL>
 
+      <BlogInlineCta
+        title="Sending OTPs, not just receiving them"
+        body="If you run OTP verification for an Indian product, SMSLocal handles DLT registration, delivery receipts, and number-type detection so your codes reach real users reliably."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "See OTP SMS", href: "/products/otp-sms/" }}
+      />
       <H2 id="tradeoffs">Practical tradeoffs</H2>
       <FigureTable
         columns={["Attribute", "Receive-SMS online", "Your own SIM"]}

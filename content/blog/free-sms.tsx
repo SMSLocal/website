@@ -14,6 +14,7 @@ import {
   UL,
 } from "@/components/blog/blog-prose"
 import { BlogFaq, BlogFaqItem } from "@/components/blog/blog-faq"
+import { BlogInlineCta } from "@/components/blog/blog-cta"
 
 export default function FreeSmsPost() {
   return (
@@ -138,6 +139,13 @@ export default function FreeSmsPost() {
         src="/blog/online-free-sms-services.webp"
         alt="Overview of online free SMS services in India — how they work, their limitations including branded footers, daily caps, and delayed delivery on free routes."
         caption="Online free SMS services fund their free quota through ads and data collection — the tradeoffs include shared sender IDs, caps, and slower delivery."
+      />
+
+      <BlogInlineCta
+        title="Testing business SMS in India?"
+        body="Skip the daily caps and shared sender IDs. Send through direct operator routes with your own DLT-registered sender ID and real-time delivery receipts."
+        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        secondary={{ label: "View pricing", href: "/pricing/" }}
       />
 
       <H2 id="ways2sms-alternatives">Way2SMS and its successors</H2>
