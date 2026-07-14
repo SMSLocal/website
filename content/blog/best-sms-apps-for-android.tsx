@@ -322,7 +322,6 @@ export default function BestSmsAppsForAndroidPost() {
         title="Sending SMS for your business, not just your phone"
         body="Personal SMS apps can't send DLT-compliant OTPs or bulk campaigns in India. SMSLocal handles registered sender IDs, approved templates, and delivery receipts from any device."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "See Bulk SMS", href: "/products/bulk-sms/" }}
       />
 
       <H2 id="pulse-sms">5. Pulse SMS — Best for Multi-Device SMS Sync</H2>

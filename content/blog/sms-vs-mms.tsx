@@ -184,7 +184,6 @@ export default function SmsVsMmsPost() {
         title="Choosing a channel for business messaging?"
         body="SMS is the only DLT-regulated channel between the two, reaching every Indian number with delivery receipts. Set up compliant OTP and alert sending in minutes."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "See Bulk SMS", href: "/products/bulk-sms/" }}
       />
 
       <H2 id="sms-vs-mms-business">SMS vs MMS for Business Use in India</H2>

@@ -248,7 +248,6 @@ export default function WhatsappScamsIndiaPost() {
         title="Reach customers on WhatsApp they can trust"
         body="Send transactional and support messages from a verified WhatsApp Business account with SMSLocal, so Indian customers can tell your real messages from impersonators."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "Explore WhatsApp API", href: "/products/whatsapp-business-api/" }}
       />
       <H2 id="warning-signs">Universal warning signs of a WhatsApp scam</H2>
       <P>

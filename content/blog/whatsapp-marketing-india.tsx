@@ -222,7 +222,6 @@ export default function WhatsappMarketingIndiaPost() {
         title="Run WhatsApp marketing on the official API"
         body="SMSLocal sets up your WhatsApp Business API, manages Meta template approvals, and runs compliant broadcasts for Indian businesses — so every campaign reaches opted-in customers safely."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "Explore WhatsApp API", href: "/products/whatsapp-business-api/" }}
       />
       <H2 id="automation-at-scale">Automation: handling replies at scale</H2>
       <P>

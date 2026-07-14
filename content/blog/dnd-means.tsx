@@ -116,7 +116,6 @@ export default function DndMeansPost() {
         title="Sending SMS to Indian numbers?"
         body="If you run campaigns, DND compliance is mandatory under TRAI's DLT rules. SMSLocal scrubs against the NCPR registry so your promotional and transactional messages reach the right numbers."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "View pricing", href: "/pricing/" }}
       />
 
       <H2 id="how-to-activate">How to activate DND on your number</H2>

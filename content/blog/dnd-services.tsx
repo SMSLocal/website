@@ -181,7 +181,6 @@ export default function DndServicesPost() {
         title="Send DND-compliant SMS in India"
         body="SMSLocal scrubs every list against the NCPR, enforces send windows, and matches header categories automatically. Get started with free credit to test compliant delivery."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "View pricing", href: "/pricing/" }}
       />
       <H2 id="consent">Consent: the other half of compliance</H2>
       <P>

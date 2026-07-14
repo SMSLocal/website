@@ -173,7 +173,6 @@ export default function BulkWhatsappMessagingPost() {
         title="Ready to broadcast on the official API?"
         body="SMSLocal is an official WhatsApp Business API provider with template management, campaign scheduling, and opt-out handling built in — so Indian businesses can send bulk messages within Meta's rules."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "Explore WhatsApp API", href: "/products/whatsapp-business-api/" }}
       />
 
       <H2 id="messaging-limits-and-tiers">Messaging limits and tiers in 2026</H2>

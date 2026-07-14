@@ -143,7 +143,6 @@ export default function SendSmsOnlinePost() {
         title="Send your first SMS in minutes"
         body="Sign up for an SMSLocal account to send SMS from a web dashboard or our API, with DLT-compliant routing for Indian numbers. Start with ₹60 credit."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "Read the docs", href: "/developers/api-docs/" }}
       />
 
       <H2 id="api">2. SMS API (for developers)</H2>

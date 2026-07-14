@@ -145,7 +145,6 @@ export default function FreeSmsPost() {
         title="Testing business SMS in India?"
         body="Skip the daily caps and shared sender IDs. Send through direct operator routes with your own DLT-registered sender ID and real-time delivery receipts."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "View pricing", href: "/pricing/" }}
       />
 
       <H2 id="ways2sms-alternatives">Way2SMS and its successors</H2>

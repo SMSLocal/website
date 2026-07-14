@@ -204,7 +204,6 @@ export default function BestFreeSmsPost() {
         title="Sending OTPs or alerts for a business?"
         body="Free personal SMS apps skip DLT compliance and delivery receipts. SMSLocal sends from your registered sender ID with per-message tracking — start free with ₹60 credit and test a real Indian route."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "View pricing", href: "/pricing/" }}
       />
       <H2 id="operator-bundled">5. Bundled SIM SMS — 100 Free SMS Per Day Already in Your Plan</H2>
       <P>

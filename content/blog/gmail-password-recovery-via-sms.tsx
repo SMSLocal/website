@@ -113,7 +113,6 @@ export default function GmailPasswordRecoveryPost() {
         title="Sending OTPs your users actually receive"
         body="SMSLocal delivers time-sensitive OTP and verification codes across every Indian carrier, with per-message delivery receipts and DLT-compliant routing."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "See OTP SMS", href: "/products/otp-sms/" }}
       />
 
       <H2 id="not-arriving">Recovery SMS not arriving</H2>

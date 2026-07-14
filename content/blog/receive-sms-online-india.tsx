@@ -104,7 +104,6 @@ export default function ReceiveSmsOnlineIndiaPost() {
         title="Sending OTPs, not just receiving them"
         body="If you run OTP verification for an Indian product, SMSLocal handles DLT registration, delivery receipts, and number-type detection so your codes reach real users reliably."
         primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
-        secondary={{ label: "See OTP SMS", href: "/products/otp-sms/" }}
       />
       <H2 id="tradeoffs">Practical tradeoffs</H2>
       <FigureTable
