@@ -42,6 +42,9 @@ import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { AiAgenticVisual } from "@/components/lazy"
+import { AiAgenticFaq } from "@/components/product/ai-agentic-faq"
+import { AI_AGENTIC_FAQS } from "@/components/product/ai-agentic-faq-data"
+import { FaqJsonLd } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = getPageMetadata("/products/ai-agentic")
 
@@ -546,7 +549,11 @@ export default function AiAgenticPage() {
           </div>
         </section>
 
+        {/* ── FAQ ───────────────────────────────────────────────────────── */}
+        <AiAgenticFaq />
+
       </main>
+      <FaqJsonLd items={AI_AGENTIC_FAQS} path="/products/ai-agentic/" />
       <SiteFooter />
     </>
   )
