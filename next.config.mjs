@@ -210,6 +210,18 @@ const nextConfig = {
         destination: "/resources/tools/sms-bomber/",
         permanent: true,
       },
+      // Free SMS tool lives under /resources/tools/ — the bare root-level
+      // slug (indexed/linked externally) was 200-ing to a soft-404 instead.
+      {
+        source: "/free-sms-without-registration",
+        destination: "/resources/tools/free-sms-without-registration/",
+        permanent: true,
+      },
+      {
+        source: "/free-sms-without-registration/",
+        destination: "/resources/tools/free-sms-without-registration/",
+        permanent: true,
+      },
       // /help/ has no page — redirect to the real help centre.
       // Both with and without trailing slash — trailingSlash:true means the
       // browser may hit /help/ directly, which wouldn't match source:"/help".

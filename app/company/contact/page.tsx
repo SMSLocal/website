@@ -38,13 +38,13 @@ const CHANNELS = [
     icon: MessageCircle,
     title: "WhatsApp us",
     body: "Quick pre-sales questions? Message our team directly on WhatsApp.",
-    action: { label: "Chat on WhatsApp", href: "https://wa.me/919999999999" },
+    action: { label: "Chat on WhatsApp", href: "https://wa.me/917621073586" },
   },
   {
     icon: Phone,
     title: "Phone",
     body: "Mon–Sat, 9 AM to 8 PM IST. For after-hours incidents, use support email.",
-    action: { label: "+91 99999 99999", href: "tel:+919999999999" },
+    action: { label: "+91 76210 73586", href: "tel:+917621073586" },
   },
 ]
 
