@@ -255,6 +255,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       date: "2026-07-17",
       readingTime: "10 min read",
       category: "Getting started",
+      author: TEAM,
       coverImage: "/blog/aws-sms-hero.webp",
       coverAlt:
         "Illustration of sending SMS on AWS — an Amazon SNS publish call delivering a text message to a phone, with a dark navy and cyan interface.",
