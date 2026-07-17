@@ -9,6 +9,7 @@ import DndServicesPost from "@/content/blog/dnd-services"
 import FreeSmsPost from "@/content/blog/free-sms"
 import GmailPasswordRecoveryPost from "@/content/blog/gmail-password-recovery-via-sms"
 import ReceiveSmsOnlineIndiaPost from "@/content/blog/receive-sms-online-india"
+import ReceiveSmsMessagesOnYourComputerPost from "@/content/blog/receive-sms-messages-on-your-computer"
 import SmsActivationPost from "@/content/blog/sms-activation"
 import SendSmsOnlinePost from "@/content/blog/send-sms-online"
 import TelegramCodeSmsPost from "@/content/blog/telegram-code-sms"
@@ -197,7 +198,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "if-youre-a-business", label: "Blocking them as a business" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dnd-means", "send-sms-online"],
+      relatedSlugs: ["receive-sms-messages-on-your-computer", "dnd-means", "send-sms-online"],
       faqItems: [
         { q: "Is using a receive-SMS-online service illegal in India?", a: "The service itself is not illegal, but using it to impersonate someone, commit fraud, or violate a service's terms of use is. For personal-privacy uses on services that do not prohibit it, you are within the law." },
         { q: "Can I use a receive-SMS number for Aadhaar OTP?", a: "No. Aadhaar OTP is tied to the mobile number linked to your Aadhaar record. Using any other number is fraud and a criminal offence under Indian law." },
@@ -206,6 +207,42 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       ],
     },
     Component: ReceiveSmsOnlineIndiaPost,
+  },
+
+  "receive-sms-messages-on-your-computer": {
+    meta: {
+      slug: "receive-sms-messages-on-your-computer",
+      title: "How to Receive SMS Messages on Your Computer (2026)",
+      description:
+        "Every way to receive your own SMS on a Windows PC, Mac, or Linux machine using your real number — Phone Link, Google Messages for web, Samsung Flow, iPhone forwarding, and business options.",
+      date: "2026-07-16",
+      readingTime: "9 min read",
+      category: "Getting started",
+      author: TEAM,
+      coverImage: "/blog/receive-sms-messages-on-your-computer-hero.webp",
+      coverAlt:
+        "Illustration of SMS messages appearing on a computer screen next to a smartphone, showing a phone-to-PC message mirroring setup.",
+      toc: [
+        { id: "quick-pick", label: "Quick pick by platform" },
+        { id: "windows-phone-link", label: "Windows — Phone Link" },
+        { id: "google-messages-web", label: "Google Messages for web" },
+        { id: "samsung-flow", label: "Samsung Flow" },
+        { id: "iphone-mac", label: "iPhone — Mac forwarding" },
+        { id: "third-party-apps", label: "Third-party apps" },
+        { id: "business-use", label: "No phone at all (business)" },
+        { id: "troubleshooting", label: "Troubleshooting" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["receive-sms-online-india", "best-sms-apps-for-android", "send-sms-online"],
+      faqItems: [
+        { q: "Can I receive SMS on my computer without my phone nearby?", a: "With Bluetooth-paired tools like Phone Link, no — your phone needs to be reasonably close and online. Browser-based tools like Google Messages for web and cloud-relay apps like Pulse SMS work as long as your phone has an internet connection, wherever it is." },
+        { q: "Is it free to receive SMS on a PC?", a: "Yes, for personal use. Phone Link, Google Messages for web, Samsung Flow, and Apple's Text Message Forwarding are all free and official. Third-party apps like Pulse SMS and AirDroid have free tiers with paid upgrades for unlimited multi-device sync." },
+        { q: "Does this use my real phone number?", a: "Yes — every method mirrors your existing SIM's SMS onto a computer. Replies sent from the computer still go out from your real number. This is different from a receive-SMS-online service, which gives you a separate, often shared, number." },
+        { q: "What's the best option if I have an iPhone and a Windows PC?", a: "There is no official Apple-to-Windows path. Pulse SMS is the most reliable third-party option — it works on iOS (receive-only) and syncs to a Windows app or browser tab." },
+        { q: "How does a business receive SMS on a computer without any phone?", a: "By using a dedicated business SMS platform with a virtual or DID number, like SMSLocal. Incoming SMS lands directly in a web dashboard and can be piped to your own systems via API — no phone or SIM required, and it scales to a whole team." },
+      ],
+    },
+    Component: ReceiveSmsMessagesOnYourComputerPost,
   },
 
   "sms-activation": {
@@ -302,7 +339,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "legal", label: "Legal requirements" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dlt-registration-guide", "dnd-services"],
+      relatedSlugs: ["receive-sms-messages-on-your-computer", "dlt-registration-guide", "dnd-services"],
       faqItems: [
         { q: "Can I send SMS online for free?", a: "Some platforms offer a free signup credit — SMSLocal gives ₹60 to start, enough for a few hundred test messages. Beyond that, expect ₹0.10–0.40 per SMS. Any 'totally free' service for ongoing use is either operating without DLT compliance or monetising your data." },
         { q: "Do I need a separate sender ID account for each brand?", a: "No. One account, one Principal Entity, but you can register multiple Headers (sender IDs) for different brands under the same account." },
@@ -593,7 +630,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "comparison", label: "Full comparison table" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["best-free-sms", "sms-activation", "send-sms-online"],
+      relatedSlugs: ["best-free-sms", "receive-sms-messages-on-your-computer", "send-sms-online"],
       faqItems: [
         { q: "What is the best SMS app for Android in India in 2026?", a: "Google Messages is the best default for most users — free, no ads, RCS-capable, and backed up to Google Drive. On Samsung devices, Samsung Messages integrates better with One UI. For customisation and no ads, QKSMS is the open-source alternative." },
         { q: "Can I run two SMS apps on one Android phone at the same time?", a: "You can have multiple SMS apps installed, but only one can be the default SMS app at a time. Changing the default is in Settings → Apps → Default apps → SMS app. Some dual-SIM phones let you assign different apps per SIM, but notifications consolidate in the default app." },
