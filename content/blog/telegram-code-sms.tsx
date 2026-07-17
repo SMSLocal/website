@@ -82,7 +82,8 @@ export default function TelegramCodeSmsPost() {
 
       <H3>2. DND (Do Not Disturb) active on your number</H3>
       <P>
-        India&apos;s TRAI DND framework distinguishes transactional SMS (OTPs, alerts) from
+        India&apos;s TRAI DND framework distinguishes{" "}
+        <A href="/blog/what-is-sms/">transactional SMS</A> (OTPs, alerts) from
         promotional SMS. OTPs are classified as transactional and should bypass DND. However,
         Telegram&apos;s SMS routing may pass through a commercial aggregator using a header
         registered under a content category that gets flagged as promotional on some operators.
@@ -222,7 +223,8 @@ export default function TelegramCodeSmsPost() {
       <H2 id="account-recovery">What to do if you&apos;ve lost access to the phone number</H2>
       <P>
         If you no longer have the SIM registered to your Telegram account (lost phone, changed
-        number, ported to a different operator and SIM expired), recovery is more difficult:
+        number, ported to a different operator and SIM expired),{" "}
+        <A href="/blog/gmail-password-recovery-via-sms/">recovery</A> is more difficult:
       </P>
       <OL>
         <LI>
@@ -250,7 +252,8 @@ export default function TelegramCodeSmsPost() {
 
       <H2 id="security">Security implications of SMS verification</H2>
       <P>
-        Telegram&apos;s SMS-based login has a known security limitation: anyone who can intercept
+        <A href="https://en.wikipedia.org/wiki/Telegram_(software)">Telegram</A>&apos;s SMS-based
+        login has a known security limitation: anyone who can intercept
         or forward your SMS (via a SIM-swap attack, for example) can log into your Telegram account.
         To reduce this risk:
       </P>

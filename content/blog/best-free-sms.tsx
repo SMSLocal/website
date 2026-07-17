@@ -51,7 +51,7 @@ export default function BestFreeSmsPost() {
 
       <H2 id="google-messages">1. Google Messages — Best Free SMS App for Android in India</H2>
       <P>
-        Google Messages is the default messaging app on most Android phones sold in India in 2025–26
+        Google Messages is the default messaging app on most <A href="/blog/best-sms-apps-for-android/">Android phones</A> sold in India in 2025–26
         (Pixel, OnePlus, Motorola, and many Xiaomi and Realme models). For personal SMS, it is the
         single best free option available — and most Indian users already have it.
       </P>
@@ -320,7 +320,7 @@ export default function BestFreeSmsPost() {
       <UL>
         <LI>Messages from your own registered DLT sender ID (not shared branding)</LI>
         <LI>Real-time delivery receipts per message — delivered, pending, failed</LI>
-        <LI>Sub-5-second OTP delivery on direct operator routes</LI>
+        <LI>Sub-5-second <A href="/products/otp-sms/">OTP delivery</A> on direct operator routes</LI>
         <LI>Full API access to test integrations before committing</LI>
         <LI>Works for transactional (OTP, alerts) and promotional (campaigns) templates</LI>
         <LI>₹60 covers roughly 200–750 messages depending on route type</LI>
@@ -416,7 +416,7 @@ export default function BestFreeSmsPost() {
         </BlogFaqItem>
 
         <BlogFaqItem q={"Can I send free SMS internationally from India?"}>
-        Not through any mainstream free service. International SMS routing carries real cost —
+        Not through any mainstream free service. International <A href="https://en.wikipedia.org/wiki/SMS">SMS</A> routing carries real cost —
         typically ₹2–5 per message. WhatsApp is the free alternative for most international
         personal messaging to smartphone users. For business international SMS, expect paid rates
         from any platform.

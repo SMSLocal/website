@@ -45,7 +45,8 @@ export default function SendSmsOnlinePost() {
         </LI>
         <LI>
           <Strong>Developers and startups</Strong> integrating SMS via API into their products —
-          OTPs, verification codes, service notifications. Typical volume: variable, demand-driven.
+          <A href="/products/otp-sms/">OTPs</A>, verification codes, service notifications.
+          Typical volume: variable, demand-driven.
         </LI>
         <LI>
           <Strong>Enterprise marketing teams</Strong> running scheduled bulk campaigns and cart
@@ -215,7 +216,8 @@ export default function SendSmsOnlinePost() {
       <H2 id="whatsapp">4. WhatsApp Business API (when SMS isn&apos;t enough)</H2>
       <P>
         When you need richer content (images, buttons, catalogs) or higher engagement than SMS
-        gives you, WhatsApp Business API is the modern answer. The tradeoff is complexity: there
+        gives you, <A href="/blog/bulk-whatsapp-messaging/">WhatsApp Business API</A> is the modern
+        answer. The tradeoff is complexity: there
         are message categories, template approvals, 24-hour sessions, and Meta verification.
       </P>
       <P>WhatsApp makes sense when:</P>
@@ -232,8 +234,8 @@ export default function SendSmsOnlinePost() {
 
       <H2 id="legal">Legal requirements for sending SMS online in India</H2>
       <P>
-        Whatever channel and platform you pick, these rules apply to every SMS sent from India to
-        an Indian number:
+        Whatever channel and platform you pick, these rules apply to every{" "}
+        <A href="https://en.wikipedia.org/wiki/SMS">SMS</A> sent from India to an Indian number:
       </P>
       <OL>
         <LI>

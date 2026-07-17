@@ -47,7 +47,8 @@ export default function BulkWhatsappMessagingPost() {
       <P>
         The key word is official. Meta (WhatsApp&apos;s parent company) controls exactly who can
         send bulk messages and on what terms. You access this through a Meta-approved Business
-        Solution Provider (BSP) — a company like SMSLocal that has a direct API connection to
+        Solution Provider (BSP) — a company like SMSLocal that has a direct{" "}
+        <A href="/developers/api-docs/">API connection</A> to
         WhatsApp&apos;s infrastructure.
       </P>
 
@@ -128,7 +129,7 @@ export default function BulkWhatsappMessagingPost() {
         </LI>
         <LI>
           <Strong>Launch the campaign and handle replies.</Strong> Messages go out through the API,
-          and replies arrive back in your inbox — which is where a well-configured platform like
+          and replies arrive back in your <A href="/products/omnichannel-inbox/">inbox</A> — which is where a well-configured platform like
           SMSLocal lets agentic AI handle them automatically, so a broadcast doesn&apos;t create a
           support backlog.
         </LI>
@@ -177,7 +178,7 @@ export default function BulkWhatsappMessagingPost() {
 
       <H2 id="messaging-limits-and-tiers">Messaging limits and tiers in 2026</H2>
       <P>
-        WhatsApp controls how many messages you can send through a tiered limit system tied to your
+        <A href="https://en.wikipedia.org/wiki/WhatsApp">WhatsApp</A> controls how many messages you can send through a tiered limit system tied to your
         quality rating — and the rules changed in 2025–26, so older guides are out of date. The
         current picture:
       </P>

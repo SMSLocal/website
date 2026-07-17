@@ -83,7 +83,8 @@ export default function SmsActivationPost() {
         </LI>
         <LI>
           <Strong>Settings → Apps → Messages → Set as default app:</Strong> if you switched to
-          WhatsApp or another messenger as your default, SMS may be disabled.
+          WhatsApp or <A href="/blog/best-sms-apps-for-android/">another messenger</A> as your
+          default, SMS may be disabled.
         </LI>
         <LI>
           <Strong>Settings → Mobile Network → SIM:</Strong> confirm the SIM is enabled and check
@@ -130,7 +131,8 @@ export default function SmsActivationPost() {
       />
       <H2 id="carrier-level">Carrier-level issues</H2>
       <P>
-        If device settings are correct and SMS still doesn&apos;t work, the issue is probably on
+        If device settings are correct and <A href="/blog/what-is-sms/">SMS</A> still
+        doesn&apos;t work, the issue is probably on
         the carrier side.
       </P>
 
@@ -174,7 +176,9 @@ export default function SmsActivationPost() {
 
       <H2 id="otp-not-arriving">When OTPs specifically aren&apos;t arriving</H2>
       <P>
-        If your SIM works for regular SMS but OTPs from specific services don&apos;t arrive, the
+        If your SIM works for regular SMS but{" "}
+        <A href="https://en.wikipedia.org/wiki/One-time_password">OTPs</A> from specific services
+        don&apos;t arrive, the
         issue is upstream. Check in order:
       </P>
       <OL>

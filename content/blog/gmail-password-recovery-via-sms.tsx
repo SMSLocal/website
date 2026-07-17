@@ -37,7 +37,8 @@ export default function GmailPasswordRecoveryPost() {
       <P>
         When you set up a Gmail account and add a phone number as a recovery method, Google
         stores it as a <Strong>recovery phone</Strong>. When you later need to reset your
-        password, Google can send a 6-digit code to that number via SMS. You enter the code in
+        password, Google can send a 6-digit code to that number via{" "}
+        <A href="/blog/what-is-sms/">SMS</A>. You enter the code in
         the recovery flow and you&apos;re in.
       </P>
       <P>
@@ -63,7 +64,8 @@ export default function GmailPasswordRecoveryPost() {
           <Strong>Recovery phone</Strong>.
         </LI>
         <LI>
-          Add your mobile number (include country code — <InlineCode>+91</InlineCode> for India).
+          Add your mobile number (include country code — <InlineCode>+91</InlineCode> for{" "}
+          <A href="/blog/receive-sms-online-india/">India</A>).
         </LI>
         <LI>
           Google sends a verification SMS. Enter the 6-digit code to confirm the number.
@@ -203,7 +205,9 @@ export default function GmailPasswordRecoveryPost() {
 
       <H3>Use two-factor, but not SMS-only</H3>
       <P>
-        SMS-based 2FA is better than nothing, but SIM-swap attacks are real in India. The safer
+        SMS-based{" "}
+        <A href="https://en.wikipedia.org/wiki/Multi-factor_authentication">2FA</A> is better than
+        nothing, but SIM-swap attacks are real in India. The safer
         setup:
       </P>
       <UL>

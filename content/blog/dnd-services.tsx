@@ -136,8 +136,9 @@ export default function DndServicesPost() {
       <H3>Option 2: TRAI&apos;s NCPR API (for in-house stacks)</H3>
       <P>
         TRAI exposes an NCPR lookup API that you can query programmatically. This is only useful
-        if you&apos;re building your own SMS platform — in which case you&apos;ll also need DLT
-        registration, operator bindings, and scrub infrastructure. Most teams don&apos;t do this.
+        if you&apos;re building your own SMS platform — in which case you&apos;ll also need{" "}
+        <A href="/blog/dlt-registration-guide/">DLT registration</A>, operator bindings, and scrub
+        infrastructure. Most teams don&apos;t do this.
       </P>
 
       <H3>Option 3: Manual check at trai.gov.in</H3>
@@ -186,7 +187,8 @@ export default function DndServicesPost() {
       <P>
         DND tells you <Strong>who</Strong> to skip. Consent tells you <Strong>who you&apos;re
         allowed to message in the first place</Strong>. Even if a number is not on DND, if you
-        don&apos;t have documented consent for promotional SMS, you&apos;re non-compliant.
+        don&apos;t have documented consent for <A href="/blog/what-is-sms/">promotional SMS</A>,
+        you&apos;re non-compliant.
       </P>
       <P>
         Consent for SMS has three attributes that every operator will ask for if a complaint is
@@ -312,7 +314,9 @@ export default function DndServicesPost() {
       <H2 id="dpdp-consent">Consent in 2026 — DPDP Act adds a new layer</H2>
       <P>
         India&apos;s <Strong>Digital Personal Data Protection (DPDP) Act 2023</Strong> adds a
-        statutory consent framework on top of TRAI&apos;s existing DND rules. The practical
+        statutory consent framework on top of{" "}
+        <A href="https://en.wikipedia.org/wiki/Telecom_Regulatory_Authority_of_India">TRAI</A>&apos;s
+        existing DND rules. The practical
         difference: TRAI governs what you can send and when; DPDP governs how you collected the
         data and whether the consent is legally valid.
       </P>

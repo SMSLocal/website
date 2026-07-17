@@ -57,7 +57,8 @@ export default function DndMeansPost() {
       <H2 id="what-dnd-blocks">What DND blocks and doesn&apos;t block</H2>
       <P>
         DND is specifically scoped to <Strong>promotional</Strong> communication. It does not
-        block legitimate transactional messages — the ones you actually need — because those are
+        block legitimate <A href="/blog/what-is-sms/">transactional messages</A> — the ones you
+        actually need — because those are
         considered service-critical under TRAI&apos;s rules.
       </P>
       <FigureTable
@@ -97,8 +98,8 @@ export default function DndMeansPost() {
         In the early 2010s, Indian mobile users were drowning in spam. Some numbers were getting
         30+ unsolicited calls and SMS a day, and there was no recourse. TRAI introduced the
         National Do Not Call Registry in 2007 and expanded it into the full NCPR system with the
-        <Strong> TCCCPR 2018</Strong> regulations — which added blockchain-backed DLT registration
-        for every sender.
+        <Strong> TCCCPR 2018</Strong> regulations — which added blockchain-backed{" "}
+        <A href="/blog/dlt-registration-guide/">DLT registration</A> for every sender.
       </P>
       <P>
         Today, India has one of the strictest anti-spam telecom regimes in the world. If a
@@ -219,7 +220,9 @@ export default function DndMeansPost() {
 
       <H3>Step 3: Escalate if ignored</H3>
       <P>
-        If 7 days pass without resolution, you can escalate to TRAI directly through the{" "}
+        If 7 days pass without resolution, you can escalate to{" "}
+        <A href="https://en.wikipedia.org/wiki/Telecom_Regulatory_Authority_of_India">TRAI</A>{" "}
+        directly through the{" "}
         <A href="https://www.trai.gov.in/">TRAI complaint portal</A>. Operators are required to
         respond to every complaint, and repeat offenders face Header suspension.
       </P>

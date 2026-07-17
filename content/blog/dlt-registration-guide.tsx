@@ -73,7 +73,7 @@ export default function DltRegistrationGuide() {
         </LI>
         <LI>
           <Strong>Promotional senders</Strong> (marketing, offers, newsletters): yes, and
-          additionally constrained by DND rules and 9am–9pm IST send windows. Our{" "}
+          additionally constrained by <A href="/blog/dnd-means/">DND</A> rules and 9am–9pm IST send windows. Our{" "}
           <A href="/products/bulk-sms/">Bulk SMS product</A> handles NCPR scrubbing, send-window
           enforcement, and DLT compliance automatically.
         </LI>
@@ -171,7 +171,7 @@ export default function DltRegistrationGuide() {
 
       <H2 id="template">Step 3: Register your Content Template</H2>
       <P>
-        This is where most rejections happen. A Content Template is the exact body of an SMS you
+        This is where most rejections happen. A Content Template is the exact body of an <A href="/blog/what-is-sms/">SMS</A> you
         plan to send, with variable slots marked as <InlineCode>{"{#var#}"}</InlineCode>. The
         operator approves the template once; after that, every send that references the Template
         ID must match the template body <Strong>character-for-character</Strong>, with only the
@@ -333,7 +333,7 @@ export default function DltRegistrationGuide() {
       </P>
       <OL>
         <LI>
-          Send a single SMS to your own phone using the transactional Header + Template. Confirm
+          Send a single <A href="https://en.wikipedia.org/wiki/SMS">SMS</A> to your own phone using the transactional Header + Template. Confirm
           it arrives with the correct Header name.
         </LI>
         <LI>

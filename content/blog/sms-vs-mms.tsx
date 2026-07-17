@@ -36,7 +36,7 @@ export default function SmsVsMmsPost() {
 
       <H2 id="what-is-sms">What Is SMS?</H2>
       <P>
-        SMS — Short Message Service — is the original text messaging standard built into every
+        SMS — Short Message Service — is the original <A href="/blog/what-is-sms/">text messaging standard</A> built into every
         mobile phone since 1992. An SMS message travels through the cellular signalling network,
         not the internet, which means it works on any phone (smartphone or feature phone) with any
         mobile connection, even with no data plan and on 2G networks.
@@ -121,7 +121,8 @@ export default function SmsVsMmsPost() {
       <H3>2. WhatsApp arrived before MMS could establish itself</H3>
       <P>
         WhatsApp launched in India around 2010, just as smartphone prices were falling and data
-        plans were becoming affordable. It offered free, unlimited photo and video sharing over
+        plans were becoming affordable. It offered free, unlimited{" "}
+        <A href="/blog/bulk-whatsapp-messaging/">photo and video sharing</A> over
         Wi-Fi and mobile data — everything MMS could do, for free, without carrier per-message
         charges. By the time Jio made data nearly free in 2016, WhatsApp was already the de facto
         multimedia messaging platform for all Indian smartphone users.
@@ -243,7 +244,8 @@ export default function SmsVsMmsPost() {
 
       <H3>RCS — business multimedia messaging</H3>
       <P>
-        Rich Communication Services (RCS) is the carrier-level successor to SMS and MMS.
+        Rich Communication Services (RCS) is the carrier-level successor to SMS and{" "}
+        <A href="https://en.wikipedia.org/wiki/Multimedia_Messaging_Service">MMS</A>.
         In 2026, all three major Indian carriers — Jio, Airtel, and Vi — have activated RCS
         on their networks. RCS supports images, carousels, quick-reply buttons, and verified
         business sender branding, all delivered via the cellular network with SMS as a fallback

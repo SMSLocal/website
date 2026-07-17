@@ -52,7 +52,7 @@ export default function WhatsappScamsIndiaPost() {
         images, documents, and links that look completely official.
       </P>
       <P>
-        Unlike SMS, WhatsApp shows profile pictures and display names — both of which can be
+        Unlike <A href="/blog/receive-sms-online-india/">SMS</A>, WhatsApp shows profile pictures and display names — both of which can be
         faked. A scammer can set a bank&apos;s logo as their picture, name themselves &quot;SBI
         Customer Care&quot;, and send a message that looks almost identical to a real bank
         communication. On a small phone screen, most people can&apos;t tell the difference quickly
@@ -121,7 +121,7 @@ export default function WhatsappScamsIndiaPost() {
       <H3 id="otp-theft">5. OTP theft</H3>
       <P>
         Someone claiming to be from your bank, TRAI, or a government agency says you must verify
-        your account by sharing the OTP you&apos;re about to receive. The instant you share it,
+        your account by sharing the <A href="/products/otp-sms/">OTP</A> you&apos;re about to receive. The instant you share it,
         they use it to log into your bank, UPI, or wallet and clear the balance.
       </P>
       <P>
@@ -372,7 +372,7 @@ export default function WhatsappScamsIndiaPost() {
       <BlogFaq>
         <BlogFaqItem q={"Can a scammer access my phone just by sending a WhatsApp message?"}>
           Not from a text message alone. The danger comes when you click a malicious link (which can
-          install malware or open a phishing page) or voluntarily install an app or APK the scammer
+          install malware or open a <A href="https://en.wikipedia.org/wiki/Phishing">phishing</A> page) or voluntarily install an app or APK the scammer
           recommends. Don&apos;t click links from unknown numbers and never install apps on a
           stranger&apos;s say-so.
         </BlogFaqItem>

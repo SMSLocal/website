@@ -77,8 +77,9 @@ export default function FreeSmsPost() {
         caption="Bundled SMS allowances reset daily at midnight. Unused SMS do not carry over."
       />
       <P>
-        These are genuine free SMS — no footer, no branding, delivered through the standard SMS
-        network. For personal messages within your daily quota, you will not find anything faster or
+        These are genuine free SMS — no footer, no branding, delivered through the{" "}
+        <A href="/blog/what-is-sms/">standard SMS network</A>. For personal messages within your
+        daily quota, you will not find anything faster or
         more reliable.
       </P>
 
@@ -175,8 +176,9 @@ export default function FreeSmsPost() {
       </P>
       <P>
         SMSLocal provides <Strong>₹60 free credit</Strong> on signup with no credit card required.
-        That covers roughly 200–400 transactional SMS at standard rates — enough to fully test an
-        OTP flow, an order notification system, or a small promotional campaign before committing
+        That covers roughly 200–400 transactional SMS at standard rates — enough to fully test an{" "}
+        <A href="/products/otp-sms/">OTP flow</A>, an order notification system, or a small
+        promotional campaign before committing
         to a paid top-up.
       </P>
       <FigureTable
@@ -204,8 +206,9 @@ export default function FreeSmsPost() {
           for any regular business communication.
         </LI>
         <LI>
-          <Strong>Compliance-sensitive sends</Strong> — transactional and promotional SMS in India
-          require DLT registration. Free consumer services do not support DLT headers.
+          <Strong>Compliance-sensitive sends</Strong> — transactional and promotional{" "}
+          <A href="https://en.wikipedia.org/wiki/SMS">SMS</A> in India require DLT registration. Free
+          consumer services do not support DLT headers.
         </LI>
         <LI>
           <Strong>When you need delivery proof</Strong> — for financial notifications, appointment

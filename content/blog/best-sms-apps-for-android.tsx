@@ -177,7 +177,7 @@ export default function BestSmsAppsForAndroidPost() {
         </LI>
         <LI>
           <Strong>Web access at messages.google.com.</Strong> Scan a QR code once and your phone&apos;s
-          SMS threads appear in any browser tab. Reply to SMS from your laptop without picking up
+          SMS threads appear in any browser tab. <A href="/blog/receive-sms-messages-on-your-computer/">Reply to SMS from your laptop</A> without picking up
           your phone — all using your real SIM number.
         </LI>
         <LI>
@@ -271,7 +271,7 @@ export default function BestSmsAppsForAndroidPost() {
           on mid-range devices (Redmi, Realme, Narzo) — noticeable if your current app feels slow.
         </LI>
         <LI>
-          <Strong>Smart OTP copy.</Strong> Textra can detect incoming OTPs and automatically copy
+          <Strong>Smart OTP copy.</Strong> Textra can detect <A href="/products/otp-sms/">incoming OTPs</A> and automatically copy
           them to the clipboard — a genuinely useful time-saver for frequent UPI and banking
           verifications.
         </LI>
@@ -421,7 +421,7 @@ export default function BestSmsAppsForAndroidPost() {
       <H3>Limitations</H3>
       <UL>
         <LI>Free version has ads; ad-free requires the Pro purchase (₹280 one-time)</LI>
-        <LI>No RCS, no web access, no PC mirroring</LI>
+        <LI>No <A href="https://en.wikipedia.org/wiki/Rich_Communication_Services">RCS</A>, no web access, no PC mirroring</LI>
         <LI>UI is less polished than Google Messages in 2026 — shows its age slightly</LI>
       </UL>
 

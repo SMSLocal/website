@@ -37,7 +37,7 @@ export default function ReceiveSmsOnlineIndiaPost() {
       <H2 id="how-it-works">How receive-SMS-online actually works</H2>
       <P>
         A receive-SMS service rents or leases Indian mobile numbers (usually via SIM boxes or
-        carrier partnerships), connects them to a web interface, and displays every incoming SMS
+        carrier partnerships), connects them to a web interface, and displays every <A href="/blog/what-is-sms/">incoming SMS</A>
         publicly or behind a user session. You pick a number, hand it over to whatever app
         you&apos;re signing up to, and the OTP shows up in the browser instead of on your phone.
       </P>
@@ -91,7 +91,7 @@ export default function ReceiveSmsOnlineIndiaPost() {
           your real number for legal reasons.
         </LI>
         <LI>
-          <Strong>Services with ToS prohibiting shared numbers.</Strong> WhatsApp, Gmail, Telegram
+          <Strong>Services with ToS prohibiting shared numbers.</Strong> WhatsApp, <A href="/blog/gmail-password-recovery-via-sms/">Gmail</A>, Telegram
           explicitly prohibit shared numbers for account creation. Your account gets banned.
         </LI>
         <LI>
@@ -206,7 +206,7 @@ export default function ReceiveSmsOnlineIndiaPost() {
           route them through a secondary verification (email, voice call).
         </LI>
         <LI>
-          <Strong>Velocity checks.</Strong> If the same number requests 20 OTPs across 20
+          <Strong>Velocity checks.</Strong> If the same number requests 20 <A href="https://en.wikipedia.org/wiki/One-time_password">OTPs</A> across 20
           different user IDs in an hour, it&apos;s almost certainly a receive-SMS box. Rate-limit
           per-number, not just per-user.
         </LI>

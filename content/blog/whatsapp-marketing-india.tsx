@@ -94,7 +94,7 @@ export default function WhatsappMarketingIndiaPost() {
 
       <H2 id="three-types-of-whatsapp-marketing">The three types of WhatsApp marketing</H2>
       <P>
-        Not everything that works on email or SMS maps cleanly to WhatsApp. Effective WhatsApp
+        Not everything that works on email or <A href="/products/bulk-sms/">SMS</A> maps cleanly to WhatsApp. Effective WhatsApp
         marketing generally falls into three categories:
       </P>
 
@@ -233,7 +233,7 @@ export default function WhatsappMarketingIndiaPost() {
         The fix is to treat broadcasting and conversation as one product. When a customer
         replies, agentic AI picks up the thread, answers from your product knowledge base, and
         escalates to a human only when the conversation genuinely needs one. SMSLocal connects
-        broadcasting and the inbox so every reply is handled instantly, at any volume — which is
+        broadcasting and the <A href="/products/omnichannel-inbox/">shared inbox</A> so every reply is handled instantly, at any volume — which is
         exactly what turns a one-off campaign into repeat revenue.
       </P>
 
@@ -304,7 +304,7 @@ export default function WhatsappMarketingIndiaPost() {
         For D2C and e-commerce brands in India, this is significant. A customer who clicks a
         broadcast campaign can land inside your catalog instead of being sent to a mobile website.
         No load time, no drop-off at an unfamiliar URL — the entire browse-to-buy journey stays on
-        WhatsApp. Businesses that have switched repeat-purchase flows from landing pages to
+        <A href="https://en.wikipedia.org/wiki/WhatsApp">WhatsApp</A>. Businesses that have switched repeat-purchase flows from landing pages to
         Catalog+WhatsApp Pay report meaningful improvements in conversion, particularly in Tier 2
         and Tier 3 markets where mobile data is slower and web pages add friction.
       </P>

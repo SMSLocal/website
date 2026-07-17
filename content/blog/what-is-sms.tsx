@@ -119,7 +119,7 @@ export default function WhatIsSmsPost() {
         caption="TRAI's TCCCPR 2018 regulations enforce this distinction at the operator level via DLT."
       />
       <P>
-        A third sub-category — <Strong>OTP (One-Time Password)</Strong> SMS — is treated as
+        A third sub-category — <A href="/products/otp-sms/"><Strong>OTP (One-Time Password)</Strong></A> SMS — is treated as
         transactional but has its own dedicated routing infrastructure. OTPs must arrive within
         seconds, so operators give them priority queuing and they bypass most congestion filtering.
       </P>
@@ -238,7 +238,7 @@ export default function WhatIsSmsPost() {
       <H3>Promotional SMS</H3>
       <UL>
         <LI>
-          <Strong>Sale and offer announcements</Strong> — discount codes, flash sales, seasonal
+          <A href="/products/bulk-sms/"><Strong>Sale and offer announcements</Strong></A> — discount codes, flash sales, seasonal
           promotions. Average open rate in India: 85–90%, typically within 3 minutes.
         </LI>
         <LI>
@@ -281,7 +281,7 @@ export default function WhatIsSmsPost() {
       <Callout variant="warning" title="The smart-quote trap">
         Copying text from a Word document or email often pastes &ldquo;smart quotes&rdquo; (
         <Strong>&ldquo; &rdquo;</Strong>) instead of straight quotes (<Strong>&quot;</Strong>).
-        Smart quotes are not in the GSM-7 alphabet and silently switch your message to UCS-2 — a
+        Smart quotes are not in the <A href="https://en.wikipedia.org/wiki/GSM">GSM-7</A> alphabet and silently switch your message to UCS-2 — a
         160-character message becomes a 70-character message and you&apos;re billed for 3 segments
         instead of 1.
       </Callout>
