@@ -10,6 +10,7 @@ import FreeSmsPost from "@/content/blog/free-sms"
 import GmailPasswordRecoveryPost from "@/content/blog/gmail-password-recovery-via-sms"
 import ReceiveSmsOnlineIndiaPost from "@/content/blog/receive-sms-online-india"
 import ReceiveSmsMessagesOnYourComputerPost from "@/content/blog/receive-sms-messages-on-your-computer"
+import AwsSmsPost from "@/content/blog/aws-sms"
 import SmsActivationPost from "@/content/blog/sms-activation"
 import SendSmsOnlinePost from "@/content/blog/send-sms-online"
 import TelegramCodeSmsPost from "@/content/blog/telegram-code-sms"
@@ -90,7 +91,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "ongoing", label: "Ongoing obligations" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dnd-services", "send-sms-online"],
+      relatedSlugs: ["dnd-services", "send-sms-online", "aws-sms"],
       faqItems: [
         { q: "Can I start sending SMS while waiting for DLT approval?", a: "No. Any send before PE, Header, and Template approval will be rejected at the gateway. Approval typically takes 3–5 business days." },
         { q: "Do I need a separate PE registration for a subsidiary?", a: "Yes. Each legal entity with a separate Certificate of Incorporation registers its own Principal Entity. You can share an Aggregator Relationship, but the entity records stay separate." },
@@ -245,6 +246,42 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     Component: ReceiveSmsMessagesOnYourComputerPost,
   },
 
+  "aws-sms": {
+    meta: {
+      slug: "aws-sms",
+      title: "AWS SMS: Send SMS With Amazon SNS & Pinpoint (2026)",
+      description:
+        "How to send SMS on AWS with Amazon SNS and AWS End User Messaging (Pinpoint) — the two services compared, India DLT and sender-ID setup, the sandbox, pricing, and when a dedicated provider is faster.",
+      date: "2026-07-17",
+      readingTime: "10 min read",
+      category: "Getting started",
+      coverImage: "/blog/aws-sms-hero.webp",
+      coverAlt:
+        "Illustration of sending SMS on AWS — an Amazon SNS publish call delivering a text message to a phone, with a dark navy and cyan interface.",
+      toc: [
+        { id: "two-ways", label: "The two ways AWS sends SMS" },
+        { id: "amazon-sns", label: "Amazon SNS" },
+        { id: "end-user-messaging", label: "AWS End User Messaging" },
+        { id: "india-dlt", label: "Sending SMS in India: DLT" },
+        { id: "sandbox-limits", label: "Sandbox & spend limits" },
+        { id: "pricing", label: "AWS SMS pricing" },
+        { id: "setup-checklist", label: "Setup checklist" },
+        { id: "aws-vs-provider", label: "AWS vs a dedicated provider" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["send-sms-online", "dlt-registration-guide", "receive-sms-messages-on-your-computer"],
+      faqItems: [
+        { q: "What is the difference between Amazon SNS and AWS End User Messaging?", a: "Amazon SNS sends simple one-way SMS with a single Publish call — ideal for OTPs and alerts. AWS End User Messaging (formerly Amazon Pinpoint SMS) adds two-way messaging, dedicated sender IDs and numbers, opt-out handling, and per-message events for campaigns and conversational use. Use SNS for transactional; End User Messaging for everything richer." },
+        { q: "Can I send SMS to Indian numbers with AWS?", a: "Yes, but you must be DLT-registered. You supply your DLT Entity ID and Template ID on every message and send from a sender ID that maps to an approved template. Without a byte-exact template match, the operator drops the message even though AWS reports it as sent." },
+        { q: "Why are my AWS SMS not being delivered?", a: "The three usual causes: your account is still in the SMS sandbox (only verified numbers receive), you hit the default monthly spend limit, or in India the message does not match an approved DLT template. Check the delivery-status logs and configuration-set events to see which." },
+        { q: "How much does AWS SMS cost?", a: "It is pay-as-you-go per message, priced by destination country and, in India, by carrier and message type, plus any operator or DLT fees. Two-way messages and dedicated numbers are billed separately. Always check AWS's current India rate card for exact figures." },
+        { q: "Do I still need DLT registration if I use AWS?", a: "Yes. DLT registration is a TRAI requirement on the sender, independent of which platform you send through. AWS enforces it for Indian traffic — it does not replace it. A provider like SMSLocal can complete DLT onboarding on your behalf." },
+        { q: "Is AWS SMS good for sending OTPs?", a: "For AWS-native apps, yes — Amazon SNS transactional SMS is a common OTP path. Just budget for the sandbox exit, the spend-limit increase, and (in India) DLT template registration before you rely on it in production." },
+      ],
+    },
+    Component: AwsSmsPost,
+  },
+
   "sms-activation": {
     meta: {
       slug: "sms-activation",
@@ -339,7 +376,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "legal", label: "Legal requirements" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["receive-sms-messages-on-your-computer", "dlt-registration-guide", "dnd-services"],
+      relatedSlugs: ["receive-sms-messages-on-your-computer", "dlt-registration-guide", "aws-sms"],
       faqItems: [
         { q: "Can I send SMS online for free?", a: "Some platforms offer a free signup credit — SMSLocal gives ₹60 to start, enough for a few hundred test messages. Beyond that, expect ₹0.10–0.40 per SMS. Any 'totally free' service for ongoing use is either operating without DLT compliance or monetising your data." },
         { q: "Do I need a separate sender ID account for each brand?", a: "No. One account, one Principal Entity, but you can register multiple Headers (sender IDs) for different brands under the same account." },
