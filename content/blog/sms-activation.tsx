@@ -252,9 +252,9 @@ export default function SmsActivationPost() {
           through the device-level checks above first.
         </BlogFaqItem>
         <BlogFaqItem q={"I switched from iPhone to Android and SMS stopped working."}>
-          Known issue — iMessage &quot;captures&quot; your number even after you switch. Fix by
-          going to <A href="https://selfsolve.apple.com/deregister-imessage">Apple&apos;s
-          de-register iMessage page</A> and entering your number.
+          Known issue — iMessage &quot;captures&quot; your number even after you switch. Fix it by{" "}
+          <A href="https://en.wikipedia.org/wiki/IMessage">de-registering your number from
+          iMessage</A> using Apple&apos;s official deregister tool.
         </BlogFaqItem>
         <BlogFaqItem q={"SMS works but sending is stuck at \"sending\" forever."}>
           This is almost always a wrong SMSC or a network issue. Toggle airplane mode, verify SMSC,

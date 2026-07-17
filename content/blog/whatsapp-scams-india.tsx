@@ -341,7 +341,7 @@ export default function WhatsappScamsIndiaPost() {
         </LI>
         <LI>
           <Strong>
-            File a complaint at <A href="https://www.cybercrime.gov.in">cybercrime.gov.in</A>.
+            File a complaint at <A href="https://cybercrime.gov.in">cybercrime.gov.in</A>.
           </Strong>{" "}
           The National Cyber Crime Reporting Portal lets you file online. Keep screenshots of the
           WhatsApp conversation as evidence.
