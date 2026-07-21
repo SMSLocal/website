@@ -28,6 +28,8 @@ const CSP_DIRECTIVES = {
     ...(isDev ? ["'unsafe-eval'"] : []),
     "https://va.vercel-scripts.com",
     "https://vercel.live",
+    // Google Analytics 4 (gtag.js) — loaded only after analytics consent.
+    "https://www.googletagmanager.com",
   ],
   "style-src": [
     "'self'",
@@ -48,6 +50,12 @@ const CSP_DIRECTIVES = {
     "https://va.vercel-scripts.com",
     "https://vercel.live",
     "wss://ws-us3.pusher.com",
+    // Google Analytics 4 collect endpoints (regional subdomains included).
+    "https://www.googletagmanager.com",
+    "https://www.google-analytics.com",
+    "https://*.google-analytics.com",
+    "https://analytics.google.com",
+    "https://*.analytics.google.com",
   ],
   "frame-ancestors": ["'none'"],
   "form-action": ["'self'"],
