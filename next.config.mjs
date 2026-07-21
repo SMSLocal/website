@@ -212,6 +212,20 @@ const nextConfig = {
       },
 
 
+      // The /test-home design was promoted to the real homepage. This used to
+      // be a page calling permanentRedirect(), but as a statically generated
+      // route that emitted HTTP 200 + a meta-refresh instead of a real
+      // redirect. Handling it here returns a true 308.
+      {
+        source: "/test-home",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/test-home/",
+        destination: "/",
+        permanent: true,
+      },
       // SMS Bomber tool moved to the /resources/tools/ section.
       {
         source: "/tools/sms-bomber",
