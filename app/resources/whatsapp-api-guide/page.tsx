@@ -23,10 +23,14 @@ const ROUTE = {
   ],
 }
 
+// This route still renders the <ComingSoon> placeholder, so it is noindex —
+// matching the catch-all placeholder route in app/[...slug]/page.tsx. Remove
+// `noindex` once the real guide content ships.
 export const metadata: Metadata = buildMetadata({
   title: "WhatsApp Business API Guide for Indian Businesses",
   description: ROUTE.description,
   path: "/resources/whatsapp-api-guide",
+  noindex: true,
 })
 
 export default function Page() {

@@ -1,14 +1,14 @@
 import type { Metadata } from "next"
+import { getPageMetadata } from "@/lib/seo"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { IntegrationsStackPage } from "@/components/lazy"
 
-export const metadata: Metadata = {
-  title: "Integrations — Connect SMSLocal to Your Stack | SMSLocal",
-  description:
-    "Connect SMSLocal to your stack — Shopify, HubSpot, Salesforce, Slack, Zapier and 30+ apps with 1-click OAuth, 10 native channels, and a full REST API.",
-}
+// ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
+// Was a hardcoded metadata object with no canonical, so the page inherited the
+// root layout's canonical (the homepage) and was treated as a duplicate.
+export const metadata: Metadata = getPageMetadata("/products/integrations")
 
 export default function IntegrationsPage() {
   return (

@@ -117,6 +117,38 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "SMSLocal products",
     ],
   },
+  "/products/integrations": {
+    title: "Integrations — Connect SMSLocal to Your Stack",
+    description:
+      "Connect SMSLocal to your stack — Shopify, HubSpot, Salesforce, Slack, Zapier and 30+ apps with 1-click OAuth, 10 native channels, and a full REST API.",
+    focusKeyword: "SMSLocal integrations",
+    keywords: [
+      "SMS integrations",
+      "SMSLocal integrations",
+      "Shopify SMS integration",
+      "HubSpot SMS integration",
+      "Salesforce SMS integration",
+      "Zapier SMS",
+      "SMS API integration",
+    ],
+  },
+
+  "/products/live-chat": {
+    title: "Live Chat for Websites — Free Forever Plan",
+    description:
+      "Install SMSLocal Live Chat in minutes and engage website visitors in real time. Capture leads, answer instantly, and manage every chat from one shared inbox.",
+    focusKeyword: "live chat software",
+    keywords: [
+      "live chat",
+      "live chat software",
+      "website live chat",
+      "free live chat",
+      "live chat India",
+      "customer support chat",
+      "lead capture chat",
+    ],
+  },
+
   "/products/bulk-sms": {
     title: "Bulk SMS India — 98% Delivery, Fast & Trusted",
     description:
