@@ -6,6 +6,13 @@ import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { getPageMetadata } from "@/lib/seo"
 
+// IMPORTANT: do not add a `loading.tsx` at the app root (or above any route
+// that can 404). A loading file wraps its segment in Suspense, which makes
+// Next.js stream the response — and once the first bytes are flushed the HTTP
+// status is locked at 200. That turned every missing URL into a soft 404: this
+// page rendered, but with `200 OK`, the homepage canonical and `index, follow`.
+// Scope loading UI to segments that never call notFound() instead.
+
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
 export const metadata: Metadata = getPageMetadata("/404")
 
