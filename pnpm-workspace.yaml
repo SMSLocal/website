@@ -1,4 +1,7 @@
+# sharp runs a native post-install build. pnpm blocks those by default, which
+# makes `pnpm install` exit 1 and leaves next dev unable to start. Allowing it
+# here is what makes a clean clone install successfully.
 allowBuilds:
-  sharp: set this to true or false
+  sharp: true
 onlyBuiltDependencies:
   - sharp
