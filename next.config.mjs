@@ -244,6 +244,19 @@ const nextConfig = {
         destination: "/resources/tools/free-sms-without-registration/",
         permanent: true,
       },
+      // Legacy blog post /blog/send-free-sms-online/ was merged into
+      // /blog/send-sms-online/. Both slash forms so the indexed trailing-slash
+      // URL redirects in a single hop.
+      {
+        source: "/blog/send-free-sms-online",
+        destination: "/blog/send-sms-online/",
+        permanent: true,
+      },
+      {
+        source: "/blog/send-free-sms-online/",
+        destination: "/blog/send-sms-online/",
+        permanent: true,
+      },
       // /help/ has no page — redirect to the real help centre.
       // Both with and without trailing slash — trailingSlash:true means the
       // browser may hit /help/ directly, which wouldn't match source:"/help".
