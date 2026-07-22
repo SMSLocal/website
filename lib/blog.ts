@@ -536,9 +536,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "free-sms": {
     meta: {
       slug: "free-sms",
-      title: "Free SMS in India: What Actually Works in 2026",
+      title: "Free SMS in India: 3 Real Ways That Work in 2026",
       description:
-        "Free SMS in India compared — operator bundled SMS, online services, and platform trial credits. Why Way2SMS shut down and what replaced it in 2026.",
+        "Send free SMS in India in 2026 — bundled operator SMS, free online tools, Way2SMS alternatives and platform trial credits compared. What's safe, capped, and actually works.",
       date: "2026-07-09",
       readingTime: "8 min read",
       category: "Consumer",
@@ -547,6 +547,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       coverAlt:
         "Abstract illustration representing how to send free SMS in India — mobile phone with message bubbles showing free text messaging options in 2026.",
       toc: [
+        { id: "which-option", label: "Which option is right for you?" },
         { id: "what-free-sms-means", label: "What 'free SMS' actually means" },
         { id: "bundled-sms", label: "Free SMS from your mobile plan" },
         { id: "online-free-sms", label: "Online free SMS services" },

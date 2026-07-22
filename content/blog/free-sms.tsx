@@ -27,6 +27,33 @@ export default function FreeSmsPost() {
         gives you, and when it makes sense to move to a low-cost paid platform instead.
       </Lead>
 
+      <H2 id="which-option">Which free SMS option is right for you?</H2>
+      <P>
+        &ldquo;Free SMS&rdquo; covers several very different needs. Jump straight to the right
+        answer below, then read on for the full detail on what each option actually delivers.
+      </P>
+      <UL>
+        <LI>
+          <Strong>Send a free SMS right now</Strong> — use our{" "}
+          <A href="/resources/tools/free-sms-without-registration/">free SMS tool (no registration)</A>{" "}
+          to send a message from your browser in seconds.
+        </LI>
+        <LI>
+          <Strong>Pick the best free SMS app</Strong> — compare Google Messages, AirDroid,
+          Pushbullet and operator portals in our{" "}
+          <A href="/blog/best-free-sms/">best free SMS apps guide</A>.
+        </LI>
+        <LI>
+          <Strong>Send SMS online for a business</Strong> — see the four methods (web dashboard,
+          SMS API, bulk platform, WhatsApp) in{" "}
+          <A href="/blog/send-sms-online/">how to send SMS online in India</A>.
+        </LI>
+        <LI>
+          <Strong>Understand your options first</Strong> — keep reading this guide for exactly what
+          each free route gives you, and where the limits bite.
+        </LI>
+      </UL>
+
       <H2 id="what-free-sms-means">What &ldquo;free SMS&rdquo; actually means in 2026</H2>
       <P>
         There are three distinct things people mean when they search for &ldquo;free SMS&rdquo;:

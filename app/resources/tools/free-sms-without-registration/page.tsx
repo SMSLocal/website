@@ -291,6 +291,17 @@ export default function FreeSmsPage() {
             want your own Sender ID, you can register one from the same
             dashboard.
           </p>
+          <p className="mt-3 text-[14.5px] leading-relaxed text-foreground/85">
+            Want to weigh every free option first? See our full{" "}
+            <Link
+              href="/blog/free-sms/"
+              className="font-medium text-primary hover:underline"
+            >
+              guide to free SMS in India
+            </Link>{" "}
+            — bundled operator SMS, free apps, Way2SMS alternatives and trial
+            credits compared.
+          </p>
         </div>
       </Section>
 

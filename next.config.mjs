@@ -257,6 +257,19 @@ const nextConfig = {
         destination: "/blog/send-sms-online/",
         permanent: true,
       },
+      // Legacy WordPress post /blog/sms-forwardings/ (now 404) merged into the
+      // live /blog/receive-sms-messages-on-your-computer/ post. Both slash forms
+      // so the indexed trailing-slash URL redirects in a single hop.
+      {
+        source: "/blog/sms-forwardings",
+        destination: "/blog/receive-sms-messages-on-your-computer/",
+        permanent: true,
+      },
+      {
+        source: "/blog/sms-forwardings/",
+        destination: "/blog/receive-sms-messages-on-your-computer/",
+        permanent: true,
+      },
       // /help/ has no page — redirect to the real help centre.
       // Both with and without trailing slash — trailingSlash:true means the
       // browser may hit /help/ directly, which wouldn't match source:"/help".
