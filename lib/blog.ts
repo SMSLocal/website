@@ -286,9 +286,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "sms-activation": {
     meta: {
       slug: "sms-activation",
-      title: "SMS Not Working? Activation & Fix Guide for India",
+      title: "SMS Not Working? Activate & Fix It Fast (India)",
       description:
-        "Can't send or receive SMS? Walk through every check — SMSC numbers for Indian carriers, iMessage gotchas, DND filters, and when to escalate to your carrier.",
+        "SMS not sending or receiving in India? Fix it fast — SMSC settings for Jio, Airtel, Vi & BSNL, iMessage traps, DND filters, and exactly when to call your carrier.",
       date: "2026-02-22",
       readingTime: "10 min read",
       category: "Troubleshooting",

@@ -270,6 +270,39 @@ const nextConfig = {
         destination: "/blog/receive-sms-messages-on-your-computer/",
         permanent: true,
       },
+      // Legacy commercial URL /bulk-sms/ (now 404) → the live product page.
+      {
+        source: "/bulk-sms",
+        destination: "/products/bulk-sms/",
+        permanent: true,
+      },
+      {
+        source: "/bulk-sms/",
+        destination: "/products/bulk-sms/",
+        permanent: true,
+      },
+      // Legacy blog /blog/temp-sms/ (now 404) → the live receive-SMS-online post.
+      {
+        source: "/blog/temp-sms",
+        destination: "/blog/receive-sms-online-india/",
+        permanent: true,
+      },
+      {
+        source: "/blog/temp-sms/",
+        destination: "/blog/receive-sms-online-india/",
+        permanent: true,
+      },
+      // Legacy blog /blog/sms-vs-text/ (now 404) → the live what-is-SMS guide.
+      {
+        source: "/blog/sms-vs-text",
+        destination: "/blog/what-is-sms/",
+        permanent: true,
+      },
+      {
+        source: "/blog/sms-vs-text/",
+        destination: "/blog/what-is-sms/",
+        permanent: true,
+      },
       // /help/ has no page — redirect to the real help centre.
       // Both with and without trailing slash — trailingSlash:true means the
       // browser may hit /help/ directly, which wouldn't match source:"/help".

@@ -163,6 +163,8 @@ export default function BestSmsAppsForAndroidPost() {
           <Strong>Uses your SIM&apos;s bundled 100 SMS/day.</Strong> Your Jio, Airtel, or Vi plan
           almost certainly includes 100 free SMS per day. Google Messages uses that quota — so every
           message is completely free, sent from your real number, with no branding or shared sender.
+          For every other way to send free SMS in India — operator quotas, web tools, and trial
+          credits — see our <A href="/blog/free-sms/">free SMS guide</A>.
         </LI>
         <LI>
           <Strong>RCS on Jio and Airtel.</Strong> Both operators have activated RCS (Rich
