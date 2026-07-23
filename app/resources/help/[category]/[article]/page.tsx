@@ -5,7 +5,7 @@ import { ArrowLeft, ArrowRight, ChevronRight, Clock, LifeBuoy } from "lucide-rea
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
+import { ArticleJsonLd, BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 import { ProductFinalCta, Section } from "@/components/product/product-page"
 import { HelpArticleBody } from "@/components/help/help-article-body"
 import { HELP_CATEGORIES, getAllArticlePaths, getArticle } from "@/lib/help-center"
@@ -81,6 +81,17 @@ export default async function HelpArticlePage({
           { name: art.title, path: `/resources/help/${cat.slug}/${art.slug}` },
         ]}
       />
+      <ArticleJsonLd
+        path={`/resources/help/${cat.slug}/${art.slug}`}
+        headline={art.title}
+        description={art.excerpt}
+        datePublished={art.updatedOn}
+        dateModified={art.updatedOn}
+        type="Article"
+      />
+      {art.faqItems && art.faqItems.length > 0 && (
+        <FaqJsonLd items={art.faqItems} path={`/resources/help/${cat.slug}/${art.slug}`} />
+      )}
       <AnnouncementStrip />
       <SiteHeader />
 
@@ -136,6 +147,23 @@ export default async function HelpArticlePage({
         <Section>
           <div className="mx-auto max-w-3xl">
             <HelpArticleBody blocks={art.body} />
+
+            {/* FAQ — visible content backing the FAQPage schema */}
+            {art.faqItems && art.faqItems.length > 0 && (
+              <div className="mt-12 border-t border-foreground/10 pt-8">
+                <h2 className="text-xl font-semibold tracking-tight text-foreground sm:text-[22px]">
+                  Frequently asked questions
+                </h2>
+                <dl className="mt-6 space-y-6">
+                  {art.faqItems.map((f, j) => (
+                    <div key={j}>
+                      <dt className="font-semibold text-foreground">{f.q}</dt>
+                      <dd className="mt-2 text-[15px] leading-[1.75] text-foreground/80">{f.a}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )}
 
             {/* Prev / next within category */}
             {(prev || next) && (

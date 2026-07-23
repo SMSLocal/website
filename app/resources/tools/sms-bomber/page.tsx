@@ -188,6 +188,12 @@ export default function SmsBomberPage() {
             >
               Read the DLT guide
             </Link>
+            <Link
+              href="/resources/help/sms/way2sms-alternative-website/"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-4 py-2.5 text-[13px] font-semibold text-white transition hover:bg-white/10"
+            >
+              Way2SMS alternatives
+            </Link>
           </div>
         </div>
       </section>

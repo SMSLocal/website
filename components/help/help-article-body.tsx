@@ -91,6 +91,45 @@ export function HelpArticleBody({ blocks }: { blocks: HelpBlock[] }) {
             </pre>
           )
         }
+        if (b.t === "table") {
+          return (
+            <figure key={i} className="my-2">
+              <div className="overflow-x-auto rounded-2xl border border-foreground/10">
+                <table className="w-full border-collapse text-left text-sm">
+                  <thead>
+                    <tr className="bg-muted/50">
+                      {b.headers.map((h, j) => (
+                        <th
+                          key={j}
+                          className="whitespace-nowrap border-b border-foreground/10 px-3 py-2.5 font-semibold text-foreground"
+                        >
+                          {h}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {b.rows.map((row, r) => (
+                      <tr key={r} className="odd:bg-background even:bg-muted/20">
+                        {row.map((cell, c) => (
+                          <td
+                            key={c}
+                            className="border-b border-foreground/5 px-3 py-2.5 align-top text-foreground/80"
+                          >
+                            {cell}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              {b.caption && (
+                <figcaption className="mt-2 text-xs text-muted-foreground">{b.caption}</figcaption>
+              )}
+            </figure>
+          )
+        }
         return null
       })}
     </div>

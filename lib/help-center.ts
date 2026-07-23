@@ -24,6 +24,7 @@ export type HelpBlock =
       body: string
     }
   | { t: "code"; lang?: string; code: string }
+  | { t: "table"; headers: string[]; rows: string[][]; caption?: string }
 
 export type HelpArticle = {
   slug: string
@@ -32,6 +33,8 @@ export type HelpArticle = {
   readMinutes: number
   updatedOn: string
   body: HelpBlock[]
+  /** Optional FAQ block — rendered visibly and emitted as FAQPage schema. */
+  faqItems?: { q: string; a: string }[]
 }
 
 export type HelpCategory = {
@@ -203,6 +206,92 @@ export const HELP_CATEGORIES: HelpCategory[] = [
     description: "SMS content templates, DLT routing, sender ID setup, delivery report statuses, bulk campaign scheduling, throttle controls, and automatic retry logic for India.",
     icon: MessageSquare,
     articles: [
+      {
+        slug: "way2sms-alternative-website",
+        title: "What are the best Way2SMS alternatives in 2026?",
+        excerpt:
+          "Way2SMS ended its free unlimited service years ago. Here are the alternatives that actually work for personal and business SMS in India — compared by cost, free tier, DLT compliance, and bulk capability.",
+        readMinutes: 6,
+        updatedOn: "2026-07-22",
+        body: [
+          { t: "p", c: "Way2SMS was India's most popular free SMS website for over a decade, but its free unlimited service is effectively gone — TRAI's DLT rules made unregistered bulk gateways non-viable, while bundled operator SMS and WhatsApp removed most of the demand. If you're looking for a Way2SMS replacement, this is a practical guide to what works now, depending on whether you need a few personal texts or reliable business messaging at scale." },
+          { t: "h", c: "Way2SMS alternatives at a glance" },
+          {
+            t: "table",
+            headers: ["Alternative", "Best for", "Free tier", "DLT-ready", "Bulk-capable"],
+            rows: [
+              ["Operator bundled SMS (Jio/Airtel/Vi)", "Personal texts", "~100 SMS/day", "N/A (personal)", "No"],
+              ["Google Messages / phone app", "Personal, PC mirroring", "Uses SIM quota", "N/A (personal)", "No"],
+              ["Free web SMS sites", "One-off messages", "5–25/day, capped", "No", "No"],
+              ["WhatsApp (personal)", "Chats over the internet", "Unlimited", "N/A", "No"],
+              ["SMSLocal (business platform)", "Business SMS, OTP, bulk", "₹60 signup credit", "Yes — managed", "Yes"],
+            ],
+            caption: "Free consumer tools suit occasional personal texts; a DLT-compliant platform is required for any business or bulk sending in India.",
+          },
+          { t: "h", c: "Key features to look for in a Way2SMS alternative" },
+          {
+            t: "list",
+            items: [
+              "Delivery reliability — direct operator routes deliver in under a second; free shared routes can take minutes or drop silently.",
+              "Sender identity — your own registered sender ID instead of a shared number or branded footer.",
+              "DLT compliance — mandatory for any commercial SMS in India; free tools cannot provide DLT-approved headers.",
+              "Delivery receipts — confirmation that each message actually arrived, which free tiers rarely expose.",
+              "Scale — the ability to send hundreds or thousands of messages, not a 5–25/day cap.",
+              "Language support — Unicode for Hindi, Tamil, Telugu and other Indian scripts.",
+            ],
+          },
+          { t: "h", c: "Limitations of free Way2SMS-style tools" },
+          {
+            t: "callout",
+            tone: "warn",
+            title: "Free web SMS is not built for reliability",
+            body: "Free Way2SMS-style sites fund a tiny quota through ads and data collection. Expect daily caps, shared sender IDs, delayed or dropped delivery, no delivery receipts, and no DLT support — which makes them unusable for OTPs, alerts, or any business sending.",
+          },
+          {
+            t: "list",
+            items: [
+              "Daily caps of roughly 5–25 messages per registered account.",
+              "Messages sent from a shared header, so recipients never see your name.",
+              "Promotional messages are blocked to DND numbers.",
+              "No guarantee the service will still exist next month.",
+            ],
+          },
+          { t: "h", c: "Which alternative fits your use case" },
+          {
+            t: "list",
+            items: [
+              "Occasional personal texts → your operator's bundled ~100 SMS/day is the simplest, most reliable free option.",
+              "Texting from a laptop → Google Messages for Web mirrors your phone's SMS, no install needed.",
+              "OTPs, alerts, or order updates → you need a DLT-compliant platform; free tools cannot deliver these reliably.",
+              "Bulk campaigns or marketing → a business SMS platform with your own sender ID, delivery reports, and volume pricing.",
+            ],
+          },
+          { t: "h", c: "Why SMSLocal is a strong Way2SMS alternative for business" },
+          { t: "p", c: "If you outgrew free SMS because you need messages to actually arrive — OTPs, transaction alerts, appointment reminders, or promotions — SMSLocal is built for exactly that. It sends over direct operator routes (the same infrastructure banks use for OTPs), with your own DLT-registered sender ID, real-time delivery receipts, and pay-as-you-go pricing from ₹0.10 per SMS. DLT registration is handled for you across Jio, Airtel, Vi and BSNL." },
+          {
+            t: "list",
+            items: [
+              "₹60 free signup credit — around 200–400 test messages, no credit card required.",
+              "Direct operator connectivity with sub-second delivery and full delivery receipts.",
+              "Managed DLT: entity, sender ID and template approvals handled inside one dashboard.",
+              "REST API and dashboard sending, with WhatsApp and OTP on the same account.",
+            ],
+          },
+          {
+            t: "callout",
+            tone: "tip",
+            title: "Try SMSLocal free",
+            body: "Create an account to get ₹60 of credit and send your first DLT-compliant SMS from the dashboard or API — no branded footer, no daily cap, no commitment.",
+          },
+        ],
+        faqItems: [
+          { q: "Is Way2SMS still working in 2026?", a: "Way2SMS as a free unlimited SMS service is effectively gone. TRAI's DLT regulations made unregistered bulk SMS gateways non-viable, and bundled operator SMS plus WhatsApp removed the demand. Some apps still carry the Way2SMS brand in a limited or ad-supported form, but there is no free-for-all equivalent today." },
+          { q: "What is the best free Way2SMS alternative for personal use?", a: "Your mobile operator's bundled SMS. Most Jio, Airtel and Vi plans include around 100 free SMS per day, sent from your real number with no branding or reliability issues. For texting from a laptop, Google Messages for Web mirrors your phone's SMS threads with no install." },
+          { q: "Can I send bulk SMS for free like the old Way2SMS?", a: "Not reliably. Free web SMS tools are rate-limited to a few messages a day and cannot send DLT-compliant commercial traffic. For bulk sending in India you need a registered business platform; costs are typically ₹0.10–0.18 per promotional SMS and ₹0.03–0.08 per OTP." },
+          { q: "Do Way2SMS alternatives support DLT compliance?", a: "Free consumer tools do not — they cannot register DLT headers or templates. Any service sending commercial SMS to Indian numbers must be DLT-compliant under TRAI's TCCCPR 2018 rules. Business platforms like SMSLocal manage DLT registration for you." },
+          { q: "How is SMSLocal different from a free Way2SMS-style website?", a: "SMSLocal sends over direct operator routes with your own registered sender ID, real-time delivery receipts, DLT compliance, and no daily cap — versus a shared sender, a tiny quota, and no delivery proof on free sites. You get ₹60 of free credit to test it before paying." },
+        ],
+      },
       {
         slug: "transactional-vs-promotional",
         title: "Transactional vs promotional SMS — what's the difference?",

@@ -316,6 +316,19 @@ const nextConfig = {
         destination: "/resources/help/",
         permanent: true,
       },
+      // The Way2SMS-alternative article lives under the /sms/ category, so its
+      // bare /help/ path must map to the full category URL — this must precede
+      // the /help/:path* catch-all below (which would drop the category).
+      {
+        source: "/help/way2sms-alternative-website",
+        destination: "/resources/help/sms/way2sms-alternative-website/",
+        permanent: true,
+      },
+      {
+        source: "/help/way2sms-alternative-website/",
+        destination: "/resources/help/sms/way2sms-alternative-website/",
+        permanent: true,
+      },
       // /help/:path* — old URLs Google indexed for individual help articles.
       {
         source: "/help/:path*",
