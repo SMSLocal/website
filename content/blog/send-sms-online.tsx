@@ -64,6 +64,13 @@ export default function SendSmsOnlinePost() {
         caption="Online SMS sending in India spans small businesses running 100-message reminders to enterprise teams pushing millions per campaign — the right method depends on volume and technical capability."
       />
 
+      <P>
+        This guide covers <Strong>sending</Strong> SMS. If instead you need to{" "}
+        <A href="/blog/receive-sms-online-india/">receive SMS online in India</A> — using a
+        temporary number for OTPs and sign-ups — that&apos;s a different tool with its own safety
+        tradeoffs worth understanding first.
+      </P>
+
       <H2 id="ways-to-send">The four ways to send SMS online</H2>
       <FigureTable
         columns={["Method", "Best for", "Cost", "Setup time"]}

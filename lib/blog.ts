@@ -179,9 +179,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "receive-sms-online-india": {
     meta: {
       slug: "receive-sms-online-india",
-      title: "Receive SMS Online India: Risks & Alternatives",
+      title: "Receive SMS Online India: How It Works & What's Safe",
       description:
-        "When receive-SMS-online services in India are a valid privacy tool, when they're fraud, and what senders can do to block them from abusing OTP flows.",
+        "How receive-SMS-online and temporary Indian number services work, when they're safe to use, when they're a scam, and the safer alternatives for OTPs and privacy.",
       date: "2026-03-14",
       readingTime: "10 min read",
       category: "Consumer",
