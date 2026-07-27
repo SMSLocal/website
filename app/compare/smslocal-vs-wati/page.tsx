@@ -225,7 +225,7 @@ export default function CompareWatiPage() {
           competitor="WATI"
           tagline="Pay-as-you-go messaging vs a flat-fee WhatsApp SaaS."
           intro="WATI is one of the most-used WhatsApp Business Solution Providers in India, priced as a flat-fee SaaS (₹2,499/month and up). SMSLocal is a pay-as-you-go CPaaS that ships SMS, WhatsApp, OTP, and AI agents in one dashboard with no monthly platform fee. If you live purely inside WhatsApp and a polished inbox is your top priority, WATI is a fair pick — this page explains where each platform actually wins."
-          lastUpdated="April 2026"
+          lastUpdated="July 2026"
         />
 
         <Section className="border-b border-foreground/5">

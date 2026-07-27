@@ -223,7 +223,7 @@ export default function CompareFast2smsPage() {
           competitor="Fast2SMS"
           tagline="Cheapest-rate SMS vs full-stack Indian CPaaS."
           intro="Fast2SMS is one of the most-searched low-cost SMS platforms in India, known for aggressive list pricing and a simple SMB-focused dashboard. SMSLocal is a full-stack CPaaS that ships SMS, WhatsApp, OTP, and AI agents behind a modern developer API. If you want the cheapest rate on a single SMS route, Fast2SMS is a fair pick — if you need WhatsApp depth, a production API, and route transparency, we cover more ground."
-          lastUpdated="April 2026"
+          lastUpdated="July 2026"
         />
 
         <Section className="border-b border-foreground/5">

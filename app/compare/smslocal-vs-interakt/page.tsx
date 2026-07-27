@@ -222,7 +222,7 @@ export default function CompareInteraktPage() {
           competitor="Interakt"
           tagline="A D2C-first WhatsApp SaaS vs a full-stack Indian CPaaS."
           intro="Interakt is a D2C-focused WhatsApp Business Solution Provider with strong Shopify integration and pre-built journey templates. SMSLocal is a full-stack CPaaS covering SMS, OTP, WhatsApp, and AI agents under a single pay-as-you-go invoice. If you run pure Shopify and want an opinionated D2C template library, Interakt is a fair pick — this page covers where each actually wins."
-          lastUpdated="April 2026"
+          lastUpdated="July 2026"
         />
 
         <Section className="border-b border-foreground/5">

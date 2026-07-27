@@ -220,7 +220,7 @@ export default function CompareMsg91Page() {
           competitor="MSG91"
           tagline="Two Indian CPaaS platforms, compared honestly."
           intro="MSG91 is the incumbent leader in the Indian CPaaS market — a deep, mature product with integrated email, RCS, and a marketing-automation layer. SMSLocal is a focused pay-as-you-go alternative built around SMS, WhatsApp, OTP, and AI agents. Below is an honest, row-by-row look at where each wins so Indian buyers can decide on merit."
-          lastUpdated="April 2026"
+          lastUpdated="July 2026"
         />
 
         {/* Feature table */}

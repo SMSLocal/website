@@ -222,7 +222,7 @@ export default function CompareAiSensyPage() {
           competitor="AiSensy"
           tagline="A WhatsApp-only SaaS vs a full-stack Indian CPaaS."
           intro="AiSensy is a well-known WhatsApp Business Solution Provider in India with a polished flow builder and marketing-focused campaign analytics. SMSLocal is a full-stack CPaaS covering WhatsApp, SMS, OTP, and AI agents on a single pay-as-you-go invoice. If you only care about WhatsApp and want a team laser-focused on that single channel, AiSensy is a fair pick — this page covers where each actually wins."
-          lastUpdated="April 2026"
+          lastUpdated="July 2026"
         />
 
         <Section className="border-b border-foreground/5">

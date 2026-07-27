@@ -152,7 +152,7 @@ export default function DevelopersPage() {
                 .
               </h1>
               <p className="mt-5 max-w-xl text-pretty text-base text-white/70 sm:text-lg">
-                REST APIs, six language SDKs, webhook-driven delivery reports, and a sandbox mode with ₹60 free credit.
+                REST and XML APIs, webhook-driven delivery reports, and a sandbox mode with ₹60 free credit.
                 Everything an engineer needs to go from <code className="rounded bg-white/10 px-1 py-0.5 text-xs text-primary">curl</code> to production.
               </p>
 
@@ -339,7 +339,7 @@ export default function DevelopersPage() {
 
         <ProductFinalCta
           title="The fastest path from curl to production."
-          subtitle="SDKs, webhooks, signed events, idempotency, sandbox — everything your platform team will audit for, already built."
+          subtitle="REST, XML, webhooks, signed events, idempotency, sandbox — everything your platform team will audit for, already built."
           primaryCta={{ label: "Start building — free", href: "/signup/" }}
           secondaryCta={{ label: "Read the docs", href: "/developers/api-docs/" }}
         />

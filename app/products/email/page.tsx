@@ -68,8 +68,8 @@ const SHARED_FEATURES = [
 const SECURITY = [
   { icon: ShieldCheck, label: "AES-256 encryption", note: "At rest and in transit" },
   { icon: KeyRound, label: "Multi-factor auth", note: "MFA on every login" },
-  { icon: Globe, label: "GDPR compliant", note: "Data-subject tooling built in" },
-  { icon: Globe, label: "CCPA compliant", note: "Consumer privacy rights honored" },
+  { icon: Globe, label: "DPDPA-aligned", note: "Built for India's Digital Personal Data Protection Act" },
+  { icon: Globe, label: "Data-subject tooling", note: "Export and delete on request" },
   { icon: Users, label: "Role-based access", note: "RBAC down to the inbox" },
   { icon: ScrollText, label: "Audit logs", note: "Every action, timestamped" },
 ]
@@ -394,13 +394,6 @@ const TESTIMONIALS = [
     role: "Customer Success Lead · Niyo, Mumbai",
     initials: "NJ",
     color: "#10b981",
-  },
-  {
-    quote: "Email, WhatsApp, and SMS in the same inbox — with the same assignments and notes — replaced three separate tools for us. One thread, full context, every time.",
-    name: "Vikram Mehta",
-    role: "VP Support · fintech SaaS, Mumbai",
-    initials: "VM",
-    color: "#0ea5e9",
   },
   {
     quote: "We set up the shared inbox, connected our support@ address, and had the team assigning threads the same day. The automation rules saved us hours in the first week alone.",

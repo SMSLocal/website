@@ -128,36 +128,36 @@ const INTEGRATIONS: { icon: typeof Code2; title: string; description: string }[]
   },
   {
     icon: FileCode2,
-    title: "SDKs",
+    title: "XML API",
     description:
-      "Pre-built clients for Node.js, Python, PHP, Java, .NET, and Go. Typed, tested, and published on major package registries.",
+      "A REST-equivalent XML request/response format for stacks that standardised on XML gateways before REST. Same DLT templates, same delivery reports.",
   },
   {
     icon: Mail,
-    title: "SMTP API",
+    title: "Webhooks",
     description:
-      "Send SMS by emailing a purpose-built address. Ideal for legacy apps that can already send email but cannot integrate a new HTTP client.",
+      "Configure delivery, failure, reply, and link-click callbacks so your system gets notified in real time instead of polling for status.",
   },
   {
     icon: FileSpreadsheet,
-    title: "MS Excel add-in",
+    title: "Sandbox with test credits",
     description:
-      "Launch campaigns directly from a spreadsheet. Great for operations teams that live in Excel and don't want to wait on engineering.",
+      "Every account ships with sandbox credits to test the full round trip — send, delivery report, and credit deduction — before going live.",
   },
   {
     icon: Plug,
-    title: "CRM plugins",
+    title: "SDKs — on the roadmap",
     description:
-      "Zoho, Salesforce, HubSpot, Freshworks, and more. Trigger SMS from lead-status changes, deal stages, or support-ticket events.",
+      "Official client libraries for Node.js, Python, PHP, Java, and Go are in development. Until they ship, the REST and XML APIs work with any HTTP client.",
   },
 ]
 
 const TRUST_ITEMS: { icon: typeof Award; title: string; description: string }[] = [
   {
     icon: Award,
-    title: "Proven reliability",
+    title: "Direct operator connections",
     description:
-      "98%+ delivery rates backed by ISO 27001-certified operations and direct interconnects with every major Indian operator.",
+      "Sub-second delivery for OTPs and alerts through direct interconnects with every major Indian operator — no third-party relay in between.",
   },
   {
     icon: Users,
@@ -225,7 +225,7 @@ export default function SmsApiPage() {
             { icon: ShieldCheck, label: "DLT-compliant" },
             { icon: Bolt, label: "Sub-second delivery" },
             { icon: Globe2, label: "Pan-India coverage" },
-            { icon: Code2, label: "REST + XML + SDKs" },
+            { icon: Code2, label: "REST + XML API" },
           ]}
           visual={<SmsApiVisual />}
         />

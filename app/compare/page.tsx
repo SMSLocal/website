@@ -228,7 +228,7 @@ export default function CompareHubPage() {
         <section className="bg-muted/30 border-b border-foreground/5 py-20 sm:py-24">
           <div className="mx-auto max-w-7xl px-4 sm:px-6">
             <SectionHeader
-              eyebrow="Eight comparisons"
+              eyebrow="Eleven comparisons"
               title="Pick the one that matches your shortlist."
               subtitle="Every page follows the same structure — so comparing across comparisons is straightforward."
               center
