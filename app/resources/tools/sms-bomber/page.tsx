@@ -116,6 +116,53 @@ const FAQ = [
     q: "What’s the legitimate way to send high-volume SMS?",
     a: "Register a Principal Entity on any operator DLT (Jio / Airtel / Vi / BSNL), get a 6-character Sender ID approved, register your message templates, and route through a registered aggregator like SMSLocal. Full walkthrough in our DLT Registration Guide.",
   },
+  {
+    q: "What is a fake message sender, and is it legal in India?",
+    a: "A fake message sender (or fake SMS tool) spoofs the sender identity so a message appears to come from someone else. In India that is impersonation and forgery of electronic records under IT Act Section 66D and IPC Sections 465/468 — separate offences on top of any bombing. Legitimate senders use a verified, DLT-approved Sender ID that recipients can trust.",
+  },
+  {
+    q: "Are OTP bombers and OTP prank tools illegal?",
+    a: "Yes. An OTP bomber triggers repeated one-time-password SMS to a target by hammering the login and signup forms of other services. That breaches the IT Act, TRAI's TCCCPR 2018, and the abused platforms' terms of service. Real OTP delivery runs through a rate-limited, DLT-registered transactional route with delivery receipts — never a burst tool.",
+  },
+  {
+    q: "Is an SMS blaster different from an SMS bomber?",
+    a: "No. 'SMS blaster' and 'message blaster' are just other names for the same tool — software that fires a high volume of messages at one number or list. The same TRAI TCCCPR and IT Act violations apply. Sending high volume to consented recipients is done legally through DLT-registered Bulk SMS.",
+  },
+  {
+    q: "Is there an 'unlimited' or 'no registration' SMS sender that is legal?",
+    a: "No. Every commercial SMS in India must flow through a DLT-registered Principal Entity, an approved Sender ID, and an approved template — there is no lawful 'unlimited, no-registration' bulk route. Platforms that manage DLT for you are the compliant way to start sending quickly, often with a free trial credit.",
+  },
+] as const
+
+const RELATED_TERMS = [
+  {
+    term: "“Fake message sender” / “fake SMS”",
+    what: "Tools that spoof the sender name so a message looks like it came from someone else. In India this is impersonation and forgery of electronic records (IT Act 66D, IPC 465/468) — separate offences from bombing itself.",
+    legal: "Businesses send under their own DLT-approved Sender ID, which is verified, traceable and trusted by recipients.",
+    href: "/products/bulk-sms/",
+    label: "Compliant Bulk SMS",
+  },
+  {
+    term: "“OTP bomber” / “OTP prank” / “OTP spam”",
+    what: "Tools that trigger repeated one-time-password SMS to a target by abusing the login and signup forms of other services. Beyond the bombing offence, this breaches those platforms and the IT Act.",
+    legal: "Real OTP delivery runs through a rate-limited, DLT-registered transactional route with delivery receipts.",
+    href: "/products/otp-sms/",
+    label: "OTP SMS",
+  },
+  {
+    term: "“SMS blaster” / “message blaster”",
+    what: "Another name for an SMS bomber — software that fires a high volume of messages at one number or list. Same tool, same TRAI TCCCPR and IT Act violations.",
+    legal: "High-volume sending to consented recipients is exactly what DLT-registered Bulk SMS is for — approved templates, per-recipient receipts, pay-as-you-go.",
+    href: "/products/bulk-sms/",
+    label: "See Bulk SMS",
+  },
+  {
+    term: "“Unlimited” / “spam message sender”",
+    what: "Tools promising unlimited or spam sending to any number with no registration. There is no legal no-registration bulk route in India — every commercial SMS must flow through a DLT entity, so these operate outside the law.",
+    legal: "The legal “start fast” path is a registered platform with a free trial that handles the DLT work for you.",
+    href: "/resources/tools/free-sms-without-registration/",
+    label: "Free SMS, done legally",
+  },
 ] as const
 
 export default function SmsBomberPage() {
@@ -342,6 +389,37 @@ export default function SmsBomberPage() {
                   ) : null}
                 </div>
               </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/* Other names people search for — same abuse, same legal answer */}
+      <Section>
+        <SectionHeader
+          eyebrow="Other names for the same thing"
+          title="Fake message senders, OTP bombers, SMS blasters & spam senders."
+          subtitle="Different search terms, the same abuse — and the same legal answer for each."
+        />
+        <div className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2">
+          {RELATED_TERMS.map((t) => (
+            <div
+              key={t.term}
+              className="rounded-2xl border border-foreground/10 bg-background p-6 shadow-sm"
+            >
+              <h3 className="text-[15px] font-semibold text-foreground">{t.term}</h3>
+              <p className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">{t.what}</p>
+              <p className="mt-3 text-[13.5px] leading-relaxed text-foreground/85">
+                <span className="font-semibold text-foreground">The legal way: </span>
+                {t.legal}
+              </p>
+              <Link
+                href={t.href}
+                className="mt-3 inline-flex items-center gap-1.5 text-[13px] font-semibold text-primary hover:brightness-110"
+              >
+                {t.label}
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
             </div>
           ))}
         </div>

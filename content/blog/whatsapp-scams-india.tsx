@@ -357,6 +357,12 @@ export default function WhatsappScamsIndiaPost() {
         </LI>
       </OL>
 
+      <P>
+        If the harassment is arriving as a flood of text messages rather than WhatsApp, our{" "}
+        <A href="/resources/tools/sms-bomber/">guide to SMS bombing</A> explains how these tools
+        work, why they are illegal in India, and exactly how to trace and report the sender.
+      </P>
+
       <BlogFigure
         src="/blog/whatsapp-scams-first-hour-response.webp"
         alt="Split illustration showing a phone call to a bank, the 1930 cyber-crime helpline number, a government reporting portal on a laptop screen, and a hand blocking a contact on WhatsApp."
