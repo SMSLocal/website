@@ -13,6 +13,23 @@ import { getPageMetadata } from "@/lib/seo"
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
 export const metadata: Metadata = getPageMetadata("/pricing")
 
+type RateRow = {
+  channel: string
+  rate: string
+  notes: string
+}
+
+const CONFIRMED_RATES: RateRow[] = [
+  { channel: "Bulk SMS", rate: "₹0.09 – ₹0.24 / SMS", notes: "7 volume tiers, no monthly fee, DLT-compliant" },
+  { channel: "WhatsApp — Marketing", rate: "₹0.8631 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
+  { channel: "WhatsApp — Utility", rate: "₹0.1150 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
+  { channel: "WhatsApp — Authentication", rate: "₹0.1150 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
+  { channel: "WhatsApp — Service (user-initiated)", rate: "Free", notes: "Within Meta's 24-hour customer service window" },
+  { channel: "RCS — Basic text", rate: "₹0.1188 / message", notes: "1% below benchmarked market rate" },
+  { channel: "RCS — Rich card", rate: "₹0.1386 / message", notes: "1% below benchmarked market rate" },
+  { channel: "OTP & Transactional SMS", rate: "Same as Bulk SMS tiers", notes: "Priority route, sub-1s typical delivery" },
+]
+
 const WALLET_POINTS = [
   "One wallet, every channel. Load once and use the balance for SMS, WhatsApp, AI, and OTP.",
   "Credits are denominated in INR, not messages. Rates apply at send time.",
@@ -156,6 +173,54 @@ export default function PricingPage() {
 
         {/* Channel tabs */}
         <PricingTabs />
+
+        {/* Static rate summary — every confirmed rate in one crawlable table */}
+        <Section>
+          <span className="inline-flex rounded-full border border-border bg-background px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+            All rates at a glance
+          </span>
+          <h2 className="mt-4 text-pretty text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+            Every SMSLocal rate, in one table
+          </h2>
+          <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
+            The confirmed per-message rate for every channel, ex-GST. See the tabs above for the
+            full breakdown, calculators, and volume tiers.
+          </p>
+
+          <div className="mt-8 overflow-hidden rounded-2xl border border-border shadow-sm">
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[560px] border-collapse text-left text-[14px]">
+                <thead>
+                  <tr className="border-b border-border bg-muted/40">
+                    <th scope="col" className="px-4 py-3.5 text-[11.5px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+                      Channel
+                    </th>
+                    <th scope="col" className="px-4 py-3.5 text-right text-[11.5px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+                      Rate
+                    </th>
+                    <th scope="col" className="px-4 py-3.5 text-[11.5px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
+                      Notes
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {CONFIRMED_RATES.map((row, i) => (
+                    <tr key={row.channel} className={`border-b border-border last:border-b-0 ${i % 2 ? "bg-muted/20" : ""}`}>
+                      <td className="px-4 py-3.5 align-top font-semibold text-foreground">{row.channel}</td>
+                      <td className="px-4 py-3.5 text-right align-top font-mono tabular-nums text-foreground/85">{row.rate}</td>
+                      <td className="px-4 py-3.5 align-top text-foreground/85">{row.notes}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p className="mt-3 text-[12.5px] leading-relaxed text-muted-foreground">
+            Rates shown are per-message, ex-GST, and reflect SMSLocal&apos;s published rate card.
+            WhatsApp rates are Meta&apos;s published India rates, passed through with zero
+            SMSLocal markup, and are subject to change on Meta&apos;s own schedule.
+          </p>
+        </Section>
 
         {/* Wallet & billing */}
         <Section tone="muted">

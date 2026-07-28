@@ -4,7 +4,6 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import {
   ArrowRight,
-  Bot,
   Check,
   MessageCircle,
   MessageSquareText,
@@ -13,17 +12,16 @@ import {
 } from "lucide-react"
 import { RcsPanel } from "@/components/pricing/rcs-panel"
 
-type TabKey = "sms" | "rcs" | "whatsapp" | "ai" | "otp"
+type TabKey = "sms" | "rcs" | "whatsapp" | "otp"
 
 const TABS: { key: TabKey; label: string; icon: React.ComponentType<{ className?: string }>; badge?: string }[] = [
   { key: "sms", label: "SMS", icon: MessageSquareText },
   { key: "rcs", label: "RCS Business Messaging", icon: Star, badge: "New" },
   { key: "whatsapp", label: "WhatsApp Business API", icon: MessageCircle },
-  { key: "ai", label: "AI WhatsApp Agents", icon: Bot },
   { key: "otp", label: "OTP & Transactional", icon: ShieldCheck },
 ]
 
-const VALID_TAB_KEYS: TabKey[] = ["sms", "rcs", "whatsapp", "ai", "otp"]
+const VALID_TAB_KEYS: TabKey[] = ["sms", "rcs", "whatsapp", "otp"]
 
 export function PricingTabs() {
   const [active, setActive] = useState<TabKey>("sms")
@@ -91,7 +89,6 @@ export function PricingTabs() {
           {active === "sms" && <SmsPanel />}
           {active === "rcs" && <RcsPanel />}
           {active === "whatsapp" && <WhatsAppPanel />}
-          {active === "ai" && <AiPanel />}
           {active === "otp" && <OtpPanel />}
         </div>
       </div>
@@ -454,7 +451,7 @@ function VolumeCalculator() {
 const META_RATES = [
   { type: "Marketing", rate: "₹0.8631", use: "Promotional campaigns, offers, broadcasts" },
   { type: "Utility", rate: "₹0.1150", use: "Order updates, shipping alerts, account notifications" },
-  { type: "Authentication", rate: "₹0.1450", use: "OTPs, 2FA codes, identity verification" },
+  { type: "Authentication", rate: "₹0.1150", use: "OTPs, 2FA codes, identity verification" },
   { type: "Service (user-initiated)", rate: "Free", use: "Replies within the 24h customer service window" },
 ]
 
@@ -597,121 +594,6 @@ function WhatsAppPanel() {
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
         >
           Start WhatsApp — ₹60 Free Credit
-          <ArrowRight className="h-4 w-4" />
-        </Link>
-      </div>
-    </div>
-  )
-}
-
-/* ---------- AI Panel ---------- */
-
-const AI_ROWS = [
-  {
-    component: "AI conversation",
-    rate: "[PLACEHOLDER — confirm rate]",
-    notes: "One conversation = up to 25 exchanges in a 24h window",
-    placeholder: true,
-  },
-  { component: "Additional language packs", rate: "₹0", notes: "All 8 languages included by default" },
-  { component: "Visual flow builder", rate: "₹0", notes: "Unlimited flows included" },
-  { component: "Team inbox seats", rate: "₹0", notes: "Unlimited human agent seats — no per-seat fee" },
-  {
-    component: "WhatsApp message cost",
-    rate: "As per Meta rate card",
-    notes: "Charged in addition to AI conversation fee",
-  },
-]
-
-function AiPanel() {
-  return (
-    <div>
-      <div className="max-w-3xl">
-        <h2 className="text-2xl font-semibold tracking-tight sm:text-3xl">
-          AI WhatsApp Agents — per conversation, no agent licence fees
-        </h2>
-        <p className="mt-3 text-[15px] leading-relaxed text-muted-foreground">
-          Add AI chat agents to your WhatsApp Business API account. Agents reply in 8 Indian
-          languages, follow your scripts, and hand off to humans when they should. Pay per AI
-          conversation, not per agent seat.
-        </p>
-      </div>
-
-      <div className="mt-10 overflow-hidden rounded-2xl border border-border bg-card shadow-sm">
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[640px] border-collapse text-left text-[14px]">
-            <thead>
-              <tr className="border-b border-border bg-muted/40 text-[12px] uppercase tracking-[0.12em] text-muted-foreground">
-                <th className="px-5 py-3.5 font-semibold">Component</th>
-                <th className="px-5 py-3.5 font-semibold">Rate</th>
-                <th className="px-5 py-3.5 font-semibold">Notes</th>
-              </tr>
-            </thead>
-            <tbody>
-              {AI_ROWS.map((r) => (
-                <tr key={r.component} className="border-b border-border last:border-b-0">
-                  <td className="px-5 py-3.5 font-semibold text-foreground">{r.component}</td>
-                  <td className="px-5 py-3.5">
-                    {r.placeholder ? (
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-2.5 py-1 text-[11.5px] font-semibold text-accent">
-                        {r.rate}
-                      </span>
-                    ) : (
-                      <span className="font-mono font-semibold text-foreground">{r.rate}</span>
-                    )}
-                  </td>
-                  <td className="px-5 py-3.5 text-[13px] text-muted-foreground">{r.notes}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div className="mt-10 grid grid-cols-1 gap-6 lg:grid-cols-2">
-        <div className="rounded-2xl border border-border bg-card p-6 shadow-sm">
-          <h3 className="text-[15.5px] font-semibold tracking-tight text-foreground">How it works</h3>
-          <ol className="mt-4 space-y-3">
-            {[
-              "Connect your WhatsApp Business API account.",
-              "Build your AI agent flow in the visual builder — no code.",
-              "Pick your languages (Hindi, English, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada).",
-              "Set handoff rules to human agents for complex queries.",
-              "Pay per AI conversation from your wallet balance.",
-            ].map((step, i) => (
-              <li key={i} className="flex items-start gap-3 text-[13.5px] text-muted-foreground">
-                <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-md bg-primary/10 font-mono text-[12px] font-semibold text-primary">
-                  {i + 1}
-                </span>
-                {step}
-              </li>
-            ))}
-          </ol>
-        </div>
-
-        <ul className="space-y-2.5 rounded-2xl border border-border bg-card p-6 shadow-sm">
-          {[
-            "AI agents work on the same WhatsApp Business API number as your team inbox — no new number needed.",
-            "Conversations where AI hands off to a human within the first exchange are not charged.",
-            "Training the AI on your FAQ, product catalog, and past conversation logs is included.",
-            "Volume discount structure for AI conversations — [PLACEHOLDER: confirm if any].",
-          ].map((line) => (
-            <li key={line} className="flex items-start gap-2.5 text-[13.5px] text-muted-foreground">
-              <span className="mt-1 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-primary/15 text-primary">
-                <Check className="h-2.5 w-2.5" strokeWidth={3} />
-              </span>
-              {line}
-            </li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="mt-8">
-        <Link
-          href="/signup/"
-          className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
-        >
-          Launch an AI agent in 10 minutes
           <ArrowRight className="h-4 w-4" />
         </Link>
       </div>
