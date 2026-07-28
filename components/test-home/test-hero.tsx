@@ -11,7 +11,12 @@ import { ArrowUpRight, Check, Send, Star } from "lucide-react"
 
 const FEATURES = ["DLT-compliant", "99.7% delivery", "AI in 8 languages", "₹60 free credit"]
 
-const TYPED_WORDS = ["Bulk SMS", "WhatsApp", "RCS", "AI replies"]
+const HEADLINE_WORDS = ["Agentic", "Support", "Sales", "Messaging"]
+const HEADLINE_LINE_2 = "Best in Every Conversation."
+
+const WORD_HOLD_MS = 1600
+const LINE_2_HOLD_MS = 2400
+const TRANSITION_MS = 350
 
 // Conversation bubbles scattered around the hero edges; they scatter away from
 // the cursor for a light, game-like feel.
@@ -26,38 +31,70 @@ const BUBBLES = [
   { left: 76, top: 14, text: "Payment received ✓", out: true },
 ]
 
-/** Typewriter that types + deletes through TYPED_WORDS on a loop. */
-function Typewriter() {
-  const [idx, setIdx] = useState(0)
-  const [text, setText] = useState("")
-  const [deleting, setDeleting] = useState(false)
+/**
+ * "The AI Platform for" stays fixed. Only the trailing word crossfades through
+ * HEADLINE_WORDS; once the last word has held, the whole line crossfades to
+ * HEADLINE_LINE_2, holds, then crossfades back to the first word.
+ */
+function RotatingHeadline() {
+  const [step, setStep] = useState(0) // 0..HEADLINE_WORDS.length-1 = a word; HEADLINE_WORDS.length = line 2
+  const [lineVisible, setLineVisible] = useState(true) // whole-line fade, only used at the line1<->line2 boundary
+  const [wordVisible, setWordVisible] = useState(true) // just the trailing word, used while cycling within line 1
+  const totalSteps = HEADLINE_WORDS.length + 1
 
   useEffect(() => {
-    const word = TYPED_WORDS[idx]
-    let to: ReturnType<typeof setTimeout>
-    if (!deleting && text === word) {
-      to = setTimeout(() => setDeleting(true), 1500)
-    } else if (deleting && text === "") {
-      setDeleting(false)
-      setIdx((i) => (i + 1) % TYPED_WORDS.length)
-    } else {
-      to = setTimeout(
-        () => setText(word.slice(0, text.length + (deleting ? -1 : 1))),
-        deleting ? 50 : 95,
-      )
+    const isLine2 = step === HEADLINE_WORDS.length
+    const isPhaseBoundary = step === HEADLINE_WORDS.length - 1 || isLine2
+    const holdMs = isLine2 ? LINE_2_HOLD_MS : WORD_HOLD_MS
+
+    const hideTimer = setTimeout(() => {
+      if (isPhaseBoundary) setLineVisible(false)
+      else setWordVisible(false)
+    }, holdMs)
+
+    const swapTimer = setTimeout(() => {
+      setStep((s) => (s + 1) % totalSteps)
+      setLineVisible(true)
+      setWordVisible(true)
+    }, holdMs + TRANSITION_MS)
+
+    return () => {
+      clearTimeout(hideTimer)
+      clearTimeout(swapTimer)
     }
-    return () => clearTimeout(to)
-  }, [text, deleting, idx])
+  }, [step, totalSteps])
+
+  const isLine2 = step === HEADLINE_WORDS.length
 
   return (
-    <span className="inline-flex items-center">
-      <span className="bg-gradient-to-r from-primary via-emerald-500 to-teal-500 bg-clip-text text-transparent">
-        {text}
-      </span>
-      <span
-        aria-hidden
-        className="ml-1 inline-block h-[0.85em] w-[3px] translate-y-[0.06em] animate-pulse rounded-sm bg-primary"
-      />
+    <span
+      className="block transition-all ease-out"
+      style={{
+        transitionDuration: `${TRANSITION_MS}ms`,
+        opacity: lineVisible ? 1 : 0,
+        transform: lineVisible ? "translateY(0)" : "translateY(10px)",
+      }}
+    >
+      {isLine2 ? (
+        HEADLINE_LINE_2
+      ) : (
+        <>
+          <span className="block">The AI Platform</span>
+          <span className="block">
+            for{" "}
+            <span
+              className="inline-block bg-gradient-to-r from-primary via-emerald-500 to-teal-500 bg-clip-text text-transparent transition-all ease-out"
+              style={{
+                transitionDuration: `${TRANSITION_MS}ms`,
+                opacity: wordVisible ? 1 : 0,
+                transform: wordVisible ? "translateY(0)" : "translateY(10px)",
+              }}
+            >
+              {HEADLINE_WORDS[step]}
+            </span>
+          </span>
+        </>
+      )}
     </span>
   )
 }
@@ -277,13 +314,9 @@ export function TestHero() {
           Free ₹60 credit — no credit card required
         </div>
 
-        {/* Headline — centered, with typewriter */}
-        <h1 className="mx-auto mt-7 max-w-4xl text-balance text-5xl font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-          India&rsquo;s messaging platform for
-          <span className="mt-3 flex min-h-[1.15em] flex-wrap items-center justify-center gap-3">
-            <Typewriter />
-            <Send className="h-8 w-8 -rotate-12 text-primary sm:h-10 sm:w-10" />
-          </span>
+        {/* Headline — centered, cycles through HEADLINE_WORDS then crossfades to line 2 */}
+        <h1 className="mx-auto mt-7 min-h-[2.3em] max-w-4xl text-5xl font-extrabold leading-[1.08] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+          <RotatingHeadline />
         </h1>
 
         <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg">
