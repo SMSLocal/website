@@ -18,6 +18,7 @@ import WhatIsSmsPost from "@/content/blog/what-is-sms"
 import WhatsappMarketingIndiaPost from "@/content/blog/whatsapp-marketing-india"
 import WhatsappScamsIndiaPost from "@/content/blog/whatsapp-scams-india"
 import SmsMessageAppPost from "@/content/blog/sms-message-app"
+import BulkSmsServiceApiPost from "@/content/blog/bulk-sms-service-api"
 
 export type BlogAuthor = {
   name: string
@@ -392,6 +393,41 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       ],
     },
     Component: SendSmsOnlinePost,
+  },
+
+  "bulk-sms-service-api": {
+    meta: {
+      slug: "bulk-sms-service-api",
+      title: "Bulk SMS Service API: How It Works & How to Choose",
+      description:
+        "What a bulk SMS service API does, DLT rules for Indian senders, a working code example, and how to choose a reliable provider. ₹60 free credit to test.",
+      date: "2026-07-28",
+      readingTime: "8 min read",
+      category: "Getting started",
+      author: TEAM,
+      coverImage: "/blog/web-to-sms-dashboard-no-code.webp",
+      coverAlt:
+        "Screenshot of a bulk SMS campaign interface showing recipient upload, template selection, scheduling, and a live delivery report with DND-filtered numbers highlighted.",
+      toc: [
+        { id: "what-is-a-bulk-sms-api", label: "What a bulk SMS API does" },
+        { id: "how-it-works", label: "How a send works, end to end" },
+        { id: "dlt-requirement", label: "The DLT requirement" },
+        { id: "code-example", label: "A working request example" },
+        { id: "choosing-a-provider", label: "How to choose a provider" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["dlt-registration-guide", "send-sms-online", "sms-message-app"],
+      keywords: ["bulk sms service api", "bulk sms api", "sms api india", "bulk sms gateway api"],
+      faqItems: [
+        { q: "What is a bulk SMS service API?", a: "A bulk SMS service API is a set of HTTP endpoints that let your application send SMS to one or thousands of recipients programmatically, instead of through a web dashboard. You make a request with the recipient numbers, message content (matched to an approved DLT template in India), and sender ID, and the API queues, routes, and reports delivery back to you — usually via webhook." },
+        { q: "Do I need DLT registration to use a bulk SMS API?", a: "Yes, for any SMS sent to Indian numbers. TRAI requires every sender to register a Principal Entity, a Sender ID (Header), and each message template on the DLT platform before the API will accept a send request. Without an approved template ID, the API call succeeds but the operator drops the message. See our DLT registration guide for the full process." },
+        { q: "What's the difference between a bulk SMS API and a web dashboard?", a: "A dashboard is a browser UI for uploading a contact list and clicking send — good for one-off campaigns run by a non-technical team. An API is code-driven: your product triggers sends automatically (order confirmations, OTPs, alerts) without a human in the loop, and can handle far higher volume with programmatic retry and reporting logic." },
+        { q: "How much does a bulk SMS API cost in India?", a: "Typically ₹0.09–₹0.30 per SMS depending on route (transactional vs. promotional), message encoding, and volume tier — see the current SMSLocal rate card for exact tiers. There's usually no separate charge for API access itself; you pay per message sent." },
+        { q: "Can I test a bulk SMS API before paying?", a: "Yes. SMSLocal gives every new account ₹60 of free credit and sandbox access to send real test messages before you commit to a paid top-up — no credit card required to start." },
+        { q: "What should I look for when choosing a bulk SMS API provider?", a: "Four things matter most: DLT onboarding support (do they help you register, or leave you to TRAI's portal alone), direct operator connectivity vs. reseller routes (affects delivery speed and reliability), real per-message delivery receipts via webhook, and transparent per-segment pricing with no hidden platform fee." },
+      ],
+    },
+    Component: BulkSmsServiceApiPost,
   },
 
   "whatsapp-marketing-india": {
