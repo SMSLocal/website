@@ -712,6 +712,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { q: "Is there an SMS message app for PC?", a: "Yes — Google Messages for web or Windows Phone Link for Android, and Messages on Mac for iPhone, all mirror your real SIM's SMS inbox to a computer." },
         { q: "Can an SMS message app send OTPs and business messages?", a: "No — personal SMS apps can only receive OTPs. Sending OTPs or campaigns to customers in India requires a DLT-registered business platform with an approved sender ID." },
         { q: "Does the SMS message app matter for message delivery?", a: "No. Delivery depends on your carrier network and the sender's route, not which app displays the message." },
+        { q: "What is the difference between an SMS app and a chat app like WhatsApp?", a: "An SMS app sends over the telecom network using your phone number and works without an internet connection. WhatsApp and similar chat apps send over the internet and only work between users of the same app." },
       ],
     },
     Component: SmsMessageAppPost,
