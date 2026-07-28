@@ -17,6 +17,7 @@ import TelegramCodeSmsPost from "@/content/blog/telegram-code-sms"
 import WhatIsSmsPost from "@/content/blog/what-is-sms"
 import WhatsappMarketingIndiaPost from "@/content/blog/whatsapp-marketing-india"
 import WhatsappScamsIndiaPost from "@/content/blog/whatsapp-scams-india"
+import SmsMessageAppPost from "@/content/blog/sms-message-app"
 
 export type BlogAuthor = {
   name: string
@@ -47,6 +48,8 @@ export type BlogMeta = {
   coverAlt: string
   toc: BlogTocItem[]
   relatedSlugs?: string[]
+  /** Extra focus keywords merged into the page's <meta name="keywords">. */
+  keywords?: string[]
   /** FAQ items for FAQPage JSON-LD rich results. */
   faqItems?: { q: string; a: string }[]
 }
@@ -669,7 +672,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "comparison", label: "Full comparison table" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["best-free-sms", "receive-sms-messages-on-your-computer", "send-sms-online"],
+      relatedSlugs: ["sms-message-app", "best-free-sms", "receive-sms-messages-on-your-computer"],
       faqItems: [
         { q: "What is the best SMS app for Android in India in 2026?", a: "Google Messages is the best default for most users — free, no ads, RCS-capable, and backed up to Google Drive. On Samsung devices, Samsung Messages integrates better with One UI. For customisation and no ads, QKSMS is the open-source alternative." },
         { q: "Can I run two SMS apps on one Android phone at the same time?", a: "You can have multiple SMS apps installed, but only one can be the default SMS app at a time. Changing the default is in Settings → Apps → Default apps → SMS app. Some dual-SIM phones let you assign different apps per SIM, but notifications consolidate in the default app." },
@@ -679,6 +682,39 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       ],
     },
     Component: BestSmsAppsForAndroidPost,
+  },
+
+  "sms-message-app": {
+    meta: {
+      slug: "sms-message-app",
+      title: "Best SMS Message App: Android, iPhone & PC",
+      description:
+        "What an SMS message app is, the default app on every platform — Android, iPhone, Windows, Mac — when to switch, and how business SMS platforms differ.",
+      date: "2026-07-27",
+      readingTime: "7 min read",
+      category: "Getting started",
+      author: TEAM,
+      coverImage: "/blog/google-messages-web-browser-sms.webp",
+      coverAlt:
+        "A laptop web browser displaying SMS chat threads synced from an Android phone, illustrating an SMS message app working across phone and desktop.",
+      toc: [
+        { id: "what-is-an-sms-app", label: "What an SMS app does" },
+        { id: "default-apps-by-platform", label: "Default app by platform" },
+        { id: "choosing-the-right-one", label: "When to switch apps" },
+        { id: "business-messaging-apps", label: "Personal vs. business SMS" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["best-sms-apps-for-android", "receive-sms-messages-on-your-computer", "best-free-sms"],
+      keywords: ["sms message app", "sms app", "text messaging app", "best sms app for android"],
+      faqItems: [
+        { q: "What is an SMS message app?", a: "An SMS message app is the software on your phone or computer that sends and receives text messages over your carrier's network. Every smartphone ships with a default one — Google Messages on most Android phones, Messages on iPhone." },
+        { q: "Which SMS message app should I use?", a: "Stick with your phone's default app unless you have a specific reason to switch. Both Google Messages and iPhone Messages are free, ad-free, and already set up." },
+        { q: "Is there an SMS message app for PC?", a: "Yes — Google Messages for web or Windows Phone Link for Android, and Messages on Mac for iPhone, all mirror your real SIM's SMS inbox to a computer." },
+        { q: "Can an SMS message app send OTPs and business messages?", a: "No — personal SMS apps can only receive OTPs. Sending OTPs or campaigns to customers in India requires a DLT-registered business platform with an approved sender ID." },
+        { q: "Does the SMS message app matter for message delivery?", a: "No. Delivery depends on your carrier network and the sender's route, not which app displays the message." },
+      ],
+    },
+    Component: SmsMessageAppPost,
   },
 
   "telegram-code-sms": {

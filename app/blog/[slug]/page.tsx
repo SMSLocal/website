@@ -38,6 +38,7 @@ export async function generateMetadata({
     modifiedTime: meta.updatedDate ?? meta.date,
     authors: [meta.author.name],
     keywords: [
+      ...(meta.keywords ?? []),
       meta.category,
       `${meta.category} guide India`,
       "SMSLocal blog",
