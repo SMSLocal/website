@@ -425,8 +425,9 @@ export default function BestFreeSmsPost() {
         <BlogFaqItem q={"What is the best free bulk SMS app in India?"}>
         No free service supports genuine bulk SMS at any meaningful scale. Daily caps of 5–25 SMS
         exist on all free services to prevent abuse. For bulk sends, a paid platform is necessary
-        — costs in India start at ₹0.08 per SMS on promotional routes and ₹0.03 on OTP routes.
-        The SMSLocal ₹60 trial lets you test the full bulk SMS workflow before paying.
+        — rates vary by volume and message type, so check the <A href="/pricing/">current rate
+        card</A> before committing. The SMSLocal ₹60 trial lets you test the full bulk SMS
+        workflow before paying.
         </BlogFaqItem>
 
         <BlogFaqItem q={"Which SMS app gives the most free messages per day in India?"}>
@@ -439,8 +440,9 @@ export default function BestFreeSmsPost() {
       </BlogFaq>
 
       <Callout variant="tip" title="Need more than free limits allow?">
-        SMSLocal&apos;s OTP SMS starts at ₹0.03 per message with no monthly minimums. Top up your
-        wallet, send as many or as few as you need, and only pay for what you use.{" "}
+        SMSLocal&apos;s OTP SMS pricing scales with volume, with no monthly minimums — see the{" "}
+        <A href="/pricing/">current rate card</A> for exact figures. Top up your wallet, send as
+        many or as few as you need, and only pay for what you use.{" "}
         <A href="/signup/">Create a free account</A> to start with ₹60 in credit — no credit card
         required. Or see <A href="/blog/free-sms/">our complete free SMS guide</A> for all the
         personal options in detail.
