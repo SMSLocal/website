@@ -12,8 +12,8 @@ import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { RelatedContent } from "@/components/shared/related-content"
-import { ProductFinalCta, Section, SectionHeader } from "@/components/product/product-page"
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
+import { Faq, ProductFinalCta, Section, SectionHeader } from "@/components/product/product-page"
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 import {
   CompareHero,
   CompareMethodology,
@@ -150,7 +150,7 @@ const US_WINS = [
   {
     title: "Developer-friendly for custom commerce stacks",
     description:
-      "If your team runs a custom Next.js storefront, a headless Shopify, or a stack that isn't a standard Interakt template — six SDKs, idempotency keys, and a real sandbox make the integration actually production-grade.",
+      "If your team runs a custom Next.js storefront, a headless Shopify, or a stack that isn't a standard Interakt template — a documented REST/XML API, idempotency keys, and a real sandbox make the integration actually production-grade.",
     icon: Code2,
   },
 ]
@@ -206,6 +206,21 @@ const THEM_PICKS: PersonaCard[] = [
   },
 ]
 
+const FAQS = [
+  {
+    q: "Is SMSLocal cheaper than Interakt?",
+    a: "Interakt's paid plans start around ₹2,500/month and its team plans price per agent on some tiers. SMSLocal has no plan floor and prices per message only, which is typically cheaper for teams that aren't running large agent seats.",
+  },
+  {
+    q: "Does Interakt support SMS, or only WhatsApp?",
+    a: "Interakt is WhatsApp-only — SMS needs a second vendor alongside it. SMSLocal covers DLT SMS, WhatsApp, and OTP on the same dashboard, wallet, and invoice.",
+  },
+  {
+    q: "Is Interakt good for Shopify D2C brands?",
+    a: "Yes — Interakt's Shopify integration is more D2C-opinionated out of the box, with pre-built journeys for welcome, abandoned-cart, and COD-confirmation flows. If your stack is a custom or headless storefront rather than a standard Shopify template, SMSLocal's documented API gives more integration flexibility.",
+  },
+]
+
 export default function CompareInteraktPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -215,7 +230,9 @@ export default function CompareInteraktPage() {
           { name: "Compare", path: "/compare" },
           { name: "SMSLocal vs Interakt", path: "/compare/smslocal-vs-interakt" },
         ]}
-      />      <SiteHeader />
+      />
+      <FaqJsonLd items={FAQS} path="/compare/smslocal-vs-interakt" />
+      <SiteHeader />
 
       <main className="flex-1">
         <CompareHero
@@ -228,7 +245,7 @@ export default function CompareInteraktPage() {
         <Section className="border-b border-foreground/5">
           <SectionHeader
             eyebrow="Feature-by-feature"
-            title="Eighteen rows, sourced from public docs."
+            title="SMSLocal vs Interakt: feature-by-feature comparison."
             subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
           />
           <div className="mt-10 space-y-6">

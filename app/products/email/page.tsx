@@ -172,7 +172,7 @@ export default function EmailInboxPage() {
           <SectionLabel index={2} label="On every plan" />
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-balance font-sans text-3xl font-bold leading-[1.05] tracking-[-0.02em] text-primary sm:text-4xl lg:text-[2.7rem]">
-              What&apos;s in the box.
+              Shared inbox software features on every plan.
             </h2>
             <p className="mx-auto mt-5 max-w-2xl text-pretty font-sans text-[16px] font-medium leading-relaxed text-muted-foreground sm:text-[17px]">
               Free gives you the basics — a real shared inbox, assignments, and notes. Starter and above unlock automation, SLAs, multi-channel, and custom templates.

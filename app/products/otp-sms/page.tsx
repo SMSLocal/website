@@ -274,6 +274,7 @@ export default function OtpSmsPage() {
               { q: "Can SMSLocal generate and verify the OTP for me?", a: "Yes. You can either generate the code yourself and pass it in, or use our managed /send + /verify endpoints where we generate the code, handle expiry, and verify server-side so you never store the OTP." },
               { q: "Is OTP SMS secure for high-value transactions?", a: "OTP SMS is industry standard for banking, payments, and government flows in India, and we add signed webhooks, per-key scoping, IP allowlists, and rate limiting on top. For very high-risk flows we recommend combining OTP with additional signals like device fingerprinting." },
               { q: "What about fallback to WhatsApp?", a: "On our enterprise plan, failed SMS OTP attempts can automatically fall back to WhatsApp OTP for WhatsApp-active users, maximising delivery success across networks." },
+              { q: "What does OTP SMS cost in India?", a: "OTP is priced separately from promotional traffic and gets cheaper at volume. There's no setup fee or monthly minimum — you pay per message from your wallet balance. See the pricing page for current per-message rates." },
             ]}
           />
         </Section>

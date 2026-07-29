@@ -62,6 +62,10 @@ const FAQS = [
     q: "How do you avoid looking spammy to high-value buyers?",
     a: "By matching listings to stated preferences, capping campaign frequency, and letting buyers opt into WhatsApp where messaging feels personal rather than blasted.",
   },
+  {
+    q: "Can I send EMI, loan-status, or registration reminders?",
+    a: "Yes. Payment-milestone, home-loan-status, and registration/possession reminders all run as DLT-approved transactional templates, so they reach buyers reliably alongside your marketing broadcasts.",
+  },
 ]
 
 export default function RealEstateSolutionPage() {
@@ -171,7 +175,7 @@ export default function RealEstateSolutionPage() {
                 description:
                   "Templated SMS and WhatsApp messages with a tap-through calendar invite. RSVP tracking into your CRM via webhooks.",
                 href: "/products/bulk-sms/",
-                linkLabel: "Campaigns details",
+                linkLabel: "Bulk SMS details",
               },
               {
                 icon: Bot,

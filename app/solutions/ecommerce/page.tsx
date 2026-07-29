@@ -170,7 +170,7 @@ export default function EcommerceSolutionPage() {
                 title: "Order alerts & shipping updates",
                 description:
                   "DLT-approved transactional templates for every order event. 24/7 delivery with smart route failover so updates land on time.",
-                href: "/products/otp-sms/",
+                href: "/products/bulk-sms/",
                 linkLabel: "Transactional SMS details",
               },
               {

@@ -110,7 +110,7 @@ export default function LogisticsSolutionPage() {
                 {
                   channel: "SMS",
                   sender: "Out for delivery · AWB 48219",
-                  body: "Your package is on the way. Track live → bit.ly/48219",
+                  body: "Your package is on the way. Track live → smsl.in/48219",
                   time: "just now",
                   status: "delivered",
                 },

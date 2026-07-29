@@ -227,6 +227,7 @@ export default function QuickSmsPage() {
               { q: "How are failed deliveries handled?", a: "Failed messages are retried automatically per route policy, and the final per-number status is surfaced in the live delivery report and the downloadable CSV." },
               { q: "Can I run two-way conversations from Quick SMS?", a: "Quick SMS is primarily outbound. Two-way SMS inbox is available as an add-on where replies to a two-way-enabled number are routed to a shared inbox." },
               { q: "Is Quick SMS included in every SMSLocal plan?", a: "Yes. Every SMSLocal plan includes the Quick SMS dashboard alongside the API, developer tools, and compliance features. Check the pricing page for included volumes." },
+              { q: "What does bulk SMS cost when sent through Quick SMS?", a: "Same rates as our API — billed from your wallet with no monthly minimum or setup fee. See the pricing page for current per-message rates." },
             ]}
           />
         </Section>

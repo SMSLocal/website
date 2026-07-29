@@ -71,6 +71,10 @@ const FAQS = [
     q: "What audit trail do I get for regulators?",
     a: "Every message is logged with timestamp, sender, recipient, template ID, carrier, delivery status, and cost. The full log is exportable per account and per sub-account.",
   },
+  {
+    q: "How do we integrate the fintech SMS API into our stack?",
+    a: "A single API call per message, with idempotency keys, delivery-status webhooks, and pre-approved DLT templates for OTP and transaction-alert flows. Most banking and fintech teams complete integration and DLT onboarding in under a week.",
+  },
 ]
 
 export default function BankingFintechSolutionPage() {
@@ -201,8 +205,8 @@ export default function BankingFintechSolutionPage() {
                 title: "Compliance and audit layer",
                 description:
                   "DLT entity, Sender ID, and PE certificate management in the dashboard. Data residency in India. Exportable logs for regulators.",
-                href: "/pricing/",
-                linkLabel: "See enterprise options",
+                href: "/blog/dlt-registration-guide/",
+                linkLabel: "DLT compliance guide",
               },
             ]}
           />

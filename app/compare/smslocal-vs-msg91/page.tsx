@@ -11,8 +11,8 @@ import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { RelatedContent } from "@/components/shared/related-content"
-import { ProductFinalCta, Section, SectionHeader } from "@/components/product/product-page"
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
+import { Faq, ProductFinalCta, Section, SectionHeader } from "@/components/product/product-page"
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 import {
   CompareHero,
   CompareMethodology,
@@ -81,10 +81,10 @@ const ROWS: CompareRow[] = [
     note: "MSG91 supports request IDs; explicit idempotency headers vary by endpoint.",
   },
   {
-    feature: "Six official SDKs",
+    feature: "Documented REST + XML API",
     us: "yes",
     them: "yes",
-    note: "Both: PHP, Java, Python, Node.js, C#, JavaScript.",
+    note: "MSG91 offers first-party SDKs in PHP, Java, Python, Node.js, C#, and JavaScript; our first-party SDKs are on the roadmap.",
   },
   {
     feature: "Signed webhooks with retries",
@@ -184,7 +184,7 @@ const US_PICKS: PersonaCard[] = [
     description:
       "You need SMS, WhatsApp, and OTP with idempotency, signed webhooks, and a real sandbox — without learning a CDP and email suite you'll never use.",
     bullets: [
-      "Six SDKs, versioned REST API, live changelog",
+      "Versioned REST + XML API with a live changelog",
       "Explicit Idempotency-Key headers on OTP and bulk endpoints",
       "Sandbox that routes end-to-end for CI pipelines",
     ],
@@ -204,6 +204,21 @@ const THEM_PICKS: PersonaCard[] = [
   },
 ]
 
+const FAQS = [
+  {
+    q: "Is SMSLocal cheaper than MSG91?",
+    a: "It depends on volume and features. SMSLocal is pay-as-you-go with no monthly platform fee, while MSG91 gates several features — including its AI agent, Hello AI — behind higher-tier plans. If you only need SMS, WhatsApp, OTP, and an AI agent without the email/CDP suite, SMSLocal is typically the lower-cost path.",
+  },
+  {
+    q: "What are the best MSG91 alternatives in India?",
+    a: "SMSLocal is a focused pay-as-you-go alternative for teams that want SMS, WhatsApp, OTP, and an AI agent without an integrated email and CDP suite. If you specifically need RCS at scale or integrated marketing email, MSG91's broader platform remains the stronger fit.",
+  },
+  {
+    q: "Does MSG91 have RCS messaging?",
+    a: "Yes, and MSG91 has been shipping RCS to Indian carriers for longer than SMSLocal, which currently has RCS on its roadmap. If RCS is your primary channel today, MSG91 is further along.",
+  },
+]
+
 export default function CompareMsg91Page() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -213,7 +228,9 @@ export default function CompareMsg91Page() {
           { name: "Compare", path: "/compare" },
           { name: "SMSLocal vs MSG91", path: "/compare/smslocal-vs-msg91" },
         ]}
-      />      <SiteHeader />
+      />
+      <FaqJsonLd items={FAQS} path="/compare/smslocal-vs-msg91" />
+      <SiteHeader />
 
       <main className="flex-1">
         <CompareHero
@@ -227,7 +244,7 @@ export default function CompareMsg91Page() {
         <Section className="border-b border-foreground/5">
           <SectionHeader
             eyebrow="Feature-by-feature"
-            title="Nineteen rows, no fudging."
+            title="SMSLocal vs MSG91: feature-by-feature comparison."
             subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
           />
           <div className="mt-10 space-y-6">
@@ -262,6 +279,11 @@ export default function CompareMsg91Page() {
           <div className="mt-12">
             <PersonaSplit competitor="MSG91" usPicks={US_PICKS} themPicks={THEM_PICKS} />
           </div>
+        </Section>
+
+        <Section tone="muted" className="border-b border-foreground/5">
+          <SectionHeader eyebrow="FAQ" title="SMSLocal vs MSG91 — common questions." center />
+          <Faq items={FAQS} />
         </Section>
 
         {/* Related compares */}

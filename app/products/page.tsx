@@ -223,7 +223,7 @@ export default function ProductsPage() {
                 Core channels
               </div>
               <h2 className="mt-4 text-balance font-serif text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
-                Four pillars. One messaging platform.
+                SMS, WhatsApp, OTP & AI — one India-first messaging platform.
               </h2>
               <p className="mt-4 text-pretty text-base leading-relaxed text-muted-foreground">
                 Start with the product that solves today's problem. Add the others as your use cases grow — without re-platforming or renegotiating vendor contracts.

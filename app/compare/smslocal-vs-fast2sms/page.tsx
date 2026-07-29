@@ -12,8 +12,8 @@ import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { RelatedContent } from "@/components/shared/related-content"
-import { ProductFinalCta, Section, SectionHeader } from "@/components/product/product-page"
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
+import { Faq, ProductFinalCta, Section, SectionHeader } from "@/components/product/product-page"
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 import {
   CompareHero,
   CompareMethodology,
@@ -85,7 +85,7 @@ const ROWS: CompareRow[] = [
     note: "Fast2SMS supports request IDs; first-class idempotency headers are not documented.",
   },
   {
-    feature: "Six official SDKs (PHP, Java, Python, Node, C#, JS)",
+    feature: "Documented REST + XML API",
     us: "yes",
     them: "partial",
     note: "Fast2SMS documents community libraries; first-party SDK coverage is thinner.",
@@ -133,7 +133,7 @@ const US_WINS = [
   {
     title: "Modern, production-grade API",
     description:
-      "Idempotency keys, signed webhooks with retries, a real sandbox that routes end-to-end, and six first-party SDKs. If your stack has a CI pipeline, you'll feel the difference on day one.",
+      "Idempotency keys, signed webhooks with retries, a real sandbox that routes end-to-end, and a documented REST/XML API. If your stack has a CI pipeline, you'll feel the difference on day one.",
     icon: Code2,
   },
   {
@@ -207,6 +207,21 @@ const THEM_PICKS: PersonaCard[] = [
   },
 ]
 
+const FAQS = [
+  {
+    q: "Is Fast2SMS cheaper than SMSLocal?",
+    a: "Fast2SMS has historically published the most aggressive headline per-SMS list price in India. SMSLocal is competitive at volume but doesn't claim to be the cheapest at list price — if a single-SMS list rate is your only decision factor, Fast2SMS is the honest pick.",
+  },
+  {
+    q: "Does Fast2SMS support WhatsApp and developer-grade APIs?",
+    a: "Fast2SMS has added WhatsApp, but BSP depth and template workflows trail dedicated providers, and its API documents community libraries rather than first-party SDKs with idempotency headers. SMSLocal covers SMS, WhatsApp, and OTP with a documented REST/XML API and signed webhooks.",
+  },
+  {
+    q: "What is a good Fast2SMS alternative for teams that need more than one SMS blast?",
+    a: "SMSLocal is built for teams that need WhatsApp, OTP, delivery-report breakdowns per carrier, and a documented API alongside SMS — not just the lowest list price on a single campaign.",
+  },
+]
+
 export default function CompareFast2smsPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -216,7 +231,9 @@ export default function CompareFast2smsPage() {
           { name: "Compare", path: "/compare" },
           { name: "SMSLocal vs Fast2SMS", path: "/compare/smslocal-vs-fast2sms" },
         ]}
-      />      <SiteHeader />
+      />
+      <FaqJsonLd items={FAQS} path="/compare/smslocal-vs-fast2sms" />
+      <SiteHeader />
 
       <main className="flex-1">
         <CompareHero
@@ -229,7 +246,7 @@ export default function CompareFast2smsPage() {
         <Section className="border-b border-foreground/5">
           <SectionHeader
             eyebrow="Feature-by-feature"
-            title="Eighteen rows, no straw-man."
+            title="SMSLocal vs Fast2SMS: feature-by-feature comparison."
             subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
           />
           <div className="mt-10 space-y-6">
@@ -262,6 +279,11 @@ export default function CompareFast2smsPage() {
           <div className="mt-12">
             <PersonaSplit competitor="Fast2SMS" usPicks={US_PICKS} themPicks={THEM_PICKS} />
           </div>
+        </Section>
+
+        <Section tone="muted" className="border-b border-foreground/5">
+          <SectionHeader eyebrow="FAQ" title="SMSLocal vs Fast2SMS — common questions." center />
+          <Faq items={FAQS} />
         </Section>
 
         <section className="bg-muted/30 border-b border-foreground/5 py-16 sm:py-20">

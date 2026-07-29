@@ -98,7 +98,7 @@ const ROWS: CompareRow[] = [
     note: "WATI charges per user seat; we charge per message only.",
   },
   {
-    feature: "REST API with six official SDKs",
+    feature: "Documented REST + XML API",
     us: "yes",
     them: "partial",
     note: "WATI has an API; SDK coverage is thinner than ours.",

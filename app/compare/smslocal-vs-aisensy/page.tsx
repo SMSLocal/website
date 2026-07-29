@@ -12,8 +12,8 @@ import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { RelatedContent } from "@/components/shared/related-content"
-import { ProductFinalCta, Section, SectionHeader } from "@/components/product/product-page"
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
+import { Faq, ProductFinalCta, Section, SectionHeader } from "@/components/product/product-page"
+import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
 import {
   CompareHero,
   CompareMethodology,
@@ -96,7 +96,7 @@ const ROWS: CompareRow[] = [
     note: "AiSensy charges per agent on some plans; we do not.",
   },
   {
-    feature: "REST API with six official SDKs",
+    feature: "Documented REST + XML API",
     us: "yes",
     them: "partial",
   },
@@ -150,7 +150,7 @@ const US_WINS = [
   {
     title: "Modern developer surface",
     description:
-      "Six first-party SDKs, idempotency keys, signed webhooks, and an end-to-end sandbox. If your product engineers are wiring WhatsApp into a checkout or a backend, they'll feel the difference.",
+      "A documented REST/XML API, idempotency keys, signed webhooks, and an end-to-end sandbox. If your product engineers are wiring WhatsApp into a checkout or a backend, they'll feel the difference.",
     icon: Workflow,
   },
 ]
@@ -206,6 +206,21 @@ const THEM_PICKS: PersonaCard[] = [
   },
 ]
 
+const FAQS = [
+  {
+    q: "Is SMSLocal cheaper than AiSensy?",
+    a: "AiSensy's Basic plan starts at roughly ₹999/month and charges per agent on some tiers. SMSLocal has no plan floor and no per-agent fee — you pay per message from a shared wallet, which is typically cheaper for teams that don't run large agent seats.",
+  },
+  {
+    q: "Does AiSensy support SMS and OTP, not just WhatsApp?",
+    a: "No — AiSensy is a WhatsApp-only Business Solution Provider. If you also need DLT-compliant SMS or OTP, you'd need a second vendor alongside it. SMSLocal covers WhatsApp, SMS, OTP, and AI agents on one dashboard and invoice.",
+  },
+  {
+    q: "What is the best AiSensy alternative for teams that need more than WhatsApp?",
+    a: "SMSLocal is the closest full-stack alternative — WhatsApp, DLT SMS, OTP, and an AI agent included on the core plan, without AiSensy's per-agent pricing on higher tiers.",
+  },
+]
+
 export default function CompareAiSensyPage() {
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -215,7 +230,9 @@ export default function CompareAiSensyPage() {
           { name: "Compare", path: "/compare" },
           { name: "SMSLocal vs AiSensy", path: "/compare/smslocal-vs-aisensy" },
         ]}
-      />      <SiteHeader />
+      />
+      <FaqJsonLd items={FAQS} path="/compare/smslocal-vs-aisensy" />
+      <SiteHeader />
 
       <main className="flex-1">
         <CompareHero
@@ -228,7 +245,7 @@ export default function CompareAiSensyPage() {
         <Section className="border-b border-foreground/5">
           <SectionHeader
             eyebrow="Feature-by-feature"
-            title="Eighteen rows, publicly sourced."
+            title="SMSLocal vs AiSensy: feature-by-feature comparison."
             subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
           />
           <div className="mt-10 space-y-6">
@@ -261,6 +278,11 @@ export default function CompareAiSensyPage() {
           <div className="mt-12">
             <PersonaSplit competitor="AiSensy" usPicks={US_PICKS} themPicks={THEM_PICKS} />
           </div>
+        </Section>
+
+        <Section tone="muted" className="border-b border-foreground/5">
+          <SectionHeader eyebrow="FAQ" title="SMSLocal vs AiSensy — common questions." center />
+          <Faq items={FAQS} />
         </Section>
 
         <section className="bg-muted/30 border-b border-foreground/5 py-16 sm:py-20">

@@ -41,14 +41,17 @@ import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
 export const metadata: Metadata = getPageMetadata("/solutions/retail")
 
-const USE_CASES = [
+const RETAIL_USE_CASES = [
   { icon: Star, text: "Loyalty point balance and tier updates" },
-  { icon: UtensilsCrossed, text: "Restaurant, salon, and hotel reservation confirmations" },
-  { icon: CalendarCheck, text: "Reservation reminders (day-before and 2-hour)" },
   { icon: Tag, text: "Flash sale and limited-stock alerts" },
-  { icon: MessageSquareHeart, text: "Post-visit feedback surveys on WhatsApp" },
   { icon: Cake, text: "Birthday and anniversary offers" },
   { icon: PartyPopper, text: "Seasonal campaigns (Diwali, Valentine's, New Year)" },
+]
+
+const HOSPITALITY_USE_CASES = [
+  { icon: UtensilsCrossed, text: "Restaurant, salon, and hotel reservation confirmations" },
+  { icon: CalendarCheck, text: "Reservation reminders (day-before and 2-hour)" },
+  { icon: MessageSquareHeart, text: "Post-visit feedback surveys on WhatsApp" },
 ]
 
 const FAQS = [
@@ -201,8 +204,30 @@ export default function RetailSolutionPage() {
 
         <Section tone="light">
           <SectionHeader eyebrow="Use cases" title="Every customer moment worth a message." />
-          <ul className="mt-12 grid gap-3 md:grid-cols-2">
-            {USE_CASES.map((uc) => {
+          <h3 className="mt-12 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+            Retail customer engagement
+          </h3>
+          <ul className="mt-4 grid gap-3 md:grid-cols-2">
+            {RETAIL_USE_CASES.map((uc) => {
+              const Icon = uc.icon
+              return (
+                <li
+                  key={uc.text}
+                  className="flex items-start gap-3 rounded-xl border border-border bg-background p-4"
+                >
+                  <span className="mt-0.5 inline-flex h-8 w-8 flex-none items-center justify-center rounded-lg bg-primary/10 text-primary ring-1 ring-primary/15">
+                    <Icon className="h-4 w-4" aria-hidden />
+                  </span>
+                  <span className="text-sm leading-relaxed text-foreground sm:text-[15px]">{uc.text}</span>
+                </li>
+              )
+            })}
+          </ul>
+          <h3 className="mt-8 text-sm font-semibold uppercase tracking-wide text-muted-foreground">
+            Restaurant &amp; hospitality service SMS
+          </h3>
+          <ul className="mt-4 grid gap-3 md:grid-cols-2">
+            {HOSPITALITY_USE_CASES.map((uc) => {
               const Icon = uc.icon
               return (
                 <li
