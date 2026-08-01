@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Linkedin, Twitter, Youtube } from "lucide-react"
+import { Facebook, Linkedin, Phone, Twitter, Youtube } from "lucide-react"
 import { BrandLogo } from "@/components/brand/brand-logo"
 import { ManageConsentLink } from "@/components/consent/cookie-consent"
 
@@ -105,6 +105,13 @@ export function SiteFooter() {
               India&apos;s complete SMS, WhatsApp and AI messaging platform. DLT-compliant,
               developer-ready, and built for Indian businesses since 2019.
             </p>
+            <a
+              href="tel:+917621073586"
+              className="mt-5 inline-flex items-center gap-2 text-[13.5px] font-medium text-white/75 transition hover:text-white"
+            >
+              <Phone className="h-4 w-4 text-primary" />
+              +91 76210 73586
+            </a>
             <div className="mt-5 flex items-center gap-2">
               {[
                 { Icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/smslocal" },

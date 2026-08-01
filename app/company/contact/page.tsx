@@ -134,6 +134,12 @@ export default function ContactPage() {
                   Mon–Sat · 9:00 AM to 8:00 PM IST
                 </p>
                 <p className="flex items-center gap-2.5">
+                  <Phone className="h-4 w-4 flex-none text-primary" />
+                  <Link href="tel:+917621073586" className="hover:text-foreground">
+                    +91 76210 73586
+                  </Link>
+                </p>
+                <p className="flex items-center gap-2.5">
                   <Mail className="h-4 w-4 flex-none text-primary" />
                   <Link href="mailto:hello@smslocal.in" className="hover:text-foreground">
                     hello@smslocal.in
