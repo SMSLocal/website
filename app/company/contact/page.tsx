@@ -38,7 +38,7 @@ const CHANNELS = [
     icon: MessageCircle,
     title: "WhatsApp us",
     body: "Quick pre-sales questions? Message our team directly on WhatsApp.",
-    action: { label: "Chat on WhatsApp", href: "https://wa.me/917621073586" },
+    action: { label: "Chat on WhatsApp", href: "https://api.whatsapp.com/send?phone=917621073586" },
   },
   {
     icon: Phone,
