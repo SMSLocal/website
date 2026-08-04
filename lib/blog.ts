@@ -95,7 +95,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "ongoing", label: "Ongoing obligations" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dnd-services", "send-sms-online", "aws-sms"],
+      relatedSlugs: ["dnd-services", "send-sms-online", "aws-sms", "bulk-sms-service-api"],
       faqItems: [
         { q: "Can I start sending SMS while waiting for DLT approval?", a: "No. Any send before PE, Header, and Template approval will be rejected at the gateway. Approval typically takes 3–5 business days." },
         { q: "Do I need a separate PE registration for a subsidiary?", a: "Yes. Each legal entity with a separate Certificate of Incorporation registers its own Principal Entity. You can share an Aggregator Relationship, but the entity records stay separate." },
@@ -275,7 +275,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "aws-vs-provider", label: "AWS vs a dedicated provider" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["send-sms-online", "dlt-registration-guide", "receive-sms-messages-on-your-computer"],
+      relatedSlugs: ["send-sms-online", "dlt-registration-guide", "receive-sms-messages-on-your-computer", "bulk-sms-service-api"],
       faqItems: [
         { q: "What is the difference between Amazon SNS and AWS End User Messaging?", a: "Amazon SNS sends simple one-way SMS with a single Publish call — ideal for OTPs and alerts. AWS End User Messaging (formerly Amazon Pinpoint SMS) adds two-way messaging, dedicated sender IDs and numbers, opt-out handling, and per-message events for campaigns and conversational use. Use SNS for transactional; End User Messaging for everything richer." },
         { q: "Can I send SMS to Indian numbers with AWS?", a: "Yes, but you must be DLT-registered. You supply your DLT Entity ID and Template ID on every message and send from a sender ID that maps to an approved template. Without a byte-exact template match, the operator drops the message even though AWS reports it as sent." },
@@ -382,7 +382,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "legal", label: "Legal requirements" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["receive-sms-messages-on-your-computer", "dlt-registration-guide", "aws-sms"],
+      relatedSlugs: ["receive-sms-messages-on-your-computer", "dlt-registration-guide", "aws-sms", "bulk-sms-service-api"],
       faqItems: [
         { q: "Can I send SMS online for free?", a: "Some platforms offer a free signup credit — SMSLocal gives ₹60 to start, enough for a few hundred test messages. Beyond that, expect ₹0.10–0.40 per SMS. Any 'totally free' service for ongoing use is either operating without DLT compliance or monetising your data." },
         { q: "Do I need a separate sender ID account for each brand?", a: "No. One account, one Principal Entity, but you can register multiple Headers (sender IDs) for different brands under the same account." },
