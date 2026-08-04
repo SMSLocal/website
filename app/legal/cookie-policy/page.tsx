@@ -208,7 +208,7 @@ export default function CookiePolicyPage() {
               </a>
               , and{" "}
               <a
-                href="https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09"
+                href="https://learn.microsoft.com/en-us/microsoft-edge/web-platform/tracking-prevention"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
