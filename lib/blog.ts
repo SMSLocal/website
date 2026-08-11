@@ -19,6 +19,7 @@ import WhatsappMarketingIndiaPost from "@/content/blog/whatsapp-marketing-india"
 import WhatsappScamsIndiaPost from "@/content/blog/whatsapp-scams-india"
 import SmsMessageAppPost from "@/content/blog/sms-message-app"
 import BulkSmsServiceApiPost from "@/content/blog/bulk-sms-service-api"
+import OtpSmsServicePost from "@/content/blog/otp-sms-service"
 
 export type BlogAuthor = {
   name: string
@@ -32,7 +33,14 @@ export type BlogTocItem = {
 
 export type BlogMeta = {
   slug: string
+  /** SEO <title> and the canonical article title used in JSON-LD. */
   title: string
+  /**
+   * On-page <h1>, when it should differ from the SEO `title`. Lets the
+   * search-result title stay keyword-led while the visible heading reads
+   * naturally. Falls back to `title` when omitted.
+   */
+  h1?: string
   description: string
   date: string // ISO 8601
   updatedDate?: string // ISO 8601
@@ -428,6 +436,43 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       ],
     },
     Component: BulkSmsServiceApiPost,
+  },
+
+  "otp-sms-service": {
+    meta: {
+      slug: "otp-sms-service",
+      title: "OTP SMS Service in India: DLT Rules & Setup",
+      h1: "How OTP SMS Delivery Actually Works in India",
+      description:
+        "How OTP SMS delivery works in India — the DLT template rules for one-time passwords, why codes go missing, security limits, and whether to build or buy.",
+      date: "2026-08-11",
+      readingTime: "7 min read",
+      category: "Getting started",
+      author: TEAM,
+      coverImage: "/blog/if-youre-the-business-sending-the-otp.webp",
+      coverAlt:
+        "Engineer reviewing per-message OTP delivery receipts on a laptop dashboard.",
+      toc: [
+        { id: "what-is-otp-sms", label: "What an OTP SMS actually is" },
+        { id: "how-it-works", label: "How an OTP send works" },
+        { id: "dlt-rules", label: "The DLT rules for OTP" },
+        { id: "delivery-failures", label: "Why OTPs go missing" },
+        { id: "security", label: "What SMS OTP protects" },
+        { id: "build-vs-buy", label: "Build versus buy" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["dlt-registration-guide", "bulk-sms-service-api", "sms-activation"],
+      keywords: ["otp sms service", "otp sms india", "otp sms api", "one time password sms"],
+      faqItems: [
+        { q: "What is an OTP SMS service?", a: "An OTP SMS service delivers one-time password codes to a user's phone over the telecom network. Your application generates the code, calls the provider's API with an approved DLT template, and the provider routes it to the recipient's carrier and reports back whether it was delivered." },
+        { q: "Do OTP messages need DLT registration in India?", a: "Yes. Every SMS sent to an Indian number, including OTPs, must originate from a registered Principal Entity and Sender ID and match an approved content template. Without a matching template the API call still succeeds, but the operator drops the message before it reaches the handset." },
+        { q: "Does DND block OTP messages?", a: "No. OTPs are service-explicit transactional messages and are exempt from NCPR scrubbing, so they reach numbers registered on DND. If your OTPs are not arriving, DND is almost never the cause." },
+        { q: "How long should an OTP stay valid?", a: "Short enough to limit exposure, long enough to survive a slow network. Most Indian products settle between five and ten minutes, paired with a resend button rather than a longer window. Always invalidate the code the moment it is used successfully." },
+        { q: "Why do some users receive the OTP late?", a: "Late delivery is usually a queue, not a failure. Promotional-category routes are batched and deprioritised by carriers during peak traffic, so an OTP filed under the wrong category will lag. Sending on a transactional route keeps codes in the priority queue." },
+        { q: "Can I send OTPs on WhatsApp instead of SMS?", a: "You can, using WhatsApp authentication templates, but it only works if the user has WhatsApp installed and online. Most Indian products send SMS as the primary channel because it needs no internet connection, and treat WhatsApp or voice as the fallback." },
+      ],
+    },
+    Component: OtpSmsServicePost,
   },
 
   "whatsapp-marketing-india": {

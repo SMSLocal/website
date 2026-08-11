@@ -140,7 +140,7 @@ export default async function BlogPostPage({
             </div>
 
             <h1 className="mt-5 text-pretty text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-[44px] md:leading-[1.1]">
-              {meta.title}
+              {meta.h1 ?? meta.title}
             </h1>
             <p className="mt-6 max-w-2xl text-pretty text-[17px] leading-relaxed text-white/75">
               {meta.description}
