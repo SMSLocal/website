@@ -18,6 +18,15 @@
 const DEFAULT_WEBHOOK_URL = "https://form.mcmbpo.com/webhook-handler.php"
 const TIMEOUT_MS = 8_000
 
+/**
+ * The portal sits behind Cloudflare, which returns a bare 403 to requests
+ * that arrive without a User-Agent. Node's fetch (undici) sends none by
+ * default, so every server-side call was rejected before reaching the PHP
+ * handler. Identify ourselves explicitly — any non-empty UA satisfies it,
+ * and a descriptive one makes the traffic recognisable in the portal's logs.
+ */
+const USER_AGENT = "SMSLocal-Website/1.0 (+https://www.smslocal.in)"
+
 export type PortalLead = {
   Name: string
   Email: string
@@ -62,6 +71,7 @@ export async function sendToPortal(
       headers: {
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
         Accept: "*/*",
+        "User-Agent": USER_AGENT,
       },
       body: form.toString(),
       signal: controller.signal,
