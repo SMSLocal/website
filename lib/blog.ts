@@ -103,7 +103,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "ongoing", label: "Ongoing obligations" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dnd-services", "send-sms-online", "aws-sms", "bulk-sms-service-api"],
+      relatedSlugs: ["dnd-services", "send-sms-online", "aws-sms", "bulk-sms-service-api", "otp-sms-service"],
       faqItems: [
         { q: "Can I start sending SMS while waiting for DLT approval?", a: "No. Any send before PE, Header, and Template approval will be rejected at the gateway. Approval typically takes 3–5 business days." },
         { q: "Do I need a separate PE registration for a subsidiary?", a: "Yes. Each legal entity with a separate Certificate of Incorporation registers its own Principal Entity. You can share an Aggregator Relationship, but the entity records stay separate." },
@@ -318,7 +318,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "business-side", label: "If you're the business sending" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["telegram-code-sms", "best-sms-apps-for-android", "gmail-password-recovery-via-sms"],
+      relatedSlugs: ["telegram-code-sms", "best-sms-apps-for-android", "gmail-password-recovery-via-sms", "otp-sms-service"],
       faqItems: [
         { q: "My SIM works for calls but not SMS — what's wrong?", a: "The most common cause is a wrong SMSC (Short Message Service Centre) number. On Jio it should be +919076014000, Airtel +919810012611, Vi +919895032001. Go to Settings → SIM → Advanced or Message Centre and verify." },
         { q: "I switched from iPhone to Android — now SMS isn't working. Why?", a: "Your number is still registered with Apple's iMessage network. Go to Settings → Messages → Send & Receive on the old iPhone, deregister the number, or use Apple's online iMessage deregistration tool. This can take up to 45 days to propagate if you no longer have the iPhone." },
@@ -424,7 +424,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "choosing-a-provider", label: "How to choose a provider" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dlt-registration-guide", "send-sms-online", "sms-message-app"],
+      relatedSlugs: ["dlt-registration-guide", "send-sms-online", "sms-message-app", "otp-sms-service"],
       keywords: ["bulk sms service api", "bulk sms api", "sms api india", "bulk sms gateway api"],
       faqItems: [
         { q: "What is a bulk SMS service API?", a: "A bulk SMS service API is a set of HTTP endpoints that let your application send SMS to one or thousands of recipients programmatically, instead of through a web dashboard. You make a request with the recipient numbers, message content (matched to an approved DLT template in India), and sender ID, and the API queues, routes, and reports delivery back to you — usually via webhook." },
@@ -836,7 +836,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "security", label: "Security implications" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["sms-activation", "gmail-password-recovery-via-sms", "what-is-sms"],
+      relatedSlugs: ["sms-activation", "gmail-password-recovery-via-sms", "what-is-sms", "otp-sms-service"],
       faqItems: [
         { q: "How long does the Telegram verification code take to arrive via SMS?", a: "Usually under 30 seconds on Indian carriers. Jio and Airtel typically deliver in under 10 seconds. If it hasn't arrived after 60 seconds, check for DND on your number, toggle Airplane mode to refresh the carrier connection, then request a new code." },
         { q: "Can I receive the Telegram code on a different device?", a: "If you are already logged into Telegram on another device with the same number, Telegram will send the code to that device first — as an in-app message — rather than via SMS. Check your active Telegram session on a tablet or secondary phone." },
