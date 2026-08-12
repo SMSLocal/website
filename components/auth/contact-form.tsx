@@ -15,6 +15,55 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
+/**
+ * Markets we sell numbers into, plus an escape hatch.
+ *
+ * The ISO 3166-1 alpha-2 code resolves to /public/flags/<code>.svg. We serve
+ * real images rather than flag emoji because Windows ships no flag glyphs —
+ * emoji would degrade to the bare letters ("IN") for every desktop visitor
+ * on Windows. The SVGs are vendored from flag-icons (MIT, © Panayiotis
+ * Lipiridis); only the countries listed here were copied in.
+ */
+const COUNTRIES = [
+  { code: "IN", name: "India" },
+  { code: "US", name: "United States" },
+  { code: "GB", name: "United Kingdom" },
+  { code: "CA", name: "Canada" },
+  { code: "AU", name: "Australia" },
+  { code: "AE", name: "United Arab Emirates" },
+  { code: "SA", name: "Saudi Arabia" },
+  { code: "SG", name: "Singapore" },
+  { code: "MY", name: "Malaysia" },
+  { code: "ID", name: "Indonesia" },
+  { code: "PH", name: "Philippines" },
+  { code: "DE", name: "Germany" },
+  { code: "FR", name: "France" },
+  { code: "NL", name: "Netherlands" },
+  { code: "ES", name: "Spain" },
+  { code: "BR", name: "Brazil" },
+  { code: "MX", name: "Mexico" },
+  { code: "ZA", name: "South Africa" },
+  { code: "NG", name: "Nigeria" },
+  { code: "KE", name: "Kenya" },
+  { code: null, name: "Other" },
+] as const
+
+function CountryFlag({ code }: { code: string }) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element -- a 4x3 SVG needs no
+    // optimisation pass; next/image would only add overhead for a 20px icon.
+    <img
+      src={`/flags/${code.toLowerCase()}.svg`}
+      alt=""
+      aria-hidden
+      width={20}
+      height={15}
+      loading="lazy"
+      className="mr-2 inline-block h-[15px] w-5 shrink-0 rounded-[2px] object-cover ring-1 ring-black/10"
+    />
+  )
+}
+
 type Stage = "form" | "submitting" | "sent" | "error"
 
 type ErrorState = {
@@ -129,6 +178,42 @@ export function ContactForm() {
             <FieldLabel htmlFor="company">Company</FieldLabel>
             <Input id="company" name="company" autoComplete="organization" required />
           </Field>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            <Field>
+              <FieldLabel htmlFor="country">Country for required number</FieldLabel>
+              <Select name="country">
+                <SelectTrigger id="country">
+                  <SelectValue placeholder="Select a country" />
+                </SelectTrigger>
+                <SelectContent>
+                  {COUNTRIES.map((c) => (
+                    // Value stays the bare country name so the CRM receives
+                    // clean data with no emoji in it.
+                    <SelectItem key={c.name} value={c.name}>
+                      {c.code ? <CountryFlag code={c.code} /> : null}
+                      {c.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </Field>
+            <Field>
+              <FieldLabel htmlFor="numberType">Number type</FieldLabel>
+              <Select name="numberType">
+                <SelectTrigger id="numberType">
+                  <SelectValue placeholder="Select a number type" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="Local / DID">Local / DID</SelectItem>
+                  <SelectItem value="Toll-free">Toll-free</SelectItem>
+                  <SelectItem value="Mobile">Mobile</SelectItem>
+                  <SelectItem value="Short code">Short code</SelectItem>
+                  <SelectItem value="Not sure yet">Not sure yet</SelectItem>
+                </SelectContent>
+              </Select>
+            </Field>
+          </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             <Field>

@@ -4,6 +4,7 @@ import {
   rateLimitResponse,
 } from "@/lib/security/rate-limit"
 import { htmlTable, sendMail, textBlock } from "@/lib/email/mailer"
+import { sendToPortal } from "@/lib/webhook/portal"
 
 /**
  * Contact-form endpoint.
@@ -26,6 +27,8 @@ type ContactPayload = {
   company?: string
   interest?: string
   volume?: string
+  country?: string
+  numberType?: string
   message?: string
   // Honeypot — must be empty. If a bot fills it, drop silently.
   website?: string
@@ -108,6 +111,8 @@ export async function POST(req: Request) {
     ["Email", body.email?.trim()],
     ["Phone", body.phone?.trim()],
     ["Company", body.company?.trim()],
+    ["Country", body.country?.trim()],
+    ["Number type", body.numberType?.trim()],
     ["Interest", body.interest?.trim()],
     ["Monthly volume", body.volume?.trim()],
     ["Message", body.message?.trim()],
@@ -126,6 +131,29 @@ export async function POST(req: Request) {
   })
   if (!mail.ok && !mail.skipped) {
     console.error("[v0] contact notification failed", { email: body.email, error: mail.error })
+  }
+
+  // ---- Forward to the CRM portal. Company, interest and volume have no
+  //      field of their own on the portal, so they ride along in Message
+  //      rather than being dropped.
+  const context = textBlock([
+    ["Company", body.company?.trim()],
+    ["Interest", body.interest?.trim()],
+    ["Monthly volume", body.volume?.trim()],
+  ])
+  const portal = await sendToPortal({
+    Name: name,
+    Email: body.email?.trim() ?? "",
+    Phone: body.phone?.trim() ?? "",
+    Country: body.country?.trim() ?? "",
+    Message: context
+      ? `${body.message?.trim() ?? ""}\n\n---\n${context}`
+      : (body.message?.trim() ?? ""),
+    Service: body.numberType?.trim() ?? "",
+    Website: "smslocal.in",
+  })
+  if (!portal.ok && !portal.skipped) {
+    console.error("[v0] portal forward failed", { email: body.email, error: portal.error })
   }
 
   return new Response(
