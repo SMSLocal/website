@@ -10,6 +10,7 @@ import {
   getClientIdentifier,
   isRateLimitConfigured,
 } from "@/lib/security/rate-limit"
+import { htmlTable, sendMail, textBlock } from "@/lib/email/mailer"
 
 /**
  * POST /api/tools/free-sms/send
@@ -169,6 +170,24 @@ export async function POST(req: Request) {
     ipRemaining: ipLimit.remaining,
     phoneRemaining: phoneLimit.remaining,
   })
+
+  // Notify the team — this tool is a lead source, not just a demo. Opt-out
+  // with FREE_SMS_NOTIFY="false" if the volume ever becomes noisy.
+  if (process.env.FREE_SMS_NOTIFY !== "false") {
+    const rows: [string, string | undefined][] = [
+      ["Phone", `+91${phone}`],
+      ["Template", `${template.label} (${template.id})`],
+      ["Source", "smslocal.in — /resources/tools/free-sms-without-registration/"],
+    ]
+    const mail = await sendMail({
+      subject: `Free-SMS tool lead — +91${phone}`,
+      text: textBlock(rows),
+      html: htmlTable(rows),
+    })
+    if (!mail.ok && !mail.skipped) {
+      console.error("[v0] free-sms notification failed", { error: mail.error })
+    }
+  }
 
   // Hand back the recorded send + the (read-only) message body so the
   // form can show exactly what would be delivered. The actual dispatch

@@ -3,6 +3,7 @@ import {
   getClientIdentifier,
   rateLimitResponse,
 } from "@/lib/security/rate-limit"
+import { htmlTable, sendMail, textBlock } from "@/lib/email/mailer"
 
 /**
  * Contact-form endpoint.
@@ -90,8 +91,7 @@ export async function POST(req: Request) {
     return jsonError(400, "invalid_input", result.message)
   }
 
-  // ---- Persistence / webhook. Wire-up is phase-2; log for now so we can
-  //      verify submissions in preview without losing data.
+  // ---- Log first, so the submission survives even if the mail hop fails.
   console.log("[v0] contact submission", {
     email: body.email,
     company: body.company,
@@ -100,6 +100,33 @@ export async function POST(req: Request) {
     messageLength: body.message?.length ?? 0,
     identifier,
   })
+
+  // ---- Notify the team by email.
+  const name = `${body.firstName?.trim() ?? ""} ${body.lastName?.trim() ?? ""}`.trim()
+  const rows: [string, string | undefined][] = [
+    ["Name", name],
+    ["Email", body.email?.trim()],
+    ["Phone", body.phone?.trim()],
+    ["Company", body.company?.trim()],
+    ["Interest", body.interest?.trim()],
+    ["Monthly volume", body.volume?.trim()],
+    ["Message", body.message?.trim()],
+    ["Source", "smslocal.in — /company/contact/"],
+  ]
+
+  // Deliberately not awaited into the response path's failure handling: a
+  // dead SMTP box must not turn a valid submission into an error for the
+  // visitor. sendMail never throws; it reports failure via its return value.
+  const mail = await sendMail({
+    subject: `New enquiry — ${name || body.email} ${body.company ? `(${body.company})` : ""}`.trim(),
+    text: textBlock(rows),
+    html: htmlTable(rows),
+    // Lets the team reply straight to the enquirer from their inbox.
+    replyTo: body.email?.trim(),
+  })
+  if (!mail.ok && !mail.skipped) {
+    console.error("[v0] contact notification failed", { email: body.email, error: mail.error })
+  }
 
   return new Response(
     JSON.stringify({
