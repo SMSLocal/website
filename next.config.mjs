@@ -316,23 +316,46 @@ const nextConfig = {
         destination: "/resources/help/",
         permanent: true,
       },
-      // The Way2SMS-alternative article lives under the /sms/ category, so its
-      // bare /help/ path must map to the full category URL — this must precede
-      // the /help/:path* catch-all below (which would drop the category).
-      {
-        source: "/help/way2sms-alternative-website",
-        destination: "/resources/help/sms/way2sms-alternative-website/",
-        permanent: true,
-      },
-      {
-        source: "/help/way2sms-alternative-website/",
-        destination: "/resources/help/sms/way2sms-alternative-website/",
-        permanent: true,
-      },
-      // /help/:path* — old URLs Google indexed for individual help articles.
+      // Legacy /help/<slug>/ article URLs from the pre-rebuild site, which
+      // Google still has indexed. The new help centre nests articles under a
+      // category (/resources/help/<category>/<article>/), so the old flat
+      // catch-all — /help/:path* -> /resources/help/:path* — always dropped
+      // the category segment and landed on a 404. Only the Way2SMS article had
+      // ever been mapped by hand; every other legacy URL was a dead end.
+      //
+      // Each slug is pointed at its closest surviving equivalent. Both the
+      // bare and trailing-slash forms are emitted because a literal `source`
+      // does not match both under trailingSlash: true. These must precede the
+      // catch-all below.
+      ...Object.entries({
+        "bulk-sms-api-service": "/blog/bulk-sms-service-api/",
+        "otp-sms-services": "/products/otp-sms/",
+        "promotional-transactional-service-bulk-sms-routes-in-dlt":
+          "/resources/help/sms/transactional-vs-promotional/",
+        "sending-dlt-sms": "/resources/help/dlt/",
+        "how-to-send-bulk-sms": "/resources/help/getting-started/send-your-first-sms/",
+        "dlt-sms-faq": "/resources/help/dlt/",
+        "dlt-sms-provider-india": "/blog/dlt-registration-guide/",
+        register: "/resources/help/getting-started/create-your-account/",
+        "bulk-sms-to-dnd": "/resources/help/dlt/dnd-and-preferences/",
+        "what-is-dnd-and-non-dnd-number": "/resources/help/dlt/dnd-and-preferences/",
+        "bulk-sms-without-dnd-filter": "/resources/help/dlt/dnd-and-preferences/",
+        "way2sms-alternative-website": "/resources/help/sms/way2sms-alternative-website/",
+      }).flatMap(([slug, destination]) => [
+        { source: `/help/${slug}`, destination, permanent: true },
+        { source: `/help/${slug}/`, destination, permanent: true },
+      ]),
+      // Anything else under /help/ or /help-category/ goes to the help-centre
+      // hub. Not as good as a topical match, but a live hub beats a 404 for
+      // the legacy URLs we have not catalogued yet.
       {
         source: "/help/:path*",
-        destination: "/resources/help/:path*",
+        destination: "/resources/help/",
+        permanent: true,
+      },
+      {
+        source: "/help-category/:path*",
+        destination: "/resources/help/",
         permanent: true,
       },
       // DLT compliance content lives in the blog.
