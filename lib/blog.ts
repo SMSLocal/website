@@ -79,6 +79,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "dlt-registration-guide",
       title: "DLT Registration Guide for Indian Businesses 2026",
+      h1: "Getting Through DLT Registration Without Rejections",
       description:
         "Every step, every document, every rejection reason — from Principal Entity signup to first SMS. Based on 7 years onboarding Indian businesses onto DLT.",
       date: "2026-04-15",
@@ -120,6 +121,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "dnd-means",
       title: "DND Meaning: What It Is and How to Activate It",
+      h1: "What Do Not Disturb Actually Blocks on Your Number",
       description:
         "India's Do Not Disturb guide — how to activate DND on Jio, Airtel, Vi and BSNL, what it blocks, and what to do when promotional SMS still slip through.",
       date: "2026-03-28",
@@ -154,6 +156,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "dnd-services",
       title: "DND Services for SMS Senders: Compliance Guide",
+      h1: "What DND Compliance Requires of Every SMS Sender",
       description:
         "A practical guide to DND for SMS senders in India — NCPR scrubbing, send windows, consent rules, and the violations that get your sender ID suspended.",
       date: "2026-03-30",
@@ -192,9 +195,10 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "receive-sms-online-india": {
     meta: {
       slug: "receive-sms-online-india",
-      title: "Receive SMS Online India: How It Works & What's Safe",
+      title: "Receive SMS Online India: How It Works & Risks",
+      h1: "Temporary Indian Numbers: How They Work, and the Risks",
       description:
-        "How receive-SMS-online and temporary Indian number services work, when they're safe to use, when they're a scam, and the safer alternatives for OTPs and privacy.",
+        "How receive-SMS-online and temporary Indian number services work, when they are safe, when they are a scam, and safer alternatives for OTPs and privacy.",
       date: "2026-03-14",
       readingTime: "10 min read",
       category: "Consumer",
@@ -226,9 +230,10 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "receive-sms-messages-on-your-computer": {
     meta: {
       slug: "receive-sms-messages-on-your-computer",
-      title: "How to Receive SMS Messages on Your Computer (2026)",
+      title: "How to Receive SMS on Your Computer in 2026",
+      h1: "Reading Your Phone's Texts on a PC or Mac",
       description:
-        "Every way to receive your own SMS on a Windows PC, Mac, or Linux machine using your real number — Phone Link, Google Messages for web, Samsung Flow, iPhone forwarding, and business options.",
+        "Every way to read your own SMS on a Windows PC or Mac using your real number — Phone Link, Google Messages for web, Samsung Flow and iPhone forwarding.",
       date: "2026-07-16",
       readingTime: "9 min read",
       category: "Getting started",
@@ -263,9 +268,10 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "aws-sms": {
     meta: {
       slug: "aws-sms",
-      title: "AWS SMS: Send SMS With Amazon SNS & Pinpoint (2026)",
+      title: "AWS SMS: Send With Amazon SNS & Pinpoint 2026",
+      h1: "Sending SMS on AWS with SNS and End User Messaging",
       description:
-        "How to send SMS on AWS with Amazon SNS and AWS End User Messaging (Pinpoint) — the two services compared, India DLT and sender-ID setup, the sandbox, pricing, and when a dedicated provider is faster.",
+        "How to send SMS on AWS with Amazon SNS and End User Messaging — the two compared, India DLT setup, the sandbox, and when a dedicated provider is faster.",
       date: "2026-07-17",
       readingTime: "10 min read",
       category: "Getting started",
@@ -301,8 +307,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "sms-activation",
       title: "SMS Not Working? Activate & Fix It Fast (India)",
+      h1: "Fixing a Phone That Will Not Send or Receive Texts",
       description:
-        "SMS not sending or receiving in India? Fix it fast — SMSC settings for Jio, Airtel, Vi & BSNL, iMessage traps, DND filters, and exactly when to call your carrier.",
+        "SMS not sending or receiving in India? Fix it fast — SMSC settings for Jio, Airtel, Vi and BSNL, iMessage traps, DND filters, and when to call support.",
       date: "2026-02-22",
       readingTime: "10 min read",
       category: "Troubleshooting",
@@ -335,6 +342,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "gmail-password-recovery-via-sms",
       title: "Gmail Password Recovery via SMS: Security Tips",
+      h1: "Recovering Gmail When SMS Is Your Only Key",
       description:
         "Step-by-step guide to Gmail's SMS recovery — setup, why the SMS won't arrive, the account recovery form, and how to protect your phone from SIM-swap attacks.",
       date: "2026-02-08",
@@ -372,6 +380,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "send-sms-online",
       title: "Send SMS Online India: 4 Methods & When to Use",
+      h1: "Four Ways to Send SMS From a Browser in India",
       description:
         "Web-to-SMS dashboard, SMS API, bulk platform, or WhatsApp Business API — a practical comparison of how to send SMS online in India with the legal requirements.",
       date: "2026-01-18",
@@ -407,7 +416,8 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
   "bulk-sms-service-api": {
     meta: {
       slug: "bulk-sms-service-api",
-      title: "Bulk SMS Service API: How It Works & How to Choose",
+      title: "Bulk SMS Service API: How It Works & Choosing",
+      h1: "How a Bulk SMS API Works, and How to Pick One",
       description:
         "What a bulk SMS service API does, DLT rules for Indian senders, a working code example, and how to choose a reliable provider. ₹60 free credit to test.",
       date: "2026-07-28",
@@ -517,6 +527,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "whatsapp-marketing-india",
       title: "WhatsApp Marketing in India: 2026 Strategy Guide",
+      h1: "Running WhatsApp Marketing That Customers Welcome",
       description:
         "How to run WhatsApp marketing in India in 2026 — the official API, opt-ins, templates that convert, costs, and the mistakes that get your number banned.",
       date: "2026-05-12",
@@ -555,6 +566,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "bulk-whatsapp-messaging",
       title: "Bulk WhatsApp Messaging: Send at Scale in India",
+      h1: "Sending WhatsApp at Scale Without Losing the Number",
       description:
         "Send bulk WhatsApp messages in 2026 the official way — API setup, 2026 message tiers, opt-in rules, costs, and how to scale without getting your number banned.",
       date: "2026-05-20",
@@ -592,6 +604,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "whatsapp-scams-india",
       title: "WhatsApp Scams in India: How to Spot & Stay Safe",
+      h1: "The WhatsApp Scams Indians Are Falling For",
       description:
         "The most common WhatsApp scams in India 2026 — KYC fraud, OTP theft, digital arrest, job & investment scams. How to spot each and what to do if scammed.",
       date: "2026-05-28",
@@ -625,6 +638,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "what-is-sms",
       title: "What Is SMS? Text Messaging Explained for 2026",
+      h1: "How Text Messaging Works, and Why It Endures",
       description:
         "SMS explained: how it works technically, transactional vs promotional, India's DLT and DND rules, and why SMS still beats newer channels for OTPs and alerts.",
       date: "2026-07-09",
@@ -660,8 +674,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "free-sms",
       title: "Free SMS in India: 3 Real Ways That Work in 2026",
+      h1: "The Three Ways to Send SMS Free in India",
       description:
-        "Send free SMS in India in 2026 — bundled operator SMS, free online tools, Way2SMS alternatives and platform trial credits compared. What's safe, capped, and actually works.",
+        "Send free SMS in India in 2026 — bundled operator SMS, free online tools, Way2SMS alternatives and trial credits compared. What is safe, capped and works.",
       date: "2026-07-09",
       readingTime: "8 min read",
       category: "Consumer",
@@ -695,6 +710,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "best-free-sms",
       title: "Best Free SMS Apps in India for Android & PC 2026",
+      h1: "The Free SMS Apps Worth Using in India Right Now",
       description:
         "The best free SMS apps in India 2026 — Google Messages, AirDroid, Pushbullet, operator portals, and free trial credits. Tested on Jio, Airtel, and Vi.",
       date: "2026-07-09",
@@ -739,6 +755,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "sms-vs-mms",
       title: "SMS vs MMS India: Key Differences & What to Use",
+      h1: "SMS or MMS: What Differs, and What You Should Send",
       description:
         "SMS vs MMS in India — technical differences, why MMS never became a business channel, what WhatsApp and RCS replaced it with, and when to use each in 2026.",
       date: "2026-07-10",
@@ -780,8 +797,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "best-sms-apps-for-android",
       title: "Best SMS Apps for Android in India 2026: Tested",
+      h1: "Which Android Messaging App Should You Actually Use?",
       description:
-        "The best Android SMS apps in 2026 compared — Google Messages, Samsung Messages, Textra, QKSMS, Pulse SMS, AirDroid, and Chomp SMS. Tested on Jio, Airtel, and Vi.",
+        "The best Android SMS apps of 2026 compared — Google Messages, Samsung Messages, Textra, QKSMS, Pulse SMS and AirDroid, all tested on Jio, Airtel and Vi.",
       date: "2026-07-10",
       readingTime: "11 min read",
       category: "Getting started",
@@ -822,6 +840,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "sms-message-app",
       title: "Best SMS Message App: Android, iPhone & PC",
+      h1: "Choosing a Messaging App for Phone and Desktop",
       description:
         "What an SMS message app is, the default app on every platform — Android, iPhone, Windows, Mac — when to switch, and how business SMS platforms differ.",
       date: "2026-07-27",
@@ -856,8 +875,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     meta: {
       slug: "telegram-code-sms",
       title: "Telegram SMS Code Not Arriving? Fix It in 2026",
+      h1: "Why Your Telegram Login Code Never Turns Up",
       description:
-        "Why Telegram sends codes via SMS, every reason the code might not arrive on Indian numbers (DND, operator blocks, wrong number, iMessage), and the step-by-step fix.",
+        "Why Telegram sends codes by SMS, every reason the code may not arrive on an Indian number — DND, operator blocks, wrong number, iMessage — and the fix.",
       date: "2026-07-09",
       readingTime: "9 min read",
       category: "Troubleshooting",
