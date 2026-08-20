@@ -20,6 +20,7 @@ import WhatsappScamsIndiaPost from "@/content/blog/whatsapp-scams-india"
 import SmsMessageAppPost from "@/content/blog/sms-message-app"
 import BulkSmsServiceApiPost from "@/content/blog/bulk-sms-service-api"
 import OtpSmsServicePost from "@/content/blog/otp-sms-service"
+import RcsMessagingIndiaPost from "@/content/blog/rcs-messaging-india"
 
 export type BlogAuthor = {
   name: string
@@ -461,7 +462,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "build-vs-buy", label: "Build versus buy" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dlt-registration-guide", "bulk-sms-service-api", "sms-activation"],
+      relatedSlugs: ["dlt-registration-guide", "bulk-sms-service-api", "sms-activation", "rcs-messaging-india"],
       keywords: ["otp sms service", "otp sms india", "otp sms api", "one time password sms"],
       faqItems: [
         { q: "What is an OTP SMS service?", a: "An OTP SMS service delivers one-time password codes to a user's phone over the telecom network. Your application generates the code, calls the provider's API with an approved DLT template, and the provider routes it to the recipient's carrier and reports back whether it was delivered." },
@@ -473,6 +474,43 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       ],
     },
     Component: OtpSmsServicePost,
+  },
+
+  "rcs-messaging-india": {
+    meta: {
+      slug: "rcs-messaging-india",
+      title: "RCS Messaging in India: What It Is & When to Use",
+      h1: "What RCS Means for Indian Businesses Sending SMS",
+      description:
+        "How RCS messaging works in India: device and carrier support, verified sender branding, the real comparison with SMS and WhatsApp, and when it is worth using.",
+      date: "2026-08-20",
+      readingTime: "7 min read",
+      category: "Getting started",
+      author: TEAM,
+      coverImage: "/blog/google-messages-web-browser-sms.webp",
+      coverAlt:
+        "Messaging conversation open in a desktop browser tab beside a phone on the same thread.",
+      toc: [
+        { id: "what-is-rcs", label: "What RCS actually is" },
+        { id: "how-it-differs", label: "How RCS differs from SMS" },
+        { id: "india-support", label: "Where RCS works in India" },
+        { id: "verified-sender", label: "Verified sender & branding" },
+        { id: "rcs-vs-whatsapp", label: "RCS versus WhatsApp" },
+        { id: "when-to-use", label: "When RCS is worth it" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["what-is-sms", "bulk-whatsapp-messaging", "sms-vs-mms", "otp-sms-service"],
+      keywords: ["rcs messaging india", "rcs vs sms", "rcs business messaging", "what is rcs"],
+      faqItems: [
+        { q: "What is RCS messaging?", a: "RCS (Rich Communication Services) is the carrier-backed successor to SMS. It carries images, carousels, tappable buttons and read receipts inside the phone's default messaging app, and shows a verified business name and logo instead of a six-character sender ID." },
+        { q: "Does RCS work on every phone in India?", a: "No. RCS needs a supported messaging app and an active data connection. It is widespread on Android through Google Messages, and Apple added RCS support in iOS 18, but any recipient without both will not receive an RCS message at all." },
+        { q: "Does RCS replace SMS?", a: "Not yet, and probably not soon. RCS needs data and a compatible app, while SMS reaches every handset on the network including feature phones. Most Indian senders run RCS as the preferred channel and fall back to SMS whenever it is unavailable." },
+        { q: "Is RCS cheaper than SMS?", a: "Usually not. RCS is billed per conversation or per message depending on the operator and the message type, and richer formats cost more than a plain text SMS. The argument for RCS is engagement and trust, not unit price." },
+        { q: "Do I still need DLT registration for RCS in India?", a: "Yes. RCS traffic to Indian numbers runs over the same operator relationships as SMS, so the usual entity, sender and template registration still applies. Budget for the same approval process before your first campaign." },
+        { q: "Can customers reply to an RCS message?", a: "Yes, and that is a large part of the appeal. RCS is two-way by design, so a recipient can tap a suggested reply or type freely, and your platform receives the response as an inbound event rather than a dead end." },
+      ],
+    },
+    Component: RcsMessagingIndiaPost,
   },
 
   "whatsapp-marketing-india": {
@@ -538,7 +576,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "what-happens-when-customers-reply", label: "What happens when customers reply" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["whatsapp-marketing-india", "whatsapp-scams-india"],
+      relatedSlugs: ["whatsapp-marketing-india", "whatsapp-scams-india", "rcs-messaging-india"],
       faqItems: [
         { q: "Can I send bulk WhatsApp messages without a business account?", a: "You can use WhatsApp Broadcast in the personal app to send to up to 256 saved contacts. Beyond that, you need the WhatsApp Business API. Unofficial bulk tools that bypass this violate WhatsApp's Terms of Service and risk permanent number ban." },
         { q: "What is the daily messaging limit on WhatsApp Business API?", a: "The limit is based on your tier. Tier 1 allows 1,000 unique recipient conversations per 24 hours, Tier 2 allows 10,000, and Tier 3 allows 100,000. You move up tiers by initiating conversations and maintaining low block rates over time." },
@@ -606,7 +644,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "sms-character-limits", label: "Character limits and encoding" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["sms-vs-mms", "send-sms-online", "telegram-code-sms"],
+      relatedSlugs: ["sms-vs-mms", "send-sms-online", "telegram-code-sms", "rcs-messaging-india"],
       faqItems: [
         { q: "Does SMS work without internet?", a: "Yes. SMS is transmitted over the telecom signalling layer, not the internet. As long as your SIM card has carrier coverage — even on 2G — you can send and receive SMS without any data connection." },
         { q: "What is the difference between SMS and MMS?", a: "SMS (Short Message Service) sends plain text up to 160 characters per segment. MMS (Multimedia Messaging Service) sends images, audio, or video up to 300 KB. MMS was never widely adopted in India because data charges made it expensive and WhatsApp filled the rich-media gap for free." },
@@ -722,7 +760,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "sms-vs-mms-cost", label: "Pricing in India" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["what-is-sms", "send-sms-online", "dlt-registration-guide"],
+      relatedSlugs: ["what-is-sms", "send-sms-online", "dlt-registration-guide", "rcs-messaging-india"],
       faqItems: [
         { q: "What is the difference between SMS and MMS in India?", a: "SMS is a text-only message (up to 160 characters per segment) that works on every phone and network in India with no data connection required. MMS allows images, audio, and video to be sent alongside text (up to ~1,600 characters) but requires a data connection on both sides and only works on smartphones. In India, SMS is the dominant business messaging channel; MMS is rarely used because WhatsApp handles multimedia messaging for smartphone users, and no commercial DLT-compliant MMS infrastructure exists for businesses." },
         { q: "Is MMS available on Jio in India?", a: "Yes, Jio technically supports MMS for personal messaging between subscribers. However, it is not part of Jio's standard bundled quota (which covers 100 SMS/day), and each MMS is charged at a per-message rate. Jio does not offer commercial MMS services for business use — there is no DLT-registered business MMS route on Jio or any other Indian carrier. For rich media messaging, Jio has activated RCS, which is the recommended business-grade alternative." },
