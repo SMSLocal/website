@@ -35,8 +35,11 @@ export async function generateMetadata({
   }
   const { article: art, category: cat } = match
   return buildArticleMetadata({
-    title: art.title,
-    description: art.excerpt,
+    // Fall back to the visible heading/standfirst when no SEO-specific
+    // variant is set, so the <h1> can read naturally while the search-result
+    // title stays inside the length search engines actually display.
+    title: art.seoTitle ?? art.title,
+    description: art.seoDescription ?? art.excerpt,
     path: `/resources/help/${cat.slug}/${art.slug}`,
     publishedTime: art.updatedOn,
     modifiedTime: art.updatedOn,

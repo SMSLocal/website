@@ -33,7 +33,7 @@ export async function generateMetadata({
     }
   }
   return buildMetadata({
-    title: `${cat.title} — Help Centre`,
+    title: cat.seoTitle ?? `${cat.title} — Help Centre`,
     description: cat.description,
     path: `/resources/help/${cat.slug}`,
     keywords: [

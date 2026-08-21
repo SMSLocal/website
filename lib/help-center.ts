@@ -28,8 +28,21 @@ export type HelpBlock =
 
 export type HelpArticle = {
   slug: string
+  /** Visible <h1> and card heading. */
   title: string
+  /**
+   * SEO <title>, when it should differ from the on-page heading. Article
+   * titles are written as natural questions, which rarely land in the 50-60
+   * character window search results want. Falls back to `title`.
+   */
+  seoTitle?: string
+  /** Visible standfirst under the heading. */
   excerpt: string
+  /**
+   * Meta description, when the visible excerpt is the wrong length for it.
+   * Falls back to `excerpt`.
+   */
+  seoDescription?: string
   readMinutes: number
   updatedOn: string
   body: HelpBlock[]
@@ -39,7 +52,14 @@ export type HelpArticle = {
 
 export type HelpCategory = {
   slug: string
+  /** Visible <h1> and card heading. */
   title: string
+  /**
+   * SEO <title>, when the page's default (`${title} — Help Centre`) does
+   * not land in the 50-60 character window search results actually show.
+   * Falls back to the default when omitted.
+   */
+  seoTitle?: string
   description: string
   icon: LucideIcon
   articles: HelpArticle[]
@@ -51,13 +71,16 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "getting-started",
     title: "Getting started",
-    description: "Create your SMSLocal account, add INR credits to your wallet, complete DLT registration, and send your first compliant SMS, WhatsApp, or OTP in under fifteen minutes.",
+    seoTitle: "Getting Started Guide — SMSLocal Help Centre",
+    description: "Create your account, add INR credits, complete DLT registration and send your first compliant SMS, WhatsApp message or OTP — all in under fifteen minutes.",
     icon: Play,
     articles: [
       {
         slug: "create-your-account",
         title: "How do I create an SMSLocal account?",
+        seoTitle: "How to Create Your Free SMSLocal Account",
         excerpt: "Signing up takes two minutes and gives you ₹60 of free credit to try SMS, WhatsApp, and OTP sending — no credit card or DLT registration required to get started.",
+        seoDescription: "Signing up takes two minutes and includes ₹60 of free credit for SMS, WhatsApp and OTP sending — no credit card and no DLT registration needed to get started.",
         readMinutes: 2,
         updatedOn: "2026-02-10",
         body: [
@@ -84,7 +107,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "add-credits-and-billing",
         title: "How do I add credits to my wallet?",
+        seoTitle: "Adding Wallet Credits and Billing in India",
         excerpt: "Credits are paid-in-advance INR balance — no monthly minimum on pay-as-you-go plans. Top up by UPI, card, net banking, or bank transfer and start sending immediately.",
+        seoDescription: "Credits are a paid-in-advance INR balance with no monthly minimum on pay-as-you-go. Top up by UPI, card, net banking or bank transfer and send straight away.",
         readMinutes: 3,
         updatedOn: "2026-02-12",
         body: [
@@ -105,7 +130,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "send-your-first-sms",
         title: "How do I send my first SMS?",
+        seoTitle: "How to Send Your First SMS from SMSLocal",
         excerpt: "Use the composer in your dashboard to send a one-off SMS to a verified test number before going live.",
+        seoDescription: "Use the composer in your dashboard to send a one-off SMS to a verified test number before you go live, and confirm the delivery report comes back as expected.",
         readMinutes: 3,
         updatedOn: "2026-02-14",
         body: [
@@ -132,7 +159,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "connect-whatsapp-business",
         title: "How do I connect a WhatsApp Business number?",
+        seoTitle: "Connect a WhatsApp Business Number in India",
         excerpt: "Bring your own number or migrate an existing WhatsApp Business API number from another BSP. Meta business verification and display-name approval typically land within 24 hours.",
+        seoDescription: "Bring your own number or migrate an existing WhatsApp Business API number from another BSP. Meta verification and display-name approval land within a day.",
         readMinutes: 4,
         updatedOn: "2026-02-15",
         body: [
@@ -153,7 +182,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "invite-your-team",
         title: "How do I invite teammates?",
+        seoTitle: "Invite Teammates and Set Role Permissions",
         excerpt: "All SMSLocal plans — including the free tier — include unlimited team seats with role-based permissions for Marketer, Agent, Developer, Finance, and custom roles.",
+        seoDescription: "Every SMSLocal plan, the free tier included, comes with unlimited seats and role-based permissions for Marketer, Agent, Developer, Finance and custom roles.",
         readMinutes: 2,
         updatedOn: "2026-02-16",
         body: [
@@ -176,7 +207,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "understand-the-dashboard",
         title: "A tour of the SMSLocal dashboard",
+        seoTitle: "Finding Your Way Around the SMSLocal Panel",
         excerpt: "Tour the SMSLocal dashboard and learn where Campaigns, Inbox, Reports, Compliance, Developers, and Billing live and how each section connects to your daily messaging workflow.",
+        seoDescription: "Where Campaigns, Inbox, Reports, Compliance, Developers and Billing live in the SMSLocal dashboard, and how each section fits your daily sending workflow.",
         readMinutes: 4,
         updatedOn: "2026-02-18",
         body: [
@@ -203,14 +236,17 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "sms",
     title: "SMS campaigns",
+    seoTitle: "SMS Campaign Guides — SMSLocal Help Centre",
     description: "SMS content templates, DLT routing, sender ID setup, delivery report statuses, bulk campaign scheduling, throttle controls, and automatic retry logic for India.",
     icon: MessageSquare,
     articles: [
       {
         slug: "way2sms-alternative-website",
         title: "What are the best Way2SMS alternatives in 2026?",
+        seoTitle: "The Best Way2SMS Alternatives in India 2026",
         excerpt:
           "Way2SMS ended its free unlimited service years ago. Here are the alternatives that actually work for personal and business SMS in India — compared by cost, free tier, DLT compliance, and bulk capability.",
+        seoDescription: "Way2SMS as a free unlimited service ended when DLT made unregistered gateways unviable. Here are the alternatives that still work for personal and business SMS.",
         readMinutes: 6,
         updatedOn: "2026-07-22",
         body: [
@@ -295,7 +331,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "transactional-vs-promotional",
         title: "Transactional vs promotional SMS — what's the difference?",
+        seoTitle: "Transactional vs Promotional SMS in India",
         excerpt: "India's TRAI regulations force you to pick a category up front. Picking wrong gets your traffic blocked.",
+        seoDescription: "India's TRAI rules make you choose a category before you send, and choosing wrong gets your traffic blocked. Here is how to tell them apart and pick correctly.",
         readMinutes: 4,
         updatedOn: "2026-02-20",
         body: [
@@ -321,7 +359,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "dlt-headers-and-template-ids",
         title: "How sender headers and template IDs work",
+        seoTitle: "DLT Sender Headers and Template IDs in SMS",
         excerpt: "Every outbound SMS carries a six-character header and a 19-digit template ID that both have to match your DLT record.",
+        seoDescription: "Every outbound Indian SMS carries a six-character header and a 19-digit template ID, and both must match your DLT record exactly or the operator drops it.",
         readMinutes: 3,
         updatedOn: "2026-02-22",
         body: [
@@ -342,7 +382,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "delivery-reports-explained",
         title: "What do SMS delivery statuses actually mean?",
+        seoTitle: "What SMS Delivery Status Codes Really Mean",
         excerpt: "SUBMITTED, DELIVERED, FAILED, EXPIRED — the statuses you see are a standardisation of operator DLRs.",
+        seoDescription: "SUBMITTED, DELIVERED, FAILED and EXPIRED are a standardisation of raw operator DLRs. Here is what each status actually proves, and what it quietly does not.",
         readMinutes: 4,
         updatedOn: "2026-02-24",
         body: [
@@ -364,6 +406,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "sender-id-allocation",
         title: "How do I get a six-character sender ID?",
+        seoTitle: "How to Get a Six-Character SMS Sender ID",
         excerpt: "You choose the six-character header, the operator confirms availability on DLT, and SMSLocal handles propagation across all Indian carriers within 24–72 hours.",
         readMinutes: 3,
         updatedOn: "2026-02-25",
@@ -385,7 +428,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "unicode-and-multilingual",
         title: "How many characters fit in a multilingual SMS?",
+        seoTitle: "How Many Characters Fit in a Unicode SMS",
         excerpt: "English SMS fits 160 characters per part; Hindi, Tamil, and other regional scripts drop to 70 per part on UCS-2 encoding. This is an operator limit, not an SMSLocal restriction.",
+        seoDescription: "A GSM-7 SMS fits 160 characters, but Hindi, Tamil or Bengali switch it to Unicode and just 70. Here is how to count segments before a campaign surprises you.",
         readMinutes: 3,
         updatedOn: "2026-02-26",
         body: [
@@ -410,6 +455,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "scheduling-and-throttling",
         title: "Scheduling and throttling bulk campaigns",
+        seoTitle: "Schedule and Throttle Bulk SMS Campaigns",
         excerpt: "For promotional sends above 50k recipients, throttle the rate so your inbound team can keep up. Set exact send times and per-minute caps via dashboard or API.",
         readMinutes: 3,
         updatedOn: "2026-02-27",
@@ -434,13 +480,16 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "whatsapp",
     title: "WhatsApp Business API",
-    description: "Complete guide to WhatsApp Business API — onboarding, Meta template approval, chatbot flow setup, shared team inbox, quality rating management, and conversation analytics.",
+    seoTitle: "WhatsApp Business API — Help Centre Guides",
+    description: "Business API onboarding, template approval and categories, broadcast consent rules, quality rating and tiers, and setting up a shared WhatsApp team inbox.",
     icon: MessageCircle,
     articles: [
       {
         slug: "business-api-onboarding",
         title: "The WhatsApp Business API onboarding, end to end",
+        seoTitle: "WhatsApp Business API Onboarding in India",
         excerpt: "Three parallel approvals — Meta Business Manager verification, display-name review, and content template — make up WABA onboarding, typically completing in 24–48 hours.",
+        seoDescription: "Three parallel approvals make up WABA onboarding: Meta Business Manager verification, display-name review and content templates. Most finish in 24-48 hours.",
         readMinutes: 5,
         updatedOn: "2026-02-28",
         body: [
@@ -461,7 +510,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "template-approval-guide",
         title: "WhatsApp Template Approval: Pass Meta's Review First Time",
+        seoTitle: "WhatsApp Template Approval: Pass First Time",
         excerpt: "Category mismatch, unclear variable usage, and prohibited content cause most rejections. Use this guide to write a WhatsApp template that Meta approves on the first submission.",
+        seoDescription: "Category mismatch, unclear variables and prohibited content cause most rejections. Use this guide to write a WhatsApp template Meta approves first time.",
         readMinutes: 4,
         updatedOn: "2026-03-01",
         body: [
@@ -488,7 +539,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "template-categories-and-pricing",
         title: "WhatsApp template categories and pricing",
+        seoTitle: "WhatsApp Template Categories and Pricing",
         excerpt: "Meta divides templates into Marketing, Utility, and Authentication, each with its own India rate per conversation. Getting the category right can save up to 85% per send.",
+        seoDescription: "Meta splits templates into Marketing, Utility and Authentication, each with its own India rate per conversation. The right category can cut a send cost sharply.",
         readMinutes: 3,
         updatedOn: "2026-03-02",
         body: [
@@ -509,7 +562,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "team-inbox-setup",
         title: "Setting up the WhatsApp team inbox",
+        seoTitle: "How to Set Up a Shared WhatsApp Team Inbox",
         excerpt: "Set up round-robin assignment, canned replies in multiple languages, away-mode auto-reply, and CRM sync to keep your WhatsApp team inbox reply SLA under a minute.",
+        seoDescription: "Set up round-robin assignment, canned replies in several languages, away-mode auto-replies and CRM sync to keep your WhatsApp inbox reply time under a minute.",
         readMinutes: 4,
         updatedOn: "2026-03-03",
         body: [
@@ -531,7 +586,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "broadcast-lists-and-consent",
         title: "Broadcasts, consent, and the 24-hour rule",
+        seoTitle: "WhatsApp Broadcasts, Consent & 24-Hour Rule",
         excerpt: "You can broadcast to any contact who opted in using an approved WhatsApp template. The 24-hour free service window begins the moment the customer sends a message back.",
+        seoDescription: "Broadcast to any contact who opted in, using an approved WhatsApp template. The 24-hour free service window opens the moment the customer messages you back.",
         readMinutes: 4,
         updatedOn: "2026-03-04",
         body: [
@@ -552,7 +609,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "quality-rating-and-tier",
         title: "Your WhatsApp quality rating and messaging tier",
+        seoTitle: "WhatsApp Quality Rating and Messaging Tiers",
         excerpt: "Meta rates your WhatsApp number green, yellow, or red on a rolling 24-hour quality signal. Yellow is a warning; red throttles your messaging tier until quality recovers.",
+        seoDescription: "Meta rates your WhatsApp number green, amber or red on a rolling 24-hour signal. Amber is a warning; red throttles your messaging tier until quality recovers.",
         readMinutes: 3,
         updatedOn: "2026-03-05",
         body: [
@@ -576,12 +635,14 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "ai-agents",
     title: "AI WhatsApp Agents",
+    seoTitle: "AI WhatsApp Agents — SMSLocal Help Centre",
     description: "Train your AI WhatsApp agent on your own knowledge, sync your product catalogue, configure handoff triggers, and serve customers across twelve Indian languages.",
     icon: Bot,
     articles: [
       {
         slug: "train-your-first-agent",
         title: "Training your first AI WhatsApp agent",
+        seoTitle: "How to Train Your First AI WhatsApp Agent",
         excerpt: "Upload PDFs, website pages, Q&A CSV, or Shopify data as knowledge sources, set a response tone, and your AI WhatsApp agent is indexed and live in under an hour.",
         readMinutes: 4,
         updatedOn: "2026-03-06",
@@ -604,7 +665,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "catalogue-sync",
         title: "Syncing your product catalogue to the agent",
+        seoTitle: "Sync Your Product Catalogue to an AI Agent",
         excerpt: "Connect Shopify or WooCommerce via webhook for sub-minute catalogue sync, or poll Magento every 15 minutes. The agent then answers stock, pricing, and variant questions live.",
+        seoDescription: "Connect Shopify or WooCommerce by webhook for sub-minute catalogue sync, or poll Magento every 15 minutes, so the agent answers stock and pricing questions.",
         readMinutes: 3,
         updatedOn: "2026-03-07",
         body: [
@@ -624,7 +687,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "handoff-rules",
         title: "When should the AI hand off to a human?",
+        seoTitle: "AI-to-Human Handoff Rules for WhatsApp Bots",
         excerpt: "Set keyword triggers, confidence thresholds, and turn-count limits so your AI agent hands off to a human agent with a full transcript and intent summary attached.",
+        seoDescription: "Set keyword triggers, confidence thresholds and turn-count limits so the AI agent hands off to a person with the full transcript and an intent summary attached.",
         readMinutes: 3,
         updatedOn: "2026-03-08",
         body: [
@@ -646,7 +711,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "multilingual-setup",
         title: "Setting up a multilingual AI agent",
+        seoTitle: "Set Up a Multilingual AI WhatsApp Agent",
         excerpt: "One agent, twelve Indian languages, zero extra training. The handoff transcript is translated on the fly.",
+        seoDescription: "Run one AI agent across twelve Indian languages with no extra training, and have the handoff transcript translated on the fly for whichever human picks it up.",
         readMinutes: 3,
         updatedOn: "2026-03-09",
         body: [
@@ -666,7 +733,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "agent-analytics",
         title: "Understanding your AI agent analytics",
+        seoTitle: "AI Agent Analytics: The Metrics That Matter",
         excerpt: "Track deflection rate, CSAT, confidence distribution, and the top ten unanswered questions — the four metrics that drive the biggest weekly gains for your AI agent.",
+        seoDescription: "Track deflection rate, CSAT, confidence distribution and the top ten unanswered questions — the four AI agent metrics that drive the biggest weekly gains.",
         readMinutes: 3,
         updatedOn: "2026-03-10",
         body: [
@@ -690,13 +759,16 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "otp",
     title: "OTP & Transactional",
-    description: "Priority routing to the fastest carrier, automatic retry and failover logic, idempotency keys to prevent double-sends, and WhatsApp OTP fallback when SMS is slow or fails.",
+    seoTitle: "OTP and Transactional SMS — Help Centre",
+    description: "Priority routing to the fastest carrier, automatic retry and failover, idempotency keys that stop double-sends, and WhatsApp fallback when SMS is slow.",
     icon: KeyRound,
     articles: [
       {
         slug: "set-up-otp-api",
         title: "Setting up the OTP API",
+        seoTitle: "Setting Up the SMSLocal OTP API in Minutes",
         excerpt: "One endpoint to send, one to verify. The API handles code generation, expiry, attempt limits, and resend cooldowns automatically. Most teams go live in under 30 minutes.",
+        seoDescription: "One endpoint to send and one to verify. The API handles code generation, expiry, attempt limits and cooldowns, and most teams go live in under 30 minutes.",
         readMinutes: 4,
         updatedOn: "2026-03-11",
         body: [
@@ -721,7 +793,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "priority-routing",
         title: "How OTP priority routing works",
+        seoTitle: "How OTP Priority Routing Works in India",
         excerpt: "We route each OTP through the fastest live carrier path for that specific destination at that specific moment.",
+        seoDescription: "Every OTP is routed through the fastest live carrier path for that destination at that moment, which is why priority traffic lands while bulk queues back up.",
         readMinutes: 4,
         updatedOn: "2026-03-12",
         body: [
@@ -742,7 +816,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "retry-and-failover",
         title: "OTP retry and failover logic",
+        seoTitle: "OTP Retry and Carrier Failover Explained",
         excerpt: "If the primary route fails, we fail over to the next-fastest one before your user even sees a delay.",
+        seoDescription: "When the primary route fails, we fail over to the next-fastest one before the user notices a delay. Here is how the retry ladder and its timings actually work.",
         readMinutes: 3,
         updatedOn: "2026-03-13",
         body: [
@@ -764,7 +840,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "idempotency-keys",
         title: "Idempotency keys for OTP sends",
+        seoTitle: "Idempotency Keys to Prevent Duplicate OTPs",
         excerpt: "Prevent duplicate OTPs when your app retries. Pass a UUIDv4 Idempotency-Key header on /v2/otp/send and we return the original response without triggering a new send.",
+        seoDescription: "Stop duplicate OTPs when your app retries: pass a UUIDv4 Idempotency-Key header on the send endpoint and we return the original response without resending.",
         readMinutes: 2,
         updatedOn: "2026-03-14",
         body: [
@@ -790,7 +868,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "whatsapp-otp-fallback",
         title: "Using WhatsApp as a fallback for SMS OTP",
+        seoTitle: "Using WhatsApp as a Fallback for SMS OTP",
         excerpt: "If SMS is slow or fails, the same OTP is automatically delivered over WhatsApp — usually in under a second. You pay only for the channel that successfully delivers the code.",
+        seoDescription: "When an SMS OTP is slow or fails outright, WhatsApp authentication templates can deliver the same code over the internet. Here is how to wire the fallback up.",
         readMinutes: 3,
         updatedOn: "2026-03-15",
         body: [
@@ -814,13 +894,16 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "dlt",
     title: "DLT & Compliance",
-    description: "DLT Principal Entity registration, content template submission, TRAI rules, DND preference scrubbing, NCPR compliance, and DPDPA obligations explained for Indian businesses.",
+    seoTitle: "DLT & Compliance — SMSLocal Help Centre",
+    description: "DLT Principal Entity registration, content template submission, TRAI rules, DND scrubbing against the NCPR, and DPDPA duties, explained for Indian businesses.",
     icon: ShieldCheck,
     articles: [
       {
         slug: "register-principal-entity",
         title: "How do I register a DLT Principal Entity?",
+        seoTitle: "How to Register as a DLT Principal Entity",
         excerpt: "Register as a DLT Principal Entity using your PAN, GST certificate, and an authorisation letter. Approval typically arrives in 24–72 hours on most Indian operator portals.",
+        seoDescription: "Register as a DLT Principal Entity with your PAN, GST certificate and an authorisation letter. Approval usually arrives in 24-72 hours on operator portals.",
         readMinutes: 5,
         updatedOn: "2026-03-16",
         body: [
@@ -847,7 +930,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "submit-content-templates",
         title: "Submitting content templates on DLT",
+        seoTitle: "Submitting DLT Content Templates That Pass",
         excerpt: "Every message you send must match an approved template. Here's how to write one that passes first time.",
+        seoDescription: "Every message you send in India must match a template approved on DLT. Here is how to write one that passes review first time and avoids the usual rejections.",
         readMinutes: 4,
         updatedOn: "2026-03-17",
         body: [
@@ -869,7 +954,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "rejection-reasons",
         title: "The top 10 reasons DLT templates get rejected",
+        seoTitle: "The Top Reasons DLT Templates Get Rejected",
         excerpt: "Ninety percent of DLT rejections share the same root causes — wrong category, missing opt-out, or banned URL shorteners. Use this cheat sheet to avoid them before you submit.",
+        seoDescription: "Ninety per cent of DLT rejections share the same causes: wrong category, missing opt-out, or a banned URL shortener. Use this list before you submit anything.",
         readMinutes: 4,
         updatedOn: "2026-03-18",
         body: [
@@ -896,7 +983,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "dnd-and-preferences",
         title: "DND, consent, and customer preferences",
+        seoTitle: "DND, NCPR Scrubbing and Consent for SMS",
         excerpt: "Transactional SMS bypasses DND and reaches all numbers. Promotional SMS is scrubbed live against the NCPR at send time and the filtered count is shown in your campaign report.",
+        seoDescription: "Transactional SMS bypasses DND and reaches every number. Promotional SMS is scrubbed against the NCPR at send time, with the filtered count in your report.",
         readMinutes: 4,
         updatedOn: "2026-03-19",
         body: [
@@ -917,7 +1006,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "header-and-template-id",
         title: "Where the header and template ID come from",
+        seoTitle: "Where DLT Headers and Template IDs Come From",
         excerpt: "Your six-character header belongs to your PE; template IDs are 19-digit numbers assigned at approval.",
+        seoDescription: "Your six-character header belongs to your Principal Entity, and template IDs are 19-digit numbers assigned at approval. Here is where each one comes from.",
         readMinutes: 3,
         updatedOn: "2026-03-20",
         body: [
@@ -938,7 +1029,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "appeals-process",
         title: "How to appeal a rejected DLT template",
+        seoTitle: "How to Appeal a Rejected DLT SMS Template",
         excerpt: "If a DLT template rejection looks wrong, appeal with your use-case context and customer journey details. About 70% of legitimate appeals succeed and resolve within 24–48 hours.",
+        seoDescription: "If a DLT template rejection looks wrong, appeal with your use-case and customer-journey detail. Around 70% of legitimate appeals succeed within 24-48 hours.",
         readMinutes: 3,
         updatedOn: "2026-03-21",
         body: [
@@ -963,12 +1056,14 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "billing",
     title: "Billing & Wallet",
-    description: "Wallet top-ups by UPI, card, net banking, and NEFT, auto-emailed GST invoices, configurable auto-recharge, refund and dispute policy, and plan upgrade and downgrade options.",
+    seoTitle: "Billing & Wallet — SMSLocal Help Centre",
+    description: "Wallet top-ups by UPI, card, net banking and NEFT, auto-emailed GST invoices, configurable auto-recharge, the refund policy, and how to change your plan.",
     icon: CreditCard,
     articles: [
       {
         slug: "add-credits",
         title: "Adding credits to your wallet",
+        seoTitle: "How to Add Credits to Your SMSLocal Wallet",
         excerpt: "UPI, cards, net banking, and NEFT all accepted. Wallet credits are real INR balance that never expire and are fully usable across SMS, WhatsApp, and OTP sends.",
         readMinutes: 2,
         updatedOn: "2026-03-22",
@@ -995,6 +1090,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "auto-recharge",
         title: "Setting up auto-recharge",
+        seoTitle: "Set Up Auto-Recharge for Your SMS Wallet",
         excerpt: "Set a low-balance threshold and a refill amount — SMSLocal tops up your wallet automatically before it runs dry so no campaign ever stalls or stops mid-send.",
         readMinutes: 2,
         updatedOn: "2026-03-23",
@@ -1017,7 +1113,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "gst-invoices",
         title: "Finding and downloading your GST invoices",
+        seoTitle: "How to Download GST Invoices for Top-Ups",
         excerpt: "Every top-up and every monthly usage cycle generates a GST-compliant invoice. Auto-emailed and on-demand.",
+        seoDescription: "Every wallet top-up and monthly usage cycle produces a GST-compliant invoice, emailed automatically and available on demand from your billing dashboard.",
         readMinutes: 2,
         updatedOn: "2026-03-24",
         body: [
@@ -1037,7 +1135,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "refunds-and-disputes",
         title: "Refunds and chargebacks",
+        seoTitle: "SMS Credit Refunds and Chargeback Policy",
         excerpt: "We refund unused credit and mistaken top-ups. We don't refund spent credit except for platform failures.",
+        seoDescription: "We refund unused credit and mistaken top-ups, but not credit already spent, except where a platform failure caused it. Here is the policy and how to claim.",
         readMinutes: 3,
         updatedOn: "2026-03-25",
         body: [
@@ -1058,7 +1158,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "change-plan",
         title: "Changing your plan",
+        seoTitle: "How to Change Your SMSLocal Pricing Plan",
         excerpt: "Upgrade for a lower per-message rate or downgrade to the next bracket at any time. Changes are pro-rated to the day with no termination fees or minimum-commitment penalties.",
+        seoDescription: "Upgrade for a lower per-message rate or drop to the next bracket whenever you like. Changes are pro-rated daily, with no termination or minimum-commitment fees.",
         readMinutes: 2,
         updatedOn: "2026-03-26",
         body: [
@@ -1082,12 +1184,14 @@ export const HELP_CATEGORIES: HelpCategory[] = [
   {
     slug: "api",
     title: "API & Integrations",
+    seoTitle: "API & Integrations — SMSLocal Help Centre",
     description: "REST API reference, official SDKs for Node, Python, PHP, Go, and Java, signed webhook delivery, sandbox test mode, Shopify app, and Zapier integration guides.",
     icon: Code2,
     articles: [
       {
         slug: "authentication",
         title: "Authenticating API requests",
+        seoTitle: "How to Authenticate SMSLocal API Requests",
         excerpt: "Generate live or sandbox API keys from the Developers section, store them securely in your secrets manager, and pass them as Bearer tokens on every API request.",
         readMinutes: 3,
         updatedOn: "2026-03-27",
@@ -1121,7 +1225,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
       {
         slug: "webhooks-signing",
         title: "How webhooks are signed and verified",
+        seoTitle: "How SMSLocal Webhooks Are Signed & Verified",
         excerpt: "Every SMSLocal webhook includes an HMAC-SHA256 signature and timestamp. Reject requests older than 5 minutes and verify the signature before trusting any incoming payload.",
+        seoDescription: "Every SMSLocal webhook is signed so you can prove it came from us. Here is how to verify the signature, handle replays and reject anything that fails the check.",
         readMinutes: 4,
         updatedOn: "2026-03-28",
         body: [
@@ -1159,6 +1265,7 @@ function verify(req, secret) {
       {
         slug: "sdks",
         title: "Official SDKs",
+        seoTitle: "Official SMSLocal SDKs for Every Language",
         excerpt: "Open-source SDKs for Node, Python, PHP, Ruby, Go, Java, and .NET — all versioned in lockstep with the REST API and bundled with retry logic and typed responses.",
         readMinutes: 2,
         updatedOn: "2026-03-29",
@@ -1189,7 +1296,9 @@ go get github.com/smslocal/smslocal-go`,
       {
         slug: "sandbox-mode",
         title: "Sandbox mode",
+        seoTitle: "Testing the SMSLocal API in Sandbox Mode",
         excerpt: "Test the full API surface using sandbox keys and free test credits. Deterministic test numbers return predictable outcomes, and webhooks fire identically to live production.",
+        seoDescription: "Test the full API using sandbox keys and free test credits. Deterministic test numbers return predictable outcomes and webhooks fire exactly as they do in live.",
         readMinutes: 3,
         updatedOn: "2026-03-30",
         body: [
@@ -1212,7 +1321,9 @@ go get github.com/smslocal/smslocal-go`,
       {
         slug: "rate-limits",
         title: "Rate limits and throughput",
+        seoTitle: "SMSLocal API Rate Limits and Throughput",
         excerpt: "Default limit is 1,000 requests per minute, burst to 5,000. Enterprise plans start at 10,000 per minute with custom capacity reservations for peak-traffic events.",
+        seoDescription: "The default limit is 1,000 requests a minute, bursting to 5,000. Enterprise plans start at 10,000 a minute with reserved capacity for peak-traffic events.",
         readMinutes: 2,
         updatedOn: "2026-03-31",
         body: [
@@ -1233,7 +1344,9 @@ go get github.com/smslocal/smslocal-go`,
       {
         slug: "shopify-integration",
         title: "Shopify integration",
+        seoTitle: "Shopify SMS and WhatsApp Integration Guide",
         excerpt: "Abandoned-cart, order confirmation, shipment tracking, and review-request flows in a single app install.",
+        seoDescription: "Abandoned-cart recovery, order confirmations, shipment tracking and review requests, all running from a single Shopify app install with no development work.",
         readMinutes: 4,
         updatedOn: "2026-04-01",
         body: [
