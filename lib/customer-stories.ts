@@ -58,8 +58,19 @@ export type CustomerStory = {
   publishedAt: string
   /** Short article-style title for the story. */
   title: string
+  /**
+   * SEO <title>, when `${company} customer story` does not land in the
+   * 50-60 character window search results show. Falls back to that default.
+   */
+  seoTitle?: string
   /** Short description used on the index card and meta tags. */
   summary: string
+  /**
+   * Meta description, when `summary` is the wrong length for it (summary is
+   * tuned for the on-page card, not necessarily 150-160 chars). Falls back
+   * to `summary`.
+   */
+  seoDescription?: string
   /** Editorial cover image (16:9). No text/UI/logos baked into the art. */
   coverImage: string
   coverAlt: string
@@ -93,8 +104,10 @@ export const ALL_STORIES: CustomerStory[] = [
     publishedAt: "2026-03-18",
     title:
       "How Nirvaana Capital cut loan-OTP delivery from nine seconds to two — and lifted approvals by 17%",
+    seoTitle: "Nirvaana Capital: 9s OTP to 2s — Case Study",
     summary:
       "A mid-sized NBFC replaced a single-operator SMS stack with SMSLocal OTP SMS and WhatsApp fallback, and watched their application-completion rate climb by double digits in eight weeks.",
+    seoDescription: "A mid-sized NBFC replaced a single-operator SMS stack with SMSLocal OTP SMS and WhatsApp fallback, lifting completion rates by double digits within eight weeks.",
     coverImage: "/customer-stories/nirvaana-capital-cover.svg",
     coverAlt:
       "Warm-lit modern fintech office interior with polished concrete floors, minimalist wooden furniture, a large potted fiddle-leaf fig plant, and muted emerald upholstered chairs beside floor-to-ceiling windows.",
@@ -176,8 +189,10 @@ export const ALL_STORIES: CustomerStory[] = [
     publishedAt: "2026-02-24",
     title:
       "Kaveri & Co. rebuilt post-purchase on WhatsApp — and recovered 3.1x more abandoned carts",
+    seoTitle: "Kaveri & Co.: WhatsApp Cart Recovery Story",
     summary:
       "A two-year-old D2C label moved order notifications, cart recovery, and post-purchase support onto SMSLocal’s WhatsApp Business API stack. Support load fell by 41%; recovered-cart revenue tripled.",
+    seoDescription: "A two-year-old D2C label moved notifications, cart recovery, and support onto SMSLocal's WhatsApp API — support load fell 41%, and cart revenue tripled.",
     coverImage: "/customer-stories/kaveri-co-cover.svg",
     coverAlt:
       "Warm-lit D2C packaging station with neatly folded handwoven sarees in emerald, mustard, and rust, a kraft paper box, a roll of natural twine, fabric scissors, and a sprig of dried marigold on a wooden table.",
@@ -256,8 +271,10 @@ export const ALL_STORIES: CustomerStory[] = [
     publishedAt: "2026-01-09",
     title:
       "Srinivasa Academy ships exam-day results to 40,000 students in under 90 seconds",
+    seoTitle: "Srinivasa Academy: 14-Hour DLT Approval Story",
     summary:
       "A 17-year-old coaching institute moved admissions, results, and parent communications onto SMSLocal. DLT template approval time dropped from six days to fourteen hours; parent engagement on WhatsApp is now nearly 3x of SMS.",
+    seoDescription: "A 17-year-old coaching institute moved admissions and parent messaging onto SMSLocal — DLT approval fell from six days to fourteen hours, engagement tripled.",
     coverImage: "/customer-stories/srinivasa-academy-cover.svg",
     coverAlt:
       "Warm golden-hour study desk scene with a brass lamp casting amber light onto closed blank notebooks, a wooden pencil case, and a small clay pot of green leaves, with a blurred empty classroom behind.",

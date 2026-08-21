@@ -38,8 +38,8 @@ export async function generateMetadata({
     }
   }
   return buildArticleMetadata({
-    title: `${story.company} customer story`,
-    description: story.summary,
+    title: story.seoTitle ?? `${story.company} customer story`,
+    description: story.seoDescription ?? story.summary,
     path: `/resources/customer-stories/${story.slug}`,
     publishedTime: story.publishedAt,
     keywords: [
