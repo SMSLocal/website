@@ -168,7 +168,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/inbox": {
     title: "Shared Team Inbox — Every Channel, One Workspace",
     description:
-      "SMSLocal Inbox unifies WhatsApp, Email, Instagram, Messenger, Telegram, SMS, and Voice into one collaborative workspace — with Customer 360, smart routing, and team assignments.",
+      "SMSLocal Inbox unifies WhatsApp, email, Instagram, Messenger, Telegram, SMS, and voice into one collaborative workspace, with Customer 360 and smart routing.",
     focusKeyword: "shared team inbox",
     keywords: [
       "shared team inbox",
@@ -184,7 +184,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/agent-copilot": {
     titleAbsolute: "Agentic AI Copilot for Support Teams — 2026 India | SMSLocal",
     description:
-      "Speed up your team with an AI copilot that drafts replies, summarizes threads, and surfaces knowledge-grounded answers inside the reply box.",
+      "Speed up your support team with an AI copilot that drafts replies, summarises threads, and surfaces knowledge-grounded answers right inside the reply box.",
     focusKeyword: "AI agent copilot",
     keywords: [
       "AI agent copilot",
@@ -201,7 +201,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/omnichannel-inbox": {
     titleAbsolute: "Omnichannel Shared Inbox with Agentic AI — India | SMSLocal",
     description:
-      "One shared inbox for WhatsApp, RCS, SMS, voice, email, and social, with routing, SLA, macros, CSAT, and agentic AI plus copilot built in.",
+      "One shared inbox for WhatsApp, RCS, SMS, voice, email, and social, with routing rules, SLA tracking, macros, CSAT surveys, and agentic AI plus copilot built in.",
     focusKeyword: "omnichannel shared inbox",
     keywords: [
       "omnichannel shared inbox",
@@ -217,7 +217,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/analytics": {
     titleAbsolute: "Agentic AI Analytics and Insights — Dashboards | SMSLocal",
     description:
-      "Track agent performance, sentiment, and campaign results with real-time dashboards covering CSAT, resolution, deliverability, and engagement.",
+      "Track agent performance, sentiment, and campaign results with real-time dashboards covering CSAT, resolution rate, deliverability, and customer engagement.",
     focusKeyword: "customer experience analytics",
     keywords: [
       "customer experience analytics",
@@ -249,7 +249,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/automation": {
     title: "Conversation Automation — Replies, AI, Workflows",
     description:
-      "Automate customer conversations with auto-reply rules, an AI chatbot, a no-code workflow builder, REST API, and webhooks — with instant human handoff when it matters.",
+      "Automate customer conversations with auto-reply rules, an AI chatbot, a no-code workflow builder, a REST API, and webhooks, with instant human handoff.",
     focusKeyword: "conversation automation",
     keywords: [
       "conversation automation",
@@ -265,7 +265,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/voice": {
     title: "Voice Support in Your Inbox — Inbound & Outbound",
     description:
-      "SMSLocal Voice puts customer calls directly inside your support inbox — inbound and outbound calls, click-to-call, phone numbers, and full customer context in one workspace.",
+      "SMSLocal Voice puts customer calls directly inside your support inbox, with inbound and outbound calls, click-to-call, and full customer conversation context.",
     focusKeyword: "voice support inbox",
     keywords: [
       "voice support inbox",
@@ -297,7 +297,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/numbers/did": {
     title: "DID Virtual Numbers for Voice, SMS and Broadcasts",
     description:
-      "Provision local, toll-free, and short code numbers for voice, SMS, and broadcasting, with DLT and sender-ID registration, in one platform.",
+      "Provision local, toll-free, and short code numbers for voice, SMS, and broadcasting, with DLT and sender-ID registration handled inside one single platform.",
     focusKeyword: "DID virtual numbers",
     keywords: [
       "DID virtual numbers",
@@ -313,7 +313,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/reseller": {
     title: "White-Label SMS & WhatsApp Platform for Resellers",
     description:
-      "Launch your own branded SMS and WhatsApp platform with SMSLocal white-label. Custom domain, your logo, sub-accounts, margin control, and full API access. Start free.",
+      "Launch your own branded SMS and WhatsApp platform with SMSLocal white-label — a custom domain, your logo, sub-accounts, margin control, and full API access.",
     focusKeyword: "SMS reseller white-label India",
     keywords: [
       "SMS reseller India",
@@ -391,9 +391,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/ai-agentic": {
-    title: "Captain AI — Agentic AI That Acts Inside 300+ Business Apps",
+    title: "Captain AI: Agentic AI Inside 300+ Apps",
     description:
-      "Captain AI reads live data and takes real actions inside your CRM, helpdesk, e-commerce, and accounting tools — inside every WhatsApp, SMS, or chat conversation. Powered by Composio.",
+      "Captain AI reads live data and takes real actions inside your CRM, helpdesk, e-commerce, and accounting tools, inside every WhatsApp, SMS, or chat thread.",
     focusKeyword: "agentic AI",
     keywords: [
       "agentic AI",
@@ -425,7 +425,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/ai-agents/customer-service": {
     titleAbsolute: "Agentic AI Customer Service Agent for Omnichannel | SMSLocal",
     description:
-      "Deflect and resolve repetitive tickets with an agentic AI customer service agent that answers across channels, stays grounded in your data, and hands off with context.",
+      "Deflect and resolve repetitive tickets with an agentic AI agent that answers across channels, stays grounded in your data, and hands off with context.",
     focusKeyword: "AI customer service agent",
     keywords: [
       "AI customer service agent",
@@ -441,7 +441,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/ai-agents/sales": {
     titleAbsolute: "AI Sales Agent for Conversational Commerce India | SMSLocal",
     description:
-      "Recommend products, answer buyer questions, and guide customers to checkout with an agentic AI sales agent across WhatsApp, web, and more.",
+      "Recommend products, answer buyer questions, and guide customers all the way to checkout with an agentic AI sales agent across WhatsApp, web, and more.",
     focusKeyword: "AI sales agent",
     keywords: [
       "AI sales agent",
@@ -457,7 +457,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/ai-agents/booking": {
     titleAbsolute: "AI Booking Agent for Appointments & Reservations | SMSLocal",
     description:
-      "Schedule appointments and reservations inside the chat with an agentic AI booking agent that checks availability, confirms, and sends reminders.",
+      "Schedule appointments and reservations right inside the chat with an agentic AI booking agent that checks availability, confirms, and sends reminders.",
     focusKeyword: "AI booking agent",
     keywords: [
       "AI booking agent",
@@ -473,7 +473,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/ai-agents/lead-qualification": {
     titleAbsolute: "AI Lead Qualification Agent for Faster Pipeline | SMSLocal",
     description:
-      "Capture, qualify, and route leads automatically with an agentic AI agent that asks the right questions, scores intent, and syncs to your CRM.",
+      "Capture, qualify, and route leads automatically with an agentic AI agent that asks the right questions, scores buyer intent, and syncs straight to your CRM.",
     focusKeyword: "AI lead qualification agent",
     keywords: [
       "AI lead qualification agent",
@@ -489,7 +489,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/ai-agents/agent-builder": {
     titleAbsolute: "No-Code Agentic AI Agent Builder for Any Channel | SMSLocal",
     description:
-      "Create, train, and launch agentic AI agents without code. Ground them in your data, add logic and handoff, and deploy across every channel.",
+      "Create, train, and launch agentic AI agents without writing code. Ground them in your own data, add logic and handoff rules, and deploy across every channel.",
     focusKeyword: "agentic AI agent builder",
     keywords: [
       "agentic AI agent builder",
@@ -507,7 +507,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/channels/rcs-broadcasting": {
     titleAbsolute: "RCS Broadcasting with Rich Cards and SMS Fallback | SMSLocal",
     description:
-      "Send branded RCS campaigns with rich cards, carousels, and suggested replies, plus automatic SMS fallback, answered by agentic AI.",
+      "Send branded RCS campaigns with rich cards, carousels, and suggested replies, plus automatic SMS fallback — every reply answered end to end by agentic AI.",
     focusKeyword: "RCS broadcasting",
     keywords: [
       "RCS broadcasting",
@@ -555,7 +555,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/channels/whatsapp": {
     titleAbsolute: "WhatsApp Business API Messaging with Agentic AI | SMSLocal",
     description:
-      "Run two-way WhatsApp conversations and campaigns on the official Business API, with templates, media, and agentic AI answering automatically.",
+      "Run two-way WhatsApp conversations and campaigns on the official Business API, with templates, media, and agentic AI answering incoming messages automatically.",
     focusKeyword: "WhatsApp Business API",
     keywords: [
       "WhatsApp Business API",
@@ -571,7 +571,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/channels/whatsapp-broadcasting": {
     titleAbsolute: "WhatsApp Broadcast Campaigns on the Business API | SMSLocal",
     description:
-      "Send segmented WhatsApp template campaigns with media, buttons, and Flows to opted-in audiences, track delivery and read analytics, then answer replies with agentic AI.",
+      "Send segmented WhatsApp template campaigns with media, buttons, and Flows to opted-in audiences, track read analytics, and let agentic AI answer replies.",
     focusKeyword: "WhatsApp broadcasting",
     keywords: [
       "WhatsApp broadcasting",
@@ -587,7 +587,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/channels/social": {
     titleAbsolute: "Omnichannel Social Media Inbox with Agentic AI | SMSLocal",
     description:
-      "Unify Instagram and Messenger DMs with chat, voice, SMS, and email in one inbox, answered by agentic AI across every platform.",
+      "Unify Instagram and Messenger DMs with chat, voice, SMS, and email in one inbox, with every conversation answered by agentic AI across every platform.",
     focusKeyword: "omnichannel social inbox",
     keywords: [
       "omnichannel social inbox",
@@ -603,7 +603,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/channels/sms-broadcasting": {
     titleAbsolute: "A2P SMS Broadcasting and Bulk Campaigns in India | SMSLocal",
     description:
-      "Send bulk A2P SMS campaigns with segmentation, personalization, link tracking, STOP/HELP handling, and delivery receipts, answered by agentic AI.",
+      "Send bulk A2P SMS campaigns with segmentation, personalisation, link tracking, STOP/HELP handling, delivery receipts, and replies answered by agentic AI.",
     focusKeyword: "A2P SMS broadcasting",
     keywords: [
       "A2P SMS broadcasting",
@@ -619,7 +619,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/channels/web-chat": {
     titleAbsolute: "Website Live Chat Widget with Agentic AI — India | SMSLocal",
     description:
-      "Add a customizable web chat widget with agentic AI that answers visitors instantly, plus proactive triggers and an in-app SDK.",
+      "Add a customisable web chat widget with agentic AI that answers visitors instantly, with proactive triggers, custom branding, and an embeddable in-app SDK.",
     focusKeyword: "website live chat widget",
     keywords: [
       "website live chat widget",
@@ -652,7 +652,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/solutions/saas-b2b": {
     title: "Customer Support for SaaS Teams — B2B Platform",
     description:
-      "Manage onboarding, retention, expansion, and churn prevention from one AI-powered customer support platform built for SaaS teams — with Stripe, HubSpot, and Linear context.",
+      "Manage onboarding, retention, expansion, and churn prevention from one AI support platform built for SaaS teams, with Stripe, HubSpot, and Linear context.",
     focusKeyword: "customer support for SaaS",
     keywords: [
       "customer support for SaaS",
@@ -666,9 +666,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/solutions/restaurant": {
-    title: "Messaging for Restaurants — Reservations & Reviews",
+    title: "Messaging for Restaurants — Reservations",
     description:
-      "Manage guest conversations, automate SMS reservations, send order updates, and collect reviews from one inbox — built for restaurants, cafes, chains, and multi-location groups.",
+      "Manage guest conversations, automate SMS reservations, send order updates, and collect customer reviews from one inbox, built for restaurants and cafes.",
     focusKeyword: "customer support for restaurants",
     keywords: [
       "customer support for restaurants",
@@ -730,7 +730,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/solutions/healthcare": {
-    title: "SMS for Hospitals & Clinics in India",
+    title: "SMS for Hospitals & Clinics in India 2026",
     description:
       "SMS for healthcare in India — DLT-compliant appointment reminders, prescription refills, lab results, and patient follow-up over SMS and WhatsApp. ₹60 free.",
     focusKeyword: "SMS for healthcare",
@@ -798,7 +798,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/industry/travel-and-hospitality": {
     title: "Agentic AI for Travel & Hospitality — Bookings",
     description:
-      "Handle bookings, itinerary updates, and round-the-clock multilingual support for travel and hospitality with agentic AI and omnichannel broadcasting.",
+      "Handle bookings, itinerary updates, and round-the-clock multilingual guest support for travel and hospitality with agentic AI and omnichannel broadcasting.",
     focusKeyword: "agentic AI for travel",
     keywords: [
       "agentic AI for travel",
@@ -814,7 +814,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/industry/media-entertainment": {
     title: "Agentic AI for Media & Entertainment — Audiences",
     description:
-      "Grow audiences and handle high volume with agentic AI for ticketing, recommendations, and subscriber support, plus omnichannel campaigns.",
+      "Grow audiences and handle high traffic volume with agentic AI for ticketing, recommendations, and subscriber support, plus targeted omnichannel campaigns.",
     focusKeyword: "agentic AI for media",
     keywords: [
       "agentic AI for media",
@@ -830,7 +830,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/industry/insurance": {
     title: "Agentic AI for Insurance Claims & Policy Renewals",
     description:
-      "Guide quotes, claims, and renewals with agentic AI across every channel, plus reminders and campaigns for retention and cross-sell.",
+      "Guide quotes, claims, and policy renewals with agentic AI across every channel, plus scheduled reminders and campaigns built for retention and cross-sell.",
     focusKeyword: "agentic AI for insurance",
     keywords: [
       "agentic AI for insurance",
@@ -846,7 +846,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/industry/mortgage": {
     title: "Agentic AI for Mortgage — Lead to Close in India",
     description:
-      "Move borrowers from inquiry to close with agentic AI for pre-qualification, document reminders, and status updates across every channel.",
+      "Move borrowers from inquiry to close with agentic AI handling pre-qualification, document reminders, and status updates across every messaging channel.",
     focusKeyword: "agentic AI for mortgage",
     keywords: [
       "agentic AI for mortgage",
@@ -862,7 +862,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/industry/telecom": {
     title: "Agentic AI for Telecom — Billing & Support Scale",
     description:
-      "Handle support, billing, and notifications at scale for telecom with agentic AI and omnichannel broadcasting across every channel.",
+      "Handle customer support, billing, and service notifications at scale for telecom with agentic AI and omnichannel broadcasting across every single channel.",
     focusKeyword: "agentic AI for telecom",
     keywords: [
       "agentic AI for telecom",
@@ -955,7 +955,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/compare/smslocal-vs-msg91": {
     title: "MSG91 Alternative — Simpler Pay-As-You-Go Pricing",
     description:
-      "SMSLocal vs MSG91 — an honest 2026 breakdown of features and INR pricing, where each platform wins, and who should pick which for messaging in India.",
+      "SMSLocal vs MSG91 — an honest 2026 breakdown of features and INR pricing, where each platform genuinely wins, and who should pick which one for India.",
     focusKeyword: "SMSLocal vs MSG91",
     keywords: [
       "SMSLocal vs MSG91",
@@ -1015,7 +1015,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/compare/twixor": {
     title: "SMSLocal vs Twixor — Agentic AI Alternative 2026",
     description:
-      "Compare SMSLocal and Twixor. Get agentic AI and omnichannel broadcasting built for your brand, without white-label reseller overhead.",
+      "Compare SMSLocal and Twixor on agentic AI and omnichannel broadcasting built for your own brand, without the white-label reseller overhead Twixor adds.",
     focusKeyword: "Twixor alternative",
     keywords: [
       "Twixor alternative",
@@ -1030,7 +1030,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/compare/infobip": {
     title: "SMSLocal vs Infobip — Agentic AI Alternative 2026",
     description:
-      "Compare SMSLocal and Infobip. Get agentic AI and omnichannel reach with fast, self-serve setup, without enterprise overhead.",
+      "Compare SMSLocal and Infobip on agentic AI, omnichannel reach, and self-serve setup speed, without the enterprise overhead Infobip's platform carries.",
     focusKeyword: "Infobip alternative",
     keywords: [
       "Infobip alternative",
@@ -1162,7 +1162,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/resources": {
     title: "Resources — SMS, WhatsApp & Compliance in India",
     description:
-      "Help centre, customer stories, SMS glossary, free tools, system status, and product changelog — everything Indian businesses need to ship messaging with SMSLocal.",
+      "Help centre, customer stories, an SMS glossary, free tools, live system status, and the product changelog — everything Indian businesses need to ship messaging.",
     focusKeyword: "SMS resources India",
     keywords: [
       "SMS resources India",
@@ -1193,7 +1193,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/resources/status": {
     title: "System Status — Real-Time Health & Uptime Report",
     description:
-      "Monitor SMSLocal platform health in real time — live service status, 90-day uptime, historical analytics, incident history, and maintenance updates across every service.",
+      "Monitor SMSLocal platform health in real time — live service status, 90-day uptime history, incident timelines, and scheduled maintenance across every service.",
     focusKeyword: "system status",
     keywords: [
       "system status",
@@ -1209,7 +1209,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/resources/changelog": {
     title: "Changelog — New Features, Improvements & Fixes",
     description:
-      "See what's new in SMSLocal. New features, improvements, and fixes shipped every two weeks — AI agents, omnichannel inbox, automation, integrations, and platform releases.",
+      "See what's new in SMSLocal — new features, improvements, and fixes shipped every two weeks across AI agents, the shared inbox, and third-party integrations.",
     focusKeyword: "SMSLocal changelog",
     keywords: [
       "SMSLocal changelog",
@@ -1257,7 +1257,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/resources/tools": {
     title: "Free SMS Tools for India — Send with ₹60 Credit",
     description:
-      "Free SMS tools for Indian businesses — send SMS with ₹60 credit, learn the legal alternatives to SMS bombing, and check SMS character limits and concatenation rules.",
+      "Free SMS tools for Indian businesses — send SMS with ₹60 free credit, read the legal alternatives to SMS bombing, and check SMS character and segment limits.",
     focusKeyword: "free SMS tools India",
     keywords: [
       "free SMS tools",
@@ -1381,7 +1381,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/why-smslocal": {
     title: "Why SMSLocal — One Platform for AI & Broadcasting",
     description:
-      "SMSLocal combines agentic AI, every channel, numbers, and broadcasting in one product, with deep integrations and one predictable bill.",
+      "SMSLocal combines agentic AI, every messaging channel, numbers, and broadcasting in one product, with deep integrations and a single predictable monthly bill.",
     focusKeyword: "why SMSLocal",
     keywords: [
       "why SMSLocal",
@@ -1397,7 +1397,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/partnerships": {
     title: "SMSLocal Partnerships and Reseller Program",
     description:
-      "Partner with SMSLocal as an agency, reseller, or technology partner — one platform for agentic AI, channels, and broadcasting, with an open API.",
+      "Partner with SMSLocal as an agency, reseller, or technology partner — agentic AI, every messaging channel, numbers, and broadcasting, with an open API.",
     focusKeyword: "SMSLocal partnerships",
     keywords: [
       "SMSLocal partnerships",
@@ -1413,7 +1413,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/services/ai-consulting": {
     title: "Agentic AI Consulting and Implementation Services",
     description:
-      "Launch agentic AI from proof-of-concept to production with SMSLocal consulting and onboarding, including use-case scoping, build, and enablement.",
+      "Take agentic AI from proof-of-concept to production with SMSLocal consulting and onboarding, covering use-case scoping, implementation, and team enablement.",
     focusKeyword: "agentic AI consulting",
     keywords: [
       "agentic AI consulting",
@@ -1469,9 +1469,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/legal/dpa": {
-    title: "Data Processing Addendum — Trusted DPA, DPDPA 2023",
+    title: "Data Processing Addendum — DPA & DPDPA 2023",
     description:
-      "Data processing addendum (DPA) for SMSLocal — how we process personal data on your behalf under India's DPDP Act, 2023 and international frameworks.",
+      "A data processing addendum for SMSLocal — how we process personal data under India's DPDP Act, 2023, and other international data-protection frameworks.",
     focusKeyword: "data processing addendum",
     keywords: [
       "data processing addendum",
@@ -1501,7 +1501,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/platform/security": {
     title: "Enterprise Security for Agentic AI Communications",
     description:
-      "SSO and SAML, audit logs, IP blocklisting, role-based access, and GDPR/CCPA-aligned data handling — enterprise security built into SMSLocal.",
+      "SSO and SAML, audit logs, IP blocklisting, role-based access, and GDPR/CCPA-aligned data handling — enterprise security built into every SMSLocal plan.",
     focusKeyword: "enterprise AI security",
     keywords: [
       "enterprise AI security",
@@ -1515,7 +1515,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/legal/dpdpa": {
-    title: "DPDPA Notice — Trusted Data Principal Rights, 2023",
+    title: "DPDPA Notice — Data Principal Rights 2023",
     description:
       "DPDPA notice from SMSLocal — a plain-language explanation under India's Digital Personal Data Protection Act, 2023 of how we handle your data and your rights.",
     focusKeyword: "DPDPA notice",
@@ -1530,7 +1530,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/legal/privacy": {
-    title: "Privacy Policy — Trusted Data Protection, DPDPA 2023",
+    title: "Privacy Policy — Data Protection, DPDPA 2023",
     description:
       "Privacy policy for SMSLocal — how we collect, use, and safeguard personal data in line with India's DPDP Act, 2023, TRAI rules, and global best practices.",
     focusKeyword: "privacy policy",
@@ -1545,7 +1545,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/legal/terms": {
-    title: "Terms of Service — Trusted SMSLocal Agreement, 2026",
+    title: "Terms of Service — SMSLocal Agreement 2026",
     description:
       "Terms of service for SMSLocal — the agreement that governs your use of the platform: account responsibilities, acceptable use, fees, and liability limits.",
     focusKeyword: "terms of service",
