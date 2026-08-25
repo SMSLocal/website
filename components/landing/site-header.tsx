@@ -130,6 +130,7 @@ const NAV: NavItem[] = [
           { label: "SMS Broadcasting", href: "/channels/sms-broadcasting/", icon: Send, description: "Bulk A2P campaigns" },
           { label: "Virtual Numbers", href: "/numbers/did/", icon: Package, description: "Local, toll-free & short codes" },
           { label: "Integrations", href: "/products/integrations/", icon: Puzzle, description: "200+ apps & CRMs" },
+          { label: "Analytics", href: "/products/analytics/", icon: Activity, description: "Dashboards & insights" },
         ],
       },
     ],
@@ -197,7 +198,6 @@ const NAV: NavItem[] = [
       {
         heading: "Grow with us",
         items: [
-          { label: "Analytics", href: "/products/analytics/", icon: Activity, description: "Dashboards & insights" },
           { label: "Partnerships", href: "/partnerships/", icon: Users, description: "Agency & reseller program" },
           { label: "AI Consulting", href: "/services/ai-consulting/", icon: Wrench, description: "POC to production" },
         ],
