@@ -249,7 +249,7 @@ const NAV: NavItem[] = [
         ],
       },
     ],
-    featured: { icon: BookOpen, title: "DLT registration guide", body: "Everything you need to get DLT-approved in India.", cta: "Read the guide", href: "/blog/dlt-registration-guide/" },
+    featured: { icon: Wrench, title: "Free SMS tools", body: "Send a real test SMS with ₹60 credit — no signup required.", cta: "Open tools", href: "/resources/tools/" },
   },
 ]
 
