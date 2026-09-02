@@ -151,6 +151,15 @@ and returns a true 308.
 **`trailingSlash: true`.** URLs canonically end in `/`. When adding a redirect,
 add both the slashed and unslashed source, as the existing entries do.
 
+**`next dev` refuses to start if one is already running from this directory.**
+The error is "Another next dev server is already running" and it prints the PID
+— `taskkill /PID <pid> /F` on Windows, `kill <pid>` elsewhere. It is a per-
+directory lock, not a port conflict, so changing the port does not help.
+
+**On Windows, `corepack enable pnpm` fails with `EPERM`** because it writes into
+`C:\Program Files\nodejs`. Use `npm install -g pnpm` instead, which installs
+into your user profile and needs no admin rights.
+
 ---
 
 ## Analytics and consent
