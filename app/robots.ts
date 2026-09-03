@@ -18,7 +18,26 @@ import { getSettings } from "@/lib/seo/store"
  *   - `blockedBots`   — extra user-agents to hard-block.
  */
 
-const BLOCKED_DEFAULT = [...SITE.noIndexRoutes, "/_next/", "/dev/"]
+/**
+ * Auth surfaces. Listed explicitly (rather than only via SITE.noIndexRoutes,
+ * which carries just /signin and /api/) so the emitted rules match what the
+ * site has actually served for months.
+ */
+const AUTH_ROUTES = ["/signin", "/signup", "/forgot-password"]
+
+/**
+ * Paths blocked for every crawler.
+ *
+ * `/_next/` is deliberately NOT here. Blocking it hides the CSS and JS bundles
+ * Google needs to render the page, so pages get judged on unstyled HTML —
+ * 68898f9 removed it from the static robots.txt for exactly that reason, and
+ * re-adding it here would silently undo that fix.
+ */
+const BLOCKED_DEFAULT = [
+  ...AUTH_ROUTES,
+  ...SITE.noIndexRoutes.filter((r) => !AUTH_ROUTES.includes(r)),
+  "/dev/",
+]
 
 // Crawlers we explicitly want to permit even though they're SEO/audit
 // scrapers — they're tools the site owner is actively using.
