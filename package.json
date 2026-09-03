@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/generate-page-dates.mjs",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "sitemap:dates": "node scripts/generate-page-dates.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

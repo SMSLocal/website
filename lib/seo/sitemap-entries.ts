@@ -1,12 +1,19 @@
 import type { MetadataRoute } from "next"
 import { ALL_POSTS } from "@/lib/blog"
 import { ALL_STORIES } from "@/lib/customer-stories"
-import { HELP_CATEGORIES, getAllArticlePaths } from "@/lib/help-center"
+import { HELP_CATEGORIES, getAllArticlePaths, getArticle } from "@/lib/help-center"
 import { SITE } from "@/lib/seo/config"
 import { SEO_REGISTRY } from "@/lib/seo/registry"
 import { getAllOverrides } from "@/lib/seo/store"
+import pageModified from "@/lib/seo/page-modified.generated.json"
 
 const SITE_URL = SITE.url
+
+/**
+ * Per-page last-modified dates taken from git by `pnpm sitemap:dates`.
+ * See scripts/generate-page-dates.mjs for why the file is committed.
+ */
+const GENERATED_PAGE_DATES: Record<string, string | undefined> = pageModified.pages
 
 type ChangeFreq = MetadataRoute.Sitemap[number]["changeFrequency"]
 
@@ -83,29 +90,65 @@ function toUrl(path: string): string {
 
 export const revalidate = 60 // Refresh sitemap at most once per minute.
 
-export default async function sitemapEntries(): Promise<MetadataRoute.Sitemap> {
-  const now = new Date()
+/**
+ * Parse a date that came from content. Returns undefined rather than an
+ * Invalid Date so a typo in one entry drops that one `<lastmod>` instead of
+ * emitting `NaN` into the XML.
+ */
+function parseDate(value: string | undefined): Date | undefined {
+  if (!value) return undefined
+  const d = new Date(value)
+  return Number.isNaN(d.getTime()) ? undefined : d
+}
 
+/**
+ * Last-modified date of a static page, most trustworthy source first:
+ *   1. `modifiedTime` / `publishedTime` hand-set in the SEO registry.
+ *   2. The last git commit that touched the page's own file, captured in
+ *      page-modified.generated.json by `pnpm sitemap:dates`.
+ *   3. Nothing — the URL ships without a `<lastmod>`.
+ *
+ * Never `new Date()`. Stamping "now" on every page told search engines all 135
+ * static URLs changed on every revalidation, which is both false and a reason
+ * for Google to disregard the site's lastmod values altogether. Omitting the
+ * element is explicitly allowed and is the honest answer when we don't know.
+ */
+function staticPageLastModified(
+  path: string,
+  entry: { modifiedTime?: string; publishedTime?: string },
+): Date | undefined {
+  return (
+    parseDate(entry.modifiedTime) ??
+    parseDate(entry.publishedTime) ??
+    parseDate(GENERATED_PAGE_DATES[path])
+  )
+}
+
+export default async function sitemapEntries(): Promise<MetadataRoute.Sitemap> {
   // Load Redis overrides for priority/changeFreq customisation.
   // Never let a Redis failure break the sitemap — gracefully degrade.
   const overrides = await getAllOverrides().catch(() => new Map<string, { noindex?: boolean; includeInSitemap?: boolean; changeFrequency?: ChangeFreq; priority?: number }>())
 
-  type RawEntry = { path: string; lastModified: Date; defaultPriority: number; defaultFreq: ChangeFreq }
+  type RawEntry = { path: string; lastModified?: Date; defaultPriority: number; defaultFreq: ChangeFreq }
   const raw: RawEntry[] = []
 
   // ─── Static pages — derived from lib/seo/registry.ts ──────────────────────
   for (const [path, entry] of Object.entries(SEO_REGISTRY)) {
     if (entry.noindex || shouldSkip(path)) continue
     const { priority, changeFrequency } = defaultFor(path)
-    raw.push({ path, lastModified: now, defaultPriority: priority, defaultFreq: changeFrequency })
+    raw.push({
+      path,
+      lastModified: staticPageLastModified(path, entry),
+      defaultPriority: priority,
+      defaultFreq: changeFrequency,
+    })
   }
 
   // ─── Dynamic: blog posts ──────────────────────────────────────────────────
   for (const post of ALL_POSTS) {
-    const updatedAt = post.meta.updatedDate ?? post.meta.date
     raw.push({
       path: `/blog/${post.meta.slug}`,
-      lastModified: updatedAt ? new Date(updatedAt) : now,
+      lastModified: parseDate(post.meta.updatedDate ?? post.meta.date),
       defaultPriority: 0.7,
       defaultFreq: "monthly",
     })
@@ -115,17 +158,22 @@ export default async function sitemapEntries(): Promise<MetadataRoute.Sitemap> {
   for (const story of ALL_STORIES) {
     raw.push({
       path: `/resources/customer-stories/${story.slug}`,
-      lastModified: story.publishedAt ? new Date(story.publishedAt) : now,
+      lastModified: parseDate(story.publishedAt),
       defaultPriority: 0.7,
       defaultFreq: "monthly",
     })
   }
 
   // ─── Dynamic: help-centre categories ──────────────────────────────────────
+  // A category page lists its articles, so it is as fresh as its newest one.
   for (const c of HELP_CATEGORIES) {
+    const newest = c.articles
+      .map((a) => parseDate(a.updatedOn))
+      .filter((d): d is Date => d !== undefined)
+      .reduce<Date | undefined>((max, d) => (!max || d > max ? d : max), undefined)
     raw.push({
       path: `/resources/help/${c.slug}`,
-      lastModified: now,
+      lastModified: newest,
       defaultPriority: 0.6,
       defaultFreq: "weekly",
     })
@@ -135,7 +183,7 @@ export default async function sitemapEntries(): Promise<MetadataRoute.Sitemap> {
   for (const p of getAllArticlePaths()) {
     raw.push({
       path: `/resources/help/${p.category}/${p.article}`,
-      lastModified: now,
+      lastModified: parseDate(getArticle(p.category, p.article)?.article.updatedOn),
       defaultPriority: 0.5,
       defaultFreq: "monthly",
     })
