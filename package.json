@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "sitemap:dates": "node scripts/generate-page-dates.mjs"
+    "sitemap:dates": "node scripts/generate-page-dates.mjs",
+    "seo:check": "node scripts/seo-health-check.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
