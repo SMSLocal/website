@@ -156,6 +156,9 @@ const nextConfig = {
       // catch-all intercepts /sitemap.xml before the metadata route can serve it.
       // The API route at /api/sitemap calls the same sitemap() function.
       { source: "/sitemap.xml", destination: "/sitemap-xml" },
+      // Stylesheet the sitemap XML points at. Same catch-all problem as
+      // /sitemap.xml, so it is served by a route rather than from public/.
+      { source: "/sitemap.xsl", destination: "/sitemap-xsl" },
       // Child sitemaps listed in the /sitemap.xml index. The group list must
       // stay in step with SITEMAP_GROUPS in lib/seo/sitemap-groups.ts — a
       // rewrite source cannot be built from an imported value.
