@@ -156,6 +156,13 @@ const nextConfig = {
       // catch-all intercepts /sitemap.xml before the metadata route can serve it.
       // The API route at /api/sitemap calls the same sitemap() function.
       { source: "/sitemap.xml", destination: "/sitemap-xml" },
+      // Child sitemaps listed in the /sitemap.xml index. The group list must
+      // stay in step with SITEMAP_GROUPS in lib/seo/sitemap-groups.ts — a
+      // rewrite source cannot be built from an imported value.
+      {
+        source: "/:group(page|post|compare|help|customer-story)-sitemap.xml",
+        destination: "/sitemaps/:group",
+      },
       // IndexNow key file for Ahrefs Site Audit — catch-all route would
       // intercept /v8rcpyc9cjm9zewm2hm9gctu3uakcmb7.txt without this rewrite.
       {

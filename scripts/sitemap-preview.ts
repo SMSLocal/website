@@ -2,10 +2,10 @@
  * Local preview of what `/sitemap.xml` will output in production.
  * Run with: pnpm dlx tsx scripts/sitemap-preview.ts
  */
-import sitemap from "../app/sitemap"
+import sitemapEntries from "../lib/seo/sitemap-entries"
 
 async function main() {
-  const entries = await sitemap()
+  const entries = await sitemapEntries()
   console.log(`\nSitemap entries: ${entries.length}\n`)
   for (const e of entries) {
     const priority = typeof e.priority === "number" ? e.priority.toFixed(1) : "—"

@@ -83,7 +83,7 @@ function toUrl(path: string): string {
 
 export const revalidate = 60 // Refresh sitemap at most once per minute.
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default async function sitemapEntries(): Promise<MetadataRoute.Sitemap> {
   const now = new Date()
 
   // Load Redis overrides for priority/changeFreq customisation.

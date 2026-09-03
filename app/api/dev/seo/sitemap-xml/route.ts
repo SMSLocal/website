@@ -1,12 +1,12 @@
 import { NextResponse } from "next/server"
 import { getSession } from "@/lib/seo/auth"
-import sitemap from "@/app/sitemap"
+import sitemapEntries from "@/lib/seo/sitemap-entries"
 
 /**
  * GET /api/dev/seo/sitemap-xml
  *
  * Renders the live sitemap as raw XML text for the dashboard's preview
- * panel. We build the XML ourselves from the same `sitemap()` function
+ * panel. We build the XML ourselves from the same `sitemapEntries()` function
  * that Next.js uses to generate /sitemap.xml, which guarantees the two
  * views stay in sync.
  *
@@ -33,7 +33,7 @@ export async function GET() {
   const session = await getSession()
   if (!session) return NextResponse.json({ error: "unauthorised" }, { status: 401 })
 
-  const entries = await sitemap()
+  const entries = await sitemapEntries()
   const lines: string[] = []
   lines.push('<?xml version="1.0" encoding="UTF-8"?>')
   lines.push('<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">')
