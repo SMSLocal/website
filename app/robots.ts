@@ -26,7 +26,13 @@ const BLOCKED_DEFAULT = [...SITE.noIndexRoutes, "/_next/", "/dev/"]
 // Site Audit crawler that fetches /siteaudit-*.txt for verification and
 // then crawls pages on demand. AhrefsBot must be allowed so it can fetch
 // the IndexNow key file for validation. All must NOT appear in BLOCKED_BOTS.
-const ALLOWED_AUDIT_BOTS = ["SemrushBot", "SiteAuditBot", "AhrefsBot"]
+const ALLOWED_AUDIT_BOTS = [
+  "SemrushBot",
+  "SiteAuditBot",
+  "AhrefsBot",
+  // Ahrefs' dedicated Site Audit crawler, distinct from the index crawler.
+  "AhrefsSiteAudit",
+]
 
 const BLOCKED_BOTS = [
   "MJ12bot",

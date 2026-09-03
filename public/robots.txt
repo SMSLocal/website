@@ -30,6 +30,26 @@ Disallow: /forgot-password
 Disallow: /api/
 Disallow: /dev/
 
+# Ahrefs Site Audit. Must be allowed for the IndexNow key file at
+# /v8rcpyc9cjm9zewm2hm9gctu3uakcmb7.txt to be verified — Ahrefs obeys
+# robots.txt, so while this was Disallow: / the key read as "File not found"
+# even though the URL served correctly.
+User-agent: AhrefsBot
+Allow: /
+Disallow: /signin
+Disallow: /signup
+Disallow: /forgot-password
+Disallow: /api/
+Disallow: /dev/
+
+User-agent: AhrefsSiteAudit
+Allow: /
+Disallow: /signin
+Disallow: /signup
+Disallow: /forgot-password
+Disallow: /api/
+Disallow: /dev/
+
 User-agent: ChatGPT-User
 Allow: /
 Disallow: /signin
@@ -69,9 +89,6 @@ Disallow: /signup
 Disallow: /forgot-password
 Disallow: /api/
 Disallow: /dev/
-
-User-agent: AhrefsBot
-Disallow: /
 
 User-agent: MJ12bot
 Disallow: /
