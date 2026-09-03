@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next"
 import { ALL_POSTS } from "@/lib/blog"
 import { ALL_STORIES } from "@/lib/customer-stories"
+import { APP_CATEGORIES } from "@/app/products/ai-agentic/apps/data"
 import { HELP_CATEGORIES, getAllArticlePaths, getArticle } from "@/lib/help-center"
 import { SITE } from "@/lib/seo/config"
 import { SEO_REGISTRY } from "@/lib/seo/registry"
@@ -14,6 +15,9 @@ const SITE_URL = SITE.url
  * See scripts/generate-page-dates.mjs for why the file is committed.
  */
 const GENERATED_PAGE_DATES: Record<string, string | undefined> = pageModified.pages
+
+/** Dates for dynamic route groups that are not in the registry. */
+const GENERATED_GROUP_DATES: Record<string, string | undefined> = pageModified.groups
 
 type ChangeFreq = MetadataRoute.Sitemap[number]["changeFrequency"]
 
@@ -151,6 +155,22 @@ export default async function sitemapEntries(): Promise<MetadataRoute.Sitemap> {
       lastModified: parseDate(post.meta.updatedDate ?? post.meta.date),
       defaultPriority: 0.7,
       defaultFreq: "monthly",
+    })
+  }
+
+  // ─── Dynamic: Captain AI app-integration categories ───────────────────────
+  // Prerendered from APP_CATEGORIES with dynamicParams:false, each with its own
+  // title and self-referencing canonical, but they were absent from the sitemap
+  // because nothing outside the registry was ever emitted for them.
+  for (const category of APP_CATEGORIES) {
+    const path = `/products/ai-agentic/apps/${category.slug}`
+    const { priority, changeFrequency } = defaultFor(path)
+    raw.push({
+      path,
+      // The whole group changes together when apps/data.ts does.
+      lastModified: parseDate(GENERATED_GROUP_DATES["ai-agentic-apps"]),
+      defaultPriority: priority,
+      defaultFreq: changeFrequency,
     })
   }
 
