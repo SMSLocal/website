@@ -2,9 +2,12 @@
  * Single source of truth for every site-wide SEO value.
  *
  * Every helper in `lib/seo/*`, every JSON-LD schema in
- * `components/seo/json-ld.tsx`, `app/layout.tsx`, `app/robots.ts`, and
- * `app/sitemap.ts` reads from this one config. Change a value here and it
- * propagates everywhere.
+ * `components/seo/json-ld.tsx`, `app/layout.tsx`, and
+ * `lib/seo/sitemap-entries.ts` reads from this one config. Change a value here
+ * and it propagates everywhere.
+ *
+ * robots.txt is the exception: it is a static file at `public/robots.txt` and
+ * does NOT read from here. See the note at the top of that file.
  *
  * The site URL falls back to the NEXT_PUBLIC_SITE_URL env var (used by
  * preview deployments) and then to the production domain.
@@ -68,7 +71,8 @@ export const SITE = {
 
   /**
    * Routes that should NEVER be indexed or appear in sitemap.
-   * Keep this in sync with the rules in `app/robots.ts`.
+   * robots.txt is maintained separately at `public/robots.txt` — when adding a
+   * route here, add a matching Disallow there by hand.
    */
   noIndexRoutes: ["/signin", "/api/"] as const,
 } as const

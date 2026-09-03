@@ -1,3 +1,25 @@
+# robots.txt for smslocal.in — THIS FILE IS THE ONLY SOURCE.
+#
+# Edit this file by hand. There is deliberately no app/robots.ts.
+#
+# Next's app/robots.ts metadata route does NOT work on this site: the [..slug]
+# catch-all intercepts /robots.txt on Vercel and returns the 404 page. A route
+# handler behind a rewrite (the pattern that works for /sitemap.xml) fails the
+# same way. Both were tried on 2026-09-03 and both took robots.txt down until
+# reverted. Serving this static file is the only arrangement that works.
+#
+# Neither failure reproduces under a local `next start`, which serves the
+# dynamic versions correctly. Do not treat a local pass as proof.
+#
+# Consequence: the robots controls in the /dev/seo dashboard (globalNoindex,
+# extraDisallow, blockedBots) have no effect. They never did in production.
+#
+# Do NOT add "Disallow: /_next/" — it hides the CSS and JS Google needs to
+# render pages, so they get judged on unstyled HTML. Removed in 68898f9.
+#
+# AhrefsBot must stay allowed or Ahrefs cannot fetch the IndexNow key file at
+# /v8rcpyc9cjm9zewm2hm9gctu3uakcmb7.txt and reports it as missing.
+
 User-agent: *
 Allow: /
 Disallow: /signin
