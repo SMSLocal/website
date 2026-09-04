@@ -166,12 +166,6 @@ const nextConfig = {
         source: "/:group(page|post|compare|help|customer-story)-sitemap.xml",
         destination: "/sitemaps/:group",
       },
-      // IndexNow key file for Ahrefs Site Audit — catch-all route would
-      // intercept /v8rcpyc9cjm9zewm2hm9gctu3uakcmb7.txt without this rewrite.
-      {
-        source: "/v8rcpyc9cjm9zewm2hm9gctu3uakcmb7.txt",
-        destination: "/api/indexnow-key",
-      },
     ]
   },
   async redirects() {

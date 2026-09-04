@@ -18,7 +18,7 @@
 # render pages, so they get judged on unstyled HTML. Removed in 68898f9.
 #
 # AhrefsBot must stay allowed or Ahrefs cannot fetch the IndexNow key file at
-# /v8rcpyc9cjm9zewm2hm9gctu3uakcmb7.txt and reports it as missing.
+# /utpgv2zcyf389gd2bt6jxfh7u5h57upj.txt and reports it as missing.
 
 User-agent: *
 Allow: /
@@ -53,7 +53,7 @@ Disallow: /api/
 Disallow: /dev/
 
 # Ahrefs Site Audit. Must be allowed for the IndexNow key file at
-# /v8rcpyc9cjm9zewm2hm9gctu3uakcmb7.txt to be verified — Ahrefs obeys
+# /utpgv2zcyf389gd2bt6jxfh7u5h57upj.txt to be verified — Ahrefs obeys
 # robots.txt, so while this was Disallow: / the key read as "File not found"
 # even though the URL served correctly.
 User-agent: AhrefsBot
