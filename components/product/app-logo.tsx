@@ -19,22 +19,45 @@ function colorFor(name: string) {
   return COLORS[n % COLORS.length]
 }
 
-export function AppLogo({ name, url, logoUrl }: { name: string; url: string; logoUrl?: string }) {
-  const hostname = (() => {
-    try { return new URL(url).hostname.replace(/^www\./, "") } catch { return "" }
-  })()
+/**
+ * Google's favicon service. Returns a 256px icon for any hostname and
+ * synthesises a placeholder when the site has no usable icon, so it always
+ * answers 200 — unlike hotlinking https://<host>/favicon.ico directly, which
+ * 404s or 403s for roughly a quarter of the apps we list (audited 2026-09-04)
+ * and got flagged as broken images by Ahrefs.
+ *
+ * This URL is what ends up in the server-rendered HTML, so it is the one
+ * crawlers resolve. The onError chain below only ever runs in a real browser;
+ * a crawler never sees it, which is why the FIRST source has to be the
+ * reliable one.
+ */
+function faviconFor(hostname: string) {
+  return `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${hostname}&size=256`
+}
 
+export function AppLogo({ name, url, logoUrl }: { name: string; url: string; logoUrl?: string }) {
+  // Keep the hostname exactly as written. Stripping "www." breaks Brevo:
+  // faviconV2 answers 200 for www.brevo.com and 404 for brevo.com. Where both
+  // resolve (microsoft.com) they return the same icon, so the bare host is
+  // only worth trying as a second chance.
+  const hostname = (() => {
+    try { return new URL(url).hostname } catch { return "" }
+  })()
+  const bareHostname = hostname.replace(/^www\./, "")
+
+  // logoUrl is a curated override for the handful of brands whose real logo
+  // beats their favicon. Every value in data.ts is verified to return 200 —
+  // do not add a bare https://<host>/favicon.ico here, that is the exact
+  // pattern this component exists to avoid.
   const sources = [
     ...(logoUrl ? [logoUrl] : []),
-    ...(hostname ? [
-      `https://logo.clearbit.com/${hostname}`,
-      `https://t1.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=https://${hostname}&size=256`,
-    ] : []),
+    ...(hostname ? [faviconFor(hostname)] : []),
+    ...(bareHostname && bareHostname !== hostname ? [faviconFor(bareHostname)] : []),
   ]
 
   const [idx, setIdx] = useState(0)
 
-  if (idx >= sources.length || !hostname) {
+  if (idx >= sources.length) {
     return (
       <div className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-[18px] font-black ${colorFor(name)}`}>
         {name.charAt(0).toUpperCase()}
@@ -51,6 +74,7 @@ export function AppLogo({ name, url, logoUrl }: { name: string; url: string; log
         alt={name}
         width={48}
         height={48}
+        loading="lazy"
         className="h-10 w-10 object-contain"
         onError={() => setIdx((i) => i + 1)}
       />
