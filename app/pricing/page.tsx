@@ -20,13 +20,13 @@ type RateRow = {
 }
 
 const CONFIRMED_RATES: RateRow[] = [
-  { channel: "Bulk SMS", rate: "₹0.09 – ₹0.24 / SMS", notes: "7 volume tiers, no monthly fee, DLT-compliant" },
-  { channel: "WhatsApp — Marketing", rate: "₹0.8631 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
-  { channel: "WhatsApp — Utility", rate: "₹0.1150 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
-  { channel: "WhatsApp — Authentication", rate: "₹0.1150 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
+  { channel: "Bulk SMS", rate: "₹0.115 – ₹0.24 / SMS", notes: "7 volume tiers, no monthly fee, DLT-compliant" },
+  { channel: "WhatsApp — Marketing", rate: "₹0.94 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
+  { channel: "WhatsApp — Utility", rate: "₹0.15 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
+  { channel: "WhatsApp — Authentication", rate: "₹0.15 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
   { channel: "WhatsApp — Service (user-initiated)", rate: "Free", notes: "Within Meta's 24-hour customer service window" },
-  { channel: "RCS — Basic text", rate: "₹0.1188 / message", notes: "1% below benchmarked market rate" },
-  { channel: "RCS — Rich card", rate: "₹0.1386 / message", notes: "1% below benchmarked market rate" },
+  { channel: "RCS — Basic text", rate: "₹0.13 / message", notes: "1% below benchmarked market rate" },
+  { channel: "RCS — Rich card", rate: "₹0.25 / message", notes: "1% below benchmarked market rate" },
   { channel: "OTP & Transactional SMS", rate: "Same as Bulk SMS tiers", notes: "Priority route, sub-1s typical delivery" },
 ]
 
@@ -64,7 +64,7 @@ const PRICING_FAQ = [
   },
   {
     q: "How is SMSLocal's RCS pricing set?",
-    a: "Our published RCS rate is pegged at exactly 1% below MSG91's public India rate card — 11.88 paise per basic text and 13.86 paise per rich card (pre-GST). If a benchmarked competitor drops below us, we reprice. The competitor rates we track, their source URLs, and the last-fetched date are all listed on the RCS pricing tab.",
+    a: "Our published RCS rate is pegged at exactly 1% below MSG91's public India rate card — 13 paise per basic text and 25 paise per rich card (pre-GST). If a benchmarked competitor drops below us, we reprice. The competitor rates we track, their source URLs, and the last-fetched date are all listed on the RCS pricing tab.",
   },
   {
     q: "Is there a monthly platform fee for RCS?",

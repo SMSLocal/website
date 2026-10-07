@@ -144,14 +144,14 @@ export default function WhatsAppPage() {
                   <rect x="24" y="95" width="10" height="10" rx="2" fill="#3b82f6"/>
                   <text x="40" y="105" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.8)">Utility</text>
                   <text x="230" y="105" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">12,440</text>
-                  <text x="336" y="105" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.35</text>
-                  <text x="456" y="105" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)">₹4,354</text>
+                  <text x="336" y="105" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.15</text>
+                  <text x="456" y="105" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)">₹1,866</text>
                   <line x1="24" y1="114" x2="456" y2="114" stroke="rgba(255,255,255,0.04)" strokeWidth="1"/>
                   <rect x="24" y="119" width="10" height="10" rx="2" fill="#f59e0b"/>
                   <text x="40" y="129" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.8)">Marketing</text>
                   <text x="230" y="129" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">3,820</text>
-                  <text x="336" y="129" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.82</text>
-                  <text x="456" y="129" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)">₹3,132</text>
+                  <text x="336" y="129" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.94</text>
+                  <text x="456" y="129" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)">₹3,591</text>
                   <line x1="24" y1="138" x2="456" y2="138" stroke="rgba(255,255,255,0.04)" strokeWidth="1"/>
                   <rect x="24" y="143" width="10" height="10" rx="2" fill="#a78bfa"/>
                   <text x="40" y="153" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.8)">Authentication</text>
@@ -166,15 +166,15 @@ export default function WhatsAppPage() {
                   <text x="456" y="177" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="700" fill="#25d366">Free</text>
                   <line x1="24" y1="186" x2="456" y2="186" stroke="rgba(255,255,255,0.07)" strokeWidth="1"/>
                   <text x="280" y="205" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.45)">Subtotal</text>
-                  <text x="456" y="205" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">₹8,701</text>
+                  <text x="456" y="205" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">₹6,672</text>
                   <text x="280" y="223" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.45)">GST 18%</text>
-                  <text x="456" y="223" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">₹1,566</text>
+                  <text x="456" y="223" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">₹1,201</text>
                   <text x="280" y="241" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.45)">Platform fee</text>
                   <text x="456" y="241" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="700" fill="#25d366">₹0</text>
                   <line x1="270" y1="248" x2="456" y2="248" stroke="rgba(255,255,255,0.08)" strokeWidth="1"/>
                   <rect x="270" y="254" width="186" height="34" rx="7" fill="rgba(37,211,102,0.08)" stroke="rgba(37,211,102,0.2)" strokeWidth="1"/>
                   <text x="284" y="276" fontFamily="system-ui,sans-serif" fontSize="13" fontWeight="700" fill="rgba(255,255,255,0.9)">Total due</text>
-                  <text x="448" y="276" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="15" fontWeight="800" fill="#25d366">₹10,267</text>
+                  <text x="448" y="276" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="15" fontWeight="800" fill="#25d366">₹7,873</text>
                   <text x="32" y="306" fontFamily="system-ui,sans-serif" fontSize="10" fill="rgba(255,255,255,0.3)" letterSpacing="0.5">CONVERSATION MIX · OCT 2026</text>
                   <rect x="32" y="314" width="148" height="16" rx="3" fill="#3b82f6" opacity="0.75"/>
                   <rect x="182" y="314" width="46" height="16" rx="3" fill="#f59e0b" opacity="0.75"/>

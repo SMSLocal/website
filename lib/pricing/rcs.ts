@@ -26,8 +26,8 @@ export type RcsRate = {
 
 /** SMSLocal published RCS rate. Set exactly 1% below MSG91. */
 export const SMSLOCAL_RCS_RATE: RcsRate = {
-  basicTextPaise: 11.88, // MSG91 ₹0.12  × 0.99
-  richCardPaise: 13.86, // MSG91 ₹0.14  × 0.99
+  basicTextPaise: 13, // was 11.88 (MSG91 ₹0.12 × 0.99)
+  richCardPaise: 25, // was 13.86 (MSG91 ₹0.14 × 0.99)
   intlBasicTextPaise: 14.85, // MSG91 ₹0.15 × 0.99
   intlRichCardPaise: 19.8, // MSG91 ₹0.20 × 0.99
 }

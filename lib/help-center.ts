@@ -550,9 +550,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
           {
             t: "list",
             items: [
-              "Authentication — ₹0.1150 flat rate for OTPs and login alerts.",
-              "Utility — ₹0.1150 for order/status updates. Free within a 24-hour service window triggered by a user-initiated message.",
-              "Marketing — ₹0.7260. Always billed, regardless of service window.",
+              "Authentication — ₹0.15 flat rate for OTPs and login alerts.",
+              "Utility — ₹0.15 for order/status updates. Free within a 24-hour service window triggered by a user-initiated message.",
+              "Marketing — ₹0.94. Always billed, regardless of service window.",
               "Service (1:1 human replies) — free inside the 24-hour service window, ₹0.2891 after.",
             ],
           },
@@ -885,7 +885,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
               "You're only billed for the channel that actually delivered.",
             ],
           },
-          { t: "p", c: "WhatsApp OTP is billed at the Authentication rate (₹0.1150 per conversation), usually cheaper than SMS in bulk." },
+          { t: "p", c: "WhatsApp OTP is billed at the Authentication rate (₹0.15 per conversation), usually cheaper than SMS in bulk." },
         ],
       },
     ],

@@ -16,7 +16,7 @@ type Tier = {
 const TIERS: Tier[] = [
   { name: "Starter", rate: 0.24, max: 16000, features: ["Unlimited validity", "Full DLT compliance", "Pay-as-you-go, no lock-in"], cta: { label: "Start Free", href: "/signup/" } },
   { name: "Growth", rate: 0.16, max: 375000, features: ["24-month validity", "AI WhatsApp agents included", "Priority support"], cta: { label: "Start Free", href: "/signup/" }, popular: true },
-  { name: "Enterprise", rate: 0.09, max: Number.POSITIVE_INFINITY, features: ["Dedicated account manager", "Custom routing & SLAs", "24-month validity"], cta: { label: "Talk to Sales", href: "/company/contact/" } },
+  { name: "Enterprise", rate: 0.115, max: Number.POSITIVE_INFINITY, features: ["Dedicated account manager", "Custom routing & SLAs", "24-month validity"], cta: { label: "Talk to Sales", href: "/company/contact/" } },
 ]
 
 const MIN = 5000
@@ -143,7 +143,7 @@ export function PricingTeaser() {
                 <span className="inline-flex items-center rounded-full bg-primary px-2 py-0.5 text-[9.5px] font-semibold uppercase tracking-wider text-primary-foreground">New</span>
               </div>
               <p className="mt-3 text-[15px] font-semibold text-foreground">Priced 1% below MSG91. Same Google RBM rails.</p>
-              <p className="mt-1 text-[13.5px] leading-relaxed text-muted-foreground">Verified, branded rich cards on Jio, Airtel, Vi — with automatic DLT SMS fallback. From ₹0.1188 basic text · ₹0.1386 rich card.</p>
+              <p className="mt-1 text-[13.5px] leading-relaxed text-muted-foreground">Verified, branded rich cards on Jio, Airtel, Vi — with automatic DLT SMS fallback. From ₹0.13 basic text · ₹0.25 rich card.</p>
               <a href="/pricing/#rcs" className="mt-auto inline-flex items-center gap-1.5 pt-4 text-[13.5px] font-semibold text-primary hover:underline">See RCS rates &amp; cost calculator <ArrowRight className="h-3.5 w-3.5" /></a>
             </div>
           </Reveal>

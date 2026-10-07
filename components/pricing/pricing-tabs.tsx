@@ -115,8 +115,8 @@ const SMS_TIERS: SmsTier[] = [
   { tier: 3, range: "₹8,000 – ₹13,999", rate: "₹0.18", rateValue: 0.18, minRecharge: 8_000, maxRecharge: 13_999, validity: "24 months" },
   { tier: 4, range: "₹14,000 – ₹59,999", rate: "₹0.16", rateValue: 0.16, minRecharge: 14_000, maxRecharge: 59_999, validity: "24 months" },
   { tier: 5, range: "₹60,000 – ₹1,29,999", rate: "₹0.14", rateValue: 0.14, minRecharge: 60_000, maxRecharge: 129_999, validity: "24 months", badge: "Most popular" },
-  { tier: 6, range: "₹1,30,000 – ₹5,99,999", rate: "₹0.12", rateValue: 0.12, minRecharge: 130_000, maxRecharge: 599_999, validity: "24 months" },
-  { tier: 7, range: "₹6,00,000+", rate: "₹0.09", rateValue: 0.09, minRecharge: 600_000, maxRecharge: Number.POSITIVE_INFINITY, validity: "24 months", badge: "Best rate" },
+  { tier: 6, range: "₹1,30,000 – ₹5,99,999", rate: "₹0.125", rateValue: 0.125, minRecharge: 130_000, maxRecharge: 599_999, validity: "24 months" },
+  { tier: 7, range: "₹6,00,000+", rate: "₹0.115", rateValue: 0.115, minRecharge: 600_000, maxRecharge: Number.POSITIVE_INFINITY, validity: "24 months", badge: "Best rate" },
 ]
 
 function SmsPanel() {
@@ -449,9 +449,9 @@ function VolumeCalculator() {
 /* ---------- WhatsApp Panel ---------- */
 
 const META_RATES = [
-  { type: "Marketing", rate: "₹0.8631", use: "Promotional campaigns, offers, broadcasts" },
-  { type: "Utility", rate: "₹0.1150", use: "Order updates, shipping alerts, account notifications" },
-  { type: "Authentication", rate: "₹0.1150", use: "OTPs, 2FA codes, identity verification" },
+  { type: "Marketing", rate: "₹0.94", use: "Promotional campaigns, offers, broadcasts" },
+  { type: "Utility", rate: "₹0.15", use: "Order updates, shipping alerts, account notifications" },
+  { type: "Authentication", rate: "₹0.15", use: "OTPs, 2FA codes, identity verification" },
   { type: "Service (user-initiated)", rate: "Free", use: "Replies within the 24h customer service window" },
 ]
 
@@ -483,7 +483,7 @@ function WhatsAppPanel() {
           <h3 className="text-[15.5px] font-semibold tracking-tight text-foreground">How it works</h3>
           <ol className="mt-4 space-y-4">
             {[
-                "Start with the ₹100 minimum top-up. First-time signup adds a ₹60 bonus, so your wallet opens with ₹160 — roughly 180–220 WhatsApp messages depending on category (marketing, utility, or authentication).",
+                "Start with the ₹100 minimum top-up. First-time signup adds a ₹60 bonus, so your wallet opens with ₹160 — roughly 170 marketing messages, or over 1,000 utility or authentication messages.",
                 "Messages are charged per template message on Meta's current India rate card.",
                 "Top up when you're low — any amount from ₹100 upwards. Wallet credits carry 24-month validity.",
               "No monthly fee, no contracted volume, no lock-in. Pause or stop anytime.",
