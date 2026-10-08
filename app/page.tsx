@@ -8,6 +8,7 @@ import { FinalCta } from "@/components/landing/final-cta"
 import { HowItWorks } from "@/components/landing/how-it-works"
 import { Industries } from "@/components/landing/industries"
 import { OperatorsStrip } from "@/components/landing/operators-strip"
+import { MessagingShowcase } from "@/components/landing/messaging-showcase"
 import { PricingTeaser } from "@/components/landing/pricing-teaser"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
@@ -70,6 +71,7 @@ export default function HomePage() {
       <SiteHeader />
       <TestHero />
       <AiShowcase />
+      <MessagingShowcase />
       <OperatorsStrip />
       <ChannelsShowcase />
       <StatsStrip />
