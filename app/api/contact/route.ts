@@ -30,6 +30,10 @@ type ContactPayload = {
   country?: string
   numberType?: string
   message?: string
+  // Which page/form the lead came from (shown in the notification email).
+  source?: string
+  // "sales" = the pricing-page Talk to sales form, which has stricter required fields.
+  intent?: string
   // Honeypot — must be empty. If a bot fills it, drop silently.
   website?: string
 }
@@ -42,7 +46,12 @@ function jsonError(status: number, error: string, message: string) {
 }
 
 function validate(body: ContactPayload): { ok: true } | { ok: false; field: string; message: string } {
-  const required: (keyof ContactPayload)[] = ["firstName", "lastName", "email", "company", "message"]
+  const isSales = body.intent === "sales"
+  // Contact page: name, email, company, message. Sales enquiry: name, email,
+  // phone, channels and volume (company becomes optional).
+  const required: (keyof ContactPayload)[] = isSales
+    ? ["firstName", "lastName", "email", "phone", "interest", "volume", "message"]
+    : ["firstName", "lastName", "email", "company", "message"]
   for (const key of required) {
     const v = body[key]
     if (typeof v !== "string" || v.trim().length === 0) {
@@ -56,6 +65,12 @@ function validate(body: ContactPayload): { ok: true } | { ok: false; field: stri
   // Pragmatic email check — deeper validation happens in the CRM/webhook.
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) {
     return { ok: false, field: "email", message: "Enter a valid email address" }
+  }
+  if (isSales) {
+    const digits = body.phone!.replace(/\D/g, "")
+    if (digits.length < 7) {
+      return { ok: false, field: "phone", message: "Enter a valid phone number" }
+    }
   }
   return { ok: true }
 }
@@ -116,7 +131,7 @@ export async function POST(req: Request) {
     ["Interest", body.interest?.trim()],
     ["Monthly volume", body.volume?.trim()],
     ["Message", body.message?.trim()],
-    ["Source", "smslocal.in — /company/contact/"],
+    ["Source", body.source?.trim().slice(0, 120) || "smslocal.in — /company/contact/"],
   ]
 
   // Deliberately not awaited into the response path's failure handling: a

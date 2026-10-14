@@ -84,9 +84,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Pricing ──────────────────────────────────────────────────────────────
   "/pricing": {
-    title: "SMS Pricing in India — Plans from ₹0.115, Trusted",
+    title: "Pricing — Start Free, Every Channel Included",
     description:
-      "SMS pricing in India with volume-tier discounts — pay-as-you-go WhatsApp Business API, OTP, and AI WhatsApp Agents, 24-month validity, and ₹60 free credit.",
+      "Start free with ₹60 credit. SMS, WhatsApp, RCS, Messenger and Instagram with Agentic AI on one platform. Talk to sales for volume discounts.",
     focusKeyword: "SMS pricing in India",
     keywords: [
       "SMS pricing in India",

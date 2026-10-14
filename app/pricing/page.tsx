@@ -1,106 +1,168 @@
 import Link from "next/link"
 import type { Metadata } from "next"
-import { ArrowRight, CheckCircle2, Headphones, Wallet } from "lucide-react"
+import {
+  ArrowRight,
+  BadgeCheck,
+  Bot,
+  Building2,
+  CheckCircle2,
+  Gift,
+  Headphones,
+  Layers,
+  Mail,
+  MessageSquare,
+  MessagesSquare,
+  Percent,
+  Send,
+  ShieldCheck,
+  TrendingUp,
+  UserPlus,
+  Wallet,
+  Zap,
+} from "lucide-react"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { RelatedContent } from "@/components/shared/related-content"
-import { Faq, ProductFinalCta, Section } from "@/components/product/product-page"
-import { PricingTabs } from "@/components/lazy"
+import { Faq, Section } from "@/components/product/product-page"
 import { BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
+import { InstagramMark, MessengerMark, WhatsAppMark } from "@/components/pricing/brand-marks"
+import { TalkToSales } from "@/components/pricing/talk-to-sales"
 import { getPageMetadata } from "@/lib/seo"
 
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
 export const metadata: Metadata = getPageMetadata("/pricing")
 
-type RateRow = {
-  channel: string
-  rate: string
-  notes: string
-}
+type IconComp = React.ComponentType<{ className?: string }>
 
-const CONFIRMED_RATES: RateRow[] = [
-  { channel: "Bulk SMS", rate: "₹0.115 – ₹0.24 / SMS", notes: "7 volume tiers, no monthly fee, DLT-compliant" },
-  { channel: "WhatsApp — Marketing", rate: "₹0.94 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
-  { channel: "WhatsApp — Utility", rate: "₹0.15 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
-  { channel: "WhatsApp — Authentication", rate: "₹0.15 / message", notes: "Meta's published India rate, zero SMSLocal markup" },
-  { channel: "WhatsApp — Service (user-initiated)", rate: "Free", notes: "Within Meta's 24-hour customer service window" },
-  { channel: "RCS — Basic text", rate: "₹0.13 / message", notes: "1% below benchmarked market rate" },
-  { channel: "RCS — Rich card", rate: "₹0.25 / message", notes: "1% below benchmarked market rate" },
-  { channel: "OTP & Transactional SMS", rate: "Same as Bulk SMS tiers", notes: "Priority route, sub-1s typical delivery" },
+/** Every channel and capability that comes with an account. */
+const PLATFORM: { name: string; blurb: string; icon: IconComp; tint: string }[] = [
+  {
+    name: "SMS",
+    blurb: "DLT-compliant promotional and transactional SMS on direct-operator routes.",
+    icon: MessageSquare,
+    tint: "bg-sky-500/10 text-sky-600 dark:text-sky-300",
+  },
+  {
+    name: "WhatsApp",
+    blurb: "Official Business API with approved templates, media, buttons and a shared team inbox.",
+    icon: WhatsAppMark,
+    tint: "bg-[#25D366]/10",
+  },
+  {
+    name: "RCS",
+    blurb: "Verified, branded rich cards and carousels with automatic SMS fallback.",
+    icon: MessagesSquare,
+    tint: "bg-indigo-500/10 text-indigo-600 dark:text-indigo-300",
+  },
+  {
+    name: "Messenger",
+    blurb: "Reply to Facebook Messenger conversations from the same inbox.",
+    icon: MessengerMark,
+    tint: "bg-[#0084FF]/10",
+  },
+  {
+    name: "Instagram",
+    blurb: "Manage Instagram DMs and story replies alongside every other channel.",
+    icon: InstagramMark,
+    tint: "bg-[#E4405F]/10",
+  },
+  {
+    name: "Agentic AI",
+    blurb: "AI agents that answer customers on every channel, in 8 Indian languages, around the clock.",
+    icon: Bot,
+    tint: "bg-primary/10 text-primary",
+  },
 ]
 
-const WALLET_POINTS = [
-  "One wallet, every channel. Load once and use the balance for SMS, WhatsApp, AI, and OTP.",
-  "Credits are denominated in INR, not messages. Rates apply at send time.",
-  "24-month validity at every paid tier (unlimited on Tier 1).",
-  "Top-up from ₹100 via UPI, net banking, Visa/Mastercard/Rupay, or wire transfer for enterprise.",
-  "GST (18%) added on every invoice as per Indian law.",
-  "Auto-generated GST invoices emailed to your billing contact.",
-  "Unused credit balance refundable within 7 days of purchase if no messages have been sent.",
+/** Bulk messaging runs on four channels. */
+const BULK: { name: string; line: string; points: string[]; icon: IconComp; tint: string }[] = [
+  {
+    name: "WhatsApp",
+    line: "Broadcast approved templates to opted-in customers.",
+    points: ["Images, buttons and links in every message", "Delivery and read reports"],
+    icon: WhatsAppMark,
+    tint: "bg-[#25D366]/10",
+  },
+  {
+    name: "SMS",
+    line: "Reach every handset, with or without data.",
+    points: ["DLT template and sender ID management", "Priority routes for OTP and alerts"],
+    icon: MessageSquare,
+    tint: "bg-sky-500/10 text-sky-600 dark:text-sky-300",
+  },
+  {
+    name: "Email",
+    line: "Campaigns and transactional email from one dashboard.",
+    points: ["Reusable templates and audiences", "Open and click tracking"],
+    icon: Mail,
+    tint: "bg-amber-500/10 text-amber-600 dark:text-amber-300",
+  },
+  {
+    name: "RCS",
+    line: "Rich, branded messages that fall back to SMS.",
+    points: ["Cards, carousels and quick replies", "Verified sender with your logo"],
+    icon: MessagesSquare,
+    tint: "bg-indigo-500/10 text-indigo-600 dark:text-indigo-300",
+  },
 ]
 
-const ENTERPRISE_POINTS = [
-  "Custom routing arrangements",
-  "Dedicated account manager and technical contact",
-  "99.99% uptime SLA with credit guarantees",
-  "Priority AI agent language tuning on your domain data",
-  "Custom reporting and audit exports",
-  "Invoicing terms (NET 15/30) available on approval",
+/** Channel pills in the hero. `plain` icons inherit the text colour; brand marks keep their own. */
+const HERO_CHANNELS: { name: string; icon: IconComp; plain?: boolean }[] = [
+  { name: "WhatsApp", icon: WhatsAppMark },
+  { name: "SMS", icon: MessageSquare, plain: true },
+  { name: "RCS", icon: MessagesSquare, plain: true },
+  { name: "Messenger", icon: MessengerMark },
+  { name: "Instagram", icon: InstagramMark },
+  { name: "Email", icon: Mail, plain: true },
+  { name: "Agentic AI", icon: Bot, plain: true },
+]
+
+const STEPS: { n: string; title: string; text: string; icon: IconComp }[] = [
+  {
+    n: "01",
+    title: "Create your account",
+    text: "Sign up in a couple of minutes. No credit card, no setup fee.",
+    icon: UserPlus,
+  },
+  {
+    n: "02",
+    title: "Try every channel",
+    text: "Use your free credit to send on SMS, WhatsApp, RCS and more, and test the AI agent.",
+    icon: Send,
+  },
+  {
+    n: "03",
+    title: "Scale with a plan that fits",
+    text: "Sending a lot? Talk to sales for volume discounts, routes and a dedicated manager.",
+    icon: TrendingUp,
+  },
 ]
 
 const PRICING_FAQ = [
   {
-    q: "Is there a free trial?",
-    a: "Every new account gets ₹60 free credit on signup, no credit card required. You can test every product — SMS, WhatsApp, OTP — until the credit runs out.",
+    q: "What do I get when I sign up?",
+    a: "Every new account gets free credit, with no credit card required. You can use it to test SMS, WhatsApp, RCS and the other channels on real numbers before you commit to anything.",
   },
   {
-    q: "Are there any monthly fees?",
-    a: "No. SMSLocal has no monthly subscription, no minimum volume commitment, and no user licence fees. You pay only for messages sent.",
+    q: "Which channels are included?",
+    a: "SMS, WhatsApp, RCS, Messenger, Instagram and Email, with Agentic AI to handle conversations on them. They all run from one platform, one wallet and one inbox.",
   },
   {
-    q: "Is there a setup or activation fee for WhatsApp?",
-    a: "No. Setup and activation are both zero. You pay only for the messages you send, at Meta's published India rates.",
+    q: "How do I get volume pricing or a discount?",
+    a: "Use the Talk to sales button on this page and tell us which channels you need and how much you send each month. Our team will come back within one business day with a plan that fits your volume.",
   },
   {
-    q: "How is SMSLocal's RCS pricing set?",
-    a: "Our published RCS rate is pegged at exactly 1% below MSG91's public India rate card — 13 paise per basic text and 25 paise per rich card (pre-GST). If a benchmarked competitor drops below us, we reprice. The competitor rates we track, their source URLs, and the last-fetched date are all listed on the RCS pricing tab.",
+    q: "Which channels can I use for bulk messaging?",
+    a: "Bulk messaging works on four channels: WhatsApp, SMS, Email and RCS. You can run campaigns on one channel or combine them, for example RCS with an automatic SMS fallback.",
   },
   {
-    q: "Is there a monthly platform fee for RCS?",
-    a: "No. Our RCS wallet plans (Starter ₹2,000, Growth ₹5,000, Scale ₹10,000) are wallet credit — the amount you pay is the amount of credit in your wallet. We don't charge a separate platform fee on top, unlike some competitors. Validity is 24 months on every plan.",
+    q: "Is there a setup or activation fee?",
+    a: "No. Setup and activation are both free, and there is no monthly subscription or minimum commitment to get started.",
   },
   {
-    q: "Do I pay for RCS messages that fall back to SMS?",
-    a: "No — failed RCS deliveries are charged at your SMS tier rate, not the RCS rate. You only pay RCS when Google confirms the rich card was actually rendered on the recipient's device.",
-  },
-  {
-    q: "Do my credits expire?",
-    a: "Tier 1 credits (₹100–₹3,999 recharges) have unlimited validity. Every higher tier carries 24 months of validity from the date of recharge.",
-  },
-  {
-    q: "Is GST included in the rates shown?",
-    a: "No — GST at 18% is added at checkout as per Indian tax law. The rates on this page are ex-GST.",
-  },
-  {
-    q: "Can I get an invoice for my recharge?",
-    a: "Yes, every top-up generates a GST-compliant invoice emailed to your billing contact.",
-  },
-  {
-    q: "What happens when my wallet hits zero?",
-    a: "Campaigns in progress pause. We email you when the balance hits the 10% mark so you can top up without interruption.",
-  },
-  {
-    q: "Is promotional SMS subject to DND?",
-    a: "Yes — promotional SMS can only be sent to non-DND numbers between 10 AM and 9 PM IST as per TRAI. Transactional SMS goes to all numbers, 24/7, on DLT-approved templates.",
-  },
-  {
-    q: "What about international SMS?",
-    a: "Available on request. Rates vary by destination country.",
-  },
-  {
-    q: "How do I downgrade tier if I'm sending less this month?",
-    a: "You don't. Your per-SMS rate is locked to the tier at which you last topped up. Rates update automatically on your next recharge.",
+    q: "Do you help with DLT and WhatsApp onboarding?",
+    a: "Yes. Our team supports DLT registration, sender IDs and template approvals for SMS, and guides you through Meta business verification and template approval for WhatsApp.",
   },
 ]
 
@@ -113,9 +175,11 @@ export default function PricingPage() {
           { name: "Pricing", path: "/pricing" },
         ]}
       />
-      <FaqJsonLd items={PRICING_FAQ} path="/pricing" />      <SiteHeader />
+      <FaqJsonLd items={PRICING_FAQ} path="/pricing" />
+      <AnnouncementStrip />
+      <SiteHeader />
       <main>
-        {/* Hero */}
+        {/* ───────────── Hero ───────────── */}
         <section className="relative overflow-hidden bg-[oklch(0.14_0.02_230)] text-white">
           <div
             aria-hidden
@@ -128,33 +192,37 @@ export default function PricingPage() {
           <div aria-hidden className="bg-grid-ink absolute inset-0 opacity-60 mask-radial-fade" />
           <div className="relative mx-auto max-w-5xl px-4 py-20 text-center sm:px-6 sm:py-28">
             <span className="inline-flex rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/80 backdrop-blur-md">
-              Transparent pricing
+              Pricing
             </span>
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl">
-              Simple pricing — scaled to your volume.
+              Every channel. One platform.{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Start free.</span>
             </h1>
             <p className="mx-auto mt-5 max-w-2xl text-pretty text-[17px] leading-relaxed text-white/70">
-              No setup fee. No activation fee. No monthly subscription. Pay only for what you send,
-              and pay less the more you send. ₹60 free credit on signup — enough to test every
-              product.
+              SMS, WhatsApp, RCS, Messenger and Instagram, with Agentic AI answering for you. Try everything
+              free, then talk to us for a plan that fits your volume.
             </p>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/signup/"
                 className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
               >
-                Start Free — ₹60 Credit
+                Start your free trial
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
-              <Link
-                href="/company/contact/"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
-              >
-                <Headphones className="h-4 w-4" />
-                Talk to sales
-              </Link>
             </div>
-            <div className="mt-10 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[12.5px] text-white/70">
+            <ul className="mx-auto mt-10 flex max-w-5xl flex-wrap items-center justify-center gap-2 lg:flex-nowrap">
+              {HERO_CHANNELS.map(({ name, icon: Icon, plain }) => (
+                <li
+                  key={name}
+                  className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full border border-white/10 bg-white/[0.06] px-3.5 py-1.5 text-[12.5px] font-medium text-white/85 backdrop-blur-md"
+                >
+                  <Icon className={`h-4 w-4 ${plain ? "text-white/70" : ""}`} />
+                  {name}
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-[12.5px] text-white/70">
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="h-3.5 w-3.5 text-primary" />
                 No credit card to start
@@ -165,206 +233,54 @@ export default function PricingPage() {
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="h-3.5 w-3.5 text-primary" />
-                Credits valid 24 months
+                One wallet for every channel
               </span>
             </div>
           </div>
         </section>
 
-        {/* Channel tabs */}
-        <PricingTabs />
-
-        {/* Static rate summary — every confirmed rate in one crawlable table */}
-        <Section>
-          <span className="inline-flex rounded-full border border-border bg-background px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-            All rates at a glance
-          </span>
-          <h2 className="mt-4 text-pretty text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Every SMSLocal rate, in one table
-          </h2>
-          <p className="mt-4 max-w-2xl text-[15px] leading-relaxed text-muted-foreground">
-            The confirmed per-message rate for every channel, ex-GST. See the tabs above for the
-            full breakdown, calculators, and volume tiers.
-          </p>
-
-          <div className="mt-8 overflow-hidden rounded-2xl border border-border shadow-sm">
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[560px] border-collapse text-left text-[14px]">
-                <thead>
-                  <tr className="border-b border-border bg-muted/40">
-                    <th scope="col" className="px-4 py-3.5 text-[11.5px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
-                      Channel
-                    </th>
-                    <th scope="col" className="px-4 py-3.5 text-right text-[11.5px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
-                      Rate
-                    </th>
-                    <th scope="col" className="px-4 py-3.5 text-[11.5px] font-semibold uppercase tracking-[0.1em] text-muted-foreground">
-                      Notes
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {CONFIRMED_RATES.map((row, i) => (
-                    <tr key={row.channel} className={`border-b border-border last:border-b-0 ${i % 2 ? "bg-muted/20" : ""}`}>
-                      <td className="px-4 py-3.5 align-top font-semibold text-foreground">{row.channel}</td>
-                      <td className="px-4 py-3.5 text-right align-top font-mono tabular-nums text-foreground/85">{row.rate}</td>
-                      <td className="px-4 py-3.5 align-top text-foreground/85">{row.notes}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          <p className="mt-3 text-[12.5px] leading-relaxed text-muted-foreground">
-            Rates shown are per-message, ex-GST, and reflect SMSLocal&apos;s published rate card.
-            WhatsApp rates are Meta&apos;s published India rates, passed through with zero
-            SMSLocal markup, and are subject to change on Meta&apos;s own schedule.
-          </p>
-        </Section>
-
-        {/* Wallet & billing */}
-        <Section tone="muted">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1.3fr]">
-            <div>
-              <span className="inline-flex rounded-full border border-border bg-background px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-                Billing &amp; wallet
-              </span>
-              <h2 className="mt-4 text-pretty text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-                How your wallet works
-              </h2>
-              <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
-                One wallet, every channel. Credits in INR, rates applied at send time, GST-compliant
-                invoicing on every top-up.
-              </p>
-              <div className="mt-8 rounded-2xl border border-border bg-background p-5 shadow-sm">
-                <div className="flex items-center gap-2 border-b border-border pb-3">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-primary/10 text-primary">
-                    <Wallet className="h-4.5 w-4.5" />
-                  </span>
-                  <div className="leading-tight">
-                    <p className="text-[13px] font-semibold text-foreground">Your first top-up</p>
-                    <p className="text-[11.5px] text-muted-foreground">
-                      Pay ₹100, get ₹160 in the wallet — a one-time ₹60 signup bonus.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="mt-4 grid grid-cols-[1fr_auto_1fr_auto_1.2fr] items-stretch gap-2">
-                  <div className="flex flex-col items-center justify-center rounded-lg border border-border bg-muted/30 p-3 text-center">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-muted-foreground">
-                      You pay
-                    </p>
-                    <p className="mt-1 font-mono text-[22px] font-semibold text-foreground tabular-nums">
-                      ₹100
-                    </p>
-                    <p className="mt-0.5 text-[10.5px] text-muted-foreground">Minimum top-up</p>
-                  </div>
-
-                  <span
-                    className="flex items-center justify-center font-mono text-[18px] font-semibold text-muted-foreground/60"
-                    aria-hidden="true"
-                  >
-                    +
-                  </span>
-
-                  <div className="flex flex-col items-center justify-center rounded-lg border border-primary/30 bg-primary/5 p-3 text-center">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.12em] text-primary">
-                      We add
-                    </p>
-                    <p className="mt-1 font-mono text-[22px] font-semibold text-primary tabular-nums">
-                      ₹60
-                    </p>
-                    <p className="mt-0.5 text-[10.5px] text-muted-foreground">One-time bonus</p>
-                  </div>
-
-                  <span
-                    className="flex items-center justify-center font-mono text-[18px] font-semibold text-muted-foreground/60"
-                    aria-hidden="true"
-                  >
-                    =
-                  </span>
-
-                  <div className="flex flex-col items-center justify-center rounded-lg border-2 border-primary bg-primary p-3 text-center text-primary-foreground">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.12em] opacity-90">
-                      Wallet shows
-                    </p>
-                    <p className="mt-1 font-mono text-[22px] font-semibold tabular-nums">₹160</p>
-                    <p className="mt-0.5 text-[10.5px] opacity-85">Ready to spend</p>
-                  </div>
-                </div>
-                <p className="mt-3 text-[11.5px] leading-relaxed text-muted-foreground">
-                  Signup credit is a one-time bonus on your first top-up. Subsequent top-ups (any
-                  amount ≥ ₹100) credit the wallet 1:1, pre-GST. Credits never expire at the
-                  Starter tier and carry 24-month validity at every paid tier.
-                </p>
-              </div>
-            </div>
-            <ul className="grid grid-cols-1 gap-3">
-              {WALLET_POINTS.map((line) => (
-                <li
-                  key={line}
-                  className="flex items-start gap-3 rounded-xl border border-border bg-background p-4 shadow-sm"
-                >
-                  <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
-                    <CheckCircle2 className="h-3.5 w-3.5" />
-                  </span>
-                  <span className="text-[13.5px] leading-relaxed text-foreground">{line}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Section>
-
-        {/* Enterprise */}
-        <Section>
-          <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-[oklch(0.17_0.03_230)] via-[oklch(0.19_0.03_220)] to-[oklch(0.22_0.04_200)] p-10 text-white shadow-2xl sm:p-14">
+        {/* ───────────── Broadcasting at scale → Talk to sales ───────────── */}
+        <Section tone="dark" className="!border-t-0 !pt-0">
+          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.06] to-white/[0.02] p-8 sm:p-12">
             <div
               aria-hidden
-              className="pointer-events-none absolute -right-32 -top-32 h-[380px] w-[380px] rounded-full opacity-40 blur-3xl"
-              style={{
-                background:
-                  "radial-gradient(circle, color-mix(in oklch, var(--primary) 50%, transparent), transparent 70%)",
-              }}
+              className="pointer-events-none absolute -left-20 -top-20 h-72 w-72 rounded-full bg-primary/20 blur-3xl"
             />
-            <div aria-hidden className="bg-grid-ink absolute inset-0 opacity-40 mask-radial-fade" />
-            <div className="relative grid grid-cols-1 gap-10 lg:grid-cols-[1fr_1fr] lg:items-center">
+            <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
               <div>
-                <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/85">
-                  Enterprise
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">
+                  <Building2 className="h-3.5 w-3.5" />
+                  Broadcasting at scale
                 </span>
-                <h2 className="mt-4 text-pretty text-3xl font-semibold tracking-tight sm:text-4xl">
-                  Sending more than ₹6,00,000 / month? Let&apos;s talk.
+                <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                  Big volumes. Bigger discounts.
                 </h2>
-                <p className="mt-4 text-[15px] leading-relaxed text-white/75">
-                  Enterprise terms with custom routing, SLAs, and dedicated support for high-volume
-                  senders across SMS, WhatsApp, and AI agents.
+                <p className="mt-4 max-w-xl text-[15.5px] leading-relaxed text-white/70">
+                  Tell us the channels you use and how much you send. Our sales team will build a plan
+                  around your volume, with better rates, dedicated routes and a person who knows your account.
                 </p>
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <Link
-                    href="/company/contact/"
-                    className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 hover:brightness-110"
-                  >
-                    Talk to sales
-                    <ArrowRight className="h-4 w-4" />
-                  </Link>
-                  <Link
-                    href="/products/"
-                    className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-5 py-3 text-sm font-medium text-white hover:bg-white/10"
-                  >
-                    View all products
-                  </Link>
+                <div className="mt-7">
+                  <TalkToSales variant="primary" label="Talk to sales" />
                 </div>
               </div>
-              <ul className="grid grid-cols-1 gap-2.5 sm:grid-cols-2">
-                {ENTERPRISE_POINTS.map((point) => (
+
+              <ul className="grid gap-3">
+                {[
+                  { icon: Percent, title: "Volume discounts", text: "Better rates as your monthly volume grows." },
+                  { icon: Zap, title: "Custom routing and SLAs", text: "Priority routes and delivery commitments." },
+                  { icon: BadgeCheck, title: "Dedicated account manager", text: "One person who knows your account." },
+                ].map(({ icon: Icon, title, text }) => (
                   <li
-                    key={point}
-                    className="flex items-start gap-2.5 rounded-lg border border-white/10 bg-white/5 p-3 text-[13px] text-white/85 backdrop-blur"
+                    key={title}
+                    className="flex items-start gap-3.5 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur"
                   >
-                    <span className="mt-0.5 inline-flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-primary/25 text-primary">
-                      <CheckCircle2 className="h-3 w-3" />
+                    <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary">
+                      <Icon className="h-5 w-5" />
                     </span>
-                    {point}
+                    <span>
+                      <span className="block text-[14.5px] font-semibold text-white">{title}</span>
+                      <span className="mt-0.5 block text-[13px] leading-relaxed text-white/65">{text}</span>
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -372,16 +288,285 @@ export default function PricingPage() {
           </div>
         </Section>
 
-        <Faq eyebrow="Pricing FAQs" title="Everything you might want to ask before topping up" items={PRICING_FAQ} />
+        {/* ───────────── All channels + Agentic AI ───────────── */}
+        <Section tone="muted" className="sm:!py-20">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">What you get</span>
+            <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Every channel, with Agentic AI built in
+            </h2>
+            <p className="mt-3 text-[15.5px] leading-relaxed text-muted-foreground">
+              One account gives you all of these, so you can meet customers wherever they message you.
+            </p>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {PLATFORM.map(({ name, blurb, icon: Icon, tint }) => (
+              <div
+                key={name}
+                className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+              >
+                <span className={`inline-flex h-12 w-12 items-center justify-center rounded-xl ${tint}`}>
+                  <Icon className="h-6 w-6" />
+                </span>
+                <div>
+                  <h3 className="text-[17px] font-semibold tracking-tight text-foreground">{name}</h3>
+                  <p className="mt-1.5 text-[14px] leading-relaxed text-muted-foreground">{blurb}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        {/* ───────────── Free credit ───────────── */}
+        <Section className="sm:!py-20">
+          <div className="relative overflow-hidden rounded-3xl border border-primary/25 bg-gradient-to-br from-primary/10 via-card to-accent/10 p-8 shadow-sm sm:p-12">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-primary/15 blur-3xl"
+            />
+            <div className="relative grid grid-cols-1 items-center gap-10 lg:grid-cols-[auto_1fr_auto]">
+              <div className="flex items-center gap-5">
+                <span className="inline-flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-primary/15 text-primary">
+                  <Gift className="h-8 w-8" />
+                </span>
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">Free on signup</p>
+                  <p className="mt-1 text-6xl font-bold leading-none tracking-tight text-foreground sm:text-7xl">
+                    ₹60
+                  </p>
+                  <p className="mt-1 text-[14px] font-medium text-muted-foreground">free credit</p>
+                </div>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+                  Test every channel before you spend anything.
+                </h2>
+                <ul className="mt-4 grid gap-2.5 text-[14.5px] text-muted-foreground sm:grid-cols-2">
+                  {[
+                    "No credit card required",
+                    "Works on SMS, WhatsApp, RCS and more",
+                    "Try the AI agent on live conversations",
+                    "DLT registration support included",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-2.5">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <Link
+                href="/signup/"
+                className="group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
+              >
+                Claim your free credit
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </div>
+          </div>
+        </Section>
+
+        {/* ───────────── Bulk messaging: 4 channels ───────────── */}
+        <Section className="sm:!py-20">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div className="max-w-2xl">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
+                Bulk messaging
+              </span>
+              <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+                Four channels for every campaign
+              </h2>
+              <p className="mt-3 text-[15.5px] leading-relaxed text-muted-foreground">
+                Send to thousands of customers at once on WhatsApp, SMS, Email and RCS, from one dashboard
+                and one wallet.
+              </p>
+            </div>
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-border bg-card px-3.5 py-1.5 text-[12.5px] font-semibold text-foreground shadow-sm">
+              <Layers className="h-4 w-4 text-primary" />
+              4 channels · 1 wallet
+            </span>
+          </div>
+
+          <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {BULK.map(({ name, line, points, icon: Icon, tint }) => (
+              <div key={name} className="flex flex-col rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <span className={`inline-flex h-12 w-12 items-center justify-center rounded-full ${tint}`}>
+                  <Icon className="h-6 w-6" />
+                </span>
+                <h3 className="mt-4 text-[18px] font-semibold tracking-tight text-foreground">{name}</h3>
+                <p className="mt-1.5 text-[14px] leading-relaxed text-muted-foreground">{line}</p>
+                <ul className="mt-4 space-y-2 border-t border-border pt-4">
+                  {points.map((p) => (
+                    <li key={p} className="flex items-start gap-2 text-[13.5px] text-foreground/85">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </Section>
+
+        {/* ───────────── Agentic AI spotlight (dark) ───────────── */}
+        <Section tone="dark" className="sm:!py-20">
+          <div className="relative overflow-hidden">
+            <div
+              aria-hidden
+              className="pointer-events-none absolute -right-24 top-0 h-80 w-80 rounded-full bg-primary/15 blur-3xl"
+            />
+            <div className="relative grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
+              <div>
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-primary">
+                  <Bot className="h-3.5 w-3.5" />
+                  Agentic AI
+                </span>
+                <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[42px] lg:leading-[1.08]">
+                  AI that answers while{" "}
+                  <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">you sleep.</span>
+                </h2>
+                <p className="mt-4 max-w-xl text-[15.5px] leading-relaxed text-white/70">
+                  Agentic AI replies to your customers on WhatsApp, Messenger, Instagram and more, in 8 Indian
+                  languages, around the clock.
+                </p>
+                <ul className="mt-7 space-y-3.5">
+                  {[
+                    "Answers common questions instantly, on every channel",
+                    "Replies in the language your customer writes in",
+                    "Works alongside your team in one shared inbox",
+                  ].map((point) => (
+                    <li key={point} className="flex items-start gap-3 text-[15px] text-white/85">
+                      <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
+                        <CheckCircle2 className="h-3.5 w-3.5" />
+                      </span>
+                      {point}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* chat mock */}
+              <div className="mx-auto w-full max-w-md">
+                <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] shadow-2xl shadow-black/40 backdrop-blur">
+                  <div className="flex items-center gap-3 border-b border-white/10 bg-white/[0.04] px-4 py-3.5">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/20 text-primary">
+                      <Bot className="h-5 w-5" />
+                    </span>
+                    <div className="leading-tight">
+                      <p className="text-[14px] font-semibold text-white">SMSLocal AI agent</p>
+                      <p className="mt-0.5 inline-flex items-center gap-1.5 text-[12px] text-white/60">
+                        <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                        Online now
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3 px-4 py-5">
+                    <div className="max-w-[82%] rounded-2xl rounded-tl-md bg-white/10 px-3.5 py-2.5 text-[14px] leading-snug text-white">
+                      मेरा ऑर्डर कहाँ है?
+                    </div>
+                    <div className="ml-auto max-w-[82%] rounded-2xl rounded-tr-md bg-primary px-3.5 py-2.5 text-[14px] leading-snug text-primary-foreground">
+                      आपका ऑर्डर #4821 कल तक पहुँच जाएगा। 🚚
+                    </div>
+                    <div className="max-w-[82%] rounded-2xl rounded-tl-md bg-white/10 px-3.5 py-2.5 text-[14px] leading-snug text-white">
+                      Can I change the delivery address?
+                    </div>
+                    <div className="ml-auto max-w-[82%] rounded-2xl rounded-tr-md bg-primary px-3.5 py-2.5 text-[14px] leading-snug text-primary-foreground">
+                      Sure. Share the new address and I&apos;ll update it right away.
+                    </div>
+                  </div>
+
+                  <div className="flex items-center justify-between border-t border-white/10 bg-white/[0.04] px-4 py-3 text-[12px] text-white/60">
+                    <span className="inline-flex items-center gap-1.5">
+                      <Zap className="h-3.5 w-3.5 text-primary" />
+                      Handled by AI
+                    </span>
+                    <span>WhatsApp · Messenger · Instagram</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </Section>
+
+        {/* ───────────── How it works ───────────── */}
+        <Section tone="muted" className="sm:!py-20">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">How it works</span>
+            <h2 className="mt-3 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              From signup to scale in three steps
+            </h2>
+          </div>
+          <ol className="relative mt-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+            <span
+              aria-hidden
+              className="pointer-events-none absolute left-[16.6%] right-[16.6%] top-[34px] hidden border-t border-dashed border-primary/40 md:block"
+            />
+            {STEPS.map(({ n, title, text, icon: Icon }) => (
+              <li
+                key={n}
+                className="relative rounded-2xl border border-border bg-card p-6 text-center shadow-sm"
+              >
+                <span className="relative mx-auto inline-flex h-[68px] w-[68px] items-center justify-center rounded-full border border-primary/25 bg-primary/10 text-primary ring-8 ring-card">
+                  <Icon className="h-7 w-7" />
+                </span>
+                <p className="mt-4 font-mono text-[12px] font-semibold tracking-[0.2em] text-primary">STEP {n}</p>
+                <h3 className="mt-1.5 text-[18px] font-semibold tracking-tight text-foreground">{title}</h3>
+                <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">{text}</p>
+              </li>
+            ))}
+          </ol>
+        </Section>
+
+        {/* ───────────── Billing basics (no amounts) ───────────── */}
+        <Section>
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+            {[
+              { icon: Wallet, title: "One wallet, every channel", text: "Load once and use the same balance across SMS, WhatsApp, RCS, Email and AI." },
+              { icon: ShieldCheck, title: "Compliant by default", text: "DLT-compliant SMS, approved WhatsApp templates and verified RCS senders." },
+              { icon: Headphones, title: "Help from real people", text: "Onboarding, DLT registration and template approvals handled with you." },
+            ].map(({ icon: Icon, title, text }) => (
+              <div key={title} className="flex items-start gap-4 rounded-2xl border border-border bg-card p-6 shadow-sm">
+                <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                  <Icon className="h-5 w-5" />
+                </span>
+                <div>
+                  <h3 className="text-[16px] font-semibold tracking-tight text-foreground">{title}</h3>
+                  <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">{text}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Section>
 
         <RelatedContent path="/pricing" />
 
-        <ProductFinalCta
-          title="Start sending in two minutes."
-          subtitle="₹60 free credit. Full DLT compliance. No card. Every product included."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
-        />
+        <Faq eyebrow="Pricing FAQs" title="Everything you might want to ask first" items={PRICING_FAQ} />
+
+        {/* ───────────── Final CTA ───────────── */}
+        <section className="bg-muted/40 py-20 sm:py-24">
+          <div className="mx-auto max-w-4xl px-4 text-center sm:px-6">
+            <h2 className="text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Start sending in two minutes.
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-[16px] leading-relaxed text-muted-foreground">
+              Free credit on signup. Full DLT compliance. No card. Every channel included.
+            </p>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <Link
+                href="/signup/"
+                className="group inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
+              >
+                Start your free trial
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+              <TalkToSales variant="outline" showArrow={false} className="py-3.5" />
+            </div>
+          </div>
+        </section>
       </main>
       <SiteFooter />
     </>
