@@ -41,7 +41,7 @@ export function OrganizationJsonLd() {
       name: "India",
     },
     sameAs: [
-      "https://www.linkedin.com/company/smslocal",
+      "https://www.linkedin.com/company/smslocal-india/",
       "https://twitter.com/smslocal",
       "https://www.facebook.com/smslocal",
       "https://www.youtube.com/@smslocal",

@@ -114,7 +114,7 @@ export function SiteFooter() {
             </a>
             <div className="mt-5 flex items-center gap-2">
               {[
-                { Icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/smslocal" },
+                { Icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/company/smslocal-india/" },
                 { Icon: Twitter, label: "X", href: "https://x.com/smslocal" },
                 { Icon: Facebook, label: "Facebook", href: "https://www.facebook.com/smslocal" },
                 { Icon: Youtube, label: "YouTube", href: "https://www.youtube.com/@smslocal" },
