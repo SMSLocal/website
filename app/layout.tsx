@@ -4,6 +4,7 @@ import { Suspense } from "react"
 import { CookieConsentProvider } from "@/components/consent/cookie-consent"
 import { ConsentedAnalytics } from "@/components/consent/consented-analytics"
 import { ConsentedGoogleAnalytics } from "@/components/consent/consented-google-analytics"
+import { ConsentedPostHog } from "@/components/consent/consented-posthog"
 import { AnalyticsTracker } from "@/components/analytics/tracker"
 import { OrganizationJsonLd } from "@/components/seo/json-ld"
 import { SiteIndexingMeta } from "@/components/seo/site-indexing-meta"
@@ -85,6 +86,12 @@ export default function RootLayout({
           {process.env.NODE_ENV === "production" && (
             <Suspense fallback={null}>
               <ConsentedGoogleAnalytics />
+            </Suspense>
+          )}
+          {/* PostHog — consent-gated, same Suspense reason as GA4. */}
+          {process.env.NODE_ENV === "production" && (
+            <Suspense fallback={null}>
+              <ConsentedPostHog />
             </Suspense>
           )}
         </CookieConsentProvider>

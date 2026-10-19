@@ -30,6 +30,9 @@ const CSP_DIRECTIVES = {
     "https://vercel.live",
     // Google Analytics 4 (gtag.js) — loaded only after analytics consent.
     "https://www.googletagmanager.com",
+    // PostHog (posthog-js lazy-loads extensions from its assets CDN) —
+    // loaded only after analytics consent.
+    "https://us-assets.i.posthog.com",
   ],
   "style-src": [
     "'self'",
@@ -56,6 +59,9 @@ const CSP_DIRECTIVES = {
     "https://*.google-analytics.com",
     "https://analytics.google.com",
     "https://*.analytics.google.com",
+    // PostHog ingestion + config endpoints.
+    "https://us.i.posthog.com",
+    "https://us-assets.i.posthog.com",
   ],
   "frame-ancestors": ["'none'"],
   "form-action": ["'self'"],
@@ -371,6 +377,103 @@ const nextConfig = {
       {
         source: "/resources/dlt-compliance/",
         destination: "/blog/dlt-registration-guide/",
+        permanent: true,
+      },
+      // Legacy WordPress-era URLs that Search Console still reports as 404
+      // (Page indexing → Not found, Oct 2026). Several still earn impressions
+      // and clicks, so each points at its closest live equivalent. Both slash
+      // forms are emitted for the same reason as the /help/ map above. Old
+      // posts with no sensible equivalent (sms-tracker, twitter-sms, …) are
+      // deliberately left to 404.
+      ...Object.entries({
+        // Company, legal, developer pages
+        "contact-us": "/company/contact/",
+        "about-us": "/company/about/",
+        "terms-and-conditions": "/legal/terms/",
+        "sms-api": "/developers/sms-api/",
+        "developer/xml-api": "/developers/xml-api/",
+        "developer/http-api": "/developers/sms-api/",
+        developer: "/developers/",
+        tools: "/resources/tools/",
+        "tools/stop-unwanted-messages": "/resources/tools/",
+        industry: "/solutions/",
+        // Old product landing pages
+        "transactional-sms": "/products/bulk-sms/",
+        "bulksms-text-messenger": "/products/bulk-sms/",
+        "bulk-whatsapp-messaging": "/blog/bulk-whatsapp-messaging/",
+        "bulk-whatsapp-marketing-software-2": "/products/whatsapp-business-api/",
+        "wholesale-voice-mcm": "/products/voice/",
+        // Old blog posts → closest surviving post or product page
+        "blog/sms-gateway": "/blog/bulk-sms-service-api/",
+        "blog/free-sms-api-in-india": "/blog/bulk-sms-service-api/",
+        "blog/otp-sms-provider-in-india": "/blog/otp-sms-service/",
+        "blog/sms-verify-service": "/blog/otp-sms-service/",
+        "blog/bulk-sms-for-otp": "/blog/otp-sms-service/",
+        "blog/sms-code": "/blog/sms-activation/",
+        "blog/rcs-vs-sms": "/blog/rcs-messaging-india/",
+        "blog/bsnl-dlt": "/blog/dlt-registration-guide/",
+        "blog/dlt-rule": "/blog/dlt-registration-guide/",
+        "blog/promotional-sms": "/resources/help/sms/transactional-vs-promotional/",
+        "blog/business-account-whatsapp": "/blog/whatsapp-marketing-india/",
+        "blog/sms-apps": "/blog/best-sms-apps-for-android/",
+        "blog/sms-forwarding": "/blog/receive-sms-messages-on-your-computer/",
+        "blog/free-sms-online-in-india": "/blog/send-sms-online/",
+        "blog/sms-bomber": "/resources/tools/sms-bomber/",
+        "blog/sms-service-providers-in-india": "/products/bulk-sms/",
+        "blog/choosing-the-best-bulk-sms-service-provider-in-india-essential-features-explained":
+          "/products/bulk-sms/",
+        "blog/bulk-sms-service-provider": "/products/bulk-sms/",
+        "blog/bulk-sms-providers": "/products/bulk-sms/",
+        "blog/top-bulk-sms-service-provider-in-india": "/products/bulk-sms/",
+        "blog/bulk-sms-service-provider-in-delhi": "/products/bulk-sms/",
+        "blog/bulk-sms-in-mumbai": "/products/bulk-sms/",
+        "blog/bulk-sms-for-corporate": "/products/bulk-sms/",
+        "blog/bulk-sms-for-advertising-in-india": "/products/bulk-sms/",
+        "blog/sms-service": "/products/bulk-sms/",
+        "blog/sms-portal": "/products/bulk-sms/",
+        "blog/sms-marketing-software": "/products/bulk-sms/",
+        "blog/sms-sign-up": "/signup/",
+      }).flatMap(([slug, destination]) => [
+        { source: `/${slug}`, destination, permanent: true },
+        { source: `/${slug}/`, destination, permanent: true },
+      ]),
+      // WordPress feeds, category archives and author pages. Feeds go back to
+      // their post (which either renders or is caught by the map above);
+      // archives and authors go to the blog index.
+      {
+        source: "/blog/category/:path*",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/author/:path*",
+        destination: "/blog/",
+        permanent: true,
+      },
+      {
+        source: "/blog/:slug/feed/:rest*",
+        destination: "/blog/:slug/",
+        permanent: true,
+      },
+      // City and state landing pages (/bulk-sms-provider/<state>/<city>/) from
+      // the old site. Some still rank; the bulk SMS product page is the
+      // nearest live match.
+      {
+        source: "/bulk-sms-provider/:path*",
+        destination: "/products/bulk-sms/",
+        permanent: true,
+      },
+      // Old use-case agent URLs moved under /products/ai-agents/.
+      {
+        source: "/ai-agents/:path+",
+        destination: "/products/ai-agents/:path+/",
+        permanent: true,
+      },
+      // The old WordPress multilingual plugin exposed /<lang>/ copies of the
+      // site. There are no translations now; send them to the homepage.
+      {
+        source: "/:lang(fr|tr|nl|ru|de|ko|it|es|ja|pt)/:path*",
+        destination: "/",
         permanent: true,
       },
     ]
