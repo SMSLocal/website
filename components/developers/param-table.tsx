@@ -10,7 +10,7 @@ export type ParamRow = {
 
 export function ParamTable({ rows }: { rows: ParamRow[] }) {
   return (
-    <div className="mt-6 overflow-hidden rounded-xl border border-border">
+    <div className="mt-6 overflow-x-auto rounded-xl border border-border">
       <table className="w-full border-collapse text-left text-[13.5px]">
         <thead>
           <tr className="border-b border-border bg-muted/40">
