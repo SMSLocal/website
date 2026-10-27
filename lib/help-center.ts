@@ -325,7 +325,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
           { q: "What is the best free Way2SMS alternative for personal use?", a: "Your mobile operator's bundled SMS. Most Jio, Airtel and Vi plans include around 100 free SMS per day, sent from your real number with no branding or reliability issues. For texting from a laptop, Google Messages for Web mirrors your phone's SMS threads with no install." },
           { q: "Can I send bulk SMS for free like the old Way2SMS?", a: "Not reliably. Free web SMS tools are rate-limited to a few messages a day and cannot send DLT-compliant commercial traffic. For bulk sending in India you need a registered business platform; costs are typically ₹0.10–0.18 per promotional SMS and ₹0.03–0.08 per OTP." },
           { q: "Do Way2SMS alternatives support DLT compliance?", a: "Free consumer tools do not — they cannot register DLT headers or templates. Any service sending commercial SMS to Indian numbers must be DLT-compliant under TRAI's TCCCPR 2018 rules. Business platforms like SMSLocal manage DLT registration for you." },
-          { q: "How is SMSLocal different from a free Way2SMS-style website?", a: "SMSLocal sends over direct operator routes with your own registered sender ID, real-time delivery receipts, DLT compliance, and no daily cap — versus a shared sender, a tiny quota, and no delivery proof on free sites.." },
+          { q: "How is SMSLocal different from a free Way2SMS-style website?", a: "SMSLocal sends over direct operator routes with your own registered sender ID, real-time delivery receipts, DLT compliance, and no daily cap — versus a shared sender, a tiny quota, and no delivery proof on free sites." },
         ],
       },
       {
