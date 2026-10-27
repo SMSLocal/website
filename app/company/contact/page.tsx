@@ -38,13 +38,13 @@ const CHANNELS = [
     icon: MessageCircle,
     title: "WhatsApp us",
     body: "Quick pre-sales questions? Message our team directly on WhatsApp.",
-    action: { label: "Chat on WhatsApp", href: "https://api.whatsapp.com/send?phone=917621073586" },
+    action: { label: "Chat on WhatsApp", href: "https://api.whatsapp.com/send?phone=919930736339" },
   },
   {
     icon: Phone,
     title: "Phone",
     body: "Mon–Sat, 9 AM to 8 PM IST. For after-hours incidents, use support email.",
-    action: { label: "+91 76210 73586", href: "tel:+917621073586" },
+    action: { label: "+91 99307 36339", href: "tel:+919930736339" },
   },
 ]
 
@@ -135,8 +135,8 @@ export default function ContactPage() {
                 </p>
                 <p className="flex items-center gap-2.5">
                   <Phone className="h-4 w-4 flex-none text-primary" />
-                  <Link href="tel:+917621073586" className="hover:text-foreground">
-                    +91 76210 73586
+                  <Link href="tel:+919930736339" className="hover:text-foreground">
+                    +91 99307 36339
                   </Link>
                 </p>
                 <p className="flex items-center gap-2.5">
