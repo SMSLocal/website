@@ -603,7 +603,7 @@ export default function XmlApiPage() {
               and a numeric code.
             </p>
 
-            <div className="mt-6 overflow-hidden rounded-xl border border-border">
+            <div className="mt-6 overflow-x-auto rounded-xl border border-border">
               <table className="w-full border-collapse text-left text-[13.5px]">
                 <thead>
                   <tr className="border-b border-border bg-muted/40">
@@ -658,7 +658,7 @@ export default function XmlApiPage() {
               native SDK support. Here is the quick mapping:
             </p>
 
-            <div className="mt-6 overflow-hidden rounded-xl border border-border">
+            <div className="mt-6 overflow-x-auto rounded-xl border border-border">
               <table className="w-full border-collapse text-left text-[13.5px]">
                 <thead>
                   <tr className="border-b border-border bg-muted/40">

@@ -202,7 +202,7 @@ export function FigureTable({
 }) {
   return (
     <figure className="mt-6">
-      <div className="overflow-hidden rounded-xl border border-border">
+      <div className="overflow-x-auto rounded-xl border border-border">
         <table className="w-full border-collapse text-left text-[14px]">
           <thead>
             <tr className="border-b border-border bg-muted/40">
