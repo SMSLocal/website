@@ -19,6 +19,7 @@ import WhatsappMarketingIndiaPost from "@/content/blog/whatsapp-marketing-india"
 import WhatsappScamsIndiaPost from "@/content/blog/whatsapp-scams-india"
 import SmsMessageAppPost from "@/content/blog/sms-message-app"
 import BulkSmsServiceApiPost from "@/content/blog/bulk-sms-service-api"
+import BulkSmsPost from "@/content/blog/bulk-sms"
 import OtpSmsServicePost from "@/content/blog/otp-sms-service"
 import RcsMessagingIndiaPost from "@/content/blog/rcs-messaging-india"
 
@@ -447,6 +448,46 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       ],
     },
     Component: BulkSmsServiceApiPost,
+  },
+
+  "bulk-sms": {
+    meta: {
+      slug: "bulk-sms",
+      title: "Bulk SMS in India: How It Works, Rules & Setup",
+      h1: "Bulk SMS in India: How It Works and How to Send It",
+      description:
+        "Bulk SMS explained for Indian businesses: how it works, DLT and TRAI rules, message types, costs and the steps to send your first campaign with SMSLocal.",
+      date: "2026-10-27",
+      readingTime: "8 min read",
+      category: "Getting started",
+      author: TEAM,
+      coverImage: "/blog/bulk-sms-india-how-it-works-hero.webp",
+      coverAlt:
+        "Illustration of a business user sending a bulk SMS campaign from a dashboard, with messages travelling across India to customers' phones showing an OTP, an offer and a delivery notice.",
+      toc: [
+        { id: "what-bulk-sms-is", label: "What bulk SMS is" },
+        { id: "how-bulk-sms-works", label: "How bulk SMS works" },
+        { id: "dlt-registration-what-you-need-first", label: "DLT registration: what you need first" },
+        { id: "message-types-and-trai-rules", label: "Message types and TRAI rules" },
+        { id: "how-to-send-bulk-sms-step-by-step", label: "How to send bulk SMS step by step" },
+        { id: "message-length-encoding-and-cost", label: "Message length, encoding and cost" },
+        { id: "where-businesses-use-bulk-sms", label: "Where businesses use bulk SMS" },
+        { id: "how-to-choose-a-bulk-sms-provider", label: "How to choose a provider" },
+        { id: "mistakes-that-get-messages-blocked", label: "Mistakes that get messages blocked" },
+        { id: "conclusion", label: "Conclusion" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["bulk-sms-service-api", "dnd-services", "otp-sms-service", "what-is-sms"],
+      keywords: ["bulk sms", "bulk sms india", "bulk sms service", "bulk sms provider in india", "bulk sms dlt"],
+      faqItems: [
+        { q: "What is bulk SMS and how does it work?", a: "Bulk SMS is sending text messages to many numbers at once through a software platform. You upload a list, choose an approved template and the platform delivers each message through mobile operators, then reports the result." },
+        { q: "Is DLT registration mandatory for bulk SMS in India?", a: "Yes. Business SMS to Indian numbers must use a registered sender name and an approved template. A message that does not match an approved template will not be delivered." },
+        { q: "Can I send bulk SMS to any number?", a: "No. Promotional messages cannot go to numbers on the DND list unless you hold the recipient's explicit digital consent, and they must follow the 9 AM to 9 PM window. Keep a record of consent for everyone on your list." },
+        { q: "How is bulk SMS billed?", a: "Per segment. A standard English message holds 160 characters in one segment, and a Unicode message such as Hindi holds 70. Longer messages use more segments, and each one is billed." },
+        { q: "Can I send bulk SMS in Hindi or other Indian languages?", a: "Yes, using Unicode. Regional-language templates go through the same DLT approval, and each message counts fewer characters per segment than English." },
+      ],
+    },
+    Component: BulkSmsPost,
   },
 
   "otp-sms-service": {
