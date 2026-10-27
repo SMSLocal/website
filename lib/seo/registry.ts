@@ -66,11 +66,12 @@ export type SeoEntry = {
 export const SEO_REGISTRY: Record<string, SeoEntry> = {
   // ─── Homepage ─────────────────────────────────────────────────────────────
   "/": {
-    titleAbsolute: "SMS, WhatsApp & AI Messaging — Trusted Since 2019 | SMSLocal",
+    titleAbsolute: "Bulk SMS, WhatsApp Business API & AI Agents | SMSLocal",
     description:
       "SMS, WhatsApp & AI messaging for India — DLT-compliant bulk SMS, WhatsApp Business API, OTP, and AI agents in 8 Indian languages. Start free with ₹60 credit.",
-    focusKeyword: "SMS, WhatsApp & AI messaging",
+    focusKeyword: "bulk SMS",
     keywords: [
+      "bulk SMS",
       "SMS, WhatsApp & AI messaging",
       "bulk SMS India",
       "WhatsApp Business API India",
@@ -84,11 +85,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Pricing ──────────────────────────────────────────────────────────────
   "/pricing": {
-    title: "Pricing — Start Free, Every Channel Included",
+    title: "SMS & WhatsApp Pricing — ₹60 Free Credit",
     description:
-      "Start free with ₹60 credit. SMS, WhatsApp, RCS, Messenger and Instagram with Agentic AI on one platform. Talk to sales for volume discounts.",
-    focusKeyword: "SMS pricing in India",
+      "Start free with ₹60 credit, no credit card and no setup fee. Try SMS, WhatsApp, RCS and AI agents on one wallet, then talk to sales for volume discounts.",
+    focusKeyword: "SMS & WhatsApp pricing",
     keywords: [
+      "SMS & WhatsApp pricing",
       "SMS pricing in India",
       "bulk SMS price India",
       "WhatsApp Business API pricing",
@@ -150,9 +152,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   },
 
   "/products/bulk-sms": {
-    title: "Bulk SMS India — 98% Delivery, Fast & Trusted",
+    title: "Bulk SMS Service India: DLT-Compliant Campaigns",
     description:
-      "Bulk SMS in India, DLT-compliant and AI-routed — send millions with wrong-number detection, failed-campaign resend, and 99.99% uptime. ₹60 free credit.",
+      "Send DLT-compliant bulk SMS in India with delivery reports, wrong-number detection and failed-campaign resend. DLT registration help included. ₹60 free credit.",
     focusKeyword: "bulk SMS",
     keywords: [
       "bulk SMS",
@@ -327,9 +329,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/otp-sms": {
-    title: "OTP SMS API India — Sub-1s Priority Delivery",
+    title: "OTP SMS API India: Priority Routes & Webhooks",
     description:
-      "OTP SMS in India with priority routing and sub-second delivery on every Indian operator — DLT-compliant templates, signed webhooks, and ₹60 free credit.",
+      "OTP SMS service for India with a simple API, priority routing, DLT-compliant templates and signed delivery webhooks for login and payment OTPs. ₹60 free credit.",
     focusKeyword: "OTP SMS API India",
     keywords: [
       "OTP SMS",
@@ -359,7 +361,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/rcs": {
-    title: "RCS Messaging India — Verified Sender, 3 Carriers",
+    title: "RCS Business Messaging in India — Verified Sender",
     description:
       "RCS business messaging in India — verified, branded rich cards and suggested replies on Jio, Airtel, and Vi, with automatic DLT SMS fallback on one API.",
     focusKeyword: "RCS business messaging",
@@ -375,9 +377,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/whatsapp-business-api": {
-    title: "WhatsApp Business API — AI & 8 Indian Languages",
+    title: "WhatsApp Business API India: Broadcasts & AI",
     description:
-      "WhatsApp Business API for India with AI agents that reply in 8 Indian languages — broadcasts, chatbot builder, team inbox, no monthly plan, and ₹60 free credit.",
+      "WhatsApp Business API for India: broadcasts, a chatbot builder, a shared team inbox and AI agents that reply in 8 Indian languages. Start with ₹60 free credit.",
     focusKeyword: "WhatsApp Business API",
     keywords: [
       "WhatsApp Business API",
@@ -1108,9 +1110,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/developers/sms-api": {
-    title: "SMS API India — DLT-Compliant, Direct Operator",
+    title: "SMS API India: DLT-Compliant REST & XML API",
     description:
-      "SMS API for business messaging — DLT-compliant, 98%+ delivery, with integrations for REST, SMTP, SDKs, Excel, and every major CRM. ₹60 free credit to start.",
+      "SMS API for Indian businesses: DLT-compliant REST and XML endpoints, cURL, Node.js and Python samples, delivery webhooks and CRM integrations. ₹60 free credit.",
     focusKeyword: "SMS API India",
     keywords: [
       "SMS API",
