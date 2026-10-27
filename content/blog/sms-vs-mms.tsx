@@ -184,7 +184,7 @@ export default function SmsVsMmsPost() {
       <BlogInlineCta
         title="Choosing a channel for business messaging?"
         body="SMS is the only DLT-regulated channel between the two, reaching every Indian number with delivery receipts. Set up compliant OTP and alert sending in minutes."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
 
       <H2 id="sms-vs-mms-business">SMS vs MMS for Business Use in India</H2>
@@ -389,8 +389,7 @@ export default function SmsVsMmsPost() {
 
       <Callout variant="tip" title="Ready to send SMS in India?">
         SMSLocal provides DLT-compliant SMS for OTPs, transactional alerts, and promotional
-        campaigns — with delivery receipts, DND scrubbing, and direct operator routes. Start with
-        <Strong> ₹60 free credit</Strong> and no credit card.{" "}
+        campaigns — with delivery receipts, DND scrubbing, and direct operator routes. Start with a trial:{" "}
         <A href="/signup/">Create a free account</A>, or read our{" "}
         <A href="/blog/dlt-registration-guide/">DLT registration guide</A> to understand the
         compliance requirements before your first send.

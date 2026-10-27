@@ -130,7 +130,7 @@ const FAQ = [
   },
   {
     q: "Is there an 'unlimited' or 'no registration' SMS sender that is legal?",
-    a: "No. Every commercial SMS in India must flow through a DLT-registered Principal Entity, an approved Sender ID, and an approved template — there is no lawful 'unlimited, no-registration' bulk route. Platforms that manage DLT for you are the compliant way to start sending quickly, often with a free trial credit.",
+    a: "No. Every commercial SMS in India must flow through a DLT-registered Principal Entity, an approved Sender ID, and an approved template — there is no lawful 'unlimited, no-registration' bulk route. Platforms that manage DLT for you are the compliant way to start sending quickly.",
   },
 ] as const
 
@@ -159,7 +159,7 @@ const RELATED_TERMS = [
   {
     term: "“Unlimited” / “spam message sender”",
     what: "Tools promising unlimited or spam sending to any number with no registration. There is no legal no-registration bulk route in India — every commercial SMS must flow through a DLT entity, so these operate outside the law.",
-    legal: "The legal “start fast” path is a registered platform with a free trial that handles the DLT work for you.",
+    legal: "The legal “start fast” path is a registered platform that handles the DLT work for you.",
     href: "/resources/tools/free-sms-without-registration/",
     label: "Free SMS, done legally",
   },
@@ -577,7 +577,7 @@ export default function SmsBomberPage() {
               </li>
               <li className="flex gap-2.5">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-primary" />
-                Pay-as-you-go starting at ₹0.1050 / SMS — ₹60 free on signup.
+                Pay-as-you-go starting at ₹0.1050 / SMS.
               </li>
               <li className="flex gap-2.5">
                 <CheckCircle2 className="mt-0.5 h-4 w-4 flex-none text-primary" />
@@ -590,8 +590,8 @@ export default function SmsBomberPage() {
 
       <ProductFinalCta
         title="Send bulk SMS the right way."
-        description="DLT-registered infrastructure, ₹60 in free credits, and a team that has onboarded over 30,000 Indian businesses on compliant messaging."
-        primaryCta={{ label: "Start free", href: "/signup/" }}
+        description="DLT-registered infrastructure and a team that has onboarded over 30,000 Indian businesses on compliant messaging."
+        primaryCta={{ label: "Start your trial", href: "/signup/" }}
         secondaryCta={{ label: "Read DLT guide", href: "/blog/dlt-registration-guide/" }}
       />
       <SiteFooter />

@@ -8,7 +8,7 @@ const FEATURES = [
   "REST API with GET and POST",
   "SDKs: PHP · Java · Python · Node.js · C# · JavaScript",
   "Webhooks for delivery reports and inbound replies",
-  "Sandbox mode with ₹60 free credit",
+  "Sandbox mode for testing",
 ]
 
 const SNIPPETS = {

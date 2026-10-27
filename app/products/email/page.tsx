@@ -119,7 +119,7 @@ export default function EmailInboxPage() {
             </>
           }
           subtitle="A shared inbox with assignments, internal notes, and automation — the collaboration teams move to Front and Help Scout for, without the per-seat price tag."
-          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
           trustBar={[
             { icon: Inbox, label: "Email on Free" },
@@ -181,8 +181,8 @@ export default function EmailInboxPage() {
           <PlanInclusionTable />
           <p className="mt-5 text-center text-[12.5px] text-muted-foreground">
             Tier inclusions reflect current plan packaging and may change.{" "}
-            <Link href="/pricing/" className="font-semibold text-primary hover:underline">
-              See full pricing →
+            <Link href="/company/contact/" className="font-semibold text-primary hover:underline">
+              Talk to sales →
             </Link>
           </p>
         </Section>
@@ -275,7 +275,7 @@ export default function EmailInboxPage() {
         <ProductFinalCta
           title="Free, no credit card."
           subtitle="Try shared email free — one email inbox on Free, unlimited inboxes from Starter, with assignments, private notes, and automation rules built in."
-          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
         />
       </main>

@@ -9,12 +9,12 @@ import { BrandLogo } from "@/components/brand/brand-logo"
 export const metadata: Metadata = {
   title: "Create your free SMSLocal account",
   description:
-    "Sign up for SMSLocal and start sending SMS, WhatsApp, and OTP messages in minutes. Free ₹60 credit. No credit card required.",
+    "Sign up for SMSLocal and start sending SMS, WhatsApp, and OTP messages in minutes. No credit card required.",
   robots: { index: true, follow: true },
 }
 
 const BENEFITS = [
-  "₹60 free credit — no credit card needed",
+  "No credit card needed",
   "DLT-compliant bulk SMS from day one",
   "WhatsApp Business API in 10 minutes",
   "OTP delivery under 1 second",
@@ -58,7 +58,7 @@ export default function SignupPage() {
               href="https://app.smslocal.in/signup"
               className="mt-8 flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
             >
-              Start Free — ₹60 Credit
+              Start your trial
               <ArrowRight className="h-4 w-4" />
             </Link>
 

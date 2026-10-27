@@ -316,7 +316,7 @@ export default function CompareTwixorPage() {
         <ProductFinalCta
           title="Run your own CX with agentic AI."
           subtitle="Agentic AI and omnichannel reach, built for your brand — not a white-label reseller platform. Fast, self-serve setup, typically live within days."
-          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Talk to us", href: "/company/contact/" }}
         />
       </main>

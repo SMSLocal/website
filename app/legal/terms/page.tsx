@@ -151,9 +151,9 @@ export default function TermsPage() {
                   <Li>
                     Per-message charges are based on Meta&apos;s WhatsApp conversation rates, telecom operator
                     tariffs, and Google RCS rates (as applicable), plus a transparent platform markup. Detailed
-                    pricing is published on our{" "}
-                    <a href="/pricing/" className="font-medium text-primary hover:underline">
-                      pricing page
+                    pricing is available from our sales team on the{" "}
+                    <a href="/company/contact/" className="font-medium text-primary hover:underline">
+                      contact page
                     </a>
                     .
                   </Li>
@@ -164,7 +164,7 @@ export default function TermsPage() {
                   </Li>
                   <Li>
                     Service, marketing, utility, and authentication category messages are billed at different
-                    rates as published on our pricing page.
+                    rates as quoted by our sales team.
                   </Li>
                 </Ul>
               </>

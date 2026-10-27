@@ -98,8 +98,8 @@ export default function AiAgentsPage() {
             </>
           }
           subtitle="The agent inside your support inbox — answers in 8 Indian languages, takes real actions across 300+ apps, and hands off to a human the moment it's needed."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
           trustBar={[
             { icon: Languages, label: "8 Indian languages" },
             { icon: Zap, label: "Acts across 300+ apps" },
@@ -464,7 +464,7 @@ export default function AiAgentsPage() {
         <ProductFinalCta
           title="Put Captain AI on your support inbox today."
           subtitle="Connect your apps so it can actually resolve requests, train it on your docs in an afternoon, let it reply in eight Indian languages, and hand off to your team only when it matters."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>

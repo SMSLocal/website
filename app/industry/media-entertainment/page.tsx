@@ -94,7 +94,7 @@ export default function MediaEntertainmentPage() {
           }
           subtitle="Grow audiences and handle high volume with agents that recommend, support, and engage."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: ShieldCheck, label: "Built for streaming, ticketing, sports, and publishers" },
             { icon: Clock, label: "Absorbs release-day spikes" },
@@ -261,7 +261,7 @@ export default function MediaEntertainmentPage() {
           title="Engage audiences with agentic AI."
           subtitle="Recommendations, support, and campaigns handled by agents that act, not just answer."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
 

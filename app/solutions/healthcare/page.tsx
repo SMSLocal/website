@@ -92,8 +92,8 @@ export default function HealthcareSolutionPage() {
             </>
           }
           subtitle="Appointment reminders, prescription refills, lab result notifications, and chronic-care follow-ups — delivered in the language the patient understands."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant templates" },
             { icon: Languages, label: "10+ Indian scripts via SMS" },
@@ -258,9 +258,9 @@ export default function HealthcareSolutionPage() {
 
         <ProductFinalCta
           title="Better patient communication starts here."
-          subtitle={"Try the full stack free with ₹60 credit. No plan, no card, no lock-in \u2014 and every message is DLT-compliant by default."}
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
+          subtitle={"No plan, no card, no lock-in \u2014 and every message is DLT-compliant by default."}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
 

@@ -137,7 +137,7 @@ export default function CustomerStoriesIndexPage() {
         </section>
 
         <ProductFinalCta
-          title="₹60 free credit. No credit card."
+          title="Start your trial. No credit card required."
           subtitle="Open a live account, send your first DLT-compliant SMS, and keep the test balance forever."
           primaryCta={{ label: "Create free account", href: "/signup/" }}
           secondaryCta={{ label: "Read the docs", href: "/developers/api-docs/" }}

@@ -4,7 +4,7 @@ import { RotatingWord } from "./rotating-word"
 
 const FEATURE_CHECKS = [
   "DLT-compliant",
-  "Free ₹60 credit",
+  "No credit card required",
   "8 Indian languages",
   "98% delivery in <1s",
 ]
@@ -50,7 +50,7 @@ export function Hero() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
               <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
             </span>
-            DLT-ready in a day · Free ₹60 credit
+            DLT-ready in a day
           </div>
 
           <h1 className="mt-6 max-w-xl text-balance text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-[52px]">
@@ -82,7 +82,7 @@ export function Hero() {
               href="/signup/"
               className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
             >
-              <span className="relative z-10">Start Free — ₹60 Credit</span>
+              <span className="relative z-10">Start your trial</span>
               <ArrowUpRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
               <span
                 aria-hidden

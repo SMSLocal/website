@@ -255,7 +255,7 @@ export default function CompareHaptikPage() {
               {[
                 { href: "/compare/", label: "See all SMSLocal comparisons" },
                 { href: "/compare/smslocal-vs-twilio/", label: "SMSLocal vs Twilio — global CPaaS comparison" },
-                { href: "/pricing/", label: "Pricing — published INR rate card" },
+                { href: "/company/contact/", label: "Talk to sales — volume and enterprise quotes" },
                 { href: "/products/ai-agents/", label: "AI Agents — automate support and sales" },
               ].map((link) => (
                 <li key={link.href}>
@@ -274,9 +274,9 @@ export default function CompareHaptikPage() {
         {/* ── FINAL CTA ─────────────────────────────────────────── */}
         <ProductFinalCta
           title="See SMSLocal's transparent pricing."
-          subtitle="Free signup credit, no card, no procurement cycle. Send a real DLT SMS and a real WhatsApp template in 5 minutes — then decide."
-          primaryCta={{ label: "Start Free", href: "/signup/" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+          subtitle="No card, no procurement cycle. Send a real DLT SMS and a real WhatsApp template in 5 minutes — then decide."
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
 

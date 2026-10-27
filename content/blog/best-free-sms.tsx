@@ -22,7 +22,7 @@ export default function BestFreeSmsPost() {
         The best free SMS app in India in 2026 is Google Messages — it uses your SIM&apos;s
         bundled 100 SMS/day allowance, sends from your real number, and works on most Android
         phones without any setup. For SMS from a PC, AirDroid or Pushbullet mirror your phone&apos;s
-        SIM. For business OTPs and bulk sends, only a platform with a free trial credit gives you
+        SIM. For business OTPs and bulk sends, only a business platform gives you
         DLT-compliant delivery. This guide compares every option tested on Jio, Airtel, and Vi.
       </Lead>
 
@@ -43,7 +43,7 @@ export default function BestFreeSmsPost() {
           ["Send SMS from PC (Android phone nearby)", "AirDroid (free tier)", "Mirrors your phone's SIM to browser; no third-party route"],
           ["Send SMS from PC (no phone nearby)", "MyJio web / Airtel Thanks web", "Uses your own bundled quota, no shared sender"],
           ["SMS without internet", "Built-in phone dialer + SIM bundle", "Works on any network, no data required"],
-          ["Test a business OTP flow", "SMSLocal ₹60 free credit", "Real production route, delivery receipts, API access"],
+          ["Test a business OTP flow", "SMSLocal trial account", "Real production route, delivery receipts, API access"],
           ["Bulk promotional (business)", "SMSLocal bulk trial", "DLT-compliant, DND scrub, scheduled campaigns"],
         ]}
         caption="The right answer changes completely by use case — personal and business free SMS are entirely different problems."
@@ -202,8 +202,8 @@ export default function BestFreeSmsPost() {
 
       <BlogInlineCta
         title="Sending OTPs or alerts for a business?"
-        body="Free personal SMS apps skip DLT compliance and delivery receipts. SMSLocal sends from your registered sender ID with per-message tracking — start free with ₹60 credit and test a real Indian route."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        body="Free personal SMS apps skip DLT compliance and delivery receipts. SMSLocal sends from your registered sender ID with per-message tracking — start your trial and test a real Indian route."
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
       <H2 id="operator-bundled">5. Bundled SIM SMS — 100 Free SMS Per Day Already in Your Plan</H2>
       <P>
@@ -313,8 +313,7 @@ export default function BestFreeSmsPost() {
 
       <H2 id="smslocal-trial">8. SMSLocal Free Trial — Best Free SMS Option for Business in India</H2>
       <P>
-        SMSLocal provides <Strong>₹60 free credit</Strong> on signup with no credit card required.
-        This is the only free option that gives you the full production SMS experience for business
+        SMSLocal offers a trial account that gives you the full production SMS experience for business
         use cases.
       </P>
       <UL>
@@ -323,7 +322,7 @@ export default function BestFreeSmsPost() {
         <LI>Sub-5-second <A href="/products/otp-sms/">OTP delivery</A> on direct operator routes</LI>
         <LI>Full API access to test integrations before committing</LI>
         <LI>Works for transactional (OTP, alerts) and promotional (campaigns) templates</LI>
-        <LI>₹60 covers roughly 200–750 messages depending on route type</LI>
+        <LI>Trial usage depends on route type</LI>
       </UL>
       <P>
         <Strong>Verdict:</Strong> The only free option for any business use case. The trial credit
@@ -334,7 +333,7 @@ export default function BestFreeSmsPost() {
       <Callout variant="info" title="Personal vs. business: different problems, different tools">
         Personal SMS through your operator&apos;s bundled quota is free, instant, and requires no
         setup. Business SMS needs delivery tracking, DLT compliance, and a registered sender ID,
-        which requires a platform account even if you start on a free trial. Mixing the two leads
+        which requires a platform account even if you start on a trial. Mixing the two leads
         to either wasted effort or compliance violations.
       </Callout>
 
@@ -348,7 +347,7 @@ export default function BestFreeSmsPost() {
           ["Pushbullet (free tier)", "Free", "Your number", "100 SMS", "Yes", "No"],
           ["Operator web portal (MyJio, Airtel)", "Free", "Your number", "100 SMS", "Yes", "No"],
           ["Ad-funded web SMS site", "Free", "Shared generic", "5–25 SMS", "Yes", "No"],
-          ["SMSLocal ₹60 trial", "Free (trial)", "Your DLT sender ID", "No cap (credit-limited)", "Yes", "Yes"],
+          ["SMSLocal trial", "Trial", "Your DLT sender ID", "No cap (credit-limited)", "Yes", "Yes"],
         ]}
         caption="Apps like AirDroid and Google Messages are the same cost as using your phone — they mirror your SIM's free allowance."
       />
@@ -368,7 +367,7 @@ export default function BestFreeSmsPost() {
         For personal use, your operator&apos;s own portal is best: MyJio (jio.com) or Airtel
         Thanks (airtelthanks.com) send SMS from your real number using your bundled daily quota.
         For business testing, <A href="/resources/tools/free-sms-without-registration/">SMSLocal&apos;s
-        free SMS tool</A> with the ₹60 trial credit gives you a real production SMS without
+        free SMS tool</A> gives you a real production SMS without
         registration friction.
         </BlogFaqItem>
 
@@ -425,8 +424,8 @@ export default function BestFreeSmsPost() {
         <BlogFaqItem q={"What is the best free bulk SMS app in India?"}>
         No free service supports genuine bulk SMS at any meaningful scale. Daily caps of 5–25 SMS
         exist on all free services to prevent abuse. For bulk sends, a paid platform is necessary
-        — rates vary by volume and message type, so check the <A href="/pricing/">current rate
-        card</A> before committing. The SMSLocal ₹60 trial lets you test the full bulk SMS
+        — rates vary by volume and message type, so check the <A href="/company/contact/">current rate
+        card</A> before committing. The SMSLocal trial lets you test the full bulk SMS
         workflow before paying.
         </BlogFaqItem>
 
@@ -441,9 +440,9 @@ export default function BestFreeSmsPost() {
 
       <Callout variant="tip" title="Need more than free limits allow?">
         SMSLocal&apos;s OTP SMS pricing scales with volume, with no monthly minimums — see the{" "}
-        <A href="/pricing/">current rate card</A> for exact figures. Top up your wallet, send as
+        <A href="/company/contact/">current rate card</A> for exact figures. Top up your wallet, send as
         many or as few as you need, and only pay for what you use.{" "}
-        <A href="/signup/">Create a free account</A> to start with ₹60 in credit — no credit card
+        <A href="/signup/">Create a free account</A> to start your trial — no credit card
         required. Or see <A href="/blog/free-sms/">our complete free SMS guide</A> for all the
         personal options in detail.
       </Callout>

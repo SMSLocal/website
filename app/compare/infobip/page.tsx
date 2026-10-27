@@ -320,7 +320,7 @@ export default function CompareInfobipPage() {
         <ProductFinalCta
           title="Get omnichannel agentic AI without the enterprise overhead."
           subtitle="Self-serve signup, no mandatory sales-quote cycle. Send a real DLT SMS and a real WhatsApp template in 5 minutes — then decide."
-          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Talk to us", href: "/company/contact/" }}
         />
       </main>

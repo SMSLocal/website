@@ -105,7 +105,7 @@ export default function PlatformPage() {
           }
           subtitle="The agentic AI agent, the omnichannel inbox, the campaigns, and the developer tools, in a single product."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: Sparkles, label: "Agentic AI across every channel" },
             { icon: Send, label: "SMS, WhatsApp, and RCS broadcasting" },
@@ -278,7 +278,7 @@ export default function PlatformPage() {
           title="Run your customer experience from one platform."
           subtitle="Agentic AI, every channel, broadcasting, and a shared inbox — connected from day one."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

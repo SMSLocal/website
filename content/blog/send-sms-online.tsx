@@ -135,7 +135,7 @@ export default function SendSmsOnlinePost() {
         <A href="/resources/tools/free-sms-without-registration/">
           send free SMS without registration
         </A>{" "}
-        to test the waters, we have a ₹60 credit to start. For personal sending from a browser
+        to test the waters, we have a trial to start. For personal sending from a browser
         using your own SIM, see our{" "}
         <A href="/blog/free-sms/">guide to free SMS in India</A> — operator portals like MyJio
         and Airtel Thanks let you send from your real number at no cost.
@@ -149,8 +149,8 @@ export default function SendSmsOnlinePost() {
 
       <BlogInlineCta
         title="Send your first SMS in minutes"
-        body="Sign up for an SMSLocal account to send SMS from a web dashboard or our API, with DLT-compliant routing for Indian numbers. Start with ₹60 credit."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        body="Sign up for an SMSLocal account to send SMS from a web dashboard or our API, with DLT-compliant routing for Indian numbers. Start your trial."
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
 
       <H2 id="api">2. SMS API (for developers)</H2>
@@ -278,7 +278,7 @@ export default function SendSmsOnlinePost() {
       <H2 id="faq">FAQ</H2>
       <BlogFaq>
         <BlogFaqItem q={"Can I send SMS online for free?"}>
-        Some platforms offer a free signup credit (SMSLocal gives you ₹60 to start), which is
+        Some platforms offer a trial (SMSLocal does too), which is
         enough for a few hundred test messages. Beyond that, expect ₹0.10–0.40 per SMS depending
         on volume and route. Any &quot;totally free&quot; service for ongoing use is either
         running illegally without DLT, or is going to sell your data.

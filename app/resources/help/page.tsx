@@ -208,7 +208,7 @@ export default function HelpCentrePage() {
         <ProductFinalCta
           title="Documentation that tells the truth."
           subtitle="Every article is written by the engineer who owns the feature. If a doc is wrong, a human fixes it the same day."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Open developer hub", href: "/developers/" }}
         />
       </main>

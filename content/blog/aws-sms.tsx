@@ -124,7 +124,7 @@ export default function AwsSmsPost() {
       <BlogInlineCta
         title="Skip the DLT-on-AWS plumbing"
         body="SMSLocal handles DLT registration, sender-ID approval, and template mapping for you — send DLT-compliant OTPs and campaigns to Indian numbers without the AWS sandbox and sender-ID paperwork."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
 
       <H2 id="sandbox-limits">The SMS sandbox and spending limits</H2>
@@ -245,7 +245,7 @@ export default function AwsSmsPost() {
       <Callout variant="tip" title="Sending to India? Skip the paperwork">
         SMSLocal handles DLT registration, sender-ID approval, and template mapping, then gives you
         an API and a dashboard for DLT-compliant OTPs and campaigns. <A href="/signup/">Start with
-        ₹60 free credit</A> — no credit card — or read the{" "}
+        Start your trial</A> — no credit card — or read the{" "}
         <A href="/blog/dlt-registration-guide/">full DLT registration guide</A> first.
       </Callout>
     </>

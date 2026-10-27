@@ -137,7 +137,7 @@ export default function ReceiveSmsMessagesOnYourComputerPost() {
       <BlogInlineCta
         title="Need SMS on a computer for your business, not just your phone?"
         body="A personal SMS mirror only ever shows one phone's inbox. SMSLocal gives your whole team a shared number and a web dashboard — no phone required at all."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
 
       <H2 id="iphone-mac">4. iPhone — Text Message Forwarding to a Mac or iPad</H2>
@@ -277,7 +277,7 @@ export default function ReceiveSmsMessagesOnYourComputerPost() {
 
       <Callout variant="tip" title="Running SMS for a business, not just yourself?">
         A personal mirroring app only ever shows the inbox of one phone. <A href="/signup/">Start
-        with ₹60 free credit</A> to try a dedicated business number with a shared web inbox — or
+        Start your trial</A> to try a dedicated business number with a shared web inbox — or
         read the <A href="/blog/send-sms-online/">full guide to sending SMS online in India</A>{" "}
         for the sending side of the same setup.
       </Callout>

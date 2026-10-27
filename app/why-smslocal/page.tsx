@@ -102,7 +102,7 @@ export default function WhySmsLocalPage() {
           }
           subtitle="The agentic AI agent, the channels, the numbers, and the broadcasting in one product."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant by default" },
             { icon: BadgeIndianRupee, label: "INR billing, GST invoices" },
@@ -294,7 +294,7 @@ export default function WhySmsLocalPage() {
         <ProductFinalCta
           title="See why teams run on SMSLocal."
           subtitle="Agentic AI, every channel, numbers, and broadcasting in one product — start free and see for yourself."
-          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
         />
       </main>

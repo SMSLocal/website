@@ -70,7 +70,7 @@ export default function FreeSmsPost() {
           an ad or a branded footer.
         </LI>
         <LI>
-          <Strong>Free trial credits from SMS platforms</Strong> — business SMS providers (like
+          <Strong>Trial accounts from SMS platforms</Strong> — business SMS providers (like
           SMSLocal) that give new accounts a credit balance to try transactional or bulk SMS before
           committing. These are genuinely free with no branding forced on the message.
         </LI>
@@ -172,7 +172,7 @@ export default function FreeSmsPost() {
       <BlogInlineCta
         title="Testing business SMS in India?"
         body="Skip the daily caps and shared sender IDs. Send through direct operator routes with your own DLT-registered sender ID and real-time delivery receipts."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
 
       <H2 id="ways2sms-alternatives">Way2SMS and its successors</H2>
@@ -199,7 +199,7 @@ export default function FreeSmsPost() {
         caption="Way2SMS shut down in 2022 as bundled operator SMS and WhatsApp made the ad-funded model unviable — successor services face the same structural problem."
       />
 
-      <H2 id="free-trial-platforms">Free trial credits from SMS platforms</H2>
+      <H2 id="free-trial-platforms">Trial accounts from SMS platforms</H2>
       <P>
         The most practically useful form of free SMS for many users is the trial credit offered by
         legitimate SMS platforms. Unlike ad-funded consumer sites, these platforms send through
@@ -207,8 +207,7 @@ export default function FreeSmsPost() {
         arrives with your own registered sender ID, not shared branding.
       </P>
       <P>
-        SMSLocal provides <Strong>₹60 free credit</Strong> on signup with no credit card required.
-        That covers roughly 200–400 transactional SMS at standard rates — enough to fully test an{" "}
+        SMSLocal offers a trial with no credit card required — enough to fully test an{" "}
         <A href="/products/otp-sms/">OTP flow</A>, an order notification system, or a small
         promotional campaign before committing
         to a paid top-up.
@@ -218,7 +217,7 @@ export default function FreeSmsPost() {
         rows={[
           ["Bundled operator SMS", "100/day (most plans)", "Your number", "Near-instant", "Read receipt not standard"],
           ["Ad-funded free SMS site", "5–25 SMS/day", "Shared header / generic number", "1–10 minutes", "Usually not available"],
-          ["Platform trial credit (e.g. SMSLocal ₹60)", "~200–400 SMS", "Your registered sender ID", "Near-instant", "Real-time delivery receipts"],
+          ["Platform trial account (e.g. SMSLocal)", "~200–400 SMS", "Your registered sender ID", "Near-instant", "Real-time delivery receipts"],
         ]}
         caption="Trial credits from SMS platforms give you the full production experience with no commitments."
       />
@@ -300,7 +299,7 @@ export default function FreeSmsPost() {
       </Blockquote>
 
       <Callout variant="tip" title="Try SMSLocal free — no credit card needed">
-        Get ₹60 in free credit when you{" "}
+        Start your trial when you{" "}
         <A href="/signup/">create a SMSLocal account</A>. Enough for 200–400 transactional SMS,
         full delivery receipts, and real operator connectivity — no branded footer, no daily cap,
         no commitment.

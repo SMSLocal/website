@@ -176,15 +176,26 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Old pricing slug — redirect to the canonical /pricing/ page.
+      // The pricing page is unpublished (kept as a draft in app/_drafts/pricing);
+      // send every old pricing URL to the contact page instead.
+      {
+        source: "/pricing",
+        destination: "/company/contact/",
+        permanent: false,
+      },
+      {
+        source: "/pricing/",
+        destination: "/company/contact/",
+        permanent: false,
+      },
       {
         source: "/pricing-plans",
-        destination: "/pricing/",
+        destination: "/company/contact/",
         permanent: true,
       },
       {
         source: "/pricing-plans/",
-        destination: "/pricing/",
+        destination: "/company/contact/",
         permanent: true,
       },
       // The DLT guide content lives under the blog; keep the older resource

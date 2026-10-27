@@ -21,7 +21,6 @@ export type PlaceholderRoute = {
 const related = {
   product: [
     { label: "See all products", href: "/products/" },
-    { label: "Pricing", href: "/pricing/" },
     { label: "Talk to sales", href: "/company/contact/" },
   ],
   developer: [
@@ -32,7 +31,7 @@ const related = {
   resource: [
     { label: "Blog", href: "/blog/" },
     { label: "Help centre", href: "/resources/help/" },
-    { label: "Pricing", href: "/pricing/" },
+    { label: "Talk to sales", href: "/company/contact/" },
   ],
   company: [
     { label: "About", href: "/company/about/" },

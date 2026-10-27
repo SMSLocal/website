@@ -163,7 +163,7 @@ export function ComingSoon({ route }: { route: PlaceholderRoute }) {
                 </Link>
               </Button>
               <Button asChild size="lg" variant="outline">
-                <Link href="/pricing/">See pricing</Link>
+                <Link href="/company/contact/">Talk to sales</Link>
               </Button>
             </div>
           </div>

@@ -1159,7 +1159,7 @@ const FAQS = [
   { q: "Is there a public REST API?",                       a: "Yes. SMSLocal ships a full REST API with CRUD for contacts, campaigns, and messages, idempotency keys, signed webhooks, and official SDKs for Node.js, Python, PHP, and Go. A sandbox lets you simulate delivery and carrier failures without spending credit." },
   { q: "Can SMSLocal integrate with my custom CRM?",        a: "Absolutely. Beyond the native HubSpot, Salesforce, and Zoho connectors, you can wire any in-house CRM to SMSLocal through the REST API, webhooks, or Zapier/Make — no waiting on a pre-built connector." },
   { q: "Does SMSLocal support SAML SSO?",                   a: "Yes. SAML 2.0 single sign-on and SCIM user provisioning are available on Enterprise plans, alongside role-based access, IP allowlists, and scoped API keys for every team member." },
-  { q: "How fast can I go live?",                           a: "Most one-click OAuth integrations (Shopify, HubSpot, Zapier) connect in under 10 minutes. Custom API integrations typically take 1–2 days. Every new account gets ₹60 of free credit to test on live numbers before paying." },
+  { q: "How fast can I go live?",                           a: "Most one-click OAuth integrations (Shopify, HubSpot, Zapier) connect in under 10 minutes. Custom API integrations typically take 1–2 days. Start your trial to test on live numbers before paying." },
 ]
 
 function FaqSection() {
@@ -1397,7 +1397,7 @@ export function IntegrationsPremiumPage() {
                 <Link href="/signup/"
                   className="group inline-flex items-center gap-2.5 rounded-2xl px-7 py-4 text-[15px] font-bold text-primary-foreground shadow-xl transition hover:opacity-90 hover:-translate-y-0.5"
                   style={{ background: "linear-gradient(135deg,var(--primary),oklch(0.72 0.17 165))", boxShadow: "0 12px 40px color-mix(in oklch, var(--primary) 32%, transparent)" }}>
-                  Start Free Trial
+                  Start your trial
                   <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link href="/developers/api-docs/"
@@ -1523,7 +1523,7 @@ export function IntegrationsPremiumPage() {
                 <Link href="/signup/"
                   className="inline-flex items-center gap-2.5 rounded-2xl bg-primary px-7 py-4 text-[15px] font-bold text-primary-foreground shadow-xl transition hover:-translate-y-0.5 hover:opacity-90"
                   style={{ boxShadow: "0 8px 32px color-mix(in oklch, var(--primary) 40%, transparent)" }}>
-                  <Zap className="h-4 w-4" /> Start Free Trial
+                  <Zap className="h-4 w-4" /> Start your trial
                 </Link>
                 <Link href="/company/contact/"
                   className="inline-flex items-center gap-2.5 rounded-2xl border border-white/20 bg-white/8 px-7 py-4 text-[15px] font-semibold text-white backdrop-blur-sm transition hover:bg-white/12 hover:-translate-y-0.5">
@@ -1531,7 +1531,7 @@ export function IntegrationsPremiumPage() {
                 </Link>
               </div>
               <div className="mt-8 flex flex-wrap gap-5">
-                {["100+ Integrations", "REST API & Webhooks", "India DLT Compliant", "₹60 Free Credits"].map(t => (
+                {["100+ Integrations", "REST API & Webhooks", "India DLT Compliant", "Free Sandbox"].map(t => (
                   <span key={t} className="flex items-center gap-2 text-[13px] font-semibold text-white/65">
                     <Check className="h-4 w-4 text-primary/80" /> {t}
                   </span>

@@ -296,9 +296,9 @@ export default function CompareFast2smsPage() {
 
         <ProductFinalCta
           title="See SMSLocal on your own routes."
-          subtitle="₹60 free credit, no card. Send a real DLT SMS and a real WhatsApp template, compare per-route DLRs, decide."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+          subtitle="Send a real DLT SMS and a real WhatsApp template, compare per-route DLRs, decide."
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
 

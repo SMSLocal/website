@@ -130,7 +130,7 @@ export default function AnalyticsPage() {
           }
           subtitle="Real-time dashboards for agent performance, customer sentiment, and campaign results, in one view."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: BarChart2,    label: "Real-time dashboards" },
             { icon: Heart,        label: "CSAT, NPS, and resolution" },
@@ -318,7 +318,7 @@ export default function AnalyticsPage() {
           title="See what is really driving your customer experience."
           subtitle="Connect your channels and get a live view of agent performance, campaign results, and customer sentiment — all in one dashboard."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

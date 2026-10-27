@@ -726,7 +726,7 @@ export default function XmlApiPage() {
 
       <ProductFinalCta
         title="Same API. Whichever format your stack prefers."
-        subtitle="Grab a key, pick REST or XML, and start sending. \u20B960 free credit on every new account."
+        subtitle="Grab a key, pick REST or XML, and start sending."
         primaryCta={{ label: "Sign up free", href: "/signup/" }}
         secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
       />

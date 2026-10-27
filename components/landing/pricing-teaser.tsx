@@ -14,8 +14,8 @@ type Tier = {
 }
 
 const TIERS: Tier[] = [
-  { name: "Starter", rate: 0.24, max: 16000, features: ["Unlimited validity", "Full DLT compliance", "Pay-as-you-go, no lock-in"], cta: { label: "Start Free", href: "/signup/" } },
-  { name: "Growth", rate: 0.16, max: 375000, features: ["24-month validity", "AI WhatsApp agents included", "Priority support"], cta: { label: "Start Free", href: "/signup/" }, popular: true },
+  { name: "Starter", rate: 0.24, max: 16000, features: ["Unlimited validity", "Full DLT compliance", "Pay-as-you-go, no lock-in"], cta: { label: "Start your trial", href: "/signup/" } },
+  { name: "Growth", rate: 0.16, max: 375000, features: ["24-month validity", "AI WhatsApp agents included", "Priority support"], cta: { label: "Start your trial", href: "/signup/" }, popular: true },
   { name: "Enterprise", rate: 0.115, max: Number.POSITIVE_INFINITY, features: ["Dedicated account manager", "Custom routing & SLAs", "24-month validity"], cta: { label: "Talk to Sales", href: "/company/contact/" } },
 ]
 
@@ -99,7 +99,7 @@ export function PricingTeaser() {
               <div className="rounded-2xl bg-primary/5 p-5">
                 <div className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Estimated monthly</div>
                 <div className="mt-1 text-3xl font-bold tabular-nums text-foreground">≈ ₹{fmt(monthly)}</div>
-                <div className="mt-1 text-[12px] text-muted-foreground">on the {tier.name} plan · ₹60 free credit to start</div>
+                <div className="mt-1 text-[12px] text-muted-foreground">on the {tier.name} plan</div>
               </div>
               <ul className="space-y-2.5">
                 {tier.features.map((f) => (

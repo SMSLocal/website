@@ -139,8 +139,8 @@ const NAV: NavItem[] = [
       icon: Zap,
       title: "Everything included.",
       body: "Agentic AI, every channel, broadcasting, and numbers — one platform.",
-      cta: "See plans & pricing",
-      href: "/pricing/",
+      cta: "Talk to sales",
+      href: "/company/contact/",
     },
   },
   {
@@ -205,7 +205,6 @@ const NAV: NavItem[] = [
     ],
     footer: { label: "See why teams switch", href: "/why-smslocal/" },
   },
-  { label: "Pricing", href: "/pricing/" },
   {
     label: "Developers",
     columns: [
@@ -248,7 +247,7 @@ const NAV: NavItem[] = [
         ],
       },
     ],
-    featured: { icon: Wrench, title: "Free SMS tools", body: "Send a real test SMS with ₹60 credit — no signup required.", cta: "Open tools", href: "/resources/tools/" },
+    featured: { icon: Wrench, title: "Free SMS tools", body: "Send a real test SMS — no signup required.", cta: "Open tools", href: "/resources/tools/" },
   },
 ]
 
@@ -499,7 +498,7 @@ export function SiteHeader() {
             href="/signup/"
             className="group relative inline-flex items-center gap-1.5 overflow-hidden rounded-md bg-primary px-3.5 py-2 text-[13px] font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
           >
-            <span className="relative z-10">Start Free — ₹60 Credit</span>
+            <span className="relative z-10">Start your trial</span>
             <span
               aria-hidden
               className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full"

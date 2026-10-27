@@ -564,7 +564,7 @@ function BuildYourOwn() {
         </h2>
         <p className="mt-4 text-[15px] leading-relaxed text-muted-foreground">
           SMSLocal ships with a full REST API and webhook system. Available on every paid
-          plan — start sending in minutes with ₹60 of free credit.
+          plan — start sending in minutes.
         </p>
         <ul className="mt-6 space-y-3">
           {API_BULLETS.map(b => (
@@ -750,16 +750,15 @@ export function IntegrationsStackPage({ hideHero }: { hideHero?: boolean } = {})
             </div>
             <div className="mt-5 flex flex-wrap items-center gap-3">
               <Link href="/signup/"
-                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-[14px] font-bold text-primary-foreground shadow-lg shadow-primary/30 transition hover:-translate-y-0.5 hover:opacity-90">
-                Start Free <ArrowRight className="h-4 w-4" />
+                className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-[14px] font-bold text-primary-foreground shadow-lg shadow-primary/30 transition hover:-translate-y-0.5 hover:opacity-90">Start your trial<ArrowRight className="h-4 w-4" />
               </Link>
-              <Link href="/pricing/"
+              <Link href="/company/contact/"
                 className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white/5 px-5 py-3 text-[14px] font-semibold text-white transition hover:border-primary/40 hover:bg-white/10">
-                See all plans
+                Talk to sales
               </Link>
             </div>
             <p className="mt-3 text-[12.5px] text-white/40">
-              Full REST API on every paid plan. App integrations unlock on Starter — ₹60 free credit to test live.
+              Full REST API on every paid plan. App integrations unlock on Starter.
             </p>
           </div>
 
@@ -854,13 +853,12 @@ export function IntegrationsStackPage({ hideHero }: { hideHero?: boolean } = {})
             <Sparkles className="h-3 w-3" /> Start · Free, no credit card
           </span>
           <h2 className="mt-6 text-4xl font-black tracking-tight text-foreground sm:text-5xl">Ready to connect your stack?</h2>
-          <p className="mt-4 text-[17px] text-muted-foreground">Start free. Full REST API on every paid plan. ₹60 credit on signup.</p>
+          <p className="mt-4 text-[17px] text-muted-foreground">Start your trial. Full REST API on every paid plan.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link href="/signup/" className="inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-4 text-[15px] font-bold text-primary-foreground shadow-lg transition hover:-translate-y-0.5 hover:opacity-90">
-              <Zap className="h-4 w-4" /> Start Free
-            </Link>
-            <Link href="/pricing/" className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-7 py-4 text-[15px] font-semibold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30">
-              See all plans <ArrowRight className="h-4 w-4" />
+              <Zap className="h-4 w-4" />Start your trial</Link>
+            <Link href="/company/contact/" className="inline-flex items-center gap-2 rounded-xl border border-border bg-card px-7 py-4 text-[15px] font-semibold text-foreground shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30">
+              Talk to sales <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
           <div className="mt-9 flex flex-wrap justify-center gap-x-8 gap-y-3">

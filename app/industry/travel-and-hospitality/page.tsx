@@ -95,7 +95,7 @@ export default function TravelHospitalityPage() {
           }
           subtitle="Handle bookings, itineraries, and support around the clock with agents that act, not just answer."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: ShieldCheck, label: "Built for airlines, hotels, OTAs, and tour operators" },
             { icon: Clock, label: "24/7 multilingual support" },
@@ -255,7 +255,7 @@ export default function TravelHospitalityPage() {
           title="Serve travelers with agentic AI."
           subtitle="Bookings, itineraries, and support handled by agents that act, not just answer."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
 

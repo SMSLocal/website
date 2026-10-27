@@ -127,7 +127,7 @@ export default function SmsActivationPost() {
       <BlogInlineCta
         title="Sending OTPs your customers actually receive"
         body="SMSLocal delivers DLT-compliant transactional OTP SMS across Jio, Airtel, Vi and BSNL, with per-message delivery receipts so you can see exactly where a message stopped."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
       <H2 id="carrier-level">Carrier-level issues</H2>
       <P>

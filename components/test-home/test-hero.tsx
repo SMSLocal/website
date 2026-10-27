@@ -9,7 +9,7 @@ import { ArrowUpRight, Check, Send, Star } from "lucide-react"
  * page. Two floating cards get a subtle mouse-parallax on pointer devices.
  */
 
-const FEATURES = ["DLT-compliant", "99.7% delivery", "AI in 8 languages", "₹60 free credit"]
+const FEATURES = ["DLT-compliant", "99.7% delivery", "AI in 8 languages", "Free sandbox"]
 
 const HEADLINE_WORDS = ["Agentic", "Support", "Sales", "Messaging"]
 const HEADLINE_LINE_2 = "Best in Every Conversation."
@@ -311,7 +311,7 @@ export function TestHero() {
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
             <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
           </span>
-          Free ₹60 credit — no credit card required
+          No credit card required
         </div>
 
         {/* Headline — centered, cycles through HEADLINE_WORDS then crossfades to line 2 */}
@@ -342,7 +342,7 @@ export function TestHero() {
             href="/signup/"
             className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
           >
-            Start Free — ₹60 Credit
+            Start your trial
             <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <a

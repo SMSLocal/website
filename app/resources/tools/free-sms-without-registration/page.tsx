@@ -127,7 +127,7 @@ const WHY_CHOOSE = [
 const FAQ = [
   {
     q: "Is there really a “free SMS without registration” in India?",
-    a: "Honestly — no, not legally. TRAI’s TCCCPR 2018 mandates that every Indian SMS be sent from a registered Principal Entity using an approved Sender ID and Template. Any site claiming “zero registration” SMS is either shared-pool SMS from a single registered aggregator (which is what SMSLocal provides with ₹60 free credit) or operating outside the law. We took the first path.",
+    a: "Honestly — no, not legally. TRAI’s TCCCPR 2018 mandates that every Indian SMS be sent from a registered Principal Entity using an approved Sender ID and Template. Any site claiming “zero registration” SMS is either shared-pool SMS from a single registered aggregator (which is what SMSLocal provides) or operating outside the law. We took the first path.",
   },
   {
     q: "How does the SMS tool work?",
@@ -135,7 +135,7 @@ const FAQ = [
   },
   {
     q: "Is there a limit to how many messages I can send?",
-    a: "Not on volume — only on credit. Your ₹60 welcome credit covers roughly 570 promotional sends or 300 transactional sends. After that, it’s straight pay-as-you-go from ₹0.1050 / SMS. No minimum commit, no monthly plan.",
+    a: "Not on volume — only on credit. It’s straight pay-as-you-go from ₹0.1050 / SMS. No minimum commit, no monthly plan.",
   },
   {
     q: "How secure is this SMS tool?",
@@ -159,7 +159,7 @@ const FAQ = [
   },
   {
     q: "Is the SMS tool free to use?",
-    a: "Yes, your first ₹60 worth of SMS is free with an email signup — no credit card required. After that, it’s pay-as-you-go from ₹0.1050 / SMS, with no minimum commit or monthly fee.",
+    a: "Yes, you can start your trial with an email signup — no credit card required. After that, it’s pay-as-you-go from ₹0.1050 / SMS, with no minimum commit or monthly fee.",
   },
 ] as const
 
@@ -211,11 +211,11 @@ export default function FreeSmsPage() {
             {/* Copy column */}
             <div>
               <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-500/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-emerald-200">
-                <Sparkles className="h-3.5 w-3.5" /> ₹60 Free Credit on Signup
+                <Sparkles className="h-3.5 w-3.5" /> Start your trial
               </div>
 
               <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight sm:text-5xl lg:text-[3.25rem] lg:leading-[1.05]">
-                Send SMS effortlessly — with ₹60 in free credits.
+                Send SMS effortlessly.
               </h1>
               <p className="mt-5 max-w-xl text-pretty text-[15.5px] leading-relaxed text-white/80">
                 Our free SMS tool provides a simple, secure way to send SMS
@@ -228,14 +228,13 @@ export default function FreeSmsPage() {
                 <Link
                   href="/signup/"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-[13.5px] font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:brightness-110"
-                >
-                  Start free <ArrowRight className="h-3.5 w-3.5" />
+                >Start your trial<ArrowRight className="h-3.5 w-3.5" />
                 </Link>
                 <Link
-                  href="/pricing/"
+                  href="/company/contact/"
                   className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-5 py-2.5 text-[13.5px] font-semibold text-white transition hover:bg-white/10"
                 >
-                  See pricing
+                  Talk to sales
                 </Link>
               </div>
 
@@ -486,10 +485,10 @@ export default function FreeSmsPage() {
       </Section>
 
       <ProductFinalCta
-        title="Start your trial with ₹60 in free credits."
+        title="Start your trial today."
         description="Email signup, no credit card, no minimum commit. Send your first SMS today — and scale to a million when you need to."
         primaryCta={{ label: "Sign up now", href: "/signup/" }}
-        secondaryCta={{ label: "Plans & pricing", href: "/pricing/" }}
+        secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
       />
       <SiteFooter />
     </>

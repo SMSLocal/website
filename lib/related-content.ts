@@ -84,8 +84,8 @@ const LINKS = {
 
   // Resources / conversion
   pricing: {
-    href: "/pricing/",
-    label: "Pricing",
+    href: "/company/contact/",
+    label: "Talk to sales",
     blurb: "Volume-tier SMS, pay-as-you-go WhatsApp, and 24-month wallet validity.",
   },
   developers: {
@@ -464,7 +464,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     eyebrow: "Related reading",
     title: "For a few SMS or a few million.",
     subtitle:
-      "Free tools cover a handful of sends. Our paid plans start at ₹60 credit and include the DLT onboarding you'll need to scale.",
+      "Free tools cover a handful of sends. Our paid plans include the DLT onboarding you'll need to scale.",
     groups: [
       products("bulkSms", "otp", "quickSms"),
       {

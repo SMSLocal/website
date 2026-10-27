@@ -98,9 +98,7 @@ export default function LiveChatPage() {
                 <Link
                   href="/signup/"
                   className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-primary/25 transition hover:brightness-110"
-                >
-                  Start Free
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                >Start your trial<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
                   href="/company/contact/"
@@ -319,9 +317,7 @@ export default function LiveChatPage() {
                 <Link
                   href="/signup/"
                   className="group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/20 transition hover:brightness-110"
-                >
-                  Start Free
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+                >Start your trial<ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
               </div>
             </div>
@@ -639,7 +635,7 @@ export default function LiveChatPage() {
         <ProductFinalCta
           title="Start Chatting With Customers Today"
           subtitle="Install SMSLocal Live Chat in minutes and turn more visitors into customers. Free forever. No credit card required."
-          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Book a Demo", href: "/company/contact/" }}
         />
       </main>

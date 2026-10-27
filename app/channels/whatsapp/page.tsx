@@ -130,7 +130,7 @@ export default function WhatsAppChannelPage() {
           }
           subtitle="Two-way conversations and campaigns on the official WhatsApp Business API, answered automatically by agentic AI."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: ShieldCheck,  label: "Official Business API" },
             { icon: BadgeCheck,   label: "Verified sender" },
@@ -317,7 +317,7 @@ export default function WhatsAppChannelPage() {
           title="Bring agentic AI to WhatsApp."
           subtitle="Connect the official API, train the agent on your data, and start resolving WhatsApp conversations automatically — around the clock."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

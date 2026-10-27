@@ -24,9 +24,9 @@ const QUICK_LINKS = [
     icon: Send,
   },
   {
-    href: "/pricing/",
-    title: "Pricing",
-    description: "Volume-tier SMS rates and pay-as-you-go WhatsApp pricing.",
+    href: "/developers/",
+    title: "Developers",
+    description: "REST and XML APIs, quickstart guides and webhooks.",
     icon: Search,
   },
   {

@@ -695,7 +695,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     shortDef:
       "A pricing model where you only pay for messages sent, with no monthly commitment.",
     longDef:
-      "PAYG is the default on SMSLocal — load ₹60 into a wallet, send messages, get charged per unit. No retainer, no per-seat fee, no lock-in. Auto-recharge keeps the wallet topped up for production accounts.",
+      "PAYG is the default on SMSLocal — load a wallet, send messages, get charged per unit. No retainer, no per-seat fee, no lock-in. Auto-recharge keeps the wallet topped up for production accounts.",
     relatedSlugs: ["wallet", "auto-recharge", "credits"],
   },
   {

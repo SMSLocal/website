@@ -159,8 +159,7 @@ export default async function AppCategoryPage({ params }: { params: Promise<{ ca
               <Link
                 href="/signup/"
                 className="mt-5 inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 text-[14px] font-bold text-primary-foreground shadow-sm transition hover:opacity-90"
-              >
-                Start Free <ArrowRight className="h-4 w-4" />
+              >Start your trial<ArrowRight className="h-4 w-4" />
               </Link>
             </div>
           </div>

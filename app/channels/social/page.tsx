@@ -120,7 +120,7 @@ export default function SocialChannelsPage() {
           }
           subtitle="Instagram and Messenger DMs unified with chat, voice, SMS, and email, answered by agentic AI."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: Instagram, label: "Social DMs in one inbox" },
             { icon: Bot, label: "AI answers across platforms" },
@@ -306,7 +306,7 @@ export default function SocialChannelsPage() {
           title="Unify your social conversations with agentic AI."
           subtitle="Connect Instagram and Messenger alongside chat, voice, SMS, and email — one AI agent, one customer record, every platform."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

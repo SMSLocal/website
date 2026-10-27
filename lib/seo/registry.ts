@@ -68,7 +68,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/": {
     titleAbsolute: "Bulk SMS, WhatsApp Business API & AI Agents | SMSLocal",
     description:
-      "SMS, WhatsApp & AI messaging for India — DLT-compliant bulk SMS, WhatsApp Business API, OTP, and AI agents in 8 Indian languages. Start free with ₹60 credit.",
+      "SMS, WhatsApp & AI messaging for India — DLT-compliant bulk SMS, WhatsApp Business API, OTP, and AI agents in 8 Indian languages. Start your trial today.",
     focusKeyword: "bulk SMS",
     keywords: [
       "bulk SMS",
@@ -85,9 +85,10 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Pricing ──────────────────────────────────────────────────────────────
   "/pricing": {
-    title: "SMS & WhatsApp Pricing — ₹60 Free Credit",
+    title: "SMS & WhatsApp Pricing",
+    noindex: true,
     description:
-      "Start free with ₹60 credit, no credit card and no setup fee. Try SMS, WhatsApp, RCS and AI agents on one wallet, then talk to sales for volume discounts.",
+      "No setup fee. Try SMS, WhatsApp, RCS and AI agents on one wallet, then talk to sales for volume discounts.",
     focusKeyword: "SMS & WhatsApp pricing",
     keywords: [
       "SMS & WhatsApp pricing",
@@ -154,7 +155,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/bulk-sms": {
     title: "Bulk SMS Service India: DLT-Compliant Campaigns",
     description:
-      "Send DLT-compliant bulk SMS in India with delivery reports, wrong-number detection and failed-campaign resend. DLT registration help included. ₹60 free credit.",
+      "Send DLT-compliant bulk SMS in India with delivery reports, wrong-number detection and failed-campaign resend. DLT registration help included.",
     focusKeyword: "bulk SMS",
     keywords: [
       "bulk SMS",
@@ -331,7 +332,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/otp-sms": {
     title: "OTP SMS API India: Priority Routes & Webhooks",
     description:
-      "OTP SMS service for India with a simple API, priority routing, DLT-compliant templates and signed delivery webhooks for login and payment OTPs. ₹60 free credit.",
+      "OTP SMS service for India with a simple API, priority routing, DLT-compliant templates and signed delivery webhooks for login and payment OTPs.",
     focusKeyword: "OTP SMS API India",
     keywords: [
       "OTP SMS",
@@ -347,7 +348,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/quick-sms": {
     title: "Quick SMS — No-Code Bulk SMS Panel for India",
     description:
-      "Quick SMS lets you send DLT-compliant campaigns from your browser in minutes — upload a list, pick a template, preview and send. No code, ₹60 free credit.",
+      "Quick SMS lets you send DLT-compliant campaigns from your browser in minutes — upload a list, pick a template, preview and send. No code,",
     focusKeyword: "bulk SMS panel India",
     keywords: [
       "Quick SMS",
@@ -379,7 +380,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/products/whatsapp-business-api": {
     title: "WhatsApp Business API India: Broadcasts & AI",
     description:
-      "WhatsApp Business API for India: broadcasts, a chatbot builder, a shared team inbox and AI agents that reply in 8 Indian languages. Start with ₹60 free credit.",
+      "WhatsApp Business API for India: broadcasts, a chatbot builder, a shared team inbox and AI agents that reply in 8 Indian languages. Start with",
     focusKeyword: "WhatsApp Business API",
     keywords: [
       "WhatsApp Business API",
@@ -686,7 +687,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/solutions/banking-fintech": {
     title: "SMS & OTP for Banks and Fintechs in India",
     description:
-      "SMS for banking & fintech in India — secure OTPs in under 1 second, transaction alerts, and KYC flows. DLT-compliant, DPDPA-aware, with ₹60 free credit.",
+      "SMS for banking & fintech in India — secure OTPs in under 1 second, transaction alerts, and KYC flows. DLT-compliant, DPDPA-aware, with",
     focusKeyword: "SMS for banking & fintech",
     keywords: [
       "SMS for banking & fintech",
@@ -702,7 +703,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/solutions/ecommerce": {
     title: "SMS & WhatsApp for E-commerce Brands in India",
     description:
-      "SMS for e-commerce in India — DLT-compliant order and shipping alerts, WhatsApp broadcasts, and AI cart-recovery agents that lift repeat sales. ₹60 free.",
+      "SMS for e-commerce in India — DLT-compliant order and shipping alerts, WhatsApp broadcasts, and AI cart-recovery agents that lift repeat sales.",
     focusKeyword: "SMS for e-commerce",
     keywords: [
       "SMS for e-commerce",
@@ -718,7 +719,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/solutions/education": {
     title: "SMS for Schools & EdTech — Trusted, 8 Languages",
     description:
-      "SMS for schools and EdTech in India — DLT-compliant fee reminders, exam schedules, result alerts, and parent updates over SMS and WhatsApp. ₹60 free credit.",
+      "SMS for schools and EdTech in India — DLT-compliant fee reminders, exam schedules, result alerts, and parent updates over SMS and WhatsApp.",
     focusKeyword: "SMS for schools",
     keywords: [
       "SMS for schools",
@@ -734,7 +735,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/solutions/healthcare": {
     title: "SMS for Hospitals & Clinics in India 2026",
     description:
-      "SMS for healthcare in India — DLT-compliant appointment reminders, prescription refills, lab results, and patient follow-up over SMS and WhatsApp. ₹60 free.",
+      "SMS for healthcare in India — DLT-compliant appointment reminders, prescription refills, lab results, and patient follow-up over SMS and WhatsApp.",
     focusKeyword: "SMS for healthcare",
     keywords: [
       "SMS for healthcare",
@@ -750,7 +751,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/solutions/logistics": {
     title: "Delivery OTP & Tracking SMS for Logistics India",
     description:
-      "SMS for logistics in India — DLT-compliant dispatch alerts, delivery OTPs, live tracking links, and driver check-ins over SMS and WhatsApp. ₹60 free credit.",
+      "SMS for logistics in India — DLT-compliant dispatch alerts, delivery OTPs, live tracking links, and driver check-ins over SMS and WhatsApp.",
     focusKeyword: "SMS for logistics",
     keywords: [
       "SMS for logistics",
@@ -766,7 +767,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/solutions/real-estate": {
     title: "SMS & WhatsApp for Real Estate Leads in India",
     description:
-      "SMS for real estate in India — DLT-compliant property alerts, open-house invites, lead nurture, and client follow-up over SMS and WhatsApp. ₹60 free credit.",
+      "SMS for real estate in India — DLT-compliant property alerts, open-house invites, lead nurture, and client follow-up over SMS and WhatsApp.",
     focusKeyword: "SMS for real estate",
     keywords: [
       "SMS for real estate",
@@ -782,7 +783,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/solutions/retail": {
     title: "SMS & WhatsApp for Retail & Hospitality in India",
     description:
-      "SMS for retail & hospitality in India — DLT-compliant loyalty offers, reservation confirmations, flash sales, and guest messaging over SMS & WhatsApp. ₹60 free.",
+      "SMS for retail & hospitality in India — DLT-compliant loyalty offers, reservation confirmations, flash sales, and guest messaging over SMS & WhatsApp.",
     focusKeyword: "SMS for retail",
     keywords: [
       "SMS for retail",
@@ -882,7 +883,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/compare": {
     title: "Compare SMS & WhatsApp Providers in India (2026)",
     description:
-      "SMS service comparison for India — SMSLocal vs MSG91, Fast2SMS, WATI, AiSensy, Interakt, Gupshup, Twilio, and Textlocal on features and pricing. ₹60 free.",
+      "SMS service comparison for India — SMSLocal vs MSG91, Fast2SMS, WATI, AiSensy, Interakt, Gupshup, Twilio, and Textlocal on features and pricing.",
     focusKeyword: "bulk SMS provider comparison India",
     keywords: [
       "SMS service comparison",
@@ -897,7 +898,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/compare/smslocal-vs-aisensy": {
     title: "AiSensy Alternative — SMS + WhatsApp, No Plan Fee",
     description:
-      "SMSLocal vs AiSensy — an honest 2026 comparison of WhatsApp BSP pricing, chatbot builder, analytics, and AI agents, plus who should pick which. ₹60 free.",
+      "SMSLocal vs AiSensy — an honest 2026 comparison of WhatsApp BSP pricing, chatbot builder, analytics, and AI agents, plus who should pick which.",
     focusKeyword: "SMSLocal vs AiSensy",
     keywords: [
       "SMSLocal vs AiSensy",
@@ -912,7 +913,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/compare/smslocal-vs-fast2sms": {
     title: "Fast2SMS Alternative — WhatsApp + Modern SMS API",
     description:
-      "SMSLocal vs Fast2SMS — an honest 2026 comparison of route quality, DLT handling, WhatsApp coverage, and API maturity, plus who should pick which. ₹60 free.",
+      "SMSLocal vs Fast2SMS — an honest 2026 comparison of route quality, DLT handling, WhatsApp coverage, and API maturity, plus who should pick which.",
     focusKeyword: "SMSLocal vs Fast2SMS",
     keywords: [
       "SMSLocal vs Fast2SMS",
@@ -927,7 +928,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/compare/smslocal-vs-gupshup": {
     title: "SMSLocal vs Gupshup — A Trusted 2026 Comparison",
     description:
-      "SMSLocal vs Gupshup — an honest 2026 comparison of enterprise WhatsApp, AI agents, onboarding speed, and pricing, plus who should pick which. ₹60 free.",
+      "SMSLocal vs Gupshup — an honest 2026 comparison of enterprise WhatsApp, AI agents, onboarding speed, and pricing, plus who should pick which.",
     focusKeyword: "SMSLocal vs Gupshup",
     keywords: [
       "SMSLocal vs Gupshup",
@@ -942,7 +943,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/compare/smslocal-vs-interakt": {
     title: "Interakt Alternative — SMS + WhatsApp, PAYG",
     description:
-      "SMSLocal vs Interakt — an honest 2026 comparison of D2C commerce integrations, WhatsApp catalogues, customer journeys, and who should pick which. ₹60 free.",
+      "SMSLocal vs Interakt — an honest 2026 comparison of D2C commerce integrations, WhatsApp catalogues, customer journeys, and who should pick which.",
     focusKeyword: "SMSLocal vs Interakt",
     keywords: [
       "SMSLocal vs Interakt",
@@ -1047,7 +1048,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/compare/smslocal-vs-wati": {
     title: "WATI Alternative — Pay-As-You-Go, No ₹2,499 Fee",
     description:
-      "SMSLocal vs WATI — an honest 2026 comparison of pay-as-you-go vs flat-fee pricing, team inbox depth, and AI agents, plus who should pick which. ₹60 free.",
+      "SMSLocal vs WATI — an honest 2026 comparison of pay-as-you-go vs flat-fee pricing, team inbox depth, and AI agents, plus who should pick which.",
     focusKeyword: "SMSLocal vs WATI",
     keywords: [
       "SMSLocal vs WATI",
@@ -1064,7 +1065,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/developers": {
     title: "SMS & WhatsApp API for Developers in India",
     description:
-      "SMS & WhatsApp API for developers — REST endpoints, SDKs for PHP, Java, Python, Node.js, C# and JavaScript, signed webhooks, and a free sandbox. ₹60 free.",
+      "SMS & WhatsApp API for developers — REST endpoints, SDKs for PHP, Java, Python, Node.js, C# and JavaScript, signed webhooks, and a free sandbox.",
     focusKeyword: "SMS & WhatsApp API",
     keywords: [
       "SMS & WhatsApp API",
@@ -1080,7 +1081,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/developers/api-docs": {
     title: "SMS API Documentation — REST Reference & Examples",
     description:
-      "SMS API documentation for SMSLocal — send DLT-compliant SMS, fetch delivery reports, and check credits with cURL, Node, and Python examples. ₹60 free credit.",
+      "SMS API documentation for SMSLocal — send DLT-compliant SMS, fetch delivery reports, and check credits with cURL, Node, and Python examples.",
     focusKeyword: "SMS API documentation",
     keywords: [
       "SMS API documentation",
@@ -1112,7 +1113,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/developers/sms-api": {
     title: "SMS API India: DLT-Compliant REST & XML API",
     description:
-      "SMS API for Indian businesses: DLT-compliant REST and XML endpoints, cURL, Node.js and Python samples, delivery webhooks and CRM integrations. ₹60 free credit.",
+      "SMS API for Indian businesses: DLT-compliant REST and XML endpoints, cURL, Node.js and Python samples, delivery webhooks and CRM integrations.",
     focusKeyword: "SMS API India",
     keywords: [
       "SMS API",
@@ -1257,9 +1258,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/resources/tools": {
-    title: "Free SMS Tools for India — Send with ₹60 Credit",
+    title: "Free SMS Tools for India — Send a Test SMS",
     description:
-      "Free SMS tools for Indian businesses — send SMS with ₹60 free credit, read the legal alternatives to SMS bombing, and check SMS character and segment limits.",
+      "Free SMS tools for Indian businesses — send a test SMS, read the legal alternatives to SMS bombing, and check SMS character and segment limits.",
     focusKeyword: "free SMS tools India",
     keywords: [
       "free SMS tools",
@@ -1273,7 +1274,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/resources/tools/free-sms-without-registration": {
     title: "Free SMS Without Registration — No Sign-Up Needed",
     description:
-      "Free SMS without registration — send to Indian numbers with ₹60 signup credit, pay-as-you-go from ₹0.1050, and no credit card. DLT-compliant, live in minutes.",
+      "Free SMS without registration — send to Indian numbers, pay-as-you-go from ₹0.1050, and no credit card. DLT-compliant, live in minutes.",
     focusKeyword: "free SMS without registration",
     keywords: [
       "free SMS without registration",
@@ -1311,7 +1312,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/long-sms-messages": {
     title: "Long SMS Messages — Complete Trusted 2026 Guide",
     description:
-      "Long SMS messages explained for India — how concatenation works, GSM-7 vs UCS-2 limits, segment counts, pricing, and DLT template rules. ₹60 free to try.",
+      "Long SMS messages explained for India — how concatenation works, GSM-7 vs UCS-2 limits, segment counts, pricing, and DLT template rules.",
     type: "article",
     publishedTime: "2026-02-10T00:00:00.000Z",
     modifiedTime: "2026-04-22T00:00:00.000Z",
@@ -1365,7 +1366,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/company/contact": {
     title: "Contact SMSLocal — Sales & Support, 1-Day Reply",
     description:
-      "Contact SMSLocal for enterprise sales, DLT onboarding, integration help, partnerships, or press — our team responds within one business day. ₹60 free to try.",
+      "Contact SMSLocal for enterprise sales, DLT onboarding, integration help, partnerships, or press — our team responds within one business day.",
     focusKeyword: "contact SMSLocal",
     keywords: [
       "contact SMSLocal",

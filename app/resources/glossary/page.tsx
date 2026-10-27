@@ -231,8 +231,8 @@ export default function GlossaryPage() {
 
         <ProductFinalCta
           title="The vocabulary is only half the job."
-          subtitle="The other half is software that actually does what the words say. Start with ₹60 of free credit and send your first message in minutes."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          subtitle="The other half is software that actually does what the words say. Start your trial with send your first message in minutes."
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Open the help centre", href: "/resources/help/" }}
         />
       </main>

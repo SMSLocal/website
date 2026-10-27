@@ -180,8 +180,8 @@ export default function DndServicesPost() {
 
       <BlogInlineCta
         title="Send DND-compliant SMS in India"
-        body="SMSLocal scrubs every list against the NCPR, enforces send windows, and matches header categories automatically. Get started with free credit to test compliant delivery."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        body="SMSLocal scrubs every list against the NCPR, enforces send windows, and matches header categories automatically. Start your trial to test compliant delivery."
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
       <H2 id="consent">Consent: the other half of compliance</H2>
       <P>

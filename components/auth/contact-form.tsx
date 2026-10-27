@@ -141,7 +141,7 @@ export function ContactForm() {
             <Link href="/">Back to homepage</Link>
           </Button>
           <Button asChild variant="outline">
-            <Link href="/pricing/">View pricing</Link>
+            <Link href="/company/contact/">Talk to sales</Link>
           </Button>
         </div>
       </div>

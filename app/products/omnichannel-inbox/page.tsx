@@ -152,7 +152,7 @@ export default function OmnichannelInboxPage() {
           }
           subtitle="Live agents and agentic AI work WhatsApp, RCS, SMS, voice, email, Instagram, and Messenger from one place."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: Inbox,      label: "7 channels, one view" },
             { icon: Bot,        label: "AI agent plus copilot built in" },
@@ -375,7 +375,7 @@ export default function OmnichannelInboxPage() {
           title="Put every conversation in one inbox."
           subtitle="Connect your channels, bring in the AI, and give your team one place to work every customer — no tab switching, no lost context."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

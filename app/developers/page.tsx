@@ -152,7 +152,7 @@ export default function DevelopersPage() {
                 .
               </h1>
               <p className="mt-5 max-w-xl text-pretty text-base text-white/70 sm:text-lg">
-                REST and XML APIs, webhook-driven delivery reports, and a sandbox mode with ₹60 free credit.
+                REST and XML APIs, webhook-driven delivery reports, and a sandbox mode with
                 Everything an engineer needs to go from <code className="rounded bg-white/10 px-1 py-0.5 text-xs text-primary">curl</code> to production.
               </p>
 
@@ -329,7 +329,7 @@ export default function DevelopersPage() {
                   Get API key
                   <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
-                <span className="text-xs text-muted-foreground">₹60 free credit on first top-up</span>
+                <span className="text-xs text-muted-foreground">Pay as you go</span>
               </div>
             </div>
           </div>

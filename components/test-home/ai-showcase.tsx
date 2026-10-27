@@ -172,7 +172,7 @@ export function AiShowcase() {
                 ))}
               </nav>
               <div className="mt-auto rounded-xl border border-primary/20 bg-primary/5 p-3">
-                <div className="text-[11px] font-semibold text-primary">₹2,100 free credit</div>
+                <div className="text-[11px] font-semibold text-primary">Free sandbox</div>
                 <div className="mt-0.5 text-[10.5px] text-muted-foreground">No card required</div>
               </div>
             </aside>

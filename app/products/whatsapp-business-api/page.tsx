@@ -59,8 +59,8 @@ export default function WhatsAppPage() {
           eyebrow="WhatsApp Business API"
           title={<>WhatsApp Business API with AI agents in 8 Indian languages</>}
           subtitle="Run broadcasts, build visual chatbot flows, and let AI agents handle routine customer queries across eight Indian languages. Zero setup fee, no monthly plan — only pay for the conversations you actually have."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
           trustBar={[
             { icon: ShieldCheck, label: "Native WhatsApp BSP" },
             { icon: Languages, label: "Templates in 11 Indian languages" },
@@ -103,7 +103,7 @@ export default function WhatsAppPage() {
           steps={[
             {
               title: "Sign up free",
-              body: "Create a SMSLocal account. Get ₹60 credit to test WhatsApp end-to-end.",
+              body: "Create a SMSLocal account. Start your trial to test WhatsApp end-to-end.",
             },
             {
               title: "Connect your Meta account",
@@ -111,7 +111,7 @@ export default function WhatsAppPage() {
             },
             {
               title: "Top up your wallet",
-              body: "Minimum ₹100 (one-time ₹60 signup bonus lands in the same wallet, so your first wallet shows ₹160). Use the balance for broadcasts, AI conversations, or utility messages.",
+              body: "Minimum ₹100. Use the balance for broadcasts, AI conversations, or utility messages.",
             },
             {
               title: "Launch",
@@ -396,9 +396,9 @@ export default function WhatsAppPage() {
 
         <ProductFinalCta
           title="Launch WhatsApp in 10 minutes."
-          subtitle="Zero setup. Zero monthly plan. Pay only for what you send. ₹60 free credit."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+          subtitle="Zero setup. Zero monthly plan. Pay only for what you send."
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

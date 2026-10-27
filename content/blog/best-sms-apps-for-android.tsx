@@ -99,7 +99,7 @@ const FAQ_ITEMS = [
         No personal SMS app supports bulk messaging that complies with Indian regulations. Bulk
         SMS in India requires DLT registration, approved content templates, and DND scrubbing —
         none of which personal apps provide. For business bulk SMS, a platform like SMSLocal is
-        required. The free trial credit covers initial testing at no cost.
+        required. A trial account covers initial testing.
       </>
     ),
   },
@@ -323,7 +323,7 @@ export default function BestSmsAppsForAndroidPost() {
       <BlogInlineCta
         title="Sending SMS for your business, not just your phone"
         body="Personal SMS apps can't send DLT-compliant OTPs or bulk campaigns in India. SMSLocal handles registered sender IDs, approved templates, and delivery receipts from any device."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
 
       <H2 id="pulse-sms">5. Pulse SMS — Best for Multi-Device SMS Sync</H2>
@@ -454,8 +454,8 @@ export default function BestSmsAppsForAndroidPost() {
         </LI>
       </UL>
 
-      <Callout variant="tip" title="Free trial for business SMS on Android">
-        SMSLocal provides a <Strong>₹60 free trial credit</Strong> — no credit card required. The
+      <Callout variant="tip" title="Trial for business SMS on Android">
+        SMSLocal offers a <Strong>trial</Strong> — no credit card required. The
         Android-accessible web dashboard and SMS API let you send DLT-compliant SMS from any device.
         See the <A href="/blog/send-sms-online/">guide to sending SMS online in India</A> for the
         full setup.
@@ -488,7 +488,7 @@ export default function BestSmsAppsForAndroidPost() {
       <Callout variant="tip" title="Need business SMS from Android?">
         SMSLocal&apos;s web dashboard works on any Android browser — send DLT-compliant OTPs,
         transactional alerts, and bulk campaigns from your phone with real delivery receipts.{" "}
-        <A href="/signup/">Start with ₹60 free credit</A> — no credit card required. Or read{" "}
+        <A href="/signup/">Start your trial</A> — no credit card required. Or read{" "}
         <A href="/blog/send-sms-online/">how to send SMS online in India</A> for the complete
         platform comparison.
       </Callout>

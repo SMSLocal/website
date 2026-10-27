@@ -128,7 +128,7 @@ export default function SalesAgentPage() {
           }
           subtitle="Recommend products, answer buyer questions, and guide customers to checkout inside the conversation, on every channel."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: PackageSearch, label: "Recommends from your catalog" },
             { icon: ShoppingCart, label: "Recovers carts automatically" },
@@ -316,7 +316,7 @@ export default function SalesAgentPage() {
           title="Turn more conversations into orders."
           subtitle="Connect your catalog, train the agent on your products, and start converting chats into sales — across every channel your customers already use."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

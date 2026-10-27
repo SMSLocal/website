@@ -91,8 +91,8 @@ export default function EcommerceSolutionPage() {
             </>
           }
           subtitle="Confirm orders, recover carts, blast festive sales, and run AI WhatsApp agents that nudge browsers to buy — all from one dashboard."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant templates" },
             { icon: Bot, label: "AI WhatsApp in 8 Indian languages" },
@@ -245,9 +245,9 @@ export default function EcommerceSolutionPage() {
 
         <ProductFinalCta
           title="Start selling more with every message."
-          subtitle="Free trial with ₹60 credit. No card, no monthly plan, no lock-in — just send."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
+          subtitle="No card, no monthly plan, no lock-in — just send."
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
 

@@ -294,7 +294,7 @@ export default function AutomationPage() {
           <FinalCtaBoxless
             title="Turn every conversation into an automated workflow."
             subtitle="Start with smart replies today and scale customer support with automation and AI."
-            primaryCta={{ label: "Start Free Trial", href: "/signup/" }}
+            primaryCta={{ label: "Start your trial", href: "/signup/" }}
             secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
           />
         </div>

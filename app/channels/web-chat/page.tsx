@@ -113,7 +113,7 @@ export default function WebChatPage() {
           }
           subtitle="A customizable chat widget that answers visitors instantly and converts them, powered by agentic AI."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: Palette,            label: "Customizable widget" },
             { icon: Sparkles,           label: "AI answers before an agent" },
@@ -279,7 +279,7 @@ export default function WebChatPage() {
           title="Add agentic AI chat to your website."
           subtitle="Install the widget, connect your knowledge base, and start converting visitors into conversations."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

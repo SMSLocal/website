@@ -127,7 +127,7 @@ export default function BookingAgentPage() {
           }
           subtitle="Schedule appointments and reservations inside the chat, check availability, confirm, and send reminders, all automatically."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: CalendarCheck, label: "Books inside the conversation" },
             { icon: Zap,           label: "Real-time availability checks" },
@@ -314,7 +314,7 @@ export default function BookingAgentPage() {
           title="Fill your calendar without the phone tag."
           subtitle="Connect your calendar, set your availability, and let the agent handle bookings, reminders, and reschedules — automatically."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

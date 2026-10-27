@@ -86,7 +86,7 @@ const RELEASES: Release[] = [
     changes: [
       { kind: "new", title: "Unified inbox", bullets: ["SMS", "WhatsApp", "RCS", "Email", "Live Chat"] },
       { kind: "new", title: "REST API v1", bullets: ["Messages", "Contacts", "Conversations"] },
-      { kind: "new", title: "₹60 signup credit", desc: "Every new account starts with free credit to test live sends." },
+      { kind: "new", title: "Trial accounts", desc: "Every new account can start a trial to test live sends." },
       { kind: "improved", title: "Real-time delivery status on every message" },
     ],
   },

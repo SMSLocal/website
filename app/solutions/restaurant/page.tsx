@@ -151,7 +151,7 @@ export default function RestaurantSolutionPage() {
             </>
           }
           subtitle="Manage guest conversations, automate reservations, send order updates, collect reviews, and keep every customer interaction organized from one platform."
-          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
           trustBar={[
             { icon: CalendarCheck, label: "SMS reservations" },
@@ -484,7 +484,7 @@ export default function RestaurantSolutionPage() {
         <ProductFinalCta
           title="Give every guest a faster response."
           subtitle="Manage reservations, orders, reviews, and customer conversations from one restaurant inbox."
-          primaryCta={{ label: "Start Free", href: "/signup/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Book a demo", href: "/company/contact/" }}
         />
       </main>
@@ -798,7 +798,7 @@ function PriceCard({
               : "border border-border bg-background text-foreground hover:border-primary/40 hover:bg-secondary"
             }`}
         >
-          Start Free
+          Start your trial
           {featured ? <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" /> : null}
         </Link>
         <Link

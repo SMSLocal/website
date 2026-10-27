@@ -9,7 +9,6 @@ import { HowItWorks } from "@/components/landing/how-it-works"
 import { Industries } from "@/components/landing/industries"
 import { OperatorsStrip } from "@/components/landing/operators-strip"
 import { MessagingShowcase } from "@/components/landing/messaging-showcase"
-import { PricingTeaser } from "@/components/landing/pricing-teaser"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
@@ -39,11 +38,11 @@ const HOMEPAGE_FAQS = [
   },
   {
     q: "How much does SMSLocal cost?",
-    a: "SMS pricing starts at ₹0.115 per message for transactional SMS at higher volumes. WhatsApp Business API is billed per delivered message, by category (marketing, utility, authentication, service), at Meta's published India rates, with zero platform markup on the first slab. OTP SMS starts at ₹0.15 with priority routing. Every new account gets ₹60 of free credit to test on live numbers before paying.",
+    a: "SMS pricing starts at ₹0.115 per message for transactional SMS at higher volumes. WhatsApp Business API is billed per delivered message, by category (marketing, utility, authentication, service), at Meta's published India rates, with zero platform markup on the first slab. OTP SMS starts at ₹0.15 with priority routing. Start your trial to test on live numbers before paying.",
   },
   {
     q: "Do I need a credit card to start?",
-    a: "No. Signup is free, gets you ₹60 of credit instantly, and does not ask for a card. Add credits later via UPI, net banking, or card when you are ready to scale past the free credit.",
+    a: "No. Signup is free and does not ask for a card. Add credits later via UPI, net banking, or card when you are ready to start sending.",
   },
   {
     q: "Which Indian carriers does SMSLocal support?",
@@ -78,7 +77,6 @@ export default function HomePage() {
       <HowItWorks />
       <Differentiators />
       <Industries />
-      <PricingTeaser />
       <ComplianceStrip />
       <DeveloperStrip />
       <FaqSection items={HOMEPAGE_FAQS} />

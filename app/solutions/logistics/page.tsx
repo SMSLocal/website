@@ -92,8 +92,8 @@ export default function LogisticsSolutionPage() {
             </>
           }
           subtitle="Dispatch alerts, delivery OTPs, live tracking, driver check-ins, and customer notifications — in every Indian language the driver or customer speaks."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant templates" },
             { icon: Radio, label: "Smart route failover" },
@@ -243,9 +243,9 @@ export default function LogisticsSolutionPage() {
 
         <ProductFinalCta
           title="Faster messaging, fewer exceptions."
-          subtitle="Free trial with ₹60 credit. Dispatch your first million SMS without a monthly plan."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
+          subtitle="Dispatch your first million SMS without a monthly plan."
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
 

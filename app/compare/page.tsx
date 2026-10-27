@@ -195,10 +195,10 @@ export default function CompareHubPage() {
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <Link
-                href="/pricing/"
+                href="/company/contact/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/10"
               >
-                See our pricing
+                Talk to sales
               </Link>
             </div>
           </div>
@@ -291,8 +291,8 @@ export default function CompareHubPage() {
 
         <ProductFinalCta
           title="Still shortlisting? Try SMSLocal free."
-          subtitle="₹60 credit, no card, no commitment. See the product on your own data before you compare anything."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
+          subtitle="See the product on your own data before you compare anything."
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
           secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>

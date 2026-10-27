@@ -89,8 +89,8 @@ export default function RealEstateSolutionPage() {
             </>
           }
           subtitle="New listing alerts, open-house invites, buyer follow-ups, and lead nurture flows — personalised, DLT-compliant, and in the client's preferred language."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
           trustBar={[
             { icon: ShieldCheck, label: "DLT-compliant templates" },
             { icon: Target, label: "Preference-based segmentation" },
@@ -236,9 +236,9 @@ export default function RealEstateSolutionPage() {
 
         <ProductFinalCta
           title="Never let a lead go cold."
-          subtitle="Start free with ₹60 credit. Qualify buyers on WhatsApp 24/7, without a monthly plan."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See Pricing", href: "/pricing/" }}
+          subtitle="Start your trial. Qualify buyers on WhatsApp 24/7, without a monthly plan."
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
 

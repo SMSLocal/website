@@ -195,7 +195,7 @@ function SmsPanel() {
             href="/signup/"
             className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 hover:brightness-110"
           >
-            Start Free — ₹60 Credit
+            Start your trial
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
@@ -684,7 +684,7 @@ function OtpPanel() {
           href="/signup/"
           className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-5 py-3 text-sm font-medium text-foreground hover:bg-muted"
         >
-          Start Free — ₹60 Credit
+          Start your trial
         </Link>
       </div>
     </div>

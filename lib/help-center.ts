@@ -79,8 +79,8 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         slug: "create-your-account",
         title: "How do I create an SMSLocal account?",
         seoTitle: "How to Create Your Free SMSLocal Account",
-        excerpt: "Signing up takes two minutes and gives you ₹60 of free credit to try SMS, WhatsApp, and OTP sending — no credit card or DLT registration required to get started.",
-        seoDescription: "Signing up takes two minutes and includes ₹60 of free credit for SMS, WhatsApp and OTP sending — no credit card and no DLT registration needed to get started.",
+        excerpt: "Signing up takes two minutes and lets you try SMS, WhatsApp, and OTP sending — no credit card or DLT registration required to get started.",
+        seoDescription: "Signing up takes two minutes and lets you try SMS, WhatsApp and OTP sending — no credit card and no DLT registration needed to get started.",
         readMinutes: 2,
         updatedOn: "2026-02-10",
         body: [
@@ -93,7 +93,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
               "Verify your mobile number with the OTP we send.",
               "Complete your business profile (PAN, GST, business address).",
               "Pick your primary use case — SMS, WhatsApp, OTP, or all three.",
-              "Land on the dashboard with ₹60 of credit already loaded.",
+              "Land on your dashboard, ready to send.",
             ],
           },
           {
@@ -260,7 +260,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
               ["Google Messages / phone app", "Personal, PC mirroring", "Uses SIM quota", "N/A (personal)", "No"],
               ["Free web SMS sites", "One-off messages", "5–25/day, capped", "No", "No"],
               ["WhatsApp (personal)", "Chats over the internet", "Unlimited", "N/A", "No"],
-              ["SMSLocal (business platform)", "Business SMS, OTP, bulk", "₹60 signup credit", "Yes — managed", "Yes"],
+              ["SMSLocal (business platform)", "Business SMS, OTP, bulk", "Trial account", "Yes — managed", "Yes"],
             ],
             caption: "Free consumer tools suit occasional personal texts; a DLT-compliant platform is required for any business or bulk sending in India.",
           },
@@ -307,7 +307,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
           {
             t: "list",
             items: [
-              "₹60 free signup credit — around 200–400 test messages, no credit card required.",
+              "A free trial account, no credit card required.",
               "Direct operator connectivity with sub-second delivery and full delivery receipts.",
               "Managed DLT: entity, sender ID and template approvals handled inside one dashboard.",
               "REST API and dashboard sending, with WhatsApp and OTP on the same account.",
@@ -317,7 +317,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
             t: "callout",
             tone: "tip",
             title: "Try SMSLocal free",
-            body: "Create an account to get ₹60 of credit and send your first DLT-compliant SMS from the dashboard or API — no branded footer, no daily cap, no commitment.",
+            body: "Create an account and send your first DLT-compliant SMS from the dashboard or API — no branded footer, no daily cap, no commitment.",
           },
         ],
         faqItems: [
@@ -325,7 +325,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
           { q: "What is the best free Way2SMS alternative for personal use?", a: "Your mobile operator's bundled SMS. Most Jio, Airtel and Vi plans include around 100 free SMS per day, sent from your real number with no branding or reliability issues. For texting from a laptop, Google Messages for Web mirrors your phone's SMS threads with no install." },
           { q: "Can I send bulk SMS for free like the old Way2SMS?", a: "Not reliably. Free web SMS tools are rate-limited to a few messages a day and cannot send DLT-compliant commercial traffic. For bulk sending in India you need a registered business platform; costs are typically ₹0.10–0.18 per promotional SMS and ₹0.03–0.08 per OTP." },
           { q: "Do Way2SMS alternatives support DLT compliance?", a: "Free consumer tools do not — they cannot register DLT headers or templates. Any service sending commercial SMS to Indian numbers must be DLT-compliant under TRAI's TCCCPR 2018 rules. Business platforms like SMSLocal manage DLT registration for you." },
-          { q: "How is SMSLocal different from a free Way2SMS-style website?", a: "SMSLocal sends over direct operator routes with your own registered sender ID, real-time delivery receipts, DLT compliance, and no daily cap — versus a shared sender, a tiny quota, and no delivery proof on free sites. You get ₹60 of free credit to test it before paying." },
+          { q: "How is SMSLocal different from a free Way2SMS-style website?", a: "SMSLocal sends over direct operator routes with your own registered sender ID, real-time delivery receipts, DLT compliance, and no daily cap — versus a shared sender, a tiny quota, and no delivery proof on free sites.." },
         ],
       },
       {

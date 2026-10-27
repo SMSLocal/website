@@ -156,7 +156,7 @@ export default function TelegramCodeSmsPost() {
       <BlogInlineCta
         title="Sending OTPs to Indian users yourself?"
         body="If you run login or verification flows for an Indian audience, SMSLocal delivers transactional OTPs reliably across Jio, Airtel, Vi, and BSNL. Test it before you commit."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
 
       <H2 id="step-by-step-fix">Step-by-step fix</H2>
@@ -334,7 +334,7 @@ export default function TelegramCodeSmsPost() {
         If you&apos;re a developer building your own SMS verification flow, SMSLocal&apos;s OTP
         route delivers to Indian numbers in under 5 seconds with 99.8% delivery rates.{" "}
         <A href="/developers/sms-api/">See the API documentation</A> or{" "}
-        <A href="/signup/">start with ₹60 free credit</A>.
+        <A href="/signup/">start your trial</A>.
       </Callout>
     </>
   )

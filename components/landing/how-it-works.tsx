@@ -17,10 +17,10 @@ const STEPS: Step[] = [
       <div className="rounded-lg border border-border bg-secondary/60 p-2.5">
         <div className="flex items-center justify-between text-[11px]">
           <span className="text-muted-foreground">Wallet</span>
-          <span className="font-bold text-primary">₹60</span>
+          <span className="font-bold text-primary">Ready</span>
         </div>
         <div className="mt-1.5 inline-flex items-center gap-1 text-[10.5px] font-medium text-primary">
-          <Check className="h-3 w-3" /> free credit added
+          <Check className="h-3 w-3" /> account created
         </div>
       </div>
     ),

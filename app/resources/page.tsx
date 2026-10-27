@@ -62,7 +62,7 @@ const SECTIONS = [
     href: "/resources/tools/",
     icon: Wrench,
     label: "Free Tools",
-    description: "Try SMS free with ₹60 credit, learn why SMS bombing is illegal in India, and explore SMS length limits.",
+    description: "Start your trial, learn why SMS bombing is illegal in India, and explore SMS length limits.",
     meta: "2 free utilities",
     accent: "text-amber-400",
     bg: "bg-amber-500/10",
@@ -325,7 +325,7 @@ export default function ResourcesIndexPage() {
       </main>
 
       <ProductFinalCta
-        title="₹60 free credit. No credit card."
+        title="Start your trial. No credit card required."
         subtitle="Open a live account, send your first DLT-compliant SMS, and keep the test balance forever."
         primaryCta={{ label: "Create free account", href: "/signup/" }}
         secondaryCta={{ label: "Read the docs", href: "/developers/api-docs/" }}

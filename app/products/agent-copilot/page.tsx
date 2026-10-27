@@ -113,7 +113,7 @@ export default function AgentCopilotPage() {
           }
           subtitle="Reply drafting, thread summaries, and knowledge-grounded answers that make your human team faster and more consistent."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: Sparkles, label: "On-brand reply drafts" },
             { icon: FileText, label: "5-second thread summaries" },
@@ -298,7 +298,7 @@ export default function AgentCopilotPage() {
           title="Give every agent an AI copilot."
           subtitle="Drafted replies, thread summaries, and knowledge-grounded answers — connect your inbox and let your team respond faster and more consistently."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

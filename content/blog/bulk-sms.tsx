@@ -240,7 +240,7 @@ export default function BulkSmsPost() {
       <OL>
         <LI>
           <Strong>Choose an SMS platform.</Strong> Pick a provider that handles DLT and delivery
-          reports. SMSLocal gives new accounts ₹60 in free credit, so you can test before you
+          reports. SMSLocal lets new accounts start a trial, so you can test before you
           pay.
         </LI>
         <LI>

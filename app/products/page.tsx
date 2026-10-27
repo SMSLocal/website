@@ -205,10 +205,10 @@ export default function ProductsPage() {
                 Start building free
               </Link>
               <Link
-                href="/pricing/"
+                href="/company/contact/"
                 className="inline-flex items-center justify-center rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white/90 transition hover:bg-white/10"
               >
-                See pricing
+                Talk to sales
               </Link>
             </div>
           </div>

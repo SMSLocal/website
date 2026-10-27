@@ -750,9 +750,9 @@ export default function ApiDocsPage() {
 
       <ProductFinalCta
         title="Ready to send your first SMS?"
-        subtitle="₹60 free credit — enough for 60 real deliveries. No credit card, full DLT support from our team."
+        subtitle="No credit card, full DLT support from our team."
         primaryCta={{ label: "Get your API key", href: "/signup/" }}
-        secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+        secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
       />
 
       <SiteFooter />

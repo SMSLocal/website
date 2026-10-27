@@ -33,7 +33,7 @@ export function FinalCta() {
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">on us</span>.
             </h2>
             <p className="mt-4 text-[15px] leading-relaxed text-white/70 sm:text-base">
-              ₹60 free credit. Full DLT compliance. Two-minute signup. No card.
+              Full DLT compliance. Two-minute signup. No card.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -41,7 +41,7 @@ export function FinalCta() {
                 href="/signup/"
                 className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-xl shadow-primary/25 transition hover:brightness-110"
               >
-                <span className="relative z-10">Start Free — ₹60 Credit</span>
+                <span className="relative z-10">Start your trial</span>
                 <ArrowRight className="relative z-10 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 <span aria-hidden className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               </a>

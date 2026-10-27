@@ -123,7 +123,7 @@ export default function LeadQualificationPage() {
           }
           subtitle="Capture interest, ask the right questions, score intent, and route hot leads to your team, automatically."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: MessageCircle, label: "Captures leads on every channel" },
             { icon: Filter,        label: "Qualifies with dynamic questions" },
@@ -310,7 +310,7 @@ export default function LeadQualificationPage() {
           title="Stop losing leads to slow follow-up."
           subtitle="Connect your channels and CRM, let the agent qualify every inbound instantly, and hand your reps a pipeline full of leads worth closing."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

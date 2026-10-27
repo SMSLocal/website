@@ -56,7 +56,7 @@ const FAQ_ITEMS = [
       <>
         Typically ₹0.09–₹0.30 per SMS depending on route (transactional vs. promotional),
         message encoding, and volume tier — see the{" "}
-        <A href="/pricing/">current SMSLocal rate card</A> for exact tiers. There's usually no
+        <A href="/company/contact/">current SMSLocal rate card</A> for exact tiers. There's usually no
         separate charge for API access itself; you pay per message sent.
       </>
     ),
@@ -65,7 +65,7 @@ const FAQ_ITEMS = [
     q: "Can I test a bulk SMS API before paying?",
     a: (
       <>
-        Yes. SMSLocal gives every new account ₹60 of free credit and sandbox access to send real
+        Yes. SMSLocal gives every new account sandbox access to send real
         test messages before you commit to a paid top-up — no credit card required to start.
       </>
     ),
@@ -207,13 +207,13 @@ export default function BulkSmsServiceApiPost() {
         </LI>
       </UL>
       <P>
-        See our full <A href="/pricing/">pricing breakdown</A> or read how SMSLocal compares to{" "}
+        See our full <A href="/company/contact/">pricing breakdown</A> or read how SMSLocal compares to{" "}
         <A href="/compare/smslocal-vs-msg91/">MSG91</A> and{" "}
         <A href="/compare/smslocal-vs-fast2sms/">Fast2SMS</A> on API depth and route quality.
       </P>
 
       <Callout variant="tip" title="Test before you commit">
-        SMSLocal gives every new account <Strong>₹60 free credit</Strong> and full API sandbox
+        SMSLocal gives every new account <Strong>full API sandbox</Strong>
         access — enough to send real test messages and see actual delivery receipts before your
         first paid top-up.
       </Callout>
@@ -221,7 +221,7 @@ export default function BulkSmsServiceApiPost() {
       <BlogInlineCta
         title="Send your first bulk SMS via API today"
         body="DLT-compliant sender ID, direct operator routes, real delivery receipts, and a REST API with a free sandbox."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
 
       <H2 id="faq">Frequently asked questions</H2>

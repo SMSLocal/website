@@ -82,7 +82,7 @@ const STEPS: Step[] = [
   {
     number: "01",
     title: "Create an SMSLocal account",
-    body: "Sign up with a work email. Every new account lands with \u20B960 free credit — enough for ~200 test SMS. No credit card required. You will be asked for a company name and the country you operate in; for Indian operators, pick India.",
+    body: "Sign up with a work email. Every new account starts with a trial. No credit card required. You will be asked for a company name and the country you operate in; for Indian operators, pick India.",
     cta: { label: "Sign up for free", href: "/signup/" },
   },
   {
@@ -186,7 +186,7 @@ export default function QuickstartPage() {
                   href="/signup/"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2.5 text-[14px] font-semibold text-primary-foreground shadow-lg shadow-primary/30 transition hover:brightness-110"
                 >
-                  Start — \u20B960 free credit
+                  Start your trial
                   <ArrowRight className="h-4 w-4" />
                 </Link>
                 <Link
@@ -399,7 +399,7 @@ export default function QuickstartPage() {
       <ProductFinalCta
         title="Your first delivered SMS is one API call away."
         subtitle="Sign up, grab a key, paste the snippet. We will handle the routing, DLT scrub, and delivery report."
-        primaryCta={{ label: "Start free", href: "/signup/" }}
+        primaryCta={{ label: "Start your trial", href: "/signup/" }}
         secondaryCta={{ label: "Read API docs", href: "/developers/api-docs/" }}
       />
 

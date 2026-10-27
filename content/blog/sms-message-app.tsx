@@ -241,7 +241,7 @@ export default function SmsMessageAppPost() {
       <BlogInlineCta
         title="Need to send SMS to customers, not just contacts?"
         body="SMSLocal is a DLT-compliant SMS platform for OTPs, alerts, and campaigns — registered sender ID, delivery receipts, and an API or no-code dashboard."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
 
       <H2 id="faq">Frequently asked questions</H2>

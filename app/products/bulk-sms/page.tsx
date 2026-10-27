@@ -59,8 +59,8 @@ export default function BulkSmsPage() {
           eyebrow="Bulk SMS"
           title={<>Bulk SMS that actually gets delivered</>}
           subtitle="Launch DLT-compliant bulk SMS campaigns with smart route failover, real-time delivery reports, and AI-powered routing that hits 98% delivery in under one second. Built for Indian businesses since 2019."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
           trustBar={[
             { icon: Zap, label: "98% delivery in under 1 second" },
             { icon: ShieldCheck, label: "99.99% platform uptime" },
@@ -105,7 +105,7 @@ export default function BulkSmsPage() {
           steps={[
             {
               title: "Sign up free",
-              body: "Create your account in 2 minutes. Get ₹60 credit to test every feature. No card, no commitment.",
+              body: "Create your account in 2 minutes. Start your trial to test every feature. No card, no commitment.",
             },
             {
               title: "Register your DLT entity",
@@ -196,7 +196,7 @@ export default function BulkSmsPage() {
           eyebrow="FAQs"
           title="Bulk SMS — the common questions"
           items={[
-            { q: "What's the minimum amount to start sending bulk SMS?", a: "₹60 free credit on signup, or top-up from ₹100 onwards." },
+            { q: "What's the minimum amount to start sending bulk SMS?", a: "Top up from ₹100 onwards, or start your trial to test the platform first." },
             { q: "Do I need DLT registration to send bulk SMS in India?", a: "Yes — DLT is mandatory under TRAI rules. Our team helps you register across every operator." },
             { q: "Can I send promotional SMS to DND numbers?", a: "No. Promotional SMS goes to non-DND numbers only, between 10 AM and 9 PM IST. Transactional SMS goes to all numbers, 24/7." },
             { q: "How fast are messages delivered?", a: "98% of messages land in under 1 second thanks to direct operator connections." },
@@ -230,9 +230,9 @@ export default function BulkSmsPage() {
 
         <ProductFinalCta
           title="Ready to send?"
-          subtitle="₹60 free credit. Two-minute signup. DLT registration support included."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+          subtitle="Two-minute signup. DLT registration support included."
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
       <SiteFooter />

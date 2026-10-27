@@ -127,7 +127,7 @@ export default function CustomerServiceAgentPage() {
           }
           subtitle="Deflect repetitive tickets across every channel with an agent that answers from your data and escalates the rest with full context."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
           trustBar={[
             { icon: HeadphonesIcon, label: "24/7 across 7 channels" },
             { icon: Zap, label: "Resolves without pre-built journeys" },
@@ -323,7 +323,7 @@ export default function CustomerServiceAgentPage() {
           title="Resolve more tickets without adding headcount."
           subtitle="Connect your channels, train the agent on your data, and go live in days. Your team handles what needs a person — the agent handles everything else."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start Free", href: "/signup/" }}
+          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />

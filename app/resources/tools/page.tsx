@@ -26,9 +26,9 @@ const TOOLS = [
   {
     slug: "free-sms-without-registration",
     title: "Free SMS without registration",
-    tagline: "Send your first SMS with ₹60 in free credit.",
+    tagline: "Send your first SMS in minutes.",
     description:
-      "Sign up with email only, get ₹60 in credit (no card, no commitment), and send your first Indian SMS in minutes on a DLT-compliant, TRAI-approved route.",
+      "Sign up with email only, no card, no commitment, and send your first Indian SMS in minutes on a DLT-compliant, TRAI-approved route.",
     icon: MessageSquare,
     tag: "Popular",
     tagTone: "emerald" as const,
@@ -163,7 +163,7 @@ export default function ToolsIndexPage() {
               body: "Sender IDs, opt-out handling and DND scrubbing follow TCCCPR 2018 rules.",
             },
             {
-              title: "₹60 free credit",
+              title: "Start your trial",
               body: "Email signup, no card. Test real delivery on real Indian networks in minutes.",
             },
           ].map((t) => (
@@ -186,10 +186,10 @@ export default function ToolsIndexPage() {
       </Section>
 
       <ProductFinalCta
-        title="Start with ₹60 in free credit."
+        title="Start your trial."
         description="Email signup, no card, no minimum commit. Send your first SMS in under ten minutes."
-        primaryCta={{ label: "Start free", href: "/signup/" }}
-        secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+        primaryCta={{ label: "Start your trial", href: "/signup/" }}
+        secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
       />
       <SiteFooter />
     </>

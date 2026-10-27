@@ -269,9 +269,9 @@ export default function CompareTextlocalPage() {
 
         <ProductFinalCta
           title="See SMSLocal on your own SMS + WhatsApp."
-          subtitle="₹60 free credit, no card. Migrate one campaign, compare DLRs, run an AI agent on your inbox — decide from there."
-          primaryCta={{ label: "Start Free — ₹60 Credit", href: "/signup/" }}
-          secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+          subtitle="Migrate one campaign, compare DLRs, run an AI agent on your inbox — decide from there."
+          primaryCta={{ label: "Start your trial", href: "/signup/" }}
+          secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
         />
       </main>
 

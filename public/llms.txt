@@ -45,7 +45,6 @@
 - [Blog](https://www.smslocal.in/blog/)
 - [Help Centre](https://www.smslocal.in/resources/help/)
 - [DLT Registration Guide](https://www.smslocal.in/blog/dlt-registration-guide/)
-- [Pricing](https://www.smslocal.in/pricing/)
 - [Customer Stories](https://www.smslocal.in/resources/customer-stories/)
 - [Glossary](https://www.smslocal.in/resources/glossary/)
 - [Status](https://www.smslocal.in/resources/status/)

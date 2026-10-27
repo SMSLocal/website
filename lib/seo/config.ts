@@ -33,7 +33,7 @@ export const SITE = {
 
   /** Short description used anywhere we don't pass a custom one. */
   description:
-    "DLT-compliant bulk SMS, AI WhatsApp agents in 8 Indian languages, OTP APIs, and a developer-ready dashboard — built for Indian businesses. Start free with ₹60 credit.",
+    "DLT-compliant bulk SMS, AI WhatsApp agents in 8 Indian languages, OTP APIs, and a developer-ready dashboard — built for Indian businesses. Start your trial today.",
 
   /** Title template. `%s` is replaced with the page-specific title. */
   titleTemplate: "%s | SMSLocal",

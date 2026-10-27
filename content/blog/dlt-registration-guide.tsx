@@ -220,7 +220,7 @@ export default function DltRegistrationGuide() {
       <BlogInlineCta
         title="DLT registration, guided end to end"
         body="SMSLocal walks Indian businesses through Principal Entity, header, and template registration, reviewing your documents before submission to avoid the most common rejections."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
 
       <H2 id="pick-platform">Picking your DLT platform</H2>

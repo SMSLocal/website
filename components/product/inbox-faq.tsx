@@ -9,8 +9,8 @@ const FAQS = [
     a: "SMSLocal Inbox supports 10+ channels — WhatsApp, Email, Instagram, Messenger, Telegram, Line, TikTok, SMS, Voice, and Live Chat. All in one timeline, no extra tools needed.",
   },
   {
-    q: "Is there a free trial?",
-    a: "Yes — start free with no credit card required. You get full access to all channels and team features. Upgrade only when you're ready.",
+    q: "Is there a trial?",
+    a: "Yes — start your trial with no credit card required. You get full access to all channels and team features. Upgrade only when you're ready.",
   },
   {
     q: "Can multiple agents use the same inbox?",

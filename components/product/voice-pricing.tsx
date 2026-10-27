@@ -165,10 +165,10 @@ export function VoicePricing() {
             <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
           <Link
-            href="/pricing/"
+            href="/company/contact/"
             className="inline-flex w-full items-center justify-center rounded-xl px-5 py-3 text-sm font-medium text-muted-foreground transition hover:text-foreground"
           >
-            See Pricing
+            Talk to sales
           </Link>
         </div>
       </div>

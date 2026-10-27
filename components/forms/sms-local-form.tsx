@@ -18,7 +18,7 @@
  *
  * Why not a real send? Unregistered SMS is illegal in India under TRAI's
  * DLT framework. After a successful submission we redirect to /signup so
- * the visitor can claim their Rs.60 free credit and dispatch the same
+ * the visitor can start their trial and dispatch the same
  * pre-approved template from a registered Principal Entity.
  */
 
@@ -283,7 +283,7 @@ export function SmsLocalForm() {
           </div>
           <div className="min-w-0">
             <h3 className="text-[16px] font-semibold tracking-tight text-foreground">
-              Message queued — claim your Rs.60 to send it.
+              Message queued — sign up to send it.
             </h3>
             <p className="mt-2 text-[13px] leading-relaxed text-muted-foreground">
               We&apos;ll take you to signup with the template saved. Verify
@@ -335,13 +335,13 @@ export function SmsLocalForm() {
               Send a free SMS
             </p>
             <p className="mt-1 text-[11.5px] text-muted-foreground">
-              Pick a template &amp; recipient — Rs.60 free with email signup
+              Pick a template &amp; recipient — start with an email signup
             </p>
           </div>
         </div>
         <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.12em] text-emerald-700 ring-1 ring-emerald-500/25">
           <Sparkles className="h-3 w-3" />
-          Free trial
+          Trial
         </span>
       </header>
 

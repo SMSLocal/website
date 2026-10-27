@@ -34,7 +34,7 @@ export const FREE_SMS_TEMPLATES: readonly FreeSmsTemplate[] = [
       "Friendly intro that invites the recipient to try the service.",
     category: "Promotional",
     body:
-      "Hi! Try SMSLocal - India's fastest DLT-compliant SMS API. Get Rs.60 free credit on signup at smslocal.in. Reply STOP to opt-out. - SMSLocal",
+      "Hi! Try SMSLocal - India's fastest DLT-compliant SMS API. Sign up at smslocal.in. Reply STOP to opt-out. - SMSLocal",
   },
   {
     id: "otp-sample",

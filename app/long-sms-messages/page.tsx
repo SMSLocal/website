@@ -149,8 +149,8 @@ export default function LongSmsPage() {
               </>
             }
             subtitle="When your SMS runs past the 160-character limit, we split it into segments at the wire and your recipient sees it as a single message. Works in English, Hindi, Tamil, Bengali, Malayalam, Marathi, Kannada, Gujarati, and Telugu — with full DLT compliance."
-            primaryCta={{ label: "Try it with ₹60 credit", href: "/signup/" }}
-            secondaryCta={{ label: "See pricing", href: "/pricing/" }}
+            primaryCta={{ label: "Start your trial", href: "/signup/" }}
+            secondaryCta={{ label: "Talk to sales", href: "/company/contact/" }}
             trustItems={[
               "Automatic segmentation",
               "8 Indian languages",
@@ -346,7 +346,7 @@ export default function LongSmsPage() {
               {
                 icon: Globe2,
                 title: "Global delivery",
-                body: "Long SMS works identically on 190+ international destinations. Per-segment rates vary by country — see the pricing page for details.",
+                body: "Long SMS works identically on 190+ international destinations. Per-segment rates vary by country — talk to our sales team for details.",
               },
             ]}
           />
@@ -412,10 +412,10 @@ export default function LongSmsPage() {
                 </p>
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <Link
-                    href="/pricing/"
+                    href="/company/contact/"
                     className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground shadow-md shadow-primary/25 transition hover:brightness-110"
                   >
-                    See current rates
+                    Talk to sales
                     <ArrowRight className="h-4 w-4" />
                   </Link>
                   <Link
@@ -515,8 +515,8 @@ export default function LongSmsPage() {
 
           <ProductFinalCta
             title="Stop truncating. Send the full message."
-            subtitle="Upload your template, pick your language, and let the platform handle encoding, segmentation, and DLT compliance. ₹60 free credit lets you send hundreds of long SMS to see the delivery for yourself."
-            primaryCta={{ label: "Start free with ₹60 credit", href: "/signup/" }}
+            subtitle="Upload your template, pick your language, and let the platform handle encoding, segmentation, and DLT compliance."
+            primaryCta={{ label: "Start your trial", href: "/signup/" }}
             secondaryCta={{ label: "See bulk SMS", href: "/products/bulk-sms/" }}
           />
         </main>

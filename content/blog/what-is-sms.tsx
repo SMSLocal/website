@@ -155,7 +155,7 @@ export default function WhatIsSmsPost() {
       <BlogInlineCta
         title="Sending SMS in India starts with compliance"
         body="SMSLocal handles DLT registration, DND scrubbing, and TRAI send-window rules, so your transactional and promotional SMS reach every Indian number compliantly."
-        primary={{ label: "Start free — ₹60 credit", href: "/signup/" }}
+        primary={{ label: "Start your trial", href: "/signup/" }}
       />
       <H2 id="sms-in-india">SMS in India: the regulatory context</H2>
       <P>
@@ -335,7 +335,7 @@ export default function WhatIsSmsPost() {
       <Callout variant="tip" title="Ready to send SMS for your business?">
         SMSLocal gives Indian businesses a single platform for OTP, transactional, and promotional
         SMS — fully DLT-compliant, with direct operator connectivity and real-time delivery reports.{" "}
-        <A href="/signup/">Start with ₹60 free credit</A> — no DLT registration required to test.
+        <A href="/signup/">Start your trial</A> — no DLT registration required to test.
       </Callout>
     </>
   )
