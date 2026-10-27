@@ -125,57 +125,57 @@ export default function WhatsAppPage() {
           title="Built for how Indian customers actually chat"
           items={[
             {
-              title: "Conversation-based pricing, transparent and auditable",
-              body: "WhatsApp bills per 24-hour conversation window — utility, marketing, authentication, or service — at Meta's published India rates. We don't mark them up and we don't add a platform fee on top. Your invoice shows the Meta conversation count against every category, with GST added once at the bottom.",
+              title: "Per-message pricing, transparent and auditable",
+              body: "Meta bills WhatsApp per delivered message, priced by category — marketing, utility, authentication, or service — at its published India rates. We don't mark them up and we don't add a platform fee on top. Your invoice shows the message count against every category, with GST added once at the bottom.",
               visual: (
-                <svg viewBox="0 0 480 360" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="WhatsApp conversation invoice showing utility, marketing, authentication and service categories billed at Meta India rates with GST and zero platform markup">
+                <svg viewBox="0 0 480 360" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="WhatsApp message invoice showing utility, marketing, authentication and service categories billed at Meta India rates with GST and zero platform markup">
                   <rect width="480" height="360" fill="#0a1f18" rx="12"/>
                   <rect x="16" y="16" width="448" height="328" rx="10" fill="#0d2820" stroke="rgba(255,255,255,0.07)" strokeWidth="1"/>
                   <rect x="16" y="16" width="448" height="46" rx="10" fill="#0f3025"/>
                   <rect x="16" y="46" width="448" height="16" fill="#0f3025"/>
-                  <text x="32" y="44" fontFamily="system-ui,sans-serif" fontSize="13" fontWeight="700" fill="rgba(255,255,255,0.9)">WhatsApp Invoice · October 2026</text>
+                  <text x="32" y="44" fontFamily="system-ui,sans-serif" fontSize="13" fontWeight="700" fill="rgba(255,255,255,0.9)">Sample invoice · October 2026</text>
                   <rect x="326" y="24" width="122" height="22" rx="11" fill="rgba(37,211,102,0.12)" stroke="rgba(37,211,102,0.3)" strokeWidth="1"/>
                   <text x="387" y="39" textAnchor="middle" fontFamily="system-ui,sans-serif" fontSize="10" fontWeight="600" fill="#25d366">Meta rates · No markup</text>
                   <text x="32" y="82" fontFamily="system-ui,sans-serif" fontSize="10" fontWeight="600" fill="rgba(255,255,255,0.35)" letterSpacing="0.5">CATEGORY</text>
-                  <text x="230" y="82" fontFamily="system-ui,sans-serif" fontSize="10" fontWeight="600" fill="rgba(255,255,255,0.35)" letterSpacing="0.5">CONVERSATIONS</text>
+                  <text x="230" y="82" fontFamily="system-ui,sans-serif" fontSize="10" fontWeight="600" fill="rgba(255,255,255,0.35)" letterSpacing="0.5">MESSAGES</text>
                   <text x="336" y="82" fontFamily="system-ui,sans-serif" fontSize="10" fontWeight="600" fill="rgba(255,255,255,0.35)" letterSpacing="0.5">RATE</text>
                   <text x="456" y="82" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="10" fontWeight="600" fill="rgba(255,255,255,0.35)" letterSpacing="0.5">AMOUNT</text>
                   <line x1="24" y1="88" x2="456" y2="88" stroke="rgba(255,255,255,0.07)" strokeWidth="1"/>
                   <rect x="24" y="95" width="10" height="10" rx="2" fill="#3b82f6"/>
                   <text x="40" y="105" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.8)">Utility</text>
-                  <text x="230" y="105" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">12,440</text>
-                  <text x="336" y="105" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.15</text>
-                  <text x="456" y="105" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)">₹1,866</text>
+                  <text x="230" y="105" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">12,400</text>
+                  <text x="336" y="105" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.115</text>
+                  <text x="456" y="105" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)">₹1,426</text>
                   <line x1="24" y1="114" x2="456" y2="114" stroke="rgba(255,255,255,0.04)" strokeWidth="1"/>
                   <rect x="24" y="119" width="10" height="10" rx="2" fill="#f59e0b"/>
                   <text x="40" y="129" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.8)">Marketing</text>
-                  <text x="230" y="129" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">3,820</text>
-                  <text x="336" y="129" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.94</text>
-                  <text x="456" y="129" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)">₹3,591</text>
+                  <text x="230" y="129" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">3,800</text>
+                  <text x="336" y="129" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.8631</text>
+                  <text x="456" y="129" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)">₹3,280</text>
                   <line x1="24" y1="138" x2="456" y2="138" stroke="rgba(255,255,255,0.04)" strokeWidth="1"/>
                   <rect x="24" y="143" width="10" height="10" rx="2" fill="#a78bfa"/>
                   <text x="40" y="153" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.8)">Authentication</text>
-                  <text x="230" y="153" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">8,100</text>
-                  <text x="336" y="153" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.15</text>
-                  <text x="456" y="153" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)">₹1,215</text>
+                  <text x="230" y="153" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">8,200</text>
+                  <text x="336" y="153" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.115</text>
+                  <text x="456" y="153" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)">₹943</text>
                   <line x1="24" y1="162" x2="456" y2="162" stroke="rgba(255,255,255,0.04)" strokeWidth="1"/>
                   <rect x="24" y="167" width="10" height="10" rx="2" fill="#25d366"/>
-                  <text x="40" y="177" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.8)">Service (customer-initiated)</text>
+                  <text x="40" y="177" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.8)">Service (first 1,000 free)</text>
                   <text x="230" y="177" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">6,200</text>
-                  <text x="336" y="177" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.00</text>
-                  <text x="456" y="177" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="700" fill="#25d366">Free</text>
+                  <text x="336" y="177" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.55)">₹0.115</text>
+                  <text x="456" y="177" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="600" fill="rgba(255,255,255,0.85)">₹598</text>
                   <line x1="24" y1="186" x2="456" y2="186" stroke="rgba(255,255,255,0.07)" strokeWidth="1"/>
                   <text x="280" y="205" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.45)">Subtotal</text>
-                  <text x="456" y="205" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">₹6,672</text>
+                  <text x="456" y="205" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">₹6,247</text>
                   <text x="280" y="223" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.45)">GST 18%</text>
-                  <text x="456" y="223" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">₹1,201</text>
+                  <text x="456" y="223" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.7)">₹1,124</text>
                   <text x="280" y="241" fontFamily="system-ui,sans-serif" fontSize="12" fill="rgba(255,255,255,0.45)">Platform fee</text>
                   <text x="456" y="241" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="12" fontWeight="700" fill="#25d366">₹0</text>
                   <line x1="270" y1="248" x2="456" y2="248" stroke="rgba(255,255,255,0.08)" strokeWidth="1"/>
                   <rect x="270" y="254" width="186" height="34" rx="7" fill="rgba(37,211,102,0.08)" stroke="rgba(37,211,102,0.2)" strokeWidth="1"/>
                   <text x="284" y="276" fontFamily="system-ui,sans-serif" fontSize="13" fontWeight="700" fill="rgba(255,255,255,0.9)">Total due</text>
-                  <text x="448" y="276" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="15" fontWeight="800" fill="#25d366">₹7,873</text>
-                  <text x="32" y="306" fontFamily="system-ui,sans-serif" fontSize="10" fill="rgba(255,255,255,0.3)" letterSpacing="0.5">CONVERSATION MIX · OCT 2026</text>
+                  <text x="448" y="276" textAnchor="end" fontFamily="system-ui,sans-serif" fontSize="15" fontWeight="800" fill="#25d366">₹7,371</text>
+                  <text x="32" y="306" fontFamily="system-ui,sans-serif" fontSize="10" fill="rgba(255,255,255,0.3)" letterSpacing="0.5">MESSAGE MIX · OCT 2026</text>
                   <rect x="32" y="314" width="148" height="16" rx="3" fill="#3b82f6" opacity="0.75"/>
                   <rect x="182" y="314" width="46" height="16" rx="3" fill="#f59e0b" opacity="0.75"/>
                   <rect x="230" y="314" width="97" height="16" rx="3" fill="#a78bfa" opacity="0.75"/>
@@ -368,7 +368,7 @@ export default function WhatsAppPage() {
             { q: "How long does WhatsApp go-live take?", a: "Typically 24–48 hours after Meta verification." },
             { q: "Is there a setup or activation fee?", a: "No. Zero setup, zero activation." },
             { q: "Is there a monthly subscription?", a: "No. You pay only for messages you send, at Meta's published rate." },
-            { q: "What's the difference between utility, marketing, and service conversations?", a: "Meta bills WhatsApp in 24-hour conversation windows, priced by category. Utility conversations (like order updates and KYC reminders) are cheapest; marketing conversations (promotions) are priced highest; service conversations (when the customer writes first) are free for the first 24 hours. Our dashboard tags every thread automatically and shows the current month's bill broken down by category." },
+            { q: "What's the difference between utility, marketing, authentication, and service messages?", a: "Meta bills each delivered message by its category. Utility messages (like order updates and KYC reminders), authentication messages (OTPs) and service messages (replies to a customer who wrote first, inside the 24-hour customer service window) cost ₹0.115 each in India, and marketing messages (promotions) cost ₹0.8631 each, per Meta's rate card effective 1 October 2026. Each business number gets 1,000 free service messages a month, and messages inside a free entry-point window from a Click to WhatsApp ad are not charged. Meta can change rates on the first day of any quarter. Our dashboard tags every message category automatically and shows the current month's bill broken down by category." },
             { q: "Can I switch from my current WhatsApp BSP?", a: "Yes — number porting is supported. Our team handles the migration." },
             { q: "Does my WhatsApp number stay the same?", a: "Yes. Your existing business number is used." },
             { q: "Can AI conversations hand off to humans mid-chat?", a: "Yes. Set handoff rules in the flow builder and the human agent picks up with full context." },

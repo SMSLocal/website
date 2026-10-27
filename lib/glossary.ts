@@ -359,7 +359,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     shortDef:
       "Meta's programmatic interface for businesses to send WhatsApp messages at scale.",
     longDef:
-      "The WABA is the paid, high-volume version of WhatsApp for business. Unlike the free WhatsApp Business app, it has no user interface of its own — you connect through a BSP, get a Meta-verified number, and send via templates and session messages. Billing is per conversation, not per message.",
+      "The WABA is the paid, high-volume version of WhatsApp for business. Unlike the free WhatsApp Business app, it has no user interface of its own — you connect through a BSP, get a Meta-verified number, and send via templates and session messages. Meta bills per delivered message, by category.",
     aliases: ["WhatsApp API"],
     relatedSlugs: ["bsp", "template", "conversation", "session"],
   },
@@ -379,7 +379,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     category: "whatsapp",
     shortDef: "Marketing, Utility, Authentication or Service — determines pricing and rules.",
     longDef:
-      "Meta re-classifies every template into one of four categories when it approves it. Authentication templates carry OTP language; utility templates handle transactional updates; marketing is everything commercial; service is started by the user. Category affects what the conversation costs.",
+      "Meta re-classifies every template into one of four categories when it approves it. Authentication templates carry OTP language; utility templates handle transactional updates; marketing is everything commercial; service is started by the user. Category affects what each message costs.",
     relatedSlugs: ["template", "conversation"],
   },
   {
@@ -407,9 +407,9 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Conversation (WhatsApp)",
     category: "whatsapp",
     shortDef:
-      "A 24-hour billing unit on the WhatsApp API — priced by template category.",
+      "A back-and-forth thread with a customer. Meta no longer bills by conversation; it bills per delivered message.",
     longDef:
-      "Meta bills conversations, not messages. A conversation opens the first time you or the user sends a message and lasts 24 hours. Inside that window, unlimited messages are included. Marketing, utility, authentication and service conversations each have their own price.",
+      "Until 30 June 2025 Meta billed WhatsApp by 24-hour conversations, with one price per category. Since 1 July 2025 it bills each delivered message by its category (marketing, utility, authentication or service). The 24-hour customer service window still decides when you can send non-template replies.",
     relatedSlugs: ["template-category", "session", "window-24h"],
   },
   {
@@ -427,9 +427,9 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     term: "Number tier",
     category: "whatsapp",
     shortDef:
-      "Meta's daily-send limit bucket for your WhatsApp number — 250, 1k, 10k, 100k or unlimited.",
+      "Meta's limit on how many unique people you can message per 24 hours — 250, 2,000, 10,000, 100,000 or unlimited. Set per business portfolio.",
     longDef:
-      "New WhatsApp numbers start in Tier 1 (1,000 unique users/24h). As your quality rating stays Green and volume grows, Meta automatically upgrades you to Tier 2, 3 and eventually unlimited. A Red rating can drop you back down.",
+      "A new business portfolio starts at 250 unique users per 24 hours. Verifying your business, or delivering 2,000 messages to unique users within 30 days using high-quality templates, raises it to 2,000. After that, if you keep quality high and use at least half your limit within 7 days, Meta raises it automatically to 10,000, 100,000 and then unlimited. The limit is shared by every number in the portfolio, and a poor quality rating can stop increases or limit your sending.",
     relatedSlugs: ["quality-rating", "wba"],
   },
   {
@@ -705,7 +705,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     shortDef:
       "Your prepaid credit balance on SMSLocal — used for SMS, OTP, WhatsApp and AI conversations.",
     longDef:
-      "One wallet, one INR balance, all products. Every SMS segment, WhatsApp conversation or AI agent message draws from the same pot. Top up by card, UPI, NEFT, IMPS or invoice.",
+      "One wallet, one INR balance, all products. Every SMS segment, WhatsApp message or AI agent message draws from the same pot. Top up by card, UPI, NEFT, IMPS or invoice.",
     relatedSlugs: ["pay-as-you-go", "auto-recharge", "credits"],
   },
   {
@@ -740,12 +740,12 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
   },
   {
     slug: "per-conversation",
-    term: "Per-conversation pricing",
+    term: "Per-conversation pricing (replaced)",
     category: "billing",
     shortDef:
-      "WhatsApp's billing model — one price per 24-hour conversation, regardless of message count.",
+      "WhatsApp's former billing model: one price per 24-hour conversation. Replaced by per-message pricing on 1 July 2025.",
     longDef:
-      "Meta introduced per-conversation pricing in 2022. Each conversation is Marketing, Utility, Authentication or Service, and each category has its own rate. Within a conversation, message count is unlimited.",
+      "Meta introduced per-conversation pricing in 2022 and replaced it with per-message pricing on 1 July 2025. Each delivered message is now charged by its category (marketing, utility, authentication or service) and by the recipient's country, and only messages from a business to a user are charged.",
     relatedSlugs: ["conversation", "template-category", "wba"],
   },
 

@@ -449,10 +449,10 @@ function VolumeCalculator() {
 /* ---------- WhatsApp Panel ---------- */
 
 const META_RATES = [
-  { type: "Marketing", rate: "₹0.94", use: "Promotional campaigns, offers, broadcasts" },
-  { type: "Utility", rate: "₹0.15", use: "Order updates, shipping alerts, account notifications" },
-  { type: "Authentication", rate: "₹0.15", use: "OTPs, 2FA codes, identity verification" },
-  { type: "Service (user-initiated)", rate: "Free", use: "Replies within the 24h customer service window" },
+  { type: "Marketing", rate: "₹0.8631", use: "Promotional campaigns, offers, broadcasts" },
+  { type: "Utility", rate: "₹0.115", use: "Order updates, shipping alerts, account notifications" },
+  { type: "Authentication", rate: "₹0.115", use: "OTPs, 2FA codes, identity verification" },
+  { type: "Service (replies)", rate: "₹0.115", use: "Replies within the 24h customer service window; first 1,000 per month free" },
 ]
 
 const BSP_COMPARE = [

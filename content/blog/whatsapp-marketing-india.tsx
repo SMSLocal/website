@@ -364,20 +364,21 @@ export default function WhatsappMarketingIndiaPost() {
 
       <H2 id="cost-in-india">How much does WhatsApp marketing cost in India?</H2>
       <P>
-        You pay Meta a per-conversation fee (a conversation is a 24-hour session you initiate).
-        Marketing conversations in India are currently around ₹0.58–0.78 each, depending on
-        volume. On top of that, your BSP charges a platform fee — per message, per conversation,
-        or as a monthly plan. One way to lower total cost: customer-initiated (service)
-        conversations are cheaper, and Meta includes a monthly allowance of free service
-        conversations, so building a genuine two-way presence pays for itself.
+        Meta charges per delivered message, and the rate depends on the category. In India, a
+        marketing message currently costs ₹0.8631 and a utility, authentication or service
+        message ₹0.115 (Meta&apos;s INR rate card, effective 1 October 2026; utility and
+        authentication also have volume tiers). On top of that, your BSP may charge a platform
+        fee, per message or as a monthly plan. Two things lower your total cost: messages sent
+        inside a free entry-point window, which opens when someone starts a chat from a
+        Click-to-WhatsApp ad, are not charged, and each business number gets 1,000 free service
+        messages a month, so building a genuine two-way presence pays for itself.
       </P>
       <P>
-        To put the cost in concrete terms: a campaign of 10,000 marketing messages at ₹0.68 each
-        costs ₹6,800 in Meta conversation fees. At a 3% conversion rate — typical for a warm,
-        opted-in list in e-commerce — that is 300 sales from ₹6,800 spend, or roughly ₹23 per
-        converted customer. Add BSP platform fees and you might be at ₹35–50 per conversion,
-        still well below what the same result costs on paid search or performance social for most
-        categories.
+        To put the cost in concrete terms: a campaign of 10,000 delivered marketing messages at
+        ₹0.8631 each costs ₹8,631 in Meta fees. At a 3% conversion rate, typical for a warm,
+        opted-in list in e-commerce, that is 300 sales from ₹8,631 spend, or roughly ₹29 per
+        converted customer before any BSP platform fee. Add your BSP&apos;s fee to get your
+        all-in cost per conversion.
       </P>
 
       <H2 id="faq">Frequently asked questions</H2>

@@ -141,7 +141,7 @@ export default function WhatIsSmsPost() {
           ["Rich media (images, video)", "No (plain text only)", "Yes"],
           ["Two-way conversation", "Limited (short-code or longcode)", "Full thread"],
           ["TRAI regulation", "Yes (DLT, DND, send windows)", "Separate (Meta BSP rules)"],
-          ["Cost per message (India)", "₹0.03–0.15", "₹0.20–0.80 (conversation-based)"],
+          ["Cost per message (India)", "₹0.03–0.15", "₹0.115–0.86 (per message, by category)"],
         ]}
         caption="SMS and WhatsApp serve different needs — most businesses use both."
       />

@@ -178,46 +178,43 @@ export default function BulkWhatsappMessagingPost() {
 
       <H2 id="messaging-limits-and-tiers">Messaging limits and tiers in 2026</H2>
       <P>
-        <A href="https://en.wikipedia.org/wiki/WhatsApp">WhatsApp</A> controls how many messages you can send through a tiered limit system tied to your
-        quality rating — and the rules changed in 2025–26, so older guides are out of date. The
-        current picture:
+        <A href="https://en.wikipedia.org/wiki/WhatsApp">WhatsApp</A> controls how many people you
+        can message outside a customer service window through a messaging limit: the number of
+        unique users you can reach within a moving 24-hour period. Meta has changed these rules
+        more than once, so older guides are out of date. The current picture, from
+        Meta&apos;s documentation:
       </P>
       <UL>
         <LI>
-          <Strong>Tier 0 (unverified):</Strong> around 250 unique users per 24 hours. New,
-          unverified accounts no longer start at 1,000 — verification is what unlocks the higher
-          tiers.
+          <Strong>250:</Strong> the starting limit for a new business portfolio.
         </LI>
         <LI>
-          <Strong>Tier 1:</Strong> 1,000 unique users per 24 hours
+          <Strong>2,000:</Strong> unlocked by verifying your business (or having your partner
+          verify it), or by delivering 2,000 messages to unique users within 30 days using
+          high-quality templates.
         </LI>
         <LI>
-          <Strong>Tier 2:</Strong> 10,000 unique users per 24 hours
-        </LI>
-        <LI>
-          <Strong>Tier 3:</Strong> 100,000 unique users per 24 hours
-        </LI>
-        <LI>
-          <Strong>Unlimited:</Strong> no daily cap — requires Facebook Business Verification
+          <Strong>10,000, then 100,000, then unlimited:</Strong> unlocked automatically. If you
+          send high-quality messages and use at least half of your current limit within 7 days,
+          the limit rises one level within 6 hours.
         </LI>
       </UL>
       <P>
-        Two more 2026 changes worth knowing. First, limits are now assessed at the portfolio level
-        — all numbers in a Business Manager share the strongest number&apos;s tier, and Meta
-        re-evaluates upgrades far more frequently than before. Second, WhatsApp applies a frequency
-        cap, so a user receives only a small number of marketing messages per day across all brands
-        — another reason relevance beats volume.
+        Limits are set at the business portfolio level and shared by every number in it, so one
+        number can use up the whole allowance. Separately, Meta may limit how many marketing
+        templates a single person receives from all businesses in a period, so a user sees only
+        a small number of marketing messages. That is another reason relevance beats volume.
       </P>
       <P>
-        Your quality rating (High, Medium, Low) is calculated from how many recipients block or
-        report your messages. If it drops to Low, your tier is downgraded — which is why list
-        quality and opt-in hygiene matter more than any platform feature.
+        Your quality rating is calculated from how many recipients block or report your
+        messages. If it drops, Meta can limit your sending, which is why list quality and opt-in
+        hygiene matter more than any platform feature.
       </P>
 
       <BlogFigure
-        src="/blog/bulk-whatsapp-messaging-tiers.webp"
-        alt="Chart illustrating WhatsApp messaging tiers and daily unique-recipient limits in 2026."
-        caption="WhatsApp messaging tiers and daily limits in 2026."
+        src="/blog/bulk-whatsapp-messaging-limits.webp"
+        alt="Chart of WhatsApp messaging limits: 250, 2,000, 10,000, 100,000 and unlimited unique users per 24 hours."
+        caption="WhatsApp messaging limits, per business portfolio, per moving 24 hours."
       />
 
       <Callout variant="warning" title="Note for AI flows">
@@ -254,20 +251,23 @@ export default function BulkWhatsappMessagingPost() {
 
       <H2 id="what-it-costs">What bulk WhatsApp messaging costs</H2>
       <P>
-        Pricing has two layers. First, Meta charges a per-conversation fee that varies by country
-        and template category — and as of 2024, Meta charges per conversation (a 24-hour session),
-        not per message. In India, marketing conversations are priced differently from utility and
-        authentication ones.
+        Pricing has two layers. First, Meta charges per delivered message, and the rate varies by
+        country and message category. Since 1 July 2025 Meta bills per message, not per 24-hour
+        conversation. In India, a marketing message costs ₹0.8631 and a utility, authentication
+        or service message costs ₹0.115 (Meta&apos;s INR rate card, effective 1 October 2026;
+        utility and authentication also have volume tiers).
       </P>
       <P>
-        Second, your BSP (like SMSLocal) charges a platform fee on top of the Meta cost — per
-        conversation, per message, or as a monthly subscription depending on volume. Most
-        businesses at scale negotiate a flat monthly rate.
+        Second, some BSPs add a platform fee on top of the Meta cost, per message or as a monthly
+        subscription depending on volume. Ask any provider for the all-in cost per delivered
+        message and compare it with Meta&apos;s list rate.
       </P>
-      <Callout variant="info" title="Free conversations">
-        Meta includes a monthly allowance of free service conversations. Conversations the customer
-        starts (they message you first) are service conversations — another reason a genuine
-        two-way WhatsApp presence lowers your total cost.
+      <Callout variant="info" title="Free messages">
+        Replies inside an open customer service window are service messages, and Meta gives each
+        business number 1,000 free service messages a month. Messages sent inside a free
+        entry-point window, which opens when someone starts a chat from a Click-to-WhatsApp ad,
+        are also free for up to 7 days. A genuine two-way WhatsApp presence lowers your total
+        cost.
       </Callout>
 
       <H2 id="what-to-look-for-in-a-platform">What to look for in a bulk WhatsApp platform</H2>
