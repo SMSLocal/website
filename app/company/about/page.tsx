@@ -7,11 +7,9 @@ import {
   Building2,
   Gauge,
   Globe2,
-  Handshake,
   Languages,
   MessageCircle,
   MessageSquare,
-  Newspaper,
   ShieldCheck,
   Sparkles,
   Users,
@@ -236,49 +234,6 @@ export default function AboutPage() {
                   </div>
                   <p className="mt-1 text-sm leading-snug text-muted-foreground">{stat.label}</p>
                 </div>
-              </div>
-            ))}
-          </div>
-        </Section>
-
-        {/* Leadership / Investors / Press — placeholder cluster */}
-        <Section className="bg-muted/30 border-b border-foreground/5">
-          <SectionHeader
-            eyebrow="Leadership · Investors · Press"
-            title="Attribution slots reserved for real content."
-            subtitle="These slots will populate once founder bios, investor lists, and press mentions are approved internally. No stock photos, no fabricated titles."
-            center
-          />
-          <div className="mx-auto mt-12 grid max-w-6xl gap-4 md:grid-cols-3">
-            {[
-              {
-                icon: Users,
-                title: "Leadership",
-                body: "Founder, CTO, and any public-facing leadership will appear here with real photos, names, and 2-line bios sourced from our internal register.",
-              },
-              {
-                icon: Handshake,
-                title: "Investors & backers",
-                body: "Named investors and strategic partners will be added here after approval. If the block is empty at launch, that is deliberate — we will not list anyone without consent.",
-              },
-              {
-                icon: Newspaper,
-                title: "Press & awards",
-                body: "Verified media mentions and awards only. We will link directly to the source article or award page so readers can verify the claim.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="flex flex-col gap-4 rounded-2xl border border-dashed border-foreground/15 bg-background p-6"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <item.icon className="h-4 w-4" />
-                  </div>
-                  <h3 className="text-base font-semibold">{item.title}</h3>
-                  <span className={`${PLACEHOLDER_CHIP} ml-auto`}>Placeholder</span>
-                </div>
-                <p className="text-sm leading-relaxed text-muted-foreground">{item.body}</p>
               </div>
             ))}
           </div>
