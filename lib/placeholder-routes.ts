@@ -46,37 +46,8 @@ const related = {
 // keeping stale entries here would be misleading and would still get them
 // rendered as "coming soon" through the PLACEHOLDER_ROUTES sitemap loop.
 export const PLACEHOLDER_ROUTES: Record<string, PlaceholderRoute> = {
-  // ---------- Developers (secondary surfaces) ----------
-  "developers/webhooks": {
-    slug: "developers/webhooks",
-    category: "Developer",
-    title: "Webhooks",
-    tagline: "Real-time events for delivery, opens and replies.",
-    description:
-      "Subscribe to signed webhooks for every status transition across SMS, WhatsApp, OTP and AI agents — with HMAC verification, retries and a replay console.",
-    expect: [
-      "Signed payloads with HMAC verification",
-      "Retries with exponential backoff",
-      "Replay console for debugging",
-      "Event catalogue for each channel",
-    ],
-    related: related.developer,
-  },
-  "developers/status": {
-    slug: "developers/status",
-    category: "Developer",
-    title: "Status",
-    tagline: "Live uptime, incident history and operator health.",
-    description:
-      "Real-time status for every SMSLocal service, historical incident timeline, and per-operator delivery health across India — with email and webhook subscriptions.",
-    expect: [
-      "Per-service uptime with SLA tracking",
-      "Historical incident timeline",
-      "Operator-level delivery health",
-      "Email and webhook subscriptions",
-    ],
-    related: related.developer,
-  },
+  // No unbuilt routes are linked from the site right now. Add an entry here only
+  // when a page is linked before it exists.
 }
 
 /**

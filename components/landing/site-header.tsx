@@ -229,7 +229,6 @@ const NAV: NavItem[] = [
         items: [
           { label: "Blog", href: "/blog/", icon: FileText },
           { label: "DLT registration guide", href: "/blog/dlt-registration-guide/", icon: BookOpen },
-          { label: "WhatsApp API guide", href: "/resources/whatsapp-api-guide/", icon: BookOpen },
         ],
       },
       {

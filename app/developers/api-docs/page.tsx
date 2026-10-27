@@ -38,7 +38,7 @@ const SIDEBAR_SECTIONS = [
     items: [
       { href: "#error-codes", label: "Error Codes" },
       { href: "#rate-limits", label: "Rate Limits" },
-      { href: "#sdks", label: "SDKs", badge: "Soon" },
+      { href: "#sdks", label: "SDKs" },
     ],
   },
 ]
@@ -736,24 +736,10 @@ export default function ApiDocsPage() {
               SDKs
             </h2>
             <p className="mt-4 max-w-3xl text-[15.5px] leading-relaxed text-muted-foreground">
-              Official SDKs for Node.js, Python, PHP, Java, and Go are on the roadmap. Until
-              then, the three endpoints above are simple enough that any HTTP client works — the
-              code samples on this page are copy-paste ready.
+              You do not need an SDK. The three endpoints above are plain HTTP, so any HTTP client in
+              Node.js, Python, PHP, Java, Go or any other language works. The code samples on this
+              page are copy-paste ready.
             </p>
-
-            <div className="mt-6 grid gap-3 sm:grid-cols-3 lg:grid-cols-5">
-              {["Node.js", "Python", "PHP", "Java", "Go"].map((lang) => (
-                <div
-                  key={lang}
-                  className="flex items-center justify-between rounded-lg border border-dashed border-border bg-muted/20 px-4 py-3 text-[13.5px]"
-                >
-                  <span className="font-medium text-foreground">{lang}</span>
-                  <span className="inline-flex items-center rounded-sm bg-amber-500/10 px-1.5 py-0.5 text-[9.5px] font-semibold uppercase tracking-wider text-amber-600 dark:text-amber-500">
-                    Soon
-                  </span>
-                </div>
-              ))}
-            </div>
           </section>
         </article>
       </main>

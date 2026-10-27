@@ -101,10 +101,9 @@ export default function CookiePolicyPage() {
 
           <LegalSection id="list" title="4. Specific cookies">
             <p>
-              The exact list depends on which products you use. The table below covers cookies
-              used on smslocal.in and in the hosted SMSLocal dashboard at the time of writing.
-              The names, durations, and third-party status are illustrative and will be updated
-              as our stack evolves.
+              The table below covers what smslocal.in stores in your browser. Analytics storage is
+              only set after you accept analytics in the cookie banner, and your banner choice
+              itself is kept in your browser so we do not ask again on every visit.
             </p>
             <div className="mt-4 overflow-hidden rounded-xl border border-border bg-background">
               <div className="overflow-x-auto">
@@ -127,43 +126,27 @@ export default function CookiePolicyPage() {
                   </thead>
                   <tbody>
                     <CookieRow
-                      name="sml_session"
-                      purpose="Authenticates you on the dashboard and keeps you signed in."
-                      duration="Session"
+                      name="smslocal-consent-v1"
+                      purpose="Records your cookie banner choices so we do not re-ask on every visit. Kept in your browser storage."
+                      duration="Until you clear it"
                       type="Strictly necessary"
                     />
                     <CookieRow
-                      name="sml_csrf"
-                      purpose="Prevents cross-site request forgery on form submissions."
-                      duration="Session"
-                      type="Strictly necessary"
-                    />
-                    <CookieRow
-                      name="sml_prefs"
-                      purpose="Remembers dashboard layout, theme, and default campaign tab."
-                      duration="12 months"
-                      type="Preferences"
-                    />
-                    <CookieRow
-                      name="_sml_analytics"
-                      purpose="Aggregate product usage — page views and feature adoption."
-                      duration="13 months"
+                      name="_ga, _ga_*"
+                      purpose="Google Analytics: counts visits and page views in aggregate. Set only after you accept analytics."
+                      duration="Up to 2 years"
                       type="Analytics"
                     />
                     <CookieRow
-                      name="sml_cookie_consent"
-                      purpose="Records your consent choices so we don&apos;t re-ask on every visit."
-                      duration="12 months"
-                      type="Strictly necessary"
+                      name="ph_*_posthog"
+                      purpose="PostHog: product analytics on how pages are used. Set only after you accept analytics."
+                      duration="Up to 1 year"
+                      type="Analytics"
                     />
                   </tbody>
                 </table>
               </div>
             </div>
-            <p className="mt-3 text-[12.5px] text-muted-foreground">
-              [PLACEHOLDER — exact cookie list will be reconciled with production once consent
-              banner is wired.]
-            </p>
           </LegalSection>
 
           <LegalSection id="third-party" title="5. Third-party cookies">
