@@ -106,11 +106,11 @@ export function SiteFooter() {
               developer-ready, and built for Indian businesses since 2019.
             </p>
             <a
-              href="tel:+917621073586"
+              href="tel:+919930736339"
               className="mt-5 inline-flex items-center gap-2 text-[13.5px] font-medium text-white/75 transition hover:text-white"
             >
               <Phone className="h-4 w-4 text-primary" />
-              +91 76210 73586
+              +91 99307 36339
             </a>
             <div className="mt-5 flex items-center gap-2">
               {[
