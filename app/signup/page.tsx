@@ -9,7 +9,8 @@ import { BrandLogo } from "@/components/brand/brand-logo"
 export const metadata: Metadata = {
   title: "Create your free SMSLocal account",
   description:
-    "Sign up for SMSLocal and start sending SMS, WhatsApp, and OTP messages in minutes. No credit card required.",
+    "Sign up for SMSLocal and start sending DLT-compliant SMS, WhatsApp, and OTP messages in minutes. No credit card required, and you pay only for what you send.",
+  alternates: { canonical: "/signup/" },
   robots: { index: true, follow: true },
 }
 

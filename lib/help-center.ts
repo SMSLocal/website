@@ -408,6 +408,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         title: "How do I get a six-character sender ID?",
         seoTitle: "How to Get a Six-Character SMS Sender ID",
         excerpt: "You choose the six-character header, the operator confirms availability on DLT, and SMSLocal handles propagation across all Indian carriers, usually within a day.",
+        seoDescription: "You choose a six-character header, the operator confirms it on DLT, and SMSLocal handles propagation across all Indian carriers, usually within a day.",
         readMinutes: 3,
         updatedOn: "2026-10-28",
         body: [
@@ -541,7 +542,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         title: "WhatsApp template categories and pricing",
         seoTitle: "WhatsApp Template Categories and Pricing",
         excerpt: "Meta divides templates into Marketing, Utility, and Authentication, each with its own India rate per message. A utility or authentication message costs about 87% less than a marketing one.",
-        seoDescription: "Meta splits templates into Marketing, Utility and Authentication, each with its own India per-message rate. Utility and authentication cost far less than marketing.",
+        seoDescription: "Meta splits templates into Marketing, Utility and Authentication, each with its own India rate. Utility and authentication cost far less than marketing.",
         readMinutes: 3,
         updatedOn: "2026-10-27",
         body: [

@@ -717,7 +717,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/solutions/education": {
-    title: "SMS for Schools & EdTech — Trusted, 8 Languages",
+    title: "SMS for Schools & EdTech — DLT-Compliant Alerts",
     description:
       "SMS for schools and EdTech in India — DLT-compliant fee reminders, exam schedules, result alerts, and parent updates over SMS and WhatsApp.",
     focusKeyword: "SMS for schools",
@@ -926,7 +926,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/compare/smslocal-vs-gupshup": {
-    title: "SMSLocal vs Gupshup — A Trusted 2026 Comparison",
+    title: "SMSLocal vs Gupshup — Honest 2026 Comparison",
     description:
       "SMSLocal vs Gupshup — an honest 2026 comparison of enterprise WhatsApp, AI agents, onboarding speed, and pricing, plus who should pick which.",
     focusKeyword: "SMSLocal vs Gupshup",
@@ -986,7 +986,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/compare/smslocal-vs-twilio": {
-    title: "SMSLocal vs Twilio — A Trusted 2026 Comparison",
+    title: "SMSLocal vs Twilio — Honest 2026 Comparison",
     description:
       "SMSLocal vs Twilio for Indian buyers — an honest 2026 look at INR pricing, India routes, DLT-native workflows, and WhatsApp depth, plus who should pick which.",
     focusKeyword: "SMSLocal vs Twilio",
@@ -1145,7 +1145,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Blog (index only; individual posts read from lib/blog.ts) ────────────
   "/blog": {
-    title: "SMS Marketing Blog — Trusted Guides & 2026 Tips",
+    title: "SMS Marketing Blog — Guides on SMS & WhatsApp",
     description:
       "SMS marketing blog for India — practical guides on SMS, WhatsApp, and AI messaging: compliance, delivery, developer recipes, and honest product notes here.",
     focusKeyword: "SMS marketing blog",
@@ -1310,7 +1310,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Long SMS explainer (article) ─────────────────────────────────────────
   "/long-sms-messages": {
-    title: "Long SMS Messages — Complete Trusted 2026 Guide",
+    title: "Long SMS Messages: Segments, Limits & Pricing",
     description:
       "Long SMS messages explained for India — how concatenation works, GSM-7 vs UCS-2 limits, segment counts, pricing, and DLT template rules.",
     type: "article",
@@ -1332,7 +1332,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Company ──────────────────────────────────────────────────────────────
   "/company/about": {
-    title: "About SMSLocal — Trusted in India Since 2019",
+    title: "About SMSLocal — Messaging Platform for India",
     description:
       "About SMSLocal — India's complete SMS, WhatsApp, and AI messaging platform, built for Indian businesses since 2019. DLT-compliant, scalable, developer-ready.",
     focusKeyword: "about SMSLocal",
@@ -1348,7 +1348,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/company/careers": {
-    title: "SMSLocal Careers — Trusted, Remote-First in 2026",
+    title: "SMSLocal Careers — Join Our Remote-First Team",
     description:
       "SMSLocal careers — join a small, opinionated team building India's messaging platform. Engineering, operations, carrier relations, and GTM, remote-first.",
     focusKeyword: "SMSLocal careers",
@@ -1444,7 +1444,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
 
   // ─── Legal ────────────────────────────────────────────────────────────────
   "/legal/acceptable-use": {
-    title: "Acceptable Use Policy — Trusted Rules, 2026",
+    title: "Acceptable Use Policy — What's Not Allowed",
     description:
       "Acceptable use policy for SMSLocal — the content and behaviour not allowed on the platform, the prohibited categories, and the enforcement actions we take.",
     focusKeyword: "acceptable use policy",
@@ -1458,7 +1458,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/legal/cookie-policy": {
-    title: "Cookie Policy — Trusted, SMSLocal Cookies in 2026",
+    title: "Cookie Policy — How SMSLocal Uses Cookies",
     description:
       "Cookie policy for SMSLocal — how we use cookies and similar technologies on smslocal.in, covering strictly-necessary, preference, analytics, and ad cookies.",
     focusKeyword: "cookie policy",

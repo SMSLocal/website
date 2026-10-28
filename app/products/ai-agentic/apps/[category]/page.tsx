@@ -5,7 +5,8 @@ import { ArrowLeft, ArrowRight, ExternalLink, Zap } from "lucide-react"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
-import { getAppCategoryBySlug, generateAppCategorySlugs, APP_CATEGORIES } from "../data"
+import { getAppCategoryBySlug, generateAppCategorySlugs, APP_CATEGORIES, APP_CATEGORY_META_DESCRIPTIONS } from "../data"
+import { buildMetadata } from "@/lib/seo/metadata"
 import { AppLogo } from "@/components/product/app-logo"
 
 export const dynamicParams = false
@@ -18,21 +19,16 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   const { category } = await params
   const cat = getAppCategoryBySlug(category)
   if (!cat) return {}
-  const pageTitle = `${cat.label} Integrations — Captain AI | SMSLocal`
-  return {
-    title: { absolute: pageTitle },
-    description: cat.desc,
-    alternates: {
-      canonical: `/products/ai-agentic/apps/${category}/`,
-    },
-    openGraph: {
-      type: "website",
-      url: `/products/ai-agentic/apps/${category}/`,
-      title: pageTitle,
-      description: cat.desc,
-      siteName: "SMSLocal",
-    },
-  }
+  // Longer category names push the full title past 60 characters, so drop the product name for those.
+  const longTitle = `${cat.label} Integrations — Captain AI | SMSLocal`
+  const titleAbsolute = longTitle.length <= 60 ? longTitle : `${cat.label} Integrations | SMSLocal`
+  // Going through buildMetadata keeps the default og:image and twitter image that a hand-written
+  // openGraph object would otherwise replace.
+  return buildMetadata({
+    titleAbsolute,
+    description: APP_CATEGORY_META_DESCRIPTIONS[category] ?? cat.desc,
+    path: `/products/ai-agentic/apps/${category}/`,
+  })
 }
 
 export default async function AppCategoryPage({ params }: { params: Promise<{ category: string }> }) {

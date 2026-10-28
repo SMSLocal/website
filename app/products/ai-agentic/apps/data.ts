@@ -281,3 +281,26 @@ export function getAppCategoryBySlug(slug: string): AppCategory | undefined {
 export function generateAppCategorySlugs() {
   return APP_CATEGORIES.map((c) => ({ category: c.slug }))
 }
+
+/**
+ * Meta descriptions for the category pages (150-160 characters). The shorter `desc` above is
+ * page copy and is reused in the hero, so the search snippet is written separately.
+ */
+export const APP_CATEGORY_META_DESCRIPTIONS: Record<string, string> = {
+  "developer-tools-devops": "Connect 48 developer and DevOps apps to Captain AI. Query repos, monitor errors, manage CI/CD pipelines, and run database lookups from any conversation.",
+  crm: "Connect 22 CRM apps to Captain AI with one-click OAuth. Look up and update contacts, deals, and accounts as the chat happens, with no tab-switching required.",
+  "finance-accounting": "Connect 31 finance and accounting apps to Captain AI. Pull invoices, update orders, and issue payments and refunds against all your live financial data.",
+  ecommerce: "Connect 18 e-commerce apps to Captain AI, one-click OAuth. Fetch order status, track shipments, and process returns from the chat using your store's live data.",
+  "sales-customer-support": "Connect 19 sales and customer support apps to Captain AI. Read and update tickets, check SLAs, and resolve support requests across your existing help desks.",
+  "hr-recruiting": "Connect 14 HR and recruiting apps to Captain AI. Look up employees, leave balances, candidate pipelines, and HR records from inside any customer conversation.",
+  "document-file-management": "Connect 21 document and file apps to Captain AI with one-click OAuth. Search, read, and attach files from your storage and docs inside any conversation.",
+  "collaboration-communication": "Connect 26 collaboration and communication apps to Captain AI. Read threads, post updates, and notify the right channel across email, chat, and messaging.",
+  "productivity-project-management": "Connect 24 productivity and project apps to Captain AI. Create tasks, move tickets, and check project status across your team's tools from one conversation.",
+  "scheduling-booking": "Connect 11 scheduling and booking apps to Captain AI with one-click OAuth. Check availability, book, and reschedule appointments tied to your calendar.",
+  "analytics-data": "Connect 16 analytics apps to Captain AI with one-click OAuth. Surface live metrics and reports without ever leaving the inbox: real numbers, not guesses.",
+  "data-analytics": "Connect 15 data and database apps to Captain AI. Run lookups and aggregations against your data warehouse or database in chat, with no SQL client required.",
+  "ai-machine-learning": "Connect 17 AI and machine learning apps to Captain AI with one-click OAuth. Enrich, search, and scrape the open web, and call LLMs or ML models on demand.",
+  "workflow-automation": "Connect 12 workflow automation apps to Captain AI. Trigger multi-app automations during a conversation and resolve requests by chaining the right actions.",
+  "marketing-social-media": "Connect 20 marketing and social apps to Captain AI with one-click OAuth. Manage campaigns, send emails, and respond across social channels in one conversation.",
+  "social-media": "Connect 13 social media apps to Captain AI with one-click OAuth. Read mentions, publish replies, and manage your social presence across every platform.",
+}
