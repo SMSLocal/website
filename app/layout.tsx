@@ -6,6 +6,7 @@ import { ConsentedAnalytics } from "@/components/consent/consented-analytics"
 import { ConsentedGoogleAnalytics } from "@/components/consent/consented-google-analytics"
 import { ConsentedPostHog } from "@/components/consent/consented-posthog"
 import { AnalyticsTracker } from "@/components/analytics/tracker"
+import { ConversionEvents } from "@/components/analytics/conversion-events"
 import { OrganizationJsonLd } from "@/components/seo/json-ld"
 import { SiteIndexingMeta } from "@/components/seo/site-indexing-meta"
 import { SITE } from "@/lib/seo/config"
@@ -80,6 +81,8 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <AnalyticsTracker />
           </Suspense>
+          {/* Click-based conversion events (signup, sales, DLT help). */}
+          <ConversionEvents />
           {process.env.NODE_ENV === "production" && <ConsentedAnalytics />}
           {/* GA4 — consent-gated. Suspense because it reads useSearchParams()
               to re-send a page_view on client-side route changes. */}

@@ -6,6 +6,7 @@ import { AlertCircle, ArrowRight, CheckCircle2, Loader2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Field, FieldDescription, FieldGroup, FieldLabel, FieldSet } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
+import { captureEvent } from "@/lib/analytics/events"
 import { Textarea } from "@/components/ui/textarea"
 import {
   Select,
@@ -115,6 +116,8 @@ export function ContactForm() {
       }
 
       setStage("sent")
+      // Only the fact that a form was sent. No field values leave this form.
+      captureEvent("contact_submitted", { form: "contact" }, { asConversion: true })
     } catch {
       setError({
         message:
