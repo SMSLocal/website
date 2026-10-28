@@ -152,6 +152,31 @@ const LINKS = {
     label: "DLT registration — the practical guide",
     blurb: "Every step, every document, every rejection reason for Indian SMS registration.",
   },
+  blogBulkSms: {
+    href: "/blog/bulk-sms/",
+    label: "Bulk SMS in India — how it works",
+    blurb: "DLT and TRAI rules, message types, costs, and how to send your first campaign.",
+  },
+  blogWhatsappMarketing: {
+    href: "/blog/whatsapp-marketing-india/",
+    label: "WhatsApp marketing that customers welcome",
+    blurb: "The official API, opt-ins, templates that convert, and the mistakes that get numbers banned.",
+  },
+  blogBulkWhatsapp: {
+    href: "/blog/bulk-whatsapp-messaging/",
+    label: "Sending WhatsApp at scale",
+    blurb: "Message tiers, opt-in rules, and costs, without losing your number.",
+  },
+  blogOtp: {
+    href: "/blog/otp-sms-service/",
+    label: "How OTP SMS delivery works in India",
+    blurb: "DLT template rules, why codes go missing, and whether to build or buy.",
+  },
+  blogRcs: {
+    href: "/blog/rcs-messaging-india/",
+    label: "What RCS means for Indian businesses",
+    blurb: "Device and carrier support, sender branding, and how RCS compares with SMS and WhatsApp.",
+  },
 } as const
 
 function products(...keys: (keyof typeof LINKS)[]): RelatedGroup {
@@ -175,7 +200,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     groups: [
       products("rcs", "whatsapp", "otp", "quickSms"),
       solutions("ecommerce", "banking", "education"),
-      resources("pricing", "msg91"),
+      resources("pricing", "msg91", "blogBulkSms", "blogDlt"),
     ],
   },
   "/products/whatsapp-business-api": {
@@ -186,7 +211,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     groups: [
       products("rcs", "bulkSms", "otp", "quickSms"),
       solutions("ecommerce", "retail", "healthcare", "realEstate"),
-      resources("pricing", "developers"),
+      resources("pricing", "developers", "blogWhatsappMarketing", "blogBulkWhatsapp"),
     ],
   },
   "/products/otp-sms": {
@@ -197,7 +222,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     groups: [
       products("bulkSms", "rcs", "whatsapp", "quickSms"),
       solutions("banking", "healthcare", "ecommerce"),
-      resources("developers", "pricing"),
+      resources("developers", "pricing", "blogOtp"),
     ],
   },
   "/products/quick-sms": {
@@ -219,7 +244,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     groups: [
       products("bulkSms", "whatsapp", "otp", "quickSms"),
       solutions("retail", "ecommerce", "logistics", "banking"),
-      resources("pricing", "developers"),
+      resources("pricing", "developers", "blogRcs"),
     ],
   },
 

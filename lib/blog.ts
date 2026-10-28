@@ -106,7 +106,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "ongoing", label: "Ongoing obligations" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dnd-services", "send-sms-online", "aws-sms", "bulk-sms-service-api", "otp-sms-service"],
+      relatedSlugs: ["bulk-sms", "dnd-services", "send-sms-online", "aws-sms", "bulk-sms-service-api", "otp-sms-service"],
       faqItems: [
         { q: "Can I start sending SMS while waiting for DLT approval?", a: "No. Any send before PE, Header, and Template approval will be rejected at the gateway. Plan for anything from the same day to 3–5 days between applying and your first delivered SMS, because each operator sets its own timing." },
         { q: "Do I need a separate PE registration for a subsidiary?", a: "Yes. Each legal entity with a separate Certificate of Incorporation registers its own Principal Entity. You can share an Aggregator Relationship, but the entity records stay separate." },
@@ -181,7 +181,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "practical-playbook", label: "Practical playbook" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dlt-registration-guide", "dnd-means"],
+      relatedSlugs: ["dlt-registration-guide", "dnd-means", "bulk-sms"],
       faqItems: [
         { q: "Do I need to scrub NCPR for transactional SMS?", a: "No. DND does not apply to transactional or service-explicit senders. OTPs, payment receipts, and delivery updates reach every number regardless of DND status." },
         { q: "How often should I scrub my SMS list against NCPR?", a: "Before every send. NCPR updates daily, and a number that was clean yesterday might be on DND today. A compliant SMS platform like SMSLocal scrubs on every submission automatically." },
@@ -291,7 +291,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "aws-vs-provider", label: "AWS vs a dedicated provider" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["send-sms-online", "dlt-registration-guide", "receive-sms-messages-on-your-computer", "bulk-sms-service-api"],
+      relatedSlugs: ["send-sms-online", "dlt-registration-guide", "receive-sms-messages-on-your-computer", "bulk-sms-service-api", "bulk-sms"],
       faqItems: [
         { q: "What is the difference between Amazon SNS and AWS End User Messaging?", a: "Amazon SNS sends simple one-way SMS with a single Publish call — ideal for OTPs and alerts. AWS End User Messaging (formerly Amazon Pinpoint SMS) adds two-way messaging, dedicated sender IDs and numbers, opt-out handling, and per-message events for campaigns and conversational use. Use SNS for transactional; End User Messaging for everything richer." },
         { q: "Can I send SMS to Indian numbers with AWS?", a: "Yes, but you must be DLT-registered. You supply your DLT Entity ID and Template ID on every message and send from a sender ID that maps to an approved template. Without a byte-exact template match, the operator drops the message even though AWS reports it as sent." },
@@ -401,7 +401,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "legal", label: "Legal requirements" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["receive-sms-messages-on-your-computer", "dlt-registration-guide", "aws-sms", "bulk-sms-service-api"],
+      relatedSlugs: ["receive-sms-messages-on-your-computer", "dlt-registration-guide", "aws-sms", "bulk-sms-service-api", "bulk-sms"],
       faqItems: [
         { q: "Can I send SMS online for free?", a: "Some platforms offer a trial — SMSLocal does too. Beyond that, expect ₹0.10–0.40 per SMS. Any 'totally free' service for ongoing use is either operating without DLT compliance or monetising your data." },
         { q: "Do I need a separate sender ID account for each brand?", a: "No. One account, one Principal Entity, but you can register multiple Headers (sender IDs) for different brands under the same account." },
@@ -436,7 +436,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "choosing-a-provider", label: "How to choose a provider" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dlt-registration-guide", "send-sms-online", "sms-message-app", "otp-sms-service"],
+      relatedSlugs: ["dlt-registration-guide", "send-sms-online", "sms-message-app", "otp-sms-service", "bulk-sms"],
       keywords: ["bulk sms service api", "bulk sms api", "sms api india", "bulk sms gateway api"],
       faqItems: [
         { q: "What is a bulk SMS service API?", a: "A bulk SMS service API is a set of HTTP endpoints that let your application send SMS to one or thousands of recipients programmatically, instead of through a web dashboard. You make a request with the recipient numbers, message content (matched to an approved DLT template in India), and sender ID, and the API queues, routes, and reports delivery back to you — usually via webhook." },
@@ -477,7 +477,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "conclusion", label: "Conclusion" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["bulk-sms-service-api", "dnd-services", "otp-sms-service", "what-is-sms"],
+      relatedSlugs: ["bulk-sms-service-api", "dlt-registration-guide", "dnd-services", "otp-sms-service", "whatsapp-marketing-india", "rcs-messaging-india"],
       keywords: ["bulk sms", "bulk sms india", "bulk sms service", "bulk sms provider in india", "bulk sms dlt"],
       faqItems: [
         { q: "What is bulk SMS and how does it work?", a: "Bulk SMS is sending text messages to many numbers at once through a software platform. You upload a list, choose an approved template and the platform delivers each message through mobile operators, then reports the result." },
@@ -513,7 +513,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "build-vs-buy", label: "Build versus buy" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dlt-registration-guide", "bulk-sms-service-api", "sms-activation", "rcs-messaging-india"],
+      relatedSlugs: ["dlt-registration-guide", "bulk-sms-service-api", "sms-activation", "rcs-messaging-india", "bulk-sms"],
       keywords: ["otp sms service", "otp sms india", "otp sms api", "one time password sms"],
       faqItems: [
         { q: "What is an OTP SMS service?", a: "An OTP SMS service delivers one-time password codes to a user's phone over the telecom network. Your application generates the code, calls the provider's API with an approved DLT template, and the provider routes it to the recipient's carrier and reports back whether it was delivered." },
@@ -550,7 +550,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "when-to-use", label: "When RCS is worth it" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["what-is-sms", "bulk-whatsapp-messaging", "sms-vs-mms", "otp-sms-service"],
+      relatedSlugs: ["what-is-sms", "bulk-whatsapp-messaging", "sms-vs-mms", "otp-sms-service", "bulk-sms", "whatsapp-marketing-india"],
       keywords: ["rcs messaging india", "rcs vs sms", "rcs business messaging", "what is rcs"],
       faqItems: [
         { q: "What is RCS messaging?", a: "RCS (Rich Communication Services) is the carrier-backed successor to SMS. It carries images, carousels, tappable buttons and read receipts inside the phone's default messaging app, and shows a verified business name and logo instead of a six-character sender ID." },
@@ -591,7 +591,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "cost-in-india", label: "Cost in India" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-scams-india"],
+      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-scams-india", "bulk-sms", "rcs-messaging-india"],
       faqItems: [
         { q: "Is WhatsApp marketing legal in India?", a: "Yes, when done through the official WhatsApp Business API with documented opt-in from each recipient. Unsolicited bulk messaging via unofficial tools or automated scripts violates WhatsApp's Terms of Service and can attract TRAI scrutiny if it uses shared numbers for harassment." },
         { q: "Do I need DLT registration for WhatsApp marketing?", a: "No. DLT is TRAI's framework for telecom SMS channels. WhatsApp operates over the internet and is governed by Meta's own policies, not TRAI. You do need WhatsApp Business API access approved by Meta." },
@@ -629,7 +629,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "what-happens-when-customers-reply", label: "What happens when customers reply" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["whatsapp-marketing-india", "whatsapp-scams-india", "rcs-messaging-india"],
+      relatedSlugs: ["whatsapp-marketing-india", "whatsapp-scams-india", "rcs-messaging-india", "bulk-sms"],
       faqItems: [
         { q: "Can I send bulk WhatsApp messages without a business account?", a: "You can use WhatsApp Broadcast in the personal app to send to up to 256 saved contacts. Beyond that, you need the WhatsApp Business API. Unofficial bulk tools that bypass this violate WhatsApp's Terms of Service and risk permanent number ban." },
         { q: "What is the daily messaging limit on WhatsApp Business API?", a: "The messaging limit is the number of unique people you can message outside a customer service window within a moving 24-hour period. A new business portfolio starts at 250, rises to 2,000 after business verification or enough high-quality sends, and then to 10,000, 100,000 and unlimited as you keep quality high and use at least half your current limit. The limit is shared by every number in the portfolio." },
@@ -699,7 +699,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "sms-character-limits", label: "Character limits and encoding" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["sms-vs-mms", "send-sms-online", "telegram-code-sms", "rcs-messaging-india"],
+      relatedSlugs: ["sms-vs-mms", "send-sms-online", "telegram-code-sms", "rcs-messaging-india", "bulk-sms"],
       faqItems: [
         { q: "Does SMS work without internet?", a: "Yes. SMS is transmitted over the telecom signalling layer, not the internet. As long as your SIM card has carrier coverage — even on 2G — you can send and receive SMS without any data connection." },
         { q: "What is the difference between SMS and MMS?", a: "SMS (Short Message Service) sends plain text up to 160 characters per segment. MMS (Multimedia Messaging Service) sends images, audio, or video up to 300 KB. MMS was never widely adopted in India because data charges made it expensive and WhatsApp filled the rich-media gap for free." },

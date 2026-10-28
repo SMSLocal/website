@@ -220,6 +220,8 @@ const NAV: NavItem[] = [
         items: [
           { label: "Blog", href: "/blog/", icon: FileText },
           { label: "DLT registration guide", href: "/blog/dlt-registration-guide/", icon: BookOpen },
+          { label: "Bulk SMS guide", href: "/blog/bulk-sms/", icon: BookOpen },
+          { label: "WhatsApp marketing guide", href: "/blog/whatsapp-marketing-india/", icon: BookOpen },
         ],
       },
       {
