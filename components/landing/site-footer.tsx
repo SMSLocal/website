@@ -194,12 +194,6 @@ export function SiteFooter() {
               </Link>
             </div>
           </div>
-          <p className="mt-3 text-center text-[12px] text-white/55">
-            Registered name &amp; address:{" "}
-            <span className="text-white/70">
-              SMSLocal — 1108, Sureshwari Techno IT Park Premises CHS, Link Road, Borivali West, Mumbai, Maharashtra 400092
-            </span>
-          </p>
         </div>
       </div>
     </footer>
