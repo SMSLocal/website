@@ -43,9 +43,11 @@ export default function DndServicesPost() {
         scrub your recipient list against the NCPR and remove every number on it.
       </P>
       <P>
-        If you send anyway, the operator drops the message at the gateway, logs a violation
-        against your header, and after a few incidents, suspends your sender ID. In repeat cases,
-        TRAI can blacklist your company from sending SMS entirely.
+        If you send anyway, the message is not delivered. If an investigation finds you were
+        sending unsolicited commercial messages, TRAI&apos;s rules bar your outgoing services for 15
+        days on a first violation, and disconnect all your telecom resources for a year and
+        blacklist you on a second. The exception is explicit digital consent: a customer who gave
+        it can receive your promotions even while DND is on.
       </P>
 
       <BlogFigure
@@ -60,26 +62,26 @@ export default function DndServicesPost() {
       </P>
       <OL>
         <LI>
-          <Strong>Sender-side scrub</Strong> (before submission). A compliant SMS platform pulls
-          the latest NCPR deltas every 24 hours and filters your list before it leaves the
+          <Strong>Sender-side scrub</Strong> (before submission). A compliant SMS platform keeps
+          its copy of the register up to date and filters your list before it leaves the
           platform. This is what SMSLocal does automatically.
         </LI>
         <LI>
           <Strong>Operator-side scrub</Strong> (at the gateway). Each operator also scrubs every
           submitted message against its copy of NCPR. If your sender-side scrub missed a number,
-          the operator drops the message and records a violation.
+          the operator does not deliver the message.
         </LI>
       </OL>
       <Callout variant="warning" title="Two scrubs don&apos;t make it safer">
-        You might think operator-side scrub is a safety net — it isn&apos;t. Every dropped
-        message is logged against <Strong>your</Strong> header, and accumulated violations get
-        your header suspended. The goal is to never rely on the operator catching you.
+        You might think operator-side scrub is a safety net — it isn&apos;t. Repeated
+        violations bring TRAI&apos;s penalties down on <Strong>you</Strong>, not on the operator.
+        The goal is to never rely on the operator catching you.
       </Callout>
 
       <BlogFigure
         src="/blog/how-scrubbing-works.webp"
         alt="Diagram showing how DND scrubbing works in India — sender-side NCPR scrub before submission and operator-side scrub at the gateway, with violations logged against the sender's header."
-        caption="Scrubbing happens twice: once on your platform before submission, and again at the operator gateway. Every drop at the gateway is a logged violation against your header."
+        caption="Scrubbing happens twice: once on your platform before submission, and again at the operator gateway."
       />
 
       <H2 id="promotional-vs-transactional">Promotional vs. transactional — the DND boundary</H2>
@@ -253,8 +255,8 @@ export default function DndServicesPost() {
           include an opt-out instruction. When a user replies STOP, remove them everywhere.
         </LI>
         <LI>
-          <Strong>Respond to complaints within 48 hours.</Strong> Operators forward every
-          consumer complaint; ignoring them is how headers get suspended.
+          <Strong>Respond to complaints promptly.</Strong> Operators notify you of complaints
+          against your header and investigate them; ignoring them is how penalties start.
         </LI>
         <LI>
           <Strong>Monitor delivery reports for DND drops.</Strong> Your DLR feed distinguishes

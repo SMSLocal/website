@@ -203,7 +203,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     shortDef:
       "A subscriber preference registered with the operator to block commercial messages.",
     longDef:
-      "Any subscriber can activate DND by SMS to 1909 or via the DND app, choosing to block all commercial traffic or specific categories like banking, real estate or education. DND numbers still receive transactional SMS but not promotional. Sender-side DND scrubbing is standard on every SMSLocal campaign.",
+      "Any subscriber can register a preference by SMS or call to 1909, by USSD, or through an approved app or web portal, choosing to block all promotional messages or specific categories like banking, real estate or education. DND numbers still receive transactional and service SMS, and promotional messages only if the sender holds explicit digital consent. Sender-side DND scrubbing is standard on every SMSLocal campaign.",
     aliases: ["DND scrub"],
     relatedSlugs: ["ncpr", "scrubbing", "promotional"],
   },
@@ -214,7 +214,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     category: "compliance",
     shortDef: "TRAI's master registry of subscribers who've opted out of commercial SMS.",
     longDef:
-      "NCPR (sometimes still called NDNC, the older name) is the single source of truth for DND. Every TM scrubs outbound lists against NCPR before delivery. Operators also re-scrub on their side, so sending to a DND number costs you both the credit and a compliance strike.",
+      "NCPR (sometimes still called NDNC, the older name) is the single source of truth for DND. Every TM scrubs outbound lists against NCPR before delivery. Operators also re-scrub on their side, so a promotional message to a number that blocked it will not be delivered, and repeated violations can bring TRAI's penalties.",
     aliases: ["NDNC"],
     relatedSlugs: ["dnd", "scrubbing"],
   },

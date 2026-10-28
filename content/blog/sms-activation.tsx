@@ -188,10 +188,10 @@ export default function SmsActivationPost() {
           status page.
         </LI>
         <LI>
-          <Strong>Is your number on DND with a strict setting?</Strong>{" "}
-          <InlineCode>START 0</InlineCode> on DND only blocks promotional, not transactional —
-          but if you accidentally enabled a setting that filters transactional too, OTPs stop
-          arriving. Check with your carrier&apos;s DND helpline (1909).
+          <Strong>Is your number on DND?</Strong>{" "}
+          <InlineCode>BLOCK PROMO</InlineCode> on DND only blocks promotional messages, not
+          transactional or service ones, so OTPs should still arrive. If they have stopped, call
+          1909 or your operator&apos;s customer care to check which preferences you registered.
         </LI>
         <LI>
           <Strong>Have you blocked the sender?</Strong> If you previously reported the service as

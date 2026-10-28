@@ -145,9 +145,9 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       faqItems: [
         { q: "Does DND block WhatsApp messages?", a: "No. WhatsApp runs over the internet, not the telecom SMS layer, so TRAI's DND rules do not apply. WhatsApp has its own report and block mechanism inside the app." },
         { q: "Does DND stop OTPs from arriving?", a: "No. Transaction OTPs are transactional messages, and login, password-reset and two-factor OTPs are service messages under TRAI's 2026 amendment. DND blocks neither. If your OTPs have stopped arriving, DND is almost never the cause — check network delays or sender-side issues instead." },
-        { q: "How long does DND take to activate in India?", a: "Up to 7 days officially. In practice, most compliant senders update their scrub lists every 24 hours, so you will notice a drop in promotional SMS by the next day." },
-        { q: "Does DND registration expire?", a: "No. Once activated, DND stays on until you explicitly de-activate it by sending STOP to 1909 or toggling it off in your operator app." },
-        { q: "If I change operators via MNP, does my DND preference carry over?", a: "Yes. Your DND preference is tied to your phone number, not your operator. When you port, the new operator inherits the same DND setting within 48 hours." },
+        { q: "How long does DND take to activate in India?", a: "Your operator must acknowledge your request within 15 minutes, and TRAI's rules require your preference to be in effect, with no promotional message delivered against it, within 24 hours." },
+        { q: "Does DND registration expire?", a: "A registered preference stays in place until you change it. To switch promotional blocking off, send UNBLOCK ALL to 1909, press 90 when you call 1909, or dial *#1909*90#." },
+        { q: "If I change operators via MNP, does my DND preference carry over?", a: "Your DND preference is tied to your phone number, not your operator. When you port, TRAI requires the operator you move to to update the number's serving-network details in the preference register within 24 hours." },
       ],
     },
     Component: DndMeansPost,

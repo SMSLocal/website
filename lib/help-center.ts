@@ -988,9 +988,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         excerpt: "Transactional SMS bypasses DND and reaches all numbers. Promotional SMS is scrubbed live against the NCPR at send time and the filtered count is shown in your campaign report.",
         seoDescription: "Transactional SMS bypasses DND and reaches every number. Promotional SMS is scrubbed against the NCPR at send time, with the filtered count in your report.",
         readMinutes: 4,
-        updatedOn: "2026-03-19",
+        updatedOn: "2026-10-28",
         body: [
-          { t: "p", c: "TRAI maintains a National Customer Preference Register (NCPR). Users can set their preference to fully block commercial messages, or selectively allow categories like banking or healthcare." },
+          { t: "p", c: "TRAI maintains a National Customer Preference Register (NCPR). Users can set their preference to block all promotional messages, or block specific categories like banking or healthcare." },
           { t: "h", c: "How we honour it" },
           {
             t: "list",

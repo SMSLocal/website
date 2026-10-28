@@ -84,14 +84,15 @@ export default function TelegramCodeSmsPost() {
       <P>
         India&apos;s TRAI DND framework distinguishes{" "}
         <A href="/blog/what-is-sms/">transactional SMS</A> (OTPs, alerts) from
-        promotional SMS. OTPs are classified as transactional and should bypass DND. However,
+        promotional SMS. OTPs are classified as transactional or service messages and should bypass DND. However,
         Telegram&apos;s SMS routing may pass through a commercial aggregator using a header
         registered under a content category that gets flagged as promotional on some operators.
       </P>
       <P>
-        <Strong>Fix:</Strong> Temporarily deactivate DND by sending <InlineCode>STOP</InlineCode>{" "}
-        to <InlineCode>1909</InlineCode>, wait 10 minutes, then request the code again. Re-activate
-        DND by sending <InlineCode>START 0</InlineCode> to 1909 once logged in.
+        <Strong>Fix:</Strong> Temporarily unblock promotional messages by sending <InlineCode>UNBLOCK ALL</InlineCode>{" "}
+        to <InlineCode>1909</InlineCode>, wait for the change to take effect (TRAI allows up to 24
+        hours), then request the code again. Switch DND back on by sending{" "}
+        <InlineCode>BLOCK PROMO</InlineCode> to 1909 once you are logged in.
       </P>
 
       <H3>3. SMS blocked by your operator or spam filter</H3>
@@ -188,8 +189,8 @@ export default function TelegramCodeSmsPost() {
           checklist.
         </LI>
         <LI>
-          <Strong>Temporarily deactivate DND</Strong> — send STOP to 1909, wait 10 minutes,
-          request the code again.
+          <Strong>Temporarily unblock promotions</Strong> — send UNBLOCK ALL to 1909, wait for the
+          change to take effect, then request the code again.
         </LI>
         <LI>
           <Strong>Try a different network</Strong> — if possible, switch to Wi-Fi calling or use
