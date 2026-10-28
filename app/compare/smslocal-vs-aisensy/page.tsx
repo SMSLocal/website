@@ -38,13 +38,13 @@ const ROWS: CompareRow[] = [
     feature: "Pay-as-you-go with no monthly platform fee",
     us: "yes",
     them: "no",
-    note: "AiSensy's Basic plan starts at ~₹999/month; advanced features unlock on higher tiers.",
+    note: "AiSensy sells a subscription (its pricing page doesn't show the price) plus add-ons: a chatbot builder at ₹2,500/month and a WhatsApp AI agent builder at ₹1,350/month, checked 28 October 2026.",
   },
   {
     feature: "SMS alongside WhatsApp (single vendor)",
     us: "yes",
     them: "no",
-    note: "AiSensy is WhatsApp-only — a second vendor is needed for DLT SMS.",
+    note: "AiSensy's pricing page lists WhatsApp only and doesn't mention SMS, so DLT SMS would likely need a second vendor.",
   },
   {
     feature: "Visual WhatsApp chatbot / flow builder",
@@ -61,7 +61,7 @@ const ROWS: CompareRow[] = [
     feature: "AI WhatsApp agent (multilingual) on the core plan",
     us: "yes",
     them: "partial",
-    note: "AiSensy offers Smart AI / Agent capabilities on higher-tier plans.",
+    note: "AiSensy sells its WhatsApp AI agent builder as a separate add-on: ₹1,350/month with 1,000 AI messages, checked 28 October 2026.",
   },
   {
     feature: "8-language Indic tuning",
@@ -92,8 +92,8 @@ const ROWS: CompareRow[] = [
   {
     feature: "Per-agent seat pricing",
     us: "no",
-    them: "yes",
-    note: "AiSensy charges per agent on some plans; we do not.",
+    them: "no",
+    note: "AiSensy describes its plan as “Unlimited Users”, so seat pricing isn't a difference, checked 28 October 2026.",
   },
   {
     feature: "Documented REST + XML API",
@@ -124,13 +124,13 @@ const ROWS: CompareRow[] = [
     feature: "24×7 human support on the core plan",
     us: "yes",
     them: "partial",
-    note: "AiSensy's premium support is plan-gated.",
+    note: "AiSensy's pricing page doesn't list support levels by plan.",
   },
 ]
 
 const US_WINS = [
   {
-    title: "No plan floor, no per-agent tax",
+    title: "No plan floor, no per-seat fees",
     description:
       "Zero monthly platform fee on the core tier and unlimited agent seats. Add or remove teammates from the inbox without a pricing conversation.",
     icon: CircleDollarSign,
@@ -138,7 +138,7 @@ const US_WINS = [
   {
     title: "SMS + OTP + WhatsApp in one vendor",
     description:
-      "AiSensy is WhatsApp-only. With us you consolidate DLT SMS, OTP, and WhatsApp into a single dashboard, invoice, and support channel.",
+      "AiSensy's pricing page lists WhatsApp only. With us you consolidate DLT SMS, OTP, and WhatsApp into a single dashboard, invoice, and support channel.",
     icon: Boxes,
   },
   {
@@ -174,7 +174,7 @@ const US_PICKS: PersonaCard[] = [
   {
     title: "The business that needs WhatsApp and SMS together",
     description:
-      "You send OTP, DLT transactional SMS, and WhatsApp broadcasts in a typical month. Running a WhatsApp-only SaaS on top of a separate SMS vendor doesn't compound; consolidating on one CPaaS does.",
+      "You send OTP, DLT transactional SMS, and WhatsApp broadcasts in a typical month. Running a WhatsApp-focused SaaS on top of a separate SMS vendor doesn't compound; consolidating on one CPaaS does.",
     bullets: [
       "One login, one invoice for SMS + WhatsApp + OTP",
       "Dedicated OTP priority route with sub-5-second SLA",
@@ -209,15 +209,15 @@ const THEM_PICKS: PersonaCard[] = [
 const FAQS = [
   {
     q: "Is SMSLocal cheaper than AiSensy?",
-    a: "AiSensy's Basic plan starts at roughly ₹999/month and charges per agent on some tiers. SMSLocal has no plan floor and no per-agent fee — you pay per message from a shared wallet, which is typically cheaper for teams that don't run large agent seats.",
+    a: "AiSensy sells a subscription (its pricing page doesn't show the price) plus add-ons such as a chatbot builder at ₹2,500/month and an AI agent builder at ₹1,350/month, checked 28 October 2026. SMSLocal has no plan floor and no per-seat fee — you pay per message from a shared wallet, so your cost follows your sending volume.",
   },
   {
     q: "Does AiSensy support SMS and OTP, not just WhatsApp?",
-    a: "No — AiSensy is a WhatsApp-only Business Solution Provider. If you also need DLT-compliant SMS or OTP, you'd need a second vendor alongside it. SMSLocal covers WhatsApp, SMS, OTP, and AI agents on one dashboard and invoice.",
+    a: "AiSensy's pricing page lists WhatsApp only and doesn't mention SMS or OTP. If you also need DLT-compliant SMS or OTP, you'd likely need a second vendor alongside it. SMSLocal covers WhatsApp, SMS, OTP, and AI agents on one dashboard and invoice.",
   },
   {
     q: "What is the best AiSensy alternative for teams that need more than WhatsApp?",
-    a: "SMSLocal is the closest full-stack alternative — WhatsApp, DLT SMS, OTP, and an AI agent included on the core plan, without AiSensy's per-agent pricing on higher tiers.",
+    a: "SMSLocal is the closest full-stack alternative — WhatsApp, DLT SMS, OTP, and an AI agent included on the core plan, on one dashboard and one invoice.",
   },
 ]
 
@@ -237,16 +237,16 @@ export default function CompareAiSensyPage() {
       <main className="flex-1">
         <CompareHero
           competitor="AiSensy"
-          tagline="A WhatsApp-only SaaS vs a full-stack Indian CPaaS."
+          tagline="A WhatsApp-focused SaaS vs a full-stack Indian CPaaS."
           intro="AiSensy is a well-known WhatsApp Business Solution Provider in India with a polished flow builder and marketing-focused campaign analytics. SMSLocal is a full-stack CPaaS covering WhatsApp, SMS, OTP, and AI agents on a single pay-as-you-go invoice. If you only care about WhatsApp and want a team laser-focused on that single channel, AiSensy is a fair pick — this page covers where each actually wins."
-          lastUpdated="July 2026"
+          lastUpdated="October 2026"
         />
 
         <Section className="border-b border-foreground/5">
           <SectionHeader
             eyebrow="Feature-by-feature"
             title="SMSLocal vs AiSensy: feature-by-feature comparison."
-            subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
+            subtitle="Tick means fully supported. Amber means partial or gated. Grey means we found no public mention of it on the date shown. Providers change plans often, so check their site before you decide."
           />
           <div className="mt-10 space-y-6">
             <CompareTableHonest competitor="AiSensy" rows={ROWS} />

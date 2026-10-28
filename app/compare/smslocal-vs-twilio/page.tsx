@@ -33,13 +33,13 @@ const ROWS: CompareRow[] = [
     feature: "India DLT-compliant SMS, native workflow",
     us: "yes",
     them: "partial",
-    note: "Twilio supports DLT; most Indian teams find the flow heavier than on India-native platforms.",
+    note: "Twilio's India SMS pricing page doesn't mention DLT registration; check its India documentation for the current process.",
   },
   {
     feature: "INR-denominated billing with GST invoices",
     us: "yes",
     them: "partial",
-    note: "Twilio bills primarily in USD; INR billing + GST paths exist via resellers and specific entities.",
+    note: "Twilio's India SMS pricing page shows prices in dollars and doesn't mention INR billing or GST invoices (checked 28 October 2026).",
   },
   {
     feature: "Local Indian support hours + human support",
@@ -226,14 +226,14 @@ export default function CompareTwilioPage() {
           competitor="Twilio"
           tagline="A global CPaaS vs an India-native pay-as-you-go platform."
           intro="Twilio is the largest global CPaaS — messaging, voice, video, Verify, Flex, Segment — across 200+ countries. SMSLocal is an India-native CPaaS focused on SMS, WhatsApp, OTP, and AI agents with INR pricing, GST invoices, DLT-native workflows, and IST-hour support. If you are a multinational buying messaging, voice, and a contact-center together, Twilio is an honest pick — this page covers where each actually wins for an Indian buyer."
-          lastUpdated="April 2026"
+          lastUpdated="October 2026"
         />
 
         <Section className="border-b border-foreground/5">
           <SectionHeader
             eyebrow="Feature-by-feature"
             title="Eighteen rows, publicly sourced."
-            subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
+            subtitle="Tick means fully supported. Amber means partial or gated. Grey means we found no public mention of it on the date shown. Providers change plans often, so check their site before you decide."
           />
           <div className="mt-10 space-y-6">
             <CompareTableHonest competitor="Twilio" rows={ROWS} />

@@ -40,7 +40,7 @@ const COMPARISONS = [
     slug: "smslocal-vs-wati",
     tag: "WhatsApp SMBs",
     tagIcon: MessageCircle,
-    summary: "Pay-as-you-go vs ₹2,499/month. Team inbox, broadcasts, and AI agent capabilities.",
+    summary: "Pay-as-you-go vs WATI plans from ₹2,699/month. Team inbox, broadcasts, and AI agent capabilities.",
     focus: ["Pay-as-you-go", "Team inbox", "AI agents"],
     accent: "from-emerald-500/15 to-emerald-500/0",
   },

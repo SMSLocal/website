@@ -49,8 +49,8 @@ const ROWS: CompareRow[] = [
   {
     feature: "WhatsApp Business API (official BSP)",
     us: "yes",
-    them: "partial",
-    note: "Fast2SMS has added WhatsApp; BSP depth and template workflows still trail dedicated providers.",
+    them: "yes",
+    note: "Fast2SMS advertises an official WhatsApp Business API with no setup or monthly fees (checked 28 October 2026).",
   },
   {
     feature: "Visual WhatsApp chatbot builder",
@@ -88,7 +88,7 @@ const ROWS: CompareRow[] = [
     feature: "Documented REST + XML API",
     us: "yes",
     them: "partial",
-    note: "Fast2SMS documents community libraries; first-party SDK coverage is thinner.",
+    note: "Fast2SMS lists code samples in PHP, Java, C#, C, Python, Ruby, JavaScript and Node.js, plus real-time webhooks.",
   },
   {
     feature: "Sandbox mode that routes end-to-end",
@@ -99,7 +99,7 @@ const ROWS: CompareRow[] = [
     feature: "Drop-down wallet recharge (no commitment)",
     us: "yes",
     them: "yes",
-    note: "Both offer prepaid wallets with no minimum commit.",
+    note: "Both offer prepaid wallets. Fast2SMS starts from a ₹100 recharge.",
   },
   {
     feature: "Per-campaign DND scrub visible on send",
@@ -125,7 +125,7 @@ const ROWS: CompareRow[] = [
     feature: "Low price-per-SMS headline rate",
     us: "partial",
     them: "yes",
-    note: "Fast2SMS has historically published the most aggressive public SMS rate in India; we are competitive on volume but not the cheapest at list.",
+    note: "Fast2SMS advertises ₹0.11 to ₹0.25 per SMS depending on recharge size (checked 28 October 2026). We are competitive on volume but not the cheapest at list.",
   },
 ]
 
@@ -139,7 +139,7 @@ const US_WINS = [
   {
     title: "WhatsApp depth, not just a checkbox",
     description:
-      "Official BSP status, a visual flow builder, a shared team inbox, and an 8-language AI agent. Fast2SMS added WhatsApp, but the operator experience is closer to a second-channel add-on than a core product.",
+      "Official BSP status, a visual flow builder, a shared team inbox, and an 8-language AI agent. Fast2SMS also advertises an official WhatsApp Business API.",
     icon: Layers,
   },
   {
@@ -214,7 +214,7 @@ const FAQS = [
   },
   {
     q: "Does Fast2SMS support WhatsApp and developer-grade APIs?",
-    a: "Fast2SMS has added WhatsApp, but BSP depth and template workflows trail dedicated providers, and its API documents community libraries rather than first-party SDKs with idempotency headers. SMSLocal covers SMS, WhatsApp, and OTP with a documented REST/XML API and signed webhooks.",
+    a: "Partly. Fast2SMS advertises an official WhatsApp Business API and an SMS API with real-time webhooks and code samples in several languages (checked 28 October 2026). SMSLocal covers SMS, WhatsApp, and OTP with a documented REST/XML API and signed webhooks.",
   },
   {
     q: "What is a good Fast2SMS alternative for teams that need more than one SMS blast?",
@@ -240,14 +240,14 @@ export default function CompareFast2smsPage() {
           competitor="Fast2SMS"
           tagline="Cheapest-rate SMS vs full-stack Indian CPaaS."
           intro="Fast2SMS is one of the most-searched low-cost SMS platforms in India, known for aggressive list pricing and a simple SMB-focused dashboard. SMSLocal is a full-stack CPaaS that ships SMS, WhatsApp, OTP, and AI agents behind a modern developer API. If you want the cheapest rate on a single SMS route, Fast2SMS is a fair pick — if you need WhatsApp depth, a production API, and route transparency, we cover more ground."
-          lastUpdated="July 2026"
+          lastUpdated="October 2026"
         />
 
         <Section className="border-b border-foreground/5">
           <SectionHeader
             eyebrow="Feature-by-feature"
             title="SMSLocal vs Fast2SMS: feature-by-feature comparison."
-            subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
+            subtitle="Tick means fully supported. Amber means partial or gated. Grey means we found no public mention of it on the date shown. Providers change plans often, so check their site before you decide."
           />
           <div className="mt-10 space-y-6">
             <CompareTableHonest competitor="Fast2SMS" rows={ROWS} />

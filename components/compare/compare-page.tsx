@@ -243,9 +243,10 @@ export function CompareMethodology() {
         How we built this comparison
       </div>
       <p className="mt-3">
-        Every feature row in this table cites a public source — the competitor&apos;s pricing page, official
-        documentation, or publicly announced changelog as of the &quot;Last updated&quot; date above. If you think a row
-        is out of date or inaccurate, email <a className="font-semibold text-primary hover:underline" href="mailto:hello@smslocal.in">hello@smslocal.in</a> and
+        We build each row from what the provider publishes on its own pricing and product pages and in its public
+        documentation, as of the &quot;Last updated&quot; date above. A grey mark means we found no public mention of the
+        feature, not that it can never exist, and providers change plans often. Where a row gives a price, the note says
+        when we checked it. If you think a row is out of date or inaccurate, email <a className="font-semibold text-primary hover:underline" href="mailto:hello@smslocal.in">hello@smslocal.in</a> and
         we&apos;ll verify and correct within one business day.
       </p>
     </div>

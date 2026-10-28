@@ -38,7 +38,7 @@ const ROWS: CompareRow[] = [
     feature: "Pay-as-you-go with no monthly platform fee",
     us: "yes",
     them: "no",
-    note: "Interakt's paid plans start around ₹2,500/month; advanced commerce features gate higher.",
+    note: "Interakt's WhatsApp plans are Growth at ₹2,799/month and Advanced at ₹3,799/month plus taxes; a ₹999/month Starter covers Instagram only, checked 28 October 2026.",
   },
   {
     feature: "Shopify native integration with abandoned-cart flows",
@@ -61,7 +61,7 @@ const ROWS: CompareRow[] = [
     feature: "SMS alongside WhatsApp (single vendor)",
     us: "yes",
     them: "no",
-    note: "Interakt is WhatsApp-only. SMS needs a second vendor.",
+    note: "Interakt's pricing page lists WhatsApp, Instagram, calling and (on Enterprise) RCS. It doesn't list SMS.",
   },
   {
     feature: "OTP API with dedicated priority route",
@@ -93,8 +93,8 @@ const ROWS: CompareRow[] = [
   {
     feature: "Per-agent seat pricing",
     us: "no",
-    them: "yes",
-    note: "Interakt's team plans price per agent; we price per message only.",
+    them: "no",
+    note: "Interakt's plans list unlimited agents. Only its separate Sales CRM add-on charges for agents beyond the five included (₹499 per extra agent per month).",
   },
   {
     feature: "REST API with six official SDKs",
@@ -132,13 +132,13 @@ const US_WINS = [
   {
     title: "One vendor for SMS, OTP, and WhatsApp",
     description:
-      "D2C brands send OTP on checkout, SMS on shipping, and WhatsApp on marketing. Interakt is WhatsApp-only — with us you don't duct-tape a second CPaaS onto the stack.",
+      "D2C brands send OTP on checkout, SMS on shipping, and WhatsApp on marketing. Interakt's pricing page doesn't list SMS — with us you don't duct-tape a second CPaaS onto the stack.",
     icon: Boxes,
   },
   {
-    title: "No platform fee, no per-seat tax",
+    title: "No platform fee, no per-seat fees",
     description:
-      "Zero monthly fee on the core tier and unlimited agent seats. You pay for messages and conversations — not for having five teammates in the inbox.",
+      "Zero monthly fee on the core tier and unlimited agent seats. You pay per message — not for having five teammates in the inbox.",
     icon: CircleDollarSign,
   },
   {
@@ -209,11 +209,11 @@ const THEM_PICKS: PersonaCard[] = [
 const FAQS = [
   {
     q: "Is SMSLocal cheaper than Interakt?",
-    a: "Interakt's paid plans start around ₹2,500/month and its team plans price per agent on some tiers. SMSLocal has no plan floor and prices per message only, which is typically cheaper for teams that aren't running large agent seats.",
+    a: "Interakt's WhatsApp plans are ₹2,799/month (Growth) and ₹3,799/month (Advanced) plus taxes, with unlimited agents, checked 28 October 2026. SMSLocal has no plan floor and prices per message only, so your cost follows your sending volume.",
   },
   {
-    q: "Does Interakt support SMS, or only WhatsApp?",
-    a: "Interakt is WhatsApp-only — SMS needs a second vendor alongside it. SMSLocal covers DLT SMS, WhatsApp, and OTP on the same dashboard, wallet, and invoice.",
+    q: "Does Interakt support SMS?",
+    a: "Interakt's pricing page lists WhatsApp, Instagram, calling and (on Enterprise) RCS, and doesn't list SMS, so DLT SMS would likely need a second vendor alongside it. SMSLocal covers DLT SMS, WhatsApp, and OTP on the same dashboard, wallet, and invoice.",
   },
   {
     q: "Is Interakt good for Shopify D2C brands?",
@@ -239,14 +239,14 @@ export default function CompareInteraktPage() {
           competitor="Interakt"
           tagline="A D2C-first WhatsApp SaaS vs a full-stack Indian CPaaS."
           intro="Interakt is a D2C-focused WhatsApp Business Solution Provider with strong Shopify integration and pre-built journey templates. SMSLocal is a full-stack CPaaS covering SMS, OTP, WhatsApp, and AI agents under a single pay-as-you-go invoice. If you run pure Shopify and want an opinionated D2C template library, Interakt is a fair pick — this page covers where each actually wins."
-          lastUpdated="July 2026"
+          lastUpdated="October 2026"
         />
 
         <Section className="border-b border-foreground/5">
           <SectionHeader
             eyebrow="Feature-by-feature"
             title="SMSLocal vs Interakt: feature-by-feature comparison."
-            subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
+            subtitle="Tick means fully supported. Amber means partial or gated. Grey means we found no public mention of it on the date shown. Providers change plans often, so check their site before you decide."
           />
           <div className="mt-10 space-y-6">
             <CompareTableHonest competitor="Interakt" rows={ROWS} />

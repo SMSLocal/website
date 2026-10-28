@@ -38,7 +38,7 @@ const ROWS: CompareRow[] = [
     feature: "Pay-as-you-go SMS pricing",
     us: "yes",
     them: "partial",
-    note: "MSG91 offers prepaid, but several features unlock only on higher tiers.",
+    note: "MSG91's SMS is prepaid. Its Hello inbox has Free, Basic (₹1,500/month) and Premium (₹3,000/month) plans, plus 18% GST (checked 28 October 2026).",
   },
   {
     feature: "Pay-as-you-go WhatsApp Business API",
@@ -50,7 +50,7 @@ const ROWS: CompareRow[] = [
     feature: "No monthly platform fee",
     us: "yes",
     them: "no",
-    note: "We keep a zero-fee tier; MSG91 requires a plan for production WhatsApp.",
+    note: "MSG91's pricing page doesn't state a separate WhatsApp platform fee. We keep a zero-fee tier.",
   },
   {
     feature: "OTP API with dedicated priority route",
@@ -172,7 +172,7 @@ const US_PICKS: PersonaCard[] = [
   {
     title: "The Indian SMB running SMS + WhatsApp without a marketing team",
     description:
-      "You want one dashboard, pay-as-you-go pricing, and an AI agent that handles the inbox on its own — without a ₹25,000/month platform fee to unlock the feature.",
+      "You want one dashboard, pay-as-you-go pricing, and an AI agent that handles the inbox on its own.",
     bullets: [
       "Zero monthly platform fee on the core tier",
       "AI WhatsApp agent baked into the product",
@@ -207,7 +207,7 @@ const THEM_PICKS: PersonaCard[] = [
 const FAQS = [
   {
     q: "Is SMSLocal cheaper than MSG91?",
-    a: "It depends on volume and features. SMSLocal is pay-as-you-go with no monthly platform fee, while MSG91 gates several features — including its AI agent, Hello AI — behind higher-tier plans. If you only need SMS, WhatsApp, OTP, and an AI agent without the email/CDP suite, SMSLocal is typically the lower-cost path.",
+    a: "It depends on volume and features. SMSLocal is pay-as-you-go with no monthly platform fee. MSG91's Hello inbox, which includes its AI chat bot, has a free plan for up to 50 tickets and paid plans at ₹1,500/month (Basic) and ₹3,000/month (Premium) plus GST, checked 28 October 2026. If you only need SMS, WhatsApp, OTP, and an AI agent without the email/CDP suite, SMSLocal can be the lower-cost path.",
   },
   {
     q: "What are the best MSG91 alternatives in India?",
@@ -237,7 +237,7 @@ export default function CompareMsg91Page() {
           competitor="MSG91"
           tagline="Two Indian CPaaS platforms, compared honestly."
           intro="MSG91 is the incumbent leader in the Indian CPaaS market — a deep, mature product with integrated email, RCS, and a marketing-automation layer. SMSLocal is a focused pay-as-you-go alternative built around SMS, WhatsApp, OTP, and AI agents. Below is an honest, row-by-row look at where each wins so Indian buyers can decide on merit."
-          lastUpdated="July 2026"
+          lastUpdated="October 2026"
         />
 
         {/* Feature table */}
@@ -245,7 +245,7 @@ export default function CompareMsg91Page() {
           <SectionHeader
             eyebrow="Feature-by-feature"
             title="SMSLocal vs MSG91: feature-by-feature comparison."
-            subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
+            subtitle="Tick means fully supported. Amber means partial or gated. Grey means we found no public mention of it on the date shown. Providers change plans often, so check their site before you decide."
           />
           <div className="mt-10 space-y-6">
             <CompareTableHonest competitor="MSG91" rows={ROWS} />

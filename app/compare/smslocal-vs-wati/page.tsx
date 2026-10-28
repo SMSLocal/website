@@ -33,7 +33,7 @@ const ROWS: CompareRow[] = [
     feature: "Pay-as-you-go pricing (no monthly fee)",
     us: "yes",
     them: "no",
-    note: "WATI starts at ₹2,499/month per workspace; we have a zero-fee tier.",
+    note: "WATI's Growth plan is ₹2,699/month, Pro ₹5,799/month and Business ₹16,799/month, each billed quarterly (checked 28 October 2026). We have a zero-fee tier.",
   },
   {
     feature: "WhatsApp Business API (official BSP)",
@@ -73,7 +73,7 @@ const ROWS: CompareRow[] = [
     feature: "SMS alongside WhatsApp (single vendor)",
     us: "yes",
     them: "no",
-    note: "WATI is WhatsApp-only. If you need DLT SMS, you'll add a second vendor.",
+    note: "WATI's inbox lists WhatsApp, calling, Facebook, Instagram, TikTok, web chat and RCS, but its pricing page doesn't list SMS, so DLT SMS would likely need a second vendor.",
   },
   {
     feature: "OTP API with dedicated priority route",
@@ -95,7 +95,7 @@ const ROWS: CompareRow[] = [
     feature: "Per-agent seat pricing",
     us: "no",
     them: "yes",
-    note: "WATI charges per user seat; we charge per message only.",
+    note: "WATI's Growth plan includes 3 users and no additional users. Pro and Business include 5 users, with extra users at ₹1,299 and ₹2,199 per user per month. We charge per message only.",
   },
   {
     feature: "Documented REST + XML API",
@@ -135,19 +135,19 @@ const US_WINS = [
   {
     title: "Zero monthly fee",
     description:
-      "No ₹2,499/month floor. You pay only for messages sent. An SMB on 5,000 WhatsApp conversations a month saves roughly ₹30,000/year before any usage.",
+      "No monthly floor. WATI's Growth plan is ₹2,699 a month billed quarterly, about ₹32,000 a year before any messaging charges. With us you pay only for messages sent.",
     icon: CircleDollarSign,
   },
   {
     title: "SMS + WhatsApp + OTP in one vendor",
     description:
-      "WATI is WhatsApp-only. With us you don't need a second CPaaS for DLT SMS, OTP delivery, or promotional campaigns — one dashboard, one invoice, one set of DLRs.",
+      "WATI's pricing page doesn't list SMS. With us you don't need a second CPaaS for DLT SMS, OTP delivery, or promotional campaigns — one dashboard, one invoice, one set of DLRs.",
     icon: Boxes,
   },
   {
     title: "AI agents on the core plan",
     description:
-      "WATI's KnowBot and advanced AI features sit behind higher tiers. Our 8-language AI agent is part of the base product — train it once, run it everywhere.",
+      "WATI includes an AI agent builder from its Growth plan (one agent and 2,000 AI credits a month), with more agents, advanced AI and credits on Pro and Business. Our 8-language AI agent is part of the base product — train it once, run it everywhere.",
     icon: Sparkles,
   },
   {
@@ -177,7 +177,7 @@ const US_PICKS: PersonaCard[] = [
   {
     title: "The SMB who wants WhatsApp plus SMS in one vendor",
     description:
-      "You send DLT SMS, OTP, and WhatsApp broadcasts in a typical month. Paying a WhatsApp-only SaaS fee on top of a second SMS vendor doesn't make sense.",
+      "You send DLT SMS, OTP, and WhatsApp broadcasts in a typical month. Paying a WhatsApp SaaS fee on top of a second SMS vendor doesn't make sense.",
     bullets: [
       "One login, one invoice, one DLR view for SMS + WhatsApp",
       "DLT onboarding, templates, and headers managed in-platform",
@@ -224,15 +224,15 @@ export default function CompareWatiPage() {
         <CompareHero
           competitor="WATI"
           tagline="Pay-as-you-go messaging vs a flat-fee WhatsApp SaaS."
-          intro="WATI is one of the most-used WhatsApp Business Solution Providers in India, priced as a flat-fee SaaS (₹2,499/month and up). SMSLocal is a pay-as-you-go CPaaS that ships SMS, WhatsApp, OTP, and AI agents in one dashboard with no monthly platform fee. If you live purely inside WhatsApp and a polished inbox is your top priority, WATI is a fair pick — this page explains where each platform actually wins."
-          lastUpdated="July 2026"
+          intro="WATI is one of the most-used WhatsApp Business Solution Providers in India, priced as a flat-fee SaaS (plans from ₹2,699/month, billed quarterly). SMSLocal is a pay-as-you-go CPaaS that ships SMS, WhatsApp, OTP, and AI agents in one dashboard with no monthly platform fee. If you live purely inside WhatsApp and a polished inbox is your top priority, WATI is a fair pick — this page explains where each platform actually wins."
+          lastUpdated="October 2026"
         />
 
         <Section className="border-b border-foreground/5">
           <SectionHeader
             eyebrow="Feature-by-feature"
             title="Eighteen rows, sourced from public docs."
-            subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
+            subtitle="Tick means fully supported. Amber means partial or gated. Grey means we found no public mention of it on the date shown. Providers change plans often, so check their site before you decide."
           />
           <div className="mt-10 space-y-6">
             <CompareTableHonest competitor="WATI" rows={ROWS} />

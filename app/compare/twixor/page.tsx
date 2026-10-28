@@ -241,7 +241,7 @@ export default function CompareTwixorPage() {
           competitor="Twixor"
           tagline="Keep the agentic AI and omnichannel reach, without paying for white-label reseller machinery you will not use."
           intro="Twixor is an India-based, enterprise-grade CX-automation platform built around a low-code workflow and journey builder, spanning WhatsApp, SMS, RCS, and other social channels for complex conversational-commerce flows aimed at telcos, aggregators, and resellers. SMSLocal is built for brands running their own CX — not reselling it — with agentic AI, omnichannel reach, in-platform DID numbers, and fast, self-serve setup. If you need deep, custom conversational-commerce journeys wired into enterprise systems and have the resources to own that build, Twixor is an honest pick — this page covers where each actually wins."
-          lastUpdated="July 2026"
+          lastUpdated="October 2026"
         />
 
         {/* ── COMPARISON TABLE ──────────────────────────────────── */}
@@ -249,7 +249,7 @@ export default function CompareTwixorPage() {
           <SectionHeader
             eyebrow="At a glance"
             title="Agentic AI and omnichannel reach, built for your brand."
-            subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
+            subtitle="Tick means fully supported. Amber means partial or gated. Grey means we found no public mention of it on the date shown. Providers change plans often, so check their site before you decide."
           />
           <div className="mt-10 space-y-6">
             <CompareTableHonest competitor="Twixor" rows={ROWS} />

@@ -44,7 +44,7 @@ const ROWS: CompareRow[] = [
     feature: "Onboarding model: self-serve vs. enterprise sales process",
     us: "yes",
     them: "partial",
-    note: "Infobip has a self-serve entry point, but larger or India-specific deployments commonly move through an account-managed enterprise sales process.",
+    note: "Infobip offers a “Try for free” self-serve sign-up and a contact-sales route for custom plans (checked 28 October 2026).",
   },
   {
     feature: "Right-sized for SMB to mid-market (not just global enterprise)",
@@ -62,7 +62,7 @@ const ROWS: CompareRow[] = [
     feature: "INR-denominated billing with GST invoices",
     us: "yes",
     them: "partial",
-    note: "Infobip's pricing and billing are structured around a global platform-fee-plus-usage model; INR-native billing with GST-specific invoicing is not clearly the default self-serve path.",
+    note: "Infobip's pricing page doesn't state INR billing or GST invoicing.",
   },
   {
     feature: "IST-hour human support on the core plan",
@@ -74,7 +74,7 @@ const ROWS: CompareRow[] = [
     feature: "Self-serve onboarding without an enterprise sales motion",
     us: "yes",
     them: "partial",
-    note: "Infobip has a self-serve entry point, but larger or India-specific deployments commonly move through an account-managed sales process.",
+    note: "Infobip offers a “Try for free” self-serve sign-up and a contact-sales route for custom plans (checked 28 October 2026).",
   },
   {
     feature: "Same-day WhatsApp + DLT onboarding",
@@ -119,7 +119,7 @@ const ROWS: CompareRow[] = [
     feature: "Transparent pay-as-you-go pricing without an enterprise sale",
     us: "yes",
     them: "partial",
-    note: "Infobip's usage-based pricing varies by country and operator route, and typically layers a platform fee on top; larger volumes and India-specific routes are commonly custom-negotiated.",
+    note: "Infobip describes pay-as-you-go usage pricing, an optional monthly subscription for premium features, and custom plans through sales (checked 28 October 2026).",
   },
   {
     feature: "Shared team inbox",
@@ -219,7 +219,7 @@ const INFOBIP_FAQS = [
   },
   {
     q: "How fast is setup compared to Infobip?",
-    a: "Fast — typically days. Infobip's self-serve entry point exists, but larger or India-specific deployments commonly move through a slower, account-managed enterprise onboarding process.",
+    a: "Fast — typically days. Infobip also offers a self-serve “Try for free” sign-up and a contact-sales route for custom plans.",
   },
   {
     q: "Is signup self-serve?",
@@ -245,7 +245,7 @@ export default function CompareInfobipPage() {
           competitor="Infobip"
           tagline="The same omnichannel reach and AI for the businesses Infobip prices out of reach, with much faster setup."
           intro="Infobip is a large global CPaaS headquartered in Croatia and the UK, running messaging, voice, video, and omnichannel CX across 190+ countries — built for enterprise-scale volume and process. SMSLocal delivers the same omnichannel channels and agentic AI, right-sized for SMB to mid-market teams, with INR pricing, GST invoices, DLT-native workflows, IST-hour support, and fast, self-serve setup. If you're a multinational buying voice, video, and omnichannel CX together under one enterprise contract, Infobip is an honest pick — this page covers where each actually wins for an Indian buyer."
-          lastUpdated="July 2026"
+          lastUpdated="October 2026"
         />
 
         {/* ── COMPARISON TABLE ──────────────────────────────────── */}
@@ -253,7 +253,7 @@ export default function CompareInfobipPage() {
           <SectionHeader
             eyebrow="At a glance"
             title="Enterprise capability, without the enterprise process."
-            subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
+            subtitle="Tick means fully supported. Amber means partial or gated. Grey means we found no public mention of it on the date shown. Providers change plans often, so check their site before you decide."
           />
           <div className="mt-10 space-y-6">
             <CompareTableHonest competitor="Infobip" rows={ROWS} />

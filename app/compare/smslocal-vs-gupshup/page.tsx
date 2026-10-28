@@ -44,7 +44,7 @@ const ROWS: CompareRow[] = [
     feature: "Transparent pay-as-you-go pricing (self-serve)",
     us: "yes",
     them: "partial",
-    note: "Gupshup's enterprise pricing is typically contracted; self-serve rates exist but core features gate on plans.",
+    note: "Gupshup publishes self-serve WhatsApp API pricing in US dollars: a 0.001 USD per-message fee on top of Meta's charges (checked 28 October 2026). Enterprise features are priced separately.",
   },
   {
     feature: "Same-day onboarding for SMBs",
@@ -61,7 +61,7 @@ const ROWS: CompareRow[] = [
     feature: "AI WhatsApp agents on the core plan",
     us: "yes",
     them: "partial",
-    note: "Gupshup's AI agent and Conversation Cloud sit behind enterprise contracts.",
+    note: "Gupshup's self-serve pricing page covers WhatsApp API and voice and doesn't list AI agents; enterprise features sit on a separate page.",
   },
   {
     feature: "8-language Indic tuning",
@@ -83,7 +83,7 @@ const ROWS: CompareRow[] = [
     feature: "RCS messaging",
     us: "no",
     them: "yes",
-    note: "Gupshup has been shipping RCS longer than we have.",
+    note: "Gupshup publishes RCS guidance, but RCS pricing isn't on its self-serve pricing page.",
   },
   {
     feature: "Voice / IVR channel",
@@ -126,7 +126,7 @@ const ROWS: CompareRow[] = [
     feature: "24×7 human support on the core plan",
     us: "yes",
     them: "partial",
-    note: "Gupshup's 24×7 SLA-backed support is enterprise-tier.",
+    note: "Gupshup's self-serve pricing page doesn't describe support levels.",
   },
 ]
 
@@ -146,7 +146,7 @@ const US_WINS = [
   {
     title: "AI agent included, not gated behind a contract",
     description:
-      "Our 8-language WhatsApp AI agent is part of the base product. With Gupshup, the equivalent Conversation Cloud / AI agent surfaces typically require an enterprise contract.",
+      "Our 8-language WhatsApp AI agent is part of the base product. Gupshup's self-serve pricing page doesn't list AI agents, and its enterprise features are priced on a separate page.",
     icon: Sparkles,
   },
   {
@@ -224,14 +224,14 @@ export default function CompareGupshupPage() {
           competitor="Gupshup"
           tagline="A global enterprise CPaaS vs a focused Indian pay-as-you-go platform."
           intro="Gupshup is one of the largest global WhatsApp BSPs with messaging reach in 200+ countries, enterprise SLAs, RCS, voice, and a broad Conversation Cloud product suite. SMSLocal is an India-focused, pay-as-you-go CPaaS built around SMS, WhatsApp, OTP, and AI agents — with same-day onboarding and no enterprise-contract gating. If you run global and need breadth, Gupshup is honest — this page covers where each actually wins."
-          lastUpdated="April 2026"
+          lastUpdated="October 2026"
         />
 
         <Section className="border-b border-foreground/5">
           <SectionHeader
             eyebrow="Feature-by-feature"
             title="Eighteen rows, publicly sourced."
-            subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
+            subtitle="Tick means fully supported. Amber means partial or gated. Grey means we found no public mention of it on the date shown. Providers change plans often, so check their site before you decide."
           />
           <div className="mt-10 space-y-6">
             <CompareTableHonest competitor="Gupshup" rows={ROWS} />

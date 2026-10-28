@@ -1046,7 +1046,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/compare/smslocal-vs-wati": {
-    title: "WATI Alternative — Pay-As-You-Go, No ₹2,499 Fee",
+    title: "WATI Alternative — Pay-As-You-Go, No Monthly Fee",
     description:
       "SMSLocal vs WATI — an honest 2026 comparison of pay-as-you-go vs flat-fee pricing, team inbox depth, and AI agents, plus who should pick which.",
     focusKeyword: "SMSLocal vs WATI",

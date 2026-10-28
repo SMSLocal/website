@@ -225,7 +225,7 @@ export default function CompareTextlocalPage() {
           <SectionHeader
             eyebrow="Feature-by-feature"
             title="Eighteen rows, sourced from public docs."
-            subtitle="Tick means fully supported. Amber means partial or gated. Grey means not currently available."
+            subtitle="Tick means fully supported. Amber means partial or gated. Grey means we found no public mention of it on the date shown. Providers change plans often, so check their site before you decide."
           />
           <div className="mt-10 space-y-6">
             <CompareTableHonest competitor="Textlocal" rows={ROWS} />
