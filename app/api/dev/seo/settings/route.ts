@@ -1,5 +1,7 @@
+import { revalidateTag } from "next/cache"
 import { NextResponse } from "next/server"
 import { getSession } from "@/lib/seo/auth"
+import { SEO_SETTINGS_TAG } from "@/lib/seo/cached-settings"
 import { getSettings, setSettings, type SeoSettings } from "@/lib/seo/store"
 
 /**
@@ -44,5 +46,8 @@ export async function POST(req: Request) {
   }
   const patch = sanitise(body)
   const saved = await setSettings(patch)
+  // Pages read these settings through a five-minute cache; expire it now so
+  // the noindex toggle and verification tags apply immediately.
+  revalidateTag(SEO_SETTINGS_TAG, { expire: 0 })
   return NextResponse.json({ ok: true, settings: saved })
 }

@@ -1,4 +1,4 @@
-import { getSettings } from "@/lib/seo/store"
+import { getCachedSettings } from "@/lib/seo/cached-settings"
 
 /**
  * Renders site-wide indexing meta tags into <head>:
@@ -15,7 +15,7 @@ import { getSettings } from "@/lib/seo/store"
  * layout's tree.
  */
 export async function SiteIndexingMeta() {
-  const settings = await getSettings().catch(() => null)
+  const settings = await getCachedSettings()
   if (!settings) return null
 
   return (
