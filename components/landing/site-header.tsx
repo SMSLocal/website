@@ -11,7 +11,6 @@ import {
   Bot,
   Building2,
   ChevronDown,
-  Code2,
   FileText,
   GraduationCap,
   HeadphonesIcon,
@@ -94,14 +93,9 @@ type NavItem =
 const NAV: NavItem[] = [
   {
     label: "Products",
-    // Two pillars only — hover a pillar on the left to switch the panel on the right.
-    pillars: [
+    columns: [
       {
-        id: "ai",
-        label: "AI Agents & Platform",
-        sub: "Agentic AI platform",
-        icon: Sparkles,
-        tagline: "One agentic platform — agents, copilot, voice, and the shared inbox.",
+        heading: "AI Agents & Platform",
         items: [
           { label: "Platform Overview", href: "/platform/", icon: Sparkles, description: "One product, every capability" },
           { label: "Agentic AI", href: "/products/ai-agentic/", icon: Bot, description: "Takes action, not just answers" },
@@ -111,12 +105,29 @@ const NAV: NavItem[] = [
           { label: "Omnichannel Inbox", href: "/products/omnichannel-inbox/", icon: Inbox, description: "Every channel, one inbox" },
         ],
       },
+    ],
+    footer: { label: "View all products", href: "/products/" },
+    featured: {
+      icon: Zap,
+      title: "Everything included.",
+      body: "Agentic AI, every channel, broadcasting, and numbers — one platform.",
+      cta: "Talk to sales",
+      href: "/company/contact/",
+    },
+  },
+  {
+    label: "Channels",
+    columns: [
       {
-        id: "channels",
-        label: "Channels & Broadcasting",
-        sub: "Messaging surfaces",
-        icon: RadioTower,
-        tagline: "Seven channels and broadcasting — one shared, AI-answered inbox.",
+        heading: "Broadcasting",
+        items: [
+          { label: "SMS Broadcasting", href: "/channels/sms-broadcasting/", icon: Send, description: "Bulk A2P campaigns" },
+          { label: "RCS Broadcasting", href: "/channels/rcs-broadcasting/", icon: Sparkles, description: "Rich campaigns + SMS fallback" },
+          { label: "WhatsApp Broadcasting", href: "/channels/whatsapp-broadcasting/", icon: MessageSquareText, description: "Template campaigns at scale" },
+        ],
+      },
+      {
+        heading: "Messaging channels",
         items: [
           { label: "WhatsApp", href: "/channels/whatsapp/", icon: MessageCircle, description: "Official Business API" },
           { label: "Instagram", href: "/channels/instagram/", icon: Instagram, description: "DMs, answered by AI" },
@@ -124,21 +135,17 @@ const NAV: NavItem[] = [
           { label: "Web Chat", href: "/channels/web-chat/", icon: Globe, description: "Widget for your site" },
           { label: "Voice", href: "/products/voice/", icon: PhoneCall, description: "IVR, OTP & voice broadcast" },
           { label: "Social", href: "/channels/social/", icon: Share2, description: "Every social DM, unified" },
-          { label: "WhatsApp Broadcasting", href: "/channels/whatsapp-broadcasting/", icon: MessageSquareText, description: "Template campaigns at scale" },
           { label: "RCS Messaging", href: "/products/rcs/", icon: Sparkles, description: "Rich cards & suggested replies" },
-          { label: "RCS Broadcasting", href: "/channels/rcs-broadcasting/", icon: Sparkles, description: "Rich campaigns + SMS fallback" },
-          { label: "SMS Broadcasting", href: "/channels/sms-broadcasting/", icon: Send, description: "Bulk A2P campaigns" },
           { label: "Virtual Numbers", href: "/numbers/did/", icon: Package, description: "Local, toll-free & short codes" },
           { label: "Integrations", href: "/products/integrations/", icon: Puzzle, description: "200+ apps & CRMs" },
           { label: "Analytics", href: "/products/analytics/", icon: Activity, description: "Dashboards & insights" },
         ],
       },
     ],
-    footer: { label: "View all products", href: "/products/" },
     featured: {
-      icon: Zap,
-      title: "Everything included.",
-      body: "Agentic AI, every channel, broadcasting, and numbers — one platform.",
+      icon: MessageCircle,
+      title: "Every channel, one inbox.",
+      body: "SMS, RCS and WhatsApp broadcasting plus social and voice — answered by AI in one shared inbox.",
       cta: "Talk to sales",
       href: "/company/contact/",
     },
@@ -204,21 +211,6 @@ const NAV: NavItem[] = [
       },
     ],
     footer: { label: "See why teams switch", href: "/why-smslocal/" },
-  },
-  {
-    label: "Developers",
-    columns: [
-      {
-        heading: "Build",
-        items: [
-          { label: "API docs", href: "/developers/api-docs/", icon: Code2, description: "Full REST reference" },
-          { label: "Quickstart", href: "/developers/quickstart/", icon: Zap, description: "Send your first message in 5 min" },
-          { label: "SMS API reference", href: "/developers/sms-api/", icon: MessageSquare, description: "Send, status, webhooks — full spec" },
-        ],
-      },
-    ],
-    footer: { label: "Open developer hub", href: "/developers/" },
-    featured: { icon: Zap, title: "Send in 5 minutes", body: "Live API keys on signup — start with the Quickstart.", cta: "Open Quickstart", href: "/developers/quickstart/" },
   },
   {
     label: "Resources",
