@@ -218,10 +218,11 @@ export default function BulkWhatsappMessagingPost() {
       />
 
       <Callout variant="warning" title="Note for AI flows">
-        Since early 2026, Meta no longer allows general-purpose AI chatbots (open-ended assistants
-        with no business purpose) on the WhatsApp Business Platform. Business AI for support and
-        sales is fine — a customer-service or sales assistant is compliant; a general &quot;chat
-        with our bot about anything&quot; experience is not.
+        Meta&apos;s terms for the WhatsApp Business Platform (section 4.7) bar providers of AI
+        technology from using the platform when AI is the primary rather than incidental
+        functionality, and they restrict using platform data to train AI models. The terms do not
+        directly address a business using AI to answer its own customers, so read them for your
+        case.
       </Callout>
 
       <H2 id="the-opt-in-requirement">The opt-in requirement — and why it matters</H2>

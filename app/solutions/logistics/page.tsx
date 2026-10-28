@@ -226,13 +226,13 @@ export default function LogisticsSolutionPage() {
         <Section tone="muted">
           <ComplianceCallout title="DND-exempt transactional routes for time-sensitive logistics.">
             <p>
-              Dispatch notifications, delivery OTPs, and exception alerts are classified as transactional under TRAI
-              rules. They&apos;re exempt from DND restrictions when sent on pre-registered DLT templates — so a
-              delivery OTP at 10:30 PM still lands.
+              Dispatch notifications, delivery OTPs, and exception alerts are classified as transactional or service
+              messages under TRAI rules. Neither is blocked by DND or limited to a send window when sent on
+              pre-registered DLT templates — so a delivery OTP at 10:30 PM still lands.
             </p>
             <p>
               Promotional logistics messages (upsell on shipping upgrades, offer codes) require opt-in and stay in the
-              10 AM–9 PM window. SMSLocal enforces both classifications automatically.
+              9 AM–9 PM window. SMSLocal enforces both classifications automatically.
             </p>
           </ComplianceCallout>
         </Section>

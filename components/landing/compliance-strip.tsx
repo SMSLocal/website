@@ -3,7 +3,7 @@ import { Reveal } from "./reveal"
 
 const PILLARS = [
   { icon: FileCheck2, title: "DLT registration support", body: "We guide you through Entity, Sender ID, and Template approvals on Jio, Airtel, Vi, and BSNL DLT portals." },
-  { icon: Clock3, title: "TRAI time-window enforcement", body: "Promotional SMS auto-restricted to 10 AM–9 PM. Transactional flows run 24/7 on approved templates." },
+  { icon: Clock3, title: "TRAI time-window enforcement", body: "Promotional SMS auto-restricted to 9 AM–9 PM. Transactional flows run 24/7 on approved templates." },
   { icon: XCircle, title: "Consent & opt-out management", body: "Every promotional message carries an opt-out, honoured immediately across every sender ID." },
   { icon: Database, title: "India data residency", body: "Customer data and message logs stored in Indian data centres on DPDPA-aware architecture." },
 ]

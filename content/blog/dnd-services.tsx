@@ -84,7 +84,7 @@ export default function DndServicesPost() {
 
       <H2 id="promotional-vs-transactional">Promotional vs. transactional — the DND boundary</H2>
       <P>
-        DND only applies to <Strong>promotional</Strong> SMS. Transactional and service-explicit
+        DND only applies to <Strong>promotional</Strong> SMS. Transactional and service
         messages are exempt, so OTPs and delivery updates still reach every number. The challenge
         is that the category is determined by the <Strong>header you send from</Strong> and the{" "}
         <Strong>approved template body</Strong> — not by your intent.
@@ -94,14 +94,14 @@ export default function DndServicesPost() {
         rows={[
           [<Strong key="t">Transactional</Strong>, "No (exempt)", "24×7", "Transactional header"],
           [
-            <Strong key="se">Service-explicit</Strong>,
+            <Strong key="si">Service-implicit</Strong>,
             "No (exempt)",
             "24×7",
             "Transactional header",
           ],
           [
-            <Strong key="si">Service-implicit</Strong>,
-            "Partially exempt",
+            <Strong key="se">Service-explicit</Strong>,
+            "Treated as promotional, sent on explicit consent",
             "9am–9pm IST",
             "Transactional or promotional",
           ],
@@ -156,20 +156,24 @@ export default function DndServicesPost() {
 
       <H2 id="send-windows">Send windows: when you can send what</H2>
       <P>
-        TRAI restricts promotional and service-implicit SMS to a daily time window:
+        TRAI restricts promotional SMS to a daily time window. Its September 2026 amendment says
+        transactional and service messages have no time restriction, because they are time critical:
       </P>
       <UL>
         <LI>
           <Strong>Promotional:</Strong> 9am to 9pm IST only
         </LI>
         <LI>
-          <Strong>Service-implicit:</Strong> 9am to 9pm IST only
+          <Strong>Service-explicit:</Strong> 9am to 9pm IST only (TRAI now treats these as
+          promotional messages sent on explicit consent)
         </LI>
         <LI>
-          <Strong>Service-explicit:</Strong> 24×7, any time
+          <Strong>Service-implicit:</Strong> 24×7, any time (delivery updates, warranty and recall
+          notices, login OTPs)
         </LI>
         <LI>
-          <Strong>Transactional:</Strong> 24×7, any time (OTPs, payment alerts, delivery updates)
+          <Strong>Transactional:</Strong> 24×7, any time (transaction OTPs, payment alerts, refund
+          updates)
         </LI>
       </UL>
       <Callout variant="tip" title="Your queue should know the clock">
@@ -212,27 +216,22 @@ export default function DndServicesPost() {
         columns={["Violation", "First offence", "Repeat offence"]}
         rows={[
           [
-            <Strong key="1">Sending promotional SMS to DND number</Strong>,
-            "Message dropped, violation logged",
-            "Header suspended 7–30 days",
+            <Strong key="1">Sending unsolicited commercial messages, such as promotional SMS to a number that blocked it, without explicit consent</Strong>,
+            "Outgoing services on all your telecom resources, including PRI and SIP trunks, are barred for 15 days",
+            "All your telecom resources are disconnected for one year and your company is blacklisted",
           ],
           [
-            <Strong key="2">Sending outside 9am–9pm window</Strong>,
-            "Message dropped",
-            "Header suspended",
+            <Strong key="2">Misusing a header or content template, such as marketing through a transactional template</Strong>,
+            "The operator must suspend the header or template across all operators within six hours of noticing",
+            "The penalties above apply if the misuse amounts to unsolicited commercial communication",
           ],
           [
-            <Strong key="3">Using transactional header for marketing</Strong>,
-            "Template rejected or header suspended",
-            "PE blacklisted, re-registration required",
-          ],
-          [
-            <Strong key="4">No valid consent for recipients</Strong>,
-            "Consumer complaint escalated to TRAI",
-            "₹1–10 lakh fines; header suspension",
+            <Strong key="3">Sending without valid consent</Strong>,
+            "A customer complaint triggers an investigation by the operator",
+            "A second confirmed violation brings the one-year disconnection and blacklisting",
           ],
         ]}
-        caption="TRAI&apos;s enforcement has real teeth — violations compound fast."
+        caption="Source: TRAI&apos;s Second (2025) and Third (2026) Amendment Regulations. The penalties apply to all of a sender&apos;s telecom resources, not just one header."
       />
 
       <H2 id="practical-playbook">Practical playbook: staying compliant</H2>

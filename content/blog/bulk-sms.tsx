@@ -197,7 +197,7 @@ export default function BulkSmsPost() {
         rows={[
           [
             <Strong key="t">Transactional</Strong>,
-            "A message to your customer within 30 minutes of a transaction they started, such as an OTP, transaction alert or refund notice",
+            "A message to your customer within 30 minutes of a transaction they started, such as a transaction OTP, transaction alert or refund notice",
             "Not promotional. No explicit consent needed. No daily time limit",
           ],
           [
@@ -230,7 +230,7 @@ export default function BulkSmsPost() {
         The penalties are severe. When an investigation finds a sender was sending unsolicited
         messages, the first violation bars outgoing services on all of the sender&apos;s
         telecom resources for 15 days. A second or later violation disconnects all of them for
-        one year and puts the sender on a blacklist. Operators must also suspend a misused
+        one year and puts the sender on a blacklist. Under TRAI&apos;s 2026 amendment, operators must also suspend a misused
         header or template within six hours of noticing it, so one bad campaign can cost you
         your sender name.
       </P>

@@ -247,9 +247,9 @@ export default function RetailSolutionPage() {
         <Section tone="muted">
           <ComplianceCallout title="Transactional and promotional, routed correctly by default.">
             <p>
-              Reservation reminders and loyalty balance updates sit in the transactional bucket — DND-exempt on
+              Reservation reminders and loyalty balance updates sit in the transactional or service categories — not blocked by DND on
               pre-approved DLT templates. Flash sales, discount codes, and festive campaigns are promotional and stay
-              in the 10 AM–9 PM window per TRAI rules.
+              in the 9 AM–9 PM window per TRAI rules.
             </p>
             <p>
               SMSLocal classifies each template correctly at registration and enforces the right delivery window

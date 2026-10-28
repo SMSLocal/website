@@ -176,7 +176,7 @@ function SmsPanel() {
         <ul className="mt-8 space-y-2.5">
           {[
             "All rates are per SMS, all-inclusive — no carrier surcharges, no hidden fees.",
-            "Promotional SMS is delivered to non-DND numbers only, between 10 AM and 9 PM IST as per TRAI.",
+            "Promotional SMS is delivered to non-DND numbers only, between 9 AM and 9 PM IST as per TRAI.",
             "Transactional SMS is delivered to all numbers, 24/7, on DLT-approved templates.",
             "Unicode pricing (Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada and other Indic scripts) matches the table above for messages up to 70 characters. Longer messages count as multiple segments.",
             "Credits purchased at any tier carry a minimum 24-month validity (unlimited on Tier 1).",

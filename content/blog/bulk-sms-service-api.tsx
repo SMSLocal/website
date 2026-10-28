@@ -145,9 +145,9 @@ export default function BulkSmsServiceApiPost() {
       <FigureTable
         columns={["Step", "What it registers", "Typical approval time"]}
         rows={[
-          ["Principal Entity (PE)", "Your business as a legal sender", "1–2 business days"],
-          ["Sender ID (Header)", "The 6-letter name recipients see (e.g. SMSLCL)", "1–2 business days"],
-          ["Content Template", "The exact message text with variable slots", "Same day–2 days"],
+          ["Principal Entity (PE)", "Your business as a legal sender", "About 24 hours (up to 72)"],
+          ["Sender ID (Header)", "The 6-letter name recipients see (e.g. SMSLCL)", "About 2 hours after PE (up to 24)"],
+          ["Content Template", "The exact message text with variable slots", "About 4 hours (up to 48)"],
         ]}
         caption="All three must be approved before an API send request will actually deliver. Full walkthrough in the DLT registration guide."
       />

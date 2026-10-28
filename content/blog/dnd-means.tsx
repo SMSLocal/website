@@ -261,7 +261,8 @@ export default function DndMeansPost() {
         </BlogFaqItem>
 
         <BlogFaqItem q={"Does DND stop OTPs?"}>
-          No. OTPs are service-explicit transactional messages and are exempt from DND. If your OTPs
+          No. Transaction OTPs are transactional messages, and login, password-reset and two-factor OTPs
+          are service messages under TRAI&apos;s 2026 amendment. DND blocks neither. If your OTPs
           have stopped arriving, DND is almost never the cause — check your operator&apos;s DND
           dashboard to confirm you&apos;re not on a stricter filter, but the real cause is usually
           network delays or sender-side issues.

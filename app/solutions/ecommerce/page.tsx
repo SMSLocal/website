@@ -229,12 +229,12 @@ export default function EcommerceSolutionPage() {
         <Section tone="muted">
           <ComplianceCallout title="DND-exempt transactional templates, compliant promotional sends.">
             <p>
-              Transactional SMS and WhatsApp utility messages — order confirmations, shipping updates, OTPs — are
-              exempt from DND restrictions when sent on DLT-approved templates.
+              Transactional and service SMS, and WhatsApp utility messages — order confirmations, shipping updates, OTPs — are
+              not blocked by DND when sent on DLT-approved templates.
             </p>
             <p>
               Promotional SMS and WhatsApp marketing templates require opt-in from the customer and go out between
-              10&nbsp;AM and 9&nbsp;PM per TRAI rules. SMSLocal enforces both windows automatically.
+              9&nbsp;AM and 9&nbsp;PM per TRAI rules. SMSLocal enforces both windows automatically.
             </p>
           </ComplianceCallout>
         </Section>

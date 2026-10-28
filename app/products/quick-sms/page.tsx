@@ -199,7 +199,7 @@ export default function QuickSmsPage() {
           <UseCaseGrid
             items={[
               { icon: <Send className="h-5 w-5" />, title: "Promotional campaigns", description: "Sales, launches, seasonal offers, and re-engagement blasts to segmented contact lists." },
-              { icon: <ClipboardList className="h-5 w-5" />, title: "Transactional ops alerts", description: "Order confirmations, delivery updates, payment reminders, and service notifications." },
+              { icon: <ClipboardList className="h-5 w-5" />, title: "Transactional and service alerts", description: "Order confirmations, delivery updates, payment reminders, and service notifications." },
               { icon: <Users className="h-5 w-5" />, title: "Internal announcements", description: "Staff roster changes, emergency alerts, and training reminders to internal teams." },
               { icon: <MessageSquare className="h-5 w-5" />, title: "Support follow-ups", description: "CSAT surveys, ticket updates, appointment reminders, and post-resolution check-ins." },
             ]}

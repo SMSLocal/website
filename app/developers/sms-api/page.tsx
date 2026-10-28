@@ -198,7 +198,7 @@ const FAQS = [
   },
   {
     q: "What is the difference between promotional and transactional SMS?",
-    a: "Promotional SMS is marketing content sent only to non-DND numbers between 9am and 9pm IST, using a Principal Entity category DLT template. Transactional SMS (OTPs, service alerts, payment confirmations) can be delivered 24x7 to any number, including DND, when sent via an approved transactional template on a registered header.",
+    a: "Promotional SMS is marketing content sent only between 9am and 9pm IST, to customers who have not blocked promotions or who gave explicit digital consent, using a promotional DLT template. Transactional SMS (for example transaction OTPs, payment confirmations and refund updates) and service SMS (for example delivery updates and login OTPs) are not limited to those hours and are not blocked by DND, when sent via an approved template on a registered header.",
   },
 ]
 

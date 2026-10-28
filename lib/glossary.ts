@@ -163,16 +163,16 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     category: "compliance",
     shortDef: "Marketing SMS — offers, discounts, product announcements.",
     longDef:
-      "Promotional SMS is anything commercial that isn't triggered by a user action — campaign broadcasts, festival offers, product launches. It can only go to numbers not registered on NCPR (DND), can only be sent between 9am and 9pm IST, and requires consent under TCCCPR.",
+      "Promotional SMS is anything commercial that isn't triggered by a user action — campaign broadcasts, festival offers, product launches. It can only go to customers who have not blocked promotions, unless you hold their explicit digital consent, it can only be sent between 9am and 9pm IST, and it must carry an opt-out.",
     relatedSlugs: ["transactional", "dnd", "ncpr", "tcccpr", "consent-template"],
   },
   {
     slug: "transactional",
     term: "Transactional SMS",
     category: "compliance",
-    shortDef: "Action-triggered SMS like OTPs, delivery updates and alerts.",
+    shortDef: "Action-triggered SMS like transaction OTPs, payment confirmations and refund updates.",
     longDef:
-      "Transactional messages are triggered by a user action — an OTP, a payment confirmation, a delivery alert. They can be sent 24×7 and override DND on the recipient's number, but only if the content actually qualifies as transactional under TRAI rules. Sending marketing content on a transactional route is a fast way to lose your header.",
+      "Transactional messages answer a transaction the customer just made, within 30 minutes — a bank or e-commerce OTP, a payment confirmation, a refund update. They have no time limit and are not blocked by DND on the recipient's number, but only if the content actually qualifies as transactional under TRAI rules. Sending marketing content on a transactional route is a fast way to lose your header.",
     relatedSlugs: ["promotional", "service-implicit", "service-explicit", "otp"],
   },
   {
@@ -182,7 +182,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     shortDef:
       "Messages sent as part of a service the customer has already paid for or opted into.",
     longDef:
-      "Service-implicit messages are things like an order shipment update, an account statement, a renewal reminder. There's no need for separate promotional consent because the customer has already bought the product or enrolled in the service. Still subject to time-of-day rules where applicable.",
+      "Service-implicit messages are things like an order shipment update, an account statement, a renewal reminder. There's no need for separate promotional consent because the customer has already bought the product or enrolled in the service. TRAI's 2026 amendment sets no time limit for service messages, and DND does not block them.",
     relatedSlugs: ["service-explicit", "transactional"],
   },
   {
@@ -192,7 +192,7 @@ export const GLOSSARY_TERMS: GlossaryTerm[] = [
     shortDef:
       "Service messages with an explicit promotional tone, requiring opt-in consent.",
     longDef:
-      "Service-explicit sits between transactional and promotional — it's service-related but has a marketing flavour, like a 'renew now and save 20%' reminder. It needs explicit consent, stays within 9am–9pm, and honours DND. Operators flag misclassification aggressively.",
+      "Service-explicit sits between transactional and promotional — it's service-related but has a marketing flavour, like a 'renew now and save 20%' reminder. It needs explicit consent, and TRAI's 2026 amendment now treats it as a promotional message sent on explicit consent, so promotional hours apply. Operators flag misclassification aggressively.",
     relatedSlugs: ["service-implicit", "promotional"],
   },
   {

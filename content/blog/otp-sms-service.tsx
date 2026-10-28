@@ -39,9 +39,9 @@ const FAQ_ITEMS = [
     q: "Does DND block OTP messages?",
     a: (
       <>
-        No. OTPs are service-explicit transactional messages and are exempt from NCPR scrubbing,
-        so they reach numbers registered on DND. If your OTPs are not arriving, DND is almost
-        never the cause.
+        No. Transaction OTPs are transactional messages, and TRAI&apos;s 2026 amendment lists login,
+        password-reset and two-factor OTPs as service messages. DND blocks neither, so they reach
+        numbers registered on DND. If your OTPs are not arriving, DND is almost never the cause.
       </>
     ),
   },
@@ -105,7 +105,7 @@ export default function OtpSmsServicePost() {
           worth anything.
         </LI>
         <LI>
-          <Strong>Transactional category.</Strong> OTPs are service-explicit messages, which is
+          <Strong>Exempt category.</Strong> OTPs are transactional or service messages, which is
           why they reach numbers on DND when marketing SMS cannot.
         </LI>
         <LI>

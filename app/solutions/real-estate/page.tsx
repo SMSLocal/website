@@ -218,10 +218,10 @@ export default function RealEstateSolutionPage() {
         </Section>
 
         <Section tone="muted">
-          <ComplianceCallout title="Real estate promotional messaging — opt-in, templates, 10 AM to 9 PM.">
+          <ComplianceCallout title="Real estate promotional messaging — opt-in, templates, 9 AM to 9 PM.">
             <p>
               Listing alerts and open-house invites sit in the promotional category. That means opt-in from the buyer,
-              a DLT-registered promotional template, and delivery within the TRAI 10 AM–9 PM window.
+              a DLT-registered promotional template, and delivery within the TRAI 9 AM–9 PM window.
             </p>
             <p>
               Transactional messaging — booking confirmations, registration updates, loan coordination — stays

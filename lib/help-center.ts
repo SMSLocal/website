@@ -335,17 +335,17 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         excerpt: "India's TRAI regulations force you to pick a category up front. Picking wrong gets your traffic blocked.",
         seoDescription: "India's TRAI rules make you choose a category before you send, and choosing wrong gets your traffic blocked. Here is how to tell them apart and pick correctly.",
         readMinutes: 4,
-        updatedOn: "2026-02-20",
+        updatedOn: "2026-10-28",
         body: [
           { t: "p", c: "Every SMS sent to an Indian number must be tagged with one of four DLT categories: transactional, service-implicit, service-explicit, or promotional. The category controls who you can send to, when, and at what price." },
           { t: "h", c: "The quick rule" },
           {
             t: "list",
             items: [
-              "Transactional — OTPs and critical alerts tied to a user action. Allowed 24x7 to everyone, even DND-registered numbers.",
-              "Service-implicit — status updates for something the user initiated (order shipped, refund processed). Allowed 24x7 to everyone.",
-              "Service-explicit — reminders and nudges on a subscribed service. Allowed 24x7 to users who opted in.",
-              "Promotional — offers, deals, newsletters. Only allowed to non-DND numbers, only 9am–9pm IST.",
+              "Transactional — OTPs and alerts tied to a transaction the customer just made. Not blocked by DND, and no time limit.",
+              "Service-implicit — updates about something the customer already has (order shipped, warranty or recall notices, login OTPs). Not blocked by DND, and no time limit.",
+              "Service-explicit — messages sent on the customer's explicit consent. TRAI's 2026 amendment treats these as promotional messages sent on explicit consent.",
+              "Promotional — offers, deals, newsletters. Only to customers who have not blocked promotions (or who gave explicit digital consent), and only 9am–9pm IST.",
             ],
           },
           {
@@ -407,9 +407,9 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         slug: "sender-id-allocation",
         title: "How do I get a six-character sender ID?",
         seoTitle: "How to Get a Six-Character SMS Sender ID",
-        excerpt: "You choose the six-character header, the operator confirms availability on DLT, and SMSLocal handles propagation across all Indian carriers within 24–72 hours.",
+        excerpt: "You choose the six-character header, the operator confirms availability on DLT, and SMSLocal handles propagation across all Indian carriers, usually within a day.",
         readMinutes: 3,
-        updatedOn: "2026-02-25",
+        updatedOn: "2026-10-28",
         body: [
           { t: "p", c: "Sender headers in India are not first-come-first-served globally — they're allocated per Principal Entity. Two brands can share the same six letters so long as the operator can disambiguate by DLT registration." },
           { t: "h", c: "Allocation rules" },
@@ -422,7 +422,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
               "One free header per DLT category per Principal Entity.",
             ],
           },
-          { t: "p", c: "Registration takes 24–72 hours once you submit the request on your operator's DLT portal. SMSLocal can submit on your behalf if you grant us access during onboarding." },
+          { t: "p", c: "Registration usually takes a few hours after your Principal Entity is approved, and up to 24 hours at worst, once you submit the request on your operator's DLT portal. SMSLocal can submit on your behalf if you grant us access during onboarding." },
         ],
       },
       {
@@ -903,10 +903,10 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         slug: "register-principal-entity",
         title: "How do I register a DLT Principal Entity?",
         seoTitle: "How to Register as a DLT Principal Entity",
-        excerpt: "Register as a DLT Principal Entity using your PAN, GST certificate, and an authorisation letter. Approval typically arrives in 24–72 hours on most Indian operator portals.",
-        seoDescription: "Register as a DLT Principal Entity with your PAN, GST certificate and an authorisation letter. Approval usually arrives in 24-72 hours on operator portals.",
+        excerpt: "Register as a DLT Principal Entity using your PAN, GST certificate, and an authorisation letter. Approval typically arrives within about 24 hours, and can take up to 72 on operator portals.",
+        seoDescription: "Register as a DLT Principal Entity with your PAN, GST certificate and an authorisation letter. Approval usually arrives within a day, up to 72 hours at worst.",
         readMinutes: 5,
-        updatedOn: "2026-03-16",
+        updatedOn: "2026-10-28",
         body: [
           { t: "p", c: "Every business sending commercial SMS to Indian numbers must register as a Principal Entity (PE) on at least one operator's DLT portal. Registration is free. Once registered, your PE ID propagates to all operators within 48 hours." },
           { t: "h", c: "Documents you need" },
@@ -935,7 +935,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
         excerpt: "Every message you send must match an approved template. Here's how to write one that passes first time.",
         seoDescription: "Every message you send in India must match a template approved on DLT. Here is how to write one that passes review first time and avoids the usual rejections.",
         readMinutes: 4,
-        updatedOn: "2026-03-17",
+        updatedOn: "2026-10-28",
         body: [
           { t: "p", c: "Content templates are pre-approved message bodies with variable slots in {#var#} format. Operators verify every outbound SMS against the template database before relaying it." },
           { t: "h", c: "A template that always passes" },
@@ -949,7 +949,7 @@ export const HELP_CATEGORIES: HelpCategory[] = [
               "No URL shorteners — use your approved full domain or short link service registered with DLT.",
             ],
           },
-          { t: "p", c: "Approval is typically 4–24 hours for transactional and service templates. Promotional takes longer (24–72 hours) because of manual review." },
+          { t: "p", c: "Approval is typically a few hours and can take up to 48 hours. Each operator sets its own timing, so check its portal." },
         ],
       },
       {

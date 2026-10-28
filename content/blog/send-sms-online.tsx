@@ -260,8 +260,8 @@ export default function SendSmsOnlinePost() {
           Customer Preference Register before every send.
         </LI>
         <LI>
-          <Strong>Send windows.</Strong> 9am to 9pm IST for promotional and service-implicit
-          messages. 24×7 for transactional and service-explicit.
+          <Strong>Send windows.</Strong> 9am to 9pm IST for promotional messages. TRAI&apos;s 2026
+          amendment sets no time limit for transactional and service messages.
         </LI>
         <LI>
           <Strong>Unsubscribe mechanism.</Strong> Promotional templates must include a STOP

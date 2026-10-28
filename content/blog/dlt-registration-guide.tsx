@@ -322,7 +322,7 @@ export default function DltRegistrationGuide() {
           ],
           [<Strong key="send">First SMS delivered</Strong>, "Same day", "Next day", "3–5 days"],
         ]}
-        caption="Don&apos;t book a launch date until PE and Header are approved."
+        caption="Indicative ranges, not guarantees: each operator sets its own timing. Don&apos;t book a launch date until PE and Header are approved."
       />
 
       <H2 id="after-approval">After approval: sending Day 1 SMS</H2>

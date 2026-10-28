@@ -198,7 +198,7 @@ export default function BulkSmsPage() {
           items={[
             { q: "What's the minimum amount to start sending bulk SMS?", a: "Top up from ₹100 onwards, or start your trial to test the platform first." },
             { q: "Do I need DLT registration to send bulk SMS in India?", a: "Yes — DLT is mandatory under TRAI rules. Our team helps you register across every operator." },
-            { q: "Can I send promotional SMS to DND numbers?", a: "No. Promotional SMS goes to non-DND numbers only, between 10 AM and 9 PM IST. Transactional SMS goes to all numbers, 24/7." },
+            { q: "Can I send promotional SMS to DND numbers?", a: "Only with the customer's explicit digital consent. Without it, promotional SMS goes only to customers who have not blocked promotions, between 9 AM and 9 PM IST. Transactional and service SMS are not blocked by DND and are not limited to those hours." },
             { q: "How fast are messages delivered?", a: "98% of messages land in under 1 second thanks to direct operator connections." },
             { q: "Can I send SMS in Hindi, Tamil, or other Indian languages?", a: "Yes. Unicode is built in; 10+ Indian scripts are supported." },
             { q: "Do credits expire?", a: "Tier 1 (₹100–₹3,999) has unlimited validity. Every higher tier is valid for 24 months." },
