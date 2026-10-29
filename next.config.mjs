@@ -67,7 +67,8 @@ const CSP_DIRECTIVES = {
   "form-action": ["'self'"],
   "base-uri": ["'self'"],
   "object-src": ["'none'"],
-  "upgrade-insecure-requests": [],
+  // skipped in dev: on http://localhost it upgrades API calls to https and they fail
+  ...(isDev ? {} : { "upgrade-insecure-requests": [] }),
 }
 
 const CSP = Object.entries(CSP_DIRECTIVES)

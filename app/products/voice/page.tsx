@@ -60,7 +60,6 @@ export default function VoicePage() {
             { icon: Sparkles, label: "30–40% below telecom pricing" },
           ]}
           visual={<VoiceHeroVisual />}
-          compact
         />
 
         {/* 2 ─ Capabilities showcase */}

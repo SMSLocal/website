@@ -1,22 +1,16 @@
 import type { Metadata } from "next"
 import { getPageMetadata } from "@/lib/seo"
-import { ChannelsShowcase } from "@/components/landing/channels-showcase"
-import { ComplianceStrip } from "@/components/landing/compliance-strip"
-import { DeveloperStrip } from "@/components/landing/developer-strip"
-import { Differentiators } from "@/components/landing/differentiators"
-import { FinalCta } from "@/components/landing/final-cta"
-import { HowItWorks } from "@/components/landing/how-it-works"
-import { Industries } from "@/components/landing/industries"
 import { OperatorsStrip } from "@/components/landing/operators-strip"
-import { MessagingShowcase } from "@/components/landing/messaging-showcase"
+import { UseCaseMarquee } from "@/components/home/marquees"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
-import { StatsStrip } from "@/components/landing/stats-strip"
 import { FaqSection } from "@/components/landing/faq-section"
+import { VideoHero } from "@/components/home/gs/video-hero"
+import { AgentTypes, AgentLifecycle, SuiteBento, DeployEverywhere } from "@/components/home/gs/sections-a"
+import { JourneyRing, Escalation, IndustryPanels, RolesTabs, SecuritySplit } from "@/components/home/gs/sections-b"
+import { ResourcesRow, GsFinalCta } from "@/components/home/gs/sections-c"
 import { FaqJsonLd } from "@/components/seo/json-ld"
-import { TestHero } from "@/components/test-home/test-hero"
-import { AiShowcase } from "@/components/lazy"
 
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
 export const metadata: Metadata = getPageMetadata("/")
@@ -38,7 +32,7 @@ const HOMEPAGE_FAQS = [
   },
   {
     q: "How much does SMSLocal cost?",
-    a: "SMS pricing starts at ₹0.115 per message for transactional SMS at higher volumes. WhatsApp Business API is billed per delivered message, by category (marketing, utility, authentication, service), at Meta's published India rates, with zero platform markup on the first slab. OTP SMS starts at ₹0.15 with priority routing. Start your trial to test on live numbers before paying.",
+    a: "Pricing depends on the channel and your volume. SMS is billed per message, and the WhatsApp Business API is billed per delivered message by category (marketing, utility, authentication, service) at Meta's published India rates. Start your trial to test on live numbers before paying, or talk to our team for a quote.",
   },
   {
     q: "Do I need a credit card to start?",
@@ -68,19 +62,21 @@ export default function HomePage() {
       <FaqJsonLd items={HOMEPAGE_FAQS} path="/" />
       <AnnouncementStrip />
       <SiteHeader />
-      <TestHero />
-      <AiShowcase />
-      <MessagingShowcase />
+      <VideoHero />
       <OperatorsStrip />
-      <ChannelsShowcase />
-      <StatsStrip />
-      <HowItWorks />
-      <Differentiators />
-      <Industries />
-      <ComplianceStrip />
-      <DeveloperStrip />
+      <UseCaseMarquee />
+      <AgentTypes />
+      <AgentLifecycle />
+      <SuiteBento />
+      <DeployEverywhere />
+      <JourneyRing />
+      <Escalation />
+      <IndustryPanels />
+      <RolesTabs />
+      <SecuritySplit />
+      <ResourcesRow />
       <FaqSection items={HOMEPAGE_FAQS} />
-      <FinalCta />
+      <GsFinalCta />
       <SiteFooter />
     </main>
   )

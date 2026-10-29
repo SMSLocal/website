@@ -129,7 +129,6 @@ export default function ChangelogPage() {
             { icon: Gauge, label: "Shipped every two weeks" },
           ]}
           visual={<ChangelogHeroVisual />}
-          compact
           extraPadding="!py-12 sm:!py-14 lg:!py-14"
         />
 

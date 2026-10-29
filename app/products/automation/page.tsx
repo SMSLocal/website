@@ -148,7 +148,6 @@ export default function AutomationPage() {
             { icon: Webhook, label: "REST API + webhooks" },
           ]}
           visual={<AutomationVisual />}
-          compact
         />
 
         {/* 2 ─ Automation Features */}

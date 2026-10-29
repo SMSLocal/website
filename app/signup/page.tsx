@@ -34,7 +34,7 @@ export default function SignupPage() {
           {/* Card */}
           <div className="rounded-2xl border border-foreground/10 bg-card p-8 shadow-xl shadow-black/5">
             <div className="flex justify-center">
-              <BrandLogo className="h-8 w-auto" />
+              <BrandLogo tone="dark" size="lg" />
             </div>
 
             <h1 className="mt-6 text-center text-2xl font-semibold tracking-tight text-foreground">

@@ -159,7 +159,6 @@ export default function RestaurantSolutionPage() {
             { icon: Star, label: "Review automation" },
           ]}
           visual={<RestaurantHeroVisual />}
-          compact
         />
 
         {/* How it works */}

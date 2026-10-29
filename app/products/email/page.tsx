@@ -128,7 +128,6 @@ export default function EmailInboxPage() {
             { icon: Signature, label: "Email signatures" },
           ]}
           visual={<EmailInboxVisual />}
-          compact
         />
 
 

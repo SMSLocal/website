@@ -55,15 +55,6 @@ type NavLeaf = {
   label: string
   href: string
   icon?: React.ComponentType<{ className?: string }>
-  description?: string
-}
-
-type NavFeatured = {
-  icon: React.ComponentType<{ className?: string }>
-  title: string
-  body: string
-  cta: string
-  href: string
 }
 
 type Pillar = {
@@ -81,13 +72,11 @@ type NavItem =
       label: string
       columns: { heading: string; items: NavLeaf[] }[]
       footer?: { label: string; href: string }
-      featured?: NavFeatured
     }
   | {
       label: string
       pillars: Pillar[]
       footer?: { label: string; href: string }
-      featured?: NavFeatured
     }
 
 const NAV: NavItem[] = [
@@ -97,23 +86,16 @@ const NAV: NavItem[] = [
       {
         heading: "AI Agents & Platform",
         items: [
-          { label: "Platform Overview", href: "/platform/", icon: Sparkles, description: "One product, every capability" },
-          { label: "Agentic AI", href: "/products/ai-agentic/", icon: Bot, description: "Takes action, not just answers" },
-          { label: "AI Agents", href: "/products/ai-agents/", icon: Sparkles, description: "Service, sales, booking & more" },
-          { label: "Voice AI Agent", href: "/voice-ai-agents/", icon: Mic, description: "AI that answers the phone" },
-          { label: "Agent Copilot", href: "/products/agent-copilot/", icon: MessageSquare, description: "AI inside the reply box" },
-          { label: "Omnichannel Inbox", href: "/products/omnichannel-inbox/", icon: Inbox, description: "Every channel, one inbox" },
+          { label: "Platform Overview", href: "/platform/", icon: Sparkles },
+          { label: "Agentic AI", href: "/products/ai-agentic/", icon: Bot },
+          { label: "AI Agents", href: "/products/ai-agents/", icon: Sparkles },
+          { label: "Voice AI Agent", href: "/voice-ai-agents/", icon: Mic },
+          { label: "Agent Copilot", href: "/products/agent-copilot/", icon: MessageSquare },
+          { label: "Omnichannel Inbox", href: "/products/omnichannel-inbox/", icon: Inbox },
         ],
       },
     ],
     footer: { label: "View all products", href: "/products/" },
-    featured: {
-      icon: Zap,
-      title: "Everything included.",
-      body: "Agentic AI, every channel, broadcasting, and numbers — one platform.",
-      cta: "Talk to sales",
-      href: "/company/contact/",
-    },
   },
   {
     label: "Channels",
@@ -121,34 +103,32 @@ const NAV: NavItem[] = [
       {
         heading: "Broadcasting",
         items: [
-          { label: "SMS Broadcasting", href: "/channels/sms-broadcasting/", icon: Send, description: "Bulk A2P campaigns" },
-          { label: "RCS Broadcasting", href: "/channels/rcs-broadcasting/", icon: Sparkles, description: "Rich campaigns + SMS fallback" },
-          { label: "WhatsApp Broadcasting", href: "/channels/whatsapp-broadcasting/", icon: MessageSquareText, description: "Template campaigns at scale" },
+          { label: "SMS Broadcasting", href: "/channels/sms-broadcasting/", icon: Send },
+          { label: "RCS Broadcasting", href: "/channels/rcs-broadcasting/", icon: Sparkles },
+          { label: "WhatsApp Broadcasting", href: "/channels/whatsapp-broadcasting/", icon: MessageSquareText },
         ],
       },
       {
         heading: "Messaging channels",
         items: [
-          { label: "WhatsApp", href: "/channels/whatsapp/", icon: MessageCircle, description: "Official Business API" },
-          { label: "Instagram", href: "/channels/instagram/", icon: Instagram, description: "DMs, answered by AI" },
-          { label: "Messenger", href: "/channels/messenger/", icon: Facebook, description: "Facebook Messenger, 24/7" },
-          { label: "Web Chat", href: "/channels/web-chat/", icon: Globe, description: "Widget for your site" },
-          { label: "Voice", href: "/products/voice/", icon: PhoneCall, description: "IVR, OTP & voice broadcast" },
-          { label: "Social", href: "/channels/social/", icon: Share2, description: "Every social DM, unified" },
-          { label: "RCS Messaging", href: "/products/rcs/", icon: Sparkles, description: "Rich cards & suggested replies" },
-          { label: "Virtual Numbers", href: "/numbers/did/", icon: Package, description: "Local, toll-free & short codes" },
-          { label: "Integrations", href: "/products/integrations/", icon: Puzzle, description: "200+ apps & CRMs" },
-          { label: "Analytics", href: "/products/analytics/", icon: Activity, description: "Dashboards & insights" },
+          { label: "WhatsApp", href: "/channels/whatsapp/", icon: MessageCircle },
+          { label: "Instagram", href: "/channels/instagram/", icon: Instagram },
+          { label: "Messenger", href: "/channels/messenger/", icon: Facebook },
+          { label: "Web Chat", href: "/channels/web-chat/", icon: Globe },
+          { label: "Voice", href: "/products/voice/", icon: PhoneCall },
+        ],
+      },
+      {
+        heading: "More channels",
+        items: [
+          { label: "Social", href: "/channels/social/", icon: Share2 },
+          { label: "RCS Messaging", href: "/products/rcs/", icon: Sparkles },
+          { label: "Virtual Numbers", href: "/numbers/did/", icon: Package },
+          { label: "Integrations", href: "/products/integrations/", icon: Puzzle },
+          { label: "Analytics", href: "/products/analytics/", icon: Activity },
         ],
       },
     ],
-    featured: {
-      icon: MessageCircle,
-      title: "Every channel, one inbox.",
-      body: "SMS, RCS and WhatsApp broadcasting plus social and voice — answered by AI in one shared inbox.",
-      cta: "Talk to sales",
-      href: "/company/contact/",
-    },
   },
   {
     label: "Solutions",
@@ -189,7 +169,6 @@ const NAV: NavItem[] = [
       },
     ],
     footer: { label: "View all industries", href: "/solutions/" },
-    featured: { icon: PhoneCall, title: "Talk to our team", body: "Not sure which fits? We'll map SMSLocal to your use case.", cta: "Talk to sales", href: "/company/contact/" },
   },
   {
     label: "Why SMSLocal",
@@ -197,16 +176,16 @@ const NAV: NavItem[] = [
       {
         heading: "Why SMSLocal",
         items: [
-          { label: "Why SMSLocal", href: "/why-smslocal/", icon: Bot, description: "One platform vs the stack" },
-          { label: "Compare", href: "/compare/", icon: BarChart3, description: "vs Haptik, Twilio & more" },
-          { label: "Security", href: "/platform/security/", icon: ShieldCheck, description: "SSO, RBAC & audit logs" },
+          { label: "Why SMSLocal", href: "/why-smslocal/", icon: Bot },
+          { label: "Compare", href: "/compare/", icon: BarChart3 },
+          { label: "Security", href: "/platform/security/", icon: ShieldCheck },
         ],
       },
       {
         heading: "Grow with us",
         items: [
-          { label: "Partnerships", href: "/partnerships/", icon: Users, description: "Agency & reseller program" },
-          { label: "AI Consulting", href: "/services/ai-consulting/", icon: Wrench, description: "POC to production" },
+          { label: "Partnerships", href: "/partnerships/", icon: Users },
+          { label: "AI Consulting", href: "/services/ai-consulting/", icon: Wrench },
         ],
       },
     ],
@@ -241,7 +220,6 @@ const NAV: NavItem[] = [
         ],
       },
     ],
-    featured: { icon: Wrench, title: "Free SMS tools", body: "Send a real test SMS — no signup required.", cta: "Open tools", href: "/resources/tools/" },
   },
 ]
 
@@ -251,18 +229,15 @@ function LeafLink({ leaf }: { leaf: NavLeaf }) {
   return (
     <Link
       href={leaf.href}
-      className="group/i flex items-center gap-2.5 rounded-xl px-2.5 py-1.5 transition hover:bg-secondary"
+      className="group/i flex items-center gap-3 rounded-xl px-3 py-2 transition-colors duration-200 hover:bg-primary/[0.06]"
     >
       {Icon ? (
-        <span className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary transition group-hover/i:bg-primary group-hover/i:text-primary-foreground">
-          <Icon className="h-3.5 w-3.5" />
+        <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] bg-secondary text-foreground/70 transition-all duration-200 group-hover/i:bg-primary group-hover/i:text-primary-foreground group-hover/i:shadow-md group-hover/i:shadow-primary/25">
+          <Icon className="h-4 w-4" />
         </span>
       ) : null}
       <span className="min-w-0 flex-1">
-        <span className="block text-[13px] font-semibold text-foreground">{leaf.label}</span>
-        {leaf.description ? (
-          <span className="block truncate text-[11.5px] text-muted-foreground">{leaf.description}</span>
-        ) : null}
+        <span className="block whitespace-nowrap text-[13.5px] font-medium text-foreground">{leaf.label}</span>
       </span>
       <ArrowUpRight className="h-4 w-4 shrink-0 text-primary opacity-0 transition-all group-hover/i:translate-x-0.5 group-hover/i:opacity-100" />
     </Link>
@@ -272,7 +247,6 @@ function LeafLink({ leaf }: { leaf: NavLeaf }) {
 /* Products dropdown — pillar rail (left) + active panel + featured card. */
 function PillarMegaItem({ item }: { item: Extract<NavItem, { pillars: Pillar[] }> }) {
   const [active, setActive] = useState(item.pillars[0].id)
-  const Featured = item.featured?.icon
 
   return (
     <div className="group">
@@ -284,8 +258,7 @@ function PillarMegaItem({ item }: { item: Extract<NavItem, { pillars: Pillar[] }
         <ChevronDown className="h-3.5 w-3.5 opacity-60 transition-transform group-hover:rotate-180" />
       </button>
       <div className="pointer-events-none invisible absolute left-0 right-0 top-full z-50 -mt-3.5 translate-y-1 pt-[26px] opacity-0 transition-all duration-200 ease-out group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 flex justify-center">
-        <div className="overflow-hidden rounded-2xl border border-border bg-popover shadow-2xl shadow-foreground/10">
-          <div aria-hidden className="h-[3px] w-full bg-gradient-to-r from-primary via-[oklch(0.66_0.14_178)] to-accent" />
+        <div className="overflow-hidden rounded-3xl border border-border/70 bg-popover/95 shadow-[0_28px_70px_-18px_rgba(15,23,42,0.28)] ring-1 ring-black/[0.03] backdrop-blur-xl">
           <div className="flex">
             {/* Pillar rail */}
             <div className="flex w-[236px] shrink-0 flex-col gap-1 border-r border-border bg-secondary/30 p-3">
@@ -337,26 +310,11 @@ function PillarMegaItem({ item }: { item: Extract<NavItem, { pillars: Pillar[] }
               ))}
             </div>
 
-            {/* Featured */}
-            {item.featured && Featured ? (
-              <div className="flex w-[220px] shrink-0 flex-col justify-between gap-3 border-l border-border bg-gradient-to-br from-primary/10 to-accent/10 p-5">
-                <div>
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-white">
-                    <Featured className="h-5 w-5" />
-                  </span>
-                  <h4 className="mt-3 text-[14px] font-bold text-foreground">{item.featured.title}</h4>
-                  <p className="mt-1.5 text-[12px] leading-relaxed text-muted-foreground">{item.featured.body}</p>
-                </div>
-                <Link href={item.featured.href} className="inline-flex items-center gap-1 text-[12.5px] font-semibold text-primary transition hover:gap-1.5">
-                  {item.featured.cta} <ArrowUpRight className="h-4 w-4" />
-                </Link>
-              </div>
-            ) : null}
           </div>
           {item.footer ? (
             <Link
               href={item.footer.href}
-              className="flex items-center justify-between gap-2 border-t border-border bg-secondary/50 px-5 py-3.5 text-[12.5px] font-semibold text-primary transition hover:bg-secondary"
+              className="flex items-center justify-between gap-2 border-t border-border/70 bg-secondary/40 px-7 py-3.5 text-[13px] font-semibold text-primary transition hover:bg-secondary/70"
             >
               {item.footer.label}
               <ArrowUpRight className="h-4 w-4" />
@@ -417,8 +375,7 @@ export function SiteHeader() {
             if ("pillars" in item) {
               return <PillarMegaItem key={item.label} item={item} />
             }
-            const Featured = item.featured?.icon
-            return (
+                      return (
               <div key={item.label} className="group">
                 <button
                   type="button"
@@ -429,14 +386,12 @@ export function SiteHeader() {
                 </button>
                 {/* Dropdown */}
                 <div className="pointer-events-none invisible absolute left-0 right-0 top-full z-50 -mt-3.5 translate-y-1 pt-[26px] opacity-0 transition-all duration-200 ease-out group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 flex justify-center">
-                  <div className="overflow-hidden rounded-2xl border border-border bg-popover shadow-2xl shadow-foreground/10">
-                    <div aria-hidden className="h-[3px] w-full bg-gradient-to-r from-primary via-[oklch(0.66_0.14_178)] to-accent" />
+                  <div className="overflow-hidden rounded-3xl border border-border/70 bg-popover/95 shadow-[0_28px_70px_-18px_rgba(15,23,42,0.28)] ring-1 ring-black/[0.03] backdrop-blur-xl">
                     <div className="flex">
-                    <div className="flex gap-1 p-3">
+                    <div className="flex gap-2 p-4">
                       {item.columns.map((col) => (
-                        <div key={col.heading} className={`p-1 ${item.columns.length > 2 ? "w-[208px]" : "w-[250px]"}`}>
-                          <p className="mb-1 flex items-center gap-1.5 px-2.5 text-[10.5px] font-semibold uppercase tracking-[0.16em] text-muted-foreground whitespace-nowrap">
-                            <span className="h-1 w-1 shrink-0 rounded-full bg-primary" />
+                        <div key={col.heading} className={`p-1 ${item.columns.length > 2 ? "w-[228px]" : "w-[260px]"}`}>
+                          <p className="mb-2 px-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground/80 whitespace-nowrap">
                             {col.heading}
                           </p>
                           <ul className="flex flex-col gap-0">
@@ -449,25 +404,11 @@ export function SiteHeader() {
                         </div>
                       ))}
                     </div>
-                    {item.featured && Featured ? (
-                      <div className={`flex shrink-0 flex-col justify-between gap-3 border-l border-border bg-gradient-to-br from-primary/10 to-accent/10 p-5 ${item.columns.length > 2 ? "w-[196px]" : "w-[230px]"}`}>
-                        <div>
-                          <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-accent text-white">
-                            <Featured className="h-5 w-5" />
-                          </span>
-                          <h4 className="mt-3 text-[14px] font-bold text-foreground">{item.featured.title}</h4>
-                          <p className="mt-1.5 text-[12px] leading-relaxed text-muted-foreground">{item.featured.body}</p>
-                        </div>
-                        <Link href={item.featured.href} className="inline-flex items-center gap-1 text-[12.5px] font-semibold text-primary transition hover:gap-1.5">
-                          {item.featured.cta} <ArrowUpRight className="h-4 w-4" />
-                        </Link>
-                      </div>
-                    ) : null}
                     </div>
                     {item.footer ? (
                       <Link
                         href={item.footer.href}
-                        className="flex items-center justify-between gap-2 border-t border-border bg-secondary/50 px-5 py-3.5 text-[12.5px] font-semibold text-primary transition hover:bg-secondary"
+                        className="flex items-center justify-between gap-2 border-t border-border/70 bg-secondary/40 px-7 py-3.5 text-[13px] font-semibold text-primary transition hover:bg-secondary/70"
                       >
                         {item.footer.label}
                         <ArrowUpRight className="h-4 w-4" />
@@ -511,18 +452,19 @@ export function SiteHeader() {
 
       {/* Mobile nav */}
       {mobileOpen && (
-        <div className="border-t border-border lg:hidden">
-          <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3">
+        <div className="max-h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-border/70 bg-background/95 backdrop-blur-xl lg:hidden">
+          <nav className="mx-auto flex max-w-7xl flex-col px-4 pb-6 pt-2">
             {NAV.map((item, i) => {
               if ("href" in item) {
                 return (
                   <Link
                     key={item.label}
                     href={item.href}
-                    className="rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-secondary"
+                    className="flex items-center justify-between border-b border-border/60 py-4 text-[17px] font-semibold text-foreground"
                     onClick={() => setMobileOpen(false)}
                   >
                     {item.label}
+                    <ArrowUpRight className="h-4 w-4 text-muted-foreground" />
                   </Link>
                 )
               }
@@ -532,58 +474,78 @@ export function SiteHeader() {
                   ? item.pillars.map((p) => ({ heading: p.label, items: p.items }))
                   : item.columns
               return (
-                <div key={item.label} className="rounded-md">
+                <div key={item.label} className="border-b border-border/60">
                   <button
                     type="button"
+                    aria-expanded={isOpen}
                     onClick={() => setOpenMobileIndex(isOpen ? null : i)}
-                    className="flex w-full items-center justify-between rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-secondary"
+                    className="flex w-full items-center justify-between py-4 text-left text-[17px] font-semibold text-foreground"
                   >
                     {item.label}
-                    <ChevronDown className={`h-4 w-4 transition-transform ${isOpen ? "rotate-180" : ""}`} />
+                    <span className={`inline-flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 ${isOpen ? "rotate-180 bg-primary text-primary-foreground" : "bg-secondary text-muted-foreground"}`}>
+                      <ChevronDown className="h-4 w-4" />
+                    </span>
                   </button>
-                  {isOpen ? (
-                    <div className="px-3 pb-2">
-                      {groups.map((col) => (
-                        <div key={col.heading} className="mt-2">
-                          <p className="px-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
-                            {col.heading}
-                          </p>
-                          <ul className="mt-1 flex flex-col">
-                            {col.items.map((leaf) => (
-                              <li key={leaf.label}>
-                                <Link
-                                  href={leaf.href}
-                                  onClick={() => setMobileOpen(false)}
-                                  className="block rounded-md px-3 py-1.5 text-[13px] text-foreground/70 hover:bg-secondary hover:text-foreground"
-                                >
-                                  {leaf.label}
-                                </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      ))}
-                      {item.footer ? (
-                        <Link
-                          href={item.footer.href}
-                          onClick={() => setMobileOpen(false)}
-                          className="mt-2 inline-flex px-3 py-1.5 text-[12.5px] font-medium text-primary"
-                        >
-                          {item.footer.label} →
-                        </Link>
-                      ) : null}
+                  <div className={`grid transition-all duration-300 ease-out ${isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}>
+                    <div className="overflow-hidden">
+                      <div className="space-y-4 pb-5">
+                        {groups.map((col) => (
+                          <div key={col.heading}>
+                            <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground/80">{col.heading}</p>
+                            <ul className="grid grid-cols-2 gap-2">
+                              {col.items.map((leaf) => {
+                                const LIcon = leaf.icon
+                                return (
+                                  <li key={leaf.label}>
+                                    <Link
+                                      href={leaf.href}
+                                      onClick={() => setMobileOpen(false)}
+                                      className="flex h-full items-center gap-2.5 rounded-2xl border border-border/70 bg-card px-3 py-2.5 text-[13px] font-medium leading-tight text-foreground transition active:scale-[0.98] hover:border-primary/40 hover:bg-primary/[0.04]"
+                                    >
+                                      {LIcon ? (
+                                        <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-[10px] bg-secondary text-foreground/70">
+                                          <LIcon className="h-4 w-4" />
+                                        </span>
+                                      ) : null}
+                                      <span className="min-w-0">{leaf.label}</span>
+                                    </Link>
+                                  </li>
+                                )
+                              })}
+                            </ul>
+                          </div>
+                        ))}
+                        {item.footer ? (
+                          <Link
+                            href={item.footer.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-primary"
+                          >
+                            {item.footer.label} <ArrowUpRight className="h-4 w-4" />
+                          </Link>
+                        ) : null}
+                      </div>
                     </div>
-                  ) : null}
+                  </div>
                 </div>
               )
             })}
-            <Link
-              href="/signin/"
-              className="rounded-md px-3 py-2 text-sm text-foreground/80 hover:bg-secondary"
-              onClick={() => setMobileOpen(false)}
-            >
-              Sign in
-            </Link>
+            <div className="mt-5 grid grid-cols-2 gap-3">
+              <Link
+                href="/signin/"
+                onClick={() => setMobileOpen(false)}
+                className="inline-flex items-center justify-center rounded-full border border-border bg-card py-3 text-[14.5px] font-semibold text-foreground"
+              >
+                Sign in
+              </Link>
+              <Link
+                href="/company/contact/"
+                onClick={() => setMobileOpen(false)}
+                className="inline-flex items-center justify-center rounded-full bg-primary py-3 text-[14.5px] font-semibold text-primary-foreground shadow-lg shadow-primary/25"
+              >
+                Talk to sales
+              </Link>
+            </div>
           </nav>
         </div>
       )}

@@ -89,7 +89,6 @@ export default function InboxPage() {
             { icon: ShieldCheck, label: "Enterprise-grade security" },
           ]}
           visual={<InboxVisual />}
-          compact
         />
 
         {/* 2 ─ Unified Inbox / Channel cards */}

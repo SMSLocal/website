@@ -11,8 +11,6 @@ const OPERATORS: Mark[] = [
   { label: "vodafone", className: "font-semibold lowercase tracking-tight" },
   { label: "Jio", sub: "DIGITAL LIFE", className: "font-bold" },
   { label: "airtel", className: "font-bold lowercase tracking-tight" },
-  { label: "infobip", className: "font-semibold lowercase tracking-tight" },
-  { label: "VIDEOCON", className: "font-bold tracking-wide" },
 ]
 
 export function OperatorsStrip() {
@@ -23,7 +21,7 @@ export function OperatorsStrip() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <Reveal>
           <h2
-            className="text-center text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-[40px]"
+            className="text-center text-2xl font-extrabold tracking-tight sm:text-3xl lg:text-[30px]"
             style={{ color: "oklch(0.42 0.13 168)" }}
           >
             Connected with Direct Operator

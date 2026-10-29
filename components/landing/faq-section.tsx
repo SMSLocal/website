@@ -14,7 +14,7 @@ export function FaqSection({ items }: { items: { q: string; a: string }[] }) {
           <span className="inline-flex items-center gap-1.5 rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[12px] font-semibold uppercase tracking-wider text-primary">
             <HelpCircle className="h-3.5 w-3.5" /> FAQ
           </span>
-          <h2 className="mt-5 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-[44px] lg:leading-[1.1]">
+          <h2 className="mt-5 text-balance text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-[38px] lg:leading-[1.1]">
             Common{" "}
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">questions</span>
           </h2>

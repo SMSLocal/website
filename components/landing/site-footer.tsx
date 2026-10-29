@@ -9,17 +9,11 @@ const COLUMNS: { title: string; links: FooterLink[] }[] = [
   {
     title: "Resources",
     links: [
-      { label: "Resources", href: "/resources/" },
+      { label: "All resources", href: "/resources/" },
       { label: "Blog", href: "/blog/" },
       { label: "DLT registration guide", href: "/blog/dlt-registration-guide/" },
       { label: "Bulk SMS guide", href: "/blog/bulk-sms/" },
       { label: "WhatsApp marketing guide", href: "/blog/whatsapp-marketing-india/" },
-      { label: "Bulk WhatsApp messaging", href: "/blog/bulk-whatsapp-messaging/" },
-      { label: "OTP SMS delivery guide", href: "/blog/otp-sms-service/" },
-      { label: "RCS messaging guide", href: "/blog/rcs-messaging-india/" },
-      { label: "Long SMS messages", href: "/long-sms-messages/" },
-      { label: "DND: the consumer guide", href: "/blog/dnd-means/" },
-      { label: "Free SMS online", href: "/resources/tools/free-sms-without-registration/" },
       { label: "Help centre", href: "/resources/help/" },
     ],
   },

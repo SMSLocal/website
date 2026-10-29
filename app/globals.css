@@ -321,3 +321,11 @@
   0%, 100% { opacity: 1; }
   50%       { opacity: 0; }
 }
+
+/* Heading accent used across the home page: brand green into teal (the old green-to-amber looked muddy). */
+.brand-gradient-text {
+  background-image: linear-gradient(90deg, var(--primary), oklch(0.66 0.13 215));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
