@@ -48,8 +48,8 @@ export function VideoHero() {
     <section className="relative isolate overflow-hidden border-b border-border bg-slate-900 text-white">
       <video ref={phoneRef} className={`absolute inset-0 -z-20 h-full w-full object-cover transition-opacity duration-1000 ${sceneOn(0)}`} src="/home/hero-phone.mp4" autoPlay muted loop playsInline preload="metadata" aria-hidden />
       <video ref={laptopRef} className={`absolute inset-0 -z-20 h-full w-full object-cover transition-opacity duration-1000 ${sceneOn(1)}`} src="/home/hero-laptop.mp4" autoPlay muted loop playsInline preload="metadata" aria-hidden />
-      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-[oklch(0.14_0.04_245)]/95 via-[oklch(0.14_0.04_245)]/78 to-[oklch(0.14_0.04_245)]/35 max-lg:from-[oklch(0.14_0.04_245)]/90 max-lg:to-[oklch(0.14_0.04_245)]/85" />
-      <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-t from-[oklch(0.14_0.04_245)]/70 to-transparent" />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-[oklch(0.14_0.04_245)]/78 via-[oklch(0.14_0.04_245)]/52 to-[oklch(0.14_0.04_245)]/12 max-lg:from-[oklch(0.14_0.04_245)]/72 max-lg:to-[oklch(0.14_0.04_245)]/68" />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-t from-[oklch(0.14_0.04_245)]/40 to-transparent" />
 
       <div className="relative mx-auto grid min-h-[560px] max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.3fr_0.8fr_0.45fr] lg:min-h-[640px] lg:py-20">
         <div>
