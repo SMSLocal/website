@@ -20,6 +20,7 @@ import WhatsappScamsIndiaPost from "@/content/blog/whatsapp-scams-india"
 import SmsMessageAppPost from "@/content/blog/sms-message-app"
 import BulkSmsServiceApiPost from "@/content/blog/bulk-sms-service-api"
 import BulkSmsPost from "@/content/blog/bulk-sms"
+import PromotionalSmsIndiaPost from "@/content/blog/promotional-sms-india"
 import OtpSmsServicePost from "@/content/blog/otp-sms-service"
 import RcsMessagingIndiaPost from "@/content/blog/rcs-messaging-india"
 
@@ -141,7 +142,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "limitations", label: "Limitations and edge cases" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dnd-services", "receive-sms-online-india"],
+      relatedSlugs: ["dnd-services", "receive-sms-online-india", "promotional-sms-india"],
       faqItems: [
         { q: "Does DND block WhatsApp messages?", a: "No. WhatsApp runs over the internet, not the telecom SMS layer, so TRAI's DND rules do not apply. WhatsApp has its own report and block mechanism inside the app." },
         { q: "Does DND stop OTPs from arriving?", a: "No. Transaction OTPs are transactional messages, and login, password-reset and two-factor OTPs are service messages under TRAI's 2026 amendment. DND blocks neither. If your OTPs have stopped arriving, DND is almost never the cause — check network delays or sender-side issues instead." },
@@ -181,7 +182,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "practical-playbook", label: "Practical playbook" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dlt-registration-guide", "dnd-means", "bulk-sms"],
+      relatedSlugs: ["dlt-registration-guide", "dnd-means", "bulk-sms", "promotional-sms-india"],
       faqItems: [
         { q: "Do I need to scrub NCPR for transactional SMS?", a: "No. DND does not apply to transactional or service-explicit senders. OTPs, payment receipts, and delivery updates reach every number regardless of DND status." },
         { q: "How often should I scrub my SMS list against NCPR?", a: "Before every send. NCPR updates daily, and a number that was clean yesterday might be on DND today. A compliant SMS platform like SMSLocal scrubs on every submission automatically." },
@@ -436,7 +437,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "choosing-a-provider", label: "How to choose a provider" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["dlt-registration-guide", "send-sms-online", "sms-message-app", "otp-sms-service", "bulk-sms"],
+      relatedSlugs: ["dlt-registration-guide", "send-sms-online", "sms-message-app", "otp-sms-service", "bulk-sms", "promotional-sms-india"],
       keywords: ["bulk sms service api", "bulk sms api", "sms api india", "bulk sms gateway api"],
       faqItems: [
         { q: "What is a bulk SMS service API?", a: "A bulk SMS service API is a set of HTTP endpoints that let your application send SMS to one or thousands of recipients programmatically, instead of through a web dashboard. You make a request with the recipient numbers, message content (matched to an approved DLT template in India), and sender ID, and the API queues, routes, and reports delivery back to you — usually via webhook." },
@@ -488,6 +489,45 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       ],
     },
     Component: BulkSmsPost,
+  },
+
+  "promotional-sms-india": {
+    meta: {
+      slug: "promotional-sms-india",
+      title: "Promotional SMS in India: Rules and How to Send",
+      h1: "Promotional SMS in India: Rules, Consent and How to Send It",
+      description:
+        "Promotional SMS is any message that advertises a product or service. Learn TRAI's consent, DND and 9 AM to 9 PM rules, and how to send promotional SMS in India.",
+      date: "2026-10-30",
+      readingTime: "8 min read",
+      category: "Compliance",
+      author: TEAM,
+      coverImage: "/blog/promotional-sms-india-rules-consent-how-to-send-hero.webp",
+      coverAlt:
+        "Phone showing a promotional SMS from a registered sender next to a TRAI and DLT compliance checklist and a campaign sending panel.",
+      toc: [
+        { id: "what-promotional-sms-is", label: "What promotional SMS is" },
+        { id: "who-can-receive-promotional-sms", label: "Who can receive promotional SMS" },
+        { id: "how-to-send-promotional-sms", label: "How to send promotional SMS" },
+        { id: "dlt-registration-and-templates-for-promotional-sms", label: "DLT registration and templates" },
+        { id: "rules-for-promotional-sms-in-india", label: "Rules for promotional SMS in India" },
+        { id: "common-promotional-sms-mistakes", label: "Common promotional SMS mistakes" },
+        { id: "if-you-receive-unwanted-promotional-messages", label: "If you receive unwanted messages" },
+        { id: "what-smslocal-offers", label: "What SMSLocal offers" },
+        { id: "conclusion", label: "Conclusion" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["dnd-services", "dnd-means", "bulk-sms", "whatsapp-marketing-india"],
+      keywords: ["promotional sms", "promotional sms india", "promotional sms rules", "promotional sms trai", "promotional sms dnd"],
+      faqItems: [
+        { q: "What is promotional SMS?", a: "Promotional SMS is a text message that advertises a product or service, such as an offer, a sale or a new launch. TRAI requires it to carry an opt-out in the same message and to be sent only to customers who have not blocked promotions or who gave consent." },
+        { q: "Can I send promotional SMS to numbers on DND?", a: "Only if you hold explicit digital consent from the customer. Without it, TRAI's rules allow promotional messages only to customers who have not blocked promotions in the relevant category. A customer who chose Block promo will not receive them." },
+        { q: "What time can I send promotional SMS in India?", a: "Between 9 AM and 9 PM. TRAI's summary of its 2018 rules limits commercial communication other than transactional messages to that window, so schedule your campaign to be delivered inside it." },
+        { q: "Does a promotional SMS need an opt-out?", a: "Yes. TRAI's definition of a promotional message requires the sender to give an opt-out mechanism in the same message. A message without one does not meet the definition." },
+        { q: "What happens if I break the promotional SMS rules?", a: "Operators can act against a sender found to be sending unsolicited commercial messages. A first violation bars outgoing services on all the sender's telecom resources for 15 days, and a second or later violation means disconnection for one year and blacklisting." },
+      ],
+    },
+    Component: PromotionalSmsIndiaPost,
   },
 
   "otp-sms-service": {
@@ -591,7 +631,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "cost-in-india", label: "Cost in India" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-scams-india", "bulk-sms", "rcs-messaging-india"],
+      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-scams-india", "bulk-sms", "rcs-messaging-india", "promotional-sms-india"],
       faqItems: [
         { q: "Is WhatsApp marketing legal in India?", a: "Yes, when done through the official WhatsApp Business API with documented opt-in from each recipient. Unsolicited bulk messaging via unofficial tools or automated scripts violates WhatsApp's Terms of Service and can attract TRAI scrutiny if it uses shared numbers for harassment." },
         { q: "Do I need DLT registration for WhatsApp marketing?", a: "No. DLT is TRAI's framework for telecom SMS channels. WhatsApp operates over the internet and is governed by Meta's own policies, not TRAI. You do need WhatsApp Business API access approved by Meta." },
