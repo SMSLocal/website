@@ -48,8 +48,8 @@ export function VideoHero() {
     <section className="relative isolate overflow-hidden border-b border-border bg-slate-900 text-white">
       <video ref={phoneRef} className={`absolute inset-0 -z-20 h-full w-full object-cover transition-opacity duration-1000 ${sceneOn(0)}`} src="/home/hero-phone.mp4" autoPlay muted loop playsInline preload="metadata" aria-hidden />
       <video ref={laptopRef} className={`absolute inset-0 -z-20 h-full w-full object-cover transition-opacity duration-1000 ${sceneOn(1)}`} src="/home/hero-laptop.mp4" autoPlay muted loop playsInline preload="metadata" aria-hidden />
-      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-[oklch(0.14_0.04_245)]/78 via-[oklch(0.14_0.04_245)]/52 to-[oklch(0.14_0.04_245)]/12 max-lg:from-[oklch(0.14_0.04_245)]/72 max-lg:to-[oklch(0.14_0.04_245)]/68" />
-      <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-t from-[oklch(0.14_0.04_245)]/40 to-transparent" />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-[oklch(0.14_0.04_245)]/55 via-[oklch(0.14_0.04_245)]/22 to-transparent max-lg:from-[oklch(0.14_0.04_245)]/48 max-lg:via-[oklch(0.14_0.04_245)]/34 max-lg:to-[oklch(0.14_0.04_245)]/22" />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-t from-[oklch(0.14_0.04_245)]/16 to-transparent" />
 
       <div className="relative mx-auto grid min-h-[560px] max-w-7xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1.3fr_0.8fr_0.45fr] lg:min-h-[640px] lg:py-20">
         <div>
@@ -57,7 +57,7 @@ export function VideoHero() {
             <Sparkles className="h-3.5 w-3.5 text-primary" /> The next generation of conversational AI
           </span>
           <h1 className="mt-6 text-balance text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-[54px]">
-            Every customer conversation, <span className="text-emerald-300">answered like a person would</span>
+            One Platform. Every Conversation. <span className="text-emerald-300">Smarter Outcomes</span>
           </h1>
           <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-white/80">
             AI agents that understand context, reply in 8 Indian languages and take action across SMS, WhatsApp, RCS and voice, then hand over to your team when it matters.
