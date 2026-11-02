@@ -151,8 +151,8 @@ export function SmsBomberSimulator() {
               <strong className="font-semibold">No SMS will be sent.</strong>{" "}
               This widget animates a counter to demonstrate the UX of an SMS
               bomber. SMSLocal does not transmit any message from this page.
-              Real SMS bombing is illegal in India under the IT Act, TRAI
-              TCCCPR 2018, and DPDPA 2023 — see the sections below.
+              Real SMS bombing can break the IT Act, the Bharatiya Nyaya
+              Sanhita and TRAI’s TCCCPR 2018 — see the sections below.
             </p>
           </div>
 

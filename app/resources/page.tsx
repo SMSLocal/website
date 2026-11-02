@@ -62,7 +62,7 @@ const SECTIONS = [
     href: "/resources/tools/",
     icon: Wrench,
     label: "Free Tools",
-    description: "Start your trial, learn why SMS bombing is illegal in India, and explore SMS length limits.",
+    description: "Start your trial, see what the law says about SMS bombing, and explore SMS length limits.",
     meta: "2 free utilities",
     accent: "text-amber-400",
     bg: "bg-amber-500/10",

@@ -254,6 +254,9 @@ export default function SendSmsOnlinePost() {
           <Strong>Consent.</Strong> You must hold documented, auditable opt-in for every
           recipient of a promotional message. Service SMS to your own customers (OTPs, receipts)
           don&apos;t need explicit SMS consent — they&apos;re implied by the relationship.
+          Repeated unwanted messages to one number are not a loophole: they are what an{" "}
+          <A href="/resources/tools/sms-bomber/">SMS bomber</A> does, and they can break several
+          laws.
         </LI>
         <LI>
           <Strong>NCPR scrub.</Strong> Promotional lists must be scrubbed against the National

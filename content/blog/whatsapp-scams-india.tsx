@@ -360,7 +360,7 @@ export default function WhatsappScamsIndiaPost() {
       <P>
         If the harassment is arriving as a flood of text messages rather than WhatsApp, our{" "}
         <A href="/resources/tools/sms-bomber/">guide to SMS bombing</A> explains how these tools
-        work, why they are illegal in India, and exactly how to trace and report the sender.
+        work, what Indian law says about them, and how to report the sender.
       </P>
 
       <BlogFigure

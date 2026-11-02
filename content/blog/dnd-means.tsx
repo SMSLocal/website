@@ -292,7 +292,10 @@ export default function DndMeansPost() {
           <Strong>Unregistered senders on ordinary numbers.</Strong> TRAI notes that some
           spammers use normal 10-digit mobile or landline numbers to pass as ordinary subscribers
           and avoid the rules. Block and report these numbers individually, and use your
-          phone&apos;s spam filter.
+          phone&apos;s spam filter. If the messages arrive in a constant flood from one source,
+          it may be SMS bombing rather than marketing, and our guide to{" "}
+          <A href="/resources/tools/sms-bomber/">SMS bombers in India</A> explains the law and
+          what to do.
         </LI>
         <LI>
           <Strong>Messages you agreed to.</Strong> If you gave a business explicit digital

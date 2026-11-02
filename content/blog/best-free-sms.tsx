@@ -274,7 +274,9 @@ export default function BestFreeSmsPost() {
       <P>
         Several websites offer free SMS sending to Indian numbers through a browser. Way2SMS shut
         down in 2022, but successors operate in the same model. These are worth understanding
-        before using.
+        before using. Some of them also advertise an &quot;SMS bomber&quot; mode that repeats
+        messages to one number. That is a legal risk, not a feature: see our guide to{" "}
+        <A href="/resources/tools/sms-bomber/">SMS bombers and the law in India</A>.
       </P>
 
       <H3>How they work</H3>

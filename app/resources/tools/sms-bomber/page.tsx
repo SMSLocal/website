@@ -30,40 +30,40 @@ export const metadata: Metadata = getPageMetadata("/resources/tools/sms-bomber")
 const LAWS = [
   {
     icon: Gavel,
-    title: "IT Act, 2000 — Section 66 / 66A legacy",
-    body: "Sending messages that cause annoyance, inconvenience, danger, obstruction, insult, or intimidation through a communication service is a punishable offence. Section 66A was struck down in 2015, but the broader IT Act, along with Sections 354D (cyber-stalking) and 507 of the IPC (criminal intimidation), still apply — with imprisonment up to three years and a fine.",
+    title: "IT Act, 2000 and the Bharatiya Nyaya Sanhita, 2023",
+    body: "Section 66A of the IT Act, which punished annoying or menacing messages, was struck down by the Supreme Court in 2015, so it cannot be used. What remains is Section 43, which covers acts such as disrupting a computer system or denying access to someone entitled to use it, and Section 66, which punishes a dishonest or fraudulent act under Section 43 with up to three years in prison, a fine of up to ₹5 lakh, or both. The Bharatiya Nyaya Sanhita (BNS), which replaced the IPC in July 2024, adds criminal intimidation (Section 351) when messages carry a threat, and stalking (Section 78) when a man repeatedly contacts a woman who has shown no interest.",
   },
   {
     icon: Scale,
     title: "TRAI TCCCPR, 2018 (Telecom Commercial Communications)",
-    body: "Bulk commercial communications must flow through a registered DLT Principal Entity, use an approved Header (Sender ID) and an approved Template. SMS bombers bypass all three. Operators are mandated to trace abuse and suspend the originating service, and complaint workflows (1909, DND Registry) feed into the same trace path.",
+    body: "TCCCPR covers commercial communication: messages whose main purpose is to advertise or solicit business. A bomber that floods a number with promotional or sales content breaks the rules on registered senders, approved Headers (Sender IDs) and approved Templates. For unsolicited commercial messages, operators can restrict, disconnect and blacklist a sender, and complaints through 1909 feed into that process. A prank or abusive message with no commercial purpose is outside TCCCPR and falls under the laws on the left.",
   },
   {
     icon: Shield,
     title: "DPDPA, 2023 (Digital Personal Data Protection Act)",
-    body: "Processing a person’s phone number to send unwanted messages — especially at scale — constitutes unlawful processing of personal data without consent. Penalties under the DPDPA can run into several crores of rupees for the entity responsible.",
+    body: "The DPDPA applies to organisations that process digital personal data, such as phone numbers, and generally requires consent or another lawful basis. It does not apply to personal data an individual processes for personal or domestic purposes (Section 3(c)(i)), so it matters most for businesses that message people without consent. The Data Protection Board sets penalties under Section 33 and the Schedule: up to ₹250 crore for failing to keep reasonable security safeguards and up to ₹50 crore for breach of any other provision.",
   },
 ] as const
 
 const CONSEQUENCES = [
   {
-    title: "Your SIM / number gets blocked",
-    body: "Operators trace high-frequency outbound traffic from personal SIMs and suspend service without warning. The ban usually applies to the SIM and the KYC-linked Aadhaar, meaning new SIMs in your name get flagged too.",
+    title: "Your number can be restricted or disconnected",
+    body: "If the messages are commercial, TCCCPR lets operators restrict a sender’s telecom resources, disconnect them and blacklist the sender. A personal SIM used for repeated unsolicited messages is easy for an operator to spot in its traffic.",
     icon: Ban,
   },
   {
-    title: "Criminal complaint under the IT Act / IPC",
-    body: "The recipient can — and increasingly does — file a complaint with the local Cyber Cell. Police obtain the trace from the operator in hours, not days, because the target number and timestamps are in the complaint itself.",
+    title: "A complaint can lead to an investigation",
+    body: "The recipient can file a complaint at cybercrime.gov.in or with the local cyber cell. Operators hold subscriber and traffic records, and investigators can ask for them, so a personal number is rarely anonymous.",
     icon: Gavel,
   },
   {
-    title: "Permanent Header / Entity blacklist",
-    body: "For businesses: a DLT Header used for bombing gets blacklisted across all operators. Your Principal Entity registration can be revoked, which kills your ability to send any transactional SMS — including OTPs — across India.",
+    title: "Criminal charges depend on what the messages do",
+    body: "Messages that carry a threat can amount to criminal intimidation (BNS Section 351), and repeated contact with a woman who has shown no interest can amount to stalking (Section 78). Abusing another service’s sign-up or OTP forms can fall under IT Act Sections 43 and 66.",
     icon: ShieldAlert,
   },
   {
-    title: "Civil damages under the DPDPA",
-    body: "If the affected user files a complaint with the Data Protection Board, the penalty for unlawful processing of personal data can be assessed up to ₹250 crore. There is no small-sender carve-out.",
+    title: "Businesses face DPDPA penalties",
+    body: "A business that messages people without a lawful basis can be a data fiduciary under the DPDPA, and the Data Protection Board can impose penalties of up to ₹250 crore for security failures and up to ₹50 crore for most other breaches. The Act does not cover an individual’s purely personal use.",
     icon: Scale,
   },
 ] as const
@@ -76,7 +76,7 @@ const REASONS = [
   },
   {
     q: "“I want to prank a friend.”",
-    a: "This is the textbook case under Section 507 of the IPC (criminal intimidation via anonymous communication) and the broader IT Act. It is not a grey area. Send them a meme on WhatsApp instead.",
+    a: "This is where people get into trouble. Repeated messages can become harassment, and if they carry a threat they can amount to criminal intimidation under Section 351 of the Bharatiya Nyaya Sanhita. Whatever you intend, the recipient can file a complaint. Send them a meme on WhatsApp instead.",
     cta: null,
   },
   {
@@ -94,11 +94,11 @@ const REASONS = [
 const FAQ = [
   {
     q: "Is using an SMS bomber illegal in India?",
-    a: "Yes. It violates the IT Act (Sections 66 / 43 and adjacent IPC sections on intimidation), TRAI’s TCCCPR 2018 (unregistered commercial messaging), and the DPDPA 2023 (unlawful processing of a person’s contact data). Both the sender and any service hosting the bomber are liable.",
+    a: "No law names SMS bombers, but using one can be illegal. Depending on what it does, it can fall under the IT Act (Sections 43 and 66, if it abuses another service’s forms), the Bharatiya Nyaya Sanhita (criminal intimidation or stalking, if the messages threaten or repeatedly target someone), and TRAI’s TCCCPR 2018 (if the messages are commercial). Section 66A, which covered offensive messages, was struck down in 2015.",
   },
   {
     q: "Will the victim be able to trace me?",
-    a: "In practice, yes. Operators are required by TRAI to retain CDRs and trace complaints. If the recipient files a 1909 / Cyber Cell complaint, the source number — and therefore the Aadhaar KYC attached to it — is almost always identified.",
+    a: "Often, yes. Operators keep subscriber and traffic records, and a complaint to cybercrime.gov.in or the local cyber cell lets investigators ask for them. Do not assume a personal SIM or an app hides who sent the messages.",
   },
   {
     q: "My number is being SMS-bombed — what do I do?",
@@ -106,7 +106,7 @@ const FAQ = [
   },
   {
     q: "What if the bomber uses international numbers?",
-    a: "International origination that terminates on an Indian subscriber still falls under the IT Act and TRAI rules. Operators use ILDO-level filters to drop suspect patterns and law enforcement has active MLATs for serious cases.",
+    a: "Messages that start abroad and reach an Indian subscriber can still be reported. Tell your operator and file at cybercrime.gov.in. Tracing a foreign sender is harder and depends on cooperation across borders.",
   },
   {
     q: "Does SMSLocal offer an SMS bomber?",
@@ -118,15 +118,15 @@ const FAQ = [
   },
   {
     q: "What is a fake message sender, and is it legal in India?",
-    a: "A fake message sender (or fake SMS tool) spoofs the sender identity so a message appears to come from someone else. In India that is impersonation and forgery of electronic records under IT Act Section 66D and IPC Sections 465/468 — separate offences on top of any bombing. Legitimate senders use a verified, DLT-approved Sender ID that recipients can trust.",
+    a: "A fake message sender (or fake SMS tool) spoofs the sender identity so a message appears to come from someone else. That can be cheating by personation under IT Act Section 66D (up to three years and a fine of up to ₹1 lakh) and forgery of an electronic record under Section 336 of the Bharatiya Nyaya Sanhita, which can reach seven years when done to cheat. Legitimate senders use a verified, DLT-approved Sender ID that recipients can trust.",
   },
   {
     q: "Are OTP bombers and OTP prank tools illegal?",
-    a: "Yes. An OTP bomber triggers repeated one-time-password SMS to a target by hammering the login and signup forms of other services. That breaches the IT Act, TRAI's TCCCPR 2018, and the abused platforms' terms of service. Real OTP delivery runs through a rate-limited, DLT-registered transactional route with delivery receipts — never a burst tool.",
+    a: "They can be. An OTP bomber triggers repeated one-time-password SMS to a target by hammering the login and signup forms of other services. That can fall under Sections 43 and 66 of the IT Act and breaches the abused platforms’ terms of service. Real OTP delivery runs through a rate-limited, DLT-registered transactional route with delivery receipts — never a burst tool.",
   },
   {
     q: "Is an SMS blaster different from an SMS bomber?",
-    a: "No. 'SMS blaster' and 'message blaster' are just other names for the same tool — software that fires a high volume of messages at one number or list. The same TRAI TCCCPR and IT Act violations apply. Sending high volume to consented recipients is done legally through DLT-registered Bulk SMS.",
+    a: "No. 'SMS blaster' and 'message blaster' are just other names for the same tool — software that fires a high volume of messages at one number or list. The same laws can apply, depending on what is sent. Sending high volume to consented recipients is done legally through DLT-registered Bulk SMS.",
   },
   {
     q: "Is there an 'unlimited' or 'no registration' SMS sender that is legal?",
@@ -137,21 +137,21 @@ const FAQ = [
 const RELATED_TERMS = [
   {
     term: "“Fake message sender” / “fake SMS”",
-    what: "Tools that spoof the sender name so a message looks like it came from someone else. In India this is impersonation and forgery of electronic records (IT Act 66D, IPC 465/468) — separate offences from bombing itself.",
+    what: "Tools that spoof the sender name so a message looks like it came from someone else. In India this can be cheating by personation (IT Act 66D) and forgery of electronic records (BNS 336) — separate offences from bombing itself.",
     legal: "Businesses send under their own DLT-approved Sender ID, which is verified, traceable and trusted by recipients.",
     href: "/products/bulk-sms/",
     label: "Compliant Bulk SMS",
   },
   {
     term: "“OTP bomber” / “OTP prank” / “OTP spam”",
-    what: "Tools that trigger repeated one-time-password SMS to a target by abusing the login and signup forms of other services. Beyond the bombing offence, this breaches those platforms and the IT Act.",
+    what: "Tools that trigger repeated one-time-password SMS to a target by abusing the login and signup forms of other services. Beyond the bombing itself, this breaches those platforms’ terms and can fall under the IT Act.",
     legal: "Real OTP delivery runs through a rate-limited, DLT-registered transactional route with delivery receipts.",
     href: "/products/otp-sms/",
     label: "OTP SMS",
   },
   {
     term: "“SMS blaster” / “message blaster”",
-    what: "Another name for an SMS bomber — software that fires a high volume of messages at one number or list. Same tool, same TRAI TCCCPR and IT Act violations.",
+    what: "Another name for an SMS bomber — software that fires a high volume of messages at one number or list. Same tool, and the same laws can apply.",
     legal: "High-volume sending to consented recipients is exactly what DLT-registered Bulk SMS is for — approved templates, per-recipient receipts, pay-as-you-go.",
     href: "/products/bulk-sms/",
     label: "See Bulk SMS",
@@ -211,15 +211,16 @@ export default function SmsBomberPage() {
           </div>
 
           <h1 className="mt-5 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-            SMS bombing is illegal in India. Here’s what actually happens — and
-            what to do instead.
+            Is an SMS bomber legal in India? What the law says, and what to do
+            instead.
           </h1>
           <p className="mt-5 max-w-2xl text-pretty text-[15.5px] leading-relaxed text-white/80">
-            An SMS bomber sends dozens or hundreds of unsolicited messages to a
-            single Indian mobile number in a short burst. It is prosecuted under
-            the IT Act, violates TRAI’s TCCCPR 2018, and now also falls under the
-            DPDPA 2023. This page explains the law, the real consequences, and
-            the legitimate path if you genuinely need to send high-volume SMS.
+            An SMS bomber sends dozens or hundreds of messages to a single
+            Indian mobile number in a short burst. No law names SMS bombers, but
+            using one can break the IT Act and the Bharatiya Nyaya Sanhita and,
+            for commercial messages, TRAI’s TCCCPR 2018. This page explains which
+            laws apply, the realistic consequences, and the legitimate path if
+            you need to send high-volume SMS. Last reviewed on 2 November 2026.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -277,11 +278,12 @@ export default function SmsBomberPage() {
             (such as banking OTPs or work notifications).
           </p>
           <p className="mt-4 text-[15px] leading-relaxed text-foreground/85">
-            In India, SMS bombing is <strong>not</strong> a grey area. Even when
-            the sender uses public forms (where each message is technically a
-            separate legitimate SMS), coordinating them at a single target
-            constitutes harassment, commercial-messaging violation, and unlawful
-            personal-data processing under three separate laws.
+            India has no law that names SMS bombers, but the conduct is not a
+            grey area in practice. Even when the sender uses public forms (where
+            each message is technically a separate legitimate SMS), aiming them
+            at a single target can amount to harassment or intimidation, abuse
+            of other services’ forms can breach the IT Act, and commercial
+            content breaks TRAI’s rules.
           </p>
           <div className="mt-6 rounded-lg border border-amber-500/30 bg-amber-500/10 p-4">
             <div className="flex items-start gap-3">
@@ -301,8 +303,8 @@ export default function SmsBomberPage() {
       <Section tone="muted">
         <SectionHeader
           eyebrow="The law"
-          title="Three frameworks that make SMS bombing illegal."
-          subtitle="All three apply in parallel — you do not get to pick one."
+          title="Three laws that can apply to SMS bombing."
+          subtitle="Which one applies depends on what the messages say, who sends them and who receives them."
         />
         <div className="mx-auto mt-10 grid max-w-5xl gap-4 md:grid-cols-3">
           {LAWS.map((law) => {
@@ -323,13 +325,52 @@ export default function SmsBomberPage() {
             )
           })}
         </div>
+        <p className="mx-auto mt-6 max-w-5xl text-[12.5px] leading-relaxed text-muted-foreground">
+          Sources, read on 2 November 2026:{" "}
+          <a
+            href="https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf"
+            target="_blank"
+            rel="noopener"
+            className="font-semibold text-primary hover:underline"
+          >
+            IT Act, 2000
+          </a>
+          ,{" "}
+          <a
+            href="https://egazette.gov.in/WriteReadData/2023/250883.pdf"
+            target="_blank"
+            rel="noopener"
+            className="font-semibold text-primary hover:underline"
+          >
+            Bharatiya Nyaya Sanhita, 2023
+          </a>
+          ,{" "}
+          <a
+            href="https://www.meity.gov.in/static/uploads/2024/06/2bf1f0e9f04e6fb4f8fef35e82c42aa5.pdf"
+            target="_blank"
+            rel="noopener"
+            className="font-semibold text-primary hover:underline"
+          >
+            DPDPA, 2023
+          </a>{" "}
+          and{" "}
+          <a
+            href="https://www.trai.gov.in/sites/default/files/2025-02/Regulation_12022025.pdf"
+            target="_blank"
+            rel="noopener"
+            className="font-semibold text-primary hover:underline"
+          >
+            TRAI’s TCCCPR amendment, 2025
+          </a>
+          . This page is general information, not legal advice.
+        </p>
       </Section>
 
       {/* Consequences */}
       <Section>
         <SectionHeader
           eyebrow="Consequences"
-          title="What actually happens to senders."
+          title="What can happen to senders."
           subtitle="Not hypothetical. These are the standard enforcement paths operators and the Cyber Cell use every day."
         />
         <div className="mx-auto mt-10 grid max-w-5xl gap-4 sm:grid-cols-2">
@@ -537,19 +578,19 @@ export default function SmsBomberPage() {
             <ul className="mt-5 space-y-3 text-[13.5px] leading-relaxed text-foreground/85">
               <li className="flex gap-2.5">
                 <XCircle className="mt-0.5 h-4 w-4 flex-none text-amber-600" />
-                Illegal under the IT Act, TRAI TCCCPR 2018 and DPDPA 2023.
+                Can break the IT Act, the Bharatiya Nyaya Sanhita and, for commercial messages, TRAI’s TCCCPR 2018.
               </li>
               <li className="flex gap-2.5">
                 <XCircle className="mt-0.5 h-4 w-4 flex-none text-amber-600" />
-                SIM / Aadhaar-KYC gets blacklisted by operators within hours.
+                A number used for commercial spam can be restricted, disconnected and blacklisted.
               </li>
               <li className="flex gap-2.5">
                 <XCircle className="mt-0.5 h-4 w-4 flex-none text-amber-600" />
-                Traceable — CDRs are retained and Cyber Cell complaints are fast-tracked.
+                Traceable — operators hold subscriber and traffic records that investigators can request.
               </li>
               <li className="flex gap-2.5">
                 <XCircle className="mt-0.5 h-4 w-4 flex-none text-amber-600" />
-                Unreliable — most OTP endpoints now rate-limit and fingerprint requesters.
+                Unreliable — many OTP endpoints now rate-limit repeated requests.
               </li>
               <li className="flex gap-2.5">
                 <XCircle className="mt-0.5 h-4 w-4 flex-none text-amber-600" />

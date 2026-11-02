@@ -31,7 +31,7 @@ export default function DndServicesPost() {
         <A href="/blog/dnd-means/">DND means: the consumer guide</A>. This post is for founders,
         marketers, and developers planning SMS campaigns to Indian numbers. If you landed here
         searching for SMS bombers, read{" "}
-        <A href="/resources/tools/sms-bomber/">why SMS bombing is illegal in India</A> and what to
+        <A href="/resources/tools/sms-bomber/">what the law says about SMS bombing</A> and what to
         use instead.
       </Callout>
 

@@ -35,10 +35,10 @@ const TOOLS = [
   },
   {
     slug: "sms-bomber",
-    title: "SMS bomber: what it is, why it's illegal",
+    title: "SMS bomber: is it legal in India?",
     tagline: "An honest explainer — plus the legal way to send high-volume SMS.",
     description:
-      "SMS bombing is illegal in India under the IT Act and TRAI regulations. Learn what it is, the real consequences, and how to send high-volume messages the right way.",
+      "No law names SMS bombers, but using one can break the IT Act, the Bharatiya Nyaya Sanhita and TRAI rules. Learn what it is, the real consequences, and how to send high-volume messages the right way.",
     icon: ShieldAlert,
     tag: "Explainer",
     tagTone: "amber" as const,

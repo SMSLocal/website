@@ -241,7 +241,11 @@ export default function OtpSmsServicePost() {
       </P>
       <UL>
         <LI>Keep expiry short and invalidate immediately on successful use.</LI>
-        <LI>Rate-limit both requests per number and verification attempts per code.</LI>
+        <LI>
+          Rate-limit both requests per number and verification attempts per code, so your form
+          cannot be abused as an <A href="/resources/tools/sms-bomber/">SMS bomber</A>{" "}against
+          someone else&apos;s number.
+        </LI>
         <LI>Bind the code to the originating session so it cannot be replayed elsewhere.</LI>
         <LI>Never read a code back to a user, and say so in the message itself.</LI>
       </UL>

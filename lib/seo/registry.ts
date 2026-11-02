@@ -1288,12 +1288,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/resources/tools/sms-bomber": {
-    title: "SMS Bomber — Illegal in India: a Legal Guide 2026",
+    title: "SMS Bomber in India: Is It Legal? Law and Risks",
     description:
-      "SMS bomber tools are illegal in India under the IT Act, TCCCPR 2018, and DPDPA — what they are, the consequences for senders, and the legal alternative.",
+      "Is an SMS bomber legal in India? What the IT Act, BNS, TCCCPR 2018 and DPDPA say, what can happen to senders, and the legal way to send bulk SMS today.",
     type: "article",
     publishedTime: "2026-01-15T00:00:00.000Z",
-    modifiedTime: "2026-04-22T00:00:00.000Z",
+    modifiedTime: "2026-11-02T00:00:00.000Z",
     authors: ["SMSLocal Team"],
     focusKeyword: "SMS bomber",
     keywords: [
