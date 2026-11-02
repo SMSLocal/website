@@ -172,6 +172,11 @@ const LINKS = {
     label: "How OTP SMS delivery works in India",
     blurb: "DLT template rules, why codes go missing, and whether to build or buy.",
   },
+  blogWhatsappApi: {
+    href: "/blog/whatsapp-business-api/",
+    label: "WhatsApp Business API guide for India",
+    blurb: "What the API is, how templates and the 24-hour window work, Meta's per-message pricing and how to choose a provider.",
+  },
   blogRcs: {
     href: "/blog/rcs-messaging-india/",
     label: "What RCS means for Indian businesses",
@@ -211,7 +216,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     groups: [
       products("rcs", "bulkSms", "otp", "quickSms"),
       solutions("ecommerce", "retail", "healthcare", "realEstate"),
-      resources("pricing", "developers", "blogWhatsappMarketing", "blogBulkWhatsapp"),
+      resources("pricing", "developers", "blogWhatsappMarketing", "blogBulkWhatsapp", "blogWhatsappApi"),
     ],
   },
   "/products/otp-sms": {

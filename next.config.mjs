@@ -206,6 +206,13 @@ const nextConfig = {
         destination: "/blog/dlt-registration-guide/",
         permanent: true,
       },
+      // The WhatsApp Business API guide lives under the blog; the old resource
+      // slug was a "coming soon" placeholder, so send it to the real guide.
+      {
+        source: "/resources/whatsapp-api-guide",
+        destination: "/blog/whatsapp-business-api/",
+        permanent: true,
+      },
       // The old voice-broadcasting slug is retired; the new Voice product
       // lives at /products/voice (no longer redirected).
       {

@@ -21,6 +21,7 @@ import SmsMessageAppPost from "@/content/blog/sms-message-app"
 import BulkSmsServiceApiPost from "@/content/blog/bulk-sms-service-api"
 import BulkSmsPost from "@/content/blog/bulk-sms"
 import PromotionalSmsIndiaPost from "@/content/blog/promotional-sms-india"
+import WhatsappBusinessApiPost from "@/content/blog/whatsapp-business-api"
 import OtpSmsServicePost from "@/content/blog/otp-sms-service"
 import RcsMessagingIndiaPost from "@/content/blog/rcs-messaging-india"
 
@@ -530,6 +531,47 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     Component: PromotionalSmsIndiaPost,
   },
 
+  "whatsapp-business-api": {
+    meta: {
+      slug: "whatsapp-business-api",
+      title: "WhatsApp Business API: What It Is & How to Start",
+      h1: "WhatsApp Business API: What It Is and How to Start in India",
+      description:
+        "WhatsApp Business API explained for Indian businesses: how it works, templates, pricing in India, Meta's rules and the steps to get started with a provider.",
+      date: "2026-11-02",
+      readingTime: "12 min read",
+      category: "Getting started",
+      author: TEAM,
+      coverImage: "/blog/whatsapp-business-api-what-it-is-and-how-to-start-hero.webp",
+      coverAlt:
+        "A phone showing a WhatsApp chat between a customer and a business, surrounded by API, code, onboarding and auto-reply icons over a map of India.",
+      toc: [
+        { id: "what-the-whatsapp-business-api-is", label: "What the WhatsApp Business API is" },
+        { id: "whatsapp-business-app-vs-api", label: "WhatsApp Business App vs API" },
+        { id: "how-it-works", label: "How it works" },
+        { id: "what-you-can-do-with-it", label: "What you can do with it" },
+        { id: "templates-the-24-hour-window-and-free-messages", label: "Templates, the 24-hour window and free messages" },
+        { id: "whatsapp-business-api-pricing-in-india", label: "WhatsApp Business API pricing in India" },
+        { id: "rules-you-have-to-follow", label: "Rules you have to follow" },
+        { id: "how-to-get-started", label: "How to get started" },
+        { id: "how-to-choose-a-provider", label: "How to choose a provider" },
+        { id: "mistakes-that-cost-you-reach", label: "Mistakes that cost you reach" },
+        { id: "conclusion", label: "Conclusion" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-marketing-india", "whatsapp-scams-india", "otp-sms-service", "dlt-registration-guide"],
+      keywords: ["whatsapp business api", "whatsapp business api india", "what is whatsapp business api", "how to get whatsapp business api", "whatsapp business api for small business"],
+      faqItems: [
+        { q: "Is the WhatsApp Business API free to use?", a: "No. Meta charges per delivered message, with rates that depend on the category and country. Messages from users to you are free, each business number gets 1,000 free service messages a month, and messages inside a free entry point window are free. Providers may add their own fees." },
+        { q: "Can I use the WhatsApp Business API with my existing number?", a: "Often yes. SMSLocal's product page says you can keep an existing business number, with porting and migration handled for you. Ask your provider how the move affects the number's current WhatsApp setup before you start." },
+        { q: "Do I need a developer to use the WhatsApp Business API?", a: "No. A provider dashboard lets non-technical teams send campaigns, build chatbot flows and use the inbox. Developers can use the API directly for custom integrations." },
+        { q: "How long does approval take?", a: "There are two approvals. Meta business verification is the main one. SMSLocal's product page describes it as usually under 48 hours. Templates are reviewed separately, and Meta says review can take up to 24 hours." },
+        { q: "Can I send bulk messages with the WhatsApp Business API?", a: "Yes, to opted-in contacts using approved templates. Sending to people who have not agreed to hear from you risks a lower quality rating and restrictions on your number." },
+      ],
+    },
+    Component: WhatsappBusinessApiPost,
+  },
+
   "otp-sms-service": {
     meta: {
       slug: "otp-sms-service",
@@ -669,7 +711,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "what-happens-when-customers-reply", label: "What happens when customers reply" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["whatsapp-marketing-india", "whatsapp-scams-india", "rcs-messaging-india", "bulk-sms"],
+      relatedSlugs: ["whatsapp-marketing-india", "whatsapp-scams-india", "rcs-messaging-india", "bulk-sms", "whatsapp-business-api"],
       faqItems: [
         { q: "Can I send bulk WhatsApp messages without a business account?", a: "You can use WhatsApp Broadcast in the personal app to send to up to 256 saved contacts. Beyond that, you need the WhatsApp Business API. Unofficial bulk tools that bypass this violate WhatsApp's Terms of Service and risk permanent number ban." },
         { q: "What is the daily messaging limit on WhatsApp Business API?", a: "The messaging limit is the number of unique people you can message outside a customer service window within a moving 24-hour period. A new business portfolio starts at 250, rises to 2,000 after business verification or enough high-quality sends, and then to 10,000, 100,000 and unlimited as you keep quality high and use at least half your current limit. The limit is shared by every number in the portfolio." },
@@ -703,7 +745,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "if-scammed", label: "What to do if you've been scammed" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["whatsapp-marketing-india", "dnd-means"],
+      relatedSlugs: ["whatsapp-marketing-india", "dnd-means", "whatsapp-business-api"],
       faqItems: [
         { q: "Can a scammer access my phone just by sending me a WhatsApp message?", a: "Simply receiving and reading a message cannot give a scammer access to your phone. However, clicking malicious links inside messages can lead to phishing pages or exploit-loaded sites. Never click links from unknown senders." },
         { q: "I was added to an unknown WhatsApp group with strangers — what should I do?", a: "Exit the group immediately, report it as spam inside WhatsApp, and block the admin's number. Do not engage with any content in the group. Adding you without consent is a known precursor to investment and lottery scams." },
