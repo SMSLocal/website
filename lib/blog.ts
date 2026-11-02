@@ -21,6 +21,7 @@ import SmsMessageAppPost from "@/content/blog/sms-message-app"
 import BulkSmsServiceApiPost from "@/content/blog/bulk-sms-service-api"
 import BulkSmsPost from "@/content/blog/bulk-sms"
 import PromotionalSmsIndiaPost from "@/content/blog/promotional-sms-india"
+import WhatsappChatbotPost from "@/content/blog/whatsapp-chatbot"
 import WhatsappBusinessApiPost from "@/content/blog/whatsapp-business-api"
 import OtpSmsServicePost from "@/content/blog/otp-sms-service"
 import RcsMessagingIndiaPost from "@/content/blog/rcs-messaging-india"
@@ -531,6 +532,47 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
     Component: PromotionalSmsIndiaPost,
   },
 
+  "whatsapp-chatbot": {
+    meta: {
+      slug: "whatsapp-chatbot",
+      title: "WhatsApp Chatbot: How It Works, Rules & Setup",
+      h1: "WhatsApp Chatbot for Business: How It Works and How to Build One",
+      description:
+        "A WhatsApp chatbot explained for Indian businesses: how it works, what it costs, Meta's 24-hour window and AI rules, and how to build one step by step.",
+      date: "2026-11-06",
+      readingTime: "12 min read",
+      category: "Getting started",
+      author: TEAM,
+      coverImage: "/blog/whatsapp-chatbot-for-business-how-it-works-hero.webp",
+      coverAlt:
+        "WhatsApp chatbot for business: a customer asks where their order is, the chatbot understands the question, replies automatically and connects to the support team.",
+      toc: [
+        { id: "what-a-whatsapp-chatbot-is", label: "What a WhatsApp chatbot is" },
+        { id: "rule-based-ai-and-hybrid-chatbots", label: "Rule-based, AI and hybrid chatbots" },
+        { id: "how-a-whatsapp-chatbot-works", label: "How a WhatsApp chatbot works" },
+        { id: "the-24-hour-window-and-templates", label: "The 24-hour window and templates" },
+        { id: "what-a-whatsapp-chatbot-costs", label: "What a WhatsApp chatbot costs" },
+        { id: "metas-rule-on-ai", label: "Meta's rule on AI" },
+        { id: "where-a-chatbot-works-best", label: "Where a chatbot works best" },
+        { id: "how-to-build-a-whatsapp-chatbot-step-by-step", label: "How to build a chatbot step by step" },
+        { id: "mistakes-that-hurt-a-whatsapp-chatbot", label: "Mistakes that hurt a chatbot" },
+        { id: "how-to-choose-a-platform", label: "How to choose a platform" },
+        { id: "conclusion", label: "Conclusion" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["whatsapp-marketing-india", "whatsapp-scams-india", "rcs-messaging-india", "bulk-sms"],
+      keywords: ["whatsapp chatbot", "whatsapp chatbot for business", "whatsapp business chatbot", "whatsapp business api chatbot", "whatsapp chatbot india", "how to create a whatsapp chatbot", "whatsapp chatbot builder", "ai whatsapp chatbot", "whatsapp chatbot cost", "whatsapp chatbot platform", "whatsapp chatbot use cases", "whatsapp chatbot for customer support", "whatsapp bot", "whatsapp automation", "rule-based chatbot", "no-code chatbot", "customer service window", "whatsapp business platform"],
+      faqItems: [
+        { q: "What is a WhatsApp chatbot and how does it work?", a: "A WhatsApp chatbot, also called a WhatsApp business chatbot or WhatsApp bot, is software linked to your business number on the WhatsApp Business Platform. It receives each customer message, follows a flow or finds an answer in your content, and replies in the same chat. It hands the chat to a person when it can't help." },
+        { q: "How do I create a WhatsApp chatbot?", a: "Sign up with a provider for Business API access, list your most common questions and design a flow around them. Add your content, get your templates approved and set up handover to a human. Test, go live with a small group and review the chats weekly." },
+        { q: "Do I need the WhatsApp Business API to build a chatbot?", a: "Yes. The free WhatsApp Business app isn't built for chatbots, so a WhatsApp Business API chatbot needs the WhatsApp Business Platform, which you reach through a provider that is an official Solution Provider." },
+        { q: "Is a WhatsApp chatbot free to run?", a: "Not completely. Messages from customers are free, and each business number gets 1,000 free service messages a month. Meta charges for messages beyond that and for template messages, and your provider may add its own fee." },
+        { q: "Can a WhatsApp chatbot use AI?", a: "Meta's terms don't directly address a business using AI to answer its own customers, so check them for your case. They bar AI providers from the platform when AI is the main product, and they restrict using platform data to train AI models." },
+      ],
+    },
+    Component: WhatsappChatbotPost,
+  },
+
   "whatsapp-business-api": {
     meta: {
       slug: "whatsapp-business-api",
@@ -673,7 +715,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "cost-in-india", label: "Cost in India" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-scams-india", "bulk-sms", "rcs-messaging-india", "promotional-sms-india"],
+      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-scams-india", "bulk-sms", "rcs-messaging-india", "promotional-sms-india", "whatsapp-chatbot"],
       faqItems: [
         { q: "Is WhatsApp marketing legal in India?", a: "Yes, when done through the official WhatsApp Business API with documented opt-in from each recipient. Unsolicited bulk messaging via unofficial tools or automated scripts violates WhatsApp's Terms of Service and can attract TRAI scrutiny if it uses shared numbers for harassment." },
         { q: "Do I need DLT registration for WhatsApp marketing?", a: "No. DLT is TRAI's framework for telecom SMS channels. WhatsApp operates over the internet and is governed by Meta's own policies, not TRAI. You do need WhatsApp Business API access approved by Meta." },
@@ -711,7 +753,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "what-happens-when-customers-reply", label: "What happens when customers reply" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["whatsapp-marketing-india", "whatsapp-scams-india", "rcs-messaging-india", "bulk-sms", "whatsapp-business-api"],
+      relatedSlugs: ["whatsapp-marketing-india", "whatsapp-scams-india", "rcs-messaging-india", "bulk-sms", "whatsapp-business-api", "whatsapp-chatbot"],
       faqItems: [
         { q: "Can I send bulk WhatsApp messages without a business account?", a: "You can use WhatsApp Broadcast in the personal app to send to up to 256 saved contacts. Beyond that, you need the WhatsApp Business API. Unofficial bulk tools that bypass this violate WhatsApp's Terms of Service and risk permanent number ban." },
         { q: "What is the daily messaging limit on WhatsApp Business API?", a: "The messaging limit is the number of unique people you can message outside a customer service window within a moving 24-hour period. A new business portfolio starts at 250, rises to 2,000 after business verification or enough high-quality sends, and then to 10,000, 100,000 and unlimited as you keep quality high and use at least half your current limit. The limit is shared by every number in the portfolio." },
@@ -745,7 +787,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "if-scammed", label: "What to do if you've been scammed" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["whatsapp-marketing-india", "dnd-means", "whatsapp-business-api"],
+      relatedSlugs: ["whatsapp-marketing-india", "dnd-means", "whatsapp-business-api", "whatsapp-chatbot"],
       faqItems: [
         { q: "Can a scammer access my phone just by sending me a WhatsApp message?", a: "Simply receiving and reading a message cannot give a scammer access to your phone. However, clicking malicious links inside messages can lead to phishing pages or exploit-loaded sites. Never click links from unknown senders." },
         { q: "I was added to an unknown WhatsApp group with strangers — what should I do?", a: "Exit the group immediately, report it as spam inside WhatsApp, and block the admin's number. Do not engage with any content in the group. Adding you without consent is a known precursor to investment and lottery scams." },

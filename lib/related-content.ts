@@ -192,6 +192,11 @@ const LINKS = {
     label: "WhatsApp Business API guide for India",
     blurb: "What the API is, how templates and the 24-hour window work, Meta's per-message pricing and how to choose a provider.",
   },
+  blogWhatsappChatbot: {
+    href: "/blog/whatsapp-chatbot/",
+    label: "WhatsApp chatbot for business",
+    blurb: "How a chatbot works, the 24-hour window, Meta's per-message pricing and AI rules, and how to build one.",
+  },
   blogRcs: {
     href: "/blog/rcs-messaging-india/",
     label: "What RCS means for Indian businesses",
@@ -231,7 +236,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     groups: [
       products("rcs", "bulkSms", "otp", "quickSms", "liveChat", "aiCustomerService"),
       solutions("ecommerce", "retail", "healthcare", "realEstate"),
-      resources("pricing", "developers", "blogWhatsappMarketing", "blogBulkWhatsapp", "blogWhatsappApi"),
+      resources("pricing", "developers", "blogWhatsappMarketing", "blogBulkWhatsapp", "blogWhatsappApi", "blogWhatsappChatbot"),
     ],
   },
   "/products/otp-sms": {
