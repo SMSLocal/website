@@ -217,10 +217,10 @@ export function IndustryPanels() {
 
 /* ───────── built for every role: underline tabs + photo panel ───────── */
 const ROLES = [
-  { t: "Marketing", photo: "/home/people-friends.webp", alt: "Two friends laughing at a message on a phone", d: "Accelerate acquisition and engagement with conversations that nurture leads around the clock.", pts: ["Campaigns on SMS, WhatsApp and RCS", "Segments, scheduling and drip journeys", "Click and reply reports"] },
-  { t: "Commerce & growth", photo: "/home/people-outdoor.webp", alt: "A woman checking a message on her phone outdoors", d: "Support every step of the buying journey, from discovery to checkout and delivery.", pts: ["Cart recovery and order updates", "Payment links inside the chat", "Product answers from AI agents"] },
-  { t: "Customer support & CX", photo: "/home/people-desk.webp", alt: "A support team member smiling at her desk", d: "Resolve queries faster and lighten the workload with AI-powered support.", pts: ["Agents answer the common questions", "Shared inbox with smart hand-over", "One history across channels"] },
-  { t: "Developers", photo: "/home/people-dev.webp", alt: "A developer wearing headphones at a laptop", d: "Build messaging into your product with a simple, well-documented API.", pts: ["REST API and signed webhooks", "Sandbox mode for safe testing", "Quickstart and SDKs"] },
+  { t: "Marketing", photo: "/home/role-marketing.webp", pos: "50% 40%", alt: "A marketing team talking in front of a Digital Marketing screen", cap: "Campaigns that people actually read", d: "Accelerate acquisition and engagement with conversations that nurture leads around the clock.", pts: ["Campaigns on SMS, WhatsApp and RCS", "Segments, scheduling and drip journeys", "Click and reply reports"] },
+  { t: "Commerce & growth", photo: "/home/role-commerce.webp", pos: "50% 50%", alt: "Two people packing an online order at a work table", cap: "From order placed to order delivered", d: "Support every step of the buying journey, from discovery to checkout and delivery.", pts: ["Cart recovery and order updates", "Payment links inside the chat", "Product answers from AI agents"] },
+  { t: "Customer support & CX", photo: "/home/role-support.webp", pos: "50% 55%", alt: "A customer support team on headsets in a bright office", cap: "Answers in minutes, not days", d: "Resolve queries faster and lighten the workload with AI-powered support.", pts: ["Agents answer the common questions", "Shared inbox with smart hand-over", "One history across channels"] },
+  { t: "Developers", photo: "/home/role-developers.webp", pos: "50% 22%", alt: "A developer writing code on a laptop", cap: "Ship messaging in an afternoon", d: "Build messaging into your product with a simple, well-documented API.", pts: ["REST API and signed webhooks", "Sandbox mode for safe testing", "Quickstart and SDKs"] },
 ]
 
 export function RolesTabs() {
@@ -239,7 +239,10 @@ export function RolesTabs() {
         </div>
         <div key={r.t} className="mt-10 grid animate-[gsb-fade_.4s_ease-out] items-center gap-10 lg:grid-cols-[0.9fr_1fr]">
           <div className="relative aspect-[4/3.2] overflow-hidden rounded-[2rem] shadow-xl shadow-primary/15">
-            <Image src={r.photo} alt={r.alt} fill sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+            <Image src={r.photo} alt={r.alt} fill sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" style={{ objectPosition: r.pos }} />
+            <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-[oklch(0.14_0.04_245)]/80 via-transparent to-transparent" />
+            <span className="absolute left-5 top-5 rounded-full bg-white/90 px-3.5 py-1.5 text-[12.5px] font-semibold text-slate-900 shadow-sm backdrop-blur">{r.t}</span>
+            <p className="absolute inset-x-6 bottom-6 max-w-xs text-balance text-2xl font-bold leading-tight text-white">{r.cap}</p>
           </div>
           <div>
             <h3 className="text-2xl font-bold text-foreground">{r.t}</h3>
