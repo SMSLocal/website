@@ -252,8 +252,8 @@ export default function ReceiveSmsOnlineIndiaPost() {
       </Blockquote>
 
       <Callout variant="tip" title="Building OTP flows?">
-        If you&apos;re integrating OTP SMS into your product, <A href="/products/otp-sms/">SMSLocal
-        OTP SMS</A> handles DLT registration, delivery guarantees, and number-type detection
+        If you&apos;re integrating OTP SMS into your product, SMSLocal OTP SMS handles DLT
+        registration, delivery guarantees, and number-type detection
         out-of-the-box — so you can block virtual numbers before they cost you. See the{" "}
         <A href="/developers/api-docs/">API reference</A> for the integration.
       </Callout>
