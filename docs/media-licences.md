@@ -5,7 +5,7 @@ Checked 29 Oct 2026 against how these services describe their own licences. This
 | File(s) in `public/home/` | Source | Licence |
 | --- | --- | --- |
 | `hero-phone.mp4`, `hero-laptop.mp4` | Pexels (free stock video), compressed with ffmpeg | Pexels licence |
-| `ind-healthcare.webp`, `ind-banking.webp`, `ind-logistics.webp`, `ind-ecommerce.webp` | Pexels photos (ids 12585207, 11316617, 12261472, 29653988) | Pexels licence |
+| `ind-healthcare.webp`, `ind-banking.webp`, `ind-logistics.webp`, `ind-ecommerce.webp` | Pexels photos (ids 12585207, 11316617, 12261472, 6214362) | Pexels licence |
 | `role-marketing.webp`, `role-commerce.webp`, `role-support.webp`, `role-developers.webp` | Pexels photos (ids 6476192, 7289732, 7658433, 12902862) | Pexels licence |
 | `people-friends.webp`, `people-desk.webp`, `people-outdoor.webp`, `people-dev.webp` | Unsplash photos | Unsplash licence |
 | `merchant.webp`, `promo.webp`, `rcs.webp`, `p-shoe.webp`, `p-tshirt.webp`, `p-watch.webp` | Earlier project assets, source not recorded | Unknown: confirm before relying on them |

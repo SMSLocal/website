@@ -182,7 +182,7 @@ const INDS = [
   { t: "Healthcare", photo: "/home/ind-healthcare.webp", alt: "A stethoscope on a yellow background", pos: "50% 50%", d: "Appointment reminders, report-ready alerts and follow-up care messages.", href: "/solutions/healthcare/" },
   { t: "Banking & Fintech", photo: "/home/ind-banking.webp", alt: "A bank card being tapped on a card machine", pos: "50% 45%", d: "OTPs, transaction alerts, KYC follow-ups and collections.", href: "/solutions/banking-fintech/" },
   { t: "Logistics", photo: "/home/ind-logistics.webp", alt: "A delivery truck on the road", pos: "50% 50%", d: "Out-for-delivery alerts, delivery OTPs and reschedule on a reply.", href: "/solutions/logistics/" },
-  { t: "E-commerce & D2C", photo: "/home/ind-ecommerce.webp", alt: "Stacked parcels ready for dispatch", pos: "50% 50%", d: "Order updates, cart recovery and AI answers to product questions.", href: "/solutions/ecommerce/" },
+  { t: "E-commerce & D2C", photo: "/home/ind-ecommerce.webp", alt: "A paper shopping bag, a bank card and a smartphone on a teal table", pos: "55% 50%", d: "Order updates, cart recovery and AI answers to product questions.", href: "/solutions/ecommerce/" },
 ]
 
 export function IndustryPanels() {
