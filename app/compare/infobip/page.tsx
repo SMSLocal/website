@@ -20,6 +20,7 @@ import {
   CompareHero,
   CompareMethodology,
   CompareTableHonest,
+  OtherCompares,
   PersonaSplit,
   WinsBlock,
   type CompareRow,
@@ -315,6 +316,12 @@ export default function CompareInfobipPage() {
         {/* ── FAQ ───────────────────────────────────────────────── */}
         <FaqJsonLd items={INFOBIP_FAQS} path="/compare/infobip" />
         <FaqSection items={INFOBIP_FAQS} />
+
+        <section className="bg-muted/30 border-b border-foreground/5 py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+            <OtherCompares currentSlug="infobip" />
+          </div>
+        </section>
 
         {/* ── FINAL CTA ─────────────────────────────────────────── */}
         <ProductFinalCta

@@ -20,6 +20,7 @@ import {
   CompareHero,
   CompareMethodology,
   CompareTableHonest,
+  OtherCompares,
   PersonaSplit,
   WinsBlock,
   type CompareRow,
@@ -311,6 +312,12 @@ export default function CompareTwixorPage() {
         {/* ── FAQ ───────────────────────────────────────────────── */}
         <FaqJsonLd items={TWIXOR_FAQS} path="/compare/twixor" />
         <FaqSection items={TWIXOR_FAQS} />
+
+        <section className="bg-muted/30 border-b border-foreground/5 py-16 sm:py-20">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+            <OtherCompares currentSlug="twixor" />
+          </div>
+        </section>
 
         {/* ── FINAL CTA ─────────────────────────────────────────── */}
         <ProductFinalCta

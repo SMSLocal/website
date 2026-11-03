@@ -39,6 +39,21 @@ const LINKS = {
     label: "Quick SMS",
     blurb: "Send DLT-compliant SMS from your browser without a developer.",
   },
+  liveChat: {
+    href: "/products/live-chat/",
+    label: "Live Chat",
+    blurb: "Answer website visitors in real time and hand chats to your team.",
+  },
+  aiCustomerService: {
+    href: "/products/ai-agents/customer-service/",
+    label: "AI customer service agent",
+    blurb: "An AI agent that answers support questions across your channels and hands over to a person.",
+  },
+  reseller: {
+    href: "/products/reseller/",
+    label: "Reseller platform",
+    blurb: "A white-label SMS and WhatsApp platform you can sell under your own brand.",
+  },
   rcs: {
     href: "/products/rcs/",
     label: "RCS Business Messaging",
@@ -203,7 +218,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     subtitle:
       "Pair bulk SMS with the other channels on the same wallet, or see how teams like yours ship it in production.",
     groups: [
-      products("rcs", "whatsapp", "otp", "quickSms"),
+      products("rcs", "whatsapp", "otp", "quickSms", "reseller"),
       solutions("ecommerce", "banking", "education"),
       resources("pricing", "msg91", "blogBulkSms", "blogDlt"),
     ],
@@ -214,7 +229,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     subtitle:
       "Layer branded RCS for the richest inbox moment, fall back to SMS when WhatsApp fails, and fire OTPs on the same wallet.",
     groups: [
-      products("rcs", "bulkSms", "otp", "quickSms"),
+      products("rcs", "bulkSms", "otp", "quickSms", "liveChat", "aiCustomerService"),
       solutions("ecommerce", "retail", "healthcare", "realEstate"),
       resources("pricing", "developers", "blogWhatsappMarketing", "blogBulkWhatsapp", "blogWhatsappApi"),
     ],
@@ -236,7 +251,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     subtitle:
       "Quick SMS pairs naturally with RCS rich cards, WhatsApp broadcasts, and bulk SMS for ops, marketing, and support.",
     groups: [
-      products("rcs", "bulkSms", "whatsapp", "otp"),
+      products("rcs", "bulkSms", "whatsapp", "otp", "liveChat"),
       solutions("education", "realEstate", "retail"),
       resources("pricing", "help"),
     ],
@@ -247,7 +262,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     subtitle:
       "Most teams combine RCS with a DLT SMS fallback, WhatsApp for opted-in audiences, and AI agents to answer the replies that RCS's suggested-reply chips trigger.",
     groups: [
-      products("bulkSms", "whatsapp", "otp", "quickSms"),
+      products("bulkSms", "whatsapp", "otp", "quickSms", "aiCustomerService"),
       solutions("retail", "ecommerce", "logistics", "banking"),
       resources("pricing", "developers", "blogRcs"),
     ],
@@ -261,7 +276,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       "See how retail and logistics teams extend the same stack, or go deep on a specific channel.",
     groups: [
       solutions("retail", "logistics", "banking"),
-      products("whatsapp", "bulkSms", "otp"),
+      products("whatsapp", "bulkSms", "otp", "liveChat", "aiCustomerService"),
       resources("pricing", "help"),
     ],
   },
@@ -366,7 +381,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     eyebrow: "Pair with",
     title: "What every API integration ends up needing.",
     groups: [
-      products("otp", "bulkSms", "whatsapp"),
+      products("otp", "bulkSms", "whatsapp", "reseller"),
       solutions("banking", "ecommerce", "logistics"),
       resources("pricing", "help", "dpdpa"),
     ],
@@ -384,7 +399,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     eyebrow: "Keep reading",
     title: "See what we actually ship.",
     groups: [
-      products("bulkSms", "whatsapp", "otp"),
+      products("bulkSms", "whatsapp", "otp", "reseller"),
       solutions("ecommerce", "banking", "healthcare"),
       resources("pricing", "compareHub", "developers"),
     ],

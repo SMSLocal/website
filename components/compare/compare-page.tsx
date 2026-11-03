@@ -264,10 +264,20 @@ const ALL_COMPARES = [
   { competitor: "Gupshup", slug: "smslocal-vs-gupshup" },
   { competitor: "Textlocal", slug: "smslocal-vs-textlocal" },
   { competitor: "Twilio", slug: "smslocal-vs-twilio" },
+  { competitor: "Haptik", slug: "haptik" },
+  { competitor: "Infobip", slug: "infobip" },
+  { competitor: "Twixor", slug: "twixor" },
 ]
 
 export function OtherCompares({ currentSlug }: OtherComparesProps) {
-  const others = ALL_COMPARES.filter((c) => c.slug !== currentSlug).slice(0, 4)
+  // The four comparisons after this one in the list, wrapping around, so every
+  // comparison page is linked from four others (a fixed first-four list left
+  // Gupshup, Textlocal and the newer pages with no links from their siblings).
+  const idx = ALL_COMPARES.findIndex((c) => c.slug === currentSlug)
+  const others = Array.from(
+    { length: 4 },
+    (_, i) => ALL_COMPARES[(idx + 1 + i) % ALL_COMPARES.length],
+  )
   return (
     <div>
       <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
@@ -277,7 +287,7 @@ export function OtherCompares({ currentSlug }: OtherComparesProps) {
         {others.map((o) => (
           <Link
             key={o.slug}
-            href={`/compare/${o.slug}`}
+            href={`/compare/${o.slug}/`}
             className="group flex items-center justify-between rounded-xl border border-foreground/10 bg-background px-4 py-3 text-sm font-medium transition hover:border-primary/40"
           >
             <span>vs {o.competitor}</span>
