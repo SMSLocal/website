@@ -182,7 +182,7 @@ export default function CookiePolicyPage() {
               </a>
               ,{" "}
               <a
-                href="https://support.apple.com/safari"
+                href="https://www.apple.com/in/safari/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
