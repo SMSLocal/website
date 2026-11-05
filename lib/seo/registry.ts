@@ -394,12 +394,16 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/products/ai-agentic": {
-    title: "Captain AI: Agentic AI Inside 300+ Apps",
+    title: "Agentic AI Platform: Captain AI Acts in 300+ Apps",
     description:
-      "Captain AI reads live data and takes real actions inside your CRM, helpdesk, e-commerce, and accounting tools, inside every WhatsApp, SMS, or chat thread.",
+      "Agentic AI that resolves requests, not just answers them. Captain AI agents work inside 300+ CRM, payment and helpdesk apps over WhatsApp, SMS, email and voice.",
     focusKeyword: "agentic AI",
     keywords: [
       "agentic AI",
+      "agentic AI platform",
+      "AI agent for customer support",
+      "agentic AI use cases",
+      "agentic AI vs chatbot",
       "Captain AI",
       "AI agent business apps",
       "Composio integration",

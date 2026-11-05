@@ -375,8 +375,10 @@ export function SiteHeader() {
             if ("pillars" in item) {
               return <PillarMegaItem key={item.label} item={item} />
             }
-                      return (
-              <div key={item.label} className="group">
+            /* single-column menus (Products) open directly under their own tab; wide menus stay centred */
+            const anchored = item.columns.length === 1
+            return (
+              <div key={item.label} className={anchored ? "group relative" : "group"}>
                 <button
                   type="button"
                   className="inline-flex items-center gap-1 rounded-md px-3 py-1.5 text-[13.5px] font-medium text-foreground/70 transition hover:bg-secondary hover:text-foreground group-hover:bg-secondary group-hover:text-foreground"
@@ -385,7 +387,7 @@ export function SiteHeader() {
                   <ChevronDown className="h-3.5 w-3.5 opacity-60 transition-transform group-hover:rotate-180" />
                 </button>
                 {/* Dropdown */}
-                <div className="pointer-events-none invisible absolute left-0 right-0 top-full z-50 -mt-3.5 translate-y-1 pt-[26px] opacity-0 transition-all duration-200 ease-out group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 flex justify-center">
+                <div className={`pointer-events-none invisible absolute top-full z-50 translate-y-1 opacity-0 transition-all duration-200 ease-out group-hover:pointer-events-auto group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 flex ${anchored ? "left-1/2 -translate-x-1/2 pt-[26px]" : "left-0 right-0 -mt-3.5 justify-center pt-[26px]"}`}>
                   <div className="overflow-hidden rounded-3xl border border-border/70 bg-popover/95 shadow-[0_28px_70px_-18px_rgba(15,23,42,0.28)] ring-1 ring-black/[0.03] backdrop-blur-xl">
                     <div className="flex">
                     <div className="flex gap-2 p-4">
