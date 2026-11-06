@@ -49,6 +49,21 @@ const LINKS = {
     label: "AI customer service agent",
     blurb: "An AI agent that answers support questions across your channels and hands over to a person.",
   },
+  sharedInbox: {
+    href: "/products/inbox/",
+    label: "Shared team inbox",
+    blurb: "WhatsApp, email, Instagram, SMS and voice in one shared workspace, with smart routing.",
+  },
+  teamEmail: {
+    href: "/products/email/",
+    label: "Shared email inbox",
+    blurb: "Turn your support@ inbox into a shared workspace with assignment, private notes and routing.",
+  },
+  automation: {
+    href: "/products/automation/",
+    label: "Conversation automation",
+    blurb: "Auto-reply rules, an AI chatbot, a no-code workflow builder and webhooks, with handoff to a person.",
+  },
   reseller: {
     href: "/products/reseller/",
     label: "Reseller platform",
@@ -234,7 +249,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
     subtitle:
       "Layer branded RCS for the richest inbox moment, fall back to SMS when WhatsApp fails, and fire OTPs on the same wallet.",
     groups: [
-      products("rcs", "bulkSms", "otp", "quickSms", "liveChat", "aiCustomerService"),
+      products("rcs", "bulkSms", "otp", "quickSms", "liveChat", "aiCustomerService", "sharedInbox"),
       solutions("ecommerce", "retail", "healthcare", "realEstate"),
       resources("pricing", "developers", "blogWhatsappMarketing", "blogBulkWhatsapp", "blogWhatsappApi", "blogWhatsappChatbot"),
     ],
@@ -281,7 +296,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       "See how retail and logistics teams extend the same stack, or go deep on a specific channel.",
     groups: [
       solutions("retail", "logistics", "banking"),
-      products("whatsapp", "bulkSms", "otp", "liveChat", "aiCustomerService"),
+      products("whatsapp", "bulkSms", "otp", "liveChat", "aiCustomerService", "automation"),
       resources("pricing", "help"),
     ],
   },
@@ -292,7 +307,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       "Healthcare and insurance run similar playbooks. Or dig into the OTP product that underpins every login.",
     groups: [
       solutions("healthcare", "ecommerce", "logistics"),
-      products("otp", "bulkSms", "whatsapp"),
+      products("otp", "bulkSms", "whatsapp", "sharedInbox", "teamEmail"),
       resources("dpdpa", "msg91"),
     ],
   },
@@ -303,7 +318,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       "Other consent-first industries use the same building blocks, and the OTP product is the workhorse under it all.",
     groups: [
       solutions("banking", "education", "realEstate"),
-      products("otp", "whatsapp", "bulkSms"),
+      products("otp", "whatsapp", "bulkSms", "automation", "teamEmail"),
       resources("dpdpa", "pricing"),
     ],
   },
@@ -314,7 +329,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       "Bulk SMS is the spine of most campus workflows; see adjacent industries with similar notification patterns.",
     groups: [
       solutions("realEstate", "retail", "healthcare"),
-      products("bulkSms", "quickSms", "whatsapp"),
+      products("bulkSms", "quickSms", "whatsapp", "automation"),
       resources("pricing", "help"),
     ],
   },
@@ -325,7 +340,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       "E-commerce and retail teams use the same delivery loops. The developer hub covers webhook patterns for carrier events.",
     groups: [
       solutions("ecommerce", "retail", "banking"),
-      products("bulkSms", "otp", "whatsapp"),
+      products("bulkSms", "otp", "whatsapp", "sharedInbox", "teamEmail"),
       resources("developers", "pricing"),
     ],
   },
@@ -336,7 +351,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       "Long sales cycles show up everywhere: education admissions, insurance renewals, and retail CRM.",
     groups: [
       solutions("retail", "education", "banking"),
-      products("quickSms", "whatsapp", "bulkSms"),
+      products("quickSms", "whatsapp", "bulkSms", "sharedInbox"),
       resources("pricing", "help"),
     ],
   },
@@ -347,7 +362,7 @@ export const RELATED_CONTENT: Record<string, RelatedContent> = {
       "Retail, e-commerce, and hospitality converge. WhatsApp Business API does most of the heavy lifting.",
     groups: [
       solutions("ecommerce", "realEstate", "education"),
-      products("whatsapp", "bulkSms", "quickSms"),
+      products("whatsapp", "bulkSms", "quickSms", "automation", "sharedInbox"),
       resources("pricing", "help"),
     ],
   },
