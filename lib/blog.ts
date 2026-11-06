@@ -23,6 +23,7 @@ import BulkSmsPost from "@/content/blog/bulk-sms"
 import PromotionalSmsIndiaPost from "@/content/blog/promotional-sms-india"
 import WhatsappChatbotPost from "@/content/blog/whatsapp-chatbot"
 import WhatsappBusinessApiPost from "@/content/blog/whatsapp-business-api"
+import WhatsappMarketingSoftwarePost from "@/content/blog/whatsapp-marketing-software"
 import OtpSmsServicePost from "@/content/blog/otp-sms-service"
 import RcsMessagingIndiaPost from "@/content/blog/rcs-messaging-india"
 
@@ -601,7 +602,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "conclusion", label: "Conclusion" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-marketing-india", "whatsapp-scams-india", "otp-sms-service", "dlt-registration-guide"],
+      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-marketing-india", "whatsapp-scams-india", "otp-sms-service", "dlt-registration-guide", "whatsapp-marketing-software"],
       keywords: ["whatsapp business api", "whatsapp business api india", "what is whatsapp business api", "how to get whatsapp business api", "whatsapp business api for small business"],
       faqItems: [
         { q: "Is the WhatsApp Business API free to use?", a: "No. Meta charges per delivered message, with rates that depend on the category and country. Messages from users to you are free, each business number gets 1,000 free service messages a month, and messages inside a free entry point window are free. Providers may add their own fees." },
@@ -612,6 +613,44 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
       ],
     },
     Component: WhatsappBusinessApiPost,
+  },
+
+  "whatsapp-marketing-software": {
+    meta: {
+      slug: "whatsapp-marketing-software",
+      title: "WhatsApp Marketing Software: Features & Costs",
+      h1: "WhatsApp Marketing Software: What It Does and How to Choose It",
+      description:
+        "WhatsApp marketing software explained for Indian businesses: the features that matter, Meta's rules and per-message costs, and how to test a tool before buying.",
+      date: "2026-11-11",
+      readingTime: "8 min read",
+      category: "Marketing",
+      author: TEAM,
+      coverImage: "/blog/whatsapp-marketing-software-what-it-does-and-how-to-choose-hero.webp",
+      coverAlt:
+        "A phone showing a WhatsApp chat, with campaign charts and analytics cards around it.",
+      toc: [
+        { id: "what-whatsapp-marketing-software-does", label: "What WhatsApp marketing software does" },
+        { id: "types-of-whatsapp-marketing-tools", label: "Types of WhatsApp marketing tools" },
+        { id: "features-that-matter", label: "Features that matter" },
+        { id: "rules-your-software-has-to-handle", label: "Rules your software has to handle" },
+        { id: "what-whatsapp-marketing-software-costs-in-india", label: "What WhatsApp marketing software costs in India" },
+        { id: "how-to-test-a-tool-before-you-buy", label: "How to test a tool before you buy" },
+        { id: "what-smslocal-offers", label: "What SMSLocal offers" },
+        { id: "conclusion", label: "Conclusion" },
+        { id: "faq", label: "FAQ" },
+      ],
+      relatedSlugs: ["whatsapp-marketing-india", "bulk-whatsapp-messaging", "whatsapp-business-api", "whatsapp-scams-india"],
+      keywords: ["whatsapp marketing software", "whatsapp marketing software india", "best whatsapp marketing software", "whatsapp marketing tool", "whatsapp marketing platform", "whatsapp marketing campaigns", "whatsapp marketing automation", "whatsapp marketing software features", "whatsapp marketing software cost", "how to choose whatsapp marketing software", "whatsapp campaign software", "whatsapp broadcast software", "whatsapp template messages", "whatsapp opt-in", "whatsapp shared inbox", "whatsapp message limits", "whatsapp business platform", "whatsapp business solution provider"],
+      faqItems: [
+        { q: "What is WhatsApp marketing software?", a: "WhatsApp marketing software, sometimes called WhatsApp campaign software, is a tool to plan, send and track WhatsApp campaigns. It manages your contacts, templates, campaigns and replies. You can also view reports for all messages." },
+        { q: "Is WhatsApp marketing software safe to use?", a: "Yes, as long as it uses the official WhatsApp Business Platform and you're only sending to opted-in users. Unofficial senders that automate messages from a normal number put your number at risk of being restricted." },
+        { q: "How much does WhatsApp marketing software cost in India?", a: "The list rate for a marketing message in India is ₹0.8631 per delivered message as of 1st October 2026. Your provider may charge a platform fee. Ask how much they charge per message (all in)." },
+        { q: "Can I send WhatsApp marketing messages to anyone?", a: "No. You must have opt-in from each user and only use approved templates. Meta may also restrict how many marketing messages each user receives, and messages that hit this limit fail with error 131049." },
+        { q: "What features should WhatsApp marketing software have?", a: "Look for templates, segments, scheduling, personalisation, a shared inbox, analytics (with reasons for failures) and automatic opt-outs. If you use a CRM or store, look for integrations." },
+      ],
+    },
+    Component: WhatsappMarketingSoftwarePost,
   },
 
   "otp-sms-service": {
@@ -715,7 +754,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "cost-in-india", label: "Cost in India" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-scams-india", "bulk-sms", "rcs-messaging-india", "promotional-sms-india", "whatsapp-chatbot"],
+      relatedSlugs: ["bulk-whatsapp-messaging", "whatsapp-scams-india", "bulk-sms", "rcs-messaging-india", "promotional-sms-india", "whatsapp-chatbot", "whatsapp-marketing-software"],
       faqItems: [
         { q: "Is WhatsApp marketing legal in India?", a: "Yes, when done through the official WhatsApp Business API with documented opt-in from each recipient. Unsolicited bulk messaging via unofficial tools or automated scripts violates WhatsApp's Terms of Service and can attract TRAI scrutiny if it uses shared numbers for harassment." },
         { q: "Do I need DLT registration for WhatsApp marketing?", a: "No. DLT is TRAI's framework for telecom SMS channels. WhatsApp operates over the internet and is governed by Meta's own policies, not TRAI. You do need WhatsApp Business API access approved by Meta." },
@@ -753,7 +792,7 @@ export const POSTS_BY_SLUG: Record<string, BlogPost> = {
         { id: "what-happens-when-customers-reply", label: "What happens when customers reply" },
         { id: "faq", label: "FAQ" },
       ],
-      relatedSlugs: ["whatsapp-marketing-india", "whatsapp-scams-india", "rcs-messaging-india", "bulk-sms", "whatsapp-business-api", "whatsapp-chatbot"],
+      relatedSlugs: ["whatsapp-marketing-india", "whatsapp-scams-india", "rcs-messaging-india", "bulk-sms", "whatsapp-business-api", "whatsapp-chatbot", "whatsapp-marketing-software"],
       faqItems: [
         { q: "Can I send bulk WhatsApp messages without a business account?", a: "You can use WhatsApp Broadcast in the personal app to send to up to 256 saved contacts. Beyond that, you need the WhatsApp Business API. Unofficial bulk tools that bypass this violate WhatsApp's Terms of Service and risk permanent number ban." },
         { q: "What is the daily messaging limit on WhatsApp Business API?", a: "The messaging limit is the number of unique people you can message outside a customer service window within a moving 24-hour period. A new business portfolio starts at 250, rises to 2,000 after business verification or enough high-quality sends, and then to 10,000, 100,000 and unlimited as you keep quality high and use at least half your current limit. The limit is shared by every number in the portfolio." },
