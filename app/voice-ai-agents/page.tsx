@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { VoiceAgentBot } from "@/components/product/voice-agent-bot"
+import { VoiceCall3D } from "@/components/product/voice-call-3d"
 import { getPageMetadata } from "@/lib/seo"
 import { ArrowRight, ArrowUpRight, Check, PhoneIncoming, PhoneOutgoing, Sparkles } from "lucide-react"
 import { SiteHeader } from "@/components/landing/site-header"
@@ -86,13 +86,12 @@ export default function VoiceAiAgentsPage() {
       <SiteHeader />
       <main className="overflow-x-clip bg-background font-normal text-foreground">
 
-        {/* 1 · HERO: four language lanes with a live waveform; the play button speaks each greeting */}
+        {/* 1 · HERO: one phone call in 3D. The caller, a bar waveform, Captain and the apps it uses, narrated by captions */}
         <section className="relative isolate overflow-hidden bg-background">
           <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute right-[-120px] top-[-60px] h-[520px] w-[520px] rounded-full bg-primary/7 blur-[130px]" />
             <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
           </div>
-          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_480px] lg:gap-12 lg:pb-20 lg:pt-12">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_560px] lg:gap-8 lg:pb-20 lg:pt-12">
             <div className="vx-rise">
               <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
                 <Sparkles className="h-3.5 w-3.5 text-accent" />Voice AI agents
@@ -114,7 +113,7 @@ export default function VoiceAiAgentsPage() {
               </ul>
             </div>
             <div className="vx-rise relative" style={{ animationDelay: "0.15s" }}>
-              <VoiceAgentBot />
+              <VoiceCall3D />
             </div>
           </div>
         </section>

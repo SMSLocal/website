@@ -426,6 +426,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "AI CRM integration",
       "agentic AI support agent",
       "SMSLocal Captain AI",
+      "AI agent approval limits",
+      "AI agent refund automation",
+      "AI agent for WhatsApp support",
     ],
   },
   "/products/ai-agents": {
@@ -633,7 +636,7 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/channels/sms-broadcasting": {
     titleAbsolute: "A2P SMS Broadcasting and Bulk Campaigns in India | SMSLocal",
     description:
-      "Send bulk A2P SMS campaigns with segmentation, personalisation, link tracking, STOP/HELP handling, delivery receipts, and replies answered by agentic AI.",
+      "Send bulk A2P SMS campaigns in India with DLT support, personalisation, link tracking, STOP and HELP handling, delivery reports and replies answered by AI.",
     focusKeyword: "A2P SMS broadcasting",
     keywords: [
       "A2P SMS broadcasting",
@@ -644,6 +647,13 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "SMS opt-out handling",
       "SMS delivery reports",
       "SMS campaign manager",
+      "bulk SMS India",
+      "promotional SMS",
+      "transactional SMS",
+      "two-way SMS",
+      "SMS marketing platform India",
+      "SMS link tracking",
+      "scheduled bulk SMS",
     ],
   },
   "/channels/web-chat": {

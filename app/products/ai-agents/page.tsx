@@ -9,22 +9,13 @@ import { BreadcrumbJsonLd, FaqJsonLd, ProductServiceJsonLd } from "@/components/
 import { FaqSection } from "@/components/landing/faq-section"
 import { PlainCta } from "@/components/product/plain-blocks"
 import { AiAgentsTabs } from "@/components/product/ai-agents-tabs"
+import { AgentsGlass } from "@/components/product/ai-agents-glass"
 
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
 export const metadata: Metadata = getPageMetadata("/products/ai-agents")
 
 /* ─── DATA ────────────────────────────────────────────────────────────────── */
 
-const LANGS = [
-  { name: "Hindi", hello: "नमस्ते" },
-  { name: "Tamil", hello: "வணக்கம்" },
-  { name: "Telugu", hello: "నమస్కారం" },
-  { name: "Bengali", hello: "নমস্কার" },
-  { name: "Marathi", hello: "नमस्कार" },
-  { name: "Gujarati", hello: "નમસ્તે" },
-  { name: "Kannada", hello: "ನಮಸ್ಕಾರ" },
-  { name: "Hinglish", hello: "Namaste ji" },
-]
 
 const SOURCES = ["FAQ PDFs", "Policy documents", "Product catalogue CSV", "Past chat transcripts", "Website pages"]
 
@@ -68,25 +59,6 @@ const H2 = "text-balance text-[28px] font-semibold leading-[1.08] tracking-[-0.0
 const BTN = "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
 const BTN_OUT = "inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary"
 
-/* ─── KEYFRAMES FOR THE LANGUAGE WHEEL (16s, 8 languages) ─────────────────── */
-
-const SLOT = 100 / LANGS.length
-const pos = (i: number) => {
-  const a = (i / LANGS.length) * Math.PI * 2 - Math.PI / 2
-  return { x: 50 + 43 * Math.cos(a), y: 50 + 43 * Math.sin(a) }
-}
-const window3 = (name: string, i: number, on: string, off: string) => {
-  const a = i * SLOT
-  const b = a + SLOT
-  return i === 0
-    ? `@keyframes ${name} { 0%, ${b - 1.5}% { ${on} } ${b}%, 98% { ${off} } 100% { ${on} } }`
-    : `@keyframes ${name} { 0%, ${a}% { ${off} } ${a + 1.5}%, ${b - 1.5}% { ${on} } ${b}%, 100% { ${off} } }`
-}
-const KEYFRAMES = LANGS.flatMap((_, i) => [
-  window3(`aghello${i}`, i, "opacity: 1; transform: none", "opacity: 0; transform: translateY(10px)"),
-  window3(`aglab${i}`, i, "color: var(--primary); background-color: color-mix(in oklch, var(--primary) 13%, transparent); transform: translate(-50%, -50%) scale(1.12)", "color: var(--muted-foreground); background-color: transparent; transform: translate(-50%, -50%) scale(1)"),
-  window3(`agline${i}`, i, "stroke-opacity: .9", "stroke-opacity: .14"),
-]).join("\n")
 
 /* ─── PAGE ────────────────────────────────────────────────────────────────── */
 
@@ -109,7 +81,7 @@ export default function AiAgentsPage() {
             <div className="absolute -left-40 top-0 h-[460px] w-[460px] rounded-full bg-primary/8 blur-[130px]" />
             <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(var(--border)_1px,transparent_1px),linear-gradient(90deg,var(--border)_1px,transparent_1px)] [background-size:64px_64px] [mask-image:radial-gradient(ellipse_at_70%_40%,black_10%,transparent_70%)]" />
           </div>
-          <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-[1fr_460px] lg:gap-14 lg:pb-28 lg:pt-20">
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-20 pt-14 sm:px-6 lg:grid-cols-[1fr_540px] lg:gap-14 lg:pb-28 lg:pt-20">
             <div className="ag-rise">
               <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
                 <Sparkles className="h-3.5 w-3.5 text-accent" />AI agents · Captain AI
@@ -126,33 +98,7 @@ export default function AiAgentsPage() {
               </div>
             </div>
 
-            <div className="ag-rise relative mx-auto aspect-square w-full max-w-[400px]" style={{ animationDelay: "0.15s" }} aria-hidden>
-              <div aria-hidden className="absolute inset-[14%] rounded-full bg-gradient-to-br from-primary/10 via-primary/[0.04] to-transparent" />
-              <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full" fill="none">
-                <circle cx="50" cy="50" r="43" stroke="var(--border)" strokeWidth="0.3" />
-                <circle cx="50" cy="50" r="30" stroke="var(--border)" strokeWidth="0.3" strokeDasharray="1 2" className="ag-orbit" />
-                {LANGS.map((l, i) => {
-                  const p = pos(i)
-                  return <line key={l.name} x1="50" y1="50" x2={p.x} y2={p.y} stroke="var(--primary)" strokeWidth="0.35" style={{ animation: `agline${i} 16s linear infinite` }} />
-                })}
-              </svg>
-              {LANGS.map((l, i) => {
-                const p = pos(i)
-                return (
-                  <span key={l.name} className="absolute whitespace-nowrap rounded-full px-2.5 py-1 font-mono text-[10.5px] uppercase tracking-[0.14em] text-muted-foreground" style={{ left: `${p.x}%`, top: `${p.y}%`, transform: "translate(-50%, -50%)", animation: `aglab${i} 16s linear infinite` }}>
-                    <i className="mr-1.5 inline-block h-1.5 w-1.5 rounded-full bg-current align-middle" />{l.name}
-                  </span>
-                )
-              })}
-              <div className="absolute left-1/2 top-1/2 w-[58%] -translate-x-1/2 -translate-y-1/2 text-center">
-                <div className="relative h-[60px]">
-                  {LANGS.map((l, i) => (
-                    <p key={l.name} className="ag-hello absolute inset-0 flex items-center justify-center text-[34px] font-semibold tracking-tight sm:text-[40px]" style={{ animation: `aghello${i} 16s linear infinite`, opacity: 0 }}>{l.hello}</p>
-                  ))}
-                </div>
-                <p className="mt-2 flex items-center justify-center gap-1.5 font-mono text-[10.5px] uppercase tracking-[0.18em] text-primary"><i className="ag-pulse-dot h-1.5 w-1.5 rounded-full bg-primary" />Captain replies in the same language</p>
-              </div>
-            </div>
+            <div className="ag-rise" style={{ animationDelay: "0.15s" }}><AgentsGlass /></div>
           </div>
         </section>
 
@@ -311,7 +257,6 @@ export default function AiAgentsPage() {
       <SiteFooter />
 
       <style>{`
-        ${KEYFRAMES}
         @keyframes ag-rise { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
         @keyframes ag-orbit { to { transform: rotate(360deg) } }
         @keyframes ag-pulse-dot { 0%, 100% { opacity: 1 } 50% { opacity: .3 } }
@@ -332,7 +277,6 @@ export default function AiAgentsPage() {
 
         @media (prefers-reduced-motion: reduce) {
           .ag-rise, .ag-orbit, .ag-pulse-dot, .ag-caret, .ag-fadein, .ag-wave { animation: none }
-          .ag-hello { animation: none !important; opacity: 0 !important } .ag-hello:first-child { opacity: 1 !important }
         }
       `}</style>
     </>

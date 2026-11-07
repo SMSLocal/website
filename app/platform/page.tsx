@@ -7,7 +7,7 @@ import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
 import { BreadcrumbJsonLd, FaqJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
 import { ProductFinalCta } from "@/components/product/product-page"
-import { PlatformHex } from "@/components/product/platform-hex"
+import { PlatformScene } from "@/components/product/platform-scene"
 
 export const metadata: Metadata = getPageMetadata("/platform")
 
@@ -106,13 +106,13 @@ export default function PlatformPage() {
       <SiteHeader />
       <main className="overflow-x-clip bg-background font-normal text-foreground">
 
-        {/* 1 · HERO: a honeycomb of six modules around one shared customer record */}
+        {/* 1 · HERO: text on the left, a tilted 3D app window with floating channel logos on the right */}
         <section className="relative isolate overflow-hidden bg-background">
           <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
             <div className="absolute right-[-120px] top-[-60px] h-[520px] w-[520px] rounded-full bg-primary/7 blur-[130px]" />
             <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
           </div>
-          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_540px] lg:gap-8 lg:pb-20 lg:pt-12">
+          <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_560px] lg:gap-6 lg:pb-20 lg:pt-12">
             <div className="pl-rise">
               <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
                 <Layers3 className="h-3.5 w-3.5 text-accent" />The platform
@@ -127,14 +127,9 @@ export default function PlatformPage() {
                 <Link href="/company/contact/" className={BTN}>Get a demo <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
                 <Link href="/signup/" className={BTN_OUT}>Start your trial</Link>
               </div>
-              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[14px] text-muted-foreground">
-                {["AI agents and copilot", "Seven channels", "Built for India"].map((t) => (
-                  <li key={t} className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" strokeWidth={3} />{t}</li>
-                ))}
-              </ul>
             </div>
             <div className="pl-rise relative" style={{ animationDelay: "0.15s" }}>
-              <PlatformHex />
+              <PlatformScene />
             </div>
           </div>
         </section>
