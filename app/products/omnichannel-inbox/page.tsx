@@ -1,384 +1,372 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getPageMetadata } from "@/lib/seo"
-import {
-  ArrowRight,
-  Bot,
-  Clock,
-  Inbox,
-  Instagram,
-  Mail,
-  MessageCircle,
-  MessageSquare,
-  Mic,
-  Phone,
-  ShieldCheck,
-  Smile,
-  Sparkles,
-  Tag,
-  UserCheck,
-  Users,
-  Workflow,
-  Zap,
-} from "lucide-react"
+import { ArrowRight, ArrowUpRight, Check, Inbox, Instagram, Mail, MessageCircle, MessageSquare, Phone, Send } from "lucide-react"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
-import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
-import {
-  CapabilityGrid,
-  ProductFinalCta,
-  ProductHero,
-  Section,
-  SectionHeader,
-  StatsBand,
-} from "@/components/product/product-page"
+import { BreadcrumbJsonLd, FaqJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
+import { ProductFinalCta } from "@/components/product/product-page"
+import { OmniHero } from "@/components/product/omni-hero"
 
 export const metadata: Metadata = getPageMetadata("/products/omnichannel-inbox")
 
-/* ── Hero visual ──────────────────────────────────────────────────────────── */
-function OmnichannelVisual() {
-  const conversations = [
-    { channel: "WhatsApp", name: "Priya M.",   preview: "Where is my order?",              time: "2m",  badge: "bg-green-500",  unread: true  },
-    { channel: "Email",    name: "Rahul S.",   preview: "Invoice for last month...",        time: "5m",  badge: "bg-blue-500",   unread: true  },
-    { channel: "SMS",      name: "Amit K.",    preview: "Need help with KYC",              time: "12m", badge: "bg-yellow-500", unread: false },
-    { channel: "Voice",    name: "Sneha T.",   preview: "Missed call — callback needed",   time: "18m", badge: "bg-purple-500", unread: false },
-    { channel: "Instagram",name: "Ravi D.",    preview: "Loved the product! Can I...",     time: "34m", badge: "bg-pink-500",   unread: false },
-  ]
+/* ─── DATA ────────────────────────────────────────────────────────────────── */
 
-  const channels = [
-    { icon: <MessageCircle className="h-3.5 w-3.5" />, label: "WhatsApp" },
-    { icon: <MessageSquare className="h-3.5 w-3.5" />, label: "RCS" },
-    { icon: <MessageSquare className="h-3.5 w-3.5" />, label: "SMS" },
-    { icon: <Phone className="h-3.5 w-3.5" />,         label: "Voice" },
-    { icon: <Mail className="h-3.5 w-3.5" />,          label: "Email" },
-    { icon: <Instagram className="h-3.5 w-3.5" />,     label: "Instagram" },
-    { icon: <MessageCircle className="h-3.5 w-3.5" />, label: "Messenger" },
-  ]
+/* the problem, plainly */
+const WITHOUT = [
+  "A separate login and notification sound for each channel",
+  "One customer appears as several unrelated contacts",
+  "Handoffs lose the story, so people repeat themselves",
+  "No view of which chats have waited longest",
+]
+const WITH = [
+  "WhatsApp, email, SMS and social side by side",
+  "A single history behind every contact",
+  "Each chat routed to an owner, with a timer",
+  "AI answering and drafting on the same screen",
+]
 
-  return (
-    <div className="flex h-full min-h-[360px] flex-col gap-4 lg:pl-4">
-      {/* Inbox card */}
-      <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
-        <div className="mb-3 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-green-400" />
-            <span className="text-[12px] font-semibold uppercase tracking-widest text-white/60">
-              Shared Inbox
-            </span>
-          </div>
-          <span className="rounded-full bg-primary/20 px-2 py-0.5 text-[11px] font-semibold text-primary">
-            5 open
-          </span>
-        </div>
-        <div className="space-y-1.5">
-          {conversations.map((c) => (
-            <div
-              key={c.name}
-              className="flex items-center gap-3 rounded-xl bg-white/5 px-3 py-2 transition hover:bg-white/10"
-            >
-              <span className={`h-2 w-2 shrink-0 rounded-full ${c.badge}`} />
-              <div className="min-w-0 flex-1">
-                <div className="flex items-center justify-between gap-2">
-                  <span className="text-[12.5px] font-semibold text-white">{c.name}</span>
-                  <span className="text-[10.5px] text-white/40">{c.time} ago</span>
-                </div>
-                <p className="truncate text-[11px] text-white/55">{c.preview}</p>
-              </div>
-              {c.unread && (
-                <span className="h-2 w-2 shrink-0 rounded-full bg-primary" />
-              )}
-            </div>
-          ))}
-        </div>
-      </div>
+/* how much AI handles, decided chat by chat */
+const AI_ZONES = [
+  { t: "AI agent", s: "Answers routine questions on its own, on every channel.", w: "basis-[34%]", tone: "bg-primary/85 text-primary-foreground" },
+  { t: "AI copilot", s: "Drafts, summarises and finds answers for your agents.", w: "basis-[33%]", tone: "bg-primary/45 text-foreground" },
+  { t: "Your team", s: "Takes over anything sensitive or complex.", w: "basis-[33%]", tone: "bg-foreground/10 text-foreground" },
+]
 
-      {/* Channel pills */}
-      <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-        <p className="mb-2 text-[10.5px] font-semibold uppercase tracking-widest text-white/50">
-          All 7 channels, one inbox
-        </p>
-        <div className="flex flex-wrap gap-1.5">
-          {channels.map((ch) => (
-            <span
-              key={ch.label}
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/8 px-2.5 py-0.5 text-[11px] font-medium text-white/75"
-            >
-              {ch.icon} {ch.label}
-            </span>
-          ))}
-        </div>
-      </div>
+/* the seven channels */
+const CHANNELS = [
+  { n: "WhatsApp", c: "#25D366", I: MessageCircle, logo: "/logos/channels/whatsapp.svg" },
+  { n: "RCS", c: "#1A73E8", I: Send, logo: "/logos/channels/google-messages.svg" },
+  { n: "SMS", c: "#F5A300", I: MessageSquare, logo: null },
+  { n: "Voice", c: "#34A853", I: Phone, logo: null },
+  { n: "Email", c: "#EA4335", I: Mail, logo: "/logos/channels/gmail.svg" },
+  { n: "Instagram", c: "#FF0069", I: Instagram, logo: "/logos/channels/instagram.svg" },
+  { n: "Messenger", c: "#0866FF", I: MessageCircle, logo: "/logos/channels/messenger.svg" },
+]
 
-      {/* AI badge */}
-      <div className="flex items-center gap-2 rounded-xl border border-primary/20 bg-primary/10 px-4 py-2.5">
-        <Sparkles className="h-4 w-4 shrink-0 text-primary" />
-        <span className="text-[12.5px] font-medium text-primary">
-          AI agent + copilot active — handling 3 conversations automatically
-        </span>
-      </div>
-    </div>
-  )
-}
+/* routing: a decision table, if this then that team */
+const RULES: [string, string, string][] = [
+  ["The language is Hindi", "Hindi team", "#25a85a"],
+  ["The topic is billing", "Billing", "#3b6df0"],
+  ["The customer is a VIP", "Priority queue", "#d6246e"],
+  ["Nobody has replied in five minutes", "Team lead alert", "#d99a00"],
+  ["Anything else", "Support, by capacity", "#8b5cf6"],
+]
+
+/* service-level promises, written as plain commitments (example targets) */
+const TARGETS = [
+  { k: "First response", pre: "Reply within", fig: "5 minutes", post: ".", sub: "The agent is nudged at 4:00 and the team lead is alerted at 5:00.", c: "var(--primary)" },
+  { k: "Resolution", pre: "Resolve within", fig: "4 hours", post: ".", sub: "Timers pause while you wait on the customer, so waiting is never counted against you.", c: "var(--primary)" },
+  { k: "Satisfaction", pre: "Ask for a rating after", fig: "every close", post: ".", sub: "CSAT is saved on the contact and reported by agent and by channel.", c: "var(--primary)" },
+]
+
+/* one customer: when each channel last touched them, as a share of the last three weeks */
+const TOUCHES: [string, string, number, string][] = [
+  ["WhatsApp", "2 minutes ago · asked where order #4821 is", 95, "#25a85a"],
+  ["Email", "Yesterday · requested an invoice", 85, "#3b6df0"],
+  ["SMS", "3 days ago · replied to a delivery update", 72, "#d99a00"],
+  ["Voice", "Last week · missed call, callback booked", 55, "#8b5cf6"],
+  ["Instagram", "Last week · direct message about a product", 45, "#d6246e"],
+  ["Messenger", "2 weeks ago · asked about stock", 25, "#0a84ff"],
+  ["RCS", "3 weeks ago · confirmed a booking", 6, "#0f9f8a"],
+]
+const PROFILE = "Mumbai · Hindi · VIP · Repeat buyer"
+
+/* the spec sheet */
+const SPEC: [string, string][] = [
+  ["Smart routing", "By rule, language, skill or load"],
+  ["SLA timers", "First-response and resolution targets"],
+  ["Labels and macros", "Multi-step actions in one click"],
+  ["Internal notes", "@mention a teammate in any chat"],
+  ["Teams and permissions", "Scoped by channel, team and role"],
+  ["Shared WhatsApp number", "Several agents on one business line"],
+  ["Voice in the inbox", "Calls with the full conversation attached"],
+  ["Audit logs", "Every action logged and exportable"],
+]
+
+const FAQS = [
+  { q: "What is an omnichannel shared inbox?", a: "An omnichannel shared inbox gathers customer messages from every channel into one workspace that your whole team uses. Instead of one tool per channel, agents see a single queue and a single history for each contact." },
+  { q: "Which channels does the inbox support?", a: "WhatsApp, RCS, SMS, voice, email, Instagram and Messenger. All seven work with the same routing, SLA timers and CSAT surveys." },
+  { q: "Can several agents share one WhatsApp number?", a: "Yes. As a WhatsApp team inbox, several agents work the same business number while chats are routed and assigned. Internal notes stay hidden from the customer." },
+  { q: "Does AI work inside the inbox?", a: "Yes. The AI agent answers routine questions on its own, and the copilot drafts replies, summarises threads and finds answers for your human agents. You choose how much AI handles, chat by chat." },
+  { q: "How do routing and SLA tracking work?", a: "Rules assign each chat by language, topic, skill, channel or agent load. Every conversation then carries first-response and resolution timers, with alerts before a target is missed." },
+  { q: "Do I need to install an app?", a: "No. The inbox runs in any desktop or mobile browser, so there is nothing to install or update." },
+  { q: "How is customer history kept across channels?", a: "Messages, calls and campaign replies from the same person are stored on one contact, with tags and custom attributes, so a new agent can read the whole story before replying." },
+  { q: "Who is a multichannel customer support inbox for?", a: "Support, sales and operations teams that talk to customers on more than one channel and want shared ownership, clear response times and consistent answers." },
+]
+
+/* ─── STYLE TOKENS ────────────────────────────────────────────────────────── */
+
+const EYEBROW = "inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.22em]"
+const H2 = "text-balance text-[28px] font-semibold leading-[1.08] tracking-[-0.035em] sm:text-[38px]"
+const BTN = "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
+const BTN_OUT = "inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary"
+
+/* ─── PAGE ────────────────────────────────────────────────────────────────── */
 
 export default function OmnichannelInboxPage() {
   return (
     <>
       <ProductServiceJsonLd
         name="SMSLocal Omnichannel Inbox"
-        description="One shared inbox for WhatsApp, RCS, SMS, voice, email, Instagram, and Messenger with routing, SLA, macros, CSAT, and agentic AI plus copilot built in."
+        description="One shared inbox for WhatsApp, RCS, SMS, voice, email, Instagram and Messenger with routing, SLA, macros, CSAT, and agentic AI plus copilot built in."
         path="/products/omnichannel-inbox"
         category="Omnichannel Shared Inbox"
       />
-      <BreadcrumbJsonLd
-        crumbs={[
-          { name: "Home", path: "/" },
-          { name: "Products", path: "/products" },
-          { name: "Omnichannel Inbox", path: "/products/omnichannel-inbox" },
-        ]}
-      />
+      <BreadcrumbJsonLd crumbs={[{ name: "Home", path: "/" }, { name: "Products", path: "/products" }, { name: "Omnichannel Inbox", path: "/products/omnichannel-inbox" }]} />
       <SiteHeader />
-      <main>
+      <main className="overflow-x-clip bg-background font-normal text-foreground">
 
-        {/* ── HERO ──────────────────────────────────────────────── */}
-        <ProductHero
-          compact
-          eyebrow="Products · Omnichannel Inbox"
-          title={
-            <>
-              Seven Channels and Agentic AI
-              <br className="hidden sm:block" /> in One Shared Inbox
-            </>
-          }
-          subtitle="Live agents and agentic AI work WhatsApp, RCS, SMS, voice, email, Instagram, and Messenger from one place."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
-          trustBar={[
-            { icon: Inbox,      label: "7 channels, one view" },
-            { icon: Bot,        label: "AI agent plus copilot built in" },
-            { icon: Clock,      label: "Routing, SLA, and CSAT" },
-            { icon: UserCheck,  label: "One customer record" },
-          ]}
-          visual={<OmnichannelVisual />}
-        />
-
-        {/* ── TRUST LINE ────────────────────────────────────────── */}
-        <div className="border-b border-border bg-muted/30 py-4">
-          <p className="text-center text-[13px] font-medium text-muted-foreground">
-            Stop switching tabs between channels.
-          </p>
-        </div>
-
-        {/* ── RESULTS STRIP ─────────────────────────────────────── */}
-        <Section>
-          <StatsBand
-            items={[
-              { value: "7",      label: "channels in one view — WhatsApp, RCS, SMS, voice, email, Instagram, Messenger" },
-              { value: "AI+",    label: "Agentic AI handles volume, copilot assists your human agents" },
-              { value: "SLA",    label: "Smart routing, SLA timers, and CSAT tracked on every conversation" },
-              { value: "1",      label: "Customer record — every message, channel, and history in one profile" },
-            ]}
-          />
-        </Section>
-
-        {/* ── THE PROBLEM ───────────────────────────────────────── */}
-        <Section tone="muted">
-          <div className="mx-auto max-w-3xl">
-            <SectionHeader
-              eyebrow="The problem"
-              title="Context gets lost when every channel lives in its own tool"
-            />
-            <p className="mt-5 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-              When WhatsApp is in one app, email in another, and Instagram in a third, your agents
-              spend more time switching tabs than helping customers. Context gets lost at every
-              handoff, and customers end up repeating themselves. One inbox keeps every conversation,
-              and every customer, in a single place.
-            </p>
+        {/* 1 · HERO: seven apps slide into one tidy list */}
+        <section className="relative isolate overflow-hidden bg-background">
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute right-[-120px] top-[-60px] h-[520px] w-[520px] rounded-full bg-primary/7 blur-[130px]" />
+            <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
           </div>
-        </Section>
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_540px] lg:gap-8 lg:pb-20 lg:pt-12">
+            <div className="oc-rise">
+              <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
+                <Inbox className="h-3.5 w-3.5 text-accent" />Omnichannel Inbox
+              </p>
+              <h1 className="mt-6 text-balance text-[30px] font-semibold leading-[1.1] tracking-[-0.035em] sm:text-[42px]">
+                Omnichannel shared inbox for <span className="text-primary">every customer conversation.</span>
+              </h1>
+              <p className="mt-5 max-w-lg text-pretty text-[17px] leading-relaxed text-muted-foreground">
+                Work WhatsApp, RCS, SMS, voice, email, Instagram and Messenger from a single workspace. Routing, SLA timers and CSAT surveys come built in, and AI helps on every channel.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <Link href="/company/contact/" className={BTN}>Get a demo <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
+                <Link href="/signup/" className={BTN_OUT}>Start your trial</Link>
+              </div>
+              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-[14px] text-muted-foreground">
+                {["Seven channels, one workspace", "Routing and SLA tracking", "AI agent and copilot included"].map((t) => (
+                  <li key={t} className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" strokeWidth={3} />{t}</li>
+                ))}
+              </ul>
+            </div>
+            <div className="oc-rise relative" style={{ animationDelay: "0.15s" }}>
+              <OmniHero />
+            </div>
+          </div>
+        </section>
 
-        {/* ── WHAT YOU GET ──────────────────────────────────────── */}
-        <CapabilityGrid
-          eyebrow="What you get"
-          title="Everything your team needs to work every channel"
-          subtitle="Not just a consolidated view — a full-featured workspace built for real support and sales operations."
-          items={[
-            {
-              icon: Inbox,
-              title: "Every channel, one view",
-              body: "Full conversation history, internal notes, canned responses, labels, and macros — across WhatsApp, RCS, SMS, voice, email, Instagram, and Messenger — in a single shared inbox.",
-            },
-            {
-              icon: Workflow,
-              title: "Built for real operations",
-              body: "Smart routing, SLA timers, capacity and scheduling, teams, and permissions — so the right conversation reaches the right agent at the right time, every time.",
-            },
-            {
-              icon: Sparkles,
-              title: "AI in the inbox",
-              body: "The agentic AI handles routine volume automatically, and the copilot assists your humans with suggested replies, summaries, and context — so no one ever starts a conversation cold.",
-            },
-            {
-              icon: Smile,
-              title: "CSAT and profiles",
-              body: "Satisfaction scores collected on every resolved conversation, tied to contact profiles with full history, tags, and custom attributes — so your team always has context.",
-            },
-          ]}
-        />
+        {/* 2 · THE PROBLEM: two plain lists side by side */}
+        <section className="bg-secondary py-20 lg:py-28">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
+            <div className="mx-auto max-w-2xl text-center">
+              <ul className="mb-9 flex flex-wrap justify-center gap-x-5 gap-y-4 sm:gap-x-7">
+                {CHANNELS.map((c) => (
+                  <li key={c.n} className="flex w-[68px] flex-col items-center gap-2">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full border border-border bg-background shadow-sm">
+                      {c.logo ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={c.logo} alt={c.n + " logo"} width={28} height={28} className="h-7 w-7 object-contain" />
+                      ) : (
+                        <c.I className="h-7 w-7" style={{ color: c.c }} strokeWidth={1.9} aria-label={c.n} />
+                      )}
+                    </span>
+                    <span className="text-[11.5px] font-medium text-muted-foreground">{c.n}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className={`${EYEBROW} justify-center text-primary`}>The problem</p>
+              <h2 className={`${H2} mt-5`}>Seven channels should not mean seven tools.</h2>
+              <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">Teams often answer WhatsApp in one app, email in another and Instagram in a third, while customers move between channels freely. A unified messaging inbox lets your tools follow the customer.</p>
+            </div>
+            <div className="mt-14 grid gap-12 md:grid-cols-2 md:gap-20">
+              <div>
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Without a shared inbox</p>
+                <ul className="mt-5 space-y-4 text-[16px] leading-snug text-muted-foreground">
+                  {WITHOUT.map((t) => (<li key={t} className="flex gap-3"><span className="font-mono text-foreground/40">–</span>{t}</li>))}
+                </ul>
+              </div>
+              <div>
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-primary">With one shared inbox</p>
+                <ul className="mt-5 space-y-4 text-[16px] leading-snug">
+                  {WITH.map((t) => (<li key={t} className="flex gap-3"><span className="font-mono font-bold text-primary">+</span>{t}</li>))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {/* ── CAMPAIGNS + VOICE + CHAT TOGETHER ────────────────── */}
-        <Section tone="dark">
-          <div className="mx-auto max-w-3xl">
-            <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/85">
-              Chat, voice, and campaigns together
-            </span>
-            <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Every touchpoint tied to one customer record
-            </h2>
-            <p className="mt-5 text-pretty text-[15px] leading-relaxed text-white/70">
-              A campaign reply, a phone call, and a web chat all land in the same inbox tied to the
-              same customer — so your team sees the full picture before they type a single word.
-              No silos, no context switching, no asking customers to repeat themselves.
-            </p>
+        {/* 3 · ROUTING: a decision table */}
+        <section className="bg-background py-20 lg:py-28">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+            <div>
+              <p className={`${EYEBROW} text-primary`}>Smart routing</p>
+              <h2 className={`${H2} mt-5`}>Rules decide who answers.</h2>
+              <p className="mt-4 max-w-sm text-[16px] leading-relaxed text-muted-foreground">Write routing the way you would brief a team lead. Language, topic, customer type and agent load decide where a chat lands, whichever channel it came from.</p>
+            </div>
+            <div>
+              <div className="grid grid-cols-[1fr_auto_1fr] gap-x-4 border-b border-foreground/30 pb-2.5 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+                <span>If</span><span aria-hidden className="w-6" /><span>Send it to</span>
+              </div>
+              <ul>
+                {RULES.map(([cond, team]) => (
+                  <li key={cond} className="grid grid-cols-[1fr_auto_1fr] items-center gap-x-4 border-b border-border py-4">
+                    <span className="text-[16px] leading-snug sm:text-[18px]">{cond}</span>
+                    <ArrowRight className="h-4 w-4 text-muted-foreground" />
+                    <span className="text-[16px] font-semibold text-primary sm:text-[18px]">{team}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
 
-            {/* Channel grid */}
-            <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
-              {[
-                { icon: <MessageCircle className="h-4 w-4" />, label: "WhatsApp" },
-                { icon: <MessageSquare className="h-4 w-4" />, label: "RCS" },
-                { icon: <MessageSquare className="h-4 w-4" />, label: "SMS" },
-                { icon: <Phone className="h-4 w-4" />,         label: "Voice" },
-                { icon: <Mail className="h-4 w-4" />,          label: "Email" },
-                { icon: <Instagram className="h-4 w-4" />,     label: "Instagram" },
-                { icon: <MessageCircle className="h-4 w-4" />, label: "Messenger" },
-                { icon: <Inbox className="h-4 w-4" />,         label: "One inbox" },
-              ].map((ch) => (
-                <div
-                  key={ch.label}
-                  className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2.5"
-                >
-                  <span className="text-primary">{ch.icon}</span>
-                  <span className="text-[13px] font-medium text-white/80">{ch.label}</span>
+        {/* 4 · SERVICE LEVELS: three plain figures */}
+        <section className="bg-secondary py-20 lg:py-28">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
+            <div className="max-w-2xl">
+              <p className={`${EYEBROW} text-primary`}>SLA, CSAT and ownership</p>
+              <h2 className={`${H2} mt-5`}>Every chat has an owner and a clock.</h2>
+              <p className="mt-4 max-w-lg text-[16px] leading-relaxed text-muted-foreground">Response and resolution targets run on each conversation, and a satisfaction score comes back once it is closed.</p>
+            </div>
+            <div className="mt-12 space-y-12">
+              {TARGETS.map((t) => (
+                <div key={t.k} className="grid gap-3 md:grid-cols-[190px_1fr] md:gap-10">
+                  <p className="pt-2 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{t.k}</p>
+                  <div>
+                    <p className="text-[28px] font-semibold leading-tight tracking-[-0.03em] sm:text-[36px]">
+                      {t.pre}{" "}
+                      <span className="underline decoration-[5px] underline-offset-[7px]" style={{ textDecorationColor: t.c }}>{t.fig}</span>
+                      {t.post}
+                    </p>
+                    <p className="mt-3 max-w-xl text-[15.5px] leading-relaxed text-muted-foreground">{t.sub}</p>
+                  </div>
                 </div>
               ))}
             </div>
+            <p className="mt-12 text-[12.5px] text-muted-foreground">Example targets, shown to illustrate the timers.</p>
           </div>
-        </Section>
+        </section>
 
-        {/* ── BUILT-IN FEATURES ─────────────────────────────────── */}
-        <Section tone="muted">
-          <SectionHeader
-            eyebrow="Built-in features"
-            title="Every tool your team already relies on"
-            subtitle="The inbox comes with the features a real support or sales operation needs — not stripped-down and sold separately."
-          />
-          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { icon: <Workflow className="h-5 w-5" />,    title: "Smart routing",       desc: "Rules-based and AI-powered routing to the right team or agent" },
-              { icon: <Clock className="h-5 w-5" />,       title: "SLA timers",          desc: "First-response and resolution targets with breach alerts" },
-              { icon: <Tag className="h-5 w-5" />,         title: "Labels & macros",     desc: "Tag conversations and run multi-step actions in one click" },
-              { icon: <Users className="h-5 w-5" />,       title: "Teams & permissions", desc: "Scope access by channel, team, and role" },
-              { icon: <Mic className="h-5 w-5" />,         title: "Voice in the inbox",  desc: "Inbound and outbound calls with full conversation context" },
-              { icon: <ShieldCheck className="h-5 w-5" />, title: "Audit logs",          desc: "Every action logged and exportable for compliance" },
-            ].map((f) => (
-              <div key={f.title} className="rounded-xl border border-border bg-card p-5 shadow-sm">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  {f.icon}
+        {/* 5 · THE CUSTOMER RECORD: one name, and the last touch on every channel */}
+        <section className="bg-background py-20 lg:py-28">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+            <p className={`${EYEBROW} text-primary`}>Customer profile across channels</p>
+            <h2 className={`${H2} mt-5`}>A full history behind every contact.</h2>
+            <p className="mt-4 max-w-xl text-[16px] leading-relaxed text-muted-foreground">Campaign replies, phone calls and web chats are stored on the same contact, along with tags and custom attributes your team can filter by.</p>
+            <div className="mt-12">
+              <div className="flex items-center gap-4">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-[18px] font-semibold text-primary-foreground">AR</span>
+                <span>
+                  <span className="block text-[26px] font-semibold leading-tight tracking-[-0.03em]">Ananya Rao</span>
+                  <span className="block text-[14.5px] text-muted-foreground">{PROFILE}</span>
                 </span>
-                <h3 className="mt-3 text-[14px] font-semibold text-foreground">{f.title}</h3>
-                <p className="mt-1 text-[13px] leading-snug text-muted-foreground">{f.desc}</p>
               </div>
-            ))}
-          </div>
-        </Section>
 
-        {/* ── WHY FLOATCHAT ─────────────────────────────────────── */}
-        <Section>
-          <div className="mx-auto max-w-3xl">
-            <SectionHeader
-              eyebrow="Why SMSLocal"
-              title="One platform — not an inbox bolted onto something else"
-            />
-            <p className="mt-5 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-              The inbox sits on the same platform as your AI, your numbers, and your broadcasting —
-              so nothing about a customer is ever in a separate silo. A broadcast that drives
-              replies, a bot that escalates, and a human who closes the conversation all work from
-              the same record. No integrations to maintain, no data to sync.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/products/ai-agentic/"
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/40"
-              >
-                Agentic AI <ArrowRight className="h-3.5 w-3.5 text-primary" />
-              </Link>
-              <Link
-                href="/products/ai-agents/"
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/40"
-              >
-                AI Agents <ArrowRight className="h-3.5 w-3.5 text-primary" />
-              </Link>
-              <Link
-                href="/compare/"
-                className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-4 py-2.5 text-sm font-medium text-foreground shadow-sm transition hover:border-primary/40"
-              >
-                Compare <ArrowRight className="h-3.5 w-3.5 text-primary" />
-              </Link>
+              {/* wide screens: one line of time, each channel placed where it last touched the customer */}
+              <div className="relative mt-14 hidden h-[200px] lg:block">
+                <span aria-hidden className="absolute inset-x-0 top-1/2 h-[3px] -translate-y-1/2 rounded-full bg-border" />
+                {TOUCHES.map(([ch, t, x], i) => {
+                  const up = i % 2 === 0
+                  return (
+                    <div key={ch} className="absolute top-1/2 w-[150px] -translate-x-1/2" style={{ left: `${x}%` }}>
+                      <span className={`absolute left-1/2 top-0 h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-background ${i === 0 ? "bg-primary" : "bg-foreground/35"}`} />
+                      <div className={`absolute left-0 w-full text-center ${up ? "bottom-4" : "top-4"}`}>
+                        <p className={`text-[14px] font-semibold ${i === 0 ? "text-primary" : "text-foreground"}`}>{ch}</p>
+                        <p className="mt-0.5 text-[12px] leading-snug text-muted-foreground">{t.split(" · ")[0]}</p>
+                      </div>
+                    </div>
+                  )
+                })}
+                <span className="absolute -bottom-2 left-0 font-mono text-[10.5px] uppercase tracking-[0.16em] text-muted-foreground">3 weeks ago</span>
+                <span className="absolute -bottom-2 right-0 font-mono text-[10.5px] uppercase tracking-[0.16em] text-muted-foreground">Now</span>
+              </div>
+
+              {/* small screens: a plain table */}
+              <table className="mt-8 w-full text-left text-[15px] lg:hidden">
+                <tbody>
+                  {TOUCHES.map(([ch, t]) => (
+                    <tr key={ch} className="border-b border-border">
+                      <td className="w-[120px] py-3 pr-4 font-semibold">{ch}</td>
+                      <td className="py-3 text-muted-foreground">{t}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              <p className="mt-6 text-[12.5px] text-muted-foreground">Example record, shown to illustrate the profile.</p>
             </div>
           </div>
-        </Section>
+        </section>
 
-        {/* ── FAQ ───────────────────────────────────────────────── */}
-        <FaqSection
-          items={[
-            {
-              q: "Which channels does the inbox support?",
-              a: "WhatsApp, RCS, SMS, voice, email, Instagram, and Messenger — all seven in a single shared inbox, with the same routing, SLA, and CSAT features across every channel.",
-            },
-            {
-              q: "Is there a mobile app?",
-              a: "SMSLocal is web-based and works in any browser — desktop or mobile. No app to install, no version to keep updated.",
-            },
-            {
-              q: "Does AI work inside the inbox?",
-              a: "Yes — both the agentic AI and the copilot. The AI agent handles routine conversations automatically. The copilot assists your human agents with suggested replies, conversation summaries, and full customer context so they never start cold.",
-            },
-          ]}
-        />
+        {/* 6 · AI IN THE INBOX: one bar, three zones, decided chat by chat */}
+        <section className="bg-secondary py-20 lg:py-28">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
+            <div className="max-w-2xl">
+              <p className={`${EYEBROW} text-primary`}>AI customer inbox</p>
+              <h2 className={`${H2} mt-5`}>You choose how much AI handles.</h2>
+              <p className="mt-4 max-w-lg text-[16px] leading-relaxed text-muted-foreground">Start with AI on routine questions and widen it as you gain trust. Automation and human work share the same inbox, so a chat can move between them without a restart.</p>
+            </div>
+            <div className="mt-12 flex flex-col overflow-hidden rounded-2xl sm:flex-row">
+              {AI_ZONES.map((z) => (
+                <div key={z.t} className={`${z.w} px-6 py-7 ${z.tone}`}>
+                  <p className="text-[19px] font-semibold tracking-[-0.02em]">{z.t}</p>
+                  <p className="mt-2 text-[14.5px] leading-relaxed opacity-90">{z.s}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[15px] font-semibold text-primary">
+              <Link href="/products/ai-agents/" className="inline-flex items-center gap-1.5 hover:underline">AI agents for WhatsApp <ArrowUpRight className="h-4 w-4" /></Link>
+              <Link href="/products/agent-copilot/" className="inline-flex items-center gap-1.5 hover:underline">Agent Copilot <ArrowUpRight className="h-4 w-4" /></Link>
+            </p>
+          </div>
+        </section>
 
-        {/* ── INTERNAL LINKS ────────────────────────────────────── */}
-        <Section tone="muted">
-          <div className="mx-auto max-w-3xl">
-            <SectionHeader eyebrow="Explore more" title="Related resources" />
-            <ul className="mt-6 space-y-3">
-              {[
-                { href: "/products/ai-agentic/", label: "How agentic AI works" },
-                { href: "/products/ai-agents/",  label: "AI Agents — automate support and sales" },
-                { href: "/products/analytics/",  label: "Analytics — CSAT, NPS, and campaign results" },
-                { href: "/compare/",             label: "Compare SMSLocal with alternatives" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="inline-flex items-center gap-2 text-[14px] font-medium text-primary hover:underline"
-                  >
-                    {link.label} <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
+        {/* 7 · BUILT-IN FEATURES: a spec sheet with dotted leaders */}
+        <section className="bg-background py-20 lg:py-28">
+          <div className="mx-auto max-w-4xl px-4 sm:px-6">
+            <p className={`${EYEBROW} text-primary`}>Built in, not sold separately</p>
+            <h2 className={`${H2} mt-5`}>Everything a support desk works with.</h2>
+            <ul className="mt-12">
+              {SPEC.map(([k, v]) => (
+                <li key={k} className="group flex flex-col gap-1 py-3.5 sm:flex-row sm:items-baseline sm:gap-3">
+                  <span className="text-[20px] font-semibold tracking-[-0.02em] transition-colors group-hover:text-primary sm:text-[24px]">{k}</span>
+                  <span aria-hidden className="mb-1.5 hidden min-w-8 flex-1 border-b-2 border-dotted border-foreground/25 sm:block" />
+                  <span className="text-[15px] text-muted-foreground sm:text-right sm:text-[16px]">{v}</span>
                 </li>
               ))}
             </ul>
+            <Link href="/products/agent-copilot/" className="group mt-8 inline-flex items-center gap-1.5 text-[15px] font-semibold text-primary">See the copilot inside the inbox <ArrowUpRight className="h-4 w-4 transition group-hover:-translate-y-0.5 group-hover:translate-x-0.5" /></Link>
           </div>
-        </Section>
+        </section>
 
-        {/* ── FINAL CTA ─────────────────────────────────────────── */}
+        {/* 8 · FAQ (shared with the home page) */}
+        <FaqJsonLd items={FAQS} path="/products/omnichannel-inbox" />
+        <FaqSection items={FAQS} />
+
+        <div className="border-y border-border bg-secondary/60 py-6">
+          <p className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-8 gap-y-2 px-4 text-[14px] sm:px-6">
+            <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground">Explore more</span>
+            {[
+              { href: "/products/agentic-ai/", label: "Agentic AI" },
+              { href: "/products/ai-agents/", label: "AI agents for WhatsApp" },
+              { href: "/products/agent-copilot/", label: "Agent Copilot" },
+              { href: "/products/analytics/", label: "Analytics" },
+              { href: "/compare/", label: "Compare SMSLocal" },
+            ].map((l) => (
+              <Link key={l.href} href={l.href} className="font-medium text-foreground underline decoration-border underline-offset-4 transition hover:text-primary hover:decoration-primary">{l.label}</Link>
+            ))}
+          </p>
+        </div>
+
         <ProductFinalCta
-          title="Put every conversation in one inbox."
-          subtitle="Connect your channels, bring in the AI, and give your team one place to work every customer — no tab switching, no lost context."
+          title="Give your team a shared inbox for every channel."
+          subtitle="Connect your channels, switch on the AI you want and give your team a shared inbox they can start using today."
           primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
           secondaryCta={{ label: "Start your trial", href: "/signup/" }}
         />
       </main>
       <SiteFooter />
+
+      <style>{`
+        @keyframes oc-rise { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
+        .oc-rise { animation: oc-rise .9s cubic-bezier(.2,.7,.2,1) both }
+        @media (prefers-reduced-motion: reduce) { .oc-rise { animation: none } }
+      `}</style>
     </>
   )
 }

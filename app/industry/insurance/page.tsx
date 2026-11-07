@@ -176,7 +176,7 @@ export default function InsurancePage() {
                 title: "Claims intake and status updates",
                 description:
                   "Capture first notice of loss and send automated status updates at every stage — submitted, under review, settled.",
-                href: "/products/ai-agentic/",
+                href: "/products/agentic-ai/",
                 linkLabel: "Agentic AI details",
               },
               {
@@ -232,7 +232,7 @@ export default function InsurancePage() {
             <ul className="mt-6 space-y-3">
               {[
                 { href: "/products/ai-agents/lead-qualification/", label: "AI Agents — lead qualification" },
-                { href: "/products/ai-agentic/", label: "Agentic AI — act, not just answer" },
+                { href: "/products/agentic-ai/", label: "Agentic AI — act, not just answer" },
                 { href: "/platform/security/", label: "Platform Security — SSO, audit logs, RBAC" },
                 { href: "/compare/", label: "See how SMSLocal compares" },
               ].map((link) => (

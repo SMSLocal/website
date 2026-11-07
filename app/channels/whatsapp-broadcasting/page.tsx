@@ -320,7 +320,7 @@ export default function WhatsAppBroadcastingPage() {
               {[
                 { href: "/products/whatsapp-business-api/", label: "WhatsApp Business API — two-way conversations and AI" },
                 { href: "/channels/rcs-broadcasting/",       label: "RCS Broadcasting — branded rich campaigns" },
-                { href: "/products/ai-agentic/",             label: "How agentic AI works" },
+                { href: "/products/agentic-ai/",             label: "How agentic AI works" },
                 { href: "/compare/",                         label: "See how SMSLocal compares" },
               ].map((link) => (
                 <li key={link.href}>

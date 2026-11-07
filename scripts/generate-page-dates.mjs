@@ -102,8 +102,8 @@ for (const routePath of paths) {
  */
 const GROUP_SOURCES = {
   "ai-agentic-apps": [
-    "app/products/ai-agentic/apps/data.ts",
-    "app/products/ai-agentic/apps/[category]/page.tsx",
+    "app/products/agentic-ai/apps/data.ts",
+    "app/products/agentic-ai/apps/[category]/page.tsx",
   ],
 }
 

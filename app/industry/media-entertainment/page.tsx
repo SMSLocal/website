@@ -191,7 +191,7 @@ export default function MediaEntertainmentPage() {
                 title: "Agentic AI for subscriber support",
                 description:
                   "Billing questions, plan changes, and account access resolved instantly by agents that act, not just answer — with human handoff for disputes.",
-                href: "/products/ai-agentic/",
+                href: "/products/agentic-ai/",
                 linkLabel: "Agentic AI details",
               },
               {
@@ -239,7 +239,7 @@ export default function MediaEntertainmentPage() {
             <ul className="mt-6 space-y-3">
               {[
                 { href: "/products/ai-agents/", label: "AI Agents — subscriber support at scale" },
-                { href: "/products/ai-agentic/", label: "Agentic AI — act, not just answer" },
+                { href: "/products/agentic-ai/", label: "Agentic AI — act, not just answer" },
                 { href: "/channels/rcs-broadcasting/", label: "RCS Broadcasting — rich event alerts" },
                 { href: "/compare/", label: "See how SMSLocal compares" },
               ].map((link) => (

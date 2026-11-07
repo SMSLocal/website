@@ -215,6 +215,12 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "omnichannel customer service software",
       "WhatsApp support inbox",
       "unified messaging inbox",
+      "omnichannel inbox India",
+      "shared inbox with AI",
+      "WhatsApp shared inbox for teams",
+      "customer support inbox software",
+      "unified customer inbox",
+      "multichannel inbox with routing and SLA",
     ],
   },
   "/products/analytics": {
@@ -284,10 +290,14 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   "/voice-ai-agents": {
     title: "Agentic AI Voice Agent — Inbound & Outbound Calls",
     description:
-      "Automate phone calls with an agentic AI voice agent — STT, NLU, TTS, transcription, IVR automation, and routing to live agents, in one inbox with chat.",
+      "Agentic AI voice agent that answers and makes calls in Hindi and other Indian languages, hands off to live agents and saves summaries in your inbox.",
     focusKeyword: "agentic AI voice agent",
     keywords: [
       "agentic AI voice agent",
+      "voice AI agent",
+      "AI voice agent for customer support",
+      "voice AI agent India",
+      "AI voice bot Hindi",
       "conversational voice AI India",
       "AI phone agent",
       "AI call answering",
@@ -393,13 +403,18 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "WhatsApp team inbox",
     ],
   },
-  "/products/ai-agentic": {
-    title: "Agentic AI Platform: Captain AI Acts in 300+ Apps",
+  "/products/agentic-ai": {
+    title: "Agentic AI Platform: Agents That Act in 300+ Apps",
     description:
-      "Agentic AI that resolves requests, not just answers them. Captain AI agents work inside 300+ CRM, payment and helpdesk apps over WhatsApp, SMS, email and voice.",
+      "Agentic AI that plans and acts, not just chats. Captain AI agents refund, invoice and update your CRM across 300+ apps on WhatsApp, SMS, email and voice.",
     focusKeyword: "agentic AI",
     keywords: [
       "agentic AI",
+      "what is agentic AI",
+      "autonomous AI agent",
+      "AI agent platform",
+      "AI customer support automation",
+      "AI agent permissions audit log",
       "agentic AI platform",
       "AI agent for customer support",
       "agentic AI use cases",
@@ -420,6 +435,14 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     focusKeyword: "AI WhatsApp agents India",
     keywords: [
       "AI agents",
+      "AI WhatsApp agent",
+      "WhatsApp AI agent India",
+      "Indian language chatbot",
+      "AI agents for customer support",
+      "multilingual AI agent India",
+      "AI agent human handoff",
+      "AI agent knowledge base",
+      "Captain AI agents",
       "AI chatbot WhatsApp",
       "WhatsApp AI bot India",
       "multilingual WhatsApp chatbot",
@@ -1490,9 +1513,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
     ],
   },
   "/platform": {
-    title: "SMSLocal Platform — AI, Omnichannel, Broadcasting",
+    title: "Agentic AI Messaging Platform for India",
     description:
-      "One platform for agentic AI agents, an omnichannel inbox, broadcasting, and developer tools — everything your customer experience needs in one product.",
+      "One agentic AI platform for customer conversations: AI agents, omnichannel inbox, SMS, WhatsApp and RCS broadcasting, voice and developer tools on one record.",
     focusKeyword: "agentic AI platform",
     keywords: [
       "agentic AI platform",
@@ -1503,6 +1526,10 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "business messaging platform",
       "SMS WhatsApp AI platform",
       "SMSLocal platform",
+      "customer conversation platform",
+      "AI customer engagement platform India",
+      "omnichannel customer engagement platform",
+      "conversational AI platform India",
     ],
   },
   "/platform/security": {

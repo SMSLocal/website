@@ -272,7 +272,7 @@ export default function WhySmsLocalPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic/", label: "Explore agentic AI on SMSLocal" },
+                { href: "/products/agentic-ai/", label: "Explore agentic AI on SMSLocal" },
                 { href: "/platform/security/",   label: "See the platform and security" },
                 { href: "/compare/",             label: "Compare SMSLocal with alternatives" },
                 { href: "/company/contact/",     label: "Talk to our team" },

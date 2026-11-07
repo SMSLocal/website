@@ -4,6 +4,14 @@
 > send bulk SMS, OTP, WhatsApp messages, and deploy AI agents — all on a
 > single pay-as-you-go wallet with no monthly lock-in.
 
+## Platform and AI
+
+- [Platform overview](https://www.smslocal.in/platform/): One agentic AI platform for customer conversations: AI agents, an omnichannel inbox, broadcasting, voice and developer tools on one customer record.
+- [Agentic AI](https://www.smslocal.in/products/agentic-ai/): AI agents that plan and act across 300+ apps, with permissions, human approval and an audit log.
+- [Voice AI Agents](https://www.smslocal.in/voice-ai-agents/): Voice agents that answer and make calls in Hindi and other Indian languages and hand off to live agents.
+- [Agent Copilot](https://www.smslocal.in/products/agent-copilot/): An AI copilot in the reply box that drafts replies, summarises threads and finds answers.
+- [Omnichannel Inbox](https://www.smslocal.in/products/omnichannel-inbox/): One shared inbox for WhatsApp, RCS, SMS, voice, email, Instagram and Messenger with routing and SLA timers.
+
 ## Products
 
 - [Bulk SMS](https://www.smslocal.in/products/bulk-sms/): DLT-compliant promotional and transactional SMS with smart route failover.
@@ -11,10 +19,10 @@
 - [OTP SMS](https://www.smslocal.in/developers/sms-api/): Priority-routed one-time passwords with sub-second delivery and retry logic.
 - [RCS Business Messaging](https://www.smslocal.in/products/rcs/): Rich cards, carousels, and verified sender for Android.
 - [AI Agents](https://www.smslocal.in/products/ai-agents/): No-code WhatsApp AI agents in 8 Indian languages.
-- [AI Customer Service Agent](https://www.smslocal.in/ai-agents/customer-service/): Deflect support tickets across channels with grounded AI.
-- [AI Booking Agent](https://www.smslocal.in/ai-agents/booking/): Automate appointment scheduling and reservation confirmations.
-- [AI Lead Qualification Agent](https://www.smslocal.in/ai-agents/lead-qualification/): Score and qualify inbound leads before they reach your team.
-- [AI Agent Builder](https://www.smslocal.in/ai-agents/agent-builder/): Build custom no-code AI agent flows without engineering.
+- [AI Customer Service Agent](https://www.smslocal.in/products/ai-agents/customer-service/): Deflect support tickets across channels with grounded AI.
+- [AI Booking Agent](https://www.smslocal.in/products/ai-agents/booking/): Automate appointment scheduling and reservation confirmations.
+- [AI Lead Qualification Agent](https://www.smslocal.in/products/ai-agents/lead-qualification/): Score and qualify inbound leads before they reach your team.
+- [AI Agent Builder](https://www.smslocal.in/products/ai-agents/agent-builder/): Build custom no-code AI agent flows without engineering.
 - [Inbox](https://www.smslocal.in/products/inbox/): Shared team inbox for WhatsApp, SMS, and live chat.
 - [Automation](https://www.smslocal.in/products/automation/): Workflow automation for messaging campaigns and drip sequences.
 - [Email](https://www.smslocal.in/products/email/): Transactional and marketing email on the same wallet.

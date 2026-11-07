@@ -176,7 +176,7 @@ export default function MortgagePage() {
                 title: "Agentic AI for applications",
                 description:
                   "Agents that qualify, remind, and update borrowers automatically, escalating anything needing underwriting judgment to a human.",
-                href: "/products/ai-agentic/",
+                href: "/products/agentic-ai/",
                 linkLabel: "Agentic AI details",
               },
               {
@@ -232,7 +232,7 @@ export default function MortgagePage() {
             <ul className="mt-6 space-y-3">
               {[
                 { href: "/products/ai-agents/lead-qualification/", label: "AI Agents — borrower pre-qualification" },
-                { href: "/products/ai-agentic/", label: "Agentic AI — act, not just answer" },
+                { href: "/products/agentic-ai/", label: "Agentic AI — act, not just answer" },
                 { href: "/products/bulk-sms/", label: "Bulk SMS — EMI and document reminders" },
                 { href: "/compare/", label: "See how SMSLocal compares" },
               ].map((link) => (

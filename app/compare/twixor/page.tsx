@@ -292,7 +292,7 @@ export default function CompareTwixorPage() {
             <SectionHeader eyebrow="Explore more" title="Compare more" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic/", label: "Agentic AI — automate support and sales for your brand" },
+                { href: "/products/agentic-ai/", label: "Agentic AI — automate support and sales for your brand" },
                 { href: "/compare/", label: "See all SMSLocal comparisons" },
                 { href: "/numbers/did/", label: "DID numbers — provisioned in-platform" },
               ].map((link) => (

@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next"
 import { ALL_POSTS } from "@/lib/blog"
 import { ALL_STORIES } from "@/lib/customer-stories"
-import { APP_CATEGORIES } from "@/app/products/ai-agentic/apps/data"
+import { APP_CATEGORIES } from "@/app/products/agentic-ai/apps/data"
 import { HELP_CATEGORIES, getAllArticlePaths, getArticle } from "@/lib/help-center"
 import { SITE } from "@/lib/seo/config"
 import { SEO_REGISTRY } from "@/lib/seo/registry"
@@ -40,6 +40,8 @@ const STATIC_OVERRIDES: Record<string, { priority: number; changeFrequency: Chan
   "/developers/quickstart": { priority: 0.8, changeFrequency: "monthly" },
   "/company/contact": { priority: 0.7, changeFrequency: "yearly" },
   "/signup": { priority: 0.6, changeFrequency: "yearly" },
+  "/voice-ai-agents": { priority: 0.9, changeFrequency: "monthly" },
+  "/platform": { priority: 0.9, changeFrequency: "monthly" },
 }
 
 // Routes that should never appear in the sitemap regardless of registry state.
@@ -163,7 +165,7 @@ export default async function sitemapEntries(): Promise<MetadataRoute.Sitemap> {
   // title and self-referencing canonical, but they were absent from the sitemap
   // because nothing outside the registry was ever emitted for them.
   for (const category of APP_CATEGORIES) {
-    const path = `/products/ai-agentic/apps/${category.slug}`
+    const path = `/products/agentic-ai/apps/${category.slug}`
     const { priority, changeFrequency } = defaultFor(path)
     raw.push({
       path,

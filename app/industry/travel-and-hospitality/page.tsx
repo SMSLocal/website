@@ -185,7 +185,7 @@ export default function TravelHospitalityPage() {
                 title: "Agentic AI for every touchpoint",
                 description:
                   "One agentic layer books, updates, and supports travelers automatically, escalating to a human only when it truly needs one.",
-                href: "/products/ai-agentic/",
+                href: "/products/agentic-ai/",
                 linkLabel: "Agentic AI details",
               },
               {
@@ -233,7 +233,7 @@ export default function TravelHospitalityPage() {
             <ul className="mt-6 space-y-3">
               {[
                 { href: "/products/ai-agents/booking/", label: "AI Agents — booking automation" },
-                { href: "/products/ai-agentic/", label: "Agentic AI — act, not just answer" },
+                { href: "/products/agentic-ai/", label: "Agentic AI — act, not just answer" },
                 { href: "/products/whatsapp-business-api/", label: "WhatsApp Business API — rich itinerary messages" },
                 { href: "/compare/", label: "See how SMSLocal compares" },
               ].map((link) => (

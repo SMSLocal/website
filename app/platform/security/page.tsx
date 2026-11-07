@@ -274,7 +274,7 @@ export default function PlatformSecurityPage() {
               {[
                 { href: "/legal/dpa/",           label: "Data Processing Addendum — how we process your data" },
                 { href: "/legal/privacy/",       label: "Privacy Policy — what we collect and why" },
-                { href: "/products/ai-agentic/", label: "Agentic AI — the AI these controls protect" },
+                { href: "/products/agentic-ai/", label: "Agentic AI — the AI these controls protect" },
                 { href: "/products/integrations/", label: "Integrations — connect your existing stack securely" },
                 { href: "/compare/",             label: "Compare SMSLocal with alternatives" },
               ].map((link) => (

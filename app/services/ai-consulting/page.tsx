@@ -234,7 +234,7 @@ export default function AiConsultingPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agentic/"
+                href="/products/agentic-ai/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Agentic AI
@@ -277,7 +277,7 @@ export default function AiConsultingPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic/",              label: "Explore agentic AI on SMSLocal" },
+                { href: "/products/agentic-ai/",              label: "Explore agentic AI on SMSLocal" },
                 { href: "/products/ai-agents/agent-builder/",  label: "Agent Builder — build your first agent" },
                 { href: "/platform/security/",                 label: "See the platform and security" },
                 { href: "/company/contact/",                   label: "Talk to an AI consulting specialist" },

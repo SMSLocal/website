@@ -177,6 +177,23 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // The Agentic AI page moved from /products/ai-agentic to /products/agentic-ai.
+      // Permanent redirects keep rankings and any links to the old URL (and its app-category pages).
+      {
+        source: "/products/ai-agentic",
+        destination: "/products/agentic-ai/",
+        permanent: true,
+      },
+      {
+        source: "/products/ai-agentic/",
+        destination: "/products/agentic-ai/",
+        permanent: true,
+      },
+      {
+        source: "/products/ai-agentic/:path*",
+        destination: "/products/agentic-ai/:path*",
+        permanent: true,
+      },
       // The pricing page is unpublished (kept as a draft in app/_drafts/pricing);
       // send every old pricing URL to the contact page instead.
       {

@@ -301,7 +301,7 @@ export default function CustomerServiceAgentPage() {
             <ul className="mt-6 space-y-3">
               {[
                 { href: "/products/ai-agents/", label: "All AI agent use cases" },
-                { href: "/products/ai-agentic/", label: "How agentic AI works" },
+                { href: "/products/agentic-ai/", label: "How agentic AI works" },
                 { href: "/products/omnichannel-inbox/", label: "Omnichannel inbox — one place for every channel" },
                 { href: "/compare/", label: "Compare SMSLocal with alternatives" },
               ].map((link) => (

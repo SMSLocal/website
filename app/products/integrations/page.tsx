@@ -10,6 +10,7 @@ import { Section, SectionHeader } from "@/components/product/product-page"
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
 // Was a hardcoded metadata object with no canonical, so the page inherited the
 // root layout's canonical (the homepage) and was treated as a duplicate.
+import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
 export const metadata: Metadata = getPageMetadata("/products/integrations")
 
 // The interactive stack below is a client-only component, so none of its text is in
@@ -51,6 +52,7 @@ const INTEGRATION_GROUPS = [
 export default function IntegrationsPage() {
   return (
     <>
+      <BreadcrumbJsonLd crumbs={[{ name: "Home", path: "/" }, { name: "Products", path: "/products" }, { name: "Integrations", path: "/products/integrations" }]} />
       <AnnouncementStrip />
       <SiteHeader />
       <main className="overflow-x-clip">

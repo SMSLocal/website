@@ -2,6 +2,9 @@ import { SITE, absoluteUrl } from "@/lib/seo/config"
 
 const SITE_URL = SITE.url
 
+/* canonical URLs on this site end in a slash, so schema URLs must too */
+const withSlash = (p: string) => (p === "/" || p === "" ? "/" : p.endsWith("/") ? p : `${p}/`)
+
 type Crumb = { name: string; path: string }
 
 // Server-rendered inline script — crawled immediately from HTML, no JS execution needed.
@@ -77,7 +80,7 @@ export function BreadcrumbJsonLd({ crumbs }: { crumbs: Crumb[] }) {
       "@type": "ListItem",
       position: i + 1,
       name: c.name,
-      item: `${SITE_URL}${c.path}`,
+      item: `${SITE_URL}${withSlash(c.path)}`,
     })),
   }
   return <JsonLd data={data} />
@@ -101,10 +104,10 @@ export function ProductServiceJsonLd({
   const data = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "@id": `${SITE_URL}${path}#service`,
+    "@id": `${SITE_URL}${withSlash(path)}#service`,
     name,
     description,
-    url: `${SITE_URL}${path}`,
+    url: `${SITE_URL}${withSlash(path)}`,
     provider: { "@id": `${SITE_URL}/#organization` },
     areaServed: { "@type": "Country", name: "India" },
     category,
@@ -227,7 +230,7 @@ export function ItemListJsonLd({
       "@type": "ListItem",
       position: i + 1,
       name: it.name,
-      url: `${SITE_URL}${it.path}`,
+      url: `${SITE_URL}${withSlash(it.path)}`,
     })),
   }
   return <JsonLd data={data} />

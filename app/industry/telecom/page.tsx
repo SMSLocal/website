@@ -168,7 +168,7 @@ export default function TelecomPage() {
                 title: "Agentic AI for plans and billing",
                 description:
                   "Recommend plans, process upgrades, and answer billing questions with agents that take action, not just reply.",
-                href: "/products/ai-agentic/",
+                href: "/products/agentic-ai/",
                 linkLabel: "Agentic AI details",
               },
               {
@@ -231,7 +231,7 @@ export default function TelecomPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic/", label: "Agentic AI — act, not just answer" },
+                { href: "/products/agentic-ai/", label: "Agentic AI — act, not just answer" },
                 { href: "/products/bulk-sms/", label: "Bulk SMS — high-throughput transactional alerts" },
                 { href: "/products/omnichannel-inbox/", label: "Omnichannel Inbox — every channel, one queue" },
                 { href: "/compare/", label: "See how SMSLocal compares" },

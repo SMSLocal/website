@@ -296,7 +296,7 @@ export default function CompareInfobipPage() {
             <SectionHeader eyebrow="Explore more" title="Compare more" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic/", label: "Agentic AI — automate support and sales" },
+                { href: "/products/agentic-ai/", label: "Agentic AI — automate support and sales" },
                 { href: "/compare/", label: "See all SMSLocal comparisons" },
                 { href: "/platform/security/", label: "Platform security — SSO, audit logs, access controls" },
               ].map((link) => (

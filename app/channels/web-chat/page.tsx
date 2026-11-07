@@ -217,7 +217,7 @@ export default function WebChatPage() {
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link
-                href="/products/ai-agentic/"
+                href="/products/agentic-ai/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Agentic AI
@@ -257,7 +257,7 @@ export default function WebChatPage() {
             <ul className="mt-6 space-y-3">
               {[
                 { href: "/products/live-chat/",         label: "Live Chat product — full feature breakdown" },
-                { href: "/products/ai-agentic/",        label: "How agentic AI works" },
+                { href: "/products/agentic-ai/",        label: "How agentic AI works" },
                 { href: "/products/omnichannel-inbox/", label: "Omnichannel inbox — every channel, one place" },
                 { href: "/compare/",                    label: "Compare SMSLocal with alternatives" },
               ].map((link) => (

@@ -262,7 +262,7 @@ export default function AnalyticsPage() {
                 Omnichannel inbox
               </Link>
               <Link
-                href="/products/ai-agentic/"
+                href="/products/agentic-ai/"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
               >
                 Agentic AI
@@ -295,7 +295,7 @@ export default function AnalyticsPage() {
             <SectionHeader eyebrow="Explore more" title="Related resources" />
             <ul className="mt-6 space-y-3">
               {[
-                { href: "/products/ai-agentic/",         label: "How agentic AI works" },
+                { href: "/products/agentic-ai/",         label: "How agentic AI works" },
                 { href: "/products/omnichannel-inbox/",  label: "Omnichannel inbox — one place for every channel" },
                 { href: "/products/ai-agents/",          label: "AI Agents — automate support and sales" },
                 { href: "/compare/",                     label: "Compare SMSLocal with alternatives" },

@@ -87,7 +87,7 @@ const NAV: NavItem[] = [
         heading: "AI Agents & Platform",
         items: [
           { label: "Platform Overview", href: "/platform/", icon: Sparkles },
-          { label: "Agentic AI", href: "/products/ai-agentic/", icon: Bot },
+          { label: "Agentic AI", href: "/products/agentic-ai/", icon: Bot },
           { label: "AI Agents", href: "/products/ai-agents/", icon: Sparkles },
           { label: "Voice AI Agent", href: "/voice-ai-agents/", icon: Mic },
           { label: "Agent Copilot", href: "/products/agent-copilot/", icon: MessageSquare },

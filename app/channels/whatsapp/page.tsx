@@ -295,7 +295,7 @@ export default function WhatsAppChannelPage() {
             <ul className="mt-6 space-y-3">
               {[
                 { href: "/channels/whatsapp-broadcasting/", label: "WhatsApp Broadcasting — campaigns at scale" },
-                { href: "/products/ai-agentic/",           label: "How agentic AI works" },
+                { href: "/products/agentic-ai/",           label: "How agentic AI works" },
                 { href: "/products/omnichannel-inbox/",    label: "Omnichannel inbox — all channels in one place" },
                 { href: "/compare/",                       label: "Compare SMSLocal with alternatives" },
               ].map((link) => (

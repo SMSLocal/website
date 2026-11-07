@@ -8,6 +8,7 @@ import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { getAppCategoryBySlug, generateAppCategorySlugs, APP_CATEGORIES, APP_CATEGORY_META_DESCRIPTIONS } from "../data"
 import { buildMetadata } from "@/lib/seo/metadata"
 import { AppLogo } from "@/components/product/app-logo"
+import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
 
 export const dynamicParams = false
 
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
   return buildMetadata({
     titleAbsolute,
     description: APP_CATEGORY_META_DESCRIPTIONS[category] ?? cat.desc,
-    path: `/products/ai-agentic/apps/${category}/`,
+    path: `/products/agentic-ai/apps/${category}/`,
   })
 }
 
@@ -42,6 +43,14 @@ export default async function AppCategoryPage({ params }: { params: Promise<{ ca
 
   return (
     <>
+      <BreadcrumbJsonLd
+        crumbs={[
+          { name: "Home", path: "/" },
+          { name: "Products", path: "/products" },
+          { name: "Agentic AI", path: "/products/agentic-ai" },
+          { name: cat.label, path: `/products/agentic-ai/apps/${cat.slug}` },
+        ]}
+      />
       <AnnouncementStrip />
       <SiteHeader />
       <main className="overflow-x-clip">
@@ -50,7 +59,7 @@ export default async function AppCategoryPage({ params }: { params: Promise<{ ca
         <section className="border-b border-border bg-muted/30 py-12 sm:py-16">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <Link
-              href="/products/ai-agentic/#apps"
+              href="/products/agentic-ai/#apps"
               className="inline-flex items-center gap-1.5 text-[13px] font-medium text-muted-foreground transition hover:text-foreground"
             >
               <ArrowLeft className="h-3.5 w-3.5" /> Powered by Composio
@@ -83,7 +92,7 @@ export default async function AppCategoryPage({ params }: { params: Promise<{ ca
                 Connect {cat.label} <ArrowRight className="h-3.5 w-3.5" />
               </Link>
               <Link
-                href="/products/ai-agentic/"
+                href="/products/agentic-ai/"
                 className="inline-flex items-center gap-2 rounded-xl border border-border bg-background px-5 py-2.5 text-[13px] font-semibold text-foreground transition hover:border-primary/30"
               >
                 See all integrations
@@ -172,7 +181,7 @@ export default async function AppCategoryPage({ params }: { params: Promise<{ ca
                 {related.map((c) => (
                   <Link
                     key={c.slug}
-                    href={`/products/ai-agentic/apps/${c.slug}`}
+                    href={`/products/agentic-ai/apps/${c.slug}`}
                     className="group flex flex-col gap-2 rounded-2xl border border-border bg-card p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md"
                   >
                     <p className="text-[13px] font-bold text-foreground transition group-hover:text-primary">
