@@ -206,7 +206,7 @@ export default function ReceiveSmsOnlineIndiaPost() {
           route them through a secondary verification (email, voice call).
         </LI>
         <LI>
-          <Strong>Velocity checks.</Strong> If the same number requests 20 <A href="https://en.wikipedia.org/wiki/One-time_password">OTPs</A> across 20
+          <Strong>Velocity checks.</Strong> If the same number requests 20 <A href="https://csrc.nist.gov/pubs/sp/800/63/b/4/final">OTPs</A> across 20
           different user IDs in an hour, it&apos;s almost certainly a receive-SMS box. Rate-limit
           per-number, not just per-user.
         </LI>

@@ -177,7 +177,7 @@ export default function SmsActivationPost() {
       <H2 id="otp-not-arriving">When OTPs specifically aren&apos;t arriving</H2>
       <P>
         If your SIM works for regular SMS but{" "}
-        <A href="https://en.wikipedia.org/wiki/One-time_password">OTPs</A> from specific services
+        <A href="https://csrc.nist.gov/pubs/sp/800/63/b/4/final">OTPs</A> from specific services
         don&apos;t arrive, the
         issue is upstream. Check in order:
       </P>
