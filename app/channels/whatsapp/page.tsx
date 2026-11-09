@@ -17,10 +17,10 @@ import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
 import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
+import { WhatsAppHub } from "@/components/product/whatsapp-hub"
 import {
   CapabilityGrid,
   ProductFinalCta,
-  ProductHero,
   Section,
   SectionHeader,
   StatsBand,
@@ -28,76 +28,15 @@ import {
 
 export const metadata: Metadata = getPageMetadata("/channels/whatsapp")
 
-/* ── Hero visual ──────────────────────────────────────────────────────────── */
-function WhatsAppVisual() {
-  const convo = [
-    { from: "user",  text: "Hi, I need help with my recent order" },
-    { from: "agent", text: "Sure! Share your order ID and I'll check it right now." },
-    { from: "user",  text: "It's #ORD-8821" },
-    { from: "agent", text: "Found it! Your order shipped today and arrives by Thursday. Want to track it?" },
-    { from: "user",  text: "Yes please" },
-    { from: "agent", text: "Here's your tracking link 👉 smsl.in/t/8821 — anything else?" },
-  ]
+const BTN = "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
+const BTN_OUT = "inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary"
 
-  return (
-    <div className="flex h-full min-h-[360px] flex-col gap-4 lg:pl-4">
-      {/* WhatsApp chat card */}
-      <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
-        {/* Header */}
-        <div className="mb-3 flex items-center gap-2.5 border-b border-white/10 pb-3">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-green-500">
-            <MessageCircle className="h-4 w-4 text-white" />
-          </span>
-          <div>
-            <p className="text-[13px] font-semibold text-white">SMSLocal Support</p>
-            <p className="text-[11px] text-green-400">● Online via WhatsApp Business API</p>
-          </div>
-          <span className="ml-auto rounded-full border border-green-500/30 bg-green-500/10 px-2 py-0.5 text-[10px] font-semibold text-green-400">
-            Verified ✓
-          </span>
-        </div>
-        {/* Messages */}
-        <div className="space-y-2">
-          {convo.map((m, i) => (
-            <div key={i} className={`flex ${m.from === "user" ? "justify-start" : "justify-end"}`}>
-              <span
-                className={`max-w-[85%] rounded-xl px-3 py-2 text-[12px] leading-snug ${
-                  m.from === "user"
-                    ? "bg-white/10 text-white/80"
-                    : "bg-[#25D366]/20 text-white"
-                }`}
-              >
-                {m.text}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      {/* Stats row */}
-      <div className="grid grid-cols-3 gap-2">
-        {[
-          { label: "Sender",   value: "Verified" },
-          { label: "AI reply", value: "<1s" },
-          { label: "Handoff",  value: "Instant" },
-        ].map((s) => (
-          <div key={s.label} className="rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-center backdrop-blur-md">
-            <p className="text-[18px] font-semibold text-white">{s.value}</p>
-            <p className="text-[10.5px] text-white/50">{s.label}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* Badge */}
-      <div className="flex items-center gap-2 rounded-xl border border-green-500/20 bg-green-500/10 px-4 py-2.5">
-        <BadgeCheck className="h-4 w-4 shrink-0 text-green-400" />
-        <span className="text-[12.5px] font-medium text-green-300">
-          Official WhatsApp Business API — not a workaround
-        </span>
-      </div>
-    </div>
-  )
-}
+const TRUST = [
+  { icon: ShieldCheck, label: "Official Business API" },
+  { icon: BadgeCheck, label: "Verified sender" },
+  { icon: Bot, label: "AI answers automatically" },
+  { icon: LayoutList, label: "Templates, media, buttons" },
+]
 
 export default function WhatsAppChannelPage() {
   return (
@@ -119,26 +58,41 @@ export default function WhatsAppChannelPage() {
       <main>
 
         {/* ── HERO ──────────────────────────────────────────────── */}
-        <ProductHero
-          compact
-          eyebrow="Channels · WhatsApp"
-          title={
-            <>
-              WhatsApp Business Messaging
-              <br className="hidden sm:block" /> Powered by Agentic AI
-            </>
-          }
-          subtitle="Two-way conversations and campaigns on the official WhatsApp Business API, answered automatically by agentic AI."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
-          trustBar={[
-            { icon: ShieldCheck,  label: "Official Business API" },
-            { icon: BadgeCheck,   label: "Verified sender" },
-            { icon: Bot,          label: "AI answers automatically" },
-            { icon: LayoutList,   label: "Templates, media, and buttons" },
-          ]}
-          visual={<WhatsAppVisual />}
-        />
+        <section className="relative isolate overflow-hidden bg-background">
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
+          </div>
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_580px] lg:gap-8 lg:pb-20 lg:pt-12">
+            <div className="wa-rise">
+              <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
+                <Sparkles className="h-3.5 w-3.5 text-accent" />Channels · WhatsApp
+              </p>
+              <h1 className="mt-6 text-balance text-[30px] font-semibold leading-[1.1] tracking-[-0.035em] sm:text-[42px]">
+                WhatsApp Business messaging <span className="text-primary">powered by agentic AI.</span>
+              </h1>
+              <p className="mt-5 max-w-lg text-pretty text-[17px] leading-relaxed text-muted-foreground">
+                Two-way conversations and campaigns on the official WhatsApp Business API, answered automatically by agentic AI.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <Link href="/company/contact/" className={BTN}>Get a Demo <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
+                <Link href="/signup/" className={BTN_OUT}>Start your trial</Link>
+              </div>
+              <ul className="mt-8 grid max-w-lg grid-cols-1 gap-x-8 gap-y-3 text-[14px] text-muted-foreground sm:grid-cols-2">
+                {TRUST.map((t) => (
+                  <li key={t.label} className="flex items-start gap-2.5 leading-snug"><t.icon className="mt-[1px] h-4 w-4 shrink-0 text-primary" /><span>{t.label}</span></li>
+                ))}
+              </ul>
+            </div>
+            <div className="wa-rise" style={{ animationDelay: "0.15s" }}>
+              <WhatsAppHub />
+            </div>
+          </div>
+          <style>{`
+            @keyframes wa-rise { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
+            .wa-rise { animation: wa-rise .9s cubic-bezier(.2,.7,.2,1) both }
+            @media (prefers-reduced-motion: reduce) { .wa-rise { animation: none } }
+          `}</style>
+        </section>
 
         {/* ── TRUST LINE ────────────────────────────────────────── */}
         <div className="border-b border-border bg-muted/30 py-4">

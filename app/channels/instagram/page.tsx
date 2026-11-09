@@ -17,10 +17,10 @@ import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
 import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
+import { InstagramScene } from "@/components/product/instagram-scene"
 import {
   CapabilityGrid,
   ProductFinalCta,
-  ProductHero,
   Section,
   SectionHeader,
   StatsBand,
@@ -28,61 +28,15 @@ import {
 
 export const metadata: Metadata = getPageMetadata("/channels/instagram")
 
-/* ── Hero visual ──────────────────────────────────────────────────────────── */
-function InstagramVisual() {
-  const dm = {
-    customer: "Hey! Does this come in size M? Saw it on your story 👀",
-    draft:
-      "Hi! Yes, size M is in stock — here's the direct link to grab it, free shipping on this one 🛍️",
-  }
+const BTN = "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
+const BTN_OUT = "inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary"
 
-  const badges = [
-    { icon: Camera, label: "From story reply" },
-    { icon: Tag, label: "Product tagged" },
-    { icon: Bot, label: "AI agent replied" },
-  ]
-
-  return (
-    <div className="flex h-full min-h-[360px] flex-col gap-4 lg:pl-4">
-      {/* Customer DM */}
-      <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-        <p className="text-[10.5px] font-semibold uppercase tracking-widest text-white/50">
-          Instagram DM
-        </p>
-        <p className="mt-1.5 text-[13px] leading-relaxed text-white/85">{dm.customer}</p>
-      </div>
-
-      {/* AI agent reply card */}
-      <div className="rounded-xl border border-primary/25 bg-primary/10 px-4 py-3.5 backdrop-blur-md">
-        <div className="mb-2 flex items-center gap-1.5">
-          <Sparkles className="h-3.5 w-3.5 text-primary" />
-          <span className="text-[10.5px] font-semibold uppercase tracking-widest text-primary">
-            AI agent — auto-replied
-          </span>
-        </div>
-        <p className="text-[13px] leading-relaxed text-white">{dm.draft}</p>
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {badges.map((b) => (
-            <span
-              key={b.label}
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/8 px-2.5 py-0.5 text-[11px] font-medium text-white/75"
-            >
-              <b.icon className="h-3 w-3" /> {b.label}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Shared inbox badge */}
-      <div className="flex items-center gap-2 rounded-xl border border-blue-500/20 bg-blue-500/10 px-4 py-2.5">
-        <Inbox className="h-4 w-4 shrink-0 text-blue-400" />
-        <span className="text-[12.5px] font-medium text-blue-300">
-          Same inbox as WhatsApp and SMS — one agent view, every channel
-        </span>
-      </div>
-    </div>
-  )
-}
+const TRUST = [
+  { icon: MessageCircle, label: "DM automation" },
+  { icon: Camera, label: "Story-reply capture" },
+  { icon: Bot, label: "AI agent replies" },
+  { icon: ShoppingBag, label: "Catalog & product tags" },
+]
 
 export default function InstagramPage() {
   return (
@@ -104,26 +58,41 @@ export default function InstagramPage() {
       <main>
 
         {/* ── HERO ──────────────────────────────────────────────── */}
-        <ProductHero
-          compact
-          eyebrow="Channels · Instagram"
-          title={
-            <>
-              Instagram DMs,
-              <br className="hidden sm:block" /> Answered Like WhatsApp
-            </>
-          }
-          subtitle="Turn story replies and comments into DMs, answer them with your AI agent, and manage every conversation in the same inbox as WhatsApp and SMS."
-          primaryCta={{ label: "Connect Instagram", href: "/signup/" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
-          trustBar={[
-            { icon: MessageCircle, label: "DM automation" },
-            { icon: Camera, label: "Story-reply capture" },
-            { icon: Bot, label: "AI agent replies" },
-            { icon: ShoppingBag, label: "Catalog & product tags" },
-          ]}
-          visual={<InstagramVisual />}
-        />
+        <section className="relative isolate overflow-hidden bg-background">
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
+          </div>
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_580px] lg:items-stretch lg:gap-8 lg:pb-20 lg:pt-12">
+            <div className="ig-rise">
+              <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
+                <Sparkles className="h-3.5 w-3.5 text-accent" />Channels · Instagram
+              </p>
+              <h1 className="mt-6 text-balance text-[30px] font-semibold leading-[1.1] tracking-[-0.035em] sm:text-[42px]">
+                Instagram DMs, <span className="text-primary">answered like WhatsApp.</span>
+              </h1>
+              <p className="mt-5 max-w-lg text-pretty text-[17px] leading-relaxed text-muted-foreground">
+                Turn story replies and comments into DMs, answer them with your AI agent, and manage every conversation in the same inbox as WhatsApp and SMS.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <Link href="/signup/" className={BTN}>Connect Instagram <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
+                <Link href="/company/contact/" className={BTN_OUT}>Talk to Sales</Link>
+              </div>
+              <ul className="mt-8 grid max-w-lg grid-cols-1 gap-x-8 gap-y-3 text-[14px] text-muted-foreground sm:grid-cols-2">
+                {TRUST.map((t) => (
+                  <li key={t.label} className="flex items-start gap-2.5 leading-snug"><t.icon className="mt-[1px] h-4 w-4 shrink-0 text-primary" /><span>{t.label}</span></li>
+                ))}
+              </ul>
+            </div>
+            <div className="ig-rise" style={{ animationDelay: "0.15s" }}>
+              <InstagramScene />
+            </div>
+          </div>
+          <style>{`
+            @keyframes ig-rise { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
+            .ig-rise { animation: ig-rise .9s cubic-bezier(.2,.7,.2,1) both }
+            @media (prefers-reduced-motion: reduce) { .ig-rise { animation: none } }
+          `}</style>
+        </section>
 
         {/* ── TRUST LINE ────────────────────────────────────────── */}
         <div className="border-b border-border bg-muted/30 py-4">

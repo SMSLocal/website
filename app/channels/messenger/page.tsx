@@ -17,10 +17,10 @@ import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
 import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
+import { MessengerPhone } from "@/components/product/messenger-phone"
 import {
   CapabilityGrid,
   ProductFinalCta,
-  ProductHero,
   Section,
   SectionHeader,
   StatsBand,
@@ -28,61 +28,15 @@ import {
 
 export const metadata: Metadata = getPageMetadata("/channels/messenger")
 
-/* ── Hero visual ──────────────────────────────────────────────────────────── */
-function MessengerVisual() {
-  const dm = {
-    customer: "Is my order #7734 still on track for tomorrow?",
-    draft:
-      "Yes! Order #7734 is out for delivery and on track for tomorrow before 6pm. Want the live tracking link?",
-  }
+const BTN = "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
+const BTN_OUT = "inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary"
 
-  const badges = [
-    { icon: Sparkles, label: "AI agent" },
-    { icon: UserCheck, label: "Handoff ready" },
-    { icon: Radio, label: "Opted-in broadcast" },
-  ]
-
-  return (
-    <div className="flex h-full min-h-[360px] flex-col gap-4 lg:pl-4">
-      {/* Customer message */}
-      <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-        <p className="text-[10.5px] font-semibold uppercase tracking-widest text-white/50">
-          Messenger
-        </p>
-        <p className="mt-1.5 text-[13px] leading-relaxed text-white/85">{dm.customer}</p>
-      </div>
-
-      {/* AI agent reply card */}
-      <div className="rounded-xl border border-primary/25 bg-primary/10 px-4 py-3.5 backdrop-blur-md">
-        <div className="mb-2 flex items-center gap-1.5">
-          <Sparkles className="h-3.5 w-3.5 text-primary" />
-          <span className="text-[10.5px] font-semibold uppercase tracking-widest text-primary">
-            AI agent — auto-replied
-          </span>
-        </div>
-        <p className="text-[13px] leading-relaxed text-white">{dm.draft}</p>
-        <div className="mt-3 flex flex-wrap gap-1.5">
-          {badges.map((b) => (
-            <span
-              key={b.label}
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/8 px-2.5 py-0.5 text-[11px] font-medium text-white/75"
-            >
-              <b.icon className="h-3 w-3" /> {b.label}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* Shared inbox badge */}
-      <div className="flex items-center gap-2 rounded-xl border border-blue-500/20 bg-blue-500/10 px-4 py-2.5">
-        <Inbox className="h-4 w-4 shrink-0 text-blue-400" />
-        <span className="text-[12.5px] font-medium text-blue-300">
-          Same inbox as WhatsApp and Instagram — one agent view, every channel
-        </span>
-      </div>
-    </div>
-  )
-}
+const TRUST = [
+  { icon: MessageCircle, label: "Automated replies" },
+  { icon: Bot, label: "AI agent handoff" },
+  { icon: Radio, label: "Opted-in broadcasts" },
+  { icon: Inbox, label: "One shared inbox" },
+]
 
 export default function MessengerPage() {
   return (
@@ -104,26 +58,41 @@ export default function MessengerPage() {
       <main>
 
         {/* ── HERO ──────────────────────────────────────────────── */}
-        <ProductHero
-          compact
-          eyebrow="Channels · Facebook Messenger"
-          title={
-            <>
-              Messenger Conversations,
-              <br className="hidden sm:block" /> Handled Like WhatsApp
-            </>
-          }
-          subtitle="Auto-reply to common questions, hand off to a human when it matters, and broadcast to opted-in subscribers — all from the same inbox as your other channels."
-          primaryCta={{ label: "Connect Messenger", href: "/signup/" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
-          trustBar={[
-            { icon: MessageCircle, label: "Automated replies" },
-            { icon: Bot, label: "AI agent handoff" },
-            { icon: Radio, label: "Opted-in broadcasts" },
-            { icon: Inbox, label: "One shared inbox" },
-          ]}
-          visual={<MessengerVisual />}
-        />
+        <section className="relative isolate overflow-hidden bg-background">
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
+          </div>
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_580px] lg:items-stretch lg:gap-8 lg:pb-20 lg:pt-12">
+            <div className="ms-rise">
+              <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
+                <Sparkles className="h-3.5 w-3.5 text-accent" />Channels · Facebook Messenger
+              </p>
+              <h1 className="mt-6 text-balance text-[30px] font-semibold leading-[1.1] tracking-[-0.035em] sm:text-[42px]">
+                Messenger conversations, <span className="text-primary">handled like WhatsApp.</span>
+              </h1>
+              <p className="mt-5 max-w-lg text-pretty text-[17px] leading-relaxed text-muted-foreground">
+                Auto-reply to common questions, hand off to a human when it matters, and broadcast to opted-in subscribers, all from the same inbox as your other channels.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <Link href="/signup/" className={BTN}>Connect Messenger <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
+                <Link href="/company/contact/" className={BTN_OUT}>Talk to Sales</Link>
+              </div>
+              <ul className="mt-8 grid max-w-lg grid-cols-1 gap-x-8 gap-y-3 text-[14px] text-muted-foreground sm:grid-cols-2">
+                {TRUST.map((t) => (
+                  <li key={t.label} className="flex items-start gap-2.5 leading-snug"><t.icon className="mt-[1px] h-4 w-4 shrink-0 text-primary" /><span>{t.label}</span></li>
+                ))}
+              </ul>
+            </div>
+            <div className="ms-rise" style={{ animationDelay: "0.15s" }}>
+              <MessengerPhone />
+            </div>
+          </div>
+          <style>{`
+            @keyframes ms-rise { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
+            .ms-rise { animation: ms-rise .9s cubic-bezier(.2,.7,.2,1) both }
+            @media (prefers-reduced-motion: reduce) { .ms-rise { animation: none } }
+          `}</style>
+        </section>
 
         {/* ── TRUST LINE ────────────────────────────────────────── */}
         <div className="border-b border-border bg-muted/30 py-4">
