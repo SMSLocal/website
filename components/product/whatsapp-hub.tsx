@@ -1,3 +1,5 @@
+import { Check } from "lucide-react"
+
 // Hero illustration for /channels/whatsapp: one glossy "WhatsApp AI Platform" button in the middle with seven
 // pedestals around it (AI Replies, Rich Templates, Broadcasts, Verified Sender, Alerts & OTPs, Human Handoff,
 // Two-way Chat), each
@@ -6,6 +8,8 @@
 // glows. Every object is centred on its pedestal and sits on the same baseline; labels are pills of equal height.
 // Silent, 14-second loop.
 
+const ACTIONS = ["Answered in seconds", "Template sent", "Campaign delivered", "Sender verified", "OTP delivered", "Agent takes over", "Customer replied"]
+const SPARKS = [[40, 230, 0], [560, 240, 1.1], [150, 60, 2.2], [470, 70, 0.6], [330, 20, 1.7], [570, 400, 2.8], [30, 420, 3.4]]
 type Kind = "ai" | "template" | "broadcast" | "verified" | "bell" | "support" | "chat"
 const SPOTS: { k: Kind; label: string; x: number; y: number; s: number }[] = [
   { k: "ai", label: "AI Replies", x: 300, y: 92, s: 6 },
@@ -22,14 +26,31 @@ const CY = 270
 const CSS = `
 ${SPOTS.map((p, i) => `@keyframes wh-t${i} { 0%, ${p.s - 4}% { opacity: 0; stroke-dashoffset: 18 } ${p.s - 3}% { opacity: 1; stroke-dashoffset: 18 } ${p.s + 2}% { opacity: 1; stroke-dashoffset: -82 } ${p.s + 3}%, 100% { opacity: 0; stroke-dashoffset: -82 } }
 @keyframes wh-h${i} { 0%, ${p.s - 4}% { opacity: 0; stroke-dashoffset: 0 } ${p.s - 3}% { opacity: 1; stroke-dashoffset: 0 } ${p.s + 2}% { opacity: 1; stroke-dashoffset: -100 } ${p.s + 3}%, 100% { opacity: 0; stroke-dashoffset: -100 } }
-@keyframes wh-r${i} { 0%, ${p.s}% { opacity: 0 } ${p.s + 3}%, ${p.s + 9}% { opacity: 1 } ${p.s + 14}%, 100% { opacity: 0 } }
-@keyframes wh-o${i} { 0%, ${p.s}% { transform: translateY(0) } ${p.s + 3}%, ${p.s + 8}% { transform: translateY(-7px) } ${p.s + 13}%, 100% { transform: translateY(0) } }
+@keyframes wh-r${i} { 0%, ${p.s - 1}% { opacity: 0 } ${p.s + 3}%, ${p.s + 9}% { opacity: 1 } ${p.s + 15}%, 100% { opacity: 0 } }
+@keyframes wh-o${i} { 0%, ${p.s}% { transform: translateY(0) } ${p.s + 3}%, ${p.s + 8}% { transform: translateY(-14px) } ${p.s + 13}%, 100% { transform: translateY(0) } }
+@keyframes wh-g${i} { 0%, ${p.s - 1}% { opacity: 0 } ${p.s + 3}%, ${p.s + 9}% { opacity: 1 } ${p.s + 15}%, 100% { opacity: 0 } }
+@keyframes wh-a${i} { 0%, ${p.s}% { opacity: 0 } ${p.s + 4}%, 94% { opacity: 1 } 98%, 100% { opacity: 0 } }
+.wh-g${i} { opacity: 0; animation: wh-g${i} 14s ease-out infinite }
+.wh-a${i} { opacity: 0; animation: wh-a${i} 14s ease-out infinite }
+@keyframes wh-x${i} { 0%, ${p.s - 1}% { opacity: 0 } ${p.s + 2}%, ${p.s + 11}% { opacity: 1 } ${p.s + 15}%, 100% { opacity: 0 } }
+.wh-x${i} { opacity: 0; animation: wh-x${i} 14s ease-out infinite }
 @keyframes wh-d${i} { 0%, ${p.s}% { opacity: .35 } ${p.s + 3}%, ${p.s + 9}% { opacity: 1 } ${p.s + 14}%, 100% { opacity: .35 } }
 .wh-t${i} { opacity: 0; stroke-dasharray: 18 300; stroke-dashoffset: 18; animation: wh-t${i} 14s linear infinite }
 .wh-h${i} { opacity: 0; stroke-dasharray: .01 300; stroke-dashoffset: 0; animation: wh-h${i} 14s linear infinite }
 .wh-r${i} { opacity: 0; animation: wh-r${i} 14s ease-in-out infinite }
 .wh-o${i} { animation: wh-o${i} 14s cubic-bezier(.3,0,.2,1) infinite }
 .wh-d${i} { opacity: .35; animation: wh-d${i} 14s ease-in-out infinite }`).join("\n")}
+@keyframes wh-blob { 0%, 100% { transform: translate(0, 0) } 50% { transform: translate(14px, -10px) } }
+@keyframes wh-spark { 0%, 100% { opacity: .15; transform: scale(.6) } 50% { opacity: .9; transform: scale(1) } }
+@keyframes wh-rise { 0% { transform: translateY(0); opacity: 0 } 15% { opacity: .95 } 100% { transform: translateY(-120px); opacity: 0 } }
+@keyframes wh-req { 0%, 1% { opacity: 0; transform: translateY(-8px) } 5%, 94% { opacity: 1; transform: none } 98%, 100% { opacity: 0 } }
+@keyframes wh-done { 0%, 86% { opacity: 0; transform: translateY(6px) } 90%, 95% { opacity: 1; transform: none } 98%, 100% { opacity: 0 } }
+.wh-blob { animation: wh-blob 9s ease-in-out infinite }
+.wh-spark { transform-box: fill-box; transform-origin: center; animation: wh-spark 3.4s ease-in-out infinite }
+.wh-rise { opacity: 0; animation: wh-rise 4.6s ease-out infinite }
+.wh-req { opacity: 0; animation: wh-req 14s ease-out infinite }
+.wh-done { opacity: 0; animation: wh-done 14s ease-out infinite }
+
 @keyframes wh-flow { to { stroke-dashoffset: -24 } }
 @keyframes wh-ring { 0% { transform: scale(.6); opacity: .55 } 100% { transform: scale(1.3); opacity: 0 } }
 @keyframes wh-pulse { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.04) } }
@@ -39,7 +60,8 @@ ${SPOTS.map((p, i) => `@keyframes wh-t${i} { 0%, ${p.s - 4}% { opacity: 0; strok
 .wh-pulse { transform-box: fill-box; transform-origin: center; animation: wh-pulse 3.6s ease-in-out infinite }
 .wh-bob { animation: wh-bob 6s ease-in-out infinite }
 @media (prefers-reduced-motion: reduce) {
-  .wh-flow, .wh-ring, .wh-pulse, .wh-bob { animation: none }
+  .wh-flow, .wh-ring, .wh-pulse, .wh-bob, .wh-blob, .wh-spark, .wh-rise { animation: none }
+  .wh-req, .wh-done, [class*="wh-a"] { animation: none; opacity: 1; transform: none } [class*="wh-g"] { animation: none; opacity: 0 } [class*="wh-x"] { animation: none; opacity: 0 }
   [class*="wh-t"], [class*="wh-h"], [class*="wh-r"] { animation: none; opacity: 0 } [class*="wh-o"] { animation: none } [class*="wh-d"] { animation: none; opacity: 1 }
 }
 `
@@ -54,10 +76,13 @@ const BLUE = "oklch(0.74 0.14 250)"
 function Pedestal({ i }: { i: number }) {
   return (
     <>
-      <ellipse cx="0" cy="26" rx="62" ry="12" fill={NAVY} opacity=".07" />
-      <path d="M-54 0 v13 a54 17 0 0 0 108 0 v-13z" fill="oklch(0.95 0.008 200)" stroke="var(--border)" />
-      <ellipse cx="0" cy="0" rx="54" ry="17" fill="#fff" stroke="var(--border)" />
+      <ellipse cx="4" cy="28" rx="66" ry="13" fill={NAVY} opacity=".16" filter="url(#wh-blur)" />
+      <path d="M-54 0 v13 a54 17 0 0 0 108 0 v-13z" fill="url(#wh-cyl)" stroke="var(--border)" />
+      <path d="M-54 13 a54 17 0 0 0 108 0" fill="none" stroke="#0f2a3a" strokeOpacity=".18" strokeWidth="2" />
+      <ellipse cx="0" cy="0" rx="54" ry="17" fill="url(#wh-top)" stroke="#fff" />
+      <ellipse cx="-14" cy="-6" rx="22" ry="3.6" fill="#fff" opacity=".7" />
       <ellipse cx="0" cy="0" rx="45" ry="13.5" fill="none" stroke={TEAL} strokeOpacity=".28" />
+      <ellipse className={`wh-r${i}`} cx="0" cy="0" rx="50" ry="15.5" fill="none" stroke={TEAL} strokeOpacity=".55" strokeWidth="9" filter="url(#wh-blur)" />
       <ellipse className={`wh-r${i}`} cx="0" cy="0" rx="45" ry="13.5" fill="none" stroke={TEAL} strokeWidth="2.6" />
     </>
   )
@@ -184,16 +209,37 @@ export function WhatsAppHub() {
   }))
   return (
     <div className="relative mx-auto w-full max-w-[600px]">
-      <svg viewBox="0 0 600 512" className="block w-full" role="img" aria-label="WhatsApp AI Platform in the centre, connected to AI Replies, Rich Templates, Broadcasts, Verified Sender, Alerts and OTPs, Human Handoff and Two-way Chat">
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+        <span className="wh-blob absolute -left-8 top-[52%] h-[220px] w-[220px] rounded-full bg-primary/12 blur-[70px]" />
+        <span className="wh-blob absolute -right-6 top-0 h-[220px] w-[220px] rounded-full bg-[oklch(0.74_0.14_250)]/13 blur-[70px]" style={{ animationDelay: "-4s" }} />
+        <span className="wh-blob absolute bottom-0 left-1/3 h-[160px] w-[160px] rounded-full bg-[oklch(0.85_0.14_80)]/12 blur-[70px]" style={{ animationDelay: "-7s" }} />
+      </div>
+      <p className="wh-req flex items-center justify-center gap-2 text-center text-[13.5px] font-medium tracking-tight sm:text-[14.5px]">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src="/logos/channels/whatsapp.svg" alt="" width={18} height={18} className="h-[18px] w-[18px] shrink-0" />
+        “Where is my order #1042? Send me the invoice.”
+      </p>
+      <svg viewBox="0 0 600 540" className="mt-1 block w-full" role="img" aria-label="WhatsApp AI Platform in the centre, connected to AI Replies, Rich Templates, Broadcasts, Verified Sender, Alerts and OTPs, Human Handoff and Two-way Chat">
+        <defs><filter id="wh-blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9" /></filter>
+          <linearGradient id="wh-cyl" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#c9e3da" /><stop offset=".35" stopColor="#ffffff" /><stop offset=".7" stopColor="#e6f2ee" /><stop offset="1" stopColor="#a9cdc1" /></linearGradient>
+          <radialGradient id="wh-top" cx=".38" cy=".3" r=".85"><stop offset="0" stopColor="#ffffff" /><stop offset=".6" stopColor="#f1f8f6" /><stop offset="1" stopColor="#d6e9e3" /></radialGradient>
+          <linearGradient id="wh-hub" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="oklch(0.62 0.13 175)" /><stop offset=".32" stopColor="oklch(0.72 0.13 175)" /><stop offset=".7" stopColor="oklch(0.52 0.12 175)" /><stop offset="1" stopColor="oklch(0.36 0.09 178)" /></linearGradient>
+          <radialGradient id="wh-hubtop" cx=".36" cy=".28" r=".9"><stop offset="0" stopColor="oklch(0.82 0.12 172)" /><stop offset=".55" stopColor="oklch(0.64 0.14 175)" /><stop offset="1" stopColor="oklch(0.5 0.12 176)" /></radialGradient>
+        </defs>
+        {SPARKS.map(([x, y, d]) => (
+          <path key={`${x}-${y}`} className="wh-spark" d={`M${x} ${y - 6} L${x + 1.6} ${y - 1.6} L${x + 6} ${y} L${x + 1.6} ${y + 1.6} L${x} ${y + 6} L${x - 1.6} ${y + 1.6} L${x - 6} ${y} L${x - 1.6} ${y - 1.6}Z`} fill="var(--primary)" opacity=".5" style={{ animationDelay: `${d}s` }} />
+        ))}
         {/* connecting lines (behind everything) */}
         {SPOTS.map((p, i) => {
-          const d = `M${CX} ${CY} L${ends[i].ex.toFixed(1)} ${ends[i].ey.toFixed(1)}`
+          const qx = CX + (ends[i].ex - CX) * 0.5
+          const qy = Math.min(ends[i].ey, CY) - 46
+          const d = `M${CX} ${CY - 6} Q${qx.toFixed(1)} ${qy.toFixed(1)} ${ends[i].ex.toFixed(1)} ${ends[i].ey.toFixed(1)}`
           return (
             <g key={p.k}>
               <path d={d} fill="none" stroke={TEAL} strokeOpacity=".28" strokeWidth="1.6" />
               <path className="wh-flow" d={d} fill="none" stroke={TEAL} strokeOpacity=".6" strokeWidth="2" strokeLinecap="round" strokeDasharray="1 11" />
               <path className={`wh-t${i}`} d={d} pathLength="100" fill="none" stroke={TEAL} strokeWidth="4" strokeLinecap="round" />
-              <path className={`wh-h${i}`} d={d} pathLength="100" fill="none" stroke={TEAL} strokeWidth="11" strokeLinecap="round" />
+              <path className={`wh-h${i}`} d={d} pathLength="100" fill="none" stroke={TEAL} strokeOpacity=".16" strokeWidth="11" strokeLinecap="round" />
               <path className={`wh-h${i}`} d={d} pathLength="100" fill="none" stroke="#fff" strokeWidth="5.5" strokeLinecap="round" />
             </g>
           )
@@ -201,26 +247,42 @@ export function WhatsAppHub() {
 
         {/* the seven pedestals */}
         {SPOTS.map((p, i) => (
-          <g key={p.k} transform={`translate(${p.x} ${p.y})`}>
+          <g key={p.k} className="wh-spot" transform={`translate(${p.x} ${p.y})`}>
+            <rect x="-64" y="-100" width="128" height="190" fill="transparent" />
             <g className="wh-bob" style={{ animationDelay: `${-i * 0.8}s` }}>
+              <ellipse className={`wh-g${i}`} cx="0" cy="-30" rx="58" ry="58" fill="color-mix(in oklch, var(--primary) 20%, white)" opacity=".3" filter="url(#wh-blur)" />
               <Pedestal i={i} />
-              <g className={`wh-o${i}`}><g transform="scale(.8)"><Object3D k={p.k} /></g></g>
+              <g className={`wh-o${i}`}>
+                <ellipse cx="0" cy="-2" rx="30" ry="7" fill={NAVY} opacity=".22" filter="url(#wh-blur)" />
+                <g transform="translate(3 4.5) scale(.8)" style={{ filter: "brightness(.45) saturate(.7)" }} opacity=".5"><Object3D k={p.k} /></g>
+                <g transform="scale(.8)" style={{ filter: "drop-shadow(0 5px 4px rgba(15,31,58,.28))" }}><Object3D k={p.k} /></g>
+              </g>
             </g>
             <Label text={p.label} i={i} />
+            <g className={`wh-a${i}`}>
+              <circle cx="50" cy="-66" r="11" fill="var(--primary)" stroke="#fff" strokeWidth="2.5" />
+              <path d="M44.5 -66 l4 4 l7 -8" fill="none" stroke="#fff" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" />
+            </g>
+            <text className={`wh-x${i}`} x="0" y="84" textAnchor="middle" fontSize="13" fontWeight="600" fill="var(--primary)">{ACTIONS[i]}</text>
           </g>
         ))}
 
+        {/* light column and rising particles above the hub */}
+        <path d={`M${CX - 46} ${CY - 10} L${CX - 24} ${CY - 150} L${CX + 24} ${CY - 150} L${CX + 46} ${CY - 10} Z`} fill="var(--primary)" opacity=".08" filter="url(#wh-blur)" />
+        {[[-30, 0], [-12, 0.9], [8, 1.8], [24, 2.6], [-20, 3.3], [16, 4.1]].map(([dx, d]) => (
+          <circle key={dx} className="wh-rise" cx={CX + dx} cy={CY - 20} r="2.4" fill="#fff" stroke="var(--primary)" strokeWidth="1" style={{ animationDelay: `${d}s` }} />
+        ))}
         {/* the glossy centre button: a chunky disc with a raised inner plate and the WhatsApp badge */}
-        <ellipse cx={CX} cy={CY + 62} rx="136" ry="30" fill={NAVY} opacity=".08" />
+        <ellipse cx={CX + 6} cy={CY + 66} rx="150" ry="32" fill={NAVY} opacity=".2" filter="url(#wh-blur)" />
         <ellipse className="wh-ring" cx={CX} cy={CY + 16} rx="126" ry="42" fill="none" stroke={TEAL} strokeWidth="2" />
         <ellipse className="wh-ring" cx={CX} cy={CY + 16} rx="126" ry="42" fill="none" stroke={TEAL} strokeWidth="2" style={{ animationDelay: "1.6s" }} />
-        <path d={`M${CX - 120} ${CY + 16} v14 a120 40 0 0 0 240 0 v-14z`} fill="oklch(0.95 0.01 200)" stroke="var(--border)" />
-        <ellipse cx={CX} cy={CY + 16} rx="120" ry="40" fill="#fff" stroke="var(--border)" />
+        <path d={`M${CX - 120} ${CY + 16} v14 a120 40 0 0 0 240 0 v-14z`} fill="url(#wh-cyl)" stroke="var(--border)" />
+        <ellipse cx={CX} cy={CY + 16} rx="120" ry="40" fill="url(#wh-top)" stroke="#fff" />
         <ellipse cx={CX} cy={CY + 16} rx="110" ry="35" fill="none" stroke={TEAL} strokeOpacity=".4" />
         {/* button body */}
-        <path d={`M${CX - 96} ${CY} v36 a96 32 0 0 0 192 0 v-36z`} fill="oklch(0.5 0.13 175)" />
+        <path d={`M${CX - 96} ${CY} v36 a96 32 0 0 0 192 0 v-36z`} fill="url(#wh-hub)" />
         <path d={`M${CX - 94} ${CY + 6} a94 31 0 0 0 188 0`} fill="none" stroke="#fff" strokeOpacity=".22" strokeWidth="1.6" />
-        <ellipse cx={CX} cy={CY} rx="96" ry="32" fill={TEAL} />
+        <ellipse cx={CX} cy={CY} rx="96" ry="32" fill="url(#wh-hubtop)" />
         <ellipse cx={CX} cy={CY} rx="84" ry="27" fill="none" stroke="#fff" strokeOpacity=".4" strokeWidth="1.4" />
         {/* raised inner plate */}
         <path d={`M${CX - 66} ${CY - 4} v6 a66 21 0 0 0 132 0 v-6z`} fill="oklch(0.56 0.13 175)" />
@@ -234,12 +296,16 @@ export function WhatsAppHub() {
         {/* the WhatsApp badge standing on the plate */}
         <g className="wh-pulse">
           <ellipse cx={CX} cy={CY + 2} rx="30" ry="8" fill="#000" opacity=".2" />
-          <circle cx={CX} cy={CY - 26} r="38" fill="#fff" stroke="var(--border)" />
+          <circle cx={CX} cy={CY - 26} r="38" fill="url(#wh-top)" stroke="#fff" strokeWidth="2" />
+          <path d={`M${CX - 30} ${CY - 8} a38 38 0 0 0 60 0`} fill="none" stroke="#0f2a3a" strokeOpacity=".14" strokeWidth="4" />
           <circle cx={CX} cy={CY - 26} r="32.5" fill="none" stroke={TEAL} strokeOpacity=".3" strokeWidth="1.4" />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <image href="/logos/channels/whatsapp.svg" x={CX - 26} y={CY - 52} width="52" height="52" preserveAspectRatio="xMidYMid meet" />
         </g>
       </svg>
+      <p className="wh-done mt-1 flex items-center justify-center gap-2 text-center text-[13.5px] font-semibold text-primary sm:text-[14.5px]">
+        <Check className="h-4 w-4 shrink-0" strokeWidth={3.4} />Handled on WhatsApp. Seven steps done, no ticket needed.
+      </p>
       <style>{CSS}</style>
     </div>
   )
