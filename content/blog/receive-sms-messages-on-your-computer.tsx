@@ -221,7 +221,7 @@ export default function ReceiveSmsMessagesOnYourComputerPost() {
         </LI>
         <LI>
           <Strong>Confirm both devices are online.</Strong>{" "}
-          <A href="https://en.wikipedia.org/wiki/Bluetooth">Bluetooth</A>-paired setups need
+          <A href="https://www.bluetooth.com/learn-about-bluetooth/tech-overview/">Bluetooth</A>-paired setups need
           proximity; Wi-Fi/cloud-relay setups need both devices connected to the internet.
         </LI>
         <LI>

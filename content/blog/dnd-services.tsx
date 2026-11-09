@@ -316,7 +316,7 @@ export default function DndServicesPost() {
       <P>
         India&apos;s <Strong>Digital Personal Data Protection (DPDP) Act 2023</Strong> adds a
         statutory consent framework on top of{" "}
-        <A href="https://en.wikipedia.org/wiki/Telecom_Regulatory_Authority_of_India">TRAI</A>&apos;s
+        <A href="https://www.trai.gov.in/">TRAI</A>&apos;s
         existing DND rules. The practical
         difference: TRAI governs what you can send and when; DPDP governs how you collected the
         data and whether the consent is legally valid.

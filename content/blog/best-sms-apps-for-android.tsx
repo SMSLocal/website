@@ -423,7 +423,7 @@ export default function BestSmsAppsForAndroidPost() {
       <H3>Limitations</H3>
       <UL>
         <LI>Free version has ads; ad-free requires the Pro purchase (₹280 one-time)</LI>
-        <LI>No <A href="https://en.wikipedia.org/wiki/Rich_Communication_Services">RCS</A>, no web access, no PC mirroring</LI>
+        <LI>No <A href="https://developers.google.com/business-communications/rcs-business-messaging">RCS</A>, no web access, no PC mirroring</LI>
         <LI>UI is less polished than Google Messages in 2026 — shows its age slightly</LI>
       </UL>
 

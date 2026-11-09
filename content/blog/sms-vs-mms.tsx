@@ -245,7 +245,7 @@ export default function SmsVsMmsPost() {
       <H3>RCS — business multimedia messaging</H3>
       <P>
         Rich Communication Services (RCS) is the carrier-level successor to SMS and{" "}
-        <A href="https://en.wikipedia.org/wiki/Multimedia_Messaging_Service">MMS</A>.
+        <A href="https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=794">MMS</A>.
         In 2026, all three major Indian carriers — Jio, Airtel, and Vi — have activated RCS
         on their networks. RCS supports images, carousels, quick-reply buttons, and verified
         business sender branding, all delivered via the cellular network with SMS as a fallback

@@ -304,7 +304,7 @@ export default function WhatsappMarketingIndiaPost() {
         For D2C and e-commerce brands in India, this is significant. A customer who clicks a
         broadcast campaign can land inside your catalog instead of being sent to a mobile website.
         No load time, no drop-off at an unfamiliar URL — the entire browse-to-buy journey stays on
-        <A href="https://en.wikipedia.org/wiki/WhatsApp">WhatsApp</A>. Businesses that have switched repeat-purchase flows from landing pages to
+        <A href="https://whatsappbusiness.com/">WhatsApp</A>. Businesses that have switched repeat-purchase flows from landing pages to
         Catalog+WhatsApp Pay report meaningful improvements in conversion, particularly in Tier 2
         and Tier 3 markets where mobile data is slower and web pages add friction.
       </P>

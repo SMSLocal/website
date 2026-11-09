@@ -417,7 +417,7 @@ export default function BestFreeSmsPost() {
         </BlogFaqItem>
 
         <BlogFaqItem q={"Can I send free SMS internationally from India?"}>
-        Not through any mainstream free service. International <A href="https://en.wikipedia.org/wiki/SMS">SMS</A> routing carries real cost —
+        Not through any mainstream free service. International <A href="https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=747">SMS</A> routing carries real cost —
         typically ₹2–5 per message. WhatsApp is the free alternative for most international
         personal messaging to smartphone users. For business international SMS, expect paid rates
         from any platform.

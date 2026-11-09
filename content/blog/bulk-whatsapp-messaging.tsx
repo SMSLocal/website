@@ -178,7 +178,7 @@ export default function BulkWhatsappMessagingPost() {
 
       <H2 id="messaging-limits-and-tiers">Messaging limits and tiers in 2026</H2>
       <P>
-        <A href="https://en.wikipedia.org/wiki/WhatsApp">WhatsApp</A> controls how many people you
+        <A href="https://developers.facebook.com/documentation/business-messaging/whatsapp/messaging-limits">WhatsApp</A> controls how many people you
         can message outside a customer service window through a messaging limit: the number of
         unique users you can reach within a moving 24-hour period. Meta has changed these rules
         more than once, so older guides are out of date. The current picture, from

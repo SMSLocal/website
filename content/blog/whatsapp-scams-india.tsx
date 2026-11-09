@@ -378,7 +378,7 @@ export default function WhatsappScamsIndiaPost() {
       <BlogFaq>
         <BlogFaqItem q={"Can a scammer access my phone just by sending a WhatsApp message?"}>
           Not from a text message alone. The danger comes when you click a malicious link (which can
-          install malware or open a <A href="https://en.wikipedia.org/wiki/Phishing">phishing</A> page) or voluntarily install an app or APK the scammer
+          install malware or open a <A href="https://csrc.nist.gov/glossary/term/phishing">phishing</A> page) or voluntarily install an app or APK the scammer
           recommends. Don&apos;t click links from unknown numbers and never install apps on a
           stranger&apos;s say-so.
         </BlogFaqItem>

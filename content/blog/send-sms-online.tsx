@@ -242,7 +242,7 @@ export default function SendSmsOnlinePost() {
       <H2 id="legal">Legal requirements for sending SMS online in India</H2>
       <P>
         Whatever channel and platform you pick, these rules apply to every{" "}
-        <A href="https://en.wikipedia.org/wiki/SMS">SMS</A> sent from India to an Indian number:
+        <A href="https://www.trai.gov.in/sites/default/files/2025-02/Regulation_12022025.pdf">SMS</A> sent from India to an Indian number:
       </P>
       <OL>
         <LI>

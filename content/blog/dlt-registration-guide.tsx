@@ -333,7 +333,7 @@ export default function DltRegistrationGuide() {
       </P>
       <OL>
         <LI>
-          Send a single <A href="https://en.wikipedia.org/wiki/SMS">SMS</A> to your own phone using the transactional Header + Template. Confirm
+          Send a single <A href="https://portal.3gpp.org/desktopmodules/Specifications/SpecificationDetails.aspx?specificationId=747">SMS</A> to your own phone using the transactional Header + Template. Confirm
           it arrives with the correct Header name.
         </LI>
         <LI>

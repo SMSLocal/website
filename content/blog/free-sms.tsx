@@ -238,7 +238,7 @@ export default function FreeSmsPost() {
         </LI>
         <LI>
           <Strong>Compliance-sensitive sends</Strong> — transactional and promotional{" "}
-          <A href="https://en.wikipedia.org/wiki/SMS">SMS</A> in India require DLT registration. Free
+          <A href="https://www.trai.gov.in/sites/default/files/2025-02/Regulation_12022025.pdf">SMS</A> in India require DLT registration. Free
           consumer services do not support DLT headers.
         </LI>
         <LI>

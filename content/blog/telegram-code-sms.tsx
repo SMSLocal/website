@@ -253,7 +253,7 @@ export default function TelegramCodeSmsPost() {
 
       <H2 id="security">Security implications of SMS verification</H2>
       <P>
-        <A href="https://en.wikipedia.org/wiki/Telegram_(software)">Telegram</A>&apos;s SMS-based
+        <A href="https://core.telegram.org/api/auth">Telegram</A>&apos;s SMS-based
         login has a known security limitation: anyone who can intercept
         or forward your SMS (via a SIM-swap attack, for example) can log into your Telegram account.
         To reduce this risk:

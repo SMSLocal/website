@@ -206,7 +206,7 @@ export default function GmailPasswordRecoveryPost() {
       <H3>Use two-factor, but not SMS-only</H3>
       <P>
         SMS-based{" "}
-        <A href="https://en.wikipedia.org/wiki/Multi-factor_authentication">2FA</A> is better than
+        <A href="https://csrc.nist.gov/pubs/sp/800/63/b/4/final">2FA</A> is better than
         nothing, but SIM-swap attacks are real in India. The safer
         setup:
       </P>

@@ -176,7 +176,7 @@ export default function AwsSmsPost() {
 
       <H2 id="aws-vs-provider">When AWS SMS is the right call — and when it isn&apos;t</H2>
       <P>
-        If your stack already lives on <A href="https://en.wikipedia.org/wiki/Amazon_Web_Services">AWS</A>{" "}
+        If your stack already lives on <A href="https://aws.amazon.com/">AWS</A>{" "}
         and you have the DevOps capacity to manage DLT registration, sender-ID mapping, the sandbox,
         and delivery monitoring yourself, AWS SMS is a solid, scalable choice that keeps everything
         in one bill.
