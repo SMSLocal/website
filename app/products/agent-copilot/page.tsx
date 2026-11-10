@@ -7,7 +7,7 @@ import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
 import { BreadcrumbJsonLd, FaqJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
 import { ProductFinalCta } from "@/components/product/product-page"
-import { CopilotComposer } from "@/components/product/copilot-composer"
+import { CopilotGlass } from "@/components/product/copilot-glass"
 
 export const metadata: Metadata = getPageMetadata("/products/agent-copilot")
 
@@ -82,10 +82,9 @@ export default function AgentCopilotPage() {
       <SiteHeader />
       <main className="overflow-x-clip bg-background font-normal text-foreground">
 
-        {/* 1 · HERO: an agent's reply box where Copilot writes a ghost draft and Tab accepts it */}
+        {/* 1 · HERO: Copilot helping a human agent reply: summary, a typed draft, Use reply, sent */}
         <section className="relative isolate overflow-hidden bg-background">
           <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute right-[-120px] top-[-60px] h-[520px] w-[520px] rounded-full bg-primary/7 blur-[130px]" />
             <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
           </div>
           <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_560px] lg:gap-8 lg:pb-20 lg:pt-12">
@@ -110,7 +109,7 @@ export default function AgentCopilotPage() {
               </ul>
             </div>
             <div className="cp-rise relative" style={{ animationDelay: "0.15s" }}>
-              <CopilotComposer />
+              <CopilotGlass />
             </div>
           </div>
         </section>
