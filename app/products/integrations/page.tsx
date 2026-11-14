@@ -3,158 +3,130 @@ import Link from "next/link"
 import { getPageMetadata } from "@/lib/seo"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
+import { ExploreMore } from "@/components/product/explore-more"
+import { GsFinalCta } from "@/components/home/gs/sections-c"
 import { SiteFooter } from "@/components/landing/site-footer"
-import { IntegrationsStackPage } from "@/components/lazy"
-import { Section, SectionHeader } from "@/components/product/product-page"
+import { FaqSection } from "@/components/landing/faq-section"
+import { WhatsAppMotion } from "@/components/product/whatsapp-motion"
+import {
+  IntegrationsApi,
+  IntegrationsChannels,
+  IntegrationsDirectory,
+  IntegrationsRecipes,
+  IntegrationsStyles,
+  IntegrationsTrust,
+} from "@/components/product/integrations-sections"
+import { IntegrationsHubScene } from "@/components/product/integrations-hub-scene"
+import { ArrowRight, Code2, KeyRound, Layers, Sparkles, Webhook } from "lucide-react"
 
 // ─── SEO — edit lib/seo/registry.ts or open /dev/seo to preview ──────────────
 // Was a hardcoded metadata object with no canonical, so the page inherited the
 // root layout's canonical (the homepage) and was treated as a duplicate.
-import { BreadcrumbJsonLd } from "@/components/seo/json-ld"
+import { BreadcrumbJsonLd, FaqJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
 export const metadata: Metadata = getPageMetadata("/products/integrations")
 
-// The interactive stack below is a client-only component, so none of its text is in
-// the server HTML. This plain-text summary (the same apps and channels the stack
-// lists) gives crawlers that do not run JavaScript the page content too.
-const INTEGRATION_GROUPS = [
+const FAQ = [
   {
-    label: "E-commerce",
-    apps: "Shopify, WooCommerce and Magento",
-    use: "send order, tracking and refund alerts on SMS and WhatsApp, and trigger messages from order events.",
+    q: "Which apps does SMSLocal integrate with?",
+    a: "SMSLocal connects to Shopify, WooCommerce and Magento for e-commerce, HubSpot, Salesforce and Zoho CRM, Freshdesk, Zendesk and Intercom for support, Slack, Microsoft Teams and Google Sheets, Google Analytics, Mixpanel and Power BI, and Zapier, Make and Pabbly Connect for automation.",
   },
   {
-    label: "CRM",
-    apps: "HubSpot, Salesforce and Zoho CRM",
-    use: "sync contacts, deals and message history, and send SMS or WhatsApp from lead stages.",
+    q: "Do I need a developer to connect my apps?",
+    a: "No. App integrations use 1-click OAuth on Starter and above, so you can connect a store, CRM or helpdesk without writing code. For anything custom, the REST API and webhooks are there.",
   },
   {
-    label: "Helpdesk",
-    apps: "Freshdesk, Zendesk and Intercom",
-    use: "reply to tickets over WhatsApp, turn SMS replies into tickets and route escalations.",
+    q: "Is the Zapier integration free?",
+    a: "The SMSLocal side is free on Starter and above. Connect SMS, WhatsApp, OTP and RCS triggers at no extra cost. Zapier's own pricing applies, and their free tier already covers basic automations like \"new lead, then send SMS\".",
   },
   {
-    label: "Communication",
-    apps: "Slack, Microsoft Teams and Google Sheets",
-    use: "route customer messages into Slack channels, notify teams on replies and log conversations to a sheet.",
+    q: "Can I keep my existing DLT sender IDs and templates?",
+    a: "Yes. When you connect SMSLocal we migrate your approved Sender IDs (headers) and DLT content templates across Jio, Airtel, Vi and BSNL, so your transactional and OTP traffic keeps flowing without re-registration delays.",
   },
   {
-    label: "Analytics",
-    apps: "Google Analytics, Mixpanel and Power BI",
-    use: "attribute conversions to campaigns, stream delivery and reply events, and pipe message metrics into dashboards.",
+    q: "Is there a public REST API?",
+    a: "Yes. A full REST API with CRUD for contacts, campaigns and messages, idempotency keys, signed webhooks, and official SDKs for Node.js, Python, PHP and Go. A sandbox lets you simulate delivery and carrier failures without spending credit.",
   },
   {
-    label: "Automation",
-    apps: "Zapier, Make and Pabbly Connect",
-    use: "connect SMSLocal to thousands of other apps without code, using visual scenario builders and multi-step flows.",
+    q: "Can SMSLocal integrate with my custom CRM?",
+    a: "Yes. Beyond the native HubSpot, Salesforce and Zoho connectors, you can wire any in-house CRM to SMSLocal through the REST API, webhooks, or Zapier and Make, with no wait for a pre-built connector.",
   },
-] as const
+  {
+    q: "Does SMSLocal support SAML SSO?",
+    a: "Yes. SAML 2.0 single sign-on and SCIM user provisioning are available on Enterprise plans, alongside role-based access, IP allowlists and scoped API keys for every team member.",
+  },
+]
+
+const EXPLORE = [
+  { href: "/channels/whatsapp/", label: "WhatsApp Business API", hint: "Official API, templates and AI replies" },
+  { href: "/channels/web-chat/", label: "Website live chat widget", hint: "AI chat for every visitor" },
+  { href: "/products/voice/", label: "Business voice calling", hint: "Calls inside your support inbox" },
+  { href: "/numbers/did/", label: "DID and virtual numbers", hint: "Local and toll-free numbers" },
+]
+
+const BTN = "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
+const BTN_OUT = "inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary"
+
+const TRUST = [
+  { icon: KeyRound, label: "1-click OAuth on Starter" },
+  { icon: Layers, label: "10 native channels" },
+  { icon: Code2, label: "A full REST API" },
+  { icon: Webhook, label: "Webhooks and a sandbox" },
+]
 
 export default function IntegrationsPage() {
   return (
     <>
+      <ProductServiceJsonLd name="SMSLocal Integrations" description="Connect SMSLocal to Shopify, HubSpot, Salesforce, Slack, Zapier and 30+ apps with 1-click OAuth, 10 native channels and a full REST API." path="/products/integrations" category="Business Software Integrations" />
       <BreadcrumbJsonLd crumbs={[{ name: "Home", path: "/" }, { name: "Products", path: "/products" }, { name: "Integrations", path: "/products/integrations" }]} />
+      <FaqJsonLd items={FAQ} path="/products/integrations" />
       <AnnouncementStrip />
       <SiteHeader />
       <main className="overflow-x-clip">
-        <div className="relative overflow-hidden bg-[oklch(0.13_0.02_230)] pb-6 pt-10 sm:pt-14">
-          <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
-            <div className="inline-flex items-center gap-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1.5 text-[12px] font-semibold text-emerald-400">
-              Integrations &middot; 30+ apps &middot; OAuth in one click
+        <section className="relative isolate overflow-hidden bg-background">
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
+          </div>
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_580px] lg:items-stretch lg:gap-8 lg:pb-20 lg:pt-12">
+            <div className="int-rise min-w-0">
+              <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
+                <Sparkles className="h-3.5 w-3.5 text-accent" />Integrations &middot; 30+ apps &middot; OAuth in one click
+              </p>
+              <h1 className="mt-6 text-balance text-[30px] font-semibold leading-[1.1] tracking-[-0.035em] sm:text-[42px]">
+                Connect SMSLocal to your <span className="text-primary">stack.</span>
+              </h1>
+              <p className="mt-5 max-w-lg text-pretty text-[17px] leading-relaxed text-muted-foreground">
+                Shopify, HubSpot, Salesforce, Slack, Zapier and more — 1-click OAuth on Starter. Plus 10 native channels and a full REST API.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <Link href="/signup/" className={BTN}>Start your trial <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
+                <Link href="/developers/api-docs/" className={BTN_OUT}>View the API docs</Link>
+              </div>
+              <ul className="mt-8 grid max-w-lg grid-cols-1 gap-x-8 gap-y-3 text-[14px] text-muted-foreground sm:grid-cols-2">
+                {TRUST.map((t) => (
+                  <li key={t.label} className="flex items-start gap-2.5 leading-snug"><t.icon className="mt-[1px] h-4 w-4 shrink-0 text-primary" /><span>{t.label}</span></li>
+                ))}
+              </ul>
             </div>
-            <h1 className="mt-4 text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-[48px] lg:leading-[1.06]">
-              Connect SMSLocal to your{" "}
-              <span style={{ background: "linear-gradient(135deg,#10b981,oklch(0.72 0.17 165))", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>
-                stack.
-              </span>
-            </h1>
-            <p className="mt-4 max-w-xl text-[15px] leading-relaxed text-white/60">
-              Shopify, HubSpot, Salesforce, Slack, Zapier and more — 1-click OAuth on Starter. Plus 10 native channels and a full REST API.
-            </p>
+            <div className="int-rise min-w-0" style={{ animationDelay: "0.15s" }}>
+              <IntegrationsHubScene />
+            </div>
           </div>
-        </div>
-        <IntegrationsStackPage hideHero />
-
-        <Section tone="muted">
-          <SectionHeader
-            eyebrow="At a glance"
-            title="What SMSLocal connects to."
-            subtitle="The same apps and channels as above, in plain text."
-          />
-          <div className="mx-auto mt-10 max-w-4xl">
-            <dl className="grid gap-4 sm:grid-cols-2">
-              {INTEGRATION_GROUPS.map((g) => (
-                <div
-                  key={g.label}
-                  className="rounded-2xl border border-foreground/10 bg-background p-5 shadow-sm"
-                >
-                  <dt className="text-[15px] font-semibold">
-                    {g.label}: {g.apps}
-                  </dt>
-                  <dd className="mt-2 text-[13.5px] leading-relaxed text-muted-foreground">
-                    Use it to {g.use}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-
-            <p className="mt-8 text-[14.5px] leading-relaxed text-foreground/85">
-              <strong>Ten native channels in one account.</strong> Besides the apps above,
-              SMSLocal covers{" "}
-              <Link href="/products/bulk-sms/" className="font-semibold text-primary hover:underline">
-                Bulk SMS
-              </Link>
-              ,{" "}
-              <Link
-                href="/products/whatsapp-business-api/"
-                className="font-semibold text-primary hover:underline"
-              >
-                WhatsApp
-              </Link>
-              ,{" "}
-              <Link href="/products/email/" className="font-semibold text-primary hover:underline">
-                Email
-              </Link>
-              ,{" "}
-              <Link href="/products/otp-sms/" className="font-semibold text-primary hover:underline">
-                OTP SMS
-              </Link>
-              ,{" "}
-              <Link href="/products/rcs/" className="font-semibold text-primary hover:underline">
-                RCS
-              </Link>
-              ,{" "}
-              <Link href="/products/voice/" className="font-semibold text-primary hover:underline">
-                Voice and IVR
-              </Link>
-              ,{" "}
-              <Link href="/products/live-chat/" className="font-semibold text-primary hover:underline">
-                Live Chat
-              </Link>
-              , Telegram, Instagram and Messenger.
-            </p>
-
-            <p className="mt-4 text-[14.5px] leading-relaxed text-foreground/85">
-              <strong>For anything else, use the API.</strong> The REST API covers contacts,
-              campaigns and messages. Webhooks report delivery receipts, replies and status
-              changes, OAuth 2.0 handles sign-in for third-party apps, and a sandbox simulates
-              delivery and carrier failures. Start with the{" "}
-              <Link
-                href="/developers/api-docs/"
-                className="font-semibold text-primary hover:underline"
-              >
-                API reference
-              </Link>{" "}
-              or the{" "}
-              <Link
-                href="/developers/quickstart/"
-                className="font-semibold text-primary hover:underline"
-              >
-                quickstart
-              </Link>
-              .
-            </p>
-          </div>
-        </Section>
+          <style>{`
+            @keyframes int-rise { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
+            .int-rise { animation: int-rise .9s cubic-bezier(.2,.7,.2,1) both }
+            @media (prefers-reduced-motion: reduce) { .int-rise { animation: none } }
+          `}</style>
+        </section>
+        <IntegrationsDirectory />
+        <IntegrationsChannels />
+        <IntegrationsApi />
+        <IntegrationsTrust />
+        <IntegrationsRecipes />
+        <FaqSection items={FAQ} />
+        <ExploreMore links={EXPLORE} />
+        <GsFinalCta />
+        <IntegrationsStyles />
+        <WhatsAppMotion />
       </main>
       <SiteFooter />
     </>

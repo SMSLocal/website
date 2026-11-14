@@ -13,7 +13,7 @@ const SPARKS = [[40, 230, 0], [560, 240, 1.1], [150, 60, 2.2], [470, 70, 0.6], [
 type Kind = "ai" | "template" | "broadcast" | "verified" | "bell" | "support" | "chat"
 const SPOTS: { k: Kind; label: string; x: number; y: number; s: number }[] = [
   { k: "ai", label: "AI Replies", x: 300, y: 92, s: 6 },
-  { k: "template", label: "Rich Templates", x: 486, y: 168, s: 18 },
+  { k: "template", label: "Rich Templates", x: 486, y: 148, s: 18 },
   { k: "broadcast", label: "Broadcasts", x: 516, y: 312, s: 30 },
   { k: "verified", label: "Verified Sender", x: 418, y: 442, s: 42 },
   { k: "bell", label: "Alerts & OTPs", x: 198, y: 446, s: 54 },

@@ -1,83 +1,63 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getPageMetadata } from "@/lib/seo"
-import {
-  ArrowRight,
-  MapPin,
-  PhoneCall,
-  PhoneForwarded,
-  Router,
-  Sparkles,
-  Zap,
-  Phone,
-  Network,
-} from "lucide-react"
+import { ArrowRight, MapPin, PhoneCall, Router, Sparkles, Zap } from "lucide-react"
 import { SiteHeader } from "@/components/landing/site-header"
+import { ExploreMore } from "@/components/product/explore-more"
+import { GsFinalCta } from "@/components/home/gs/sections-c"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
-import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
-import {
-  CapabilityGrid,
-  ProductFinalCta,
-  ProductHero,
-  Section,
-  SectionHeader,
-  StatsBand,
-} from "@/components/product/product-page"
+import { BreadcrumbJsonLd, FaqJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
+import { DidHeroConsole } from "@/components/product/did-hero-console"
+import { Section, StatsBand } from "@/components/product/product-page"
+import { DidCapabilities, DidProblem, DidStyles, DidWhyItWorks, DidWhySmsLocal } from "@/components/product/did-sections"
+import { WhatsAppMotion } from "@/components/product/whatsapp-motion"
 
 export const metadata: Metadata = getPageMetadata("/numbers/did")
 
-/* ── Hero visual ──────────────────────────────────────────────────────────── */
-function DidNumbersVisual() {
-  const numbers = [
-    { city: "Mumbai", number: "+91 22 6xxx xxxx", tag: "Local" },
-    { city: "Bengaluru", number: "+91 80 6xxx xxxx", tag: "Local" },
-    { city: "Toll-free", number: "1800 xxx xxxx", tag: "Toll-free" },
-  ]
+const BTN = "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
+const BTN_OUT = "inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary"
 
-  return (
-    <div className="flex h-full min-h-[360px] flex-col gap-3 lg:pl-4">
-      <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-        <div className="flex items-center gap-1.5">
-          <MapPin className="h-3.5 w-3.5 text-primary" />
-          <span className="text-[10.5px] font-semibold uppercase tracking-widest text-primary">
-            Number inventory
-          </span>
-        </div>
-        <p className="mt-1.5 text-[13px] leading-relaxed text-white/85">
-          Local, toll-free, and short code numbers, provisioned through our platform team.
-        </p>
-      </div>
+const TRUST = [
+  { icon: MapPin, label: "Local, toll-free & short codes" },
+  { icon: PhoneCall, label: "Numbers for voice and SMS" },
+  { icon: Zap, label: "DLT and sender-ID registration" },
+  { icon: Router, label: "Fraud and spam protection" },
+]
 
-      {numbers.map((n) => (
-        <div
-          key={n.number}
-          className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3 backdrop-blur-md"
-        >
-          <div className="flex items-center gap-3">
-            <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-primary/15 text-primary">
-              <Phone className="h-4 w-4" />
-            </span>
-            <div>
-              <p className="text-[13px] font-semibold text-white">{n.city}</p>
-              <p className="font-mono text-[12px] text-white/60">{n.number}</p>
-            </div>
-          </div>
-          <span className="inline-flex items-center rounded-full border border-white/15 bg-white/8 px-2.5 py-0.5 text-[11px] font-medium text-white/75">
-            {n.tag}
-          </span>
-        </div>
-      ))}
+const FAQ = [
+  {
+    q: "What number types are available?",
+    a: "Local, toll-free and short codes, covering local presence calling, national support lines and high-volume messaging use cases.",
+  },
+  {
+    q: "Do you handle DLT and sender-ID registration?",
+    a: "Yes, with guided registration. DLT and sender-ID registration workflows are handled through our team so you're not navigating carrier paperwork alone.",
+  },
+  {
+    q: "Can one number do both voice and SMS?",
+    a: "Yes. One number set serves both, so the same numbers power calling, SMS and broadcasting and you don't manage a separate inventory per channel.",
+  },
+  {
+    q: "Can I keep my existing business number?",
+    a: "Yes. You can port your existing number over without losing calls, so customers keep dialling the same line.",
+  },
+  {
+    q: "Does it work with my existing PBX or phone system?",
+    a: "Yes. SIP trunking works with the calling stack you already run, or you can route the number into SMSLocal Voice or Voice AI Agents.",
+  },
+  {
+    q: "Which number type should I choose?",
+    a: "Use a local number for city-matching outbound and local calls, a toll-free line for support, and a short code for high-volume messaging. The same platform handles all three.",
+  },
+]
 
-      <div className="flex items-center gap-2 rounded-xl border border-blue-500/20 bg-blue-500/10 px-4 py-2.5">
-        <Zap className="h-4 w-4 shrink-0 text-blue-400" />
-        <span className="text-[12.5px] font-medium text-blue-300">
-          Registration and activation guided by our team, start to finish
-        </span>
-      </div>
-    </div>
-  )
-}
+const EXPLORE = [
+  { href: "/products/voice/", label: "Business voice calling", hint: "Calls inside your support inbox" },
+  { href: "/products/rcs/", label: "RCS business messaging", hint: "Verified, branded rich cards" },
+  { href: "/products/integrations/", label: "Integrations and API", hint: "Shopify, HubSpot, REST API and more" },
+  { href: "/channels/whatsapp/", label: "WhatsApp Business API", hint: "Official API, templates and AI replies" },
+]
 
 export default function DidNumbersPage() {
   return (
@@ -95,30 +75,46 @@ export default function DidNumbersPage() {
           { name: "DID Numbers", path: "/numbers/did" },
         ]}
       />
+      <FaqJsonLd items={FAQ} path="/numbers/did" />
       <SiteHeader />
       <main>
 
         {/* ── HERO ──────────────────────────────────────────────── */}
-        <ProductHero
-          compact
-          eyebrow="Numbers · DID"
-          title={
-            <>
-              DID and Virtual Numbers,
-              <br className="hidden sm:block" /> Managed In-Platform
-            </>
-          }
-          subtitle="Provision local, toll-free, and short code numbers for voice and messaging, all in one place."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
-          trustBar={[
-            { icon: MapPin, label: "Local, toll-free & short codes" },
-            { icon: PhoneCall, label: "Numbers for voice and SMS" },
-            { icon: Zap, label: "DLT and sender-ID registration" },
-            { icon: Router, label: "Fraud and spam protection" },
-          ]}
-          visual={<DidNumbersVisual />}
-        />
+        <section className="relative isolate overflow-hidden bg-background">
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
+          </div>
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_580px] lg:items-stretch lg:gap-8 lg:pb-20 lg:pt-12">
+            <div className="did-rise min-w-0">
+              <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
+                <Sparkles className="h-3.5 w-3.5 text-accent" />Numbers · DID
+              </p>
+              <h1 className="mt-6 text-balance text-[30px] font-semibold leading-[1.1] tracking-[-0.035em] sm:text-[42px]">
+                DID and Virtual Numbers, <span className="text-primary">Managed In-Platform</span>
+              </h1>
+              <p className="mt-5 max-w-lg text-pretty text-[17px] leading-relaxed text-muted-foreground">
+                Provision local, toll-free, and short code numbers for voice and messaging, all in one place. DLT and sender-ID registration are guided by our team, with fraud and spam protection built in.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <Link href="/company/contact/" className={BTN}>Get a Demo <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
+                <Link href="/company/contact/" className={BTN_OUT}>Talk to Sales</Link>
+              </div>
+              <ul className="mt-8 grid max-w-lg grid-cols-1 gap-x-8 gap-y-3 text-[14px] text-muted-foreground sm:grid-cols-2">
+                {TRUST.map((t) => (
+                  <li key={t.label} className="flex items-start gap-2.5 leading-snug"><t.icon className="mt-[1px] h-4 w-4 shrink-0 text-primary" /><span>{t.label}</span></li>
+                ))}
+              </ul>
+            </div>
+            <div className="did-rise min-w-0" style={{ animationDelay: "0.15s" }}>
+              <DidHeroConsole />
+            </div>
+          </div>
+          <style>{`
+            @keyframes did-rise { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
+            .did-rise { animation: did-rise .9s cubic-bezier(.2,.7,.2,1) both }
+            @media (prefers-reduced-motion: reduce) { .did-rise { animation: none } }
+          `}</style>
+        </section>
 
         {/* ── TRUST LINE ────────────────────────────────────────── */}
         <div className="border-b border-border bg-muted/30 py-4">
@@ -139,165 +135,17 @@ export default function DidNumbersPage() {
           />
         </Section>
 
-        {/* ── THE PROBLEM ───────────────────────────────────────── */}
-        <Section tone="muted">
-          <div className="mx-auto max-w-3xl">
-            <SectionHeader
-              eyebrow="The problem"
-              title="Most AI platforms make you bring your own numbers"
-            />
-            <p className="mt-5 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-              Most AI platforms make you bring numbers from a separate carrier, adding a vendor and
-              a handoff. SMSLocal provisions the numbers your agent and campaigns use, in the same
-              product — no separate carrier relationship to manage.
-            </p>
-          </div>
-        </Section>
-
-        {/* ── WHAT YOU GET ──────────────────────────────────────── */}
-        <CapabilityGrid
-          eyebrow="What you get"
-          title="Numbers that fit how your business actually calls and messages"
-          subtitle="Provision the number type you need — local, toll-free, or short code — and route it into your existing calling stack or ours."
-          items={[
-            {
-              icon: MapPin,
-              title: "The numbers you need",
-              body: "Local DID, toll-free, and short code numbers for every use case — a city-matching number for local calls, a toll-free line for support, or a short code for high-volume messaging.",
-            },
-            {
-              icon: PhoneCall,
-              title: "For voice and messaging",
-              body: "One number set powers calling, SMS, and broadcasting — no separate number inventory to manage per channel.",
-            },
-            {
-              icon: PhoneForwarded,
-              title: "Registration handled",
-              body: "DLT and sender-ID registration workflows are guided in the platform through our team, so you're not left to navigate carrier paperwork alone.",
-            },
-            {
-              icon: Network,
-              title: "Protection built in",
-              body: "Number lookup plus fraud and spam protection, so the numbers you provision stay trusted and deliverable.",
-            },
-          ]}
-        />
-
-        {/* ── WHY IT WORKS ──────────────────────────────────────── */}
-        <Section tone="muted">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16 lg:items-center">
-            <div>
-              <SectionHeader
-                eyebrow="Why it works"
-                title="Numbers, messaging, voice, and AI live together"
-              />
-              <p className="mt-5 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-                Numbers, messaging, voice, and AI live together, so there is no carrier handoff and
-                no separate bill to reconcile. Route a number into our Voice product for IVR and
-                broadcast calling, or into Voice AI Agents so it answers with a real conversation.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {[
-                { icon: <MapPin className="h-5 w-5" />,          label: "Local trust",       desc: "City-matching numbers lift pickup rates on outbound calls" },
-                { icon: <Zap className="h-5 w-5" />,              label: "Guided activation", desc: "Registration handled by our team — no carrier paperwork on your own" },
-                { icon: <Router className="h-5 w-5" />,           label: "Keep your PBX",      desc: "SIP trunking works with the calling stack you already run" },
-                { icon: <PhoneForwarded className="h-5 w-5" />,   label: "Port without downtime", desc: "Move your existing number over without losing calls" },
-              ].map((item) => (
-                <div key={item.label} className="rounded-xl border border-border bg-card p-4 shadow-sm">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    {item.icon}
-                  </span>
-                  <h3 className="mt-3 text-[14px] font-semibold text-foreground">{item.label}</h3>
-                  <p className="mt-1 text-[13px] leading-snug text-muted-foreground">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-
-        {/* ── WHY SMSLOCAL ──────────────────────────────────────── */}
-        <Section tone="dark">
-          <div className="mx-auto max-w-3xl">
-            <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/85">
-              Why SMSLocal
-            </span>
-            <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              The carrier layer some AI-only vendors leave out
-            </h2>
-            <p className="mt-5 text-pretty text-[15px] leading-relaxed text-white/70">
-              This is the carrier layer some AI-only vendors leave out, included in the same
-              platform as your agentic AI and broadcasting. Point a number at our Voice product for
-              classic IVR menus and broadcast, or at Voice AI Agents so it answers with a real
-              conversation and escalates to a human only when it needs to.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/products/voice/"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
-              >
-                Voice — IVR & broadcast
-              </Link>
-              <Link
-                href="/voice-ai-agents/"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
-              >
-                Voice AI Agents
-              </Link>
-            </div>
-          </div>
-        </Section>
-
-        {/* ── FAQ ───────────────────────────────────────────────── */}
-        <FaqSection
-          items={[
-            {
-              q: "What number types are available?",
-              a: "Local, toll-free, and short codes — covering local presence calling, national support lines, and high-volume messaging use cases.",
-            },
-            {
-              q: "Do you handle DLT?",
-              a: "Yes, with guided registration. DLT and sender-ID registration workflows are handled through our team so you're not navigating carrier paperwork alone.",
-            },
-            {
-              q: "Can numbers do voice and SMS?",
-              a: "Yes, one set serves both — the same number set powers calling, SMS, and broadcasting, so you don't manage a separate inventory per channel.",
-            },
-          ]}
-        />
-
-        {/* ── INTERNAL LINKS ────────────────────────────────────── */}
-        <Section tone="muted">
-          <div className="mx-auto max-w-3xl">
-            <SectionHeader eyebrow="Explore more" title="Related resources" />
-            <ul className="mt-6 space-y-3">
-              {[
-                { href: "/products/voice/",       label: "Voice — IVR, OTP calls, and voice broadcast" },
-                { href: "/products/bulk-sms/",    label: "Bulk SMS — send at scale on registered numbers" },
-                { href: "/platform/security/",    label: "Platform security — controls behind every number" },
-                { href: "/compare/",              label: "Compare SMSLocal with alternatives" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="inline-flex items-center gap-2 text-[14px] font-medium text-primary hover:underline"
-                  >
-                    {link.label} <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Section>
+        <DidProblem />
+        <DidCapabilities />
+        <DidWhyItWorks />
+        <DidWhySmsLocal />
+        <FaqSection items={FAQ} />
+        <ExploreMore links={EXPLORE} />
 
         {/* ── FINAL CTA ─────────────────────────────────────────── */}
-        <ProductFinalCta
-          title="Get the numbers your agentic AI runs on."
-          subtitle="Local, toll-free, and short code numbers for voice and messaging, with DLT and sender-ID registration guided by our team — all in one platform."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Talk to Sales", href: "/company/contact/" }}
-        />
+        <GsFinalCta />
+        <DidStyles />
+        <WhatsAppMotion />
       </main>
       <SiteFooter />
     </>

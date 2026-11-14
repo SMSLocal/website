@@ -1,7 +1,10 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Check, X } from "lucide-react"
+import { Check, Sparkles, X } from "lucide-react"
+
+// "The honest list" for /products/voice: one split ledger. Left half is what Voice is, right half is what it is not,
+// joined by a "vs" badge. Headings and lists only, in the site palette.
 
 const FOR_ITEMS = [
   "Support, sales, or success teams handling 5–200 calls/day",
@@ -45,96 +48,55 @@ export function VoiceRightFit() {
   })
 
   return (
-    <section ref={ref} className="bg-background py-12 sm:py-16">
-      <div className="mx-auto max-w-7xl space-y-20 px-4 sm:px-6">
+    <section ref={ref} aria-labelledby="voice-fit-title" className="bg-background py-12 sm:py-16">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <p className="mx-auto flex w-fit items-center justify-center gap-2 rounded-full border border-primary/25 bg-primary/5 px-3 py-1 text-[11.5px] font-semibold uppercase tracking-[0.16em] text-primary" style={reveal(0)}>
+          <Sparkles className="h-3.5 w-3.5" />The honest list
+        </p>
+        <h2 id="voice-fit-title" className="mx-auto mt-4 max-w-5xl text-center text-3xl font-semibold leading-[1.12] tracking-[-0.03em] sm:text-[40px]" style={reveal(60)}>
+          Is SMSLocal Voice the right fit for your team?
+        </h2>
 
-        {/* ── Row 1: What Voice IS ── */}
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-          {/* Left: text */}
-          <div style={reveal(0, "left")}>
-            <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-              <span className="font-mono text-muted-foreground">/ 01</span>
-              <span className="h-px w-6 bg-border" />
-              The honest list
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+        <div className="relative mt-10 grid overflow-hidden rounded-[2rem] border border-border shadow-[0_30px_60px_-36px_rgba(15,42,58,.45)] md:grid-cols-2" style={reveal(100)}>
+          {/* IS */}
+          <div className="relative bg-gradient-to-br from-primary/15 via-primary/[.06] to-card p-7 sm:p-10">
+            <div aria-hidden className="pointer-events-none absolute -left-16 -top-16 h-48 w-48 rounded-full bg-primary/20 blur-3xl" />
+            <h3 className="relative text-3xl font-semibold tracking-tight sm:text-4xl">
               What Voice{" "}
-              <span className="bg-gradient-to-r from-primary to-[oklch(0.72_0.17_165)] bg-clip-text text-transparent">
-                IS.
-              </span>
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-[17px]">
-              Inbox-native calling for teams that live in their conversations — not in a separate phone app.
-            </p>
-          </div>
-
-          {/* Right: green card */}
-          <div
-            className="rounded-2xl border border-primary/25 bg-primary/[0.05] p-8"
-            style={reveal(120, "right")}
-          >
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-primary">Included</p>
-            <ul className="mt-5 space-y-3">
+              <span className="bg-gradient-to-r from-primary to-[oklch(0.72_0.17_165)] bg-clip-text text-transparent">IS.</span>
+            </h3>
+            <ul className="relative mt-7 divide-y divide-primary/15">
               {FOR_ITEMS.map((item, i) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-3 text-[14px] leading-relaxed text-foreground"
-                  style={reveal(200 + i * 60, "right")}
-                >
-                  <span className="mt-0.5 inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/20 text-primary">
-                    <Check className="h-3 w-3" strokeWidth={3} />
+                <li key={item} className="flex items-start gap-3.5 py-3.5 text-[14.5px] leading-snug text-foreground" style={reveal(220 + i * 70, "left")}>
+                  <span className="mt-px inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-md shadow-primary/30">
+                    <Check className="h-3.5 w-3.5" strokeWidth={3.2} />
                   </span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-        </div>
 
-        {/* ── Row 2: What Voice is NOT ── */}
-        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-          {/* Left: text */}
-          <div style={reveal(0, "left")}>
-            <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-primary">
-              <span className="font-mono text-muted-foreground">/ 02</span>
-              <span className="h-px w-6 bg-border" />
-              The honest list
-            </p>
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+          {/* NOT */}
+          <div className="bg-muted/60 p-7 sm:p-10">
+            <h3 className="text-3xl font-semibold tracking-tight sm:text-4xl">
               What Voice is{" "}
-              <span className="text-rose-500">NOT.</span>
-            </h2>
-            <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-[17px]">
-              For full PBX features, keep your existing telephony or pair RingCentral / Dialpad alongside SMSLocal.
-            </p>
-          </div>
-
-          {/* Right: dark card */}
-          <div
-            className="overflow-hidden rounded-2xl p-8"
-            style={{
-              ...reveal(120, "right"),
-              background: "linear-gradient(135deg, oklch(0.18 0.04 258) 0%, oklch(0.15 0.05 280) 60%, oklch(0.13 0.03 300) 100%)",
-            }}
-          >
-            <p className="text-[11px] font-bold uppercase tracking-[0.18em] text-amber-400">Not included</p>
-            <ul className="mt-5 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <span className="underline decoration-accent decoration-[5px] underline-offset-[6px]">NOT.</span>
+            </h3>
+            <ul className="mt-7 divide-y divide-border">
               {NOT_ITEMS.map((item, i) => (
-                <li
-                  key={item}
-                  className="flex items-start gap-2.5 text-[13.5px] leading-snug text-white/70"
-                  style={reveal(200 + i * 50, "right")}
-                >
-                  <span className="mt-0.5 inline-flex h-4.5 w-4.5 shrink-0 items-center justify-center rounded-full bg-rose-500/20 text-rose-400">
-                    <X className="h-2.5 w-2.5" strokeWidth={3} />
+                <li key={item} className="flex items-start gap-3.5 py-3 text-[14.5px] leading-snug text-muted-foreground" style={reveal(220 + i * 60, "right")}>
+                  <span className="mt-px inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-accent/40 text-foreground">
+                    <X className="h-3.5 w-3.5" strokeWidth={3.2} />
                   </span>
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-        </div>
 
+          <span aria-hidden className="absolute left-1/2 top-1/2 hidden h-12 w-12 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-foreground text-[12px] font-bold uppercase tracking-wide text-background shadow-xl ring-4 ring-background md:flex">vs</span>
+        </div>
       </div>
     </section>
   )

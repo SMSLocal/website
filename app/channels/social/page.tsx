@@ -1,93 +1,70 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getPageMetadata } from "@/lib/seo"
-import {
-  ArrowRight,
-  AtSign,
-  Bot,
-  Instagram,
-  Layers,
-  MessageCircle,
-  MessagesSquare,
-  Sparkles,
-  UserCheck,
-  Users,
-  Zap,
-} from "lucide-react"
+import { ArrowRight, Bot, Instagram, Layers, Sparkles, Users } from "lucide-react"
 import { SiteHeader } from "@/components/landing/site-header"
+import { ExploreMore } from "@/components/product/explore-more"
+import { GsFinalCta } from "@/components/home/gs/sections-c"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
-import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
+import { BreadcrumbJsonLd, FaqJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
+import { SocialInboxScene } from "@/components/product/social-inbox-scene"
+import { Section, StatsBand } from "@/components/product/product-page"
 import {
-  CapabilityGrid,
-  ProductFinalCta,
-  ProductHero,
-  Section,
-  SectionHeader,
-  StatsBand,
-} from "@/components/product/product-page"
+  SocialCapabilities,
+  SocialProblem,
+  SocialSteps,
+  SocialStyles,
+  SocialWhyItWorks,
+  SocialWhySmsLocal,
+} from "@/components/product/social-sections"
+import { WhatsAppMotion } from "@/components/product/whatsapp-motion"
 
 export const metadata: Metadata = getPageMetadata("/channels/social")
 
-/* ── Hero visual ──────────────────────────────────────────────────────────── */
-function SocialHubVisual() {
-  const threads = [
-    { channel: "Instagram", handle: "@meera_k", text: "Is this available in size M?", icon: Instagram, color: "text-pink-400" },
-    { channel: "Messenger", handle: "Arjun D.", text: "Can I track my order here?", icon: MessagesSquare, color: "text-blue-400" },
-    { channel: "WhatsApp",  handle: "Farhan S.", text: "Thanks, got my refund!", icon: MessageCircle, color: "text-green-400" },
-    { channel: "Email",     handle: "priya@mail.com", text: "Following up on ticket #204", icon: AtSign, color: "text-amber-400" },
-  ]
+const BTN = "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
+const BTN_OUT = "inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary"
 
-  return (
-    <div className="flex h-full min-h-[380px] flex-col gap-4 lg:pl-4">
-      {/* Unified inbox card */}
-      <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
-        <div className="mb-3 flex items-center gap-2">
-          <Layers className="h-4 w-4 text-primary" />
-          <span className="text-[12px] font-semibold uppercase tracking-widest text-white/60">
-            One inbox, every social channel
-          </span>
-        </div>
-        <div className="space-y-2">
-          {threads.map((t) => (
-            <div key={t.channel + t.handle} className="flex items-center gap-3 rounded-xl border border-white/10 bg-white/5 px-3 py-2.5">
-              <span className={`inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-white/10 ${t.color}`}>
-                <t.icon className="h-3.5 w-3.5" />
-              </span>
-              <div className="min-w-0 flex-1">
-                <p className="truncate text-[12px] font-semibold text-white">{t.handle}</p>
-                <p className="truncate text-[11.5px] text-white/60">{t.text}</p>
-              </div>
-              <span className="shrink-0 text-[10px] font-medium uppercase tracking-wide text-white/35">{t.channel}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+const TRUST = [
+  { icon: Instagram, label: "Social DMs in one inbox" },
+  { icon: Bot, label: "AI answers across platforms" },
+  { icon: Users, label: "Routing, SLA, and CSAT" },
+  { icon: Layers, label: "One customer record" },
+]
 
-      {/* Single customer record */}
-      <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-        <div className="mb-1.5 flex items-center gap-1.5">
-          <Users className="h-3.5 w-3.5 text-primary" />
-          <span className="text-[10.5px] font-semibold uppercase tracking-widest text-white/50">
-            One customer record
-          </span>
-        </div>
-        <p className="text-[12px] leading-relaxed text-white/70">
-          4 platforms, 1 profile — Meera&apos;s Instagram DM, WhatsApp order, and email ticket are
-          all tied to the same customer, same history, same AI agent.
-        </p>
-      </div>
+const FAQ = [
+  {
+    q: "Which social platforms does SMSLocal support?",
+    a: "Instagram and Messenger today, in one inbox alongside chat, voice, SMS and email. More social channels are added over time without changing how your team works.",
+  },
+  {
+    q: "Can I manage Instagram DMs and Facebook Messenger in one inbox?",
+    a: "Yes. Instagram and Messenger conversations land in the same shared inbox as your other channels, with the same routing, assignment and reporting rules, so your team stops switching apps.",
+  },
+  {
+    q: "Can AI answer social media messages automatically?",
+    a: "Yes. Agentic AI handles routine social questions from your knowledge base across platforms, and hands off to a human in the same thread when a conversation needs one.",
+  },
+  {
+    q: "Is social media support measurable?",
+    a: "Yes. Social support gets routing, SLA timers and CSAT scoring, so you can measure it like every other channel and report on it in one place.",
+  },
+  {
+    q: "What happens when the same customer messages on different platforms?",
+    a: "SMSLocal merges identity across platforms into one customer record, so your team and your AI agent see the full history wherever the customer messaged from.",
+  },
+  {
+    q: "How do I connect Instagram and Messenger to SMSLocal?",
+    a: "Sign up, choose the social channels you want, and link your Instagram and Facebook accounts. Then set your routing, SLA targets and AI rules, and start replying from the shared inbox.",
+  },
+]
 
-      {/* Badge */}
-      <div className="flex items-center gap-2 rounded-xl border border-primary/20 bg-primary/10 px-4 py-2.5">
-        <Bot className="h-4 w-4 shrink-0 text-primary" />
-        <span className="text-[12.5px] font-medium text-primary">
-          One AI agent answers across every social platform, instantly
-        </span>
-      </div>
-    </div>
-  )
-}
+const EXPLORE = [
+  { href: "/channels/instagram/", label: "Instagram DM automation", hint: "DMs, story replies and comment-to-DM" },
+  { href: "/channels/messenger/", label: "Facebook Messenger", hint: "Automated and AI-handled conversations" },
+  { href: "/channels/web-chat/", label: "Website live chat widget", hint: "AI chat for every visitor" },
+  { href: "/products/integrations/", label: "Integrations and API", hint: "Shopify, HubSpot, REST API and more" },
+]
 
 export default function SocialChannelsPage() {
   return (
@@ -105,30 +82,46 @@ export default function SocialChannelsPage() {
           { name: "Social", path: "/channels/social" },
         ]}
       />
+      <FaqJsonLd items={FAQ} path="/channels/social" />
       <SiteHeader />
       <main>
 
         {/* ── HERO ──────────────────────────────────────────────── */}
-        <ProductHero
-          compact
-          eyebrow="Channels · Social Messaging"
-          title={
-            <>
-              All Your Social Conversations,
-              <br className="hidden sm:block" /> One Agentic AI Inbox
-            </>
-          }
-          subtitle="Instagram and Messenger DMs unified with chat, voice, SMS, and email, answered by agentic AI."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
-          trustBar={[
-            { icon: Instagram, label: "Social DMs in one inbox" },
-            { icon: Bot, label: "AI answers across platforms" },
-            { icon: Users, label: "Routing, SLA, and CSAT" },
-            { icon: Layers, label: "One customer record" },
-          ]}
-          visual={<SocialHubVisual />}
-        />
+        <section className="relative isolate overflow-hidden bg-background">
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
+          </div>
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_580px] lg:items-stretch lg:gap-8 lg:pb-20 lg:pt-12">
+            <div className="so-rise">
+              <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
+                <Sparkles className="h-3.5 w-3.5 text-accent" />Channels · Social Messaging
+              </p>
+              <h1 className="mt-6 text-balance text-[30px] font-semibold leading-[1.1] tracking-[-0.035em] sm:text-[42px]">
+                All your social conversations, <span className="text-primary">one agentic AI inbox.</span>
+              </h1>
+              <p className="mt-5 max-w-lg text-pretty text-[17px] leading-relaxed text-muted-foreground">
+                Instagram and Messenger DMs unified with chat, voice, SMS, and email, answered by agentic AI.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <Link href="/company/contact/" className={BTN}>Get a Demo <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
+                <Link href="/signup/" className={BTN_OUT}>Start your trial</Link>
+              </div>
+              <ul className="mt-8 grid max-w-lg grid-cols-1 gap-x-8 gap-y-3 text-[14px] text-muted-foreground sm:grid-cols-2">
+                {TRUST.map((t) => (
+                  <li key={t.label} className="flex items-start gap-2.5 leading-snug"><t.icon className="mt-[1px] h-4 w-4 shrink-0 text-primary" /><span>{t.label}</span></li>
+                ))}
+              </ul>
+            </div>
+            <div className="so-rise" style={{ animationDelay: "0.15s" }}>
+              <div className="so-float"><SocialInboxScene /></div>
+            </div>
+          </div>
+          <style>{`
+            @keyframes so-rise { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
+            .so-rise { animation: so-rise .9s cubic-bezier(.2,.7,.2,1) both }
+            @media (prefers-reduced-motion: reduce) { .so-rise { animation: none } }
+          `}</style>
+        </section>
 
         {/* ── TRUST LINE ────────────────────────────────────────── */}
         <div className="border-b border-border bg-muted/30 py-4">
@@ -149,165 +142,18 @@ export default function SocialChannelsPage() {
           />
         </Section>
 
-        {/* ── THE PROBLEM ───────────────────────────────────────── */}
-        <Section tone="muted">
-          <div className="mx-auto max-w-3xl">
-            <SectionHeader
-              eyebrow="The problem"
-              title="Social conversations scattered across apps are slow to answer"
-            />
-            <p className="mt-5 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-              Social conversations scattered across apps are slow to answer and impossible to
-              measure. One inbox brings every DM together with the rest of your channels.
-            </p>
-          </div>
-        </Section>
-
-        {/* ── WHAT YOU GET ──────────────────────────────────────── */}
-        <CapabilityGrid
-          eyebrow="What you get"
-          title="Social channels join the same inbox as everything else"
-          subtitle="Instagram and Messenger aren't bolted on as an afterthought — they're first-class channels in the same one-view inbox as chat, voice, SMS, and email."
-          items={[
-            {
-              icon: Instagram,
-              title: "Social in one place",
-              body: "Instagram and Messenger DMs alongside chat, voice, SMS, and email — no switching apps to keep up.",
-            },
-            {
-              icon: Bot,
-              title: "AI that answers",
-              body: "The agentic AI handles routine social questions automatically, freeing your team for what actually needs a human.",
-            },
-            {
-              icon: Users,
-              title: "Built for operations",
-              body: "Routing, SLA timers, and CSAT for social support at scale — measured like every other channel.",
-            },
-            {
-              icon: Layers,
-              title: "Unified customer",
-              body: "One record so social ties into the customer's full history, wherever they messaged from.",
-            },
-          ]}
-        />
-
-        {/* ── WHY IT WORKS ───────────────────────────────────────── */}
-        <Section tone="dark">
-          <div className="mx-auto max-w-3xl">
-            <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/85">
-              Why it works
-            </span>
-            <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Your team stops juggling apps
-            </h2>
-            <p className="mt-5 text-pretty text-[15px] leading-relaxed text-white/70">
-              Your team stops juggling apps, customers get fast replies wherever they message, and
-              you finally measure social support like every other channel.
-            </p>
-
-            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
-              {[
-                { icon: <Bot className="h-4 w-4" />,       label: "Answers everywhere",  desc: "Same agentic AI, every social and messaging channel" },
-                { icon: <Users className="h-4 w-4" />,     label: "One customer record", desc: "Identity merged across platforms automatically" },
-                { icon: <UserCheck className="h-4 w-4" />, label: "Human handoff",       desc: "Escalates in-thread with full cross-channel context" },
-              ].map((item) => (
-                <div key={item.label} className="rounded-xl border border-white/10 bg-white/5 p-4">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-primary/20 text-primary">
-                    {item.icon}
-                  </span>
-                  <p className="mt-2 text-[13px] font-semibold text-white">{item.label}</p>
-                  <p className="mt-0.5 text-[12px] text-white/55">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-
-        {/* ── WHY SMSLOCAL ──────────────────────────────────────── */}
-        <Section tone="muted">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16 lg:items-center">
-            <div>
-              <SectionHeader
-                eyebrow="Why SMSLocal"
-                title="Social is part of a platform, not a bolt-on tool"
-              />
-              <p className="mt-5 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-                Social is part of a platform that runs your AI, your campaigns, and your numbers,
-                not a bolt-on social tool. SMSLocal treats social as another door into the same
-                house — the same inbox, the same AI agent, the same record, and one set of numbers
-                to report on.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-              {[
-                { icon: <MessageCircle className="h-5 w-5" />, label: "Every DM answered",   desc: "Instagram and Messenger get the same SLA as chat and email" },
-                { icon: <Zap className="h-5 w-5" />,            label: "No repeat questions", desc: "AI agent carries context across every channel switch" },
-                { icon: <Sparkles className="h-5 w-5" />,       label: "Consistent answers",  desc: "One knowledge base powers every platform's replies" },
-                { icon: <Layers className="h-5 w-5" />,         label: "One report, not five",desc: "Unified analytics across social, chat, and email" },
-              ].map((item) => (
-                <div key={item.label} className="rounded-xl border border-border bg-card p-4 shadow-sm">
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    {item.icon}
-                  </span>
-                  <h3 className="mt-3 text-[14px] font-semibold text-foreground">{item.label}</h3>
-                  <p className="mt-1 text-[13px] leading-snug text-muted-foreground">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </Section>
-
-        {/* ── FAQ ───────────────────────────────────────────────── */}
-        <FaqSection
-          items={[
-            {
-              q: "Which platforms?",
-              a: "Instagram and Messenger today, in one inbox alongside chat, voice, SMS, and email. More social channels are added over time without changing how your team works.",
-            },
-            {
-              q: "Can AI answer?",
-              a: "Yes, automatically across platforms. Agentic AI handles routine social questions from your knowledge base, and hands off to a human in the same thread when needed.",
-            },
-            {
-              q: "Is it measurable?",
-              a: "Yes, with SLA and CSAT. Social support gets routing, SLA timers, and CSAT scoring, so you can measure it like every other channel.",
-            },
-          ]}
-        />
-
-        {/* ── INTERNAL LINKS ────────────────────────────────────── */}
-        <Section tone="muted">
-          <div className="mx-auto max-w-3xl">
-            <SectionHeader eyebrow="Explore more" title="Related resources" />
-            <ul className="mt-6 space-y-3">
-              {[
-                { href: "/channels/instagram/",         label: "Instagram — DMs, comments, and story replies" },
-                { href: "/channels/messenger/",         label: "Facebook Messenger — automated and AI-handled" },
-                { href: "/products/omnichannel-inbox/", label: "Omnichannel inbox — every channel in one place" },
-                { href: "/compare/",                    label: "See how SMSLocal compares" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="inline-flex items-center gap-2 text-[14px] font-medium text-primary hover:underline"
-                  >
-                    {link.label} <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Section>
+        <SocialProblem />
+        <SocialCapabilities />
+        <SocialSteps />
+        <SocialWhyItWorks />
+        <SocialWhySmsLocal />
+        <FaqSection items={FAQ} />
+        <ExploreMore links={EXPLORE} />
 
         {/* ── FINAL CTA ─────────────────────────────────────────── */}
-        <ProductFinalCta
-          title="Unify your social conversations with agentic AI."
-          subtitle="Connect Instagram and Messenger alongside chat, voice, SMS, and email — one AI agent, one customer record, every platform."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
-        />
+        <GsFinalCta />
+        <SocialStyles />
+        <WhatsAppMotion />
       </main>
       <SiteFooter />
     </>

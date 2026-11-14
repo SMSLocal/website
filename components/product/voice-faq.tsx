@@ -1,4 +1,4 @@
-const FAQS = [
+export const FAQS = [
   { q: "Can I use my existing business number?", a: "Yes. Port your current business number into SMSLocal, or get a new local or toll-free number in minutes — your customers keep calling the same line." },
   { q: "Do you support international calling?", a: "Yes. Make outbound calls internationally at transparent per-minute rates, typically 30–40% below traditional telecom pricing." },
   { q: "Can I record calls?", a: "Yes. Call recording and automatic transcription are available, with recordings attached to the customer's conversation." },
@@ -9,11 +9,11 @@ const FAQS = [
 
 export function VoiceFaq() {
   return (
-    <section className="bg-muted/40 py-12 sm:py-16">
+    <section className="bg-secondary/40 py-12 sm:py-16">
       <div className="mx-auto max-w-3xl px-4 sm:px-6">
         {/* Centered header */}
         <div className="text-center">
-          <span className="mx-auto inline-flex rounded-full border border-border bg-background px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+          <span className="mx-auto inline-flex w-fit items-center gap-2 rounded-full border border-primary/25 bg-primary/5 px-3 py-1 text-[11.5px] font-semibold uppercase tracking-[0.16em] text-primary">
             FAQ
           </span>
           <h2 className="mt-4 text-pretty text-3xl font-bold tracking-tight text-foreground sm:text-5xl">

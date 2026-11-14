@@ -66,7 +66,7 @@ export function VoiceTestimonials() {
   }, [])
 
   return (
-    <section ref={ref} className="overflow-hidden bg-muted/40 py-10 sm:py-14">
+    <section ref={ref} className="overflow-hidden border-y border-border bg-secondary/40 py-10 sm:py-14">
       <style>{`
         @keyframes voice-marquee {
           from { transform: translateX(0); }
@@ -92,7 +92,7 @@ export function VoiceTestimonials() {
           transition: "opacity 0.6s ease, transform 0.6s cubic-bezier(0.16,1,0.3,1)",
         }}
       >
-        <span className="inline-flex rounded-full border border-border bg-background px-3 py-1 text-[10.5px] font-semibold uppercase tracking-[0.15em] text-muted-foreground">
+        <span className="inline-flex w-fit items-center gap-2 rounded-full border border-primary/25 bg-primary/5 px-3 py-1 text-[11.5px] font-semibold uppercase tracking-[0.16em] text-primary">
           Loved by support teams
         </span>
         <h2 className="mt-3 text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

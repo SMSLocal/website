@@ -150,6 +150,14 @@ function Scene({ topic, onPick, speed }: SceneProps) {
       <circle className="isx-mcircle" cx="545" cy="532" r="456" fill="url(#isx-circle)" />
       <circle className="isx-mcircle" cx="545" cy="532" r="456" fill="none" stroke={MINT2} strokeWidth="5" opacity=".75" />
       <circle className="isx-bigcircle" cx="763" cy="512" r="494" fill="none" stroke={MINT2} strokeWidth="5" opacity=".75" />
+      {/* premium backdrop: faded dot grid, orbit rings with satellites, a warm glow behind the app icon */}
+      <circle className="isx-bigcircle" cx="763" cy="512" r="486" fill="url(#isx-dots)" mask="url(#isx-fade)" />
+      <circle className="isx-mcircle" cx="545" cy="532" r="448" fill="url(#isx-dots)" mask="url(#isx-fade)" />
+      <g className="isx-bigcircle" fill="none" stroke={G} strokeOpacity=".22" strokeWidth="2" strokeDasharray="2 12" strokeLinecap="round">
+        <circle cx="763" cy="512" r="438" /><circle cx="763" cy="512" r="372" strokeOpacity=".14" />
+      </g>
+      <g className="isx-bigcircle"><circle cx="400" cy="205" r="9" fill={G} opacity=".5" /><circle cx="1180" cy="780" r="8" fill="oklch(0.85 0.14 80)" opacity=".9" /><circle cx="1040" cy="118" r="6" fill={G} opacity=".4" /></g>
+      <ellipse cx="228" cy="860" rx="190" ry="150" fill="#f5446c" opacity=".12" filter="url(#isx-blur)" />
 
       {/* everything that changes with the chosen quick reply */}
       <g key={topic}>
@@ -167,7 +175,10 @@ function Scene({ topic, onPick, speed }: SceneProps) {
         {/* the AI agent answers */}
         <g className="isx-pop" style={{ animationDelay: d(0.35) }}>
           <rect x="470" y="288" width="542" height="130" rx="65" fill={G} opacity=".32" filter="url(#isx-blur)" />
-          <rect x="461" y="272" width="560" height="130" rx="65" fill={G} filter="url(#isx-sh)" />
+          <rect x="461" y="272" width="560" height="130" rx="65" fill="url(#isx-ai)" filter="url(#isx-sh)" />
+          <rect x="461" y="272" width="560" height="65" rx="32" fill="url(#isx-sheen)" />
+          <rect x="461" y="272" width="560" height="130" rx="65" fill="none" stroke="#fff" strokeOpacity=".35" strokeWidth="2" />
+          <g transform="translate(996 274)"><circle r="21" fill="#fff" stroke={MINT2} strokeWidth="2" /><path d="M-8 1 l6 6 l11 -13" fill="none" stroke={G} strokeWidth="4.6" strokeLinecap="round" strokeLinejoin="round" /></g>
           <text x="500" y="331" fontSize="35" fontWeight="500" fill="#fff" {...fit(t.a1, 35, 489, 0.4)}>{t.a1}</text>
           <text x="500" y="378" fontSize="42">👇</text>
         </g>
@@ -175,8 +186,9 @@ function Scene({ topic, onPick, speed }: SceneProps) {
 
         {/* the card */}
         <g className="isx-pop" style={{ animationDelay: d(0.6) }}>
-          <rect x="427" y="418" width="545" height="202" rx="44" fill="#fff" filter="url(#isx-sh)" />
-          <rect x="448" y="436" width="138" height="105" rx="22" fill="#f1f3f4" />
+          <rect x="427" y="418" width="545" height="202" rx="44" fill="url(#isx-glass)" filter="url(#isx-sh)" />
+          <rect x="427" y="418" width="545" height="202" rx="44" fill="none" stroke={MINT2} strokeWidth="2.4" />
+          <rect x="446" y="421" width="507" height="3" rx="1.5" fill="#fff" opacity=".9" />          <rect x="448" y="436" width="138" height="105" rx="22" fill="#f1f3f4" />
           <Thumb kind={t.thumb} />
           <text x="615" y="482" fontSize="37" fontWeight="600" fill={NAVY} {...fit(t.cardTitle, 37, 335)}>{t.cardTitle}</text>
           <text x="615" y="524" fontSize="31" fill="#6b7480" {...fit(t.cardSub, 31, 335)}>{t.cardSub}</text>
@@ -194,7 +206,8 @@ function Scene({ topic, onPick, speed }: SceneProps) {
         {/* the outcome */}
         <g className="isx-pop" style={{ animationDelay: d(1.05) }}>
           <rect x="440" y="752" width="487" height="80" rx="40" fill={G} opacity=".32" filter="url(#isx-blur)" />
-          <rect x="431" y="741" width="505" height="80" rx="40" fill={G} filter="url(#isx-sh)" />
+          <rect x="431" y="741" width="505" height="80" rx="40" fill="url(#isx-ai)" filter="url(#isx-sh)" />
+          <rect x="431" y="741" width="505" height="40" rx="20" fill="url(#isx-sheen)" />
           <circle cx="479" cy="781" r="20" fill="#fff" />
           <path d="M469 781 l7 8 l14 -16" fill="none" stroke={G} strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
           <text x="518" y="793" fontSize="32" fontWeight="600" fill="#fff" {...doneFit}>{t.done}</text>
@@ -203,7 +216,8 @@ function Scene({ topic, onPick, speed }: SceneProps) {
         {/* the comment on the post, turned into a DM */}
         <g className="isx-pop" style={{ animationDelay: d(1) }}>
           <g className="isx-float" style={{ animationDelay: "-1s" }}>
-            <rect x="1056" y="292" width="392" height="190" rx="36" fill="#fff" filter="url(#isx-sh)" />
+            <rect x="1056" y="292" width="392" height="190" rx="36" fill="url(#isx-glass)" filter="url(#isx-sh)" />
+            <rect x="1056" y="292" width="392" height="190" rx="36" fill="none" stroke={MINT2} strokeWidth="2.4" />
             <text x="1088" y="338" fontSize="21" fontWeight="600" fill="#6b7480" letterSpacing="2">COMMENT ON YOUR POST</text>
             <circle cx="1110" cy="394" r="22" fill="#fde4e1" /><text x="1110" y="403" textAnchor="middle" fontSize="24" fontWeight="700" fill="#b4443b">{t.cInit}</text>
             <text x="1148" y="388" fontSize="26" fontWeight="700" fill={NAVY}>{t.cUser}</text>
@@ -216,7 +230,9 @@ function Scene({ topic, onPick, speed }: SceneProps) {
         {/* the shared inbox */}
         <g className="isx-pop" style={{ animationDelay: d(1.25) }}>
           <g className="isx-float" style={{ animationDelay: "-2.2s" }}>
-            <rect x="1056" y="506" width="392" height="300" rx="36" fill="#fff" filter="url(#isx-sh)" />
+            <rect x="1056" y="506" width="392" height="300" rx="36" fill="url(#isx-glass)" filter="url(#isx-sh)" />
+            <rect x="1056" y="506" width="392" height="300" rx="36" fill="none" stroke={MINT2} strokeWidth="2.4" />
+            <rect x="1360" y="532" width="68" height="28" rx="14" fill={MINT} /><circle cx="1378" cy="546" r="5" fill={G} className="isx-spark" /><text x="1390" y="553" fontSize="16" fontWeight="700" fill={G}>LIVE</text>
             <circle cx="1094" cy="548" r="7" fill={G} />
             <text x="1112" y="556" fontSize="21" fontWeight="600" fill={G} letterSpacing="2">SHARED INBOX</text>
             <rect x="1076" y="574" width="352" height="64" rx="20" fill={MINT} />
@@ -246,7 +262,10 @@ function Scene({ topic, onPick, speed }: SceneProps) {
             <rect x="-54" y="-54" width="108" height="108" rx="33" fill="none" stroke="#fff" strokeWidth="14" />
             <circle cx="0" cy="0" r="26" fill="none" stroke="#fff" strokeWidth="14" />
             <circle cx="36" cy="-36" r="7.5" fill="#fff" />
+            <rect x="-96" y="-96" width="192" height="96" rx="56" fill="url(#isx-sheen)" opacity=".5" />
           </g>
+          <circle cx="228" cy="842" r="158" fill="none" stroke="url(#isx-ring)" strokeWidth="3" strokeDasharray="3 11" strokeLinecap="round" opacity=".8" />
+          <g transform="translate(318 760)"><circle r="26" fill="#fff" filter="url(#isx-sh)" /><circle r="19" fill="url(#isx-ai)" /><path d="M-8 1 l6 6 l11 -13" fill="none" stroke="#fff" strokeWidth="4.4" strokeLinecap="round" strokeLinejoin="round" /></g>
         </g>
       </g>
       <g className="isx-spark" stroke={G} strokeWidth="8" strokeLinecap="round" style={{ animationDelay: ".5s" }}><path d="M103 710 L118 738" /><path d="M72 744 L98 756" /><path d="M60 778 L90 780" /></g>
@@ -289,7 +308,7 @@ function Scene({ topic, onPick, speed }: SceneProps) {
                   }
                 }}
               >
-                <rect x={p.x} y="858" width={p.w} height="56" rx="28" fill={on ? G : "#fff"} stroke={G} strokeWidth="2.6" filter="url(#isx-sh)" />
+                <rect x={p.x} y="858" width={p.w} height="56" rx="28" fill={on ? "url(#isx-ai)" : "url(#isx-glass)"} stroke={G} strokeWidth="2.6" filter="url(#isx-sh)" />
                 <text x={p.x + p.w / 2} y="895" textAnchor="middle" fontSize="25" fontWeight="600" fill={on ? "#fff" : G} style={{ pointerEvents: "none" }}>{LABEL[p.k]}</text>
               </g>
             )
@@ -341,7 +360,14 @@ export function InstagramScene() {
           <filter id="isx-blur" x="-20%" y="-100%" width="140%" height="300%"><feGaussianBlur stdDeviation="14" /></filter>
           <radialGradient id="isx-circle" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#ffffff" /><stop offset=".72" stopColor="#f7fcfa" /><stop offset="1" stopColor="#e6f7f1" /></radialGradient>
           <linearGradient id="isx-ig2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="#c0309e" /><stop offset="1" stopColor="#4a22b5" /></linearGradient>
-          <filter id="isx-sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="14" stdDeviation="13" floodColor="#0f1a2e" floodOpacity=".12" /></filter>
+          <filter id="isx-sh" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="22" stdDeviation="18" floodColor="#0f2a3a" floodOpacity=".16" /></filter>
+          <linearGradient id="isx-ai" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="oklch(0.72 0.13 175)" /><stop offset=".55" stopColor="oklch(0.62 0.14 168)" /><stop offset="1" stopColor="oklch(0.5 0.12 176)" /></linearGradient>
+          <linearGradient id="isx-glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#ffffff" /><stop offset="1" stopColor="color-mix(in oklch, var(--primary) 7%, white)" /></linearGradient>
+          <linearGradient id="isx-sheen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fff" stopOpacity=".42" /><stop offset="1" stopColor="#fff" stopOpacity="0" /></linearGradient>
+          <linearGradient id="isx-ring" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stopColor="oklch(0.85 0.14 80)" /><stop offset="1" stopColor="oklch(0.62 0.14 168)" /></linearGradient>
+          <pattern id="isx-dots" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.7" fill="oklch(0.62 0.14 168)" opacity=".3" /></pattern>
+          <radialGradient id="isx-fadeg" cx=".5" cy=".5" r=".5"><stop offset=".35" stopColor="#fff" /><stop offset="1" stopColor="#000" /></radialGradient>
+          <mask id="isx-fade" maskContentUnits="objectBoundingBox"><rect width="1" height="1" fill="url(#isx-fadeg)" /></mask>
         </defs>
       </svg>
       {/* tablet and desktop: the whole composition */}

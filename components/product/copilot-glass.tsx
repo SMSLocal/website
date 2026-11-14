@@ -1,206 +1,197 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { Check, FileText, Send, Sparkles } from "lucide-react"
+import { Check, FileText, Sparkles } from "lucide-react"
 
-// Hero graphic for /products/agent-copilot: a human agent and Copilot answering one customer together, in real 3D.
-// The agent's inbox window sits in the back with an upset customer's thread arriving. Copilot's panel flies in from the
-// depth of the scene and swings to face the viewer; it summarises the thread and types a suggested reply. The agent
-// (shown as a chip in front, "Priya, human agent") presses Tab, the draft lifts out of the panel as a glass card, flies
-// through the scene into the reply box and lands; the agent sends it, a paper plane flies off into the distance, the
-// reply appears in the thread and "Replied in 12 s" pops up. The whole scene sways gently and also leans toward the
-// pointer. HTML + CSS 3D transforms, silent, 14-second loop.
+// Hero graphic for /products/agent-copilot: a rotating glass prism of Copilot's four jobs, in real 3D.
+// A glowing Copilot orb with two tilted orbit rings floats above a glass prism made of four panes (each pane is one
+// job from the page's command palette: Tab drafts a reply, /sum summarises the thread, /kb finds the answer, /tone
+// changes the tone). The prism turns a quarter-turn every 4 seconds; as each pane swings to the front a sheen sweeps
+// across it, the orb pulses and its beam lights the pane, and the front pane plays its job (a reply typing itself, the
+// three-line summary, the knowledge-base answer, the tone switching). A glass floor with ripples sits underneath.
+// The whole scene also leans toward the pointer. HTML + CSS 3D transforms, silent, 16-second loop.
 
+const JOBS = [
+  { k: "Tab", n: "Draft a reply" },
+  { k: "/sum", n: "Summarise the thread" },
+  { k: "/kb", n: "Find the answer" },
+  { k: "/tone", n: "Change the tone" },
+]
 const LINES = [
-  { t: "I’m sorry about the double charge, Rohan.", n: 41, a: 34, b: 42 },
-  { t: "I’ve found the duplicate and started your", n: 41, a: 42, b: 52 },
-  { t: "refund. It will reach you in 3–5 days.", n: 38, a: 52, b: 60 },
+  "Sorry for the wait! Order #4821 is out",
+  "for delivery and should reach you today.",
+  "Want the live tracking link?",
+]
+const SUMMARY: [string, string][] = [
+  ["Issue", "Order #4821 is 6 days late."],
+  ["Tried", "Courier delay confirmed twice."],
+  ["Next", "Share tracking and a date."],
 ]
 
-// opacity + rise window: hidden until a, in from a to a+3, out at 94
-const rise = (name: string, a: number, y = 8) =>
-  `@keyframes ${name} { 0%, ${a}% { opacity: 0; transform: translateY(${y}px) } ${a + 3}%, 94% { opacity: 1; transform: none } 97%, 100% { opacity: 0 } }`
-// a short on-window
-const on = (name: string, a: number, b: number) =>
-  `@keyframes ${name} { 0%, ${a}% { opacity: 0 } ${a + 2}%, ${b}% { opacity: 1 } ${b + 2}%, 100% { opacity: 0 } }`
+const R = 138 // distance of each pane from the centre of the prism
+const CARD_W = 244
+const CARD_H = 176
+const W = 560
+const H = 440
+
+const f = (n: number) => +n.toFixed(2)
+// a pane is "front" during its quarter: sheen sweeps in just after the turn finishes
+const sheen = (i: number) => {
+  const s = i * 25
+  return `@keyframes cg-sh${i} { 0%, ${f(s + 3)}% { transform: translateX(-130%) } ${f(s + 11)}%, 100% { transform: translateX(260%) } }`
+}
+const ease = "animation-timing-function: cubic-bezier(.65,0,.25,1)"
 
 const CSS = `
-${rise("cg-win", 0, 14)}
-${rise("cg-q1", 3)}
-${rise("cg-q2", 6)}
-${rise("cg-q3", 9)}
-${rise("cg-chip", 12, 5)}
-${rise("cg-b1", 27, 6)}
-${rise("cg-b2", 31, 6)}
-${rise("cg-meta", 62, 6)}
-${rise("cg-a", 84)}
-${rise("cg-fast", 89, 5)}
-@keyframes cg-panel { 0%, 13% { opacity: 0; transform: translateZ(-300px) rotateY(48deg) } 21%, 94% { opacity: 1; transform: none } 97%, 100% { opacity: 0; transform: none } }
-@keyframes cg-fly { 0%, 66% { opacity: 0; transform: translate3d(0, 0, 0) rotateY(0) scale(1) } 67.5% { opacity: 1; transform: translate3d(0, -4px, 40px) rotateY(0) scale(1.04) } 72% { opacity: 1; transform: translate3d(-170px, 120px, -40px) rotateY(18deg) scale(.9) } 75%, 100% { opacity: 0; transform: translate3d(-260px, 176px, -80px) rotateY(24deg) scale(.7) } }
-@keyframes cg-plane { 0%, 83% { opacity: 0; transform: translate3d(0, 0, 0) scale(1) rotate(0) } 85% { opacity: 1; transform: translate3d(6px, -10px, 20px) scale(1.15) rotate(-6deg) } 92% { opacity: .9; transform: translate3d(70px, -90px, -170px) scale(.7) rotate(-14deg) } 95%, 100% { opacity: 0; transform: translate3d(120px, -150px, -330px) scale(.3) rotate(-18deg) } }
-@keyframes cg-tab { 0%, 64% { opacity: 0; transform: translateY(6px) scale(.8) } 66%, 72% { opacity: 1; transform: none } 74%, 100% { opacity: 0; transform: none } }
-@keyframes cg-orb { 0%, 14% { opacity: 0; transform: scale(.6) } 21%, 62% { opacity: 1; transform: scale(1) } 70%, 100% { opacity: .3; transform: scale(.9) } }
-${on("cg-think", 21, 26)}
-${on("cg-draft", 72, 83)}
-${on("cg-beam", 66, 84)}
-@keyframes cg-ph { 0%, 71% { opacity: 1 } 73%, 83% { opacity: 0 } 85%, 96% { opacity: 1 } 99%, 100% { opacity: 0 } }
-@keyframes cg-use { 0%, 65% { transform: none } 67%, 71% { transform: scale(.93) translateY(2px) } 74%, 100% { transform: none } }
-@keyframes cg-send { 0%, 80% { transform: none } 82%, 84% { transform: scale(.88) } 87%, 100% { transform: none } }
-@keyframes cg-sway { 0%, 100% { transform: rotateY(-3.5deg) } 50% { transform: rotateY(3.5deg) } }
-${LINES.map((l, i) => `@keyframes cg-t${i} { 0%, ${l.a + 4}% { width: 0 } ${l.b + 4}%, 100% { width: 100% } }
-.cg-t${i} { display: block; overflow: hidden; white-space: nowrap; width: 0; animation: cg-t${i} 14s steps(${l.n}, end) infinite }`).join("\n")}
-@keyframes cg-dots { 0%, 100% { opacity: .3 } 50% { opacity: 1 } }
-@keyframes cg-live { 0%, 100% { opacity: 1 } 50% { opacity: .35 } }
+@keyframes cg-spin {
+  0%, 21% { transform: rotateY(0deg); ${ease} }
+  25%, 46% { transform: rotateY(-90deg); ${ease} }
+  50%, 71% { transform: rotateY(-180deg); ${ease} }
+  75%, 96% { transform: rotateY(-270deg); ${ease} }
+  100% { transform: rotateY(-360deg) }
+}
+@keyframes cg-pulse {
+  0%, 19%, 29%, 44%, 54%, 69%, 79%, 94%, 100% { transform: scale(1); box-shadow: 0 30px 40px -18px rgba(18,160,124,.55), 0 0 30px 4px color-mix(in oklch, var(--primary) 30%, transparent) }
+  23%, 48%, 73%, 98% { transform: scale(1.16); box-shadow: 0 30px 40px -18px rgba(18,160,124,.6), 0 0 56px 14px color-mix(in oklch, var(--primary) 46%, transparent) }
+}
+${JOBS.map((_, i) => `${sheen(i)}\n.cg-sh${i} { transform: translateX(-130%); animation: cg-sh${i} 16s ease-in-out infinite }`).join("\n")}
+${LINES.map((_, i) => `@keyframes cg-t${i} { 0%, ${3 + i * 5}% { width: 0 } ${8 + i * 5}%, 54% { width: 100% } 56%, 100% { width: 0 } }\n.cg-t${i} { display: block; overflow: hidden; white-space: nowrap; width: 0; animation: cg-t${i} 16s steps(40, end) infinite }`).join("\n")}
+@keyframes cg-tone { 0%, 76% { background: transparent; color: #14233a } 79%, 96% { background: var(--primary); color: #fff } 98%, 100% { background: transparent; color: #14233a } }
+@keyframes cg-orbit { from { transform: rotateX(72deg) rotateZ(0deg) } to { transform: rotateX(72deg) rotateZ(360deg) } }
+@keyframes cg-orbit2 { from { transform: rotateX(72deg) rotateY(38deg) rotateZ(360deg) } to { transform: rotateX(72deg) rotateY(38deg) rotateZ(0deg) } }
+@keyframes cg-ripple { 0% { transform: scale(.4); opacity: .6 } 100% { transform: scale(1); opacity: 0 } }
+@keyframes cg-bob { 0%, 100% { translate: 0 -5px } 50% { translate: 0 5px } }
 @keyframes cg-float { 0%, 100% { translate: 0 -3px } 50% { translate: 0 4px } }
-@keyframes cg-flow { to { stroke-dashoffset: -20 } }
-.cg-win { opacity: 0; animation: cg-win 14s cubic-bezier(.2,.7,.2,1) infinite }
-.cg-q1 { opacity: 0; animation: cg-q1 14s cubic-bezier(.2,.7,.2,1) infinite } .cg-q2 { opacity: 0; animation: cg-q2 14s cubic-bezier(.2,.7,.2,1) infinite } .cg-q3 { opacity: 0; animation: cg-q3 14s cubic-bezier(.2,.7,.2,1) infinite }
-.cg-chip { opacity: 0; animation: cg-chip 14s cubic-bezier(.3,1.4,.4,1) infinite }
-.cg-meta { opacity: 0; animation: cg-meta 14s cubic-bezier(.2,.7,.2,1) infinite }
-.cg-b1 { opacity: 0; animation: cg-b1 14s cubic-bezier(.2,.7,.2,1) infinite } .cg-b2 { opacity: 0; animation: cg-b2 14s cubic-bezier(.2,.7,.2,1) infinite }
-.cg-a { opacity: 0; animation: cg-a 14s cubic-bezier(.2,.7,.2,1) infinite }
-.cg-fast { opacity: 0; animation: cg-fast 14s cubic-bezier(.3,1.4,.4,1) infinite }
-.cg-panel { opacity: 0; animation: cg-panel 14s cubic-bezier(.2,.8,.2,1) infinite }
-.cg-fly { opacity: 0; animation: cg-fly 14s cubic-bezier(.4,0,.2,1) infinite }
-.cg-plane { opacity: 0; animation: cg-plane 14s ease-in infinite }
-.cg-tab { opacity: 0; animation: cg-tab 14s cubic-bezier(.3,1.4,.4,1) infinite }
-.cg-orb { opacity: 0; animation: cg-orb 14s ease-in-out infinite }
-.cg-think { opacity: 0; animation: cg-think 14s ease-in-out infinite }
-.cg-think i { animation: cg-dots 1s ease-in-out infinite }
-.cg-draft { opacity: 0; animation: cg-draft 14s ease-in-out infinite }
-.cg-ph { animation: cg-ph 14s ease-in-out infinite }
-.cg-use { animation: cg-use 14s ease-in-out infinite }
-.cg-send { animation: cg-send 14s ease-in-out infinite }
-.cg-beam { opacity: 0; animation: cg-beam 14s ease-in-out infinite }
-.cg-flow { stroke-dasharray: 3 6; animation: cg-flow 1.4s linear infinite }
-.cg-sway { animation: cg-sway 9s ease-in-out infinite }
-.cg-live { animation: cg-live 1.4s ease-in-out infinite }
+@keyframes cg-flow { to { background-position: 0 -20px } }
+@keyframes cg-live { 0%, 100% { opacity: 1 } 50% { opacity: .35 } }
+.cg-spin { animation: cg-spin 16s infinite }
+.cg-pulse { animation: cg-pulse 16s ease-in-out infinite }
+.cg-tone { animation: cg-tone 16s ease-in-out infinite }
+.cg-orbit { animation: cg-orbit 7s linear infinite }
+.cg-orbit2 { animation: cg-orbit2 11s linear infinite }
+.cg-ripple { animation: cg-ripple 4.8s ease-out infinite }
+.cg-bob { animation: cg-bob 5s ease-in-out infinite }
 .cg-float { animation: cg-float 6s ease-in-out infinite }
+.cg-beam { background-image: repeating-linear-gradient(to bottom, var(--primary) 0 4px, transparent 4px 9px); background-size: 100% 20px; animation: cg-flow 1s linear infinite }
+.cg-live { animation: cg-live 1.4s ease-in-out infinite }
 @media (prefers-reduced-motion: reduce) {
-  .cg-think i, .cg-live, .cg-use, .cg-send, .cg-flow, .cg-float, .cg-sway { animation: none }
-  .cg-win, .cg-q1, .cg-q2, .cg-q3, .cg-chip, .cg-meta, .cg-b1, .cg-b2, .cg-a, .cg-fast, .cg-panel, .cg-orb { animation: none; opacity: 1; transform: none }
-  .cg-think, .cg-draft, .cg-ph, .cg-beam, .cg-fly, .cg-plane, .cg-tab { animation: none; opacity: 0 }
+  .cg-spin, .cg-pulse, .cg-orbit, .cg-orbit2, .cg-ripple, .cg-bob, .cg-float, .cg-beam, .cg-live, .cg-tone { animation: none }
+  [class*="cg-sh"] { animation: none; opacity: 0 }
   .cg-t0, .cg-t1, .cg-t2 { animation: none; width: 100% }
 }
 `
 
-const SHADOW = "shadow-[0_34px_50px_-24px_rgba(15,26,46,.42),inset_0_1px_0_#fff]"
-const W = 560
-const H = 440
-const P3 = { transformStyle: "preserve-3d" as const }
-const z = (px: number) => ({ transform: `translateZ(${px}px)` })
+const PANE = "relative h-full overflow-hidden rounded-[22px] bg-white/92 ring-1 ring-white shadow-[0_30px_46px_-22px_rgba(15,26,46,.45),inset_0_1px_0_#fff]"
 
-function Gloss() {
-  return <i className="pointer-events-none absolute inset-0 rounded-[inherit] bg-[linear-gradient(115deg,rgba(255,255,255,.6)_0%,rgba(255,255,255,.1)_30%,transparent_46%)]" />
+function Pane({ i }: { i: number }) {
+  const j = JOBS[i]
+  return (
+    <div className={PANE}>
+      <div className="flex h-10 items-center gap-2 border-b border-border/70 px-3.5">
+        <kbd className="rounded-md border border-border bg-white px-1.5 py-0.5 font-mono text-[11px] font-bold text-[#14233a] shadow-[0_2px_0_#cfe3dd]">{j.k}</kbd>
+        <span className="text-[12.5px] font-semibold text-[#14233a]">{j.n}</span>
+        <span className="ml-auto flex items-center gap-1 text-[9.5px] font-medium text-muted-foreground"><i className="cg-live h-1.5 w-1.5 rounded-full bg-primary" />Copilot</span>
+      </div>
+      <div className="px-3.5 pt-3">
+        {i === 0 && (
+          <>
+            <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-primary">Suggested reply</p>
+            <div className="mt-1.5 rounded-xl bg-primary/8 px-2.5 py-2 text-[11.5px] leading-[1.55] text-[#14233a]">
+              {LINES.map((l, n) => <span key={n} className={`cg-t${n}`}>{l}</span>)}
+            </div>
+            <div className="mt-2 flex items-center gap-1.5">
+              <span className="rounded-full bg-primary/12 px-2 py-0.5 text-[9.5px] font-semibold text-primary">Empathetic</span>
+              <kbd className="ml-auto rounded-md border border-border bg-white px-1.5 py-0.5 font-mono text-[9.5px] font-semibold text-[#14233a]">Tab to accept</kbd>
+            </div>
+          </>
+        )}
+        {i === 1 && (
+          <>
+            <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">Summary · 12 messages</p>
+            <ul className="mt-1.5 space-y-1.5">
+              {SUMMARY.map(([a, b]) => (
+                <li key={a} className="flex items-center gap-2 rounded-lg bg-[#f4f9f7] px-2.5 py-1.5 text-[11.5px] text-[#14233a]">
+                  <span className="w-9 shrink-0 font-mono text-[9px] uppercase tracking-wider text-primary">{a}</span>{b}
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+        {i === 2 && (
+          <>
+            <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">Found in your knowledge base</p>
+            <div className="mt-1.5 flex items-start gap-2.5 rounded-xl bg-[#f4f9f7] p-2.5">
+              <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#e0efff] text-[#0a85ff]"><FileText className="h-4 w-4" /></span>
+              <span className="leading-snug">
+                <span className="block text-[12px] font-semibold text-[#14233a]">Delivery policy</span>
+                <span className="mt-0.5 block text-[11px] text-[#14233a]">Orders ship in 2 to 4 days and can be tracked from the order page.</span>
+                <span className="mt-1 inline-block rounded-full bg-white px-2 py-0.5 text-[9px] font-medium text-muted-foreground ring-1 ring-border">Source · Help centre</span>
+              </span>
+            </div>
+          </>
+        )}
+        {i === 3 && (
+          <>
+            <p className="font-mono text-[9px] uppercase tracking-[0.16em] text-muted-foreground">Same reply, new tone</p>
+            <div className="mt-1.5 flex gap-1.5">
+              {["Formal", "Friendly", "Casual"].map((t) => (
+                <span key={t} className={`rounded-full px-2.5 py-0.5 text-[10.5px] font-semibold ring-1 ring-border ${t === "Friendly" ? "cg-tone" : "text-[#14233a]"}`}>{t}</span>
+              ))}
+            </div>
+            <p className="mt-2 rounded-xl bg-primary/8 px-2.5 py-2 text-[11.5px] leading-[1.5] text-[#14233a]">“Sorry about the wait, your order is on its way and lands today.”</p>
+          </>
+        )}
+      </div>
+      <i className={`cg-sh${i} pointer-events-none absolute inset-y-0 left-0 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/70 to-transparent`} />
+    </div>
+  )
 }
 
 function Scene() {
+  const P3 = { transformStyle: "preserve-3d" as const }
   return (
-    <div className="absolute inset-0" style={{ ...P3, transform: "rotateY(calc(-12deg + var(--px, 0) * 7deg)) rotateX(calc(5deg + var(--py, 0) * -5deg))", transition: "transform .25s ease-out" }}>
-      <div className="cg-sway absolute inset-0" style={P3}>
-        <i className="absolute rounded-[50%] bg-[#0f1a2e]/20 blur-[18px]" style={{ left: 30, top: 372, width: 320, height: 30, ...z(-40) }} />
-        <div className="absolute rounded-[22px] bg-white/45 ring-1 ring-white/70" style={{ left: 22, top: 62, width: 340, height: 322, ...z(-30) }} />
+    <div className="absolute" style={{ left: W / 2, top: 262, width: 0, height: 0, ...P3, transform: "rotateX(calc(-9deg + var(--py, 0) * -5deg)) rotateY(calc(var(--px, 0) * 12deg))", transition: "transform .25s ease-out" }}>
+      {/* the glass floor, with ripples running out from the centre */}
+      <div className="absolute" style={{ left: -250, top: 112, width: 500, height: 500, ...P3, transform: "rotateX(90deg)" }}>
+        <i className="absolute inset-0 rounded-full" style={{ background: "radial-gradient(circle, color-mix(in oklch, var(--primary) 20%, white) 0%, color-mix(in oklch, var(--primary) 7%, white) 48%, transparent 70%)" }} />
+        <i className="absolute inset-[70px] rounded-full border border-primary/30" />
+        <i className="cg-ripple absolute inset-0 rounded-full border-2 border-primary/40" />
+        <i className="cg-ripple absolute inset-0 rounded-full border-2 border-primary/30" style={{ animationDelay: "1.6s" }} />
+        <i className="cg-ripple absolute inset-0 rounded-full border-2 border-primary/20" style={{ animationDelay: "3.2s" }} />
+      </div>
 
-        {/* the agent's inbox */}
-        <div className="cg-win absolute" style={{ left: 8, top: 46, width: 340, height: 330 }}>
-          <div className={`relative h-full overflow-hidden rounded-[22px] bg-white/95 ring-1 ring-white ${SHADOW}`}>
-            <div className="flex h-11 items-center gap-2 border-b border-border/70 px-3.5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/logos/channels/whatsapp.svg" alt="" width={16} height={16} className="h-4 w-4" />
-              <span className="text-[13px] font-semibold text-[#14233a]">Rohan K.</span>
-              <span className="text-[11px] text-muted-foreground">· Order #1042</span>
-              <span className="cg-chip ml-1 rounded-full bg-[#fde8e8] px-2.5 py-0.5 text-[10.5px] font-semibold text-[#c0392b]">Frustrated</span>
-            </div>
-            <div className="relative space-y-2 px-3.5 pt-3">
-              <p className="cg-q1 w-fit max-w-[80%] rounded-2xl rounded-tl-sm bg-secondary px-3 py-2 text-[11.5px] leading-snug text-[#14233a]">Hi, I think I was charged twice for #1042.</p>
-              <p className="cg-q2 w-fit max-w-[80%] rounded-2xl rounded-tl-sm bg-secondary px-3 py-2 text-[11.5px] leading-snug text-[#14233a]">Two payments, same amount, same day.</p>
-              <p className="cg-q3 w-fit max-w-[88%] rounded-2xl rounded-tl-sm bg-secondary px-3 py-2 text-[12.5px] font-medium leading-snug text-[#14233a]">I was charged twice and nobody has replied for 2 days!<span className="ml-2 align-bottom text-[9px] font-normal text-muted-foreground">10:41</span></p>
-              <div className="cg-a ml-auto w-fit max-w-[92%] rounded-2xl rounded-tr-sm bg-primary px-3.5 py-2.5 text-[12.5px] leading-snug text-primary-foreground">
-                I’m sorry about the double charge, Rohan. I’ve found the duplicate and started your refund. It will reach you in 3–5 days.
-                <span className="mt-1 flex items-center justify-end gap-1 text-[9px] text-primary-foreground/80">10:43 <Check className="h-2.5 w-2.5" strokeWidth={3} /></span>
-              </div>
-            </div>
-            {/* reply box */}
-            <div className="absolute inset-x-3 bottom-3 flex items-center gap-2 rounded-xl border border-border bg-background px-3 py-2">
-              <div className="relative h-[34px] flex-1 overflow-hidden text-[11.5px] leading-snug">
-                <span className="cg-ph absolute inset-0 flex items-center text-muted-foreground">Write a reply…</span>
-                <span className="cg-draft absolute inset-0 flex items-center text-foreground">I’m sorry about the double charge, Rohan. I’ve found the duplicate and started your refund. It will reach you in 3–5 days.</span>
-              </div>
-              <span className="cg-send flex h-8 shrink-0 items-center rounded-lg bg-[#14233a] px-3 text-[11.5px] font-semibold text-white">Send</span>
-            </div>
-            <Gloss />
+      {/* the Copilot orb, with two tilted orbit rings */}
+      <div className="cg-bob absolute" style={{ left: -45, top: -232, width: 90, height: 90, ...P3 }}>
+        <i className="cg-orbit absolute rounded-full border border-primary/45" style={{ left: -48, top: -48, width: 186, height: 186 }} />
+        <i className="cg-orbit2 absolute rounded-full border border-dashed border-primary/45" style={{ left: -30, top: -30, width: 150, height: 150 }} />
+        <span className="cg-pulse absolute inset-0 flex items-center justify-center rounded-full text-white" style={{ background: "radial-gradient(circle at 34% 28%, color-mix(in oklch, var(--primary) 40%, white) 0%, var(--primary) 52%, color-mix(in oklch, var(--primary) 70%, #04382c) 100%)" }}>
+          <Sparkles className="h-9 w-9 drop-shadow-[0_3px_6px_rgba(6,60,48,.45)]" />
+          <i className="absolute left-[16%] top-[10%] h-[26%] w-[38%] rotate-[-30deg] rounded-[50%] bg-white/45 blur-[2px]" />
+        </span>
+      </div>
+
+      {/* a beam from the orb down to the front pane */}
+      <i className="cg-beam absolute" style={{ left: -1, top: -140, width: 2, height: 52, transform: `translateZ(${R}px)` }} />
+
+      {/* the prism: four glass panes that turn together */}
+      <div className="cg-spin absolute" style={{ left: 0, top: 0, width: 0, height: 0, ...P3 }}>
+        {JOBS.map((j, i) => (
+          <div key={j.k} className="absolute" style={{ left: -CARD_W / 2, top: -CARD_H / 2 + 22, width: CARD_W, height: CARD_H, transform: `rotateY(${i * 90}deg) translateZ(${R}px)`, backfaceVisibility: "hidden" }}>
+            <Pane i={i} />
           </div>
+        ))}
+      </div>
+
+      {/* two chips floating at different depths */}
+      <div className="cg-float absolute" style={{ left: -256, top: -226, transform: "translateZ(90px)" }}>
+        <div className="flex items-center gap-2 rounded-2xl bg-white/95 py-2 pl-2.5 pr-3 ring-1 ring-white shadow-[0_20px_30px_-14px_rgba(15,26,46,.45)]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/logos/channels/whatsapp.svg" alt="" width={16} height={16} className="h-4 w-4" />
+          <span className="leading-tight"><span className="block text-[11px] font-semibold text-[#14233a]">Rohan K. · Order #4821</span><span className="block text-[10px] text-muted-foreground">“Where is my order?”</span></span>
         </div>
-
-        {/* a light beam from the Copilot panel to the reply box while the reply is used */}
-        <svg className="pointer-events-none absolute left-0 top-0" width={W} height={H} viewBox={`0 0 ${W} ${H}`} fill="none" aria-hidden style={z(30)}>
-          <path className="cg-beam cg-flow" d="M318 262 C 300 300, 260 320, 200 352" stroke="var(--primary)" strokeWidth="2.2" strokeLinecap="round" />
-        </svg>
-
-        {/* the glow behind the Copilot panel */}
-        <div className="cg-orb pointer-events-none absolute rounded-full bg-primary/25 blur-[44px]" style={{ left: 330, top: -10, width: 230, height: 230, ...z(40) }} />
-
-        {/* the Copilot panel: flies in from the depth of the scene, then faces the viewer */}
-        <div className="absolute" style={{ left: 296, top: 4, width: 262, ...P3, ...z(70) }}>
-          <div className="cg-panel" style={P3}>
-            <div className={`relative overflow-hidden rounded-[20px] bg-white p-3.5 ring-1 ring-white ${SHADOW}`}>
-              <div className="flex items-center gap-2">
-                <span className="flex h-7 w-7 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-[oklch(0.5_0.12_175)] text-primary-foreground shadow-[0_6px_12px_-4px_rgba(18,160,124,.6)]"><Sparkles className="h-4 w-4" /></span>
-                <span className="text-[13.5px] font-semibold text-[#14233a]">Copilot</span>
-                <span className="cg-think ml-auto flex items-center gap-1 text-[10px] font-medium text-muted-foreground">thinking<span className="flex gap-[3px]"><i className="h-1 w-1 rounded-full bg-primary" /><i className="h-1 w-1 rounded-full bg-primary" style={{ animationDelay: ".15s" }} /><i className="h-1 w-1 rounded-full bg-primary" style={{ animationDelay: ".3s" }} /></span></span>
-              </div>
-
-              <p className="mt-3 font-mono text-[9.5px] uppercase tracking-[0.16em] text-muted-foreground">Summary</p>
-              <ul className="mt-1.5 space-y-1 text-[11.5px] leading-snug text-[#14233a]">
-                <li className="cg-b1 flex gap-1.5"><span className="mt-[5px] h-1 w-1 shrink-0 rounded-full bg-primary" />Charged twice on order #1042</li>
-                <li className="cg-b2 flex gap-1.5"><span className="mt-[5px] h-1 w-1 shrink-0 rounded-full bg-primary" />Waiting 2 days · customer is upset</li>
-              </ul>
-
-              <p className="mt-3 font-mono text-[9.5px] uppercase tracking-[0.16em] text-primary">Suggested reply</p>
-              <div className="mt-1.5 rounded-lg bg-primary/8 px-2.5 py-2 text-[11px] leading-[1.5] text-[#14233a]">
-                {LINES.map((l, i) => <span key={i} className={`cg-t${i}`}>{l.t}</span>)}
-              </div>
-
-              <div className="cg-meta mt-2.5 flex flex-wrap items-center gap-1.5">
-                <span className="rounded-full bg-primary/12 px-2 py-0.5 text-[10px] font-semibold text-primary">Empathetic</span>
-                <span className="flex items-center gap-1 rounded-full bg-secondary px-2 py-0.5 text-[10px] font-medium text-muted-foreground"><FileText className="h-3 w-3" />Refund policy.pdf</span>
-              </div>
-
-              <span className="cg-use mt-3 flex items-center justify-center gap-1.5 rounded-lg bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] py-2 text-[12px] font-semibold text-primary-foreground shadow-[0_10px_16px_-8px_rgba(18,160,124,.7)]">Use reply <kbd className="rounded bg-white/25 px-1.5 text-[10px] font-semibold">Tab</kbd></span>
-              <Gloss />
-            </div>
-          </div>
-        </div>
-
-        {/* the draft lifts out of the panel and flies into the reply box */}
-        <div className="absolute" style={{ left: 310, top: 176, width: 232, ...P3, ...z(96) }}>
-          <div className="cg-fly rounded-xl bg-white p-2.5 text-[10.5px] leading-snug text-[#14233a] shadow-[0_22px_34px_-14px_rgba(18,160,124,.55)] ring-1 ring-primary/40" style={P3}>
-            <span className="mb-1 flex items-center gap-1 font-mono text-[8.5px] uppercase tracking-[0.14em] text-primary"><Sparkles className="h-3 w-3" />Draft</span>
-            I’m sorry about the double charge, Rohan. I’ve found the duplicate and started your refund.
-          </div>
-        </div>
-
-        {/* the paper plane after Send */}
-        <div className="absolute" style={{ left: 286, top: 348, width: 36, height: 36, ...P3, ...z(20) }}>
-          <span className="cg-plane flex h-9 w-9 items-center justify-center rounded-full bg-primary text-primary-foreground shadow-[0_14px_22px_-8px_rgba(18,160,124,.7)]"><Send className="h-4 w-4" /></span>
-        </div>
-
-        {/* the human agent, in front: pressing Tab, then sending */}
-        <div className="cg-float absolute" style={{ left: 0, top: 388, animationDelay: "-2s", ...z(100) }}>
-          <div className="cg-meta flex items-center gap-2.5 rounded-2xl bg-white py-2 pl-2 pr-4 shadow-[0_20px_30px_-16px_rgba(15,26,46,.45)] ring-1 ring-white">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#14233a] text-[12px] font-bold text-white">P</span>
-            <span className="leading-tight"><span className="block text-[11.5px] font-semibold text-[#14233a]">Priya · Human agent</span><span className="block text-[9.5px] text-muted-foreground">Reviews, edits, sends</span></span>
-            <kbd className="cg-tab ml-1 rounded-md border border-border bg-white px-1.5 py-0.5 font-mono text-[10.5px] font-bold text-[#14233a] shadow-[0_2px_0_#cfe3dd]">Tab</kbd>
-          </div>
-        </div>
-        <div className="cg-float absolute" style={{ left: 318, top: 396, animationDelay: "-4s", ...z(70) }}>
-          <span className="cg-meta inline-flex items-center gap-2 whitespace-nowrap rounded-full bg-white py-1.5 pl-2 pr-3.5 text-[11.5px] font-semibold text-[#14233a] shadow-[0_18px_28px_-12px_rgba(15,26,46,.45)] ring-1 ring-white"><span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground"><Sparkles className="h-3 w-3" /></span>Copilot assists, you decide</span>
-        </div>
-
-        {/* the reply time pops up when the reply is sent */}
-        <div className="absolute" style={{ left: 8, top: -2, ...z(125) }}>
-          <p className="cg-fast flex items-center gap-1.5 whitespace-nowrap rounded-full bg-white py-1.5 pl-2 pr-3.5 text-[11.5px] font-semibold text-primary shadow-[0_18px_28px_-12px_rgba(15,26,46,.45)] ring-1 ring-white"><span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground"><Check className="h-3 w-3" strokeWidth={3.4} /></span>Replied in 12 s</p>
-        </div>
+      </div>
+      <div className="cg-float absolute" style={{ left: 62, top: -214, animationDelay: "-3s", transform: "translateZ(120px)" }}>
+        <span className="inline-flex items-center gap-2 rounded-full bg-white py-1.5 pl-2 pr-3.5 text-[11.5px] font-semibold text-[#14233a] shadow-[0_18px_28px_-12px_rgba(15,26,46,.45)] ring-1 ring-white"><span className="flex h-5 w-5 items-center justify-center rounded-full bg-primary text-primary-foreground"><Check className="h-3 w-3" strokeWidth={3.4} /></span>Agent reviews every draft</span>
       </div>
     </div>
   )
@@ -218,7 +209,7 @@ export function CopilotGlass() {
     ro.observe(el)
     return () => ro.disconnect()
   }, [])
-  // lean toward the pointer so the depth between the layers is easy to see
+  // lean toward the pointer so the depth of the prism is easy to see
   const move = (e: React.PointerEvent<HTMLDivElement>) => {
     const el = box.current
     if (!el) return
@@ -231,9 +222,9 @@ export function CopilotGlass() {
     box.current?.style.setProperty("--py", "0")
   }
   return (
-    <div ref={box} onPointerMove={move} onPointerLeave={leave} className="relative mx-auto w-full max-w-[560px]" style={{ height: H * k }} role="img" aria-label="A human agent and Copilot answering a customer together: Copilot summarises the thread and drafts a reply, the agent presses Tab, sends it, and the reply goes out in 12 seconds">
-      <div className="pointer-events-none absolute left-[4%] top-[6%] h-[86%] w-[86%] rounded-full bg-[radial-gradient(circle,color-mix(in_oklch,var(--primary)_13%,white),transparent_66%)]" />
-      <div className="absolute left-0 top-0 origin-top-left" style={{ width: W, height: H, transform: `scale(${k})`, perspective: 1600, perspectiveOrigin: "50% 40%" }}>
+    <div ref={box} onPointerMove={move} onPointerLeave={leave} className="relative mx-auto w-full max-w-[560px]" style={{ height: H * k }} role="img" aria-label="A glass prism turning through Copilot's four jobs: draft a reply, summarise the thread, find the answer and change the tone">
+      <div className="pointer-events-none absolute left-[6%] top-[8%] h-[84%] w-[88%] rounded-full bg-[radial-gradient(circle,color-mix(in_oklch,var(--primary)_13%,white),transparent_66%)]" />
+      <div className="absolute left-0 top-0 origin-top-left" style={{ width: W, height: H, transform: `scale(${k})`, perspective: 1500, perspectiveOrigin: "50% 38%" }}>
         <Scene />
       </div>
       <style>{CSS}</style>

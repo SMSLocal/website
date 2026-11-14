@@ -799,17 +799,20 @@ export function ProductFinalCta({
   description,
   primaryCta,
   secondaryCta,
+  wide = false,
 }: {
   title: string
   subtitle?: string
   description?: string
   primaryCta: { label: string; href: string }
   secondaryCta: { label: string; href: string }
+  /** Stretch the card to the navbar width (max-w-7xl) instead of the default max-w-5xl. */
+  wide?: boolean
 }) {
   const copy = subtitle ?? description ?? ""
   return (
     <section className="bg-muted/40 py-20 sm:py-24">
-      <div className="mx-auto max-w-5xl px-4 sm:px-6">
+      <div className={`mx-auto px-4 sm:px-6 ${wide ? "max-w-7xl" : "max-w-5xl"}`}>
         <div className="relative overflow-hidden rounded-3xl border border-border bg-gradient-to-br from-[oklch(0.17_0.03_230)] via-[oklch(0.19_0.03_220)] to-[oklch(0.22_0.04_200)] p-10 text-white shadow-2xl sm:p-14">
           <div
             aria-hidden

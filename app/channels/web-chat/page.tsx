@@ -9,78 +9,76 @@ import {
   Sparkles,
 } from "lucide-react"
 import { SiteHeader } from "@/components/landing/site-header"
+import { ExploreMore } from "@/components/product/explore-more"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
-import { BreadcrumbJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
+import { BreadcrumbJsonLd, FaqJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
+import { WebChatHero } from "@/components/product/webchat-hero"
+import { Section, StatsBand } from "@/components/product/product-page"
+import { GsFinalCta } from "@/components/home/gs/sections-c"
 import {
-  CapabilityGrid,
-  ProductFinalCta,
-  ProductHero,
-  Section,
-  SectionHeader,
-  StatsBand,
-} from "@/components/product/product-page"
+  WebChatFeatures,
+  WebChatProblem,
+  WebChatSteps,
+  WebChatStyles,
+  WebChatUseCases,
+  WebChatWhyItWorks,
+  WebChatWhySmsLocal,
+} from "@/components/product/webchat-sections"
 
 export const metadata: Metadata = getPageMetadata("/channels/web-chat")
 
-/* ── Hero visual ──────────────────────────────────────────────────────────── */
-function WebChatVisual() {
-  const messages = [
-    { from: "bot",  text: "Hi! Looking for something specific, or just browsing?" },
-    { from: "user", text: "Do you ship to Kochi?" },
-    { from: "bot",  text: "Yes — 2-3 day delivery to Kochi. Want me to check a specific product?" },
-  ]
+const BTN = "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
+const BTN_OUT = "inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary"
 
-  return (
-    <div className="flex h-full min-h-[360px] flex-col gap-4 lg:pl-4">
-      {/* Widget mock */}
-      <div className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">
-        <div className="mb-3 flex items-center gap-2.5 border-b border-white/10 pb-3">
-          <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
-            <Sparkles className="h-4 w-4 text-primary-foreground" />
-          </span>
-          <div>
-            <p className="text-[13px] font-semibold text-white">Chat with us</p>
-            <p className="text-[11px] text-green-400">● AI answers instantly</p>
-          </div>
-        </div>
-        <div className="space-y-2">
-          {messages.map((m, i) => (
-            <div key={i} className={`flex ${m.from === "user" ? "justify-end" : "justify-start"}`}>
-              <span
-                className={`max-w-[85%] rounded-xl px-3 py-2 text-[12px] leading-snug ${
-                  m.from === "user"
-                    ? "bg-primary text-primary-foreground"
-                    : "bg-white/10 text-white/80"
-                }`}
-              >
-                {m.text}
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
+const TRUST = [
+  { icon: Palette, label: "Customizable widget" },
+  { icon: Sparkles, label: "AI answers before an agent" },
+  { icon: MousePointerClick, label: "Proactive triggers" },
+  { icon: Code2, label: "In-app SDK chat" },
+]
 
-      {/* Trigger card */}
-      <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-        <p className="mb-2 text-[10.5px] font-semibold uppercase tracking-widest text-white/50">
-          Proactive trigger fired
-        </p>
-        <p className="text-[12.5px] leading-relaxed text-white/80">
-          Visitor spent 45s on pricing page → chat opened automatically
-        </p>
-      </div>
+const FAQ = [
+  {
+    q: "What is a website live chat widget?",
+    a: "A website live chat widget is a small chat window on your site where visitors can ask questions and get answers in real time. With SMSLocal the widget is answered by an agentic AI first and hands off to your team when a person is needed.",
+  },
+  {
+    q: "Can I customize the widget?",
+    a: "Yes. Colors, position and prechat forms all match your brand, so the widget feels like a native part of your site, not a third-party plugin.",
+  },
+  {
+    q: "Does AI answer in the widget?",
+    a: "Yes. The agentic AI answers common questions instantly from your knowledge base, and hands off to an agent in the same thread when a conversation needs a person.",
+  },
+  {
+    q: "How do I install the chat widget on my website?",
+    a: "Add a single script to your site, brand the widget, connect your knowledge base and set your triggers. The widget goes live without rebuilding any pages, and chats arrive in your shared inbox.",
+  },
+  {
+    q: "Can I start a chat proactively when a visitor is on a page?",
+    a: "Yes. Proactive triggers let you greet visitors based on behavior, such as time on a page, scroll depth or the page they landed on, so the chat starts at the moment they are most likely to need help.",
+  },
+  {
+    q: "Is there an in-app option, not just the website?",
+    a: "Yes. The SDK embeds the same chat experience inside your product, so logged-in users get support without ever leaving the app.",
+  },
+  {
+    q: "Can the chat capture leads?",
+    a: "Yes. A prechat form can collect a visitor's name and email before the conversation starts, and the full chat is saved against their customer record.",
+  },
+  {
+    q: "Do web chats show up with my WhatsApp and SMS conversations?",
+    a: "Yes. Web chat lands in the same shared inbox as WhatsApp, SMS and voice, with one customer record, so your team never has to switch tools to see the full history.",
+  },
+]
 
-      {/* SDK badge */}
-      <div className="flex items-center gap-2 rounded-xl border border-primary/20 bg-primary/10 px-4 py-2.5">
-        <Code2 className="h-4 w-4 shrink-0 text-primary" />
-        <span className="text-[12.5px] font-medium text-primary">
-          Same chat, embedded inside your product via SDK
-        </span>
-      </div>
-    </div>
-  )
-}
+const RELATED = [
+  { href: "/channels/whatsapp/", label: "WhatsApp Business API", hint: "Official API, templates and AI replies" },
+  { href: "/channels/messenger/", label: "Facebook Messenger", hint: "Automated and AI-handled conversations" },
+  { href: "/channels/social/", label: "Social media inbox", hint: "Instagram and Messenger in one place" },
+  { href: "/products/analytics/", label: "Agentic AI analytics", hint: "CSAT, sentiment and campaign results" },
+]
 
 export default function WebChatPage() {
   return (
@@ -98,30 +96,46 @@ export default function WebChatPage() {
           { name: "Web Chat", path: "/channels/web-chat" },
         ]}
       />
+      <FaqJsonLd items={FAQ} path="/channels/web-chat" />
       <SiteHeader />
       <main>
 
         {/* ── HERO ──────────────────────────────────────────────── */}
-        <ProductHero
-          compact
-          eyebrow="Channels · Web Chat"
-          title={
-            <>
-              Website Chat With
-              <br className="hidden sm:block" /> Agentic AI Built In
-            </>
-          }
-          subtitle="A customizable chat widget that answers visitors instantly and converts them, powered by agentic AI."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
-          trustBar={[
-            { icon: Palette,            label: "Customizable widget" },
-            { icon: Sparkles,           label: "AI answers before an agent" },
-            { icon: MousePointerClick,  label: "Proactive triggers" },
-            { icon: Code2,              label: "In-app SDK chat" },
-          ]}
-          visual={<WebChatVisual />}
-        />
+        <section className="relative isolate overflow-hidden bg-background">
+          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
+            <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
+          </div>
+          <div className="mx-auto grid max-w-7xl items-stretch gap-12 px-4 pb-16 pt-14 sm:px-6 lg:grid-cols-[1fr_600px] lg:gap-10 lg:pb-20 lg:pt-12 xl:grid-cols-[1fr_700px]">
+            <div className="wc-rise">
+              <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
+                <Sparkles className="h-3.5 w-3.5 text-accent" />Channels · Web Chat
+              </p>
+              <h1 className="mt-6 text-balance text-[30px] font-semibold leading-[1.1] tracking-[-0.035em] sm:text-[42px]">
+                Website chat with <span className="text-primary">agentic AI built in.</span>
+              </h1>
+              <p className="mt-5 max-w-lg text-pretty text-[17px] leading-relaxed text-muted-foreground">
+                A customizable chat widget that answers visitors instantly and converts them, powered by agentic AI.
+              </p>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <Link href="/company/contact/" className={BTN}>Get a Demo <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
+                <Link href="/signup/" className={BTN_OUT}>Start your trial</Link>
+              </div>
+              <ul className="mt-8 grid max-w-lg grid-cols-1 gap-x-8 gap-y-3 text-[14px] text-muted-foreground sm:grid-cols-2">
+                {TRUST.map((t) => (
+                  <li key={t.label} className="flex items-start gap-2.5 leading-snug"><t.icon className="mt-[1px] h-4 w-4 shrink-0 text-primary" /><span>{t.label}</span></li>
+                ))}
+              </ul>
+            </div>
+            <div className="wc-rise lg:h-full" style={{ animationDelay: "0.15s" }}>
+              <WebChatHero />
+            </div>
+          </div>
+          <style>{`
+            @keyframes wc-rise { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
+            .wc-rise { animation: wc-rise .9s cubic-bezier(.2,.7,.2,1) both }
+            @media (prefers-reduced-motion: reduce) { .wc-rise { animation: none } }
+          `}</style>
+        </section>
 
         {/* ── TRUST LINE ────────────────────────────────────────── */}
         <div className="border-b border-border bg-muted/30 py-4">
@@ -142,145 +156,18 @@ export default function WebChatPage() {
           />
         </Section>
 
-        {/* ── THE PROBLEM ───────────────────────────────────────── */}
-        <Section tone="muted">
-          <div className="mx-auto max-w-3xl">
-            <SectionHeader
-              eyebrow="The problem"
-              title="Most website visitors leave without talking to anyone"
-            />
-            <p className="mt-5 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-              A visitor has a question, doesn&apos;t find the answer in three clicks, and leaves. A
-              chat widget with agentic AI greets them, answers instantly, and captures the ones
-              who were ready to buy or ask — before they close the tab.
-            </p>
-          </div>
-        </Section>
-
-        {/* ── WHAT YOU GET ──────────────────────────────────────── */}
-        <CapabilityGrid
-          eyebrow="What you get"
-          title="A widget that does more than sit in the corner"
-          subtitle="Not a static contact form — a chat experience your visitors actually use, answered by AI first."
-          items={[
-            {
-              icon: Palette,
-              title: "Customizable widget",
-              body: "Match colors, position, and prechat forms to your brand, so the widget looks like part of your site — not a bolted-on plugin.",
-            },
-            {
-              icon: Sparkles,
-              title: "AI that answers first",
-              body: "The agentic AI handles common questions — pricing, shipping, availability — before an agent ever needs to pick up the conversation.",
-            },
-            {
-              icon: MousePointerClick,
-              title: "Proactive triggers",
-              body: "Reach visitors at the right moment based on behavior — time on page, scroll depth, or a specific page they landed on.",
-            },
-            {
-              icon: Code2,
-              title: "In-app SDK",
-              body: "Embed the same chat experience inside your product, not just your marketing site, so logged-in users get support without leaving the app.",
-            },
-          ]}
-        />
-
-        {/* ── WHY IT WORKS ──────────────────────────────────────── */}
-        <Section tone="muted">
-          <div className="mx-auto max-w-3xl">
-            <SectionHeader
-              eyebrow="Why it works"
-              title="Instant answers, and your team only where it matters"
-            />
-            <p className="mt-5 text-pretty text-[15px] leading-relaxed text-muted-foreground">
-              Visitors get instant answers without waiting, and your team only joins the
-              conversations that genuinely need a person — all from the same shared inbox as your
-              WhatsApp, SMS, and voice conversations.
-            </p>
-          </div>
-        </Section>
-
-        {/* ── WHY SMSLOCAL ──────────────────────────────────────── */}
-        <Section tone="dark">
-          <div className="mx-auto max-w-3xl">
-            <span className="inline-flex rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.15em] text-white/85">
-              Why SMSLocal
-            </span>
-            <h2 className="mt-5 text-balance text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Web chat is one channel — not a separate silo
-            </h2>
-            <p className="mt-5 text-pretty text-[15px] leading-relaxed text-white/70">
-              Web chat runs on the same platform as WhatsApp, SMS, voice, and your campaigns, so a
-              visitor who chats on your site and later messages on WhatsApp is one customer
-              record — not two disconnected conversations in two different tools.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link
-                href="/products/agentic-ai/"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
-              >
-                Agentic AI
-              </Link>
-              <Link
-                href="/products/omnichannel-inbox/"
-                className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/10 px-4 py-2.5 text-sm font-medium text-white backdrop-blur-md transition hover:bg-white/15"
-              >
-                Omnichannel Inbox
-              </Link>
-            </div>
-          </div>
-        </Section>
-
-        {/* ── FAQ ───────────────────────────────────────────────── */}
-        <FaqSection
-          items={[
-            {
-              q: "Can I customize the widget?",
-              a: "Yes — colors, position, and prechat forms all match your brand, so the widget feels like a native part of your site, not a third-party plugin.",
-            },
-            {
-              q: "Does AI answer in the widget?",
-              a: "Yes. The agentic AI answers common questions instantly from your knowledge base, and hands off to an agent in the same thread when a conversation needs a person.",
-            },
-            {
-              q: "Is there an in-app option, not just the website?",
-              a: "Yes — the SDK embeds the same chat experience inside your product, so logged-in users get support without ever leaving the app.",
-            },
-          ]}
-        />
-
-        {/* ── INTERNAL LINKS ────────────────────────────────────── */}
-        <Section tone="muted">
-          <div className="mx-auto max-w-3xl">
-            <SectionHeader eyebrow="Explore more" title="Related resources" />
-            <ul className="mt-6 space-y-3">
-              {[
-                { href: "/products/live-chat/",         label: "Live Chat product — full feature breakdown" },
-                { href: "/products/agentic-ai/",        label: "How agentic AI works" },
-                { href: "/products/omnichannel-inbox/", label: "Omnichannel inbox — every channel, one place" },
-                { href: "/compare/",                    label: "Compare SMSLocal with alternatives" },
-              ].map((link) => (
-                <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="inline-flex items-center gap-2 text-[14px] font-medium text-primary hover:underline"
-                  >
-                    {link.label} <ArrowRight className="h-3.5 w-3.5" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </Section>
+        <WebChatProblem />
+        <WebChatFeatures />
+        <WebChatSteps />
+        <WebChatUseCases />
+        <WebChatWhyItWorks />
+        <WebChatWhySmsLocal />
+        <FaqSection items={FAQ} />
+        <ExploreMore links={RELATED} />
+        <WebChatStyles />
 
         {/* ── FINAL CTA ─────────────────────────────────────────── */}
-        <ProductFinalCta
-          title="Add agentic AI chat to your website."
-          subtitle="Install the widget, connect your knowledge base, and start converting visitors into conversations."
-          primaryCta={{ label: "Get a Demo", href: "/company/contact/" }}
-          secondaryCta={{ label: "Start your trial", href: "/signup/" }}
-        />
+        <GsFinalCta />
       </main>
       <SiteFooter />
     </>
