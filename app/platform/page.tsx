@@ -56,13 +56,6 @@ const ROLES = [
   { r: "Agents", w: "handle the chats.", d: "They reply in the inbox with the copilot beside them, on the channels they are given.", I: Headset },
 ]
 
-const INDUSTRIES = [
-  { l: "insurance", h: "/industry/insurance/" },
-  { l: "travel and hospitality", h: "/industry/travel-and-hospitality/" },
-  { l: "telecom", h: "/industry/telecom/" },
-  { l: "mortgage", h: "/industry/mortgage/" },
-  { l: "media and entertainment", h: "/industry/media-entertainment/" },
-]
 const SOLUTIONS = [
   { l: "banking and fintech", h: "/solutions/banking-fintech/" },
   { l: "ecommerce", h: "/solutions/ecommerce/" },
@@ -271,8 +264,8 @@ export default function PlatformPage() {
               <h2 className={`${H2} mt-5`}>Built for teams that talk to customers all day.</h2>
               <p className="mt-4 max-w-lg text-[16px] leading-relaxed text-muted-foreground">Pick your sector to see how the platform answers, follows up and keeps one record of every customer.</p>
             </div>
-            <div className="mt-12 grid gap-12 sm:grid-cols-2 sm:gap-16">
-              {[{ h: "Industries", list: INDUSTRIES }, { h: "Solutions", list: SOLUTIONS }].map((col) => (
+            <div className="mt-12 grid max-w-xl gap-12">
+              {[{ h: "Solutions", list: SOLUTIONS }].map((col) => (
                 <div key={col.h}>
                   <p className="border-b border-foreground/30 pb-2.5 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">{col.h}</p>
                   <ul>

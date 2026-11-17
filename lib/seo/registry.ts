@@ -689,38 +689,6 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "SMSLocal industries",
     ],
   },
-  "/solutions/saas-b2b": {
-    title: "Customer Support for SaaS Teams — B2B Platform",
-    description:
-      "Manage onboarding, retention, expansion, and churn prevention from one AI support platform built for SaaS teams, with Stripe, HubSpot, and Linear context.",
-    focusKeyword: "customer support for SaaS",
-    keywords: [
-      "customer support for SaaS",
-      "B2B customer support platform",
-      "SaaS customer success software",
-      "churn prevention software",
-      "customer 360 platform",
-      "Intercom alternative",
-      "Zendesk alternative",
-      "AI customer support SaaS",
-    ],
-  },
-  "/solutions/restaurant": {
-    title: "Messaging for Restaurants — Reservations",
-    description:
-      "Manage guest conversations, automate SMS reservations, send order updates, and collect customer reviews from one inbox, built for restaurants and cafes.",
-    focusKeyword: "customer support for restaurants",
-    keywords: [
-      "customer support for restaurants",
-      "restaurant SMS reservations",
-      "restaurant guest messaging",
-      "WhatsApp for restaurants",
-      "restaurant review automation",
-      "multi-location restaurant software",
-      "restaurant order updates SMS",
-      "food service customer communication",
-    ],
-  },
   "/solutions/banking-fintech": {
     title: "SMS & OTP for Banks and Fintechs in India",
     description:
@@ -835,86 +803,6 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
   },
 
   // ─── Industry ─────────────────────────────────────────────────────────────
-  "/industry/travel-and-hospitality": {
-    title: "Agentic AI for Travel & Hospitality — Bookings",
-    description:
-      "Handle bookings, itinerary updates, and round-the-clock multilingual guest support for travel and hospitality with agentic AI and omnichannel broadcasting.",
-    focusKeyword: "agentic AI for travel",
-    keywords: [
-      "agentic AI for travel",
-      "AI agents for hospitality",
-      "travel booking AI agent",
-      "multilingual travel support AI",
-      "airline WhatsApp alerts",
-      "hotel booking AI agent",
-      "OTA customer messaging",
-      "itinerary management AI",
-    ],
-  },
-  "/industry/media-entertainment": {
-    title: "Agentic AI for Media & Entertainment — Audiences",
-    description:
-      "Grow audiences and handle high traffic volume with agentic AI for ticketing, recommendations, and subscriber support, plus targeted omnichannel campaigns.",
-    focusKeyword: "agentic AI for media",
-    keywords: [
-      "agentic AI for media",
-      "AI agents for entertainment",
-      "OTT subscriber support AI",
-      "ticketing AI agent",
-      "content recommendation AI",
-      "streaming platform AI support",
-      "cinema booking AI agent",
-      "fan engagement RCS",
-    ],
-  },
-  "/industry/insurance": {
-    title: "Agentic AI for Insurance Claims & Policy Renewals",
-    description:
-      "Guide quotes, claims, and policy renewals with agentic AI across every channel, plus scheduled reminders and campaigns built for retention and cross-sell.",
-    focusKeyword: "agentic AI for insurance",
-    keywords: [
-      "agentic AI for insurance",
-      "AI agents for insurance",
-      "insurance claims AI agent",
-      "policy renewal reminder AI",
-      "insurance lead qualification AI",
-      "claims triage AI",
-      "insurer customer messaging",
-      "insurance AI security",
-    ],
-  },
-  "/industry/mortgage": {
-    title: "Agentic AI for Mortgage — Lead to Close in India",
-    description:
-      "Move borrowers from inquiry to close with agentic AI handling pre-qualification, document reminders, and status updates across every messaging channel.",
-    focusKeyword: "agentic AI for mortgage",
-    keywords: [
-      "agentic AI for mortgage",
-      "AI agents for lenders",
-      "mortgage lead qualification AI",
-      "EMI reminder AI agent",
-      "NBFC AI messaging",
-      "loan application status AI",
-      "lender document collection AI",
-      "home loan AI agent India",
-    ],
-  },
-  "/industry/telecom": {
-    title: "Agentic AI for Telecom — Billing & Support Scale",
-    description:
-      "Handle customer support, billing, and service notifications at scale for telecom with agentic AI and omnichannel broadcasting across every single channel.",
-    focusKeyword: "agentic AI for telecom",
-    keywords: [
-      "agentic AI for telecom",
-      "AI agents for telecom",
-      "telecom AI customer support",
-      "network outage alert AI",
-      "billing support AI agent",
-      "SIM porting status updates",
-      "high volume AI support",
-      "telecom omnichannel broadcasting",
-    ],
-  },
 
   // ─── Compare ──────────────────────────────────────────────────────────────
   "/compare": {

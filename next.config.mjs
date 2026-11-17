@@ -177,6 +177,87 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Pages removed from the site: send every old URL to the Solutions overview.
+      {
+        source: "/solutions/saas-b2b",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/solutions/saas-b2b/",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/solutions/restaurant",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/solutions/restaurant/",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry/travel-and-hospitality",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry/travel-and-hospitality/",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry/media-entertainment",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry/media-entertainment/",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry/insurance",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry/insurance/",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry/mortgage",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry/mortgage/",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry/telecom",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry/telecom/",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry",
+        destination: "/solutions/",
+        permanent: true,
+      },
+      {
+        source: "/industry/",
+        destination: "/solutions/",
+        permanent: true,
+      },
       // The Agentic AI page moved from /products/ai-agentic to /products/agentic-ai.
       // Permanent redirects keep rankings and any links to the old URL (and its app-category pages).
       {

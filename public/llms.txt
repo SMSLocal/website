@@ -37,9 +37,7 @@
 - [Education](https://www.smslocal.in/solutions/education/)
 - [Logistics](https://www.smslocal.in/solutions/logistics/)
 - [Real Estate](https://www.smslocal.in/solutions/real-estate/)
-- [Restaurant](https://www.smslocal.in/solutions/restaurant/)
 - [Retail & Hospitality](https://www.smslocal.in/solutions/retail/)
-- [SaaS / B2B](https://www.smslocal.in/solutions/saas-b2b/)
 
 ## Developers
 
