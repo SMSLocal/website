@@ -1,13 +1,13 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
-import { BellRing, IndianRupee, PhoneOff, ShieldCheck } from "lucide-react"
+import { CalendarCheck, IndianRupee, UserCheck, Video } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 
 // Hero graphic for /solutions/education: a school's books and cap, and four short popups on how SMSLocal helps the school.
 // Three hardback books are stacked in isometric 3D (cream page edges, gold-banded spines, a slight twist) with a navy mortarboard and
-// gold tassel on top. Around them, four speech-bubble popups appear one after another, each a benefit in plain words: fees collected
-// faster, parents told instantly, fewer calls at the front desk, DLT-compliant templates. The pile drops into place first; the
+// gold tassel on top. Around them, four speech-bubble popups appear one after another, each a benefit in plain words: fee reminders,
+// exam schedules and results, admission updates, class reminders. The pile drops into place first; the
 // popups pop in, hold, and fade as the loop restarts. The scene sways slightly and leans toward the pointer.
 // HTML + CSS 3D, silent, 14-second loop.
 
@@ -28,10 +28,10 @@ const CAP_Z = 96
 
 type Pop = { Icon: LucideIcon; c: string; t: string; d: string; x: number; y: number; tail: string }
 const POPS: Pop[] = [
-  { Icon: IndianRupee, c: "#d98a0b", t: "Fees collected faster", d: "Reminders with a UPI link", x: 4, y: 22, tail: "-bottom-1.5 right-10" },
-  { Icon: BellRing, c: "#0e9f6e", t: "Parents told instantly", d: "SMS and WhatsApp, in their language", x: 330, y: 12, tail: "-bottom-1.5 left-10" },
-  { Icon: PhoneOff, c: "#0f2a47", t: "Fewer calls at the desk", d: "The AI agent answers routine questions", x: 4, y: 338, tail: "-top-1.5 right-10" },
-  { Icon: ShieldCheck, c: "#2f78bd", t: "DLT-compliant", d: "Approved templates for every campus", x: 330, y: 352, tail: "-top-1.5 left-10" },
+  { Icon: IndianRupee, c: "#d98a0b", t: "Fee reminders", d: "Due-date alerts with a UPI pay link", x: 4, y: 22, tail: "-bottom-1.5 right-10" },
+  { Icon: CalendarCheck, c: "#0e9f6e", t: "Exam schedules and results", d: "Sent in one go, on SMS or WhatsApp", x: 330, y: 12, tail: "-bottom-1.5 left-10" },
+  { Icon: UserCheck, c: "#0f2a47", t: "Admission updates", d: "Application status sent to every applicant", x: 4, y: 338, tail: "-top-1.5 right-10" },
+  { Icon: Video, c: "#2f78bd", t: "Class reminders", d: "Students get a nudge before every live class", x: 330, y: 352, tail: "-top-1.5 left-10" },
 ]
 
 const CSS = `
@@ -161,7 +161,7 @@ export function EducationHero() {
     box.current?.style.setProperty("--py", "0")
   }
   return (
-    <div ref={box} onPointerMove={move} onPointerLeave={leave} className="relative mx-auto w-full max-w-[560px]" style={{ height: H * k }} role="img" aria-label="A stack of three schoolbooks with a graduation cap on top, and four short popups on how SMSLocal helps a school: fees collected faster with a UPI link, parents told instantly by SMS and WhatsApp in their language, fewer calls at the front desk because the AI agent answers routine questions, and DLT-compliant approved templates for every campus">
+    <div ref={box} onPointerMove={move} onPointerLeave={leave} className="relative mx-auto w-full max-w-[560px]" style={{ height: H * k }} role="img" aria-label="A stack of three schoolbooks with a graduation cap on top, and four short popups on how SMSLocal helps a school: fee reminders with a UPI pay link, exam schedules and results sent in one go on SMS or WhatsApp, admission updates sent to every applicant, and class reminders before every live class">
       <div className="absolute left-0 top-0 origin-top-left" style={{ width: W, height: H, transform: `scale(${k})`, perspective: 1600, perspectiveOrigin: "50% 40%" }}>
         <Scene />
         <Popups />
