@@ -17,6 +17,15 @@ export const metadata: Metadata = getPageMetadata("/products/ai-agents")
 /* ─── DATA ────────────────────────────────────────────────────────────────── */
 
 
+/* Plain links to every agent page. The tab switcher below only renders the active tab's link, so crawlers never saw the others. */
+const AGENT_LINKS = [
+  { href: "/products/ai-agents/customer-service/", label: "AI customer support agent" },
+  { href: "/products/ai-agents/sales/", label: "AI agent for sales" },
+  { href: "/products/ai-agents/booking/", label: "AI appointment booking" },
+  { href: "/products/ai-agents/lead-qualification/", label: "AI lead qualification" },
+  { href: "/products/ai-agents/agent-builder/", label: "AI agent builder" },
+]
+
 const SOURCES = ["FAQ PDFs", "Policy documents", "Product catalogue CSV", "Past chat transcripts", "Website pages"]
 
 const CAPABILITIES = [
@@ -146,6 +155,18 @@ export default function AiAgentsPage() {
             <p className={`${EYEBROW} text-primary`}>AI agent use cases</p>
             <h2 className={`${H2} mt-5 max-w-2xl`}>AI agent use cases for support, sales and bookings.</h2>
             <AiAgentsTabs />
+            <nav aria-label="All AI agent pages" className="mt-12 border-t border-border pt-6">
+              <p className={`${EYEBROW} text-muted-foreground`}>Explore every AI agent</p>
+              <ul className="mt-4 flex flex-wrap gap-x-8 gap-y-3">
+                {AGENT_LINKS.map((l) => (
+                  <li key={l.href}>
+                    <Link href={l.href} className="inline-flex items-center gap-1.5 text-[15px] font-semibold text-primary underline decoration-primary/30 underline-offset-4 transition hover:decoration-primary">
+                      {l.label} <ArrowRight className="h-3.5 w-3.5" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
         </section>
 

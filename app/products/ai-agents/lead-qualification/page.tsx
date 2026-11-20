@@ -288,6 +288,8 @@ export default function LeadQualificationPage() {
             <ul className="mt-6 space-y-3">
               {[
                 { href: "/products/ai-agents/",             label: "All AI agent use cases" },
+                { href: "/products/ai-agents/customer-service/", label: "AI Customer Service Agent — resolve routine questions" },
+                { href: "/products/ai-agents/booking/", label: "AI Booking Agent — appointments and reminders" },
                 { href: "/products/agentic-ai/",            label: "How agentic AI works" },
                 { href: "/products/ai-agents/sales/",       label: "AI Sales Agent — turn qualified leads into orders" },
                 { href: "/compare/",                        label: "Compare SMSLocal with alternatives" },

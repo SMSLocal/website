@@ -294,6 +294,9 @@ export default function SalesAgentPage() {
             <ul className="mt-6 space-y-3">
               {[
                 { href: "/products/ai-agents/", label: "All AI agent use cases" },
+                { href: "/products/ai-agents/customer-service/", label: "AI Customer Service Agent — resolve routine questions" },
+                { href: "/products/ai-agents/booking/", label: "AI Booking Agent — appointments and reminders" },
+                { href: "/products/ai-agents/lead-qualification/", label: "AI Lead Qualification Agent — score and route inbound leads" },
                 { href: "/products/agentic-ai/", label: "How agentic AI works" },
                 { href: "/solutions/ecommerce/", label: "E-commerce & D2C solutions" },
                 { href: "/compare/", label: "Compare SMSLocal with alternatives" },

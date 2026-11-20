@@ -292,6 +292,9 @@ export default function BookingAgentPage() {
             <ul className="mt-6 space-y-3">
               {[
                 { href: "/products/ai-agents/", label: "All AI agent use cases" },
+                { href: "/products/ai-agents/customer-service/", label: "AI Customer Service Agent — resolve routine questions" },
+                { href: "/products/ai-agents/sales/", label: "AI Sales Agent — recommend products and close sales" },
+                { href: "/products/ai-agents/lead-qualification/", label: "AI Lead Qualification Agent — score and route inbound leads" },
                 { href: "/products/agentic-ai/", label: "How agentic AI works" },
                 { href: "/solutions/healthcare/", label: "Healthcare solutions" },
                 { href: "/compare/",             label: "Compare SMSLocal with alternatives" },
