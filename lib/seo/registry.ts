@@ -615,6 +615,9 @@ export const SEO_REGISTRY: Record<string, SeoEntry> = {
       "WhatsApp campaign automation",
       "WhatsApp marketing platform",
       "WhatsApp AI replies",
+      "WhatsApp broadcast India",
+      "WhatsApp message templates",
+      "WhatsApp opt-in broadcast",
     ],
   },
   "/channels/social": {

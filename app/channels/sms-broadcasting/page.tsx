@@ -1,49 +1,62 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getPageMetadata } from "@/lib/seo"
-import { ArrowRight, Check, MessageSquare, X } from "lucide-react"
+import { ArrowRight, Check, MessageSquare, Smartphone, Mail, Bell, MessageCircle } from "lucide-react"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
 import { BreadcrumbJsonLd, FaqJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
 import { ProductFinalCta } from "@/components/product/product-page"
-import { SmsWave } from "@/components/product/sms-wave"
+import { SmsCollageScene } from "@/components/product/sms-collage-scene"
 
 export const metadata: Metadata = getPageMetadata("/channels/sms-broadcasting")
 
 /* ─── DATA ────────────────────────────────────────────────────────────────── */
 
-/* what happens to a reply */
-const CHAINS = [
-  { who: "Most broadcast tools", ok: false, steps: ["Send", "Delivered", "Customer replies"], end: "Nobody is listening" },
-  { who: "SMSLocal", ok: true, steps: ["Send", "Delivered", "Customer replies", "AI answers"], end: "A person takes over only when needed" },
+const TRUST = ["DLT sender ID and template support", "Merge fields and link tracking", "STOP and HELP handled for you", "Replies answered by agentic AI"]
+
+/* what each channel needs from the customer */
+const NEEDS = [
+  { Icon: MessageCircle, ch: "WhatsApp", needs: "The app installed and mobile data on", hero: false },
+  { Icon: Bell, ch: "App push", needs: "Your app installed and notifications allowed", hero: false },
+  { Icon: Mail, ch: "Email", needs: "An inbox they check, and a message that is not in spam", hero: false },
+  { Icon: Smartphone, ch: "SMS", needs: "Just a phone number", hero: true },
 ]
 
-/* the parts of one SMS */
-const PARTS = [
-  { n: 1, t: "Sender ID", d: "Your registered sender ID, set up under DLT, so people see your brand and not a number." },
-  { n: 2, t: "Merge field", d: "Each message carries the recipient's own name, order number or any column from your list." },
-  { n: 3, t: "Tracked link", d: "A short link with click tracking, so every campaign shows who tapped what." },
-  { n: 4, t: "Opt-out line", d: "STOP and HELP are handled for you, and anyone who opts out lands on the suppression list." },
+/* promotional vs transactional */
+const TYPES = [
+  { k: "What it is for", p: "Offers, sales, launches and reminders that market something", t: "Messages about something the customer just did: OTPs, order and payment updates" },
+  { k: "Who can receive it", p: "Only contacts who agreed to hear from you", t: "The customer involved in the transaction" },
+  { k: "Sender ID", p: "A registered sender ID, set up under DLT", t: "A registered sender ID, set up under DLT" },
+  { k: "Template", p: "Every promotional message must match an approved template", t: "Every transactional message must match an approved template" },
+  { k: "Sending hours", p: "Limited to the hours TRAI permits for promotions", t: "Any time, because customers expect it" },
+  { k: "Opt-outs", p: "STOP is honoured and the contact moves to your suppression list", t: "Not applicable: it is not marketing" },
 ]
 
-/* two kinds of SMS, written like dictionary entries */
-const KINDS = [
-  { term: "Promotional SMS", say: "pro·mo·tion·al", pos: "noun", def: "A message that markets an offer, a sale or a new product. It goes only to contacts who agreed to hear from you, follows TRAI rules on opt-outs and sending hours, and always carries a way to stop.", eg: "“Hi Rahul, your Diwali offer ends Sunday.”" },
-  { term: "Transactional SMS", say: "trans·ac·tion·al", pos: "noun", def: "A message a customer expects because of something they just did, such as a one-time password, an order update or a payment alert. It is about their transaction and not about selling.", eg: "“Your order #4821 is out for delivery.”" },
+/* narrowing the audience */
+const NARROW = [
+  { t: "Your whole list", d: "Everyone you have a number for", w: 100 },
+  { t: "Opted in", d: "Contacts who agreed to hear from you; suppressed numbers drop out", w: 78 },
+  { t: "Your segment", d: "For example: bought in the last 30 days, in Pune", w: 52 },
+  { t: "Sent now or scheduled", d: "Personalised with each person's own details", w: 34 },
 ]
 
-/* a reply, written like a script */
-const SCRIPT = [
-  { who: "Campaign", say: "Hi Rahul, your Diwali offer ends Sunday. Shop now: smsl.in/d4x9" },
-  { who: "Rahul", say: "Is this offer valid at the Koramangala store too?" },
-  { who: "AI agent", say: "Yes! It is valid at every store till Sunday, 9 PM." },
-  { who: "Rahul", say: "Can I speak to someone about a bulk order?" },
-  { who: "Team", say: "Hi Rahul, this is Meera from the sales team. How many pieces do you need?", note: "A person takes over, with the whole thread in front of them." },
+/* what a report shows */
+const REPORT = [
+  { t: "Delivered", d: "The message reached the handset, confirmed by the delivery receipt.", c: "#0e9f6e" },
+  { t: "Failed", d: "It did not arrive, with the reason: switched off, invalid number or blocked.", c: "#dc2626" },
+  { t: "Clicked", d: "Who tapped your tracked short link, so you can see which offer worked.", c: "#2f78bd" },
+  { t: "Replied", d: "Customers who texted back, with the thread open in your shared inbox.", c: "#7c3aed" },
+  { t: "Opted out", d: "Contacts who sent STOP, moved to the suppression list for every later campaign.", c: "#64748b" },
 ]
 
-/* a campaign report (example numbers) */
-const REPORT = { total: 48210, delivered: 47890, clicked: 9412, replied: 1306 }
+const LINKS = [
+  { h: "/channels/whatsapp-broadcasting/", t: "WhatsApp broadcasting", d: "Rich campaigns with templates and replies in the same inbox." },
+  { h: "/channels/rcs-broadcasting/", t: "RCS broadcasting", d: "Rich cards and buttons, with SMS as the fallback." },
+  { h: "/products/omnichannel-inbox/", t: "Omnichannel inbox", d: "Where every reply lands, routed and timed." },
+  { h: "/developers/sms-api/", t: "SMS API", d: "Send transactional messages and trigger campaigns from your app." },
+  { h: "/numbers/did/", t: "DID and virtual numbers", d: "Numbers managed in the platform, next to your campaigns." },
+]
 
 const FAQS = [
   { q: "What is A2P SMS broadcasting?", a: "A2P stands for application-to-person: messages sent by a business to many customers from software, not from a personal phone. SMS broadcasting is sending one campaign to a whole audience, with a sender ID, a registered template and opt-out handling." },
@@ -62,8 +75,28 @@ const EYEBROW = "inline-flex items-center gap-2 font-mono text-[11px] uppercase 
 const H2 = "text-balance text-[28px] font-semibold leading-[1.08] tracking-[-0.035em] sm:text-[38px]"
 const BTN = "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
 const BTN_OUT = "inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary"
-const LINK = "font-semibold text-primary underline decoration-primary/40 decoration-2 underline-offset-[5px] transition hover:decoration-primary"
-const pct = (n: number) => ((n / REPORT.total) * 100).toFixed(1)
+
+/* a message cut into segments: english fits 160 per segment, other scripts 70 */
+function Segments({ label, sub, per, text }: { label: string; sub: string; per: number; text: string }) {
+  const chars = text.length
+  const n = Math.ceil(chars / per)
+  return (
+    <div>
+      <div className="flex items-baseline justify-between gap-4">
+        <p className="text-[18px] font-semibold tracking-tight">{label}</p>
+        <p className="font-mono text-[12px] uppercase tracking-[0.14em] text-muted-foreground">{n} {n === 1 ? "segment" : "segments"}</p>
+      </div>
+      <p className="mt-1 text-[14px] text-muted-foreground">{sub}</p>
+      <p className="mt-3 text-[15.5px] leading-snug">{text}</p>
+      <div className="mt-4 flex h-3 gap-1">
+        {Array.from({ length: n }).map((_, i) => (
+          <span key={i} className="h-full rounded-sm bg-primary" style={{ flex: i === n - 1 ? (chars - per * (n - 1)) / per : 1 }} />
+        ))}
+      </div>
+      <p className="mt-2 text-[12.5px] text-muted-foreground">{chars} characters, {per} fit in one segment</p>
+    </div>
+  )
+}
 
 /* ─── PAGE ────────────────────────────────────────────────────────────────── */
 
@@ -80,146 +113,137 @@ export default function SmsBroadcastingPage() {
       <SiteHeader />
       <main className="overflow-x-clip bg-background font-normal text-foreground">
 
-        {/* 1 · HERO: one template, and a stream of personal messages leaving it */}
+        {/* 1 · HERO: the journey of one bulk SMS through its checks */}
         <section className="relative isolate overflow-hidden bg-background">
-          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute right-[-120px] top-[-60px] h-[520px] w-[520px] rounded-full bg-primary/7 blur-[130px]" />
-            <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
-          </div>
-          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[1fr_540px] lg:gap-8 lg:pb-20 lg:pt-12">
-            <div className="sm-rise">
+          <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[minmax(0,1fr)_560px] lg:gap-10 lg:pb-20 lg:pt-12">
+            <div className="sm-rise min-w-0">
               <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
                 <MessageSquare className="h-3.5 w-3.5 text-accent" />SMS broadcasting
               </p>
               <h1 className="mt-6 text-balance text-[30px] font-semibold leading-[1.1] tracking-[-0.035em] sm:text-[42px]">
-                Bulk SMS broadcasting that <span className="text-primary">answers every reply.</span>
+                A2P SMS broadcasting that <span className="text-primary">answers every reply.</span>
               </h1>
               <p className="mt-5 max-w-lg text-pretty text-[17px] leading-relaxed text-muted-foreground">
-                Send A2P SMS campaigns across India with DLT support, then let agentic AI answer the replies.
+                Run bulk SMS campaigns in India from one campaign manager. Your DLT sender ID and template are checked before every send, each message is personal, and agentic AI answers the replies.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-3">
                 <Link href="/company/contact/" className={BTN}>Start broadcasting <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
                 <Link href="/company/contact/" className={BTN_OUT}>Get a demo</Link>
               </div>
+              <ul className="mt-8 grid max-w-lg grid-cols-1 gap-x-8 gap-y-3 text-[14px] text-muted-foreground sm:grid-cols-2">
+                {TRUST.map((t) => (
+                  <li key={t} className="flex items-start gap-2.5 leading-snug"><Check className="mt-[2px] h-4 w-4 shrink-0 text-primary" strokeWidth={3} /><span>{t}</span></li>
+                ))}
+              </ul>
             </div>
-            <div className="sm-rise relative" style={{ animationDelay: "0.15s" }}>
-              <SmsWave />
+            <div className="sm-rise min-w-0" style={{ animationDelay: "0.15s" }}>
+              <SmsCollageScene />
             </div>
           </div>
         </section>
 
-        {/* 2 · WHY SMS: two short chains, one stops at the reply */}
+        {/* 2 · WHY SMS: what each channel needs from the customer, SMS needs the least */}
+        <section className="bg-secondary py-20 lg:py-28">
+          <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+            <div>
+              <p className={`${EYEBROW} text-primary`}>SMS broadcast platform</p>
+              <h2 className={`${H2} mt-5`}>Every other channel asks something of the customer.</h2>
+              <p className="mt-4 max-w-md text-[16px] leading-relaxed text-muted-foreground">SMS needs only a phone number. That is why bulk SMS campaigns still reach people when an app, a data connection or an inbox habit gets in the way. The gap is usually what happens after the send, and that is where SMSLocal adds a shared inbox and AI replies.</p>
+            </div>
+            <ul className="divide-y divide-border border-y border-border">
+              {NEEDS.map((n) => (
+                <li key={n.ch} className={`flex items-center gap-4 py-5 ${n.hero ? "text-foreground" : "text-muted-foreground"}`}>
+                  <n.Icon className={`h-6 w-6 shrink-0 ${n.hero ? "text-primary" : ""}`} />
+                  <span className={`w-24 shrink-0 text-[18px] font-semibold tracking-tight ${n.hero ? "text-primary" : ""}`}>{n.ch}</span>
+                  <span className="text-[15px] leading-snug">Needs: {n.needs}</span>
+                  {n.hero ? <Check className="ml-auto h-5 w-5 shrink-0 text-primary" strokeWidth={3} /> : null}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* 3 · SEGMENTS: the same idea in two scripts, drawn as a ruler */}
+        <section className="bg-background py-20 lg:py-28">
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
+            <div className="max-w-2xl">
+              <p className={`${EYEBROW} text-primary`}>SMS campaign manager</p>
+              <h2 className={`${H2} mt-5`}>Know how long your message really is.</h2>
+              <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">An SMS is sent in segments. English text fits 160 characters in one segment; Hindi and other scripts fit 70. The campaign manager counts for you before you send, so a long message never surprises you.</p>
+            </div>
+            <div className="mt-14 grid gap-14 md:grid-cols-2 md:gap-16">
+              <Segments label="English" sub="Plain text, 160 characters per segment" per={160} text="AD-SMSLCL: Hi Rahul, your Diwali offer ends Sunday. Shop now: smsl.in/d4x9. Reply STOP to opt out" />
+              <Segments label="Hindi" sub="Other scripts, 70 characters per segment" per={70} text="राहुल जी, आपका दिवाली ऑफर रविवार को खत्म हो रहा है। अभी खरीदें: smsl.in/d4x9 STOP लिखकर बंद करें" />
+            </div>
+          </div>
+        </section>
+
+        {/* 4 · PROMOTIONAL AND TRANSACTIONAL: one comparison table */}
         <section className="bg-secondary py-20 lg:py-28">
           <div className="mx-auto max-w-5xl px-4 sm:px-6">
             <div className="max-w-2xl">
-              <p className={`${EYEBROW} text-primary`}>Why most SMS tools fall short</p>
-              <h2 className={`${H2} mt-5`}>SMS reaches every phone. Most tools only send.</h2>
-              <p className="mt-4 max-w-lg text-[16px] leading-relaxed text-muted-foreground">There is no app to install and no internet needed, so SMS gets through when nothing else does. The weak point is what happens after the customer writes back.</p>
+              <p className={`${EYEBROW} text-primary`}>DLT SMS broadcasting</p>
+              <h2 className={`${H2} mt-5`}>Promotional or transactional: pick the right lane.</h2>
+              <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">India sorts bulk SMS into message types, each with its own rules. SMSLocal guides the sender ID and template registration for both, so you start on the right lane.</p>
             </div>
-            <div className="mt-12 space-y-10">
-              {CHAINS.map((c) => (
-                <div key={c.who}>
-                  <p className={`font-mono text-[11px] uppercase tracking-[0.2em] ${c.ok ? "text-primary" : "text-muted-foreground"}`}>{c.who}</p>
-                  <ol className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-3 text-[16px] sm:text-[18px]">
-                    {c.steps.map((s, i) => (
-                      <li key={s} className="flex items-center gap-3">
-                        <span className={c.ok ? "font-medium" : "text-muted-foreground"}>{s}</span>
-                        <ArrowRight className="h-4 w-4 text-muted-foreground" />
-                      </li>
-                    ))}
-                    <li className={`flex items-center gap-2 font-semibold ${c.ok ? "text-primary" : "text-foreground/70"}`}>
-                      {c.ok ? <Check className="h-4 w-4" strokeWidth={3} /> : <X className="h-4 w-4" strokeWidth={3} />}{c.end}
-                    </li>
-                  </ol>
+            <div className="mt-12 text-[15px]">
+              <div className="hidden grid-cols-[170px_1fr_1fr] gap-8 border-b-2 border-foreground pb-3 md:grid">
+                <span />
+                <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-primary">Promotional SMS</span>
+                <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-muted-foreground">Transactional SMS</span>
+              </div>
+              {TYPES.map((r) => (
+                <div key={r.k} className="grid gap-1 border-b border-border py-4 md:grid-cols-[170px_1fr_1fr] md:gap-8 md:py-5">
+                  <p className="font-semibold tracking-tight">{r.k}</p>
+                  <p className="leading-relaxed text-foreground"><span className="mr-2 font-mono text-[10px] uppercase tracking-widest text-primary md:hidden">Promo</span>{r.p}</p>
+                  <p className="leading-relaxed text-muted-foreground"><span className="mr-2 font-mono text-[10px] uppercase tracking-widest md:hidden">Transactional</span>{r.t}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* 3 · ONE MESSAGE, TAKEN APART: an SMS with four numbered parts */}
+        {/* 5 · AUDIENCE: the list narrowing to the right people */}
         <section className="bg-background py-20 lg:py-28">
-          <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
-            <div>
-              <p className={`${EYEBROW} text-primary`}>What goes into every send</p>
-              <h2 className={`${H2} mt-5`}>One bulk SMS campaign, four parts that matter.</h2>
-              <p className="mt-8 text-[24px] font-medium leading-[1.5] tracking-[-0.01em] sm:text-[30px]">
-                <span className="underline decoration-primary decoration-[3px] underline-offset-[6px]">AD-SMSLCL<sup className="ml-0.5 text-[13px] font-bold text-primary">1</sup></span>: Hi{" "}
-                <span className="underline decoration-primary decoration-[3px] underline-offset-[6px]">Rahul<sup className="ml-0.5 text-[13px] font-bold text-primary">2</sup></span>, your Diwali offer ends Sunday. Shop now:{" "}
-                <span className="underline decoration-primary decoration-[3px] underline-offset-[6px]">smsl.in/d4x9<sup className="ml-0.5 text-[13px] font-bold text-primary">3</sup></span>{" "}
-                <span className="underline decoration-primary decoration-[3px] underline-offset-[6px]">Reply STOP to opt out<sup className="ml-0.5 text-[13px] font-bold text-primary">4</sup></span>
-              </p>
-              <p className="mt-6 max-w-lg text-[14.5px] leading-relaxed text-muted-foreground">Each message is matched to your registered DLT template before it leaves, so what customers read is what you approved.</p>
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
+            <div className="max-w-2xl">
+              <p className={`${EYEBROW} text-primary`}>SMS marketing campaigns India</p>
+              <h2 className={`${H2} mt-5`}>Send to the right people, not to everyone.</h2>
+              <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">Bulk SMS in India does not have to mean blasting a list. Narrow it first, then personalise.</p>
             </div>
-            <ol className="space-y-6">
-              {PARTS.map((p) => (
-                <li key={p.n} className="flex gap-4">
-                  <span className="flex h-8 w-8 flex-none items-center justify-center rounded-full bg-primary text-[14px] font-bold text-primary-foreground">{p.n}</span>
-                  <div>
-                    <p className="text-[18px] font-semibold tracking-[-0.01em]">{p.t}</p>
-                    <p className="mt-1 text-[15px] leading-relaxed text-muted-foreground">{p.d}</p>
+            <div className="mt-12 space-y-3">
+              {NARROW.map((n, i) => (
+                <div key={n.t} className="grid items-center gap-x-6 gap-y-1 md:grid-cols-[1fr_1.6fr]">
+                  <div className="md:text-right">
+                    <p className="text-[17px] font-semibold tracking-tight">{n.t}</p>
+                    <p className="text-[13.5px] leading-snug text-muted-foreground">{n.d}</p>
                   </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </section>
-
-        {/* 4 · PROMOTIONAL AND TRANSACTIONAL: dictionary entries */}
-        <section className="bg-secondary py-20 lg:py-28">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <p className={`${EYEBROW} text-primary`}>Know your message type</p>
-            <h2 className={`${H2} mt-5`}>Two kinds of SMS, two sets of rules.</h2>
-            <div className="mt-12 grid gap-12 md:grid-cols-2 md:gap-16">
-              {KINDS.map((k) => (
-                <article key={k.term} className="border-t-2 border-foreground pt-5">
-                  <h3 className="text-[34px] font-semibold leading-none tracking-[-0.03em]">{k.term}</h3>
-                  <p className="mt-3 flex items-baseline gap-3 text-[14px] text-muted-foreground"><span className="font-mono">{k.say}</span><span className="italic">{k.pos}</span></p>
-                  <p className="mt-5 text-[16.5px] leading-[1.7]">{k.def}</p>
-                  <p className="mt-4 border-l-2 border-primary pl-4 text-[15px] italic text-muted-foreground">{k.eg}</p>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* 5 · THE REPLY: a short script, with the hand-over marked */}
-        <section className="bg-background py-20 lg:py-28">
-          <div className="mx-auto max-w-3xl px-4 sm:px-6">
-            <div className="text-center">
-              <p className={`${EYEBROW} justify-center text-primary`}>Two-way SMS with agentic AI</p>
-              <h2 className={`${H2} mt-5`}>A reply becomes a conversation, not a dead end.</h2>
-            </div>
-            <div className="mt-14 space-y-7">
-              {SCRIPT.map((l, i) => (
-                <div key={i} className="text-center">
-                  <p className={`font-mono text-[11px] uppercase tracking-[0.24em] ${l.who === "AI agent" ? "text-primary" : "text-muted-foreground"}`}>{l.who}</p>
-                  <p className="mx-auto mt-1.5 max-w-xl text-[18px] leading-snug sm:text-[21px]">{l.say}</p>
-                  {l.note ? <p className="mt-2 text-[13.5px] italic text-muted-foreground">({l.note})</p> : null}
+                  <div className="flex h-12 items-center">
+                    <span className="flex h-full items-center rounded-r-full bg-primary pl-5 font-mono text-[12px] font-semibold text-primary-foreground" style={{ width: `${n.w}%`, opacity: 1 - i * 0.12 }}>{i + 1}</span>
+                  </div>
                 </div>
               ))}
             </div>
+            <p className="mt-8 max-w-xl text-[14.5px] leading-relaxed text-muted-foreground">Bar widths are only a sketch of how a list narrows. SMS opt-out handling is applied by default, so suppressed numbers never reach a campaign.</p>
           </div>
         </section>
 
-        {/* 6 · THE REPORT: one headline sentence and a single bar */}
+        {/* 6 · REPORTS: five columns, each defined */}
         <section className="bg-secondary py-20 lg:py-28">
-          <div className="mx-auto max-w-5xl px-4 sm:px-6">
-            <p className={`${EYEBROW} text-primary`}>SMS delivery reports</p>
-            <h2 className={`${H2} mt-5`}>Know exactly what landed.</h2>
-            <p className="mt-8 text-balance text-[24px] font-medium leading-[1.35] tracking-[-0.02em] sm:text-[34px]">
-              <span className="text-primary">{REPORT.delivered.toLocaleString("en-IN")}</span> of {REPORT.total.toLocaleString("en-IN")} delivered. <span className="text-primary">{REPORT.clicked.toLocaleString("en-IN")}</span> clicked the link. <span className="text-primary">{REPORT.replied.toLocaleString("en-IN")}</span> wrote back.
-            </p>
-            <div className="mt-10">
-              <div className="flex h-3 w-full overflow-hidden rounded-full bg-foreground/10">
-                <span className="h-full bg-primary" style={{ width: `${pct(REPORT.delivered)}%` }} />
-              </div>
-              <div className="mt-3 flex justify-between text-[13px] text-muted-foreground">
-                <span>{pct(REPORT.delivered)}% delivered</span>
-                <span>{(100 - Number(pct(REPORT.delivered))).toFixed(1)}% not delivered</span>
-              </div>
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="max-w-2xl">
+              <p className={`${EYEBROW} text-primary`}>SMS delivery reports</p>
+              <h2 className={`${H2} mt-5`}>Know exactly what landed, and what came back.</h2>
             </div>
-            <p className="mt-8 max-w-xl text-[15px] leading-relaxed text-muted-foreground">Every campaign gets its own report, with delivery receipts per recipient. Example numbers, shown to illustrate the report.</p>
+            <div className="mt-12 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
+              {REPORT.map((r) => (
+                <div key={r.t} className="border-t-[3px] pt-4" style={{ borderColor: r.c }}>
+                  <p className="text-[20px] font-semibold tracking-tight">{r.t}</p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-muted-foreground">{r.d}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-10 max-w-xl text-[15px] leading-relaxed text-muted-foreground">Every campaign gets its own report, with delivery receipts per recipient, so there is no guessing after the send.</p>
           </div>
         </section>
 
@@ -232,13 +256,7 @@ export default function SmsBroadcastingPage() {
               <p className="mt-4 max-w-sm text-[16px] leading-relaxed text-muted-foreground">SMS shares one customer record with WhatsApp, RCS and voice, so a campaign reply and a support call are never two tickets in two tools.</p>
             </div>
             <ul className="divide-y divide-border border-y border-border">
-              {[
-                { h: "/channels/whatsapp-broadcasting/", t: "WhatsApp broadcasting", d: "Rich campaigns with templates and replies in the same inbox." },
-                { h: "/channels/rcs-broadcasting/", t: "RCS broadcasting", d: "Rich cards and buttons, with SMS as the fallback." },
-                { h: "/products/omnichannel-inbox/", t: "Omnichannel inbox", d: "Where every reply lands, routed and timed." },
-                { h: "/developers/sms-api/", t: "SMS API", d: "Send transactional messages and trigger campaigns from your app." },
-                { h: "/numbers/did/", t: "DID and virtual numbers", d: "Numbers managed in the platform, next to your campaigns." },
-              ].map((l) => (
+              {LINKS.map((l) => (
                 <li key={l.h}>
                   <Link href={l.h} className="group flex items-center justify-between gap-6 py-5">
                     <span>
