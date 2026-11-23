@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getPageMetadata } from "@/lib/seo"
-import { ArrowRight, BadgeCheck, Bot, Check, CheckCheck, Layers, Megaphone, MessageCircle, Phone, ShieldCheck, ShoppingBag, Sparkles, CalendarDays, User } from "lucide-react"
+import { ArrowRight, BadgeCheck, Check, CheckCheck, Layers, Megaphone, MessageCircle, Phone, ShieldCheck, ShoppingBag, Sparkles, CalendarDays, User } from "lucide-react"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
@@ -13,7 +13,7 @@ export const metadata: Metadata = getPageMetadata("/channels/whatsapp-broadcasti
 
 /* ─── DATA ────────────────────────────────────────────────────────────────── */
 
-const TRUST = ["Official WhatsApp Business API", "Templates with media and buttons", "WhatsApp Flows and catalogs", "Replies answered by AI"]
+const TRUST = ["Meta-approved message templates", "Opt-in and opt-out handling", "Sent, delivered, read and replied reports", "Schedule now or for later"]
 
 /* the four parts of a template message */
 const PARTS = [
@@ -35,15 +35,15 @@ const STAGES = [
 const TICKS = [
   { k: "sent", t: "Sent", d: "The message left your account and reached WhatsApp." },
   { k: "delivered", t: "Delivered", d: "It reached the customer's phone." },
-  { k: "read", t: "Read", d: "The customer opened it. These are the blue ticks." },
-  { k: "replied", t: "Replied", d: "They tapped a button or wrote back, and your AI answers." },
+  { k: "read", t: "Read", d: "The customer opened it. These are the blue ticks you know from WhatsApp." },
+  { k: "replied", t: "Replied", d: "They tapped a button or wrote back, and the thread opens in your inbox." },
 ]
 
 const LINKS = [
-  { h: "/products/whatsapp-business-api/", t: "WhatsApp Business API", d: "Two-way conversations, templates and AI replies." },
+  { h: "/products/whatsapp-business-api/", t: "WhatsApp Business API", d: "Support chats and automated answers on your verified number." },
   { h: "/channels/sms-broadcasting/", t: "SMS broadcasting", d: "The fallback for customers who are not on WhatsApp." },
   { h: "/channels/rcs-broadcasting/", t: "RCS broadcasting", d: "Branded rich cards on Android, with SMS behind them." },
-  { h: "/products/agentic-ai/", t: "Agentic AI", d: "How the AI agent answers campaign replies." },
+  { h: "/products/agentic-ai/", t: "Agentic AI", d: "How the AI agent works across every channel." },
   { h: "/products/omnichannel-inbox/", t: "Omnichannel inbox", d: "One shared inbox for every conversation." },
 ]
 
@@ -51,10 +51,10 @@ const FAQS = [
   { q: "Is this the official WhatsApp Business API?", a: "Yes, with a verified sender. SMSLocal is an official WhatsApp Business Solution Provider, and every WhatsApp broadcast goes through Meta's infrastructure under your verified brand." },
   { q: "What is WhatsApp broadcasting?", a: "WhatsApp broadcasting is sending one approved message template to a whole audience of opted-in contacts, with each message personalised and tracked. It is the WhatsApp Business API way of doing WhatsApp bulk messaging, not a forwarded list from a personal phone." },
   { q: "Do I need an approved template to broadcast on WhatsApp?", a: "Yes. Campaigns outside a customer's 24-hour reply window use WhatsApp message templates that Meta has approved. SMSLocal helps you write, submit and track your WhatsApp template campaigns so you know when each one is ready to send." },
-  { q: "Who can I send a WhatsApp broadcast to?", a: "Only customers who have opted in to hear from you on WhatsApp. SMSLocal helps you collect and store opt-ins, and people who opt out are left out of every later campaign automatically." },
-  { q: "Can AI answer broadcast replies?", a: "Yes, automatically. When a customer replies to your broadcast, the agentic AI answers from your knowledge base right away, and hands off to a person in the same thread when needed. These WhatsApp AI replies stay tied to the campaign that started them." },
+  { q: "Who can I send a WhatsApp broadcast to?", a: "Only customers who have opted in to hear from you on WhatsApp. SMSLocal stores each contact's opt-in, and anyone who opts out is left out of every later campaign." },
+  { q: "Can AI answer broadcast replies?", a: "Yes, automatically. When a customer replies to your broadcast, the agentic AI answers from your knowledge base right away, and hands off to a person in the same thread when needed. " },
   { q: "What are WhatsApp Flows?", a: "WhatsApp Flows are in-chat forms and guided journeys, such as a booking, a sign-up or a lead form, that customers fill in without leaving WhatsApp. You can start a Flow from a button in a broadcast." },
-  { q: "How do quality rating and messaging limits work?", a: "WhatsApp rates how customers respond to your messages and sets how many people you can message. SMSLocal shows your quality rating and limits so you can scale a WhatsApp marketing platform campaign without risking your number." },
+  { q: "How do quality rating and messaging limits work?", a: "WhatsApp rates how customers respond to your messages and sets how many people you can message. Both appear in SMSLocal, so you can grow a WhatsApp marketing platform campaign without risking your number." },
   { q: "Can I schedule and automate WhatsApp campaigns?", a: "Yes. You can schedule a broadcast for later, and WhatsApp campaign automation lets replies and button taps trigger the next message or hand the chat to your team." },
 ]
 
@@ -106,7 +106,7 @@ export default function WhatsAppBroadcastingPage() {
                 WhatsApp broadcasting on the Business API, <span className="text-primary">with AI replies</span>
               </h1>
               <p className="mt-5 max-w-lg text-pretty text-[17px] leading-relaxed text-muted-foreground">
-                Run WhatsApp bulk messaging and template campaigns for opted-in customers, with photos, buttons and Flows. Track every message from sent to read, and let agentic AI answer every reply.
+                Run WhatsApp bulk messaging and template campaigns for opted-in customers, with photos, buttons and Flows. Follow every message from sent to read, then keep the conversation going.
               </p>
               <div className="mt-9 flex flex-wrap items-center gap-3">
                 <Link href="/signup/" className={BTN}>Start broadcasting <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" /></Link>
@@ -132,13 +132,13 @@ export default function WhatsAppBroadcastingPage() {
                 <div className="relative rounded-xl bg-white">
                   <div className="relative flex h-[120px] items-center justify-center rounded-t-xl bg-gradient-to-br from-[#d7f3e6] to-[#cfe0f7]"><ShoppingBag className="h-10 w-10 text-[#0e9f6e]" /><Pin n={1} pos="-right-5 top-3" /></div>
                   <div className="relative px-3.5 pb-2 pt-3">
-                    <p className="text-[14px] font-semibold text-[#0f2a47]">Order shipped ✅</p>
-                    <p className="mt-1 text-[13px] leading-snug text-[#0f2a47]/75">Hi <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{name}}"}</span>, your order <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{order_id}}"}</span> has shipped.</p>
+                    <p className="text-[14px] font-semibold text-[#0f2a47]">Appointment confirmed 📅</p>
+                    <p className="mt-1 text-[13px] leading-snug text-[#0f2a47]/75">Hi <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{name}}"}</span>, see you at <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{time_slot}}"}</span> with Dr. Rao.</p>
                     <Pin n={2} pos="-right-5 top-6" />
                     <p className="relative mt-2 text-[11.5px] text-[#0f2a47]/45">Reply STOP to opt out<Pin n={3} pos="-right-5 -top-1" /></p>
                   </div>
                 </div>
-                <div className="relative mt-1 divide-y divide-[#0f2a47]/8 overflow-hidden rounded-xl bg-white text-center text-[13px] font-semibold text-[#0a7cff]"><span className="block py-2">Track order</span><span className="block py-2">Contact support</span></div>
+                <div className="relative mt-1 divide-y divide-[#0f2a47]/8 overflow-hidden rounded-xl bg-white text-center text-[13px] font-semibold text-[#0a7cff]"><span className="block py-2">Reschedule</span><span className="block py-2">Get directions</span></div>
                 <Pin n={4} pos="-right-5 bottom-8" />
               </div>
             </div>
@@ -192,10 +192,10 @@ export default function WhatsAppBroadcastingPage() {
               <div>
                 <div className={MOCK} style={MOCK_SH}>
                   <p className="font-semibold">Hi <span className="rounded bg-[#d9f3e6] px-1 text-[#0b6b47]">{"{{name}}"}</span>,</p>
-                  <p className="mt-1 leading-snug text-[#0f2a47]/75">your order <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{order_id}}"}</span> ships on <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{date}}"}</span>.</p>
+                  <p className="mt-1 leading-snug text-[#0f2a47]/75">your Diwali card for <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{store}}"}</span> is ready till <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{date}}"}</span>.</p>
                 </div>
                 <p className="mt-4 flex items-center gap-2 text-[17px] font-semibold tracking-tight"><Megaphone className="h-5 w-5 text-primary" />Template campaigns</p>
-                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">Approved templates to large opted-in audiences, with merge fields for names, orders and dates.</p>
+                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">One approved template for a whole segment, with merge fields that fill in a different value for every contact.</p>
               </div>
               {/* rich message */}
               <div>
@@ -205,7 +205,7 @@ export default function WhatsAppBroadcastingPage() {
                   <div className="p-3"><p className="font-semibold">New arrivals</p><div className="mt-2 flex gap-2"><span className="flex-1 rounded-full border border-[#0e9f6e] py-1 text-center text-[12px] font-semibold text-[#0b6b47]">Shop now</span><span className="flex-1 rounded-full border border-[#cbd5e1] py-1 text-center text-[12px] font-semibold text-[#0f2a47]/60">Not now</span></div></div>
                 </div>
                 <p className="mt-4 flex items-center gap-2 text-[17px] font-semibold tracking-tight"><Sparkles className="h-5 w-5 text-primary" />Rich messages</p>
-                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">Photos, video, buttons and list replies, so customers act without leaving the chat.</p>
+                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">Photos, video and list replies next to your buttons, so a customer can choose without typing.</p>
               </div>
               {/* flow */}
               <div>
@@ -216,7 +216,7 @@ export default function WhatsAppBroadcastingPage() {
                   <span className="mt-2 block rounded-full bg-[#25d366] py-1.5 text-center text-[12px] font-semibold text-white">Confirm</span>
                 </div>
                 <p className="mt-4 flex items-center gap-2 text-[17px] font-semibold tracking-tight"><Layers className="h-5 w-5 text-primary" />WhatsApp Flows</p>
-                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">In-chat forms and guided journeys for bookings, sign-ups and lead capture. No landing page needed.</p>
+                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">Short forms inside the chat for bookings, sign-ups and lead capture. No landing page needed.</p>
               </div>
               {/* click to whatsapp / catalog */}
               <div>
@@ -227,7 +227,7 @@ export default function WhatsAppBroadcastingPage() {
                   <span className="mt-2.5 block rounded-full border border-[#0a7cff]/40 py-1.5 text-center text-[12px] font-semibold text-[#0a7cff]">View catalog</span>
                 </div>
                 <p className="mt-4 flex items-center gap-2 text-[17px] font-semibold tracking-tight"><ShoppingBag className="h-5 w-5 text-primary" />Click-to-WhatsApp and catalogs</p>
-                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">Ad entry points and catalog messages turn interest into a conversation your AI can qualify.</p>
+                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">An ad that opens a chat, and catalog messages that show products right where the customer is talking.</p>
               </div>
             </div>
           </div>
@@ -261,7 +261,7 @@ export default function WhatsAppBroadcastingPage() {
               <h2 className={`${H2} mt-5`}>Keep your sender healthy as you scale.</h2>
               <p className="mt-4 max-w-lg text-[16px] leading-relaxed text-muted-foreground">WhatsApp rates how customers react to your messages and sets how many people you can reach. A broadcast that people want keeps your rating high, and a high rating raises your limit.</p>
               <ul className="mt-7 space-y-4">
-                {[{ I: BadgeCheck, t: "Quality rating, shown for each number" }, { I: ShieldCheck, t: "Messaging limits, so you can plan the next send" }, { I: Bot, t: "Opt-outs handled, so unwanted messages stop" }, { I: Phone, t: "Opt-ins collected and stored, so you only send to people who agreed" }].map((x) => (
+                {[{ I: BadgeCheck, t: "Your quality rating, shown for each number" }, { I: ShieldCheck, t: "Your messaging limit, so you can plan the next send" }, { I: Phone, t: "Template status, from pending to approved or rejected" }].map((x) => (
                   <li key={x.t} className="flex items-start gap-3 text-[15.5px]"><x.I className="mt-0.5 h-5 w-5 shrink-0 text-primary" />{x.t}</li>
                 ))}
               </ul>
@@ -292,7 +292,7 @@ export default function WhatsAppBroadcastingPage() {
             <div>
               <p className={`${EYEBROW} text-primary`}>WhatsApp AI replies</p>
               <h2 className={`${H2} mt-5`}>The send is only the start of the conversation.</h2>
-              <p className="mt-4 max-w-sm text-[16px] leading-relaxed text-muted-foreground">The broadcast, the AI agent and the inbox share one platform, so a reply to a campaign becomes a real conversation tied to the broadcast that started it.</p>
+              <p className="mt-4 max-w-sm text-[16px] leading-relaxed text-muted-foreground">Replies do not land in a separate tool. They open in the same platform that sent the broadcast, tied to the campaign that started them.</p>
             </div>
             <ul className="divide-y divide-border border-y border-border">
               {LINKS.map((l) => (

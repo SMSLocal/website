@@ -141,7 +141,7 @@ export function WaBroadcastScene() {
                 </div>
               </div>
             </div>
-            <p className="wa-bub mt-3 flex items-center gap-1.5 pl-1 text-[12.5px] font-semibold text-[#0f2a47]/70"><Sparkles className="h-3.5 w-3.5 text-[#25d366]" />Sent on the official Business API</p>
+            <p className="wa-bub mt-3 flex items-center gap-1.5 pl-1 text-[12.5px] font-semibold text-[#0f2a47]/70"><Sparkles className="h-3.5 w-3.5 text-[#25d366]" />One template, a message for every contact</p>
           </div>
 
           {/* the chat list: the same message in every row */}
