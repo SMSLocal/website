@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { getPageMetadata } from "@/lib/seo"
-import { ArrowRight, BadgeCheck, Check, CheckCheck, Layers, Megaphone, MessageCircle, Phone, ShieldCheck, ShoppingBag, Sparkles, CalendarDays, User } from "lucide-react"
+import { ArrowRight, CalendarDays, Check, CheckCheck, Layers, Megaphone, MessageCircle, ShoppingBag, Sparkles } from "lucide-react"
 import { SiteHeader } from "@/components/landing/site-header"
 import { SiteFooter } from "@/components/landing/site-footer"
 import { FaqSection } from "@/components/landing/faq-section"
@@ -39,12 +39,26 @@ const TICKS = [
   { k: "replied", t: "Replied", d: "They tapped a button or wrote back, and the thread opens in your inbox." },
 ]
 
-const LINKS = [
-  { h: "/products/whatsapp-business-api/", t: "WhatsApp Business API", d: "Support chats and automated answers on your verified number." },
-  { h: "/channels/sms-broadcasting/", t: "SMS broadcasting", d: "The fallback for customers who are not on WhatsApp." },
-  { h: "/channels/rcs-broadcasting/", t: "RCS broadcasting", d: "Branded rich cards on Android, with SMS behind them." },
-  { h: "/products/agentic-ai/", t: "Agentic AI", d: "How the AI agent works across every channel." },
-  { h: "/products/omnichannel-inbox/", t: "Omnichannel inbox", d: "One shared inbox for every conversation." },
+/* the four message types */
+const TYPES = [
+  { I: Megaphone, t: "Template campaigns", d: "One approved template for a whole segment, with merge fields that fill in a different value for every contact." },
+  { I: Sparkles, t: "Rich messages", d: "Photos, video and list replies next to your buttons, so a customer can choose without typing." },
+  { I: Layers, t: "WhatsApp Flows", d: "Short forms inside the chat for bookings, sign-ups and lead capture. No landing page needed." },
+  { I: ShoppingBag, t: "Click-to-WhatsApp and catalogs", d: "An ad that opens a chat, and catalog messages that show products right where the customer is talking." },
+]
+
+/* where to go after the send */
+const NEXT = [
+  { t: "Answer the replies", d: "Replies open in the same platform that sent the broadcast, tied to the campaign that started them.", links: [{ h: "/products/agentic-ai/", t: "Agentic AI" }, { h: "/products/omnichannel-inbox/", t: "Shared inbox" }] },
+  { t: "Reach everyone else", d: "Not every customer is on WhatsApp. Follow the same campaign on a channel they do use.", links: [{ h: "/channels/sms-broadcasting/", t: "SMS broadcasting" }, { h: "/channels/rcs-broadcasting/", t: "RCS broadcasting" }] },
+  { t: "Keep supporting them", d: "After the campaign, the same verified number can handle everyday questions.", links: [{ h: "/products/whatsapp-business-api/", t: "WhatsApp Business API" }] },
+]
+
+/* what keeps a sender healthy */
+const HEALTH = [
+  { t: "Quality rating", d: "WhatsApp rates how customers react to your messages. SMSLocal shows the rating for each of your numbers." },
+  { t: "Messaging limit", d: "The rating decides how many people you can message. You can see the limit before you plan the next send." },
+  { t: "Template status", d: "Every template is tracked from pending to approved or rejected, so you know what is ready to send." },
 ]
 
 const FAQS = [
@@ -65,12 +79,7 @@ const H2 = "text-balance text-[28px] font-semibold leading-[1.08] tracking-[-0.0
 const BTN = "group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-primary to-[oklch(0.55_0.13_172)] px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition hover:shadow-xl hover:shadow-primary/30"
 const BTN_OUT = "inline-flex items-center gap-2 rounded-full border border-border bg-background px-6 py-3.5 text-sm font-semibold text-foreground transition hover:border-primary hover:text-primary"
 const BLUE = "#53bdeb"
-const MOCK = "rounded-2xl bg-white p-3.5 text-[13px] text-[#0f2a47]"
 const MOCK_SH = { boxShadow: "0 0 0 1px rgba(15,42,71,.08), 0 22px 34px -24px rgba(15,42,71,.45)" }
-
-function Pin({ n, pos }: { n: number; pos: string }) {
-  return <span className={`absolute ${pos} flex h-6 w-6 items-center justify-center rounded-full bg-[#0f2a47] font-mono text-[11px] font-bold text-white ring-2 ring-white`}>{n}</span>
-}
 
 function TickIcon({ k }: { k: string }) {
   if (k === "sent") return <Check className="h-14 w-14 text-[#9aa8b4]" strokeWidth={2.4} />
@@ -124,33 +133,29 @@ export default function WhatsAppBroadcastingPage() {
           </div>
         </section>
 
-        {/* 2 · ANATOMY: a template message with four numbered parts */}
+                {/* 2 · THE TEMPLATE: a message beside a numbered list of its parts */}
         <section className="bg-secondary py-20 lg:py-28">
-          <div className="mx-auto grid max-w-6xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
-            <div className="relative mx-auto w-full max-w-[330px]">
-              <div className="relative rounded-2xl rounded-tl-md bg-[#d9fdd3] p-2" style={MOCK_SH}>
-                <div className="relative rounded-xl bg-white">
-                  <div className="relative flex h-[120px] items-center justify-center rounded-t-xl bg-gradient-to-br from-[#d7f3e6] to-[#cfe0f7]"><ShoppingBag className="h-10 w-10 text-[#0e9f6e]" /><Pin n={1} pos="-right-5 top-3" /></div>
-                  <div className="relative px-3.5 pb-2 pt-3">
-                    <p className="text-[14px] font-semibold text-[#0f2a47]">Appointment confirmed 📅</p>
-                    <p className="mt-1 text-[13px] leading-snug text-[#0f2a47]/75">Hi <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{name}}"}</span>, see you at <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{time_slot}}"}</span> with Dr. Rao.</p>
-                    <Pin n={2} pos="-right-5 top-6" />
-                    <p className="relative mt-2 text-[11.5px] text-[#0f2a47]/45">Reply STOP to opt out<Pin n={3} pos="-right-5 -top-1" /></p>
-                  </div>
+          <div className="mx-auto grid max-w-6xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[0.85fr_1.15fr] lg:gap-24">
+            <div className="mx-auto w-full max-w-[320px] rounded-2xl rounded-tl-md bg-[#d9fdd3] p-2" style={MOCK_SH}>
+              <div className="rounded-xl bg-white">
+                <div className="flex h-[110px] items-center justify-center rounded-t-xl bg-gradient-to-br from-[#d7f3e6] to-[#cfe0f7]"><CalendarDays className="h-9 w-9 text-[#0e9f6e]" /></div>
+                <div className="px-3.5 pb-3 pt-3">
+                  <p className="text-[14px] font-semibold text-[#0f2a47]">Appointment confirmed 📅</p>
+                  <p className="mt-1 text-[13px] leading-snug text-[#0f2a47]/75">Hi <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{name}}"}</span>, see you at <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{time_slot}}"}</span> with Dr. Rao.</p>
+                  <p className="mt-2 text-[11.5px] text-[#0f2a47]/45">Reply STOP to opt out</p>
                 </div>
-                <div className="relative mt-1 divide-y divide-[#0f2a47]/8 overflow-hidden rounded-xl bg-white text-center text-[13px] font-semibold text-[#0a7cff]"><span className="block py-2">Reschedule</span><span className="block py-2">Get directions</span></div>
-                <Pin n={4} pos="-right-5 bottom-8" />
               </div>
+              <div className="mt-1 divide-y divide-[#0f2a47]/8 overflow-hidden rounded-xl bg-white text-center text-[13px] font-semibold text-[#0a7cff]"><span className="block py-2">Reschedule</span><span className="block py-2">Get directions</span></div>
             </div>
             <div>
               <p className={`${EYEBROW} text-primary`}>WhatsApp template campaigns</p>
               <h2 className={`${H2} mt-5`}>One approved template, four parts to fill.</h2>
               <p className="mt-4 max-w-lg text-[16px] leading-relaxed text-muted-foreground">Every WhatsApp broadcast starts from a message template that Meta approves once. After that, you only change the parts that are personal.</p>
-              <ol className="mt-8 space-y-5">
+              <ol className="mt-8 divide-y divide-border border-y border-border">
                 {PARTS.map((p) => (
-                  <li key={p.n} className="flex gap-4">
-                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-foreground font-mono text-[13px] font-bold text-background">{p.n}</span>
-                    <div><p className="text-[18px] font-semibold tracking-tight">{p.t}</p><p className="mt-0.5 text-[15px] leading-relaxed text-muted-foreground">{p.d}</p></div>
+                  <li key={p.n} className="flex gap-4 py-4">
+                    <span className="w-6 shrink-0 font-mono text-[13px] font-bold text-primary">0{p.n}</span>
+                    <div><p className="text-[17px] font-semibold tracking-tight">{p.t}</p><p className="mt-0.5 text-[15px] leading-relaxed text-muted-foreground">{p.d}</p></div>
                   </li>
                 ))}
               </ol>
@@ -158,82 +163,43 @@ export default function WhatsAppBroadcastingPage() {
           </div>
         </section>
 
-        {/* 3 · LIFECYCLE: a track with a moving highlight */}
+        {/* 3 · LIFECYCLE: one narrow vertical timeline */}
         <section className="bg-background py-20 lg:py-28">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="max-w-2xl">
-              <p className={`${EYEBROW} text-primary`}>WhatsApp campaign automation</p>
-              <h2 className={`${H2} mt-5`}>Every broadcast has a clear status.</h2>
-              <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">From the first draft to the last reply, you can see where each campaign stands, with sent, delivered and read counts per segment once it is out the door.</p>
-            </div>
-            <ol className="mt-14 grid gap-3 md:grid-cols-4">
+          <div className="mx-auto max-w-3xl px-4 sm:px-6">
+            <p className={`${EYEBROW} text-primary`}>WhatsApp campaign automation</p>
+            <h2 className={`${H2} mt-5`}>Every broadcast has a clear status.</h2>
+            <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">From the first draft to the last reply, you can see where each campaign stands, with sent, delivered and read counts per segment once it is out the door.</p>
+            <ol className="mt-12 border-l-2 border-border">
               {STAGES.map((s, i) => (
-                <li key={s.t} className={`wa-stage wa-stage${i} relative rounded-2xl border px-5 py-5`}>
-                  <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] opacity-60">0{i + 1}</span>
-                  <p className="mt-2 text-[22px] font-semibold tracking-tight">{s.t}</p>
-                  <p className="mt-1.5 text-[14px] leading-snug opacity-80">{s.d}</p>
-                  {i < 3 ? <ArrowRight className="absolute -right-[18px] top-1/2 z-10 hidden h-5 w-5 -translate-y-1/2 rounded-full bg-background text-muted-foreground md:block" /> : null}
+                <li key={s.t} className="relative pb-9 pl-8 last:pb-0">
+                  <span className="absolute -left-[9px] top-1.5 h-4 w-4 rounded-full border-2 border-primary bg-background" />
+                  <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">Step {i + 1}</p>
+                  <p className="mt-1 text-[24px] font-semibold tracking-tight">{s.t}</p>
+                  <p className="mt-1 text-[15px] leading-relaxed text-muted-foreground">{s.d}</p>
                 </li>
               ))}
             </ol>
           </div>
         </section>
 
-        {/* 4 · WHAT YOU CAN SEND: four small WhatsApp mock-ups */}
+        {/* 4 · WHAT YOU CAN SEND: a two by two grid split by thin rules */}
         <section className="bg-secondary py-20 lg:py-28">
-          <div className="mx-auto max-w-6xl px-4 sm:px-6">
-            <div className="max-w-2xl">
-              <p className={`${EYEBROW} text-primary`}>WhatsApp Business API broadcast</p>
-              <h2 className={`${H2} mt-5`}>Every kind of message WhatsApp supports.</h2>
-              <p className="mt-4 text-[16px] leading-relaxed text-muted-foreground">Send to the right segment, in the format that fits, and track it end to end.</p>
-            </div>
-            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-              {/* template campaign */}
-              <div>
-                <div className={MOCK} style={MOCK_SH}>
-                  <p className="font-semibold">Hi <span className="rounded bg-[#d9f3e6] px-1 text-[#0b6b47]">{"{{name}}"}</span>,</p>
-                  <p className="mt-1 leading-snug text-[#0f2a47]/75">your Diwali card for <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{store}}"}</span> is ready till <span className="rounded bg-[#d9f3e6] px-1 font-semibold text-[#0b6b47]">{"{{date}}"}</span>.</p>
+          <div className="mx-auto max-w-5xl px-4 sm:px-6">
+            <p className={`${EYEBROW} text-primary`}>WhatsApp Business API broadcast</p>
+            <h2 className={`${H2} mt-5 max-w-2xl`}>Every kind of message WhatsApp supports.</h2>
+            <div className="mt-12 grid md:grid-cols-2">
+              {TYPES.map((t, i) => (
+                <div key={t.t} className={`py-8 md:px-10 ${i % 2 === 0 ? "md:border-r md:border-border md:pl-0" : "md:pr-0"} ${i < 2 ? "border-b border-border" : ""}`}>
+                  <t.I className="h-7 w-7 text-primary" />
+                  <p className="mt-4 text-[24px] font-semibold tracking-tight">{t.t}</p>
+                  <p className="mt-2 max-w-sm text-[15px] leading-relaxed text-muted-foreground">{t.d}</p>
                 </div>
-                <p className="mt-4 flex items-center gap-2 text-[17px] font-semibold tracking-tight"><Megaphone className="h-5 w-5 text-primary" />Template campaigns</p>
-                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">One approved template for a whole segment, with merge fields that fill in a different value for every contact.</p>
-              </div>
-              {/* rich message */}
-              <div>
-                <div className={`${MOCK} overflow-hidden !p-0`} style={MOCK_SH}>
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/home/p-shoe.webp" alt="" width={400} height={240} className="h-[96px] w-full object-cover" />
-                  <div className="p-3"><p className="font-semibold">New arrivals</p><div className="mt-2 flex gap-2"><span className="flex-1 rounded-full border border-[#0e9f6e] py-1 text-center text-[12px] font-semibold text-[#0b6b47]">Shop now</span><span className="flex-1 rounded-full border border-[#cbd5e1] py-1 text-center text-[12px] font-semibold text-[#0f2a47]/60">Not now</span></div></div>
-                </div>
-                <p className="mt-4 flex items-center gap-2 text-[17px] font-semibold tracking-tight"><Sparkles className="h-5 w-5 text-primary" />Rich messages</p>
-                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">Photos, video and list replies next to your buttons, so a customer can choose without typing.</p>
-              </div>
-              {/* flow */}
-              <div>
-                <div className={MOCK} style={MOCK_SH}>
-                  <p className="font-semibold">Book a visit</p>
-                  <div className="mt-2 flex items-center gap-2 rounded-lg border border-[#0f2a47]/12 px-2.5 py-1.5 text-[12px] text-[#0f2a47]/55"><User className="h-3.5 w-3.5" />Your name</div>
-                  <div className="mt-1.5 flex items-center gap-2 rounded-lg border border-[#0f2a47]/12 px-2.5 py-1.5 text-[12px] text-[#0f2a47]/55"><CalendarDays className="h-3.5 w-3.5" />Choose a day</div>
-                  <span className="mt-2 block rounded-full bg-[#25d366] py-1.5 text-center text-[12px] font-semibold text-white">Confirm</span>
-                </div>
-                <p className="mt-4 flex items-center gap-2 text-[17px] font-semibold tracking-tight"><Layers className="h-5 w-5 text-primary" />WhatsApp Flows</p>
-                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">Short forms inside the chat for bookings, sign-ups and lead capture. No landing page needed.</p>
-              </div>
-              {/* click to whatsapp / catalog */}
-              <div>
-                <div className={MOCK} style={MOCK_SH}>
-                  <div className="grid grid-cols-2 gap-2">
-                    {["#d7f3e6", "#dbeafe", "#fef3c7", "#ede9fe"].map((c) => <span key={c} className="flex h-[52px] items-center justify-center rounded-lg" style={{ background: c }}><ShoppingBag className="h-5 w-5 text-[#0f2a47]/45" /></span>)}
-                  </div>
-                  <span className="mt-2.5 block rounded-full border border-[#0a7cff]/40 py-1.5 text-center text-[12px] font-semibold text-[#0a7cff]">View catalog</span>
-                </div>
-                <p className="mt-4 flex items-center gap-2 text-[17px] font-semibold tracking-tight"><ShoppingBag className="h-5 w-5 text-primary" />Click-to-WhatsApp and catalogs</p>
-                <p className="mt-1 text-[14px] leading-relaxed text-muted-foreground">An ad that opens a chat, and catalog messages that show products right where the customer is talking.</p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* 5 · THE TICKS: what each stage means */}
+        {/* 5 · THE TICKS: four columns on navy */}
         <section className="bg-[#0f2a47] py-20 text-white lg:py-28">
           <div className="mx-auto max-w-6xl px-4 sm:px-6">
             <div className="max-w-2xl">
@@ -253,57 +219,44 @@ export default function WhatsAppBroadcastingPage() {
           </div>
         </section>
 
-        {/* 6 · QUALITY: a gauge with a sweeping needle */}
+        {/* 6 · SENDER HEALTH: a plain term and description list */}
         <section className="bg-background py-20 lg:py-28">
-          <div className="mx-auto grid max-w-6xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-[1fr_1fr] lg:gap-20">
+          <div className="mx-auto grid max-w-6xl gap-12 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
             <div>
               <p className={`${EYEBROW} text-primary`}>WhatsApp marketing platform</p>
               <h2 className={`${H2} mt-5`}>Keep your sender healthy as you scale.</h2>
-              <p className="mt-4 max-w-lg text-[16px] leading-relaxed text-muted-foreground">WhatsApp rates how customers react to your messages and sets how many people you can reach. A broadcast that people want keeps your rating high, and a high rating raises your limit.</p>
-              <ul className="mt-7 space-y-4">
-                {[{ I: BadgeCheck, t: "Your quality rating, shown for each number" }, { I: ShieldCheck, t: "Your messaging limit, so you can plan the next send" }, { I: Phone, t: "Template status, from pending to approved or rejected" }].map((x) => (
-                  <li key={x.t} className="flex items-start gap-3 text-[15.5px]"><x.I className="mt-0.5 h-5 w-5 shrink-0 text-primary" />{x.t}</li>
-                ))}
-              </ul>
             </div>
-            <div className="mx-auto w-full max-w-[420px]">
-              <svg viewBox="0 0 400 240" className="w-full" role="img" aria-label="A quality rating gauge from low to high with the needle resting on high">
-                <defs>
-                  <linearGradient id="wa-gauge" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stopColor="#ef4444" /><stop offset=".5" stopColor="#f59e0b" /><stop offset="1" stopColor="#0e9f6e" /></linearGradient>
-                </defs>
-                <path d="M 40 210 A 160 160 0 0 1 360 210" fill="none" stroke="#0f2a47" strokeOpacity=".08" strokeWidth="26" strokeLinecap="round" />
-                <path d="M 40 210 A 160 160 0 0 1 360 210" fill="none" stroke="url(#wa-gauge)" strokeWidth="26" strokeLinecap="round" pathLength={1} strokeDasharray="1" className="wa-gauge" />
-                <g className="wa-needle" style={{ transformOrigin: "200px 210px" }}>
-                  <path d="M 200 210 L 200 78" stroke="#0f2a47" strokeWidth="6" strokeLinecap="round" />
-                  <circle cx="200" cy="210" r="14" fill="#0f2a47" />
-                </g>
-                <text x="40" y="236" fontSize="14" fontWeight="600" fill="#64748b">Low</text>
-                <text x="178" y="40" fontSize="14" fontWeight="600" fill="#64748b">Medium</text>
-                <text x="326" y="236" fontSize="14" fontWeight="700" fill="#0b7a55">High</text>
-              </svg>
-              <p className="mt-2 text-center text-[13.5px] font-semibold text-muted-foreground">Quality rating</p>
-            </div>
+            <dl className="divide-y divide-border border-y border-border">
+              {HEALTH.map((h) => (
+                <div key={h.t} className="grid gap-1 py-6 sm:grid-cols-[170px_1fr] sm:gap-8">
+                  <dt className="text-[18px] font-semibold tracking-tight">{h.t}</dt>
+                  <dd className="text-[15px] leading-relaxed text-muted-foreground">{h.d}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </section>
 
-        {/* 7 · LINKS */}
+        {/* 7 · WHAT TO PAIR IT WITH: three short columns, each ending in a link */}
         <section className="bg-secondary py-20 lg:py-28">
-          <div className="mx-auto grid max-w-6xl gap-10 px-4 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
-            <div>
+          <div className="mx-auto max-w-6xl px-4 sm:px-6">
+            <div className="max-w-2xl">
               <p className={`${EYEBROW} text-primary`}>WhatsApp AI replies</p>
-              <h2 className={`${H2} mt-5`}>The send is only the start of the conversation.</h2>
-              <p className="mt-4 max-w-sm text-[16px] leading-relaxed text-muted-foreground">Replies do not land in a separate tool. They open in the same platform that sent the broadcast, tied to the campaign that started them.</p>
+              <h2 className={`${H2} mt-5`}>What happens after the send.</h2>
             </div>
-            <ul className="divide-y divide-border border-y border-border">
-              {LINKS.map((l) => (
-                <li key={l.h}>
-                  <Link href={l.h} className="group flex items-center justify-between gap-6 py-5">
-                    <span><span className="block text-[18px] font-semibold transition group-hover:text-primary">{l.t}</span><span className="mt-0.5 block text-[14.5px] text-muted-foreground">{l.d}</span></span>
-                    <ArrowRight className="h-5 w-5 flex-none text-muted-foreground transition group-hover:translate-x-1 group-hover:text-primary" />
-                  </Link>
-                </li>
+            <div className="mt-12 grid gap-10 md:grid-cols-3 md:gap-12">
+              {NEXT.map((n) => (
+                <div key={n.t} className="border-t-2 border-foreground pt-5">
+                  <p className="text-[22px] font-semibold tracking-tight">{n.t}</p>
+                  <p className="mt-2 text-[15px] leading-relaxed text-muted-foreground">{n.d}</p>
+                  <ul className="mt-5 space-y-2">
+                    {n.links.map((l) => (
+                      <li key={l.h}><Link href={l.h} className="group inline-flex items-center gap-2 text-[15px] font-semibold text-primary">{l.t}<ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></Link></li>
+                    ))}
+                  </ul>
+                </div>
               ))}
-            </ul>
+            </div>
           </div>
         </section>
 
@@ -321,17 +274,7 @@ export default function WhatsAppBroadcastingPage() {
       <style>{`
         @keyframes wa-riseK { from { opacity: 0; transform: translateY(26px) } to { opacity: 1; transform: none } }
         .wa-rise { animation: wa-riseK .9s cubic-bezier(.2,.7,.2,1) both }
-        .wa-stage { background: var(--card); border-color: var(--border); color: var(--foreground); animation-duration: 12s; animation-iteration-count: infinite; animation-timing-function: ease-in-out }
-        @keyframes wa-st0 { 0%, 22% { background: #0f2a47; color: #fff; border-color: #0f2a47 } 28%, 100% { background: var(--card); color: var(--foreground); border-color: var(--border) } }
-        @keyframes wa-st1 { 0%, 22% { background: var(--card); color: var(--foreground); border-color: var(--border) } 28%, 47% { background: #0f2a47; color: #fff; border-color: #0f2a47 } 53%, 100% { background: var(--card); color: var(--foreground); border-color: var(--border) } }
-        @keyframes wa-st2 { 0%, 47% { background: var(--card); color: var(--foreground); border-color: var(--border) } 53%, 72% { background: #0f2a47; color: #fff; border-color: #0f2a47 } 78%, 100% { background: var(--card); color: var(--foreground); border-color: var(--border) } }
-        @keyframes wa-st3 { 0%, 72% { background: var(--card); color: var(--foreground); border-color: var(--border) } 78%, 97% { background: #0e9f6e; color: #fff; border-color: #0e9f6e } 100% { background: var(--card); color: var(--foreground); border-color: var(--border) } }
-        .wa-stage0 { animation-name: wa-st0 } .wa-stage1 { animation-name: wa-st1 } .wa-stage2 { animation-name: wa-st2 } .wa-stage3 { animation-name: wa-st3 }
-        @keyframes wa-gaugeK { 0%, 8% { stroke-dashoffset: 1 } 40%, 100% { stroke-dashoffset: 0 } }
-        .wa-gauge { stroke-dashoffset: 1; animation: wa-gaugeK 6s ease-out infinite }
-        @keyframes wa-needleK { 0%, 6% { transform: rotate(-78deg) } 24% { transform: rotate(-30deg) } 36% { transform: rotate(-52deg) } 52%, 90% { transform: rotate(66deg) } 100% { transform: rotate(-78deg) } }
-        .wa-needle { transform: rotate(66deg); animation: wa-needleK 6s cubic-bezier(.4,.1,.3,1) infinite }
-        @media (prefers-reduced-motion: reduce) { .wa-rise { animation: none } .wa-stage { animation: none } .wa-gauge, .wa-needle { animation: none } .wa-gauge { stroke-dashoffset: 0 } }
+        @media (prefers-reduced-motion: reduce) { .wa-rise { animation: none } }
       `}</style>
     </>
   )
