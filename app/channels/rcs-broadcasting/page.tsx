@@ -8,7 +8,7 @@ import { FaqSection } from "@/components/landing/faq-section"
 import { ExploreMore } from "@/components/product/explore-more"
 import { GsFinalCta } from "@/components/home/gs/sections-c"
 import { GiftArt } from "@/components/product/rcs-flow-scene"
-import { RcsDeckScene } from "@/components/product/rcs-deck-scene"
+import { RcsProperScene } from "@/components/product/rcs-proper-scene"
 import { BreadcrumbJsonLd, FaqJsonLd, ProductServiceJsonLd } from "@/components/seo/json-ld"
 
 export const metadata: Metadata = getPageMetadata("/channels/rcs-broadcasting")
@@ -130,7 +130,7 @@ export default function RcsBroadcastingPage() {
               </ul>
             </div>
             <div className="rbp-rise min-w-0" style={{ animationDelay: "0.15s" }}>
-              <RcsDeckScene />
+              <RcsProperScene />
             </div>
           </div>
         </section>
