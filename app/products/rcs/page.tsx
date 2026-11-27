@@ -18,7 +18,7 @@ import {
   Truck,
 } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
-import { RcsUpgradeHero } from "@/components/product/rcs-upgrade-hero"
+import { RcsChatHero } from "@/components/product/rcs-chat-hero"
 import { AnnouncementStrip } from "@/components/landing/announcement-strip"
 import { SiteHeader } from "@/components/landing/site-header"
 import { ExploreMore } from "@/components/product/explore-more"
@@ -135,17 +135,14 @@ export default function RcsPage() {
       />      <FaqJsonLd items={FAQ} path="/products/rcs" />
       <SiteHeader />
       <main className="flex-1">
-        <section className="relative isolate overflow-hidden bg-background">
-          <div aria-hidden className="pointer-events-none absolute inset-0 -z-10">
-            <div className="absolute inset-0 opacity-50 [background-image:radial-gradient(var(--border)_1.2px,transparent_1.2px)] [background-size:26px_26px] [mask-image:radial-gradient(ellipse_at_72%_48%,black_10%,transparent_70%)]" />
-          </div>
-          <div className="mx-auto grid max-w-7xl items-stretch gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[minmax(0,1fr)_580px] lg:gap-8 lg:pb-16 lg:pt-12 xl:grid-cols-[minmax(0,1fr)_620px]">
+        <section className="relative overflow-hidden bg-white">
+          <div className="mx-auto grid max-w-7xl items-stretch gap-10 px-4 pb-14 pt-14 sm:px-6 lg:grid-cols-[minmax(0,1fr)_490px] lg:gap-10 lg:pb-12 lg:pt-10 xl:grid-cols-[minmax(0,1fr)_520px]">
             <div className="rcs-rise flex min-w-0 flex-col justify-center gap-7">
               <div>
               <p className="inline-flex items-center gap-2 rounded-full bg-foreground px-3.5 py-1.5 text-[12.5px] font-medium text-background">
                 <Sparkles className="h-3.5 w-3.5 text-accent" />RCS Business Messaging
               </p>
-              <h1 className="mt-5 text-balance text-[30px] font-semibold leading-[1.1] tracking-[-0.035em] sm:text-[36px] lg:text-[32px] xl:text-[34px]">
+              <h1 className="mt-5 text-balance text-[28px] font-extrabold leading-[1.1] tracking-[-0.035em] sm:text-[34px] lg:text-[32px] xl:text-[36px]">
                 RCS business messaging in India, <span className="text-primary">with SMS fallback built in.</span>
               </h1>
               <p className="mt-4 max-w-md text-pretty text-[15.5px] leading-relaxed text-muted-foreground">
@@ -166,7 +163,7 @@ export default function RcsPage() {
             </div>
             <div className="rcs-rise flex min-w-0 items-center" style={{ animationDelay: "0.15s" }}>
               <div className="w-full">
-              <RcsUpgradeHero />
+              <RcsChatHero />
               </div>
             </div>
           </div>
